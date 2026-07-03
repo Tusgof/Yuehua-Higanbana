@@ -1,0 +1,330 @@
+{
+  "schema_version": "hypothesis_registry_v1",
+  "evidence_tiers": [
+    "E0",
+    "E1",
+    "E2",
+    "E3"
+  ],
+  "hypotheses": [
+    {
+      "id": "H-A1",
+      "family": "subsystem_a",
+      "status": "falsified-as-stated",
+      "statement": "Post-2022 SPY 0DTE ORB debit verticals beat SPY buy-and-hold risk-adjusted without conditioning on macro or regime state.",
+      "economic_rationale": "Opening-range breakouts may reflect early order-flow imbalance after the 0DTE listing expansion.",
+      "testable_predictions": [
+        "Unconditional ORB returns are positive after implementable costs.",
+        "OOS risk-adjusted return beats same-trade-calendar SPY.",
+        "The effect is not dependent on removing macro or stress regimes."
+      ],
+      "validation_criteria": [
+        "E2 requires MinTRL/PSR versus SR0=0 and same-trade-calendar SPY.",
+        "E2 requires implementable PnL, big-day survival, regime coverage, and benchmark drawdown comparison."
+      ],
+      "falsification_criteria": [
+        "Unconditional OOS implementable PnL is negative with no validation path versus benchmark null.",
+        "Mechanism autopsy shows unconditional pooling mixes incompatible macro/stress mechanisms."
+      ],
+      "required_data": [
+        "Existing Mar-Dec 2023 in-sample and Jan-Dec 2024 OOS data are sufficient to reject this stated form."
+      ],
+      "mintrl_falsify": {
+        "status": "satisfied_by_existing_diagnostic_evidence",
+        "notes": "Benchmark-null validation is undefined because observed Sharpe is below the meaningful null."
+      },
+      "evidence": [
+        {
+          "path": "reports/baselines/subsystem_a_orb_baseline_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้"
+        },
+        {
+          "path": "reports/experiments/m5_regime_filter_sensitivity_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้"
+        }
+      ],
+      "dependencies": [],
+      "decision_log": [
+        {
+          "date": "2026-07-03",
+          "decision": "falsified-as-stated",
+          "notes": "Unconditional H-A1 is retired; H-A2 is the allowed resurrection with a new macro-conditioned prediction."
+        }
+      ]
+    },
+    {
+      "id": "H-A2",
+      "family": "subsystem_a",
+      "status": "active",
+      "statement": "The ORB edge, if it exists, is macro-conditioned: excluding high-importance scheduled macro days should improve implementable risk-adjusted OOS returns because non-macro breakout days reflect cleaner order-flow imbalance.",
+      "economic_rationale": "On scheduled macro days, the opening range can be dominated by anticipatory positioning and post-release repricing rather than persistent intraday imbalance.",
+      "testable_predictions": [
+        "Macro-day trades remain weak or negative in fresh data.",
+        "Retained no-macro trades remain positive after cost and big-day removal.",
+        "The effect is not concentrated in one VIX/trend bucket unless the hypothesis is explicitly scope-restricted."
+      ],
+      "validation_criteria": [
+        "Use untouched validation data or DSR accounting for the inherited 9-trial M5.5 search.",
+        "Pass MinTRL/PSR against SR0=0 and same-trade-calendar SPY.",
+        "Use implementable PnL, big-day dependency, and regime coverage or explicit scope restriction."
+      ],
+      "falsification_criteria": [
+        "Fresh retained no-macro trades have implementable PnL <= 0 after reaching MinTRL_falsify.",
+        "Macro-day/no-macro mechanism reverses in fresh data."
+      ],
+      "required_data": [
+        "Pre-registered H-A2 re-analysis from existing M5.5 evidence.",
+        "Free Aug 2024 high-VIX labeling/silence investigation.",
+        "If justified, top 2-3 high-VIX months from 2022 H2 after cost guard check."
+      ],
+      "mintrl_falsify": {
+        "status": "pending",
+        "method": "compute from retained no-macro return distribution before paid validation data"
+      },
+      "evidence": [
+        {
+          "path": "reports/experiments/m5_regime_filter_sensitivity_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Search-contaminated 9-trial diagnostic evidence."
+        }
+      ],
+      "dependencies": [
+        "H-A1"
+      ],
+      "decision_log": [
+        {
+          "date": "2026-07-03",
+          "decision": "active",
+          "notes": "Top edge-priority successor to H-A1."
+        }
+      ]
+    },
+    {
+      "id": "H-B1",
+      "family": "subsystem_b",
+      "status": "falsified",
+      "statement": "Capped-risk put ratio spreads are feasible and profitable under $300 allocation and $20 risk budget on a $1,000 account.",
+      "economic_rationale": "Selling short-dated downside skew may have premium edge if tail risk is capped by a protective wing.",
+      "testable_predictions": [
+        "A meaningful share of trades fits the $300 allocation and $20 risk budget.",
+        "Implementable PnL is not structurally negative after costs."
+      ],
+      "validation_criteria": [
+        "Defined-risk spread construction.",
+        "Small-account sizing feasibility.",
+        "Implementable PnL and tail-risk metrics."
+      ],
+      "falsification_criteria": [
+        "Zero trades fit the current sizing rule.",
+        "Implementable PnL remains materially negative under the tested current-account assumptions."
+      ],
+      "required_data": [
+        "Existing M4.2 Sub-System B feasibility report."
+      ],
+      "mintrl_falsify": {
+        "status": "satisfied_by_existing_feasibility_failure",
+        "notes": "The feasibility blocker is deterministic: 0 trades fit sizing."
+      },
+      "evidence": [
+        {
+          "path": "reports/baselines/subsystem_b_put_ratio_feasibility_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ไม่ผ่าน"
+        }
+      ],
+      "dependencies": [],
+      "decision_log": [
+        {
+          "date": "2026-07-03",
+          "decision": "falsified",
+          "notes": "Current small-account H-B1 is killed; H-B2 tests the structure at larger simulated scale."
+        }
+      ]
+    },
+    {
+      "id": "H-B2",
+      "family": "subsystem_b",
+      "status": "active",
+      "statement": "The put-ratio-with-wing structure may have positive expectancy at simulated $10k to $25k scale where strike granularity and premium-to-account ratios stop binding.",
+      "economic_rationale": "If short-dated downside skew is overpriced, a capped-risk structure may monetize it at sufficient account size while preserving survival through the protective wing.",
+      "testable_predictions": [
+        "Cost drag is not the dominant share of gross edge at all wing widths.",
+        "Implementable PnL and ES95-adjusted return are not negative at both simulated scales.",
+        "Results are not dependent on fractional contracts or hidden undefined risk."
+      ],
+      "validation_criteria": [
+        "Pre-register $10k and $25k account sizes.",
+        "Pre-register wing grid and sizing rule.",
+        "Record search log and DSR or DSR blocker.",
+        "Report implementable PnL, ES95, drawdown, cost drag, and sample labels."
+      ],
+      "falsification_criteria": [
+        "Implementable PnL and ES95-adjusted return are negative at both simulated scales with adequate falsification sample.",
+        "Cost drag exceeds 60% of gross at all wing widths."
+      ],
+      "required_data": [
+        "Already-cached Sub-System B data from Mar-Dec 2023 and Jan-Dec 2024."
+      ],
+      "mintrl_falsify": {
+        "status": "pending",
+        "method": "compute from the 412-trade Sub-System B return distribution after pre-registered rerun"
+      },
+      "evidence": [
+        {
+          "path": "reports/baselines/subsystem_b_put_ratio_feasibility_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ไม่ผ่าน",
+          "notes": "Supports H-B2 motivation but does not test H-B2 scale."
+        }
+      ],
+      "dependencies": [
+        "H-B1"
+      ],
+      "decision_log": [
+        {
+          "date": "2026-07-03",
+          "decision": "active",
+          "notes": "Zero-cost rerun track using cached data."
+        }
+      ]
+    },
+    {
+      "id": "H-G1",
+      "family": "gamma",
+      "status": "active",
+      "statement": "A signed-OI gamma proxy aggregated from OPRA open interest and self-computed Greeks carries economic signal: high positive proxy days should exhibit attenuated realized intraday volatility.",
+      "economic_rationale": "Positive aggregate dealer-style gamma exposure can damp realized volatility through hedging flows, while negative gamma can amplify moves. Current data supports only proxy validity, not true dealer inventory claims.",
+      "testable_predictions": [
+        "Proxy terciles show monotonic or sign-consistent realized variance differences.",
+        "The relation survives across at least 10 dates and at least 3 regimes.",
+        "Coverage passes pre-registered v2 gates while v1 fail remains permanent."
+      ],
+      "validation_criteria": [
+        "Issue GAMMA_AGGREGATION_VALIDATION_POLICY.md v2 before rerun.",
+        "Report raw-row and bucket-weighted coverage side by side.",
+        "Pass timestamp discipline, stability, economic-sign validation, and search-log gates."
+      ],
+      "falsification_criteria": [
+        "No monotonic or sign-consistent relation between proxy tercile and realized 10:00-15:45 SPY variance across the pre-registered multi-regime date set."
+      ],
+      "required_data": [
+        "Pre-registered 12-date regime set.",
+        "OPRA statistics/OI days for the 12-date set.",
+        "Existing quote and SPY bar cache for those dates."
+      ],
+      "mintrl_falsify": {
+        "status": "not_applicable_yet",
+        "notes": "This is a proxy-validity hypothesis using multi-date regime/sign consistency before strategy-return MinTRL."
+      },
+      "evidence": [
+        {
+          "path": "reports/diagnostics/gamma_aggregation_diagnostic_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "One-date diagnostic: timestamp/search-log pass, coverage/stability/economic-sign blocked."
+        }
+      ],
+      "dependencies": [],
+      "decision_log": [
+        {
+          "date": "2026-07-03",
+          "decision": "active",
+          "notes": "Field-unlock track; no NOVI/net-gamma strategy use before H-G1 passes."
+        }
+      ]
+    },
+    {
+      "id": "H-L1",
+      "family": "llm_news",
+      "status": "active_blocked",
+      "statement": "LLM sentiment, market-impact, and volatility-relevance scores over timestamp-clean pre-entry news are stable across repeated calls/prompt families and add information beyond VIX plus macro calendar.",
+      "economic_rationale": "Language models may compress qualitative news context into continuous sentiment/impact/volatility scores that deterministic calendars cannot capture, but only if stability and contamination controls pass first.",
+      "testable_predictions": [
+        "Repeated calls have acceptable dispersion for the selected prompt family.",
+        "Masking/anonymization reduces event memorization without destroying signal.",
+        "Scores correlate with same-day realized volatility or adverse tails after controlling for VIX and macro calendar."
+      ],
+      "validation_criteria": [
+        "Use real timestamp-clean news cases only.",
+        "Compare prompt-template families and masking policies.",
+        "Run 5-call stability where cost allows.",
+        "Record model id, cutoff, document timestamps, fetch window, masking policy, and contamination probe."
+      ],
+      "falsification_criteria": [
+        "Real news cases remain unavailable.",
+        "Parse validity is unreliable.",
+        "Repeated-call dispersion is too high.",
+        "Scores add no information beyond VIX/macro baselines."
+      ],
+      "required_data": [
+        "Real timestamp-clean pre-entry news archive.",
+        "Deterministic VIX and macro calendar baseline features."
+      ],
+      "mintrl_falsify": {
+        "status": "blocked",
+        "reason": "No real timestamp-clean news cases."
+      },
+      "evidence": [
+        {
+          "path": "docs/EXP07_PROMPT_REDESIGN.md",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Design/scaffold evidence only."
+        }
+      ],
+      "dependencies": [],
+      "decision_log": [
+        {
+          "date": "2026-07-03",
+          "decision": "active_blocked",
+          "notes": "Design work can proceed; live research is blocked until timestamp-clean news exists."
+        }
+      ]
+    },
+    {
+      "id": "H-L2",
+      "family": "llm_price",
+      "status": "proposed",
+      "statement": "LLM prompts fed only chronological price/quote context may improve exit timing versus fixed TP/SL rules.",
+      "economic_rationale": "A model might summarize intraday price/quote context into a dynamic exit assessment, but this must be separated from H-L1 and tested against strict chronological controls.",
+      "testable_predictions": [
+        "Parse validity stays above the pre-registered threshold.",
+        "Any improvement survives ablation against fixed TP/SL grids.",
+        "No future same-day aggregate or post-decision data enters the prompt."
+      ],
+      "validation_criteria": [
+        "Separate pre-registration.",
+        "Strict timestamp controls.",
+        "Search log and cost guard.",
+        "No mixing with news/sentiment prompts."
+      ],
+      "falsification_criteria": [
+        "Parse validity is below threshold.",
+        "Chronological controls cannot be proven.",
+        "Cost or latency makes the branch impractical."
+      ],
+      "required_data": [
+        "Chronological price and quote context at decision timestamps.",
+        "A design document before live LLM calls."
+      ],
+      "mintrl_falsify": {
+        "status": "not_started",
+        "reason": "Design-only proposed branch."
+      },
+      "evidence": [],
+      "dependencies": [
+        "H-L1"
+      ],
+      "decision_log": [
+        {
+          "date": "2026-07-03",
+          "decision": "proposed",
+          "notes": "Dormant until H-L1 measurement validity is designed and news cases exist."
+        }
+      ]
+    }
+  ]
+}

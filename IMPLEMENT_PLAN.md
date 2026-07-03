@@ -42,9 +42,9 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| P0.1 | Create `docs\HYPOTHESIS_REGISTRY.md` with H-A1, H-A2, H-B1, H-B2, H-G1, H-L1, and H-L2 seed entries | M | RISK | Manual review confirms every entry has rationale, predictions, validation/falsification criteria, required data, evidence links, and decision log |
-| P0.2 | Create `experiments\hypothesis_registry.json` as the machine-readable registry | M | RISK | JSON validates against `scripts\validate_hypothesis_registry.py` |
-| P0.3 | Add `scripts\validate_hypothesis_registry.py` and tests | M | RISK | `python -m unittest tests.test_validate_hypothesis_registry` passes |
+| P0.1 | Create `docs\HYPOTHESIS_REGISTRY.md` with H-A1, H-A2, H-B1, H-B2, H-G1, H-L1, and H-L2 seed entries | M | RISK | Complete: document exists and records rationale, predictions, validation/falsification criteria, required data, evidence links, decision logs, and the kill/resurrection rule |
+| P0.2 | Create `experiments\hypothesis_registry.json` as the machine-readable registry | M | RISK | Complete: `python scripts\validate_hypothesis_registry.py` reports `status=pass`, `hypothesis_count=7` |
+| P0.3 | Add `scripts\validate_hypothesis_registry.py` and tests | M | RISK | Complete: `python -m unittest tests.test_validate_hypothesis_registry` passes |
 | P0.4 | Add evidence-tier policy and validator requiring `hypothesis_id`, `evidence_tier`, and `tier_blockers` for experiment summaries | L | RISK | Validator rejects pass/acceptance claims below E2 and unknown hypothesis IDs |
 | P0.5 | Fix stale `scripts\audit_research_readiness.py` next action after gamma diagnostic exists | M | RISK | Test rejects the stale “run diagnostic gamma aggregation” next action when `gamma_aggregation_diagnostic_summary.json` already exists |
 | P0.6 | Add read-only `scripts\report_project_state.py` | M | OK | Command reports hypothesis status, tier, blockers, next safe action, cost headroom, and news/GDELT status with no network calls |
@@ -149,7 +149,7 @@
 
 ## Execution Notes
 - **Active track**: P0 after P-1 cost sync.
-- **Immediate next safe action**: Build the hypothesis registry and validators, then fix the stale research-readiness next action. Do not buy data yet.
+- **Immediate next safe action**: Continue P0 with evidence-tier policy/enforcement (P0.4) and stale research-readiness next-action fix (P0.5). Do not buy data yet.
 - **Blocked paid actions**: 2022 H2 stress data requires task-zero cost sync plus headroom/top-up check. Any new provider still requires explicit user approval.
 - **Current cost basis**: User-reported actual usage `$105.0`; stop threshold `$125`; current headroom `$20.0`.
 - **Risk checkpoints**: Before every paid pull, after every validator/audit change, before H-A2 stress purchase, before H-G1 12-date OI purchase, before any LLM call, before acceptance, and before paper/dry-run.

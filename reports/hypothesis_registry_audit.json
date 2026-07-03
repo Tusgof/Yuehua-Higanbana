@@ -1,0 +1,93 @@
+{
+  "blockers": [],
+  "hypotheses": [
+    {
+      "blockers": [],
+      "dependency_count": 0,
+      "evidence_count": 2,
+      "evidence_tiers": [
+        "E1"
+      ],
+      "family": "subsystem_a",
+      "id": "H-A1",
+      "status": "falsified-as-stated",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "dependency_count": 1,
+      "evidence_count": 1,
+      "evidence_tiers": [
+        "E1"
+      ],
+      "family": "subsystem_a",
+      "id": "H-A2",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "dependency_count": 0,
+      "evidence_count": 1,
+      "evidence_tiers": [
+        "E1"
+      ],
+      "family": "subsystem_b",
+      "id": "H-B1",
+      "status": "falsified",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "dependency_count": 1,
+      "evidence_count": 1,
+      "evidence_tiers": [
+        "E1"
+      ],
+      "family": "subsystem_b",
+      "id": "H-B2",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "dependency_count": 0,
+      "evidence_count": 1,
+      "evidence_tiers": [
+        "E1"
+      ],
+      "family": "gamma",
+      "id": "H-G1",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "dependency_count": 0,
+      "evidence_count": 1,
+      "evidence_tiers": [
+        "E0"
+      ],
+      "family": "llm_news",
+      "id": "H-L1",
+      "status": "active_blocked",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "dependency_count": 1,
+      "evidence_count": 0,
+      "evidence_tiers": [],
+      "family": "llm_price",
+      "id": "H-L2",
+      "status": "proposed",
+      "warnings": []
+    }
+  ],
+  "hypothesis_count": 7,
+  "registry_path": "experiments\\hypothesis_registry.json",
+  "reports_root": "reports",
+  "status": "pass",
+  "summary_hypothesis_reference_count": 0,
+  "warnings": []
+}
