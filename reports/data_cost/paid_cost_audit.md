@@ -2,35 +2,35 @@
 
 - Status: `pass`
 - Stop threshold: `$125.0`
-- Known committed estimated cost: `$169.90613`
+- Known committed estimated cost: `$173.988357`
 - Cost guard basis: `user_reported_actual_usage`
-- Cost guard used: `$105.0`
-- Remaining before stop: `$20.0`
+- Cost guard used: `$109.082227`
+- Remaining before stop: `$15.917773`
 
 ## Cost Guard Reconciliation
 
-- Actual-usage basis status: `pass`; used `$105.0`; remaining `$20.0`
-- Conservative known-estimate basis status: `blocked`; used `$169.90613`; remaining `$-44.90613`
+- Actual-usage basis status: `pass`; used `$109.082227`; remaining `$15.917773`
+- Conservative known-estimate basis status: `blocked`; used `$173.988357`; remaining `$-48.988357`
 - Estimated-only total not yet committed: `$27.899065`
 - Single estimated-only items that would reach stop if committed: `15`
 
 | Item | Cost | Projected Conservative Total | Source |
 |:--|--:|--:|:--|
-| `databento_cost_h_a2_2022_10_stress` | `$10.52248` | `$180.42861` | `reports\data_cost\databento_cost_h_a2_2022_10_stress.json` |
-| `databento_cost_h_a2_2022_09_stress` | `$10.226392` | `$180.132522` | `reports\data_cost\databento_cost_h_a2_2022_09_stress.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_chunk2` | `$1.543901` | `$171.450031` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_chunk3` | `$1.526606` | `$171.432736` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_chunk1` | `$1.460004` | `$171.366134` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json` |
-| `databento_cost_2024_02_13_intraday_exit_30m` | `$0.358536` | `$170.264666` | `reports\data_cost\databento_cost_2024_02_13_intraday_exit_30m.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29` | `$0.338082` | `$170.244212` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29.json` |
-| `databento_cost_insample_2023_12_intraday_exit_30m_sample` | `$0.337333` | `$170.243463` | `reports\data_cost\databento_cost_insample_2023_12_intraday_exit_30m_sample.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28` | `$0.32245` | `$170.22858` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27` | `$0.316463` | `$170.222593` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25` | `$0.312721` | `$170.218851` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26` | `$0.307899` | `$170.214029` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_sample` | `$0.301829` | `$170.207959` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_sample.json` |
-| `spy_bars:oos_2024_q4_completion` | `$0.022813` | `$169.928943` | `reports\data_cost\databento_spy_bars_plan_oos_2024_q4_completion.json` |
-| `spy_bars:2024_09_chunk4` | `$0.001556` | `$169.907686` | `reports\data_cost\databento_spy_bars_plan_2024_09_chunk4.json` |
+| `databento_cost_h_a2_2022_10_stress` | `$10.52248` | `$184.510837` | `reports\data_cost\databento_cost_h_a2_2022_10_stress.json` |
+| `databento_cost_h_a2_2022_09_stress` | `$10.226392` | `$184.214749` | `reports\data_cost\databento_cost_h_a2_2022_09_stress.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_chunk2` | `$1.543901` | `$175.532258` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_chunk3` | `$1.526606` | `$175.514963` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_chunk1` | `$1.460004` | `$175.448361` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json` |
+| `databento_cost_2024_02_13_intraday_exit_30m` | `$0.358536` | `$174.346893` | `reports\data_cost\databento_cost_2024_02_13_intraday_exit_30m.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29` | `$0.338082` | `$174.326439` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29.json` |
+| `databento_cost_insample_2023_12_intraday_exit_30m_sample` | `$0.337333` | `$174.32569` | `reports\data_cost\databento_cost_insample_2023_12_intraday_exit_30m_sample.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28` | `$0.32245` | `$174.310807` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27` | `$0.316463` | `$174.30482` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25` | `$0.312721` | `$174.301078` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26` | `$0.307899` | `$174.296256` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_sample` | `$0.301829` | `$174.290186` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_sample.json` |
+| `spy_bars:oos_2024_q4_completion` | `$0.022813` | `$174.01117` | `reports\data_cost\databento_spy_bars_plan_oos_2024_q4_completion.json` |
+| `spy_bars:2024_09_chunk4` | `$0.001556` | `$173.989913` | `reports\data_cost\databento_spy_bars_plan_2024_09_chunk4.json` |
 
 ## Budget Policy
 
@@ -40,15 +40,16 @@
 
 ## User-Reported Actual Usage
 
-- Actual usage: `$105.0`
-- Reported at UTC: `2026-07-03T01:43:53Z`
-- Source: `user_reported_databento_account_usage`
-- Notes: User reported current total Databento usage in the provider account. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.
+- Actual usage: `$109.082227`
+- Reported at UTC: `2026-07-03T05:28:29Z`
+- Source: `user_reported_usage_plus_codex_committed_h_g1_download_estimate`
+- Notes: Previous user-reported Databento account usage was $105.0. Codex then executed the approved H-G1 OPRA statistics/OI 11-date pull with logged estimate $4.082227, so the working guard basis is updated to about $109.082227 until the user/provider account view supplies a newer actual total. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited.
 
 ## Committed Databento Items
 
 | Item | Cost | Source |
 |:--|--:|:--|
+| `h_g1_gamma_oi_12_date` | `$4.082227` | `reports\data_cost\h_g1_gamma_oi_download_result.json` |
 | `insample_2023_03:insample_2023_03_intraday_exit_30m_chunk1` | `$0.995454` | `reports\data_cost\databento_download_result_insample_2023_03_intraday_exit_30m_chunk1.json` |
 | `insample_2023_03:insample_2023_03_intraday_exit_30m_chunk2` | `$1.658646` | `reports\data_cost\databento_download_result_insample_2023_03_intraday_exit_30m_chunk2.json` |
 | `insample_2023_03:insample_2023_03_intraday_exit_30m_chunk3` | `$1.691406` | `reports\data_cost\databento_download_result_insample_2023_03_intraday_exit_30m_chunk3.json` |

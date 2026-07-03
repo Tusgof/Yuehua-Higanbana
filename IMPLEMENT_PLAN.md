@@ -32,7 +32,7 @@
 | P-1.2 | Add budget policy: cap extension by real payment on the existing Databento account only; prohibit multi-account credit harvesting | S | RISK | `reports\data_cost\paid_cost_audit.md` includes the Budget Policy section |
 | P-1.3 | Keep conservative committed estimates as trace evidence, not the controlling guard while actual usage exists | S | OK | `paid_cost_audit.json` includes actual-usage and known-estimate reconciliation |
 
-**Track complete when**: Paid-cost audit passes on actual-usage basis and reports about `$20` remaining under the current `$125` guard.
+**Track complete when**: Paid-cost audit passes on actual-usage basis and reports current remaining headroom under the `$125` guard.
 
 ---
 
@@ -95,8 +95,8 @@
 |:--|:-----|:------:|:----:|:-------------|
 | H-G1.1 | Issue `docs\GAMMA_AGGREGATION_VALIDATION_POLICY.md` v2 before rerun | M | RISK | Complete: v1 fail remains preserved; v2 requires dual raw-row and bucket-weighted coverage reporting |
 | H-G1.2 | Pre-register a 12-date regime set across low/normal/high volatility, macro/no-macro, trend, train, and OOS buckets | M | RISK | Complete: `python scripts\validate_h_g1_regime_date_set.py` passes with 12 dates, low/normal/high counts 4/4/4, train/OOS 6/6, macro/no-macro 6/6 |
-| H-G1.3 | Estimate and buy only the missing OPRA statistics/OI days if cost guard passes | M | RISK | Next: 2024-01-03 already has OI probe; estimate the remaining 11 dates first; `audit_paid_costs.py` must pass before and after |
-| H-G1.4 | Rerun enrichment and gamma diagnostic under v2 | L | RISK | Report includes v1 fail record, v2 gates, timestamp discipline, stability, economic-sign relation, and blockers |
+| H-G1.3 | Estimate and buy only the missing OPRA statistics/OI days if cost guard passes | M | RISK | Complete: live metadata estimate for 11 missing dates was `$4.082227`, download gate passed, 11 OPRA `statistics` DBN files were downloaded with checksums, and post-download `audit_paid_costs.py` reports guard usage `$109.082227` with `$15.917773` headroom |
+| H-G1.4 | Rerun enrichment and gamma diagnostic under v2 | L | RISK | Next: enrich the 12-date OI/quote set and report v1 fail record, v2 gates, timestamp discipline, stability, economic-sign relation, and blockers |
 | H-G1.5 | Register result as active, falsified, or still blocked | S | RISK | Registry decision log updated; no strategy use unless H-G1 passes |
 
 **Track complete when**: The gamma proxy either passes data-validity gates under v2, fails cleanly, or remains blocked with exact missing evidence.
@@ -148,10 +148,10 @@
 ---
 
 ## Execution Notes
-- **Active track**: H-G1 low-cost data gate or H-L1/H-L2 design work while H-A2 stress expansion is cost-blocked and H-B2 is parked.
-- **Immediate next safe action**: Start H-G1.3: run a metadata cost estimate for the 11 missing OPRA statistics/OI dates in the validated H-G1 manifest before any download. If avoiding paid-adjacent actions entirely, start H-L1/H-L2 design docs.
-- **Blocked paid actions**: H-A2 top2 2022 H2 stress data download is blocked because live estimate `$20.748872` exceeds the current `$20.0` headroom. Do not download top2 unless the user tops up/cap changes or the plan is explicitly revised to a narrower scope. Any new provider still requires explicit user approval.
-- **Current cost basis**: User-reported actual usage `$105.0`; stop threshold `$125`; current headroom `$20.0`.
+- **Active track**: H-G1 enrichment/gamma diagnostic v2 or H-L1/H-L2 design work while H-A2 stress expansion is cost-blocked and H-B2 is parked.
+- **Immediate next safe action**: Start H-G1.4: enrich the 12-date OI/quote set and rerun the gamma diagnostic under policy v2. If avoiding data-processing work, start H-L1/H-L2 design docs.
+- **Blocked paid actions**: H-A2 top2 2022 H2 stress data download is blocked because live estimate `$20.748872` exceeds the current `$15.917773` headroom. Do not download top2 unless the user tops up/cap changes or the plan is explicitly revised to a narrower scope. Any new provider still requires explicit user approval.
+- **Current cost basis**: Working Databento usage `$109.082227` (`$105.0` user-reported plus `$4.082227` H-G1 OI pull estimate); stop threshold `$125`; current headroom `$15.917773`.
 - **Risk checkpoints**: Before every paid pull, after every validator/audit change, before H-A2 stress purchase, before H-G1 12-date OI purchase, before any LLM call, before acceptance, and before paper/dry-run.
 - **Archive policy**: Before replacing this plan again, archive the current `IMPLEMENT_PLAN.md` under `Backup_IMPLEMENT_PLAN\` and state why.
 - **Verification loop**: After each track-level implementation, run `python -m unittest discover -s tests`; for scaffold-impacting changes also run `python scripts\run_fixture_pipeline.py` and relevant readiness audits.

@@ -36,11 +36,11 @@ class AuditPaidCostsTests(unittest.TestCase):
         self.assertTrue(result["committed_items"])
         reconciliation = result["cost_guard_reconciliation"]
         self.assertEqual("pass", reconciliation["actual_usage_basis"]["status"])
-        self.assertEqual(105.0, reconciliation["actual_usage_basis"]["used_usd"])
-        self.assertEqual(20.0, reconciliation["actual_usage_basis"]["remaining_usd"])
+        self.assertEqual(109.082227, reconciliation["actual_usage_basis"]["used_usd"])
+        self.assertEqual(15.917773, reconciliation["actual_usage_basis"]["remaining_usd"])
         self.assertEqual("blocked", reconciliation["known_committed_estimate_basis"]["status"])
-        self.assertEqual(169.90613, reconciliation["known_committed_estimate_basis"]["used_usd"])
-        self.assertEqual(-44.90613, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
+        self.assertEqual(173.988357, reconciliation["known_committed_estimate_basis"]["used_usd"])
+        self.assertEqual(-48.988357, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
         self.assertFalse(any(item["item_id"] == "spy_bars:2024_08_chunk5" for item in result["estimated_only_items"]))
 
     def test_temp_cost_root_sums_completed_downloads_without_dry_run(self) -> None:
@@ -72,11 +72,22 @@ class AuditPaidCostsTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
+            (root / "h_g1_gamma_oi_download_result.json").write_text(
+                json.dumps(
+                    {
+                        "mode": "download_complete",
+                        "status": "pass",
+                        "scenario": "h_g1_gamma_oi_12_date",
+                        "total_estimated_cost_usd": 4.082227,
+                    }
+                ),
+                encoding="utf-8",
+            )
 
             result = self.auditor.audit_paid_costs(root, stop_threshold_usd=10.0, experiment_root=root / "experiments")
 
         self.assertEqual("pass", result["status"])
-        self.assertEqual(2.954911, result["known_committed_estimated_cost_usd"])
+        self.assertEqual(7.037138, result["known_committed_estimated_cost_usd"])
         self.assertEqual([], result["estimated_only_items"])
 
     def test_stop_threshold_blocks_when_committed_cost_reaches_limit(self) -> None:

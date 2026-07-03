@@ -20,7 +20,7 @@
 | news | `blocked` | - | `requires_news_archive_start_by_2022_05_11`, `requires_news_topic_coverage_2022`, `requires_news_topic_coverage_2023`, `requires_news_topic_coverage_2024`, `requires_news_topic_coverage_2025`, `requires_news_topic_coverage_2026`, `requires_news_window_coverage_oos`, `requires_news_window_coverage_reference_pre_break`, `requires_news_window_coverage_train`, `requires_real_news_archive` |
 | gdelt_capture_status | `blocked` | files `5`<br>status counts `blocked=5` | `gdelt_capture_not_captured:2023-04-03`, `gdelt_capture_not_captured:2023-04-13`, `gdelt_capture_not_captured:2023-09-01`, `gdelt_capture_not_captured:2023-09-07`, `gdelt_capture_not_captured:2023-10-02`, `gdelt_capture_unavailable` |
 | gdelt_command_plan | `blocked` | retry pressure `cooldown_recommended`<br>next retry `2023-04-14` | `gdelt_retry_cooldown_recommended` |
-| paid_cost | `pass` | known cost `$169.90613`<br>guard used `$105.0`<br>basis `user_reported_actual_usage`<br>remaining `$20.0` | - |
+| paid_cost | `pass` | known cost `$173.988357`<br>guard used `$109.082227`<br>basis `user_reported_actual_usage`<br>remaining `$15.917773` | - |
 | research_logs | `pass` | - | - |
 | strategy_data | `blocked` | closed trades `90`<br>candidate days `93` | `requires_mintrl_psr_sample_adequacy` |
 | exp07_prompt_redesign | `blocked` | - | `requires_real_timestamp_clean_news_cases_for_exp07_prompt_research` |

@@ -210,6 +210,23 @@ def _load_committed_databento_costs(root: Path) -> tuple[list[dict[str, Any]], s
                 "source_path": _relative(path),
             }
         )
+    for path in sorted(root.glob("h_g1_gamma_oi_download_result*.json")):
+        payload = _load_json(path)
+        if payload.get("mode") != "download_complete" or payload.get("status") != "pass":
+            continue
+        cost = _cost_from_payload(payload)
+        if cost is None:
+            continue
+        items.append(
+            {
+                "item_id": "h_g1_gamma_oi_12_date",
+                "provider": "Databento",
+                "estimated_cost_usd": cost,
+                "mode": payload.get("mode"),
+                "scenario": payload.get("scenario"),
+                "source_path": _relative(path),
+            }
+        )
     return sorted(items, key=lambda item: item["item_id"]), source_reports
 
 

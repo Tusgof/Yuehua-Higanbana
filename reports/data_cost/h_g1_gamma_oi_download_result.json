@@ -1,0 +1,404 @@
+{
+  "blockers": [],
+  "cost_gate_decision": {
+    "blockers": [],
+    "download_allowed_under_current_guard": true,
+    "reason": "Estimated H-G1 OI cost $4.082227 fits within remaining headroom $20.0.",
+    "status": "pass"
+  },
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "remaining_before_stop_usd": 20.0,
+    "status": "pass",
+    "stop_threshold_usd": 125.0,
+    "used_usd": 105.0
+  },
+  "download_performed": true,
+  "execution": {
+    "cache_count": 0,
+    "downloaded_count": 11,
+    "downloads": [
+      {
+        "bytes": 116331,
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-03-13",
+        "end": "2023-03-14T00:00:00+00:00",
+        "estimated_cost_usd": 0.005325,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-03-13_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "a3437f6468f468188ae2fbd22efbf7c38fb75a3b800c2024ab2273b969307ca2",
+        "source": "downloaded",
+        "start": "2023-03-13T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-03-13_full_utc_day_statistics"
+      },
+      {
+        "bytes": 111001,
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-03-22",
+        "end": "2023-03-23T00:00:00+00:00",
+        "estimated_cost_usd": 0.005076,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-03-22_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "a128bd4115e0777d76b5030e39cbec4bf8806311e76fdf68a00452aee9bb7bcb",
+        "source": "downloaded",
+        "start": "2023-03-22T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-03-22_full_utc_day_statistics"
+      },
+      {
+        "bytes": 3307433,
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-07-12",
+        "end": "2023-07-13T00:00:00+00:00",
+        "estimated_cost_usd": 0.410211,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-07-12_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "a8ec8e99ae8f4c88ed7da8e8a27798aff576002888e47972d1638a1c1c3fbcb3",
+        "source": "downloaded",
+        "start": "2023-07-12T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-07-12_full_utc_day_statistics"
+      },
+      {
+        "bytes": 3362683,
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-08-09",
+        "end": "2023-08-10T00:00:00+00:00",
+        "estimated_cost_usd": 0.415752,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-08-09_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "96152088d585a7b17d3fe895c23430af78543c6c98995405033135729a69853d",
+        "source": "downloaded",
+        "start": "2023-08-09T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-08-09_full_utc_day_statistics"
+      },
+      {
+        "bytes": 3593214,
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-10-27",
+        "end": "2023-10-28T00:00:00+00:00",
+        "estimated_cost_usd": 0.438193,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-10-27_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "01458f0e257e194ef483a78181b97f4d31e975ee3820fe5a3602c951dbfed64d",
+        "source": "downloaded",
+        "start": "2023-10-27T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-10-27_full_utc_day_statistics"
+      },
+      {
+        "bytes": 2915315,
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-12-29",
+        "end": "2023-12-30T00:00:00+00:00",
+        "estimated_cost_usd": 0.368108,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-12-29_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "e0bc775d18005afb75b8a2d7b991e26b848c93e4370a3477447a090c8a9b3735",
+        "source": "downloaded",
+        "start": "2023-12-29T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-12-29_full_utc_day_statistics"
+      },
+      {
+        "bytes": 2873238,
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-05-21",
+        "end": "2024-05-22T00:00:00+00:00",
+        "estimated_cost_usd": 0.354508,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-05-21_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "8c5cbcc6d48c83aa810bed4dee14b9dd8f94010e925d0b735011f4659c157cbb",
+        "source": "downloaded",
+        "start": "2024-05-21T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-05-21_full_utc_day_statistics"
+      },
+      {
+        "bytes": 4342023,
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-08-05",
+        "end": "2024-08-06T00:00:00+00:00",
+        "estimated_cost_usd": 0.486999,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-08-05_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "073aad882a2ad8d10880530b6aefa35a410984ed6a7dc22565ca102863ea09a8",
+        "source": "downloaded",
+        "start": "2024-08-05T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-08-05_full_utc_day_statistics"
+      },
+      {
+        "bytes": 4937627,
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-08-07",
+        "end": "2024-08-08T00:00:00+00:00",
+        "estimated_cost_usd": 0.583485,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-08-07_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "87348be195e9d318c8bdeb52e2ed9564851b63c463c7b916e64f925edf35148a",
+        "source": "downloaded",
+        "start": "2024-08-07T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-08-07_full_utc_day_statistics"
+      },
+      {
+        "bytes": 4378599,
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-10-31",
+        "end": "2024-11-01T00:00:00+00:00",
+        "estimated_cost_usd": 0.504416,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-10-31_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "1023a4aa38ee167a834ade700b72a11e16b0f5cfcfce7f8147fbef1dcd3025c0",
+        "source": "downloaded",
+        "start": "2024-10-31T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-10-31_full_utc_day_statistics"
+      },
+      {
+        "bytes": 4386185,
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-12-18",
+        "end": "2024-12-19T00:00:00+00:00",
+        "estimated_cost_usd": 0.510154,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-12-18_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "9854ea38bddd5697b90571e590b3ccb2ea905d433e4b2d2643fc426bd0a6ccac",
+        "source": "downloaded",
+        "start": "2024-12-18T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-12-18_full_utc_day_statistics"
+      }
+    ],
+    "errors": [],
+    "total_bytes": 34323649
+  },
+  "hypothesis_id": "H-G1",
+  "mode": "download_complete",
+  "paid_cost_audit_before_download": {
+    "cost_guard_basis": "user_reported_actual_usage",
+    "cost_guard_used_usd": 105.0,
+    "remaining_before_stop_usd": 20.0,
+    "status": "pass"
+  },
+  "request_count": 11,
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-03-13",
+      "end": "2023-03-14T00:00:00+00:00",
+      "estimated_cost_usd": 0.005325,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-03-13_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2023-03-13T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-03-13_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-03-22",
+      "end": "2023-03-23T00:00:00+00:00",
+      "estimated_cost_usd": 0.005076,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-03-22_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2023-03-22T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-03-22_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-07-12",
+      "end": "2023-07-13T00:00:00+00:00",
+      "estimated_cost_usd": 0.410211,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-07-12_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2023-07-12T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-08-09",
+      "end": "2023-08-10T00:00:00+00:00",
+      "estimated_cost_usd": 0.415752,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-08-09_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2023-08-09T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-08-09_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-10-27",
+      "end": "2023-10-28T00:00:00+00:00",
+      "estimated_cost_usd": 0.438193,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-10-27_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2023-10-27T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-10-27_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-12-29",
+      "end": "2023-12-30T00:00:00+00:00",
+      "estimated_cost_usd": 0.368108,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2023-12-29_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2023-12-29T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-12-29_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-05-21",
+      "end": "2024-05-22T00:00:00+00:00",
+      "estimated_cost_usd": 0.354508,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-05-21_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2024-05-21T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-05-21_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-08-05",
+      "end": "2024-08-06T00:00:00+00:00",
+      "estimated_cost_usd": 0.486999,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-08-05_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2024-08-05T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-05_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-08-07",
+      "end": "2024-08-08T00:00:00+00:00",
+      "estimated_cost_usd": 0.583485,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-08-07_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2024-08-07T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-07_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-10-31",
+      "end": "2024-11-01T00:00:00+00:00",
+      "estimated_cost_usd": 0.504416,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-10-31_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2024-10-31T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-31_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-12-18",
+      "end": "2024-12-19T00:00:00+00:00",
+      "estimated_cost_usd": 0.510154,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_12_date\\2024-12-18_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2024-12-18T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-12-18_full_utc_day_statistics"
+    }
+  ],
+  "scenario": "h_g1_gamma_oi_12_date",
+  "schema_version": "h_g1_gamma_oi_download_result_v1",
+  "source_cost_report": "reports\\data_cost\\h_g1_gamma_oi_12_date_cost_estimate.json",
+  "status": "pass",
+  "total_estimated_cost_usd": 4.082227
+}

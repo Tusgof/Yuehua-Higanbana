@@ -84,17 +84,17 @@
     {
       "blockers": [],
       "cost_guard_basis": "user_reported_actual_usage",
-      "cost_guard_used_usd": 105.0,
-      "known_committed_estimated_cost_usd": 169.90613,
+      "cost_guard_used_usd": 109.082227,
+      "known_committed_estimated_cost_usd": 173.988357,
       "name": "paid_cost",
-      "remaining_before_stop_usd": 20.0,
+      "remaining_before_stop_usd": 15.917773,
       "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\paid_cost_audit.json",
       "status": "pass",
       "user_reported_actual_usage": {
-        "actual_usage_usd": 105.0,
-        "notes": "User reported current total Databento usage in the provider account. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.",
-        "reported_at_utc": "2026-07-03T01:43:53Z",
-        "source": "user_reported_databento_account_usage",
+        "actual_usage_usd": 109.082227,
+        "notes": "Previous user-reported Databento account usage was $105.0. Codex then executed the approved H-G1 OPRA statistics/OI 11-date pull with logged estimate $4.082227, so the working guard basis is updated to about $109.082227 until the user/provider account view supplies a newer actual total. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited.",
+        "reported_at_utc": "2026-07-03T05:28:29Z",
+        "source": "user_reported_usage_plus_codex_committed_h_g1_download_estimate",
         "source_path": "reports\\data_cost\\user_reported_actual_usage.json"
       }
     },

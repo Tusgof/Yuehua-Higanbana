@@ -9,6 +9,14 @@
   },
   "committed_items": [
     {
+      "estimated_cost_usd": 4.082227,
+      "item_id": "h_g1_gamma_oi_12_date",
+      "mode": "download_complete",
+      "provider": "Databento",
+      "scenario": "h_g1_gamma_oi_12_date",
+      "source_path": "reports\\data_cost\\h_g1_gamma_oi_download_result.json"
+    },
+    {
       "estimated_cost_usd": 0.995454,
       "item_id": "insample_2023_03:insample_2023_03_intraday_exit_30m_chunk1",
       "mode": "download_complete",
@@ -872,9 +880,9 @@
   "cost_guard_basis": "user_reported_actual_usage",
   "cost_guard_reconciliation": {
     "actual_usage_basis": {
-      "remaining_usd": 20.0,
+      "remaining_usd": 15.917773,
       "status": "pass",
-      "used_usd": 105.0
+      "used_usd": 109.082227
     },
     "estimated_only_risk": {
       "estimated_only_total_usd": 27.899065,
@@ -883,104 +891,104 @@
         {
           "estimated_cost_usd": 10.52248,
           "item_id": "databento_cost_h_a2_2022_10_stress",
-          "projected_known_estimated_cost_usd": 180.42861,
+          "projected_known_estimated_cost_usd": 184.510837,
           "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_10_stress.json"
         },
         {
           "estimated_cost_usd": 10.226392,
           "item_id": "databento_cost_h_a2_2022_09_stress",
-          "projected_known_estimated_cost_usd": 180.132522,
+          "projected_known_estimated_cost_usd": 184.214749,
           "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_09_stress.json"
         },
         {
           "estimated_cost_usd": 1.543901,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk2",
-          "projected_known_estimated_cost_usd": 171.450031,
+          "projected_known_estimated_cost_usd": 175.532258,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json"
         },
         {
           "estimated_cost_usd": 1.526606,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk3",
-          "projected_known_estimated_cost_usd": 171.432736,
+          "projected_known_estimated_cost_usd": 175.514963,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json"
         },
         {
           "estimated_cost_usd": 1.460004,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk1",
-          "projected_known_estimated_cost_usd": 171.366134,
+          "projected_known_estimated_cost_usd": 175.448361,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json"
         },
         {
           "estimated_cost_usd": 0.358536,
           "item_id": "databento_cost_2024_02_13_intraday_exit_30m",
-          "projected_known_estimated_cost_usd": 170.264666,
+          "projected_known_estimated_cost_usd": 174.346893,
           "source_path": "reports\\data_cost\\databento_cost_2024_02_13_intraday_exit_30m.json"
         },
         {
           "estimated_cost_usd": 0.338082,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29",
-          "projected_known_estimated_cost_usd": 170.244212,
+          "projected_known_estimated_cost_usd": 174.326439,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29.json"
         },
         {
           "estimated_cost_usd": 0.337333,
           "item_id": "databento_cost_insample_2023_12_intraday_exit_30m_sample",
-          "projected_known_estimated_cost_usd": 170.243463,
+          "projected_known_estimated_cost_usd": 174.32569,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_12_intraday_exit_30m_sample.json"
         },
         {
           "estimated_cost_usd": 0.32245,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28",
-          "projected_known_estimated_cost_usd": 170.22858,
+          "projected_known_estimated_cost_usd": 174.310807,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28.json"
         },
         {
           "estimated_cost_usd": 0.316463,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27",
-          "projected_known_estimated_cost_usd": 170.222593,
+          "projected_known_estimated_cost_usd": 174.30482,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json"
         },
         {
           "estimated_cost_usd": 0.312721,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25",
-          "projected_known_estimated_cost_usd": 170.218851,
+          "projected_known_estimated_cost_usd": 174.301078,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json"
         },
         {
           "estimated_cost_usd": 0.307899,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26",
-          "projected_known_estimated_cost_usd": 170.214029,
+          "projected_known_estimated_cost_usd": 174.296256,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json"
         },
         {
           "estimated_cost_usd": 0.301829,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_sample",
-          "projected_known_estimated_cost_usd": 170.207959,
+          "projected_known_estimated_cost_usd": 174.290186,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_sample.json"
         },
         {
           "estimated_cost_usd": 0.022813,
           "item_id": "spy_bars:oos_2024_q4_completion",
-          "projected_known_estimated_cost_usd": 169.928943,
+          "projected_known_estimated_cost_usd": 174.01117,
           "source_path": "reports\\data_cost\\databento_spy_bars_plan_oos_2024_q4_completion.json"
         },
         {
           "estimated_cost_usd": 0.001556,
           "item_id": "spy_bars:2024_09_chunk4",
-          "projected_known_estimated_cost_usd": 169.907686,
+          "projected_known_estimated_cost_usd": 173.989913,
           "source_path": "reports\\data_cost\\databento_spy_bars_plan_2024_09_chunk4.json"
         }
       ],
       "would_exceed_stop_threshold_if_all_estimates_committed": true
     },
     "known_committed_estimate_basis": {
-      "remaining_usd": -44.90613,
+      "remaining_usd": -48.988357,
       "status": "blocked",
-      "used_usd": 169.90613
+      "used_usd": 173.988357
     },
     "stop_threshold_usd": 125.0
   },
-  "cost_guard_used_usd": 105.0,
+  "cost_guard_used_usd": 109.082227,
   "estimated_only_items": [
     {
       "estimated_cost_usd": 0.358536,
@@ -1103,8 +1111,8 @@
       "source_path": "reports\\data_cost\\databento_spy_bars_plan_oos_2024_q4_completion.json"
     }
   ],
-  "known_committed_estimated_cost_usd": 169.90613,
-  "remaining_before_stop_usd": 20.0,
+  "known_committed_estimated_cost_usd": 173.988357,
+  "remaining_before_stop_usd": 15.917773,
   "status": "pass",
   "stop_threshold_usd": 125.0,
   "unpriced_items": [
@@ -1170,10 +1178,10 @@
     }
   ],
   "user_reported_actual_usage": {
-    "actual_usage_usd": 105.0,
-    "notes": "User reported current total Databento usage in the provider account. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.",
-    "reported_at_utc": "2026-07-03T01:43:53Z",
-    "source": "user_reported_databento_account_usage",
+    "actual_usage_usd": 109.082227,
+    "notes": "Previous user-reported Databento account usage was $105.0. Codex then executed the approved H-G1 OPRA statistics/OI 11-date pull with logged estimate $4.082227, so the working guard basis is updated to about $109.082227 until the user/provider account view supplies a newer actual total. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited.",
+    "reported_at_utc": "2026-07-03T05:28:29Z",
+    "source": "user_reported_usage_plus_codex_committed_h_g1_download_estimate",
     "source_path": "reports\\data_cost\\user_reported_actual_usage.json"
   }
 }

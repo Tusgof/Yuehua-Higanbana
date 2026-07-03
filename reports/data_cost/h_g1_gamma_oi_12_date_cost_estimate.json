@@ -1,0 +1,361 @@
+{
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "remaining_before_stop_usd": 20.0,
+    "status": "pass",
+    "stop_threshold_usd": 125.0,
+    "used_usd": 105.0
+  },
+  "cost_result": {
+    "download_performed": false,
+    "errors": [],
+    "live_request_count": 11,
+    "mode": "live_metadata_cost_no_download",
+    "requests": [
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-03-13",
+        "end": "2023-03-14T00:00:00+00:00",
+        "estimated_cost_usd": 0.005325,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2023-03-13T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-03-13_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-03-22",
+        "end": "2023-03-23T00:00:00+00:00",
+        "estimated_cost_usd": 0.005076,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2023-03-22T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-03-22_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-07-12",
+        "end": "2023-07-13T00:00:00+00:00",
+        "estimated_cost_usd": 0.410211,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2023-07-12T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-07-12_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-08-09",
+        "end": "2023-08-10T00:00:00+00:00",
+        "estimated_cost_usd": 0.415752,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2023-08-09T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-08-09_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-10-27",
+        "end": "2023-10-28T00:00:00+00:00",
+        "estimated_cost_usd": 0.438193,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2023-10-27T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-10-27_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-12-29",
+        "end": "2023-12-30T00:00:00+00:00",
+        "estimated_cost_usd": 0.368108,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2023-12-29T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-12-29_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-05-21",
+        "end": "2024-05-22T00:00:00+00:00",
+        "estimated_cost_usd": 0.354508,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2024-05-21T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-05-21_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-08-05",
+        "end": "2024-08-06T00:00:00+00:00",
+        "estimated_cost_usd": 0.486999,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2024-08-05T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-08-05_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-08-07",
+        "end": "2024-08-08T00:00:00+00:00",
+        "estimated_cost_usd": 0.583485,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2024-08-07T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-08-07_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-10-31",
+        "end": "2024-11-01T00:00:00+00:00",
+        "estimated_cost_usd": 0.504416,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2024-10-31T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-10-31_full_utc_day_statistics"
+      },
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2024-12-18",
+        "end": "2024-12-19T00:00:00+00:00",
+        "estimated_cost_usd": 0.510154,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2024-12-18T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2024-12-18_full_utc_day_statistics"
+      }
+    ],
+    "total_estimated_cost_usd": 4.082227
+  },
+  "decision": {
+    "blockers": [],
+    "download_allowed_under_current_guard": true,
+    "reason": "Estimated H-G1 OI cost $4.082227 fits within remaining headroom $20.0.",
+    "status": "pass"
+  },
+  "download_performed": false,
+  "existing_probe_dates": [
+    {
+      "date": "2024-01-03",
+      "opra_oi_status": "existing_probe"
+    }
+  ],
+  "hypothesis_id": "H-G1",
+  "manifest_schema_version": "h_g1_gamma_regime_date_set_preregistration_v1",
+  "manifest_validation": {
+    "blockers": [],
+    "date_count": 12,
+    "hypothesis_id": "H-G1",
+    "macro_counts": {
+      "high_importance_macro": 6,
+      "no_high_importance_macro": 6
+    },
+    "manifest_path": "experiments\\h_g1_gamma_regime_date_set_preregistration.json",
+    "opra_oi_status_counts": {
+      "existing_probe": 1,
+      "needs_metadata_cost_check": 11
+    },
+    "split_counts": {
+      "in_sample": 6,
+      "oos": 6
+    },
+    "status": "pass",
+    "unique_calendar_months": 10,
+    "volatility_bucket_counts": {
+      "high": 4,
+      "low": 4,
+      "normal": 4
+    }
+  },
+  "missing_oi_date_count": 11,
+  "mode": "live_metadata_cost_no_download",
+  "planned_requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-03-13",
+      "end": "2023-03-14T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2023-03-13T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-03-13_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-03-22",
+      "end": "2023-03-23T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2023-03-22T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-03-22_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-07-12",
+      "end": "2023-07-13T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2023-07-12T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-08-09",
+      "end": "2023-08-10T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2023-08-09T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-08-09_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-10-27",
+      "end": "2023-10-28T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2023-10-27T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-10-27_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-12-29",
+      "end": "2023-12-30T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2023-12-29T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-12-29_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-05-21",
+      "end": "2024-05-22T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2024-05-21T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-05-21_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-08-05",
+      "end": "2024-08-06T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2024-08-05T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-05_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-08-07",
+      "end": "2024-08-08T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2024-08-07T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-07_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-10-31",
+      "end": "2024-11-01T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2024-10-31T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-31_full_utc_day_statistics"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2024-12-18",
+      "end": "2024-12-19T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2024-12-18T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-12-18_full_utc_day_statistics"
+    }
+  ],
+  "projected_usage_if_downloaded_usd": 109.082227,
+  "schema_version": "h_g1_gamma_oi_cost_estimate_v1"
+}
