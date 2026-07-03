@@ -43,6 +43,8 @@ class FixturePipelineTests(unittest.TestCase):
             "gdelt_news_capture_dry_run",
             "audit_news_coverage",
             "audit_paid_costs",
+            "validate_hypothesis_registry",
+            "validate_evidence_tiers",
             "audit_research_readiness",
             "audit_research_logs",
             "import_macro_calendar_snapshot_fixture",

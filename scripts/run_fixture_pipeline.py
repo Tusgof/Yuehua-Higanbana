@@ -135,6 +135,8 @@ def main() -> int:
         ("audit_news_coverage", ["scripts/audit_news_coverage.py"]),
         ("audit_paid_costs", ["scripts/audit_paid_costs.py"]),
         ("audit_strategy_data_readiness", ["scripts/audit_strategy_data_readiness.py"]),
+        ("validate_hypothesis_registry", ["scripts/validate_hypothesis_registry.py"]),
+        ("validate_evidence_tiers", ["scripts/validate_evidence_tiers.py"]),
         ("audit_research_readiness", ["scripts/audit_research_readiness.py"]),
         ("audit_research_logs", ["scripts/audit_research_logs.py"]),
         (
@@ -215,6 +217,8 @@ def main() -> int:
             "user_inputs": str(PROJECT_ROOT / "docs" / "NEXT_USER_INPUTS.md"),
             "paid_cost": str(PROJECT_ROOT / "reports" / "data_cost" / "paid_cost_audit.md"),
             "strategy_data_readiness": str(PROJECT_ROOT / "reports" / "strategy_data_readiness_audit.md"),
+            "hypothesis_registry": str(PROJECT_ROOT / "reports" / "hypothesis_registry_audit.md"),
+            "evidence_tiers": str(PROJECT_ROOT / "reports" / "evidence_tier_audit.md"),
             "research_readiness": str(PROJECT_ROOT / "reports" / "research_readiness_audit.md"),
             "research_logs": str(PROJECT_ROOT / "reports" / "research_log_audit.md"),
         },
