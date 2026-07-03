@@ -877,9 +877,21 @@
       "used_usd": 105.0
     },
     "estimated_only_risk": {
-      "estimated_only_total_usd": 7.150193,
-      "single_item_threshold_breach_count": 13,
+      "estimated_only_total_usd": 27.899065,
+      "single_item_threshold_breach_count": 15,
       "single_item_threshold_breaches": [
+        {
+          "estimated_cost_usd": 10.52248,
+          "item_id": "databento_cost_h_a2_2022_10_stress",
+          "projected_known_estimated_cost_usd": 180.42861,
+          "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_10_stress.json"
+        },
+        {
+          "estimated_cost_usd": 10.226392,
+          "item_id": "databento_cost_h_a2_2022_09_stress",
+          "projected_known_estimated_cost_usd": 180.132522,
+          "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_09_stress.json"
+        },
         {
           "estimated_cost_usd": 1.543901,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk2",
@@ -977,6 +989,22 @@
       "provider": "Databento",
       "scenario": null,
       "source_path": "reports\\data_cost\\databento_cost_2024_02_13_intraday_exit_30m.json"
+    },
+    {
+      "estimated_cost_usd": 10.226392,
+      "item_id": "databento_cost_h_a2_2022_09_stress",
+      "mode": "live",
+      "provider": "Databento",
+      "scenario": null,
+      "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_09_stress.json"
+    },
+    {
+      "estimated_cost_usd": 10.52248,
+      "item_id": "databento_cost_h_a2_2022_10_stress",
+      "mode": "live",
+      "provider": "Databento",
+      "scenario": null,
+      "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_10_stress.json"
     },
     {
       "estimated_cost_usd": 0.312721,

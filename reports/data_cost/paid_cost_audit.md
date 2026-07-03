@@ -11,11 +11,13 @@
 
 - Actual-usage basis status: `pass`; used `$105.0`; remaining `$20.0`
 - Conservative known-estimate basis status: `blocked`; used `$169.90613`; remaining `$-44.90613`
-- Estimated-only total not yet committed: `$7.150193`
-- Single estimated-only items that would reach stop if committed: `13`
+- Estimated-only total not yet committed: `$27.899065`
+- Single estimated-only items that would reach stop if committed: `15`
 
 | Item | Cost | Projected Conservative Total | Source |
 |:--|--:|--:|:--|
+| `databento_cost_h_a2_2022_10_stress` | `$10.52248` | `$180.42861` | `reports\data_cost\databento_cost_h_a2_2022_10_stress.json` |
+| `databento_cost_h_a2_2022_09_stress` | `$10.226392` | `$180.132522` | `reports\data_cost\databento_cost_h_a2_2022_09_stress.json` |
 | `databento_cost_insample_2023_09_intraday_exit_30m_chunk2` | `$1.543901` | `$171.450031` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json` |
 | `databento_cost_insample_2023_09_intraday_exit_30m_chunk3` | `$1.526606` | `$171.432736` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json` |
 | `databento_cost_insample_2023_09_intraday_exit_30m_chunk1` | `$1.460004` | `$171.366134` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json` |
@@ -160,6 +162,8 @@
 | Item | Cost | Source |
 |:--|--:|:--|
 | `databento_cost_2024_02_13_intraday_exit_30m` | `$0.358536` | `reports\data_cost\databento_cost_2024_02_13_intraday_exit_30m.json` |
+| `databento_cost_h_a2_2022_09_stress` | `$10.226392` | `reports\data_cost\databento_cost_h_a2_2022_09_stress.json` |
+| `databento_cost_h_a2_2022_10_stress` | `$10.52248` | `reports\data_cost\databento_cost_h_a2_2022_10_stress.json` |
 | `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25` | `$0.312721` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json` |
 | `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26` | `$0.307899` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json` |
 | `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27` | `$0.316463` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json` |

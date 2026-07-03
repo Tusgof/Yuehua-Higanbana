@@ -1,0 +1,66 @@
+{
+  "record_type": "data_purchase_gate",
+  "schema_version": "h_a2_2022_h2_top2_live_cost_gate_v1",
+  "hypothesis_id": "H-A2",
+  "gate_id": "h_a2_2022_h2_top2_live_cost_gate",
+  "status": "blocked",
+  "mode": "live_metadata_cost_only",
+  "no_new_paid_data_downloaded": true,
+  "dataset": "OPRA.PILLAR",
+  "schema": "cbbo-1m",
+  "symbol": "SPY.OPT",
+  "stype_in": "parent",
+  "window_profile": "intraday_exit_30m",
+  "live_cost_granularity": "daily_union",
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "used_usd": 105.0,
+    "stop_threshold_usd": 125.0,
+    "remaining_before_stop_usd": 20.0
+  },
+  "month_estimates": [
+    {
+      "month": "2022-09",
+      "rank": 2,
+      "source_path": "reports/data_cost/databento_cost_h_a2_2022_09_stress.json",
+      "trading_days": 21,
+      "live_request_count": 21,
+      "estimated_cost_usd": 10.226392,
+      "errors": 0,
+      "decision_status": "pass"
+    },
+    {
+      "month": "2022-10",
+      "rank": 1,
+      "source_path": "reports/data_cost/databento_cost_h_a2_2022_10_stress.json",
+      "trading_days": 21,
+      "live_request_count": 21,
+      "estimated_cost_usd": 10.52248,
+      "errors": 0,
+      "decision_status": "pass"
+    }
+  ],
+  "top2": {
+    "months": [
+      "2022-10",
+      "2022-09"
+    ],
+    "estimated_cost_usd": 20.748872,
+    "would_exceed_current_headroom_by_usd": 0.748872,
+    "download_allowed_now": false
+  },
+  "decision": {
+    "status": "blocked_until_topup_or_scope_revision",
+    "reason": "Combined top2 live metadata estimate is $20.748872, which exceeds the current $20.0 headroom under the $125 stop threshold. Do not download top2 under the current guard.",
+    "allowed_without_new_user_decision": [
+      "No download",
+      "Continue no-cost/free cached-data work",
+      "Re-run audit if user-reported actual usage or cap changes"
+    ],
+    "requires_user_or_plan_decision": [
+      "Top up the existing Databento account/cap before buying top2",
+      "Revise scope to a narrower one-month stress purchase such as 2022-10 only"
+    ]
+  },
+  "next_safe_action": "Do not download H-A2 top2 under the current $125 guard. Either wait for real top-up/scope decision, or continue to no-cost H-B2 work while H-A2 stress expansion remains cost-blocked."
+}

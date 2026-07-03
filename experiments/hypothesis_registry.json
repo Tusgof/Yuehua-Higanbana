@@ -78,7 +78,8 @@
         "Pre-registered H-A2 re-analysis from existing M5.5 evidence.",
         "Free Aug 2024 high-VIX labeling/silence investigation.",
         "If justified, top 2-3 high-VIX months from 2022 H2 after cost guard check.",
-        "H-A2.4 projection selected 2022-10 and 2022-09 for top2 live cost check; top3 requires top-up or a lower live quote."
+        "H-A2.4 projection selected 2022-10 and 2022-09 for top2 live cost check; top3 requires top-up or a lower live quote.",
+        "H-A2.5 live metadata cost gate blocks top2 download under the current $125 guard because combined estimate is $20.748872 versus $20.0 headroom."
       ],
       "mintrl_falsify": {
         "status": "pending",
@@ -127,6 +128,11 @@
           "date": "2026-07-03",
           "decision": "stress_month_purchase_estimate_completed",
           "notes": "H-A2.4 completed with no new paid data. 2022-10 and 2022-09 are the top VIX-stress months; top2 base projection is $16.923156 inside the current $20 headroom, but high projection exceeds headroom and top3 likely requires top-up. Next step is live metadata cost check for top2 only before any download."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "stress_top2_download_cost_blocked",
+          "notes": "H-A2.5 live metadata cost check completed with no data download. 2022-10 estimate is $10.52248 and 2022-09 estimate is $10.226392, combined $20.748872. This exceeds the current $20.0 headroom, so top2 download is blocked until real top-up/cap change or explicit narrower-scope revision."
         }
       ]
     },

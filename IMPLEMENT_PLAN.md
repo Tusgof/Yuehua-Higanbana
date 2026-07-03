@@ -65,7 +65,7 @@
 | H-A2.2 | Re-analyze the existing M5.5 macro-filter result as H-A2 E1 evidence with inherited 9-trial search contamination and DSR blocker/adjustment | M | RISK | Complete: `reports\experiments\h_a2_macro_conditioned_reanalysis_summary.json` cites the 9 M5.5 trials, labels evidence `E1`, records DSR/sample/regime blockers, and does not claim E2 |
 | H-A2.3 | Investigate why cached Aug 2024 VIX-spike windows produced zero high-VIX trades | M | RISK | Complete: `reports\diagnostics\h_a2_high_vix_silence_diagnostic_summary.json` shows complete VIX/market-data coverage and zero ORB candidates on high-VIX dates, so the gap is ORB silence rather than a labeling gap |
 | H-A2.4 | If still justified, estimate 2022 H2 top 2-3 VIX months only, before any purchase | S | RISK | Complete: `reports\data_cost\h_a2_2022_h2_stress_purchase_estimate.json` ranks 2022-10 and 2022-09 as top2, estimates base cost `$16.923156` inside `$20` headroom, and marks top3 as requiring live cost or top-up |
-| H-A2.5 | Buy 2022 H2 stress data only if the decision tree passes and headroom/top-up allows it | L | RISK | First run live Databento metadata cost check for top2 only; proceed to download only if `audit_paid_costs.py` still passes and live estimate keeps total below `$125` |
+| H-A2.5 | Buy 2022 H2 stress data only if the decision tree passes and headroom/top-up allows it | L | RISK | Gate complete, download blocked: live metadata estimates are `2022-10=$10.52248` and `2022-09=$10.226392`, combined `$20.748872`, which exceeds current `$20` headroom; no data downloaded |
 | H-A2.6 | Write research log `011-higanbana-...` only if a real experiment or formal deferred/falsification result completes | S | OK | Complete for H-A2.2: `research_log\011-higanbana-macro-conditioned-orb-reanalysis.md` was written and pushed; `python scripts\audit_research_logs.py` passes |
 
 **Track complete when**: H-A2 is either falsified cheaply, remains active with a justified next data target, or earns a clean path toward E2 using untouched validation data.
@@ -148,9 +148,9 @@
 ---
 
 ## Execution Notes
-- **Active track**: H-A2 after P0 completion.
-- **Immediate next safe action**: Continue H-A2 with H-A2.5 pre-download gate: run a live Databento metadata cost check for top2 only (`2022-10`, `2022-09`) before any download. Do not buy top3 unless the user tops up or live cost proves top3 remains under the current guard.
-- **Blocked paid actions**: 2022 H2 stress data download requires live metadata estimate plus `audit_paid_costs.py` pass before and after. Any new provider still requires explicit user approval.
+- **Active track**: H-B2 no-cost work while H-A2 stress expansion is cost-blocked.
+- **Immediate next safe action**: Start H-B2.1/H-B2.2: confirm H-B1/H-B2 registry state, then pre-register `$10k`/`$25k` Sub-System B sizing, wing grid, selection rule, and DSR/search-log handling using already-cached data only.
+- **Blocked paid actions**: H-A2 top2 2022 H2 stress data download is blocked because live estimate `$20.748872` exceeds the current `$20.0` headroom. Do not download top2 unless the user tops up/cap changes or the plan is explicitly revised to a narrower scope. Any new provider still requires explicit user approval.
 - **Current cost basis**: User-reported actual usage `$105.0`; stop threshold `$125`; current headroom `$20.0`.
 - **Risk checkpoints**: Before every paid pull, after every validator/audit change, before H-A2 stress purchase, before H-G1 12-date OI purchase, before any LLM call, before acceptance, and before paper/dry-run.
 - **Archive policy**: Before replacing this plan again, archive the current `IMPLEMENT_PLAN.md` under `Backup_IMPLEMENT_PLAN\` and state why.
