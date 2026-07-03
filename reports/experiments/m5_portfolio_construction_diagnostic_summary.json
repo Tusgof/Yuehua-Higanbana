@@ -1,0 +1,849 @@
+{
+  "baseline_scenario": {
+    "daily_count": 416,
+    "feasibility": {
+      "all_subsystem_b_trades_fit_20_risk_budget": true,
+      "all_subsystem_b_trades_fit_allocation": true,
+      "notes": [
+        "Sub-System B is not used in this scenario."
+      ],
+      "status": "account_feasible_without_subsystem_b",
+      "subsystem_b_allocation": 0.0
+    },
+    "metrics": {
+      "average_day_pnl": 1.3115,
+      "day_count": 416,
+      "ending_equity": 1545.6,
+      "es95": -47.8457,
+      "es99": -59.56,
+      "max_drawdown": -0.370769,
+      "payoff_ratio": 2.663,
+      "sharpe_proxy": 0.054618,
+      "sortino_proxy": 0.125056,
+      "total_pnl": 545.6,
+      "win_rate": 0.0697,
+      "worst_day_loss": -62.56
+    },
+    "oos_metrics": {
+      "average_day_pnl": -0.3456,
+      "day_count": 227,
+      "ending_equity": 1545.6,
+      "es95": -50.31,
+      "es99": -61.56,
+      "max_drawdown": -0.370769,
+      "payoff_ratio": 2.1243,
+      "sharpe_proxy": -0.001325,
+      "sortino_proxy": -0.002567,
+      "total_pnl": -78.44,
+      "win_rate": 0.0661,
+      "worst_day_loss": -62.56
+    },
+    "scenario_id": "subsystem_a_only_control",
+    "weights": {
+      "subsystem_a": 1.0,
+      "subsystem_b": 0.0
+    }
+  },
+  "best_diagnostic_scenario": {
+    "daily_count": 416,
+    "feasibility": {
+      "all_subsystem_b_trades_fit_20_risk_budget": true,
+      "all_subsystem_b_trades_fit_allocation": true,
+      "notes": [
+        "Sub-System B is not used in this scenario."
+      ],
+      "status": "account_feasible_without_subsystem_b",
+      "subsystem_b_allocation": 0.0
+    },
+    "metrics": {
+      "average_day_pnl": 1.3115,
+      "day_count": 416,
+      "ending_equity": 1545.6,
+      "es95": -47.8457,
+      "es99": -59.56,
+      "max_drawdown": -0.370769,
+      "payoff_ratio": 2.663,
+      "sharpe_proxy": 0.054618,
+      "sortino_proxy": 0.125056,
+      "total_pnl": 545.6,
+      "win_rate": 0.0697,
+      "worst_day_loss": -62.56
+    },
+    "oos_metrics": {
+      "average_day_pnl": -0.3456,
+      "day_count": 227,
+      "ending_equity": 1545.6,
+      "es95": -50.31,
+      "es99": -61.56,
+      "max_drawdown": -0.370769,
+      "payoff_ratio": 2.1243,
+      "sharpe_proxy": -0.001325,
+      "sortino_proxy": -0.002567,
+      "total_pnl": -78.44,
+      "win_rate": 0.0661,
+      "worst_day_loss": -62.56
+    },
+    "scenario_id": "subsystem_a_only_control",
+    "weights": {
+      "subsystem_a": 1.0,
+      "subsystem_b": 0.0
+    }
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "Portfolio construction is mathematically testable, but Sub-System B is not current-sizing feasible and every blended portfolio remains under-sampled/underpowered.",
+  "dsr_assessment": {
+    "reason": "DSR is blocked because this is a multi-scenario allocation diagnostic, all scenarios are under-sampled, and Sub-System B is not current-sizing feasible.",
+    "required_before_acceptance": [
+      "acceptance-grade daily return distribution",
+      "effective number of independent allocation trials",
+      "null Sharpe threshold",
+      "skew/kurtosis/autocorrelation diagnostics",
+      "implementable integer-contract sizing design"
+    ],
+    "selected_metric": "total_pnl",
+    "status": "blocked_under_sampled",
+    "trial_count": 5
+  },
+  "experiment_id": "m5_portfolio_construction_diagnostic",
+  "input_paths": {
+    "subsystem_a": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\baselines\\subsystem_a_orb_baseline_summary.json",
+    "subsystem_b": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\baselines\\subsystem_b_put_ratio_feasibility_summary.json"
+  },
+  "methodology": {
+    "data_policy": "No new paid data was downloaded for this experiment.",
+    "feasibility_policy": "Sub-System B allocation is checked against current $1,000 account, $300 Sub-System B allocation, and $20 risk budget constraints.",
+    "fit_policy": "Risk parity and ES parity weights are fit on in-sample returns only, then reported on OOS without OOS tuning.",
+    "fractional_contract_policy": "Blended weights are fractional diagnostic portfolios only. They are not directly tradable option-contract portfolios.",
+    "scope": "Diagnostic allocation between Sub-System A ORB baseline and Sub-System B put-ratio baseline daily PnL."
+  },
+  "parameter_grid": {
+    "scenario_ids": [
+      "subsystem_a_only_control",
+      "subsystem_b_only_diagnostic",
+      "equal_weight_fractional_diagnostic",
+      "risk_parity_inverse_vol_in_sample",
+      "es_parity_inverse_es95_in_sample"
+    ],
+    "weights": {
+      "equal_weight_fractional_diagnostic": {
+        "subsystem_a": 0.5,
+        "subsystem_b": 0.5
+      },
+      "es_parity_inverse_es95_in_sample": {
+        "subsystem_a": 0.72767643,
+        "subsystem_b": 0.27232357
+      },
+      "risk_parity_inverse_vol_in_sample": {
+        "subsystem_a": 0.99470524,
+        "subsystem_b": 0.00529476
+      },
+      "subsystem_a_only_control": {
+        "subsystem_a": 1.0,
+        "subsystem_b": 0.0
+      },
+      "subsystem_b_only_diagnostic": {
+        "subsystem_a": 0.0,
+        "subsystem_b": 1.0
+      }
+    }
+  },
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-portfolio-construction-diagnostic-real-data",
+  "sample_adequacy": {
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "minimum_observation_count_prior": 500,
+    "mintrl_status": "pending_return_distribution",
+    "observation_count": 416,
+    "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+    "psr_status": "pending_return_distribution"
+  },
+  "scenario_count": 5,
+  "scenarios": [
+    {
+      "big_day_dependency": {
+        "method": "remove_top_and_bottom_5pct_by_daily_net_pnl",
+        "original_days": 416,
+        "original_sharpe_proxy": 0.054618,
+        "original_total_pnl": 545.6,
+        "removed_day_count": 42,
+        "removed_each_side": 21,
+        "retained_days": 374,
+        "retained_sharpe_proxy": -0.242934,
+        "retained_total_pnl": -869.88,
+        "status": "pass"
+      },
+      "daily_count": 416,
+      "feasibility": {
+        "all_subsystem_b_trades_fit_20_risk_budget": true,
+        "all_subsystem_b_trades_fit_allocation": true,
+        "notes": [
+          "Sub-System B is not used in this scenario."
+        ],
+        "status": "account_feasible_without_subsystem_b",
+        "subsystem_b_allocation": 0.0
+      },
+      "fractional_contract_warning": false,
+      "metrics": {
+        "average_day_pnl": 1.3115,
+        "day_count": 416,
+        "ending_equity": 1545.6,
+        "es95": -47.8457,
+        "es99": -59.56,
+        "max_drawdown": -0.370769,
+        "payoff_ratio": 2.663,
+        "sharpe_proxy": 0.054618,
+        "sortino_proxy": 0.125056,
+        "total_pnl": 545.6,
+        "win_rate": 0.0697,
+        "worst_day_loss": -62.56
+      },
+      "sample_adequacy": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_observation_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "observation_count": 416,
+        "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "scenario_id": "subsystem_a_only_control",
+      "scenario_type": "control",
+      "splits": {
+        "in_sample": {
+          "daily_count": 189,
+          "metrics": {
+            "average_day_pnl": 3.3018,
+            "day_count": 189,
+            "ending_equity": 1624.04,
+            "es95": -42.16,
+            "es99": -53.06,
+            "max_drawdown": -0.170819,
+            "payoff_ratio": 3.429,
+            "sharpe_proxy": 0.103318,
+            "sortino_proxy": 0.26863,
+            "total_pnl": 624.04,
+            "win_rate": 0.0741,
+            "worst_day_loss": -57.56
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 189,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        },
+        "oos": {
+          "daily_count": 227,
+          "metrics": {
+            "average_day_pnl": -0.3456,
+            "day_count": 227,
+            "ending_equity": 1545.6,
+            "es95": -50.31,
+            "es99": -61.56,
+            "max_drawdown": -0.370769,
+            "payoff_ratio": 2.1243,
+            "sharpe_proxy": -0.001325,
+            "sortino_proxy": -0.002567,
+            "total_pnl": -78.44,
+            "win_rate": 0.0661,
+            "worst_day_loss": -62.56
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 227,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        }
+      },
+      "trial_index": 1,
+      "weight_fit_policy": "fixed_or_fit_on_in_sample_only",
+      "weights": {
+        "subsystem_a": 1.0,
+        "subsystem_b": 0.0
+      }
+    },
+    {
+      "big_day_dependency": {
+        "method": "remove_top_and_bottom_5pct_by_daily_net_pnl",
+        "original_days": 416,
+        "original_sharpe_proxy": 0.0527,
+        "original_total_pnl": -5973.44,
+        "removed_day_count": 42,
+        "removed_each_side": 21,
+        "retained_days": 374,
+        "retained_sharpe_proxy": 0.057686,
+        "retained_total_pnl": -9229.4,
+        "status": "pass"
+      },
+      "daily_count": 416,
+      "feasibility": {
+        "all_subsystem_b_trades_fit_20_risk_budget": false,
+        "all_subsystem_b_trades_fit_allocation": true,
+        "current_project_risk_budget": 20.0,
+        "current_project_subsystem_b_allocation": 300.0,
+        "notes": [
+          "Sub-System B baseline is already marked failed for current $300 allocation and $20 risk budget.",
+          "Fractional portfolio weights are diagnostic only; options contracts cannot be traded fractionally."
+        ],
+        "status": "blocked_current_sizing",
+        "subsystem_b_allocation": 1000.0,
+        "subsystem_b_max_defined_loss": 773.0,
+        "subsystem_b_median_defined_loss": 566.0,
+        "subsystem_b_min_defined_loss": 366.0
+      },
+      "fractional_contract_warning": false,
+      "metrics": {
+        "average_day_pnl": -14.3592,
+        "day_count": 416,
+        "ending_equity": -4973.44,
+        "es95": -161.4533,
+        "es99": -237.92,
+        "max_drawdown": -6.202878,
+        "payoff_ratio": 1.8012,
+        "sharpe_proxy": 0.0527,
+        "sortino_proxy": 0.740616,
+        "total_pnl": -5973.44,
+        "win_rate": 0.2933,
+        "worst_day_loss": -454.12
+      },
+      "sample_adequacy": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_observation_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "observation_count": 416,
+        "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "scenario_id": "subsystem_b_only_diagnostic",
+      "scenario_type": "blocked_current_sizing",
+      "splits": {
+        "in_sample": {
+          "daily_count": 189,
+          "metrics": {
+            "average_day_pnl": -11.1465,
+            "day_count": 189,
+            "ending_equity": -1106.68,
+            "es95": -133.32,
+            "es99": -147.62,
+            "max_drawdown": -2.398303,
+            "payoff_ratio": 2.1143,
+            "sharpe_proxy": 0.077533,
+            "sortino_proxy": 1.247913,
+            "total_pnl": -2106.68,
+            "win_rate": 0.2751,
+            "worst_day_loss": -155.12
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 189,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        },
+        "oos": {
+          "daily_count": 227,
+          "metrics": {
+            "average_day_pnl": -17.0342,
+            "day_count": 227,
+            "ending_equity": -4973.44,
+            "es95": -179.4533,
+            "es99": -289.12,
+            "max_drawdown": -6.24908,
+            "payoff_ratio": 1.5816,
+            "sharpe_proxy": 0.200548,
+            "sortino_proxy": 0.241556,
+            "total_pnl": -3866.76,
+            "win_rate": 0.3084,
+            "worst_day_loss": -454.12
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 227,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        }
+      },
+      "trial_index": 2,
+      "weight_fit_policy": "fixed_or_fit_on_in_sample_only",
+      "weights": {
+        "subsystem_a": 0.0,
+        "subsystem_b": 1.0
+      }
+    },
+    {
+      "big_day_dependency": {
+        "method": "remove_top_and_bottom_5pct_by_daily_net_pnl",
+        "original_days": 416,
+        "original_sharpe_proxy": 0.075254,
+        "original_total_pnl": -2713.92,
+        "removed_day_count": 42,
+        "removed_each_side": 21,
+        "retained_days": 374,
+        "retained_sharpe_proxy": 0.075286,
+        "retained_total_pnl": -4541.08,
+        "status": "pass"
+      },
+      "daily_count": 416,
+      "feasibility": {
+        "all_subsystem_b_trades_fit_20_risk_budget": false,
+        "all_subsystem_b_trades_fit_allocation": false,
+        "current_project_risk_budget": 20.0,
+        "current_project_subsystem_b_allocation": 300.0,
+        "notes": [
+          "Sub-System B baseline is already marked failed for current $300 allocation and $20 risk budget.",
+          "Fractional portfolio weights are diagnostic only; options contracts cannot be traded fractionally."
+        ],
+        "status": "blocked_current_sizing",
+        "subsystem_b_allocation": 500.0,
+        "subsystem_b_max_defined_loss": 773.0,
+        "subsystem_b_median_defined_loss": 566.0,
+        "subsystem_b_min_defined_loss": 366.0
+      },
+      "fractional_contract_warning": true,
+      "metrics": {
+        "average_day_pnl": -6.5238,
+        "day_count": 416,
+        "ending_equity": -1713.92,
+        "es95": -86.4714,
+        "es99": -118.884,
+        "max_drawdown": -2.795771,
+        "payoff_ratio": 1.7896,
+        "sharpe_proxy": 0.075254,
+        "sortino_proxy": 0.598143,
+        "total_pnl": -2713.92,
+        "win_rate": 0.3053,
+        "worst_day_loss": -174.84
+      },
+      "sample_adequacy": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_observation_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "observation_count": 416,
+        "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "scenario_id": "equal_weight_fractional_diagnostic",
+      "scenario_type": "fractional_diagnostic",
+      "splits": {
+        "in_sample": {
+          "daily_count": 189,
+          "metrics": {
+            "average_day_pnl": -3.9223,
+            "day_count": 189,
+            "ending_equity": 258.68,
+            "es95": -74.628,
+            "es99": -87.59,
+            "max_drawdown": -0.995211,
+            "payoff_ratio": 2.1018,
+            "sharpe_proxy": 0.096103,
+            "sortino_proxy": 1.265772,
+            "total_pnl": -741.32,
+            "win_rate": 0.291,
+            "worst_day_loss": -91.34
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 189,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        },
+        "oos": {
+          "daily_count": 227,
+          "metrics": {
+            "average_day_pnl": -8.6899,
+            "day_count": 227,
+            "ending_equity": -1713.92,
+            "es95": -94.4967,
+            "es99": -137.08,
+            "max_drawdown": -2.91246,
+            "payoff_ratio": 1.5718,
+            "sharpe_proxy": 0.085879,
+            "sortino_proxy": 0.145701,
+            "total_pnl": -1972.6,
+            "win_rate": 0.3172,
+            "worst_day_loss": -174.84
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 227,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        }
+      },
+      "trial_index": 3,
+      "weight_fit_policy": "fixed_or_fit_on_in_sample_only",
+      "weights": {
+        "subsystem_a": 0.5,
+        "subsystem_b": 0.5
+      }
+    },
+    {
+      "big_day_dependency": {
+        "method": "remove_top_and_bottom_5pct_by_daily_net_pnl",
+        "original_days": 416,
+        "original_sharpe_proxy": 0.052155,
+        "original_total_pnl": 511.07,
+        "removed_day_count": 42,
+        "removed_each_side": 21,
+        "retained_days": 374,
+        "retained_sharpe_proxy": -0.249258,
+        "retained_total_pnl": -895.38,
+        "status": "pass"
+      },
+      "daily_count": 416,
+      "feasibility": {
+        "all_subsystem_b_trades_fit_20_risk_budget": false,
+        "all_subsystem_b_trades_fit_allocation": false,
+        "current_project_risk_budget": 20.0,
+        "current_project_subsystem_b_allocation": 300.0,
+        "notes": [
+          "Sub-System B baseline is already marked failed for current $300 allocation and $20 risk budget.",
+          "Fractional portfolio weights are diagnostic only; options contracts cannot be traded fractionally."
+        ],
+        "status": "blocked_current_sizing",
+        "subsystem_b_allocation": 5.29,
+        "subsystem_b_max_defined_loss": 773.0,
+        "subsystem_b_median_defined_loss": 566.0,
+        "subsystem_b_min_defined_loss": 366.0
+      },
+      "fractional_contract_warning": true,
+      "metrics": {
+        "average_day_pnl": 1.2285,
+        "day_count": 416,
+        "ending_equity": 1511.07,
+        "es95": -47.8819,
+        "es99": -59.322,
+        "max_drawdown": -0.381438,
+        "payoff_ratio": 2.8798,
+        "sharpe_proxy": 0.052155,
+        "sortino_proxy": 0.115017,
+        "total_pnl": 511.07,
+        "win_rate": 0.3005,
+        "worst_day_loss": -63.11
+      },
+      "sample_adequacy": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_observation_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "observation_count": 416,
+        "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "scenario_id": "risk_parity_inverse_vol_in_sample",
+      "scenario_type": "in_sample_fitted_fractional_diagnostic",
+      "splits": {
+        "in_sample": {
+          "daily_count": 189,
+          "metrics": {
+            "average_day_pnl": 3.2253,
+            "day_count": 189,
+            "ending_equity": 1609.58,
+            "es95": -42.165,
+            "es99": -53.325,
+            "max_drawdown": -0.166405,
+            "payoff_ratio": 4.0822,
+            "sharpe_proxy": 0.10157,
+            "sortino_proxy": 0.267122,
+            "total_pnl": 609.58,
+            "win_rate": 0.2963,
+            "worst_day_loss": -57.72
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 189,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        },
+        "oos": {
+          "daily_count": 227,
+          "metrics": {
+            "average_day_pnl": -0.434,
+            "day_count": 227,
+            "ending_equity": 1511.07,
+            "es95": -50.1925,
+            "es99": -61.36,
+            "max_drawdown": -0.381438,
+            "payoff_ratio": 2.1174,
+            "sharpe_proxy": -0.003912,
+            "sortino_proxy": -0.007045,
+            "total_pnl": -98.51,
+            "win_rate": 0.304,
+            "worst_day_loss": -63.11
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 227,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        }
+      },
+      "trial_index": 4,
+      "weight_fit_policy": "fixed_or_fit_on_in_sample_only",
+      "weights": {
+        "subsystem_a": 0.99470524,
+        "subsystem_b": 0.00529476
+      }
+    },
+    {
+      "big_day_dependency": {
+        "method": "remove_top_and_bottom_5pct_by_daily_net_pnl",
+        "original_days": 416,
+        "original_sharpe_proxy": 0.062577,
+        "original_total_pnl": -1229.67,
+        "removed_day_count": 42,
+        "removed_each_side": 21,
+        "retained_days": 374,
+        "retained_sharpe_proxy": 0.068348,
+        "retained_total_pnl": -2370.19,
+        "status": "pass"
+      },
+      "daily_count": 416,
+      "feasibility": {
+        "all_subsystem_b_trades_fit_20_risk_budget": false,
+        "all_subsystem_b_trades_fit_allocation": false,
+        "current_project_risk_budget": 20.0,
+        "current_project_subsystem_b_allocation": 300.0,
+        "notes": [
+          "Sub-System B baseline is already marked failed for current $300 allocation and $20 risk budget.",
+          "Fractional portfolio weights are diagnostic only; options contracts cannot be traded fractionally."
+        ],
+        "status": "blocked_current_sizing",
+        "subsystem_b_allocation": 272.32,
+        "subsystem_b_max_defined_loss": 773.0,
+        "subsystem_b_median_defined_loss": 566.0,
+        "subsystem_b_min_defined_loss": 366.0
+      },
+      "fractional_contract_warning": true,
+      "metrics": {
+        "average_day_pnl": -2.9559,
+        "day_count": 416,
+        "ending_equity": -229.67,
+        "es95": -61.8805,
+        "es99": -74.878,
+        "max_drawdown": -1.341492,
+        "payoff_ratio": 1.9088,
+        "sharpe_proxy": 0.062577,
+        "sortino_proxy": 0.101291,
+        "total_pnl": -1229.67,
+        "win_rate": 0.3053,
+        "worst_day_loss": -91.03
+      },
+      "sample_adequacy": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_observation_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "observation_count": 416,
+        "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "scenario_id": "es_parity_inverse_es95_in_sample",
+      "scenario_type": "in_sample_fitted_fractional_diagnostic",
+      "splits": {
+        "in_sample": {
+          "daily_count": 189,
+          "metrics": {
+            "average_day_pnl": -0.6329,
+            "day_count": 189,
+            "ending_equity": 880.38,
+            "es95": -56.64,
+            "es99": -68.455,
+            "max_drawdown": -0.471568,
+            "payoff_ratio": 2.2873,
+            "sharpe_proxy": 0.012234,
+            "sortino_proxy": 0.042564,
+            "total_pnl": -119.62,
+            "win_rate": 0.2963,
+            "worst_day_loss": -69.13
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 189,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        },
+        "oos": {
+          "daily_count": 227,
+          "metrics": {
+            "average_day_pnl": -4.8901,
+            "day_count": 227,
+            "ending_equity": -229.67,
+            "es95": -64.6308,
+            "es99": -79.16,
+            "max_drawdown": -1.365959,
+            "payoff_ratio": 1.6417,
+            "sharpe_proxy": 0.084265,
+            "sortino_proxy": 0.135117,
+            "total_pnl": -1110.05,
+            "win_rate": 0.3128,
+            "worst_day_loss": -91.03
+          },
+          "sample_adequacy": {
+            "labels": [
+              "under-sampled",
+              "underpowered"
+            ],
+            "minimum_observation_count_prior": 500,
+            "mintrl_status": "pending_return_distribution",
+            "observation_count": 227,
+            "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+            "psr_status": "pending_return_distribution"
+          }
+        }
+      },
+      "trial_index": 5,
+      "weight_fit_policy": "fixed_or_fit_on_in_sample_only",
+      "weights": {
+        "subsystem_a": 0.72767643,
+        "subsystem_b": 0.27232357
+      }
+    }
+  ],
+  "schema_version": "m5_portfolio_construction_diagnostic_v1",
+  "search_log": {
+    "all_trials_recorded": true,
+    "path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\search_logs\\m5_portfolio_construction_diagnostic_search_log.jsonl",
+    "record_type": "parameter_search_trial",
+    "selection_bias_warning": "Allocation scenarios are diagnostic. Do not select a production allocation from this under-sampled output.",
+    "trial_count": 5
+  },
+  "status": "complete",
+  "subsystem_inputs": {
+    "subsystem_a_conclusion": "ยังสรุปไม่ได้",
+    "subsystem_a_trade_count": 90,
+    "subsystem_b_conclusion": "ไม่ผ่าน",
+    "subsystem_b_feasibility": {
+      "account_1000_feasible_count": 412,
+      "all_trades_fit_1000_account": true,
+      "all_trades_fit_20_risk_budget": false,
+      "all_trades_fit_300_allocation": false,
+      "allocation_300_feasible_count": 0,
+      "checked_trades": 412,
+      "max_defined_loss": 773.0,
+      "median_defined_loss": 566.0,
+      "min_defined_loss": 366.0,
+      "risk_budget_20_feasible_count": 0
+    },
+    "subsystem_b_trade_count": 412
+  },
+  "worst_diagnostic_scenario": {
+    "daily_count": 416,
+    "feasibility": {
+      "all_subsystem_b_trades_fit_20_risk_budget": false,
+      "all_subsystem_b_trades_fit_allocation": true,
+      "current_project_risk_budget": 20.0,
+      "current_project_subsystem_b_allocation": 300.0,
+      "notes": [
+        "Sub-System B baseline is already marked failed for current $300 allocation and $20 risk budget.",
+        "Fractional portfolio weights are diagnostic only; options contracts cannot be traded fractionally."
+      ],
+      "status": "blocked_current_sizing",
+      "subsystem_b_allocation": 1000.0,
+      "subsystem_b_max_defined_loss": 773.0,
+      "subsystem_b_median_defined_loss": 566.0,
+      "subsystem_b_min_defined_loss": 366.0
+    },
+    "metrics": {
+      "average_day_pnl": -14.3592,
+      "day_count": 416,
+      "ending_equity": -4973.44,
+      "es95": -161.4533,
+      "es99": -237.92,
+      "max_drawdown": -6.202878,
+      "payoff_ratio": 1.8012,
+      "sharpe_proxy": 0.0527,
+      "sortino_proxy": 0.740616,
+      "total_pnl": -5973.44,
+      "win_rate": 0.2933,
+      "worst_day_loss": -454.12
+    },
+    "oos_metrics": {
+      "average_day_pnl": -17.0342,
+      "day_count": 227,
+      "ending_equity": -4973.44,
+      "es95": -179.4533,
+      "es99": -289.12,
+      "max_drawdown": -6.24908,
+      "payoff_ratio": 1.5816,
+      "sharpe_proxy": 0.200548,
+      "sortino_proxy": 0.241556,
+      "total_pnl": -3866.76,
+      "win_rate": 0.3084,
+      "worst_day_loss": -454.12
+    },
+    "scenario_id": "subsystem_b_only_diagnostic",
+    "weights": {
+      "subsystem_a": 0.0,
+      "subsystem_b": 1.0
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "combined_row_count": 5,
+  "combined_snapshot_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\build\\news_gdelt_capture_import\\gdelt_news_combined.csv",
+  "input_dir": "tests\\fixtures\\news_snapshots",
+  "manifest": {
+    "coverage_end": "2024-01-03",
+    "coverage_start": "2024-01-03",
+    "dataset_id": "news-snapshot-735928e709c3",
+    "ingested_at_et": "2026-07-03T03:01:10+07:00",
+    "license_notes": "Offline fixture snapshot from news source plan. Use archived source snapshots for real research imports.",
+    "provider": "news-snapshot",
+    "raw_sha256": "735928e709c3af2ba6081c40a21505aa742aadee7165e63c1c80431855fe4286",
+    "record_type": "data_registry_manifest",
+    "schema_name": "m2_contracts",
+    "schema_version": "m2.0",
+    "schema_version_applied": "m2.0",
+    "source_url": "file://D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\build\\news_gdelt_capture_import\\gdelt_news_combined.csv"
+  },
+  "mode": "offline_directory_import",
+  "normalized_path": "build\\news_gdelt_capture_import\\data\\normalized\\spy_0dte\\news\\news_item.jsonl",
+  "note": "Offline import only. This does not fetch GDELT and does not prove news coverage until audit_news_coverage.py passes against the target output root.",
+  "pattern": "gdelt_news_sample.csv",
+  "record_count": 5,
+  "registry_path": "build\\news_gdelt_capture_import\\data\\registry\\datasets.jsonl",
+  "snapshot_count": 1,
+  "source_snapshots": [
+    "tests\\fixtures\\news_snapshots\\gdelt_news_sample.csv"
+  ],
+  "topics": [
+    "index_halt_circuit_breaker",
+    "macro_policy_risk",
+    "market_panic",
+    "systemic_banking_stress",
+    "war_escalation"
+  ]
+}

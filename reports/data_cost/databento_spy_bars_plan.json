@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-06-29T04:59:11+00:00",
+  "decision": {
+    "reason": "Download still requires explicit user approval even when the estimated cost is small.",
+    "review_cost_usd": 1.0,
+    "status": "pass"
+  },
+  "mode": "plan",
+  "request": {
+    "dataset": "EQUS.MINI",
+    "end": "2024-01-31T21:00:00+00:00",
+    "estimated_cost_usd": 0.006720364094,
+    "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\spy_bars\\jan_2024_spy_ohlcv_1m.dbn.zst",
+    "schema": "ohlcv-1m",
+    "start": "2024-01-02T14:30:00+00:00",
+    "stype_in": "raw_symbol",
+    "symbols": [
+      "SPY"
+    ]
+  }
+}

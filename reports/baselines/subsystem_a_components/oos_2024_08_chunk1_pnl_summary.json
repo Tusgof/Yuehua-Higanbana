@@ -1,0 +1,44 @@
+{
+  "average_net_pnl": 0.0,
+  "best_trade": 0.0,
+  "big_day_dependency": {
+    "note": "Need at least 3 closed trades to remove both best and worst trades.",
+    "removed_trade_count": 0,
+    "status": "insufficient_trades"
+  },
+  "candidate_days": 0,
+  "close_fallback": "nearest_1545_window",
+  "closed_trades": 0,
+  "evidence_warning": "This pilot evidence is under-sampled and must not be treated as strategy acceptance.",
+  "exit_model": "forced_close_only",
+  "fee_per_contract": 0.64,
+  "fill_model": "half_spread",
+  "max_drawdown": 0.0,
+  "mode": "pilot_pnl_only",
+  "pnl_model": {
+    "fee_per_contract_per_side": 0.64,
+    "implementable_pnl": "Entry uses configured fill_model; exit liquidates longs at bid and shorts at ask; fees are subtracted.",
+    "mid_pnl": "Entry and exit at mid price, with no fees; comparison control only."
+  },
+  "sample_adequacy": {
+    "closed_trades": 0,
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "minimum_trade_count_prior": 500,
+    "mintrl_status": "pending_return_distribution",
+    "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+    "psr_status": "pending_return_distribution"
+  },
+  "sharpe_proxy": null,
+  "skipped_trades": 0,
+  "status_counts": {},
+  "total_cost_drag": 0,
+  "total_implementable_pnl": 0,
+  "total_mid_pnl": 0,
+  "total_net_pnl": 0,
+  "trades": [],
+  "win_rate": 0.0,
+  "worst_trade": 0.0
+}

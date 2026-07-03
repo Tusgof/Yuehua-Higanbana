@@ -1,0 +1,215 @@
+{
+  "api_key": {
+    "api_key_env": "HIGANBANA_OPENROUTER_API",
+    "configured": true
+  },
+  "assessment_count": 27,
+  "assessment_jsonl": "reports\\experiments\\exp07_prompt_v5_assessments.jsonl",
+  "by_case": {
+    "cpi_release_pending_vix22": {
+      "decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "unknown"
+      ]
+    },
+    "earnings_heavy_calendar_vix20": {
+      "decisions": [
+        "allow",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "allow",
+        "unknown"
+      ]
+    },
+    "high_vol_no_clear_news_vix27": {
+      "decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "unknown"
+      ]
+    },
+    "jobs_report_pending_vix19": {
+      "decisions": [
+        "unknown",
+        "allow",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "allow",
+        "unknown"
+      ]
+    },
+    "major_fed_event_vix21": {
+      "decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "unknown"
+      ]
+    },
+    "quiet_vix18_normal_term_structure": {
+      "decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "allow"
+      ]
+    },
+    "systemic_banking_panic_vix34": {
+      "decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "expected_decision": "block",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "block"
+      ]
+    },
+    "very_quiet_vix13_no_news": {
+      "decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "allow"
+      ]
+    },
+    "war_shock_futures_limit_vix42": {
+      "decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "expected_decision": "block",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "block"
+      ]
+    }
+  },
+  "by_variant": {
+    "A": {
+      "assessment_count": 9,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "allow"
+      ],
+      "parse_valid_count": 9,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    },
+    "B": {
+      "assessment_count": 9,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "unknown",
+        "unknown",
+        "allow",
+        "unknown"
+      ],
+      "parse_valid_count": 9,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    },
+    "C": {
+      "assessment_count": 9,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "parse_valid_count": 9,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    }
+  },
+  "case_count": 9,
+  "input_archive": "reports\\experiments\\exp07_prompt_v5_inputs.json",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "mode": "live_openrouter",
+  "parse_valid_rate": 1.0,
+  "stable_case_count": 7,
+  "unknown_policy_violation_count": 2,
+  "unknown_policy_violations": [
+    {
+      "assessment_id": "llm-e14e9887bec68ffe",
+      "case_id": "jobs_report_pending_vix19",
+      "decision": "allow",
+      "expected_decision": "unknown",
+      "input_hash": "c05d91273cc3df47d151037a7f07d6896815e270b3f302e05582b6da95188aac",
+      "parse_valid": true,
+      "prompt_variant": "B",
+      "prompt_version": "exp07-prompt-b-balanced-score-v5"
+    },
+    {
+      "assessment_id": "llm-a7cbfe59cc894230",
+      "case_id": "earnings_heavy_calendar_vix20",
+      "decision": "allow",
+      "expected_decision": "unknown",
+      "input_hash": "c240a8d2a8d83a7a0bf5f4bc401d60a1717f8ad895902c2892514ec561f13088",
+      "parse_valid": true,
+      "prompt_variant": "A",
+      "prompt_version": "exp07-prompt-a-tail-risk-v5"
+    }
+  ]
+}

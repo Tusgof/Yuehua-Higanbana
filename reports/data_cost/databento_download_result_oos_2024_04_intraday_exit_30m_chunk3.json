@@ -1,0 +1,1419 @@
+{
+  "approval_note": null,
+  "created_at_utc": "2026-06-30T16:39:47+00:00",
+  "decision": {
+    "block_cost_usd": 25.0,
+    "reason": "Estimated cost $1.680015 is below review threshold $5.0.",
+    "review_cost_usd": 5.0,
+    "status": "pass"
+  },
+  "downloaded": [
+    {
+      "bytes": 1474505,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_entry_a_0935.dbn.zst",
+      "sha256": "af7e76564faecc1aaadfa2868e8ed81b69d6f151759d65bcf262d3634ba56a2b",
+      "source": "downloaded",
+      "window": "2024-04-15_entry_a_0935"
+    },
+    {
+      "bytes": 1752745,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_entry_b_1000.dbn.zst",
+      "sha256": "08ebfd9f6701629f690bf06d525e7e8507788a6198e5e35630d5c440a9612abf",
+      "source": "downloaded",
+      "window": "2024-04-15_entry_b_1000"
+    },
+    {
+      "bytes": 1822880,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1030.dbn.zst",
+      "sha256": "16f83989e851259759d59fc51b394b68eac9f792d6511f3b98f30397b7758b8d",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1030"
+    },
+    {
+      "bytes": 1857564,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1100.dbn.zst",
+      "sha256": "5a1dde05d99468e10a823b4bf8545bed45856404aa342cbd96d3ec13d1ede648",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1100"
+    },
+    {
+      "bytes": 1871203,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1130.dbn.zst",
+      "sha256": "96a23bd969b2ab93165ef87ecc5bf8dc042bd0fafcb30a854a6db1a6f72e6b58",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1130"
+    },
+    {
+      "bytes": 1891325,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1200.dbn.zst",
+      "sha256": "200d925ab37baaa6a4e8fcc51040d3382f0b1674eff1d241fb50f56a6947b70f",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1200"
+    },
+    {
+      "bytes": 1910286,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1230.dbn.zst",
+      "sha256": "9b01b92a1412eaac8ee3e27027590ba1c28d4f8130c3f48f3297ab5078a70dc5",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1230"
+    },
+    {
+      "bytes": 1935441,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1300.dbn.zst",
+      "sha256": "b6414d5fbceccc23dd14bda271382b468be84a7a3d22e8f977c4f3c3bb82ce14",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1300"
+    },
+    {
+      "bytes": 1951866,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1330.dbn.zst",
+      "sha256": "59438636bee8e56ff88762d9b3214c209ee14f0c260e2b98b04a04e965b647ae",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1330"
+    },
+    {
+      "bytes": 1998698,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1400.dbn.zst",
+      "sha256": "1f4e1c459e8db022d1a7c2b2fbe1b67b6ce7a23264cff03daef7e1862fc60b9f",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1400"
+    },
+    {
+      "bytes": 2016850,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1430.dbn.zst",
+      "sha256": "4cffa0ba6d0a03be7d87ea0b1f65164f87c323bc180a887f73b77326c62ea903",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1430"
+    },
+    {
+      "bytes": 2039294,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1500.dbn.zst",
+      "sha256": "e1133c21b952cce7109f50e714470f877715900fc741e90ea157a860d2420bd1",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1500"
+    },
+    {
+      "bytes": 2035675,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1530.dbn.zst",
+      "sha256": "877db0bd5e51815ad329afbe10f8b5f815b73f54904f01409bd35bf7dd0e8404",
+      "source": "downloaded",
+      "window": "2024-04-15_exit_check_1530"
+    },
+    {
+      "bytes": 2043476,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_forced_close_1545.dbn.zst",
+      "sha256": "854f435ac9f0182f7abe18273b9047bf63499939dfe7e660847794dcfaacfe73",
+      "source": "downloaded",
+      "window": "2024-04-15_forced_close_1545"
+    },
+    {
+      "bytes": 1434079,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_entry_a_0935.dbn.zst",
+      "sha256": "91a96c152ece6bd7ed45df2c0c2ec2749a055a50a28a11f40003c0b4f378241b",
+      "source": "downloaded",
+      "window": "2024-04-16_entry_a_0935"
+    },
+    {
+      "bytes": 1725999,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_entry_b_1000.dbn.zst",
+      "sha256": "e23869b8bfedf65774cd90229a0780f42ed771147c2f98fdf07dd33b3667cb99",
+      "source": "downloaded",
+      "window": "2024-04-16_entry_b_1000"
+    },
+    {
+      "bytes": 1775085,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1030.dbn.zst",
+      "sha256": "9eea89a40594152b3915298b42bb962d99bd657d726acfc89803f3016cc048fe",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1030"
+    },
+    {
+      "bytes": 1812598,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1100.dbn.zst",
+      "sha256": "fe8b24a0a63ef833e758dba5ff2ce796faccd1aa4050186707b6cf0223d3a64e",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1100"
+    },
+    {
+      "bytes": 1834647,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1130.dbn.zst",
+      "sha256": "bd5084d5637c2b703b42ca43bf46dbc886a9ee335b851b93f08a786338bf6e53",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1130"
+    },
+    {
+      "bytes": 1861552,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1200.dbn.zst",
+      "sha256": "4bb383690f5b9d7215bc64d75700d4df827cb6420bd9137b5d6a692ea8c43777",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1200"
+    },
+    {
+      "bytes": 1877275,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1230.dbn.zst",
+      "sha256": "b89e170745f6885215bd04e68c40affa12d02bde8dd8583773e87f29cc3e07d7",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1230"
+    },
+    {
+      "bytes": 1886270,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1300.dbn.zst",
+      "sha256": "dd35e7838179f924b91ad2aa4c1f49398858248af18ef3613d2fd7e5bcc44afb",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1300"
+    },
+    {
+      "bytes": 1881798,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1330.dbn.zst",
+      "sha256": "1a8fdca097e3411dcc90f61bc8a1d30c102f965ef74b22b1953e76d71cce914f",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1330"
+    },
+    {
+      "bytes": 1897169,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1400.dbn.zst",
+      "sha256": "6d94cc743e7846b00d4e56081d92414d1970f184ba97cb935acfd69ffb8c6d09",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1400"
+    },
+    {
+      "bytes": 1910088,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1430.dbn.zst",
+      "sha256": "907681167c733fbede9aa21f443cef168e03e50ac4e15e3a5de81c5db441c61c",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1430"
+    },
+    {
+      "bytes": 1924816,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1500.dbn.zst",
+      "sha256": "5a48187d8d04ad348d60815d79d88369e5c9783c90a0b35fa430a61e2f924197",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1500"
+    },
+    {
+      "bytes": 1934634,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1530.dbn.zst",
+      "sha256": "b8e70c1417665769a811da9a93b18b8b57181e58f7e73fd5f603f748e554cb0e",
+      "source": "downloaded",
+      "window": "2024-04-16_exit_check_1530"
+    },
+    {
+      "bytes": 1931948,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_forced_close_1545.dbn.zst",
+      "sha256": "a746b35e895f5530b16abacd7acc33e27393d227283c03d1cc274c6c674b690b",
+      "source": "downloaded",
+      "window": "2024-04-16_forced_close_1545"
+    },
+    {
+      "bytes": 1396832,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_entry_a_0935.dbn.zst",
+      "sha256": "2a4c823ae6953f1b51608eeb9590cd826de318bcd1ef0fc80d8ac505d418d586",
+      "source": "downloaded",
+      "window": "2024-04-17_entry_a_0935"
+    },
+    {
+      "bytes": 1650003,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_entry_b_1000.dbn.zst",
+      "sha256": "08bd0c5ebdbd9bfca8ffb94fe010345d9580f15c95d48b3e20568dc693e9f32e",
+      "source": "downloaded",
+      "window": "2024-04-17_entry_b_1000"
+    },
+    {
+      "bytes": 1712537,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1030.dbn.zst",
+      "sha256": "d013ccc98346a1043592d8dc46160b38beca05f99d82f8fea87f529cac6f4668",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1030"
+    },
+    {
+      "bytes": 1754916,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1100.dbn.zst",
+      "sha256": "98006ecbf20bfc12499a269eb39603927064563a19faaba02401add225c3bf03",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1100"
+    },
+    {
+      "bytes": 1810875,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1130.dbn.zst",
+      "sha256": "3d19b7014e49272c010122082057cff3ae2393aa5cb036aab1e81d5eba1e7961",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1130"
+    },
+    {
+      "bytes": 1844023,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1200.dbn.zst",
+      "sha256": "35245b65d992120dfb9ad03ee62d57d805be37966fd2d8ffc6fa75891e8ed2b9",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1200"
+    },
+    {
+      "bytes": 1882453,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1230.dbn.zst",
+      "sha256": "bdafc27d36e54574985ee43febac813d1b21ad3f6b8b2da94966458141dc2b37",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1230"
+    },
+    {
+      "bytes": 1888455,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1300.dbn.zst",
+      "sha256": "96e2575ca34dc68fe38d69d5b42bc5fe7b2e52df9ed1d03e9d0f748ad7ca4d7f",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1300"
+    },
+    {
+      "bytes": 1920652,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1330.dbn.zst",
+      "sha256": "451669344f7b34cbd04caf0ac713337b0776e246985ff52a0d86e8a4520ee8c6",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1330"
+    },
+    {
+      "bytes": 1911091,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1400.dbn.zst",
+      "sha256": "77255b48a729c04a4b26b031ca4f5225bcc6675194857cdaeb80d60681388517",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1400"
+    },
+    {
+      "bytes": 1932392,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1430.dbn.zst",
+      "sha256": "768483baf4bb8f57ff8e6393cb599b2ca1d1bd24268977869eee5483560a4a74",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1430"
+    },
+    {
+      "bytes": 1946902,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1500.dbn.zst",
+      "sha256": "ede2cef9623b6274d67abd6e7255571db947ec0d0629a10d15eda651554bd706",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1500"
+    },
+    {
+      "bytes": 1965962,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1530.dbn.zst",
+      "sha256": "5a157e9757706391017612ecfc883b7bec36b4ee0d064b47109f67c96f72451b",
+      "source": "downloaded",
+      "window": "2024-04-17_exit_check_1530"
+    },
+    {
+      "bytes": 1959029,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_forced_close_1545.dbn.zst",
+      "sha256": "0f6c3e3903b75a66605d17b5a53375994bcc32845cf64e31fc67a3054581b9d0",
+      "source": "downloaded",
+      "window": "2024-04-17_forced_close_1545"
+    },
+    {
+      "bytes": 1348010,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_entry_a_0935.dbn.zst",
+      "sha256": "f632c6eaf56ecd60ea9fce886fcca73183d1f4faec46ede5745a9de5c6142a0b",
+      "source": "downloaded",
+      "window": "2024-04-18_entry_a_0935"
+    },
+    {
+      "bytes": 1653544,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_entry_b_1000.dbn.zst",
+      "sha256": "b7023360a299b6ee3f6e479d14832bfef62799756de8b7f62ac611d5acfed190",
+      "source": "downloaded",
+      "window": "2024-04-18_entry_b_1000"
+    },
+    {
+      "bytes": 1712532,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1030.dbn.zst",
+      "sha256": "a081a6aee80b6ff1caf5dbf8098e30c35985644e75cf9eb149d728b04c779ef9",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1030"
+    },
+    {
+      "bytes": 1757389,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1100.dbn.zst",
+      "sha256": "fc6d6a3145fa11a0063fccab34152405b1a6471f8c6779afded8fe63a78b0f28",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1100"
+    },
+    {
+      "bytes": 1791815,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1130.dbn.zst",
+      "sha256": "af5be5ef8a7b384dbfb7b0d28135d858d226475ba9a5e9b213bb618b857a17c5",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1130"
+    },
+    {
+      "bytes": 1794415,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1200.dbn.zst",
+      "sha256": "ac1b0e71c30f22c2400c6c0480dca2261c42fbbb1aaeb3437072f494dbdd6e7d",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1200"
+    },
+    {
+      "bytes": 1816083,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1230.dbn.zst",
+      "sha256": "e88e9785e1f6f2b41cc1563a00efeb30f16c3c8466bea96c7326e881c23e2fa9",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1230"
+    },
+    {
+      "bytes": 1838469,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1300.dbn.zst",
+      "sha256": "330d33028c4e49b429aae735ceda90f256510af303fbe6b27708382a4fb379d0",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1300"
+    },
+    {
+      "bytes": 1855885,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1330.dbn.zst",
+      "sha256": "8a64c57b4978d7e5d85e994f50b6755d932ef5d35c9b29afc18ad68e5474fad8",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1330"
+    },
+    {
+      "bytes": 1866252,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1400.dbn.zst",
+      "sha256": "e74205d1e01116e1d09584c7e536790ba798248334efabcef45ce2f6e4007eae",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1400"
+    },
+    {
+      "bytes": 1884486,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1430.dbn.zst",
+      "sha256": "046caf6698536b32e72dd2243a729e1d88a3055dda7bfe14e65c4209e97be8d1",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1430"
+    },
+    {
+      "bytes": 1895891,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1500.dbn.zst",
+      "sha256": "0cbca9a4df4914317271bf6ac988e4afcde14a9e0085bd585941670afde5bfca",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1500"
+    },
+    {
+      "bytes": 1908235,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1530.dbn.zst",
+      "sha256": "5ddc5c5ec8977690dd6f5f3b475f85db2b1f6e466ea8603e5ae40b87e3837a27",
+      "source": "downloaded",
+      "window": "2024-04-18_exit_check_1530"
+    },
+    {
+      "bytes": 1912154,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_forced_close_1545.dbn.zst",
+      "sha256": "8c0f85be2ff33354b528148a6a2379845728987555e4b07421702fa05d266ac0",
+      "source": "downloaded",
+      "window": "2024-04-18_forced_close_1545"
+    },
+    {
+      "bytes": 1354118,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_entry_a_0935.dbn.zst",
+      "sha256": "eee7e3ab52d14a4f9e6b0fce7d81ae15a55922dbbf67c2b19347cbaa1ba6f6ce",
+      "source": "downloaded",
+      "window": "2024-04-19_entry_a_0935"
+    },
+    {
+      "bytes": 1643007,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_entry_b_1000.dbn.zst",
+      "sha256": "0570ac1acd5a5dd9b8a70921d68aeaec23746009ba1a183fc937d2889b484418",
+      "source": "downloaded",
+      "window": "2024-04-19_entry_b_1000"
+    },
+    {
+      "bytes": 1713533,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1030.dbn.zst",
+      "sha256": "e2ee1347a130ca2337b16a8c5c687a820c7885957cc200f446912807a7725236",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1030"
+    },
+    {
+      "bytes": 1748131,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1100.dbn.zst",
+      "sha256": "d3b449f78cfe8ba4d43001b0a3ac0040572e39c6faca1e2aa538c880c3d3b1ec",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1100"
+    },
+    {
+      "bytes": 1783270,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1130.dbn.zst",
+      "sha256": "81bdafb17eb9b5cda337501eefa1ebc6291349a44ac242c2f3dc159a406cbfb3",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1130"
+    },
+    {
+      "bytes": 1816675,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1200.dbn.zst",
+      "sha256": "a8757f84584021e4d35fedbd540aa36a8d4889e8fc401f9b36ed7e3cd145c481",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1200"
+    },
+    {
+      "bytes": 1843705,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1230.dbn.zst",
+      "sha256": "1930911a92c9087d408f7f3dbb84407a0e44dcd650b9b442233b36db410a54f0",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1230"
+    },
+    {
+      "bytes": 1877282,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1300.dbn.zst",
+      "sha256": "904da580421e4577c1c6cfca2f7affdb5c4b5949e1dbd9d7c1f10702ad9937ac",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1300"
+    },
+    {
+      "bytes": 1891372,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1330.dbn.zst",
+      "sha256": "d52e3cf938494893a2ec905c0d2b90fd1de797e4125eb15f6c818a8d4b0c82f5",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1330"
+    },
+    {
+      "bytes": 1897633,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1400.dbn.zst",
+      "sha256": "fdcbfaf86162fbe7fadb68d12f95bdb34d771f2319fc0553eb2e9d9b97e9c5db",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1400"
+    },
+    {
+      "bytes": 1907948,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1430.dbn.zst",
+      "sha256": "286f5d7c59e62fc2995dedc304309fda9adfeab56b302ac391947e527635a4ae",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1430"
+    },
+    {
+      "bytes": 1921761,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1500.dbn.zst",
+      "sha256": "605aac1cf2535474c73946b59adbe87a819bc8bf34dfb0db098d9514c6ff3886",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1500"
+    },
+    {
+      "bytes": 1934891,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1530.dbn.zst",
+      "sha256": "9af7777445be0024f640d7a1ff39f52e79a1937a5ac01b6e48984297069d12fd",
+      "source": "downloaded",
+      "window": "2024-04-19_exit_check_1530"
+    },
+    {
+      "bytes": 1924764,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_forced_close_1545.dbn.zst",
+      "sha256": "a4c24cc91722e1b049d1ecb89d6d8c2cc0ec1e73ea63eda82fe4d914130ccd54",
+      "source": "downloaded",
+      "window": "2024-04-19_forced_close_1545"
+    }
+  ],
+  "items": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T13:40:00+00:00",
+      "estimated_cost_usd": 0.023527443409,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T14:05:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T14:35:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T15:05:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T15:35:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T16:05:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T16:35:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T17:05:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T17:35:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T18:05:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T18:35:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T19:05:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T19:35:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-15T19:50:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-15_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-15T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-15_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T13:40:00+00:00",
+      "estimated_cost_usd": 0.022893249989,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T14:05:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T14:35:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T15:05:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T15:35:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T16:05:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T16:35:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T17:05:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T17:35:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T18:05:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T18:35:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T19:05:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T19:35:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-16T19:50:00+00:00",
+      "estimated_cost_usd": 0.024098157883,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-16_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-16T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-16_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T13:40:00+00:00",
+      "estimated_cost_usd": 0.02298951149,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T14:05:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T14:35:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T15:05:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T15:35:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T16:05:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T16:35:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T17:05:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T17:35:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T18:05:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T18:35:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T19:05:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T19:35:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-17T19:50:00+00:00",
+      "estimated_cost_usd": 0.024199485779,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-17_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-17T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-17_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T13:40:00+00:00",
+      "estimated_cost_usd": 0.022751688957,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T14:05:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T14:35:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T15:05:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T15:35:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T16:05:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T16:35:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T17:05:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T17:35:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T18:05:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T18:35:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T19:05:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T19:35:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-18T19:50:00+00:00",
+      "estimated_cost_usd": 0.023949146271,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-18_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-18T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-18_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T13:40:00+00:00",
+      "estimated_cost_usd": 0.022247731686,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T14:05:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T14:35:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T15:05:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T15:35:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T16:05:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T16:35:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T17:05:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T17:35:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T18:05:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T18:35:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T19:05:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T19:35:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-04-19T19:50:00+00:00",
+      "estimated_cost_usd": 0.023418664932,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_04_intraday_exit_30m_chunk3\\2024-04-19_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-04-19T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-04-19_forced_close_1545"
+    }
+  ],
+  "mode": "download_complete",
+  "request_count": 70,
+  "scenario": "oos_2024_04_intraday_exit_30m_chunk3",
+  "source_cost_report": "reports\\data_cost\\databento_cost_oos_2024_04_intraday_exit_30m_chunk3.json",
+  "total_estimated_cost_usd": 1.680015
+}

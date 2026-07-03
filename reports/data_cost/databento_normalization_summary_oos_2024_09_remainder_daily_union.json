@@ -1,0 +1,77 @@
+{
+  "coverage_end": "2024-09-30",
+  "coverage_start": "2024-09-23",
+  "file_count": 6,
+  "files": [
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union\\2024-09-23_daily_union.dbn.zst",
+      "input_rows": 3711168,
+      "output_rows": 121280,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 3589888,
+      "trade_date": "2024-09-23"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union\\2024-09-24_daily_union.dbn.zst",
+      "input_rows": 3724812,
+      "output_rows": 121280,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 3603532,
+      "trade_date": "2024-09-24"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union\\2024-09-25_daily_union.dbn.zst",
+      "input_rows": 3704346,
+      "output_rows": 118248,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 3586098,
+      "trade_date": "2024-09-25"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union\\2024-09-26_daily_union.dbn.zst",
+      "input_rows": 3762712,
+      "output_rows": 118248,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 3644464,
+      "trade_date": "2024-09-26"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union\\2024-09-27_daily_union.dbn.zst",
+      "input_rows": 3736182,
+      "output_rows": 123554,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 3612628,
+      "trade_date": "2024-09-27"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union\\2024-09-30_daily_union.dbn.zst",
+      "input_rows": 3718748,
+      "output_rows": 212240,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 3506508,
+      "trade_date": "2024-09-30"
+    }
+  ],
+  "input_rows": 22357968,
+  "manifest": {
+    "coverage_end": "2024-09-30",
+    "coverage_start": "2024-09-23",
+    "dataset_id": "databento-one-month-pilot-5e0488a32381",
+    "ingested_at_et": "2026-07-01T02:51:22-04:00",
+    "license_notes": "Databento OPRA.PILLAR cbbo-1m local cache. User-approved one-month pilot download.",
+    "provider": "Databento",
+    "raw_sha256": "5e0488a32381b6d4d74644f0e4a4b50e0325cd1fd848e3a1840907daa0ea5be9",
+    "record_type": "data_registry_manifest",
+    "schema_name": "m2_contracts",
+    "schema_version": "m2.0",
+    "schema_version_applied": "m2.0",
+    "source_url": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union"
+  },
+  "output_path": "data\\normalized\\spy_0dte\\databento\\oos_2024_09_remainder_daily_union\\option_quote.jsonl",
+  "output_rows": 814850,
+  "provider": "Databento",
+  "raw_root": "data\\raw\\spy_0dte\\databento\\oos_2024_sep_remainder_intraday_exit_30m_daily_union",
+  "registry_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\registry\\datasets.jsonl",
+  "skipped_invalid_quote": 0,
+  "skipped_non_0dte": 21543118
+}

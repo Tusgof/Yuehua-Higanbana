@@ -1,0 +1,153 @@
+{
+  "bar_rows": 2625,
+  "calendar_days": 5,
+  "candidate_ready_days": 2,
+  "coverage_end": "2024-07-26",
+  "coverage_start": "2024-07-22",
+  "days": [
+    {
+      "bar_count": 439,
+      "date": "2024-07-22",
+      "orb_signal": {
+        "breakout_close": 553.0,
+        "breakout_timestamp_et": "2024-07-22T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 553.03,
+        "opening_low": 552.28
+      },
+      "quote_count": 28356,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 570,
+      "date": "2024-07-23",
+      "orb_signal": {
+        "breakout_close": 554.47,
+        "breakout_timestamp_et": "2024-07-23T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 554.9,
+        "opening_low": 554.17
+      },
+      "quote_count": 28356,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 571,
+      "date": "2024-07-24",
+      "direction": "put",
+      "entry_quote_count": 196,
+      "legs": [
+        {
+          "expiration_date": "2024-07-24",
+          "leg_id": "leg-3eea40f3ac0d61a9",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 547.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-07-24",
+          "leg_id": "leg-1a03662a6ee6173a",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 545.0,
+          "underlying": "SPY"
+        }
+      ],
+      "orb_signal": {
+        "breakout_close": 547.99,
+        "breakout_timestamp_et": "2024-07-24T09:35:00-04:00",
+        "decision": "put_breakout",
+        "opening_high": 549.17,
+        "opening_low": 548.08
+      },
+      "quote_count": 27244,
+      "reasons": [
+        "ORB signal and entry option quotes are available"
+      ],
+      "rth_bar_count": 390,
+      "status": "candidate_ready"
+    },
+    {
+      "bar_count": 574,
+      "date": "2024-07-25",
+      "direction": "put",
+      "entry_quote_count": 212,
+      "legs": [
+        {
+          "expiration_date": "2024-07-25",
+          "leg_id": "leg-3340dfa98814c939",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 539.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-07-25",
+          "leg_id": "leg-5eed450f42d5e042",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 537.0,
+          "underlying": "SPY"
+        }
+      ],
+      "orb_signal": {
+        "breakout_close": 540.32,
+        "breakout_timestamp_et": "2024-07-25T09:35:00-04:00",
+        "decision": "put_breakout",
+        "opening_high": 541.6,
+        "opening_low": 540.6
+      },
+      "quote_count": 29468,
+      "reasons": [
+        "ORB signal and entry option quotes are available"
+      ],
+      "rth_bar_count": 390,
+      "status": "candidate_ready"
+    },
+    {
+      "bar_count": 471,
+      "date": "2024-07-26",
+      "orb_signal": {
+        "breakout_close": 542.23,
+        "breakout_timestamp_et": "2024-07-26T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 542.42,
+        "opening_low": 541.49
+      },
+      "quote_count": 36974,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    }
+  ],
+  "evidence_warning": "This is a one-month data-join pilot, not strategy evidence.",
+  "mode": "pilot_adapter_only",
+  "quote_rows": 150398,
+  "status_counts": {
+    "candidate_ready": 2,
+    "no_trade": 3
+  }
+}

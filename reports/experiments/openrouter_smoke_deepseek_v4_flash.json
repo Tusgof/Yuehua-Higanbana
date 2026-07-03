@@ -1,0 +1,27 @@
+{
+  "api_key": {
+    "api_key_env": "HIGANBANA_OPENROUTER_API",
+    "configured": true
+  },
+  "assessments": [
+    {
+      "_reasoning_effort": "high",
+      "_request_model": "deepseek/deepseek-v4-flash",
+      "assessment_id": "llm-638a883a3d931819",
+      "created_at_et": "2026-06-29T23:09:07.630716+07:00",
+      "decision": "allow",
+      "input_hash": "8aae55e77cbdc0783518f66e305e49f31b49245ea52d4b9f5206dd319917bcb5",
+      "model": "deepseek/deepseek-v4-flash",
+      "output_text": "{\n  \"decision\": \"allow\",\n  \"risk_score_0_to_10\": 1,\n  \"volatility_condition\": \"low\",\n  \"directional_bias\": \"neutral\",\n  \"tail_risk_condition\": \"none\",\n  \"strategy_suitability\": \"not_recommended_for_0DTE\",\n  \"reasons\": \"No credible catastrophic or disorderly-market risk detected. Market is quiet, VIX is moderate at 18, and VXV at 19 indicates no term-structure inversion. Tail risk condition is absent.\"\n}",
+      "prompt_text": "You are a conservative SPY 0DTE tail-risk gate. Block trades only when the input shows credible catastrophic or disorderly-market risk. The decision field must be exactly allow, block, or unknown. Return strict JSON with decision, risk_score_0_to_10, volatility_condition, directional_bias, tail_risk_condition, strategy_suitability, and reasons.",
+      "prompt_version": "exp07-prompt-a-tail-risk-v1",
+      "provider": "OpenRouter/DeepSeek",
+      "record_type": "llm_assessment",
+      "schema_version": "m2.0"
+    }
+  ],
+  "mode": "live_openrouter",
+  "model": "deepseek/deepseek-v4-flash",
+  "output_jsonl": "reports\\experiments\\openrouter_smoke_deepseek_v4_flash.jsonl",
+  "reasoning_effort": "high"
+}

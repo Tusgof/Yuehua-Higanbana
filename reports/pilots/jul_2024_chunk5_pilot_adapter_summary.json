@@ -1,0 +1,93 @@
+{
+  "bar_rows": 1541,
+  "calendar_days": 3,
+  "candidate_ready_days": 1,
+  "coverage_end": "2024-07-31",
+  "coverage_start": "2024-07-29",
+  "days": [
+    {
+      "bar_count": 471,
+      "date": "2024-07-29",
+      "orb_signal": {
+        "breakout_close": 545.1,
+        "breakout_timestamp_et": "2024-07-29T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 546.25,
+        "opening_low": 544.8
+      },
+      "quote_count": 29746,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 565,
+      "date": "2024-07-30",
+      "direction": "call",
+      "entry_quote_count": 204,
+      "legs": [
+        {
+          "expiration_date": "2024-07-30",
+          "leg_id": "leg-f5a029f2bc647a98",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 548.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-07-30",
+          "leg_id": "leg-920e7688b72ce450",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 550.0,
+          "underlying": "SPY"
+        }
+      ],
+      "orb_signal": {
+        "breakout_close": 546.72,
+        "breakout_timestamp_et": "2024-07-30T09:35:00-04:00",
+        "decision": "call_breakout",
+        "opening_high": 546.68,
+        "opening_low": 545.87
+      },
+      "quote_count": 28356,
+      "reasons": [
+        "ORB signal and entry option quotes are available"
+      ],
+      "rth_bar_count": 390,
+      "status": "candidate_ready"
+    },
+    {
+      "bar_count": 505,
+      "date": "2024-07-31",
+      "orb_signal": {
+        "breakout_close": 548.19,
+        "breakout_timestamp_et": "2024-07-31T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 549.25,
+        "opening_low": 547.99
+      },
+      "quote_count": 50040,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    }
+  ],
+  "evidence_warning": "This is a one-month data-join pilot, not strategy evidence.",
+  "mode": "pilot_adapter_only",
+  "quote_rows": 108142,
+  "status_counts": {
+    "candidate_ready": 1,
+    "no_trade": 2
+  }
+}

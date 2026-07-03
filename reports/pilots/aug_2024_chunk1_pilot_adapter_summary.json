@@ -1,0 +1,49 @@
+{
+  "bar_rows": 1064,
+  "calendar_days": 2,
+  "candidate_ready_days": 0,
+  "coverage_end": "2024-08-02",
+  "coverage_start": "2024-08-01",
+  "days": [
+    {
+      "bar_count": 554,
+      "date": "2024-08-01",
+      "orb_signal": {
+        "breakout_close": 553.14,
+        "breakout_timestamp_et": "2024-08-01T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 553.55,
+        "opening_low": 552.32
+      },
+      "quote_count": 33638,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 510,
+      "date": "2024-08-02",
+      "orb_signal": {
+        "breakout_close": 534.195,
+        "breakout_timestamp_et": "2024-08-02T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 535.83,
+        "opening_low": 534.02
+      },
+      "quote_count": 38642,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    }
+  ],
+  "evidence_warning": "This is a one-month data-join pilot, not strategy evidence.",
+  "mode": "pilot_adapter_only",
+  "quote_rows": 72280,
+  "status_counts": {
+    "no_trade": 2
+  }
+}

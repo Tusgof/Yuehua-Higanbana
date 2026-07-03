@@ -1,0 +1,835 @@
+{
+  "created_at_utc": "2026-06-29T04:15:22+00:00",
+  "decision": {
+    "block_cost_usd": 25.0,
+    "reason": "Estimated cost $1.483808 is below review threshold $5.0.",
+    "review_cost_usd": 5.0,
+    "status": "pass"
+  },
+  "items": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-02T14:40:00+00:00",
+      "estimated_cost_usd": 0.022508203983,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-02_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-02T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-02_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-02T15:05:00+00:00",
+      "estimated_cost_usd": 0.023692846298,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-02_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-02T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-02_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-02T20:50:00+00:00",
+      "estimated_cost_usd": 0.023692846298,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-02_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-02T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-02_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-03T14:40:00+00:00",
+      "estimated_cost_usd": 0.022049546242,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-03_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-03T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-03_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-03T15:05:00+00:00",
+      "estimated_cost_usd": 0.023210048676,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-03_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-03T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-03_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-03T20:50:00+00:00",
+      "estimated_cost_usd": 0.023210048676,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-03_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-03T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-03_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-04T14:40:00+00:00",
+      "estimated_cost_usd": 0.022021234035,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-04_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-04T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-04_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-04T15:05:00+00:00",
+      "estimated_cost_usd": 0.023180246353,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-04_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-04T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-04_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-04T20:50:00+00:00",
+      "estimated_cost_usd": 0.023180246353,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-04_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-04T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-04_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-05T14:40:00+00:00",
+      "estimated_cost_usd": 0.021568238735,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-05_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-05T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-05_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-05T15:05:00+00:00",
+      "estimated_cost_usd": 0.022703409195,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-05_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-05T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-05_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-05T20:50:00+00:00",
+      "estimated_cost_usd": 0.022703409195,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-05_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-05T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-05_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-08T14:40:00+00:00",
+      "estimated_cost_usd": 0.02059429884,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-08_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-08T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-08_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-08T15:05:00+00:00",
+      "estimated_cost_usd": 0.021678209305,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-08_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-08T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-08_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-08T20:50:00+00:00",
+      "estimated_cost_usd": 0.021678209305,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-08_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-08T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-08_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-09T14:40:00+00:00",
+      "estimated_cost_usd": 0.020560324192,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-09_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-09T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-09_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-09T15:05:00+00:00",
+      "estimated_cost_usd": 0.021642446518,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-09_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-09T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-09_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-09T20:50:00+00:00",
+      "estimated_cost_usd": 0.021642446518,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-09_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-09T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-09_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-10T14:40:00+00:00",
+      "estimated_cost_usd": 0.022859275341,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-10_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-10T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-10_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-10T15:05:00+00:00",
+      "estimated_cost_usd": 0.024062395096,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-10_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-10T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-10_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-10T20:50:00+00:00",
+      "estimated_cost_usd": 0.024062395096,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-10_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-10T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-10_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-11T14:40:00+00:00",
+      "estimated_cost_usd": 0.023963451385,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-11_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-11T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-11_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-11T15:05:00+00:00",
+      "estimated_cost_usd": 0.025224685669,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-11_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-11T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-11_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-11T20:50:00+00:00",
+      "estimated_cost_usd": 0.025224685669,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-11_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-11T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-11_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-12T14:40:00+00:00",
+      "estimated_cost_usd": 0.023657679558,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-12_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-12T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-12_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-12T15:05:00+00:00",
+      "estimated_cost_usd": 0.024902820587,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-12_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-12T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-12_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-12T20:50:00+00:00",
+      "estimated_cost_usd": 0.024902820587,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-12_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-12T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-12_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-16T14:40:00+00:00",
+      "estimated_cost_usd": 0.023323595524,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-16_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-16T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-16_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-16T15:05:00+00:00",
+      "estimated_cost_usd": 0.024551153183,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-16_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-16T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-16_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-16T20:50:00+00:00",
+      "estimated_cost_usd": 0.024551153183,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-16_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-16T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-16_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-17T14:40:00+00:00",
+      "estimated_cost_usd": 0.022813975811,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-17_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-17T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-17_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-17T15:05:00+00:00",
+      "estimated_cost_usd": 0.02401471138,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-17_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-17T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-17_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-17T20:50:00+00:00",
+      "estimated_cost_usd": 0.02401471138,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-17_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-17T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-17_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-18T14:40:00+00:00",
+      "estimated_cost_usd": 0.022355318069,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-18_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-18T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-18_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-18T15:05:00+00:00",
+      "estimated_cost_usd": 0.023531913757,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-18_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-18T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-18_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-18T20:50:00+00:00",
+      "estimated_cost_usd": 0.023531913757,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-18_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-18T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-18_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-19T14:40:00+00:00",
+      "estimated_cost_usd": 0.022100508213,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-19_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-19T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-19_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-19T15:05:00+00:00",
+      "estimated_cost_usd": 0.023263692856,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-19_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-19T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-19_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-19T20:50:00+00:00",
+      "estimated_cost_usd": 0.023263692856,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-19_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-19T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-19_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-22T14:40:00+00:00",
+      "estimated_cost_usd": 0.022842288017,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-22_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-22T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-22_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-22T15:05:00+00:00",
+      "estimated_cost_usd": 0.024044513702,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-22_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-22T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-22_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-22T20:50:00+00:00",
+      "estimated_cost_usd": 0.024044513702,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-22_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-22T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-22_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-23T14:40:00+00:00",
+      "estimated_cost_usd": 0.022343993187,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-23_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-23T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-23_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-23T15:05:00+00:00",
+      "estimated_cost_usd": 0.023519992828,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-23_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-23T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-23_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-23T20:50:00+00:00",
+      "estimated_cost_usd": 0.023519992828,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-23_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-23T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-23_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-24T14:40:00+00:00",
+      "estimated_cost_usd": 0.022440254688,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-24_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-24T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-24_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-24T15:05:00+00:00",
+      "estimated_cost_usd": 0.023621320724,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-24_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-24T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-24_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-24T20:50:00+00:00",
+      "estimated_cost_usd": 0.023621320724,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-24_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-24T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-24_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-25T14:40:00+00:00",
+      "estimated_cost_usd": 0.023748278618,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-25_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-25T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-25_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-25T15:05:00+00:00",
+      "estimated_cost_usd": 0.024998188019,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-25_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-25T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-25_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-25T20:50:00+00:00",
+      "estimated_cost_usd": 0.024998188019,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-25_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-25T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-25_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-26T14:40:00+00:00",
+      "estimated_cost_usd": 0.024048388004,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-26_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-26T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-26_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-26T15:05:00+00:00",
+      "estimated_cost_usd": 0.025314092636,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-26_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-26T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-26_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-26T20:50:00+00:00",
+      "estimated_cost_usd": 0.025314092636,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-26_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-26T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-26_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-29T14:40:00+00:00",
+      "estimated_cost_usd": 0.023963451385,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-29_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-29T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-29_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-29T15:05:00+00:00",
+      "estimated_cost_usd": 0.025224685669,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-29_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-29T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-29_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-29T20:50:00+00:00",
+      "estimated_cost_usd": 0.025224685669,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-29_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-29T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-29_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-30T14:40:00+00:00",
+      "estimated_cost_usd": 0.023527443409,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-30_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-30T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-30_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-30T15:05:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-30_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-30T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-30_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-30T20:50:00+00:00",
+      "estimated_cost_usd": 0.024765729904,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-30_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-30T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-30_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-31T14:40:00+00:00",
+      "estimated_cost_usd": 0.024546682835,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-31_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-31T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-31_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-31T15:05:00+00:00",
+      "estimated_cost_usd": 0.02583861351,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-31_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-31T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-31_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-31T20:50:00+00:00",
+      "estimated_cost_usd": 0.02583861351,
+      "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\one_month_pilot\\2024-01-31_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-01-31T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-31_forced_close_1545"
+    }
+  ],
+  "mode": "download_plan",
+  "request_count": 63,
+  "scenario": "one_month_pilot",
+  "source_cost_report": "reports\\data_cost\\databento_cost_plan.json",
+  "total_estimated_cost_usd": 1.483808
+}

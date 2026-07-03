@@ -1,0 +1,23 @@
+build/
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Local secrets. Keep real values in user/machine environment variables.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Paid/raw market data and generated local datasets are not GitHub artifacts.
+data/
+
+# Research logs are maintained in their own nested Git repo / publication flow.
+research_log/
+
+# Large generated debug streams.
+*.stderr.log
+*.stdout.log

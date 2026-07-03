@@ -1,0 +1,127 @@
+{
+  "bar_rows": 2606,
+  "calendar_days": 5,
+  "candidate_ready_days": 1,
+  "coverage_end": "2024-08-30",
+  "coverage_start": "2024-08-26",
+  "days": [
+    {
+      "bar_count": 468,
+      "date": "2024-08-26",
+      "orb_signal": {
+        "breakout_close": 563.34,
+        "breakout_timestamp_et": "2024-08-26T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 563.9,
+        "opening_low": 562.84
+      },
+      "quote_count": 40588,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 516,
+      "date": "2024-08-27",
+      "orb_signal": {
+        "breakout_close": 559.1,
+        "breakout_timestamp_et": "2024-08-27T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 559.61,
+        "opening_low": 558.8
+      },
+      "quote_count": 40588,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 624,
+      "date": "2024-08-28",
+      "direction": "put",
+      "entry_quote_count": 292,
+      "legs": [
+        {
+          "expiration_date": "2024-08-28",
+          "leg_id": "leg-595e291f8c88a8f6",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 560.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-08-28",
+          "leg_id": "leg-db2878becc153d83",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 558.0,
+          "underlying": "SPY"
+        }
+      ],
+      "orb_signal": {
+        "breakout_close": 561.04,
+        "breakout_timestamp_et": "2024-08-28T09:35:00-04:00",
+        "decision": "put_breakout",
+        "opening_high": 561.64,
+        "opening_low": 561.09
+      },
+      "quote_count": 40588,
+      "reasons": [
+        "ORB signal and entry option quotes are available"
+      ],
+      "rth_bar_count": 390,
+      "status": "candidate_ready"
+    },
+    {
+      "bar_count": 556,
+      "date": "2024-08-29",
+      "orb_signal": {
+        "breakout_close": 560.8,
+        "breakout_timestamp_et": "2024-08-29T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 560.87,
+        "opening_low": 559.73
+      },
+      "quote_count": 40588,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 442,
+      "date": "2024-08-30",
+      "orb_signal": {
+        "breakout_close": 561.12,
+        "breakout_timestamp_et": "2024-08-30T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 561.42,
+        "opening_low": 560.45
+      },
+      "quote_count": 45592,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    }
+  ],
+  "evidence_warning": "This is a one-month data-join pilot, not strategy evidence.",
+  "mode": "pilot_adapter_only",
+  "quote_rows": 207944,
+  "status_counts": {
+    "candidate_ready": 1,
+    "no_trade": 4
+  }
+}

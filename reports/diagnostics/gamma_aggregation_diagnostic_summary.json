@@ -1,0 +1,126 @@
+{
+  "blocked_greeks_count": 1738,
+  "blocked_rows_by_moneyness_and_right": {
+    "atm|call": 3,
+    "atm|put": 11,
+    "deep_call|put": 448,
+    "deep_put|call": 987,
+    "otm_call|put": 175,
+    "otm_put|call": 114
+  },
+  "blockers": [
+    "coverage_gate:blocked",
+    "stability_gate:blocked",
+    "economic_sign_gate:blocked"
+  ],
+  "bucket_summaries": {
+    "atm": {
+      "blocked_count": 14,
+      "bucket_contribution_share": 0.7968888736,
+      "computed_count": 262,
+      "open_interest_sum": 2649252,
+      "percentile_rank": "probe_only",
+      "raw_local_gamma_exposure_sum": 21156800366.395084,
+      "row_count": 276,
+      "scaled_signed_gamma_proxy": -0.0890083464,
+      "signed_oi_gamma_proxy_sum": -11081125498.250969,
+      "underlying_notional_sum": 124495352979.0
+    },
+    "deep_call": {
+      "blocked_count": 448,
+      "bucket_contribution_share": 1.071e-06,
+      "computed_count": 290,
+      "open_interest_sum": 83,
+      "percentile_rank": "probe_only",
+      "raw_local_gamma_exposure_sum": 28433.365047,
+      "row_count": 738,
+      "scaled_signed_gamma_proxy": -0.0072890682,
+      "signed_oi_gamma_proxy_sum": -28433.365047,
+      "underlying_notional_sum": 3900823.0
+    },
+    "deep_put": {
+      "blocked_count": 987,
+      "bucket_contribution_share": 8.21753e-05,
+      "computed_count": 587,
+      "open_interest_sum": 13343,
+      "percentile_rank": "probe_only",
+      "raw_local_gamma_exposure_sum": 2181693.641787,
+      "row_count": 1574,
+      "scaled_signed_gamma_proxy": 0.0034790501,
+      "signed_oi_gamma_proxy_sum": 2181693.641787,
+      "underlying_notional_sum": 627094636.0
+    },
+    "otm_call": {
+      "blocked_count": 175,
+      "bucket_contribution_share": 0.1430599429,
+      "computed_count": 271,
+      "open_interest_sum": 1844315,
+      "percentile_rank": "probe_only",
+      "raw_local_gamma_exposure_sum": 3798133908.072705,
+      "row_count": 446,
+      "scaled_signed_gamma_proxy": 0.0173666026,
+      "signed_oi_gamma_proxy_sum": 1505694181.296407,
+      "underlying_notional_sum": 86700560398.0
+    },
+    "otm_put": {
+      "blocked_count": 114,
+      "bucket_contribution_share": 0.0599679372,
+      "computed_count": 340,
+      "open_interest_sum": 788188,
+      "percentile_rank": "probe_only",
+      "raw_local_gamma_exposure_sum": 1592103640.387141,
+      "row_count": 454,
+      "scaled_signed_gamma_proxy": -0.0339317211,
+      "signed_oi_gamma_proxy_sum": -1257433924.975699,
+      "underlying_notional_sum": 37057770272.0
+    }
+  },
+  "computed_greeks_count": 1750,
+  "contract_multiplier": 100,
+  "input_jsonl": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\derived\\spy_0dte\\greeks_oi_probe\\option_quote_enriched_2024-01-03.jsonl",
+  "open_interest_join_count": 3488,
+  "quote_count": 3488,
+  "record_type": "gamma_aggregation_diagnostic",
+  "research_decision": "ยังสรุปไม่ได้: diagnostic aggregation คำนวณ proxy ได้ แต่ยังไม่ผ่าน policy gates จึงใช้เป็น NOVI/net-gamma strategy filter ไม่ได้",
+  "schema_version": "gamma_aggregation_diagnostic_v1",
+  "status": "blocked",
+  "strategy_use_status": "diagnostic_only_blocked_by_policy_gates",
+  "target_date": "2024-01-03",
+  "underlying_join_count": 3488,
+  "validation_gates": {
+    "coverage": {
+      "blockers": [
+        "computed_greeks_rate_below_70pct"
+      ],
+      "computed_greeks_rate": 0.50172,
+      "open_interest_join_rate": 1.0,
+      "status": "blocked",
+      "underlying_join_rate": 1.0
+    },
+    "economic_sign": {
+      "reason": "requires_multiple_dates_for_realized_volatility_and_pnl_split",
+      "status": "blocked"
+    },
+    "search_log": {
+      "reason": "no threshold or best gamma bucket was selected in this diagnostic run",
+      "status": "pass"
+    },
+    "stability": {
+      "available_dates": [
+        "2024-01-03"
+      ],
+      "label": "under-regime-sampled",
+      "reason": "policy requires multiple dates/regimes before strategy use",
+      "status": "blocked"
+    },
+    "timestamp_discipline": {
+      "blockers": [],
+      "checked_open_interest_rows": 3488,
+      "checked_underlying_rows": 3488,
+      "future_open_interest_rows": 0,
+      "future_underlying_rows": 0,
+      "status": "pass",
+      "timestamp_parse_errors": 0
+    }
+  }
+}

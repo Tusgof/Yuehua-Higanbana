@@ -1,0 +1,140 @@
+{
+  "average_net_pnl": 33.44,
+  "best_trade": 33.44,
+  "big_day_dependency": {
+    "note": "Need at least 3 closed trades to remove both best and worst trades.",
+    "removed_trade_count": 0,
+    "status": "insufficient_trades"
+  },
+  "candidate_days": 1,
+  "close_fallback": "nearest_1545_window",
+  "closed_trades": 1,
+  "evidence_warning": "This pilot evidence is under-sampled and must not be treated as strategy acceptance.",
+  "exit_model": "forced_close_only",
+  "fee_per_contract": 0.64,
+  "fill_model": "half_spread",
+  "max_drawdown": 0.0,
+  "mode": "pilot_pnl_only",
+  "pnl_model": {
+    "fee_per_contract_per_side": 0.64,
+    "implementable_pnl": "Entry uses configured fill_model; exit liquidates longs at bid and shorts at ask; fees are subtracted.",
+    "mid_pnl": "Entry and exit at mid price, with no fees; comparison control only."
+  },
+  "sample_adequacy": {
+    "closed_trades": 1,
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "minimum_trade_count_prior": 500,
+    "mintrl_status": "pending_return_distribution",
+    "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+    "psr_status": "pending_return_distribution"
+  },
+  "sharpe_proxy": null,
+  "skipped_trades": 0,
+  "status_counts": {
+    "closed_forced_1545": 1
+  },
+  "total_cost_drag": 6.06,
+  "total_implementable_pnl": 33.44,
+  "total_mid_pnl": 39.5,
+  "total_net_pnl": 33.44,
+  "trades": [
+    {
+      "close_time_et": "2024-08-12T15:45:00-04:00",
+      "close_timestamps_by_leg_id": {
+        "leg-384f3635cda87c88": "2024-08-12T15:45:00-04:00",
+        "leg-b67f413ef7a84c5d": "2024-08-12T15:45:00-04:00"
+      },
+      "closing_mid_prices_by_leg_id": {
+        "leg-384f3635cda87c88": 1.08,
+        "leg-b67f413ef7a84c5d": 0.185
+      },
+      "closing_prices_by_leg_id": {
+        "leg-384f3635cda87c88": 1.06,
+        "leg-b67f413ef7a84c5d": 0.19
+      },
+      "cost_drag": 6.06,
+      "date": "2024-08-12",
+      "direction": "put",
+      "entry_debit": 0.51,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2024-08-12-leg-384f3635cda87c88",
+          "fill_model": "half_spread",
+          "leg_id": "leg-384f3635cda87c88",
+          "price": 1.16,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2024-08-12-leg-b67f413ef7a84c5d",
+          "fill_model": "half_spread",
+          "leg_id": "leg-b67f413ef7a84c5d",
+          "price": 0.65,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_mid_fills": [
+        {
+          "fill_id": "pilot-2024-08-12-leg-384f3635cda87c88-mid",
+          "fill_model": "mid",
+          "leg_id": "leg-384f3635cda87c88",
+          "price": 1.155,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2024-08-12-leg-b67f413ef7a84c5d-mid",
+          "fill_model": "mid",
+          "leg_id": "leg-b67f413ef7a84c5d",
+          "price": 0.655,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2024-08-12T09:35:00-04:00",
+      "exit_model": "forced_close_only",
+      "exit_value": 0.87,
+      "fees": 2.56,
+      "gross_pnl": 36.0,
+      "implementable_pnl": 33.44,
+      "legs": [
+        {
+          "expiration_date": "2024-08-12",
+          "leg_id": "leg-384f3635cda87c88",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 533.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-08-12",
+          "leg_id": "leg-b67f413ef7a84c5d",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 531.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 51.0,
+      "mid_exit_value": 0.895,
+      "mid_pnl": 39.5,
+      "net_pnl": 33.44,
+      "reasons": [
+        "entry at half_spread; exit=forced_1545; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_forced_1545"
+    }
+  ],
+  "win_rate": 1.0,
+  "worst_trade": 33.44
+}

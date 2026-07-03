@@ -1,0 +1,869 @@
+{
+  "decision": {
+    "block_cost_usd": 25.0,
+    "reason": "Estimated cost $1.502165 is below review threshold $5.0.",
+    "review_cost_usd": 5.0,
+    "status": "pass"
+  },
+  "errors": [],
+  "mode": "live",
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-01T14:40:00+00:00",
+      "estimated_cost_usd": 0.024212598801,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-01T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-01_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-01T15:05:00+00:00",
+      "estimated_cost_usd": 0.025486946106,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-01T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-01_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-01T20:50:00+00:00",
+      "estimated_cost_usd": 0.025486946106,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-01T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-01_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-02T14:40:00+00:00",
+      "estimated_cost_usd": 0.023844540119,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-02T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-02_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-02T15:05:00+00:00",
+      "estimated_cost_usd": 0.025099515915,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-02T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-02_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-02T20:50:00+00:00",
+      "estimated_cost_usd": 0.025099515915,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-02T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-02_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-05T14:40:00+00:00",
+      "estimated_cost_usd": 0.023986101151,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-05T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-05_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-05T15:05:00+00:00",
+      "estimated_cost_usd": 0.025248527527,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-05T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-05_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-05T20:50:00+00:00",
+      "estimated_cost_usd": 0.025248527527,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-05T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-05_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-06T14:40:00+00:00",
+      "estimated_cost_usd": 0.02357840538,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-06T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-06_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-06T15:05:00+00:00",
+      "estimated_cost_usd": 0.024819374084,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-06T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-06_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-06T20:50:00+00:00",
+      "estimated_cost_usd": 0.024819374084,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-06T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-06_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-07T14:40:00+00:00",
+      "estimated_cost_usd": 0.024512708187,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-07T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-07_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-07T15:05:00+00:00",
+      "estimated_cost_usd": 0.025802850723,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-07T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-07_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-07T20:50:00+00:00",
+      "estimated_cost_usd": 0.025802850723,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-07T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-07_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-08T14:40:00+00:00",
+      "estimated_cost_usd": 0.024552345276,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-08T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-08_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-08T15:05:00+00:00",
+      "estimated_cost_usd": 0.025844573975,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-08T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-08_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-08T20:50:00+00:00",
+      "estimated_cost_usd": 0.025844573975,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-08T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-08_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-09T14:40:00+00:00",
+      "estimated_cost_usd": 0.025141239166,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-09T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-09_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-09T15:05:00+00:00",
+      "estimated_cost_usd": 0.02646446228,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-09T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-09_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-09T20:50:00+00:00",
+      "estimated_cost_usd": 0.02646446228,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-09T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-09_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-12T14:40:00+00:00",
+      "estimated_cost_usd": 0.024914741516,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-12T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-12_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-12T15:05:00+00:00",
+      "estimated_cost_usd": 0.026226043701,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-12T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-12_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-12T20:50:00+00:00",
+      "estimated_cost_usd": 0.026226043701,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-12T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-12_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-13T14:40:00+00:00",
+      "estimated_cost_usd": 0.024416446686,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-13T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-13_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-13T15:05:00+00:00",
+      "estimated_cost_usd": 0.025701522827,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-13T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-13_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-13T20:50:00+00:00",
+      "estimated_cost_usd": 0.025701522827,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-13T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-13_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-14T14:40:00+00:00",
+      "estimated_cost_usd": 0.023929476738,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-14T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-14_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-14T15:05:00+00:00",
+      "estimated_cost_usd": 0.025188922882,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-14T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-14_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-14T20:50:00+00:00",
+      "estimated_cost_usd": 0.025188922882,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-14T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-14_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-15T14:40:00+00:00",
+      "estimated_cost_usd": 0.023385882378,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-15T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-15_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-15T15:05:00+00:00",
+      "estimated_cost_usd": 0.024616718292,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-15T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-15_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-15T20:50:00+00:00",
+      "estimated_cost_usd": 0.024616718292,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-15T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-15_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-16T14:40:00+00:00",
+      "estimated_cost_usd": 0.02271771431,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-16T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-16_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-16T15:05:00+00:00",
+      "estimated_cost_usd": 0.023913383484,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-16T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-16_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-16T20:50:00+00:00",
+      "estimated_cost_usd": 0.023913383484,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-16T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-16_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-20T14:40:00+00:00",
+      "estimated_cost_usd": 0.022043883801,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-20T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-20_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-20T15:05:00+00:00",
+      "estimated_cost_usd": 0.023204088211,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-20T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-20_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-20T20:50:00+00:00",
+      "estimated_cost_usd": 0.023204088211,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-20T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-20_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-21T14:40:00+00:00",
+      "estimated_cost_usd": 0.023867189884,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-21T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-21_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-21T15:05:00+00:00",
+      "estimated_cost_usd": 0.025123357773,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-21T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-21_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-21T20:50:00+00:00",
+      "estimated_cost_usd": 0.025123357773,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-21T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-21_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-22T14:40:00+00:00",
+      "estimated_cost_usd": 0.023708641529,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-22T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-22_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-22T15:05:00+00:00",
+      "estimated_cost_usd": 0.024956464767,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-22T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-22_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-22T20:50:00+00:00",
+      "estimated_cost_usd": 0.024956464767,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-22T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-22_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-23T14:40:00+00:00",
+      "estimated_cost_usd": 0.024365484715,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-23T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-23_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-23T15:05:00+00:00",
+      "estimated_cost_usd": 0.025647878647,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-23T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-23_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-23T20:50:00+00:00",
+      "estimated_cost_usd": 0.025647878647,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-23T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-23_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-26T14:40:00+00:00",
+      "estimated_cost_usd": 0.024541020393,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-26T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-26_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-26T15:05:00+00:00",
+      "estimated_cost_usd": 0.025832653046,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-26T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-26_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-26T20:50:00+00:00",
+      "estimated_cost_usd": 0.025832653046,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-26T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-26_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-27T14:40:00+00:00",
+      "estimated_cost_usd": 0.025679171085,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-27T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-27_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-27T15:05:00+00:00",
+      "estimated_cost_usd": 0.027030706406,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-27T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-27_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-27T20:50:00+00:00",
+      "estimated_cost_usd": 0.027030706406,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-27T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-27_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-28T14:40:00+00:00",
+      "estimated_cost_usd": 0.025311112404,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-28T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-28_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-28T15:05:00+00:00",
+      "estimated_cost_usd": 0.026643276215,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-28T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-28_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-28T20:50:00+00:00",
+      "estimated_cost_usd": 0.026643276215,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-28T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-28_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-29T14:40:00+00:00",
+      "estimated_cost_usd": 0.025039315224,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-29T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-29_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-29T15:05:00+00:00",
+      "estimated_cost_usd": 0.02635717392,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-29T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-29_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-02-29T20:50:00+00:00",
+      "estimated_cost_usd": 0.02635717392,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_2025",
+      "schema": "cbbo-1m",
+      "start": "2024-02-29T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-02-29_forced_close_1545"
+    }
+  ],
+  "summary": {
+    "scenarios": {
+      "oos_2024_2025": {
+        "dataset": "OPRA.PILLAR",
+        "first_start": "2024-02-01T14:30:00+00:00",
+        "last_end": "2024-02-29T20:50:00+00:00",
+        "request_count": 60,
+        "schema": "cbbo-1m",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ]
+      }
+    },
+    "total_request_count": 60
+  },
+  "total_estimated_cost_usd": 1.502165
+}

@@ -1,0 +1,589 @@
+{
+  "coverage_end": "2024-07-19",
+  "coverage_start": "2024-07-15",
+  "file_count": 70,
+  "files": [
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_entry_a_0935.dbn.zst",
+      "input_rows": 86310,
+      "output_rows": 1962,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 84348,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_entry_b_1000.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1030.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1100.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1130.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1200.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1230.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1300.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1330.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1400.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1430.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1500.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_exit_check_1530.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-15_forced_close_1545.dbn.zst",
+      "input_rows": 95900,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 93720,
+      "trade_date": "2024-07-15"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_entry_a_0935.dbn.zst",
+      "input_rows": 88290,
+      "output_rows": 1962,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 86328,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_entry_b_1000.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1030.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1100.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1130.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1200.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1230.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1300.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1330.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1400.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1430.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1500.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_exit_check_1530.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-16_forced_close_1545.dbn.zst",
+      "input_rows": 98100,
+      "output_rows": 2180,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95920,
+      "trade_date": "2024-07-16"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_entry_a_0935.dbn.zst",
+      "input_rows": 88254,
+      "output_rows": 2034,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 86220,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_entry_b_1000.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1030.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1100.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1130.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1200.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1230.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1300.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1330.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1400.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1430.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1500.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_exit_check_1530.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-17_forced_close_1545.dbn.zst",
+      "input_rows": 98060,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 95800,
+      "trade_date": "2024-07-17"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_entry_a_0935.dbn.zst",
+      "input_rows": 86760,
+      "output_rows": 2034,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 84726,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_entry_b_1000.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1030.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1100.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1130.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1200.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1230.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1300.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1330.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1400.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1430.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1500.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_exit_check_1530.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-18_forced_close_1545.dbn.zst",
+      "input_rows": 96400,
+      "output_rows": 2260,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 94140,
+      "trade_date": "2024-07-18"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_entry_a_0935.dbn.zst",
+      "input_rows": 85284,
+      "output_rows": 3186,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 82098,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_entry_b_1000.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1030.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1100.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1130.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1200.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1230.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1300.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1330.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1400.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1430.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1500.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_exit_check_1530.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    },
+    {
+      "file": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3\\2024-07-19_forced_close_1545.dbn.zst",
+      "input_rows": 94760,
+      "output_rows": 3540,
+      "skipped_invalid_quote": 0,
+      "skipped_non_0dte": 91220,
+      "trade_date": "2024-07-19"
+    }
+  ],
+  "input_rows": 6716758,
+  "manifest": {
+    "coverage_end": "2024-07-19",
+    "coverage_start": "2024-07-15",
+    "dataset_id": "databento-one-month-pilot-aa1d789bef8d",
+    "ingested_at_et": "2026-06-30T20:58:33-04:00",
+    "license_notes": "Databento OPRA.PILLAR cbbo-1m local cache. User-approved one-month pilot download.",
+    "provider": "Databento",
+    "raw_sha256": "aa1d789bef8d462ab28c64584e5f5247180085440be0e92c697061b108551e57",
+    "record_type": "data_registry_manifest",
+    "schema_name": "m2_contracts",
+    "schema_version": "m2.0",
+    "schema_version_applied": "m2.0",
+    "source_url": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3"
+  },
+  "output_path": "data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\option_quote.jsonl",
+  "output_rows": 172638,
+  "provider": "Databento",
+  "raw_root": "data\\raw\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\oos_2024_07_intraday_exit_30m_chunk3",
+  "registry_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\registry\\datasets.jsonl",
+  "skipped_invalid_quote": 0,
+  "skipped_non_0dte": 6544120
+}

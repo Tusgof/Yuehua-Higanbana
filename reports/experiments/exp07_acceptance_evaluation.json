@@ -1,0 +1,68 @@
+{
+  "criteria_version": "exp07-acceptance-criteria-v1",
+  "guarded_policy_candidate_status": "pass",
+  "guarded_policy_checks": [
+    {
+      "name": "guarded_mismatch_count",
+      "passed": true
+    },
+    {
+      "name": "guarded_unknown_policy_violation_count",
+      "passed": true
+    },
+    {
+      "name": "guarded_all_cases_stable",
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "assessment_count": 129,
+    "case_count": 43,
+    "guarded_mismatch_count": 0,
+    "guarded_stable_case_count": 43,
+    "guarded_unknown_policy_violation_count": 0,
+    "mismatch_count": 0,
+    "stable_case_count": 35,
+    "unknown_policy_violation_count": 13
+  },
+  "raw_llm_checks": [
+    {
+      "name": "raw_mismatch_count",
+      "passed": true
+    },
+    {
+      "name": "raw_unknown_policy_violation_count",
+      "passed": false
+    },
+    {
+      "name": "raw_all_cases_stable",
+      "passed": false
+    }
+  ],
+  "raw_llm_gate_status": "fail",
+  "shared_checks": [
+    {
+      "name": "live_mode",
+      "passed": true
+    },
+    {
+      "name": "minimum_case_count",
+      "passed": true
+    },
+    {
+      "name": "assessment_count_matches_case_matrix",
+      "passed": true
+    },
+    {
+      "name": "parse_valid_rate",
+      "passed": true
+    }
+  ],
+  "strategy_integration_blockers": [
+    "requires_real_strategy_backtest_ablation",
+    "requires_real_news_archive",
+    "requires_wider_spy_0dte_data"
+  ],
+  "strategy_integration_status": "blocked",
+  "summary_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\exp07_prompt_v12_summary.json"
+}

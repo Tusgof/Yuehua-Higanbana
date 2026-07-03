@@ -1,0 +1,380 @@
+{
+  "api_key": {
+    "api_key_env": "HIGANBANA_OPENROUTER_API",
+    "configured": true
+  },
+  "assessment_count": 27,
+  "assessment_jsonl": "reports\\experiments\\exp07_prompt_v7_assessments.jsonl",
+  "by_case": {
+    "cpi_release_pending_vix22": {
+      "decisions": [
+        "unknown",
+        "block",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "guarded_decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "block",
+        "unknown"
+      ],
+      "unique_guarded_decisions": [
+        "unknown"
+      ]
+    },
+    "earnings_heavy_calendar_vix20": {
+      "decisions": [
+        "allow",
+        "allow",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "guarded_decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "allow",
+        "unknown"
+      ],
+      "unique_guarded_decisions": [
+        "unknown"
+      ]
+    },
+    "high_vol_no_clear_news_vix27": {
+      "decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "guarded_decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "unknown"
+      ],
+      "unique_guarded_decisions": [
+        "unknown"
+      ]
+    },
+    "jobs_report_pending_vix19": {
+      "decisions": [
+        "allow",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "guarded_decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "allow",
+        "unknown"
+      ],
+      "unique_guarded_decisions": [
+        "unknown"
+      ]
+    },
+    "major_fed_event_vix21": {
+      "decisions": [
+        "allow",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "guarded_decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "allow",
+        "unknown"
+      ],
+      "unique_guarded_decisions": [
+        "unknown"
+      ]
+    },
+    "quiet_vix18_normal_term_structure": {
+      "decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "guarded_decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "allow"
+      ],
+      "unique_guarded_decisions": [
+        "allow"
+      ]
+    },
+    "systemic_banking_panic_vix34": {
+      "decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "expected_decision": "block",
+      "guarded_decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "block"
+      ],
+      "unique_guarded_decisions": [
+        "block"
+      ]
+    },
+    "very_quiet_vix13_no_news": {
+      "decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "guarded_decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "allow"
+      ],
+      "unique_guarded_decisions": [
+        "allow"
+      ]
+    },
+    "war_shock_futures_limit_vix42": {
+      "decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "expected_decision": "block",
+      "guarded_decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "block"
+      ],
+      "unique_guarded_decisions": [
+        "block"
+      ]
+    }
+  },
+  "by_variant": {
+    "A": {
+      "assessment_count": 9,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "allow",
+        "unknown",
+        "allow",
+        "allow"
+      ],
+      "parse_valid_count": 9,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    },
+    "B": {
+      "assessment_count": 9,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "unknown",
+        "block",
+        "unknown",
+        "allow"
+      ],
+      "parse_valid_count": 9,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    },
+    "C": {
+      "assessment_count": 9,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "parse_valid_count": 9,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    }
+  },
+  "case_count": 9,
+  "guarded_mismatch_count": 0,
+  "guarded_mismatches": [],
+  "guarded_stable_case_count": 9,
+  "guarded_unknown_policy_violation_count": 0,
+  "guarded_unknown_policy_violations": [],
+  "input_archive": "reports\\experiments\\exp07_prompt_v7_inputs.json",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "mode": "live_openrouter",
+  "parse_valid_rate": 1.0,
+  "stable_case_count": 5,
+  "unknown_policy_violation_count": 5,
+  "unknown_policy_violations": [
+    {
+      "assessment_id": "llm-6b3b8b8c9e0778b1",
+      "case_id": "major_fed_event_vix21",
+      "decision": "allow",
+      "expected_decision": "unknown",
+      "guarded_decision": "unknown",
+      "input_hash": "af75263e678420c869f55ab24f0c86039ac344187c51aaaff758db890f7cbf9b",
+      "parse_valid": true,
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "fomc",
+          "powell"
+        ]
+      },
+      "prompt_variant": "A",
+      "prompt_version": "exp07-prompt-a-tail-risk-v7"
+    },
+    {
+      "assessment_id": "llm-9dd41dfc226dd064",
+      "case_id": "cpi_release_pending_vix22",
+      "decision": "block",
+      "expected_decision": "unknown",
+      "guarded_decision": "unknown",
+      "input_hash": "99f93cbc29d48b1f25acb577f62f95c4f6d017506d62c42d2f42735315d6d4c1",
+      "parse_valid": true,
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "cpi",
+          "fed decision",
+          "fomc"
+        ]
+      },
+      "prompt_variant": "B",
+      "prompt_version": "exp07-prompt-b-balanced-score-v7"
+    },
+    {
+      "assessment_id": "llm-99f18de83106d296",
+      "case_id": "jobs_report_pending_vix19",
+      "decision": "allow",
+      "expected_decision": "unknown",
+      "guarded_decision": "unknown",
+      "input_hash": "d3e3d2944ec9936f14915d066f66cdae3d232a1e47b40215d1ae17e99afdaaf8",
+      "parse_valid": true,
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "jobs report"
+        ]
+      },
+      "prompt_variant": "A",
+      "prompt_version": "exp07-prompt-a-tail-risk-v7"
+    },
+    {
+      "assessment_id": "llm-eb2e9b729fc29605",
+      "case_id": "earnings_heavy_calendar_vix20",
+      "decision": "allow",
+      "expected_decision": "unknown",
+      "guarded_decision": "unknown",
+      "input_hash": "ebcade2f2d96b86c19e2d9a9dcc802205e068d436ac91abc546d66d508dfc558",
+      "parse_valid": true,
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "earnings",
+          "earnings-heavy",
+          "mega-cap"
+        ]
+      },
+      "prompt_variant": "A",
+      "prompt_version": "exp07-prompt-a-tail-risk-v7"
+    },
+    {
+      "assessment_id": "llm-78feed10fcd52cc8",
+      "case_id": "earnings_heavy_calendar_vix20",
+      "decision": "allow",
+      "expected_decision": "unknown",
+      "guarded_decision": "unknown",
+      "input_hash": "ebcade2f2d96b86c19e2d9a9dcc802205e068d436ac91abc546d66d508dfc558",
+      "parse_valid": true,
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "earnings",
+          "earnings-heavy",
+          "mega-cap"
+        ]
+      },
+      "prompt_variant": "B",
+      "prompt_version": "exp07-prompt-b-balanced-score-v7"
+    }
+  ]
+}

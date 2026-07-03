@@ -1,0 +1,309 @@
+{
+  "best_scenario": {
+    "average_net_pnl": 67.5,
+    "best_trade": 150.0,
+    "candidate_days": 6,
+    "close_fallback": "strict_1545",
+    "closed_trades": 4,
+    "fee_per_contract": 0.0,
+    "fill_model": "mid",
+    "max_drawdown": -0.019305,
+    "scenario_id": "mid_fee_0_0_strict",
+    "sharpe_proxy": 0.965444,
+    "skipped_trades": 2,
+    "status_counts": {
+      "closed_forced_1545": 4,
+      "missing_quotes": 2
+    },
+    "total_net_pnl": 270.0,
+    "trial_index": 1,
+    "win_rate": 0.75,
+    "worst_trade": -25.0
+  },
+  "dsr_assessment": {
+    "reason": "DSR is not computed for this pilot sensitivity output because it is under-sampled, uses a one-month diagnostic window, and does not provide a full acceptance-grade return distribution.",
+    "required_before_acceptance": [
+      "full search log for the target experiment family",
+      "trial return series or Sharpe estimates across all trials",
+      "effective number of trials",
+      "null Sharpe threshold",
+      "skew/kurtosis/autocorrelation diagnostics"
+    ],
+    "selected_metric": "total_net_pnl",
+    "status": "blocked",
+    "trial_count": 10
+  },
+  "evidence_warning": "One-month pilot sensitivity; not enough evidence for strategy acceptance.",
+  "mode": "pilot_sensitivity_only",
+  "parameter_grid": {
+    "close_fallback": [
+      "nearest_1545_window",
+      "strict_1545"
+    ],
+    "fee_per_contract": [
+      0.0,
+      0.65,
+      1.0
+    ],
+    "fill_model": [
+      "full_spread_stress",
+      "half_spread",
+      "mid"
+    ]
+  },
+  "pilot_decision": {
+    "reasons": [
+      "worst full-spread stress total_net_pnl=242.0",
+      "strict close skipped_trades=2",
+      "trade_count is far below N >= 500",
+      "pilot remains positive under stress, but this is not strategy acceptance"
+    ],
+    "status": "healthy_enough_for_wider_data_pilot"
+  },
+  "scenario_count": 10,
+  "scenarios": [
+    {
+      "average_net_pnl": 67.5,
+      "best_trade": 150.0,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 0.0,
+      "fill_model": "mid",
+      "max_drawdown": -0.019305,
+      "scenario_id": "mid_fee_0_0_strict",
+      "sharpe_proxy": 0.965444,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 270.0,
+      "trial_index": 1,
+      "win_rate": 0.75,
+      "worst_trade": -25.0
+    },
+    {
+      "average_net_pnl": 64.9,
+      "best_trade": 147.4,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 0.65,
+      "fill_model": "mid",
+      "max_drawdown": -0.021442,
+      "scenario_id": "mid_fee_0_65_strict",
+      "sharpe_proxy": 0.928256,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 259.6,
+      "trial_index": 2,
+      "win_rate": 0.75,
+      "worst_trade": -27.6
+    },
+    {
+      "average_net_pnl": 63.5,
+      "best_trade": 146.0,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 1.0,
+      "fill_model": "mid",
+      "max_drawdown": -0.022603,
+      "scenario_id": "mid_fee_1_0_strict",
+      "sharpe_proxy": 0.908232,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 254.0,
+      "trial_index": 3,
+      "win_rate": 0.75,
+      "worst_trade": -29.0
+    },
+    {
+      "average_net_pnl": 66.5,
+      "best_trade": 149.0,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 0.0,
+      "fill_model": "half_spread",
+      "max_drawdown": -0.020124,
+      "scenario_id": "half_spread_fee_0_0_strict",
+      "sharpe_proxy": 0.951141,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 266.0,
+      "trial_index": 4,
+      "win_rate": 0.75,
+      "worst_trade": -26.0
+    },
+    {
+      "average_net_pnl": 63.9,
+      "best_trade": 146.4,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 0.65,
+      "fill_model": "half_spread",
+      "max_drawdown": -0.022271,
+      "scenario_id": "half_spread_fee_0_65_strict",
+      "sharpe_proxy": 0.913954,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 255.6,
+      "trial_index": 5,
+      "win_rate": 0.75,
+      "worst_trade": -28.6
+    },
+    {
+      "average_net_pnl": 62.5,
+      "best_trade": 145.0,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 1.0,
+      "fill_model": "half_spread",
+      "max_drawdown": -0.023438,
+      "scenario_id": "half_spread_fee_1_0_strict",
+      "sharpe_proxy": 0.89393,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 250.0,
+      "trial_index": 6,
+      "win_rate": 0.75,
+      "worst_trade": -30.0
+    },
+    {
+      "average_net_pnl": 64.5,
+      "best_trade": 147.0,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 0.0,
+      "fill_model": "full_spread_stress",
+      "max_drawdown": -0.021773,
+      "scenario_id": "full_spread_stress_fee_0_0_strict",
+      "sharpe_proxy": 0.922535,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 258.0,
+      "trial_index": 7,
+      "win_rate": 0.75,
+      "worst_trade": -28.0
+    },
+    {
+      "average_net_pnl": 61.9,
+      "best_trade": 144.4,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 0.65,
+      "fill_model": "full_spread_stress",
+      "max_drawdown": -0.02394,
+      "scenario_id": "full_spread_stress_fee_0_65_strict",
+      "sharpe_proxy": 0.885348,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 247.6,
+      "trial_index": 8,
+      "win_rate": 0.75,
+      "worst_trade": -30.6
+    },
+    {
+      "average_net_pnl": 60.5,
+      "best_trade": 143.0,
+      "candidate_days": 6,
+      "close_fallback": "strict_1545",
+      "closed_trades": 4,
+      "fee_per_contract": 1.0,
+      "fill_model": "full_spread_stress",
+      "max_drawdown": -0.025118,
+      "scenario_id": "full_spread_stress_fee_1_0_strict",
+      "sharpe_proxy": 0.865324,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 242.0,
+      "trial_index": 9,
+      "win_rate": 0.75,
+      "worst_trade": -32.0
+    },
+    {
+      "average_net_pnl": 67.5,
+      "best_trade": 150.0,
+      "candidate_days": 6,
+      "close_fallback": "nearest_1545_window",
+      "closed_trades": 4,
+      "fee_per_contract": 0.0,
+      "fill_model": "mid",
+      "max_drawdown": -0.019305,
+      "scenario_id": "mid_fee_0_nearest_close",
+      "sharpe_proxy": 0.965444,
+      "skipped_trades": 2,
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_quotes": 2
+      },
+      "total_net_pnl": 270.0,
+      "trial_index": 10,
+      "win_rate": 0.75,
+      "worst_trade": -25.0
+    }
+  ],
+  "search_log": {
+    "all_trials_recorded": true,
+    "path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\search_logs\\jan_2024_pilot_sensitivity_search_log.jsonl",
+    "record_type": "parameter_search_trial",
+    "selection_bias_warning": "Diagnostic pilot grid; do not select production parameters from this output.",
+    "trial_count": 10
+  },
+  "selection_rule": {
+    "acceptance_use": "diagnostic_only_not_oos_tuning",
+    "selected_best_scenario_id": "mid_fee_0_0_strict",
+    "selected_metric": "total_net_pnl"
+  },
+  "worst_scenario": {
+    "average_net_pnl": 60.5,
+    "best_trade": 143.0,
+    "candidate_days": 6,
+    "close_fallback": "strict_1545",
+    "closed_trades": 4,
+    "fee_per_contract": 1.0,
+    "fill_model": "full_spread_stress",
+    "max_drawdown": -0.025118,
+    "scenario_id": "full_spread_stress_fee_1_0_strict",
+    "sharpe_proxy": 0.865324,
+    "skipped_trades": 2,
+    "status_counts": {
+      "closed_forced_1545": 4,
+      "missing_quotes": 2
+    },
+    "total_net_pnl": 242.0,
+    "trial_index": 9,
+    "win_rate": 0.75,
+    "worst_trade": -32.0
+  }
+}

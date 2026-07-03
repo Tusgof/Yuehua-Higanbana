@@ -1,0 +1,122 @@
+{
+  "dataset": "OPRA.PILLAR",
+  "download_performed": false,
+  "field_names": [
+    "length",
+    "rtype",
+    "publisher_id",
+    "instrument_id",
+    "ts_event",
+    "ts_recv",
+    "ts_ref",
+    "price",
+    "quantity",
+    "sequence",
+    "ts_in_delta",
+    "stat_type",
+    "channel_id",
+    "update_action",
+    "stat_flags",
+    "_reserved"
+  ],
+  "fields": [
+    {
+      "name": "length",
+      "type": "uint8_t"
+    },
+    {
+      "name": "rtype",
+      "type": "uint8_t"
+    },
+    {
+      "name": "publisher_id",
+      "type": "uint16_t"
+    },
+    {
+      "name": "instrument_id",
+      "type": "uint32_t"
+    },
+    {
+      "name": "ts_event",
+      "type": "uint64_t"
+    },
+    {
+      "name": "ts_recv",
+      "type": "uint64_t"
+    },
+    {
+      "name": "ts_ref",
+      "type": "uint64_t"
+    },
+    {
+      "name": "price",
+      "type": "int64_t"
+    },
+    {
+      "name": "quantity",
+      "type": "int64_t"
+    },
+    {
+      "name": "sequence",
+      "type": "uint32_t"
+    },
+    {
+      "name": "ts_in_delta",
+      "type": "int32_t"
+    },
+    {
+      "name": "stat_type",
+      "type": "uint16_t"
+    },
+    {
+      "name": "channel_id",
+      "type": "uint16_t"
+    },
+    {
+      "name": "update_action",
+      "type": "uint8_t"
+    },
+    {
+      "name": "stat_flags",
+      "type": "uint8_t"
+    },
+    {
+      "name": "_reserved",
+      "type": "char[18]"
+    }
+  ],
+  "full_day_cost_estimates_usd": {
+    "full_utc_day_2024_01_03": 0.354911148548,
+    "three_utc_days_2024_01_02_to_2024_01_05": 1.068024158478
+  },
+  "full_day_has_records": true,
+  "has_quantity_or_price_field": true,
+  "has_stat_type_field": true,
+  "intraday_window_has_records": false,
+  "mode": "metadata_only_no_download",
+  "next_probe": "If proceeding, estimate and then download only one full UTC day of OPRA statistics under the existing cost guard; inspect stat_type values and timestamp semantics before using OI in a strategy report.",
+  "record_count_checks": [
+    {
+      "end": "2024-01-03T20:50:00+00:00",
+      "label": "intraday_research_window",
+      "record_count": 0,
+      "start": "2024-01-03T14:30:00+00:00"
+    },
+    {
+      "end": "2024-01-04T00:00:00+00:00",
+      "label": "full_utc_day",
+      "record_count": 541311,
+      "start": "2024-01-03T00:00:00+00:00"
+    },
+    {
+      "end": "2024-01-05T00:00:00+00:00",
+      "label": "three_utc_days",
+      "record_count": 1628952,
+      "start": "2024-01-02T00:00:00+00:00"
+    }
+  ],
+  "schema": "statistics",
+  "status": "pass_with_timing_caveat",
+  "stype_in": "parent",
+  "symbol": "SPY.OPT"
+}

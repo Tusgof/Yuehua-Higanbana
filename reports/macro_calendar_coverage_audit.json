@@ -1,0 +1,149 @@
+{
+  "blockers": [],
+  "coverage_end": "2026-12-16",
+  "coverage_start": "2022-01-04",
+  "macro_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\macro_calendar\\macro_event.jsonl",
+  "record_count": 481,
+  "required_event_types": [
+    "FOMC_DECISION",
+    "FOMC_MINUTES",
+    "CPI",
+    "NFP",
+    "PCE",
+    "JOLTS",
+    "ISM_MANUFACTURING",
+    "ISM_SERVICES",
+    "RETAIL_SALES"
+  ],
+  "status": "pass",
+  "windows": [
+    {
+      "end": "2022-05-10",
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "start": "2019-01-01",
+      "window": "reference_pre_break"
+    },
+    {
+      "end": "2023-12-31",
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "start": "2022-05-11",
+      "window": "train"
+    },
+    {
+      "end": "2026-07-03",
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "start": "2024-01-01",
+      "window": "oos"
+    }
+  ],
+  "years": [
+    {
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "year": 2022
+    },
+    {
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "year": 2023
+    },
+    {
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "year": 2024
+    },
+    {
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "year": 2025
+    },
+    {
+      "missing_event_types": [],
+      "present_event_types": [
+        "CPI",
+        "FOMC_DECISION",
+        "FOMC_MINUTES",
+        "ISM_MANUFACTURING",
+        "ISM_SERVICES",
+        "JOLTS",
+        "NFP",
+        "PCE",
+        "RETAIL_SALES"
+      ],
+      "year": 2026
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "blockers": [
+    "gdelt_capture_not_captured:2023-04-03",
+    "gdelt_capture_not_captured:2023-04-13",
+    "gdelt_capture_not_captured:2023-09-01",
+    "gdelt_capture_not_captured:2023-09-07",
+    "gdelt_capture_not_captured:2023-10-02",
+    "gdelt_capture_unavailable",
+    "gdelt_retry_cooldown_recommended",
+    "requires_mintrl_psr_sample_adequacy",
+    "requires_news_archive_start_by_2022_05_11",
+    "requires_news_topic_coverage_2022",
+    "requires_news_topic_coverage_2023",
+    "requires_news_topic_coverage_2024",
+    "requires_news_topic_coverage_2025",
+    "requires_news_topic_coverage_2026",
+    "requires_news_window_coverage_oos",
+    "requires_news_window_coverage_reference_pre_break",
+    "requires_news_window_coverage_train",
+    "requires_real_news_archive",
+    "requires_real_strategy_backtest_ablation",
+    "requires_real_timestamp_clean_news_cases",
+    "requires_real_timestamp_clean_news_cases_for_exp07_prompt_research",
+    "requires_wider_spy_0dte_data"
+  ],
+  "checks": [
+    {
+      "blockers": [],
+      "name": "macro_calendar",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\macro_calendar_coverage_audit.json",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "vix_vxv",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\vix_vxv_coverage_audit.json",
+      "status": "pass"
+    },
+    {
+      "blockers": [
+        "requires_news_archive_start_by_2022_05_11",
+        "requires_news_topic_coverage_2022",
+        "requires_news_topic_coverage_2023",
+        "requires_news_topic_coverage_2024",
+        "requires_news_topic_coverage_2025",
+        "requires_news_topic_coverage_2026",
+        "requires_news_window_coverage_oos",
+        "requires_news_window_coverage_reference_pre_break",
+        "requires_news_window_coverage_train",
+        "requires_real_news_archive"
+      ],
+      "name": "news",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_coverage_audit.json",
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "gdelt_capture_not_captured:2023-04-03",
+        "gdelt_capture_not_captured:2023-04-13",
+        "gdelt_capture_not_captured:2023-09-01",
+        "gdelt_capture_not_captured:2023-09-07",
+        "gdelt_capture_not_captured:2023-10-02",
+        "gdelt_capture_unavailable"
+      ],
+      "file_count": 5,
+      "name": "gdelt_capture_status",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_status",
+      "status": "blocked",
+      "status_counts": {
+        "blocked": 5
+      }
+    },
+    {
+      "blockers": [
+        "gdelt_retry_cooldown_recommended"
+      ],
+      "name": "gdelt_command_plan",
+      "next_unattempted_trade_date": "2023-04-14",
+      "not_attempted_count": 66,
+      "retry_pressure_status": "cooldown_recommended",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_command_plan.json",
+      "status": "blocked"
+    },
+    {
+      "blockers": [],
+      "cost_guard_basis": "user_reported_actual_usage",
+      "cost_guard_used_usd": 64.64,
+      "known_committed_estimated_cost_usd": 169.90613,
+      "name": "paid_cost",
+      "remaining_before_stop_usd": 60.36,
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\paid_cost_audit.json",
+      "status": "pass",
+      "user_reported_actual_usage": {
+        "actual_usage_usd": 64.64,
+        "notes": "User reported current total Data usage in the provider account. Stop threshold remains $125. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.",
+        "reported_at_utc": "2026-07-01T06:11:30Z",
+        "source": "user_reported_databento_account_usage",
+        "source_path": "reports\\data_cost\\user_reported_actual_usage.json"
+      }
+    },
+    {
+      "blockers": [],
+      "name": "research_logs",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\research_log_audit.json",
+      "status": "pass"
+    },
+    {
+      "blockers": [
+        "requires_mintrl_psr_sample_adequacy"
+      ],
+      "candidate_days": 93,
+      "closed_trades": 90,
+      "name": "strategy_data",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\strategy_data_readiness_audit.json",
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "requires_real_timestamp_clean_news_cases_for_exp07_prompt_research"
+      ],
+      "name": "exp07_prompt_redesign",
+      "note": "Synthetic/policy prompt matrices are infrastructure-only and must not be counted as Exp07 research evidence.",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\docs\\EXP07_PROMPT_REDESIGN.md",
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "requires_real_news_archive",
+        "requires_real_timestamp_clean_news_cases"
+      ],
+      "candidate_days": 71,
+      "captured_candidate_days": 0,
+      "name": "exp07_real_news_case_plan",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\exp07_real_news_case_plan.json",
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "requires_real_strategy_backtest_ablation",
+        "requires_real_news_archive",
+        "requires_wider_spy_0dte_data"
+      ],
+      "name": "exp07_acceptance",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\exp07_acceptance_evaluation.json",
+      "status": "blocked"
+    },
+    {
+      "blockers": [
+        "requires_mintrl_psr_sample_adequacy",
+        "requires_real_news_archive",
+        "requires_wider_spy_0dte_data"
+      ],
+      "name": "exp07_strategy_ablation",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\exp07_strategy_ablation_status.json",
+      "status": "blocked"
+    },
+    {
+      "blockers": [],
+      "name": "aug_2023_databento",
+      "request_count": 322,
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\databento_cost_insample_2023_08_intraday_exit_30m_dryrun.json",
+      "status": "ready_for_live_cost_estimate"
+    },
+    {
+      "blockers": [],
+      "full_day_record_count": 541311,
+      "intraday_record_count": 0,
+      "name": "opra_statistics_oi_probe",
+      "open_interest_record_count": 180279,
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\databento_opra_statistics_oi_probe_2024_01_03_schema.json; D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\databento_opra_statistics_oi_download_probe_2024_01_03.json",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "openrouter_llm",
+      "note": "Only use for guarded smoke tests or approved prompt experiments.",
+      "status": "available"
+    }
+  ],
+  "environment": {
+    "DATABENTO_API_KEY": {
+      "machine": false,
+      "process": false,
+      "user": false
+    },
+    "DATABENTO_SPY0DTE_API": {
+      "machine": false,
+      "process": true,
+      "user": true
+    },
+    "HIGANBANA_OPENROUTER_API": {
+      "machine": false,
+      "process": true,
+      "user": true
+    }
+  },
+  "next_safe_actions": [
+    "Pause additional live GDELT `--execute` retries until HTTP 429 pressure clears; monitor the command plan before retrying one candidate day.",
+    "Do not run another synthetic Exp07 prompt matrix as research; build real timestamp-clean news cases first.",
+    "Use `reports\\experiments\\exp07_real_news_case_plan.md` as the collection plan before any Exp07 prompt-family run.",
+    "Before any further broad Databento download, use `reports\\risk_first_data_audit.md`, `reports\\greeks_oi_enrichment_probe_report.md`, and `docs\\GAMMA_AGGREGATION_VALIDATION_POLICY.md` as the pre-purchase checkpoint: run a diagnostic gamma aggregation against the policy gates, choose targeted pre-break/high-VIX/major-regime coverage, or revise toward a higher-density strategy hypothesis; then re-run paid-cost/readiness audits and confirm actual provider usage remains below the stop threshold."
+  ],
+  "status": "blocked"
+}

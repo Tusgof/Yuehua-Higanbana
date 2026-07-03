@@ -1,0 +1,102 @@
+{
+  "plan_version": "news-sources-v1",
+  "timezone": "America/New_York",
+  "primary_source_id": "gdelt_doc_api",
+  "minimum_required_topics": [
+    "market_panic",
+    "systemic_banking_stress",
+    "war_escalation",
+    "index_halt_circuit_breaker",
+    "macro_policy_risk"
+  ],
+  "anti_leakage_rules": {
+    "decision_time_field": "decision_time_et",
+    "required_item_fields": [
+      "published_at_et",
+      "fetched_at_et",
+      "source_name",
+      "headline",
+      "url",
+      "provider"
+    ],
+    "published_at_must_be_lte_decision_time": true,
+    "fetched_at_must_be_lte_decision_time_for_live_replay": true,
+    "raw_snapshot_required_before_strategy_use": true,
+    "dedupe_key": [
+      "provider",
+      "url"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "gdelt_doc_api",
+      "provider": "GDELT",
+      "source_url": "https://www.gdeltproject.org/data.html",
+      "api_url_template": "https://api.gdeltproject.org/api/v2/doc/doc?query={query}&mode=artlist&format=json&startdatetime={start_utc}&enddatetime={end_utc}&sort=datedesc",
+      "source_role": "primary_archive_candidate",
+      "access_status": "free_no_key",
+      "archive_status": "candidate",
+      "parser_status": "planned",
+      "license_notes": "Open GDELT news index/API candidate. Preserve article URL/source/timestamps and review usage terms before real research import.",
+      "allowed_topics": [
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation",
+        "index_halt_circuit_breaker",
+        "macro_policy_risk"
+      ],
+      "query_notes": "Use English market-risk queries constrained by timestamp windows before SPY decision time; do not use article content observed after decision time."
+    },
+    {
+      "source_id": "alpha_vantage_news_sentiment",
+      "provider": "Alpha Vantage",
+      "source_url": "https://www.alphavantage.co/documentation/#news-sentiment",
+      "api_url_template": "https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=SPY&time_from={start_utc}&time_to={end_utc}&apikey={api_key}",
+      "source_role": "optional_market_news_supplement",
+      "access_status": "key_required",
+      "archive_status": "deferred",
+      "parser_status": "deferred",
+      "license_notes": "Optional supplement only. Requires API key and terms review; not approved as a new paid provider in this plan.",
+      "allowed_topics": [
+        "market_panic",
+        "macro_policy_risk"
+      ],
+      "query_notes": "Use only after explicit key/provider approval; do not replace timestamped raw article archive."
+    },
+    {
+      "source_id": "newsapi_everything",
+      "provider": "NewsAPI",
+      "source_url": "https://newsapi.org/docs/endpoints/everything",
+      "api_url_template": "https://newsapi.org/v2/everything?q={query}&from={start_utc}&to={end_utc}&language=en&sortBy=publishedAt&apiKey={api_key}",
+      "source_role": "fallback_paid_archive_candidate",
+      "access_status": "key_required",
+      "archive_status": "deferred",
+      "parser_status": "deferred",
+      "license_notes": "Fallback only because archive depth depends on plan. Requires API key/plan review before real research use.",
+      "allowed_topics": [
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation",
+        "index_halt_circuit_breaker",
+        "macro_policy_risk"
+      ],
+      "query_notes": "Use only if GDELT coverage is insufficient and provider cost/terms are approved."
+    },
+    {
+      "source_id": "sec_newsroom",
+      "provider": "SEC",
+      "source_url": "https://www.sec.gov/newsroom",
+      "api_url_template": "https://www.sec.gov/newsroom",
+      "source_role": "structured_regulatory_supplement",
+      "access_status": "free_no_key",
+      "archive_status": "supplement_only",
+      "parser_status": "planned",
+      "license_notes": "Official regulatory news supplement. Useful for SEC/market-structure context, not a broad market headline archive.",
+      "allowed_topics": [
+        "macro_policy_risk",
+        "index_halt_circuit_breaker"
+      ],
+      "query_notes": "Use for official SEC announcements only; do not treat as broad market sentiment coverage."
+    }
+  ]
+}

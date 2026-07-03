@@ -1,0 +1,358 @@
+{
+  "average_net_pnl": -30.4,
+  "best_trade": -9.0,
+  "candidate_days": 5,
+  "close_fallback": "nearest_1545_window",
+  "closed_trades": 5,
+  "evidence_warning": "This is a one-month pilot with too few trades for strategy acceptance.",
+  "exit_model": "forced_close_only",
+  "fee_per_contract": 0.0,
+  "fill_model": "mid",
+  "max_drawdown": -0.152,
+  "mode": "pilot_pnl_only",
+  "sharpe_proxy": -2.56707,
+  "skipped_trades": 0,
+  "status_counts": {
+    "closed_forced_1545": 5
+  },
+  "total_net_pnl": -152.0,
+  "trades": [
+    {
+      "close_time_et": "2024-11-04T15:45:00-05:00",
+      "close_timestamps_by_leg_id": {
+        "leg-a731b5016d2f91cb": "2024-11-04T15:45:00-05:00",
+        "leg-c89e176b894c5e02": "2024-11-04T15:45:00-05:00"
+      },
+      "closing_prices_by_leg_id": {
+        "leg-a731b5016d2f91cb": 0.15,
+        "leg-c89e176b894c5e02": 0.02
+      },
+      "date": "2024-11-04",
+      "direction": "put",
+      "entry_debit": 0.51,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2024-11-04-leg-a731b5016d2f91cb",
+          "fill_model": "mid",
+          "leg_id": "leg-a731b5016d2f91cb",
+          "price": 1.065,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2024-11-04-leg-c89e176b894c5e02",
+          "fill_model": "mid",
+          "leg_id": "leg-c89e176b894c5e02",
+          "price": 0.555,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2024-11-04T09:35:00-05:00",
+      "exit_model": "forced_close_only",
+      "exit_value": 0.13,
+      "fees": 0.0,
+      "gross_pnl": -38.0,
+      "legs": [
+        {
+          "expiration_date": "2024-11-04",
+          "leg_id": "leg-a731b5016d2f91cb",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 569.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-11-04",
+          "leg_id": "leg-c89e176b894c5e02",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 567.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 51.0,
+      "net_pnl": -38.0,
+      "reasons": [
+        "entry at mid; exit=forced_1545; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_forced_1545"
+    },
+    {
+      "close_time_et": "2024-11-12T15:45:00-05:00",
+      "close_timestamps_by_leg_id": {
+        "leg-37a8bb03e1f49dec": "2024-11-12T15:45:00-05:00",
+        "leg-556745bab043236e": "2024-11-12T15:45:00-05:00"
+      },
+      "closing_prices_by_leg_id": {
+        "leg-37a8bb03e1f49dec": 0.01,
+        "leg-556745bab043236e": 0.0
+      },
+      "date": "2024-11-12",
+      "direction": "call",
+      "entry_debit": 0.39,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2024-11-12-leg-556745bab043236e",
+          "fill_model": "mid",
+          "leg_id": "leg-556745bab043236e",
+          "price": 0.485,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2024-11-12-leg-37a8bb03e1f49dec",
+          "fill_model": "mid",
+          "leg_id": "leg-37a8bb03e1f49dec",
+          "price": 0.095,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2024-11-12T09:35:00-05:00",
+      "exit_model": "forced_close_only",
+      "exit_value": -0.01,
+      "fees": 0.0,
+      "gross_pnl": -40.0,
+      "legs": [
+        {
+          "expiration_date": "2024-11-12",
+          "leg_id": "leg-556745bab043236e",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 600.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-11-12",
+          "leg_id": "leg-37a8bb03e1f49dec",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 602.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 39.0,
+      "net_pnl": -40.0,
+      "reasons": [
+        "entry at mid; exit=forced_1545; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_forced_1545"
+    },
+    {
+      "close_time_et": "2024-11-20T15:45:00-05:00",
+      "close_timestamps_by_leg_id": {
+        "leg-34d13343e1da1b96": "2024-11-20T15:45:00-05:00",
+        "leg-36310ff6160788cf": "2024-11-20T15:45:00-05:00"
+      },
+      "closing_prices_by_leg_id": {
+        "leg-34d13343e1da1b96": 0.73,
+        "leg-36310ff6160788cf": 0.29
+      },
+      "date": "2024-11-20",
+      "direction": "put",
+      "entry_debit": 0.53,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2024-11-20-leg-34d13343e1da1b96",
+          "fill_model": "mid",
+          "leg_id": "leg-34d13343e1da1b96",
+          "price": 1.245,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2024-11-20-leg-36310ff6160788cf",
+          "fill_model": "mid",
+          "leg_id": "leg-36310ff6160788cf",
+          "price": 0.715,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2024-11-20T09:35:00-05:00",
+      "exit_model": "forced_close_only",
+      "exit_value": 0.44,
+      "fees": 0.0,
+      "gross_pnl": -9.0,
+      "legs": [
+        {
+          "expiration_date": "2024-11-20",
+          "leg_id": "leg-34d13343e1da1b96",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 588.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-11-20",
+          "leg_id": "leg-36310ff6160788cf",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 586.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 53.0,
+      "net_pnl": -9.0,
+      "reasons": [
+        "entry at mid; exit=forced_1545; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_forced_1545"
+    },
+    {
+      "close_time_et": "2024-11-21T15:45:00-05:00",
+      "close_timestamps_by_leg_id": {
+        "leg-52efe8b3c546b139": "2024-11-21T15:45:00-05:00",
+        "leg-84142aeb07d93e70": "2024-11-21T15:45:00-05:00"
+      },
+      "closing_prices_by_leg_id": {
+        "leg-52efe8b3c546b139": 0.01,
+        "leg-84142aeb07d93e70": 0.0
+      },
+      "date": "2024-11-21",
+      "direction": "put",
+      "entry_debit": 0.38,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2024-11-21-leg-84142aeb07d93e70",
+          "fill_model": "mid",
+          "leg_id": "leg-84142aeb07d93e70",
+          "price": 0.755,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2024-11-21-leg-52efe8b3c546b139",
+          "fill_model": "mid",
+          "leg_id": "leg-52efe8b3c546b139",
+          "price": 0.375,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2024-11-21T09:35:00-05:00",
+      "exit_model": "forced_close_only",
+      "exit_value": -0.01,
+      "fees": 0.0,
+      "gross_pnl": -39.0,
+      "legs": [
+        {
+          "expiration_date": "2024-11-21",
+          "leg_id": "leg-84142aeb07d93e70",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 589.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-11-21",
+          "leg_id": "leg-52efe8b3c546b139",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 587.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 38.0,
+      "net_pnl": -39.0,
+      "reasons": [
+        "entry at mid; exit=forced_1545; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_forced_1545"
+    },
+    {
+      "close_time_et": "2024-11-25T15:45:00-05:00",
+      "close_timestamps_by_leg_id": {
+        "leg-6309c53b4d546617": "2024-11-25T15:45:00-05:00",
+        "leg-bbf0574637a31c4c": "2024-11-25T15:45:00-05:00"
+      },
+      "closing_prices_by_leg_id": {
+        "leg-6309c53b4d546617": 0.0,
+        "leg-bbf0574637a31c4c": 0.01
+      },
+      "date": "2024-11-25",
+      "direction": "call",
+      "entry_debit": 0.25,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2024-11-25-leg-6309c53b4d546617",
+          "fill_model": "mid",
+          "leg_id": "leg-6309c53b4d546617",
+          "price": 0.325,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2024-11-25-leg-bbf0574637a31c4c",
+          "fill_model": "mid",
+          "leg_id": "leg-bbf0574637a31c4c",
+          "price": 0.075,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2024-11-25T09:35:00-05:00",
+      "exit_model": "forced_close_only",
+      "exit_value": -0.01,
+      "fees": 0.0,
+      "gross_pnl": -26.0,
+      "legs": [
+        {
+          "expiration_date": "2024-11-25",
+          "leg_id": "leg-6309c53b4d546617",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 602.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2024-11-25",
+          "leg_id": "leg-bbf0574637a31c4c",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 604.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 25.0,
+      "net_pnl": -26.0,
+      "reasons": [
+        "entry at mid; exit=forced_1545; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_forced_1545"
+    }
+  ],
+  "win_rate": 0.0,
+  "worst_trade": -40.0
+}

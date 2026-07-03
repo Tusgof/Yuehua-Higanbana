@@ -1,0 +1,244 @@
+{
+  "best_scenario": {
+    "average_net_pnl": -32.0,
+    "best_trade": -31.0,
+    "candidate_days": 3,
+    "close_fallback": "strict_1545",
+    "closed_trades": 3,
+    "fee_per_contract": 0.0,
+    "fill_model": "mid",
+    "max_drawdown": -0.096,
+    "scenario_id": "mid_fee_0_0_strict",
+    "sharpe_proxy": -39.191836,
+    "skipped_trades": 0,
+    "status_counts": {
+      "closed_forced_1545": 3
+    },
+    "total_net_pnl": -96.0,
+    "win_rate": 0.0,
+    "worst_trade": -33.0
+  },
+  "evidence_warning": "One-month pilot sensitivity; not enough evidence for strategy acceptance.",
+  "mode": "pilot_sensitivity_only",
+  "pilot_decision": {
+    "reasons": [
+      "worst full-spread stress total_net_pnl=-117.0",
+      "strict close skipped_trades=0",
+      "trade_count is far below N >= 500",
+      "pilot is fragile under stress or close data coverage is weak"
+    ],
+    "status": "needs_design_review_before_wider_data"
+  },
+  "scenario_count": 10,
+  "scenarios": [
+    {
+      "average_net_pnl": -32.0,
+      "best_trade": -31.0,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 0.0,
+      "fill_model": "mid",
+      "max_drawdown": -0.096,
+      "scenario_id": "mid_fee_0_0_strict",
+      "sharpe_proxy": -39.191836,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -96.0,
+      "win_rate": 0.0,
+      "worst_trade": -33.0
+    },
+    {
+      "average_net_pnl": -34.6,
+      "best_trade": -33.6,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 0.65,
+      "fill_model": "mid",
+      "max_drawdown": -0.1038,
+      "scenario_id": "mid_fee_0_65_strict",
+      "sharpe_proxy": -42.376173,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -103.8,
+      "win_rate": 0.0,
+      "worst_trade": -35.6
+    },
+    {
+      "average_net_pnl": -36.0,
+      "best_trade": -35.0,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 1.0,
+      "fill_model": "mid",
+      "max_drawdown": -0.108,
+      "scenario_id": "mid_fee_1_0_strict",
+      "sharpe_proxy": -44.090815,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -108.0,
+      "win_rate": 0.0,
+      "worst_trade": -37.0
+    },
+    {
+      "average_net_pnl": -33.0,
+      "best_trade": -32.0,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 0.0,
+      "fill_model": "half_spread",
+      "max_drawdown": -0.099,
+      "scenario_id": "half_spread_fee_0_0_strict",
+      "sharpe_proxy": -40.416581,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -99.0,
+      "win_rate": 0.0,
+      "worst_trade": -34.0
+    },
+    {
+      "average_net_pnl": -35.6,
+      "best_trade": -34.6,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 0.65,
+      "fill_model": "half_spread",
+      "max_drawdown": -0.1068,
+      "scenario_id": "half_spread_fee_0_65_strict",
+      "sharpe_proxy": -43.600917,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -106.8,
+      "win_rate": 0.0,
+      "worst_trade": -36.6
+    },
+    {
+      "average_net_pnl": -37.0,
+      "best_trade": -36.0,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 1.0,
+      "fill_model": "half_spread",
+      "max_drawdown": -0.111,
+      "scenario_id": "half_spread_fee_1_0_strict",
+      "sharpe_proxy": -45.31556,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -111.0,
+      "win_rate": 0.0,
+      "worst_trade": -38.0
+    },
+    {
+      "average_net_pnl": -35.0,
+      "best_trade": -34.0,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 0.0,
+      "fill_model": "full_spread_stress",
+      "max_drawdown": -0.105,
+      "scenario_id": "full_spread_stress_fee_0_0_strict",
+      "sharpe_proxy": -42.86607,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -105.0,
+      "win_rate": 0.0,
+      "worst_trade": -36.0
+    },
+    {
+      "average_net_pnl": -37.6,
+      "best_trade": -36.6,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 0.65,
+      "fill_model": "full_spread_stress",
+      "max_drawdown": -0.1128,
+      "scenario_id": "full_spread_stress_fee_0_65_strict",
+      "sharpe_proxy": -46.050407,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -112.8,
+      "win_rate": 0.0,
+      "worst_trade": -38.6
+    },
+    {
+      "average_net_pnl": -39.0,
+      "best_trade": -38.0,
+      "candidate_days": 3,
+      "close_fallback": "strict_1545",
+      "closed_trades": 3,
+      "fee_per_contract": 1.0,
+      "fill_model": "full_spread_stress",
+      "max_drawdown": -0.117,
+      "scenario_id": "full_spread_stress_fee_1_0_strict",
+      "sharpe_proxy": -47.76505,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -117.0,
+      "win_rate": 0.0,
+      "worst_trade": -40.0
+    },
+    {
+      "average_net_pnl": -32.0,
+      "best_trade": -31.0,
+      "candidate_days": 3,
+      "close_fallback": "nearest_1545_window",
+      "closed_trades": 3,
+      "fee_per_contract": 0.0,
+      "fill_model": "mid",
+      "max_drawdown": -0.096,
+      "scenario_id": "mid_fee_0_nearest_close",
+      "sharpe_proxy": -39.191836,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_net_pnl": -96.0,
+      "win_rate": 0.0,
+      "worst_trade": -33.0
+    }
+  ],
+  "worst_scenario": {
+    "average_net_pnl": -39.0,
+    "best_trade": -38.0,
+    "candidate_days": 3,
+    "close_fallback": "strict_1545",
+    "closed_trades": 3,
+    "fee_per_contract": 1.0,
+    "fill_model": "full_spread_stress",
+    "max_drawdown": -0.117,
+    "scenario_id": "full_spread_stress_fee_1_0_strict",
+    "sharpe_proxy": -47.76505,
+    "skipped_trades": 0,
+    "status_counts": {
+      "closed_forced_1545": 3
+    },
+    "total_net_pnl": -117.0,
+    "win_rate": 0.0,
+    "worst_trade": -40.0
+  }
+}

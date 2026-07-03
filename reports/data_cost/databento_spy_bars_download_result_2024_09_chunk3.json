@@ -1,0 +1,27 @@
+{
+  "created_at_utc": "2026-07-01T05:40:48+00:00",
+  "decision": {
+    "reason": "Low-cost Databento SPY-only research pull is inside the approved scope after cost logging.",
+    "review_cost_usd": 1.0,
+    "status": "pass"
+  },
+  "downloaded": {
+    "bytes": 51279,
+    "output_path": "data\\raw\\spy_0dte\\databento\\spy_bars\\sep_2024_chunk3_spy_ohlcv_1m.dbn.zst",
+    "sha256": "90d1a6826e3b5178e8ce8a7913fc4b8165b908424c8486a079daf22a8608dcda",
+    "source": "downloaded"
+  },
+  "mode": "download_complete",
+  "request": {
+    "dataset": "EQUS.MINI",
+    "end": "2024-09-20T20:00:00+00:00",
+    "estimated_cost_usd": 0.00163847208,
+    "output_path": "data\\raw\\spy_0dte\\databento\\spy_bars\\sep_2024_chunk3_spy_ohlcv_1m.dbn.zst",
+    "schema": "ohlcv-1m",
+    "start": "2024-09-16T13:30:00+00:00",
+    "stype_in": "raw_symbol",
+    "symbols": [
+      "SPY"
+    ]
+  }
+}

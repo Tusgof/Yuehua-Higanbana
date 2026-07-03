@@ -1,0 +1,104 @@
+{
+  "blockers": [],
+  "created_at_utc": "2026-07-02T19:14:37+00:00",
+  "download": {
+    "bytes": 2834573,
+    "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\opra_statistics_oi_probe_2024_01_03\\2024-01-03_full_utc_day_statistics.dbn.zst",
+    "sha256": "8b6a7ebc5199d3e2a17ec42247ed86ebb323b6d4dd193ee0e986717255140e5f",
+    "source": "downloaded"
+  },
+  "inspection": {
+    "bytes": 2834573,
+    "columns": [
+      "ts_event",
+      "rtype",
+      "publisher_id",
+      "instrument_id",
+      "ts_ref",
+      "price",
+      "quantity",
+      "sequence",
+      "ts_in_delta",
+      "stat_type",
+      "channel_id",
+      "update_action",
+      "stat_flags",
+      "symbol"
+    ],
+    "has_price": true,
+    "has_quantity": true,
+    "has_stat_type": true,
+    "metadata": {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-04 00:00:00+00:00",
+      "schema": "statistics",
+      "start": "2024-01-03 00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ]
+    },
+    "open_interest_price": {
+      "count": 0,
+      "max": null,
+      "mean": null,
+      "min": null
+    },
+    "open_interest_quantity": {
+      "count": 180279,
+      "max": 227936.0,
+      "mean": 1756.0154815591388,
+      "min": 0.0
+    },
+    "open_interest_record_count": 180279,
+    "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\opra_statistics_oi_probe_2024_01_03\\2024-01-03_full_utc_day_statistics.dbn.zst",
+    "row_count": 541311,
+    "stat_type_counts": {
+      "CLEARED_VOLUME": 45129,
+      "CLOSE_PRICE": 45129,
+      "HIGHEST_BID": 45129,
+      "LOWEST_OFFER": 45129,
+      "NET_CHANGE": 45129,
+      "OPENING_PRICE": 45129,
+      "OPEN_INTEREST": 180279,
+      "TRADING_SESSION_HIGH_PRICE": 45129,
+      "TRADING_SESSION_LOW_PRICE": 45129
+    },
+    "symbol_examples": [
+      "SPY   240102C00402000",
+      "SPY   240102C00403000",
+      "SPY   240102C00404000",
+      "SPY   240102C00405000",
+      "SPY   240102C00406000"
+    ],
+    "timestamp_semantics": {
+      "index_name": "ts_recv",
+      "note": "Databento DBN dataframe index is used as the observed event/receive time for this probe; reports must not treat full-day statistics as intraday decision-time quotes without a later timestamp mapping rule.",
+      "ts_event_column_present": true,
+      "ts_recv_column_present": false,
+      "ts_ref_column_present": true
+    },
+    "ts_index_end": "2024-01-03 22:30:20.507486600+00:00",
+    "ts_index_start": "2024-01-03 11:30:00.425311070+00:00",
+    "unique_symbol_count": 8004,
+    "update_action_counts": {
+      "NEW": 541311
+    }
+  },
+  "mode": "opra_statistics_oi_download_probe",
+  "plan": {
+    "dataset": "OPRA.PILLAR",
+    "end": "2024-01-04T00:00:00+00:00",
+    "estimated_cost_usd": 0.354911148548,
+    "metadata_report": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\databento_opra_statistics_oi_probe_2024_01_03_schema.json",
+    "schema": "statistics",
+    "start": "2024-01-03T00:00:00+00:00",
+    "stype_in": "parent",
+    "symbols": [
+      "SPY.OPT"
+    ],
+    "window": "2024-01-03_full_utc_day_statistics"
+  },
+  "research_use_decision": "Usable as a reference-style open-interest input for further feasibility work, with a timing caveat: full-day statistics must be mapped to a valid decision timestamp before any strategy test uses them.",
+  "status": "pass"
+}

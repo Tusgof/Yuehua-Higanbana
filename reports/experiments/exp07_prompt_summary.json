@@ -1,0 +1,110 @@
+{
+  "api_key": {
+    "api_key_env": "HIGANBANA_OPENROUTER_API",
+    "configured": true
+  },
+  "assessment_count": 9,
+  "assessment_jsonl": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\exp07_prompt_assessments.jsonl",
+  "by_case": {
+    "high_vol_no_clear_news_vix27": {
+      "decisions": [
+        "allow",
+        "allow",
+        "block"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "allow",
+        "block"
+      ]
+    },
+    "quiet_vix18_normal_term_structure": {
+      "decisions": [
+        "allow",
+        "block",
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "allow",
+        "block"
+      ]
+    },
+    "systemic_banking_panic_vix34": {
+      "decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "expected_decision": "block",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "block"
+      ]
+    }
+  },
+  "by_variant": {
+    "A": {
+      "assessment_count": 3,
+      "decisions": [
+        "allow",
+        "block",
+        "allow"
+      ],
+      "parse_valid_count": 3,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block"
+      ]
+    },
+    "B": {
+      "assessment_count": 3,
+      "decisions": [
+        "block",
+        "block",
+        "allow"
+      ],
+      "parse_valid_count": 3,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block"
+      ]
+    },
+    "C": {
+      "assessment_count": 3,
+      "decisions": [
+        "allow",
+        "block",
+        "block"
+      ],
+      "parse_valid_count": 3,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block"
+      ]
+    }
+  },
+  "case_count": 3,
+  "input_archive": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\exp07_prompt_inputs.json",
+  "mismatch_count": 1,
+  "mismatches": [
+    {
+      "assessment_id": "llm-a1696d2db5cd533b",
+      "case_id": "quiet_vix18_normal_term_structure",
+      "decision": "block",
+      "expected_decision": "allow",
+      "input_hash": "6be0e26b791f3686bef1bb109254489a3c079220607ea5c80bae85dfd10eef4b",
+      "parse_valid": true,
+      "prompt_variant": "B",
+      "prompt_version": "exp07-prompt-b-balanced-score-v1"
+    }
+  ],
+  "mode": "live_openrouter",
+  "parse_valid_rate": 1.0,
+  "stable_case_count": 1
+}

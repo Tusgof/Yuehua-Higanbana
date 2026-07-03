@@ -1,0 +1,3668 @@
+{
+  "decision": {
+    "block_cost_usd": 25.0,
+    "reason": "Dry-run has no dollar estimate. Run one_day_sample --live before any download.",
+    "review_cost_usd": 5.0,
+    "status": "review"
+  },
+  "mode": "dry_run",
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-03T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-03T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-03_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-05T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-05T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-05_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-06T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-06T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-06_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-07T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-07T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-07_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-10T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-10T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-10_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-11T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-11T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-11_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-12T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-12T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-12_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-13T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-13T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-13_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-14T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-14T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-14_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-17T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-17T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-17_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-18T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-18T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-18_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-19T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-19T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-19_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-20T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-20T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-20_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-21T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-21T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-21_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-24T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-24T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-24_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-25T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-25T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-25_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-26T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-26T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-26_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-27T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-27T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-27_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-28T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-28T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-28_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T13:40:00+00:00",
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T14:05:00+00:00",
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T14:35:00+00:00",
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T15:05:00+00:00",
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T15:35:00+00:00",
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T16:05:00+00:00",
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T16:35:00+00:00",
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T17:05:00+00:00",
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T17:35:00+00:00",
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T18:05:00+00:00",
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T18:35:00+00:00",
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T19:05:00+00:00",
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T19:35:00+00:00",
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2023-07-31T19:50:00+00:00",
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "insample_2023_07",
+      "schema": "cbbo-1m",
+      "start": "2023-07-31T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-07-31_forced_close_1545"
+    }
+  ],
+  "summary": {
+    "scenarios": {
+      "insample_2023_07": {
+        "dataset": "OPRA.PILLAR",
+        "first_start": "2023-07-03T13:30:00+00:00",
+        "last_end": "2023-07-31T19:50:00+00:00",
+        "request_count": 280,
+        "schema": "cbbo-1m",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ]
+      }
+    },
+    "total_request_count": 280
+  },
+  "warning": "This is a request plan only. Use --live with DATABENTO_API_KEY to call Databento metadata.get_cost. Parent symbol SPY.OPT is an upper-bound request."
+}

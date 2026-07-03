@@ -1,0 +1,116 @@
+{
+  "big_day_dependency": {
+    "method": "remove_top_and_bottom_5pct_by_daily_net_pnl",
+    "original_days": 416,
+    "original_sharpe_proxy": 0.054618,
+    "original_total_pnl": 545.6,
+    "removed_day_count": 42,
+    "removed_each_side": 21,
+    "retained_days": 374,
+    "retained_sharpe_proxy": -0.242934,
+    "retained_total_pnl": -869.88,
+    "status": "pass"
+  },
+  "daily_count": 416,
+  "feasibility": {
+    "all_subsystem_b_trades_fit_20_risk_budget": true,
+    "all_subsystem_b_trades_fit_allocation": true,
+    "notes": [
+      "Sub-System B is not used in this scenario."
+    ],
+    "status": "account_feasible_without_subsystem_b",
+    "subsystem_b_allocation": 0.0
+  },
+  "fractional_contract_warning": false,
+  "metrics": {
+    "average_day_pnl": 1.3115,
+    "day_count": 416,
+    "ending_equity": 1545.6,
+    "es95": -47.8457,
+    "es99": -59.56,
+    "max_drawdown": -0.370769,
+    "payoff_ratio": 2.663,
+    "sharpe_proxy": 0.054618,
+    "sortino_proxy": 0.125056,
+    "total_pnl": 545.6,
+    "win_rate": 0.0697,
+    "worst_day_loss": -62.56
+  },
+  "sample_adequacy": {
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "minimum_observation_count_prior": 500,
+    "mintrl_status": "pending_return_distribution",
+    "observation_count": 416,
+    "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+    "psr_status": "pending_return_distribution"
+  },
+  "scenario_id": "subsystem_a_only_control",
+  "scenario_type": "control",
+  "splits": {
+    "in_sample": {
+      "daily_count": 189,
+      "metrics": {
+        "average_day_pnl": 3.3018,
+        "day_count": 189,
+        "ending_equity": 1624.04,
+        "es95": -42.16,
+        "es99": -53.06,
+        "max_drawdown": -0.170819,
+        "payoff_ratio": 3.429,
+        "sharpe_proxy": 0.103318,
+        "sortino_proxy": 0.26863,
+        "total_pnl": 624.04,
+        "win_rate": 0.0741,
+        "worst_day_loss": -57.56
+      },
+      "sample_adequacy": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_observation_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "observation_count": 189,
+        "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+        "psr_status": "pending_return_distribution"
+      }
+    },
+    "oos": {
+      "daily_count": 227,
+      "metrics": {
+        "average_day_pnl": -0.3456,
+        "day_count": 227,
+        "ending_equity": 1545.6,
+        "es95": -50.31,
+        "es99": -61.56,
+        "max_drawdown": -0.370769,
+        "payoff_ratio": 2.1243,
+        "sharpe_proxy": -0.001325,
+        "sortino_proxy": -0.002567,
+        "total_pnl": -78.44,
+        "win_rate": 0.0661,
+        "worst_day_loss": -62.56
+      },
+      "sample_adequacy": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_observation_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "observation_count": 227,
+        "power_note": "Portfolio metrics are diagnostic only until MinTRL/PSR are calculated on an acceptance-grade return distribution.",
+        "psr_status": "pending_return_distribution"
+      }
+    }
+  },
+  "trial_index": 1,
+  "weight_fit_policy": "fixed_or_fit_on_in_sample_only",
+  "weights": {
+    "subsystem_a": 1.0,
+    "subsystem_b": 0.0
+  }
+}

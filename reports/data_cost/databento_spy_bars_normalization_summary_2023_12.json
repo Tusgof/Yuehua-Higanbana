@@ -1,0 +1,26 @@
+{
+  "coverage_end": "2023-12-29",
+  "coverage_start": "2023-12-01",
+  "input_rows": 9876,
+  "manifest": {
+    "coverage_end": "2023-12-29",
+    "coverage_start": "2023-12-01",
+    "dataset_id": "databento-spy-bars-2023-12-01-to-2023-12-29-2cf858f80703",
+    "ingested_at_et": "2026-06-29T06:29:11-04:00",
+    "license_notes": "Databento EQUS.MINI ohlcv-1m local cache. Low-cost SPY-only research pull approved by user.",
+    "provider": "Databento",
+    "raw_sha256": "2cf858f80703ba8998f054dd1e86430c353b2754926ca6cda2b9504a2eddf2fc",
+    "record_type": "data_registry_manifest",
+    "schema_name": "m2_contracts",
+    "schema_version": "m2.0",
+    "schema_version_applied": "m2.0",
+    "source_url": "data\\raw\\spy_0dte\\databento\\spy_bars\\dec_2023_spy_ohlcv_1m.dbn.zst"
+  },
+  "output_path": "data\\normalized\\spy_0dte\\databento\\insample_2023_12\\spy_bar.jsonl",
+  "output_rows": 9876,
+  "provider": "Databento",
+  "raw_path": "data\\raw\\spy_0dte\\databento\\spy_bars\\dec_2023_spy_ohlcv_1m.dbn.zst",
+  "registry_path": "data\\registry\\databento_spy_bar_insample_2023_12.jsonl",
+  "skipped_invalid_ohlc": 0,
+  "skipped_non_spy": 0
+}

@@ -1,0 +1,146 @@
+{
+  "api_key": {
+    "api_key_env": "HIGANBANA_OPENROUTER_API",
+    "configured": true
+  },
+  "assessment_count": 18,
+  "assessment_jsonl": "reports\\experiments\\exp07_prompt_v2_assessments.jsonl",
+  "by_case": {
+    "high_vol_no_clear_news_vix27": {
+      "decisions": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "unknown"
+      ]
+    },
+    "major_fed_event_vix21": {
+      "decisions": [
+        "unknown",
+        "unknown",
+        "block"
+      ],
+      "expected_decision": "unknown",
+      "stable_across_prompts": false,
+      "unique_decisions": [
+        "block",
+        "unknown"
+      ]
+    },
+    "quiet_vix18_normal_term_structure": {
+      "decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "allow"
+      ]
+    },
+    "systemic_banking_panic_vix34": {
+      "decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "expected_decision": "block",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "block"
+      ]
+    },
+    "very_quiet_vix13_no_news": {
+      "decisions": [
+        "allow",
+        "allow",
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "allow"
+      ]
+    },
+    "war_shock_futures_limit_vix42": {
+      "decisions": [
+        "block",
+        "block",
+        "block"
+      ],
+      "expected_decision": "block",
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "block"
+      ]
+    }
+  },
+  "by_variant": {
+    "A": {
+      "assessment_count": 6,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "unknown"
+      ],
+      "parse_valid_count": 6,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    },
+    "B": {
+      "assessment_count": 6,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "unknown"
+      ],
+      "parse_valid_count": 6,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    },
+    "C": {
+      "assessment_count": 6,
+      "decisions": [
+        "allow",
+        "allow",
+        "block",
+        "block",
+        "unknown",
+        "block"
+      ],
+      "parse_valid_count": 6,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow",
+        "block",
+        "unknown"
+      ]
+    }
+  },
+  "case_count": 6,
+  "input_archive": "reports\\experiments\\exp07_prompt_v2_inputs.json",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "mode": "live_openrouter",
+  "parse_valid_rate": 1.0,
+  "stable_case_count": 5
+}

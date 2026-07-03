@@ -1,0 +1,74 @@
+{
+  "schema_version": "m3_guardrails_v1",
+  "description": "Milestone 3 guardrails for search logs, chronological validation, and real-chain strike mapping before real experiment reports are accepted.",
+  "defaults": {
+    "validation_policy": {
+      "split_method": "chronological",
+      "forbid_random_split": true,
+      "forbid_oos_tuning": true,
+      "fit_only_before_decision_timestamp": true,
+      "allowed_split_methods": [
+        "chronological",
+        "expanding_window",
+        "rolling_window",
+        "purged_embargoed"
+      ]
+    },
+    "search_log_policy": {
+      "trial_count_required": true,
+      "parameter_grid_required": true,
+      "record_all_trials_required": true,
+      "dsr_required_if_selecting_best_sharpe": true,
+      "dsr_blocker_allowed_if_search_log_incomplete": true,
+      "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl"
+    },
+    "strike_mapping_policy": {
+      "method": "nearest_discrete_strike_rounding",
+      "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk",
+      "interpolation_allowed_for_research_only": false,
+      "disclose_in_report": true
+    }
+  },
+  "experiments": {
+    "exp01_net_gamma_filter": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    },
+    "exp02_llm_gate": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    },
+    "exp03_risk_parity": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    },
+    "exp04_account_feasibility": {
+      "requires_search_log_policy": false,
+      "requires_strike_mapping_policy": true
+    },
+    "exp05_structural_break_2022": {
+      "requires_search_log_policy": false,
+      "requires_strike_mapping_policy": true
+    },
+    "exp06_vix_range": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    },
+    "exp07_cost_latency": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    },
+    "exp08_entry_timing": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    },
+    "exp09_exit_thresholds": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    },
+    "exp10_macro_filter": {
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true
+    }
+  }
+}

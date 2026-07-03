@@ -1,0 +1,24 @@
+{
+  "criteria_version": "exp07-acceptance-criteria-v1",
+  "default_summary_path": "reports/experiments/exp07_prompt_v12_summary.json",
+  "minimum_case_count": 40,
+  "expected_prompt_variant_count": 3,
+  "required_mode": "live_openrouter",
+  "minimum_parse_valid_rate": 1.0,
+  "raw_llm_gate": {
+    "maximum_mismatch_count": 0,
+    "maximum_unknown_policy_violation_count": 0,
+    "require_all_cases_stable": true
+  },
+  "guarded_policy_candidate": {
+    "maximum_guarded_mismatch_count": 0,
+    "maximum_guarded_unknown_policy_violation_count": 0,
+    "require_all_guarded_cases_stable": true
+  },
+  "strategy_integration_gate": {
+    "requires_real_strategy_backtest_ablation": true,
+    "requires_real_news_archive": true,
+    "requires_real_macro_calendar_archive": false,
+    "requires_wider_spy_0dte_data": true
+  }
+}

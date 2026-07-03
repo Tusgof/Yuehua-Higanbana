@@ -1,0 +1,100 @@
+{
+  "bar_rows": 2469,
+  "calendar_days": 5,
+  "candidate_ready_days": 0,
+  "coverage_end": "2024-08-23",
+  "coverage_start": "2024-08-19",
+  "days": [
+    {
+      "bar_count": 455,
+      "date": "2024-08-19",
+      "orb_signal": {
+        "breakout_close": 555.23,
+        "breakout_timestamp_et": "2024-08-19T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 555.41,
+        "opening_low": 554.66
+      },
+      "quote_count": 66164,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 517,
+      "date": "2024-08-20",
+      "orb_signal": {
+        "breakout_close": 559.72,
+        "breakout_timestamp_et": "2024-08-20T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 559.76,
+        "opening_low": 559.15
+      },
+      "quote_count": 41422,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 514,
+      "date": "2024-08-21",
+      "orb_signal": {
+        "breakout_close": 559.73,
+        "breakout_timestamp_et": "2024-08-21T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 559.92,
+        "opening_low": 559.36
+      },
+      "quote_count": 44202,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 524,
+      "date": "2024-08-22",
+      "orb_signal": {
+        "breakout_close": 562.65,
+        "breakout_timestamp_et": "2024-08-22T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 563.13,
+        "opening_low": 562.38
+      },
+      "quote_count": 44202,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 459,
+      "date": "2024-08-23",
+      "orb_signal": {
+        "breakout_close": 559.48,
+        "breakout_timestamp_et": "2024-08-23T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 559.6,
+        "opening_low": 558.83
+      },
+      "quote_count": 45036,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    }
+  ],
+  "evidence_warning": "This is a one-month data-join pilot, not strategy evidence.",
+  "mode": "pilot_adapter_only",
+  "quote_rows": 241026,
+  "status_counts": {
+    "no_trade": 5
+  }
+}

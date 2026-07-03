@@ -1,0 +1,15 @@
+{
+  "mode": "paper",
+  "transmit_enabled": false,
+  "account_type": "cash",
+  "options_permission_confirmed": false,
+  "max_open_positions": 1,
+  "max_risk_usd": 20.0,
+  "forced_close_time_et": "15:45:00",
+  "email_alerts": {
+    "enabled": false,
+    "dry_run": true,
+    "to": "user@example.com"
+  },
+  "notes": "Example only. Do not store IBKR credentials or API keys in this file."
+}

@@ -1,0 +1,408 @@
+{
+  "bar_rows": 10222,
+  "calendar_days": 20,
+  "candidate_ready_days": 2,
+  "coverage_end": "2023-09-29",
+  "coverage_start": "2023-09-01",
+  "days": [
+    {
+      "bar_count": 424,
+      "date": "2023-09-01",
+      "direction": "put",
+      "entry_quote_count": 318,
+      "legs": [
+        {
+          "expiration_date": "2023-09-01",
+          "leg_id": "leg-11f5c9eeb7fefc6f",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 451.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2023-09-01",
+          "leg_id": "leg-b4dfc746841f5046",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 449.0,
+          "underlying": "SPY"
+        }
+      ],
+      "orb_signal": {
+        "breakout_close": 452.71,
+        "breakout_timestamp_et": "2023-09-01T09:35:00-04:00",
+        "decision": "put_breakout",
+        "opening_high": 453.66,
+        "opening_low": 452.9
+      },
+      "quote_count": 44202,
+      "reasons": [
+        "ORB signal and entry option quotes are available"
+      ],
+      "rth_bar_count": 390,
+      "status": "candidate_ready"
+    },
+    {
+      "bar_count": 441,
+      "date": "2023-09-05",
+      "orb_signal": {
+        "breakout_close": 450.4,
+        "breakout_timestamp_et": "2023-09-05T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 450.92,
+        "opening_low": 450.4
+      },
+      "quote_count": 36418,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 442,
+      "date": "2023-09-06",
+      "orb_signal": {
+        "breakout_close": 447.62,
+        "breakout_timestamp_et": "2023-09-06T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 448.48,
+        "opening_low": 447.57
+      },
+      "quote_count": 36418,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 478,
+      "date": "2023-09-07",
+      "direction": "call",
+      "entry_quote_count": 262,
+      "legs": [
+        {
+          "expiration_date": "2023-09-07",
+          "leg_id": "leg-e002d4900dd8c0fd",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 445.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2023-09-07",
+          "leg_id": "leg-1383f4c58667ddc9",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 447.0,
+          "underlying": "SPY"
+        }
+      ],
+      "orb_signal": {
+        "breakout_close": 443.79,
+        "breakout_timestamp_et": "2023-09-07T09:35:00-04:00",
+        "decision": "call_breakout",
+        "opening_high": 443.59,
+        "opening_low": 442.805
+      },
+      "quote_count": 36418,
+      "reasons": [
+        "ORB signal and entry option quotes are available"
+      ],
+      "rth_bar_count": 390,
+      "status": "candidate_ready"
+    },
+    {
+      "bar_count": 436,
+      "date": "2023-09-08",
+      "orb_signal": {
+        "breakout_close": 445.73,
+        "breakout_timestamp_et": "2023-09-08T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 445.88,
+        "opening_low": 444.81
+      },
+      "quote_count": 43924,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 475,
+      "date": "2023-09-11",
+      "orb_signal": {
+        "breakout_close": 448.61,
+        "breakout_timestamp_et": "2023-09-11T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 448.75,
+        "opening_low": 448.26
+      },
+      "quote_count": 35028,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 472,
+      "date": "2023-09-12",
+      "orb_signal": {
+        "breakout_close": 447.5,
+        "breakout_timestamp_et": "2023-09-12T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 447.55,
+        "opening_low": 446.79
+      },
+      "quote_count": 35028,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 470,
+      "date": "2023-09-13",
+      "orb_signal": {
+        "breakout_close": 447.03,
+        "breakout_timestamp_et": "2023-09-13T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 447.25,
+        "opening_low": 446.005
+      },
+      "quote_count": 34750,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 528,
+      "date": "2023-09-14",
+      "orb_signal": {
+        "breakout_close": 448.76,
+        "breakout_timestamp_et": "2023-09-14T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 449.31,
+        "opening_low": 448.43
+      },
+      "quote_count": 34750,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 524,
+      "date": "2023-09-15",
+      "orb_signal": {
+        "breakout_close": 447.235,
+        "breakout_timestamp_et": "2023-09-15T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 447.48,
+        "opening_low": 446.81
+      },
+      "quote_count": 63106,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 523,
+      "date": "2023-09-18",
+      "orb_signal": {
+        "breakout_close": 443.44,
+        "breakout_timestamp_et": "2023-09-18T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 443.49,
+        "opening_low": 442.77
+      },
+      "quote_count": 35028,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 498,
+      "date": "2023-09-19",
+      "orb_signal": {
+        "breakout_close": 442.76,
+        "breakout_timestamp_et": "2023-09-19T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 442.9,
+        "opening_low": 442.395
+      },
+      "quote_count": 35028,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 572,
+      "date": "2023-09-20",
+      "orb_signal": {
+        "breakout_close": 443.745,
+        "breakout_timestamp_et": "2023-09-20T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 444.01,
+        "opening_low": 443.44
+      },
+      "quote_count": 35306,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 618,
+      "date": "2023-09-21",
+      "orb_signal": {
+        "breakout_close": 435.46,
+        "breakout_timestamp_et": "2023-09-21T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 435.97,
+        "opening_low": 435.0
+      },
+      "quote_count": 35584,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 535,
+      "date": "2023-09-22",
+      "orb_signal": {
+        "breakout_close": 432.11,
+        "breakout_timestamp_et": "2023-09-22T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 432.635,
+        "opening_low": 432.02
+      },
+      "quote_count": 42812,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 551,
+      "date": "2023-09-25",
+      "orb_signal": {
+        "breakout_close": 429.13,
+        "breakout_timestamp_et": "2023-09-25T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 429.415,
+        "opening_low": 428.72
+      },
+      "quote_count": 37808,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 591,
+      "date": "2023-09-26",
+      "orb_signal": {
+        "breakout_close": 429.35,
+        "breakout_timestamp_et": "2023-09-26T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 429.53,
+        "opening_low": 429.02
+      },
+      "quote_count": 37808,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 560,
+      "date": "2023-09-27",
+      "orb_signal": {
+        "breakout_close": 427.14,
+        "breakout_timestamp_et": "2023-09-27T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 427.67,
+        "opening_low": 427.03
+      },
+      "quote_count": 38364,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 580,
+      "date": "2023-09-28",
+      "orb_signal": {
+        "breakout_close": 426.02,
+        "breakout_timestamp_et": "2023-09-28T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 426.21,
+        "opening_low": 425.06
+      },
+      "quote_count": 39198,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    },
+    {
+      "bar_count": 504,
+      "date": "2023-09-29",
+      "orb_signal": {
+        "breakout_close": 431.17,
+        "breakout_timestamp_et": "2023-09-29T09:35:00-04:00",
+        "decision": "no_trade",
+        "opening_high": 431.85,
+        "opening_low": 430.94
+      },
+      "quote_count": 55600,
+      "reasons": [
+        "ORB close did not break opening range"
+      ],
+      "rth_bar_count": 390,
+      "status": "no_trade"
+    }
+  ],
+  "evidence_warning": "This is a one-month data-join pilot, not strategy evidence.",
+  "mode": "pilot_adapter_only",
+  "quote_rows": 792578,
+  "status_counts": {
+    "candidate_ready": 2,
+    "no_trade": 18
+  }
+}

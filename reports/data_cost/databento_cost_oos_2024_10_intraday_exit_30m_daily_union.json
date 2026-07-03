@@ -1,0 +1,354 @@
+{
+  "cost_granularity": "daily_union",
+  "decision": {
+    "block_cost_usd": 25.0,
+    "reason": "Estimated cost $12.671726 is at or above review threshold $5.0.",
+    "review_cost_usd": 5.0,
+    "status": "review"
+  },
+  "errors": [],
+  "live_request_count": 23,
+  "mode": "live",
+  "planned_request_count": 322,
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-01T19:50:00+00:00",
+      "estimated_cost_usd": 0.564584136009,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-01T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-01_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-02T19:50:00+00:00",
+      "estimated_cost_usd": 0.572003722191,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-02T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-02_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-03T19:50:00+00:00",
+      "estimated_cost_usd": 0.573742687702,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-03T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-03_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-04T19:50:00+00:00",
+      "estimated_cost_usd": 0.574322342873,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-04T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-04_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-07T19:50:00+00:00",
+      "estimated_cost_usd": 0.568409860134,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-07T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-07_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-08T19:50:00+00:00",
+      "estimated_cost_usd": 0.568525791168,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-08T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-08_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-09T19:50:00+00:00",
+      "estimated_cost_usd": 0.568409860134,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-09T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-09_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-10T19:50:00+00:00",
+      "estimated_cost_usd": 0.560990273952,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-10T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-10_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-11T19:50:00+00:00",
+      "estimated_cost_usd": 0.565859377384,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-11T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-11_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-14T19:50:00+00:00",
+      "estimated_cost_usd": 0.556584894657,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-14T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-14_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-15T19:50:00+00:00",
+      "estimated_cost_usd": 0.562033653259,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-15T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-15_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-16T19:50:00+00:00",
+      "estimated_cost_usd": 0.567018687725,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-16T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-16_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-17T19:50:00+00:00",
+      "estimated_cost_usd": 0.560990273952,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-17T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-17_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-18T19:50:00+00:00",
+      "estimated_cost_usd": 0.556121170521,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-18T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-18_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-21T19:50:00+00:00",
+      "estimated_cost_usd": 0.524008274078,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-21T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-21_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-22T19:50:00+00:00",
+      "estimated_cost_usd": 0.517516136169,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-22T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-22_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-23T19:50:00+00:00",
+      "estimated_cost_usd": 0.52122592926,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-23T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-23_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-24T19:50:00+00:00",
+      "estimated_cost_usd": 0.521109998226,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-24T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-24_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-25T19:50:00+00:00",
+      "estimated_cost_usd": 0.514154136181,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-25T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-25_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-28T19:50:00+00:00",
+      "estimated_cost_usd": 0.522733032703,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-28T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-28_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-29T19:50:00+00:00",
+      "estimated_cost_usd": 0.535021722317,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-29T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-29_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-30T19:50:00+00:00",
+      "estimated_cost_usd": 0.545339584351,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-30T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-30_daily_union"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-10-31T19:50:00+00:00",
+      "estimated_cost_usd": 0.551020205021,
+      "note": "Daily union cost cap for 14 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "schema": "cbbo-1m",
+      "start": "2024-10-31T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-10-31_daily_union"
+    }
+  ],
+  "summary": {
+    "scenarios": {
+      "oos_2024_10_intraday_exit_30m_daily_union": {
+        "dataset": "OPRA.PILLAR",
+        "first_start": "2024-10-01T13:30:00+00:00",
+        "last_end": "2024-10-31T19:50:00+00:00",
+        "request_count": 23,
+        "schema": "cbbo-1m",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ]
+      }
+    },
+    "total_request_count": 23
+  },
+  "total_estimated_cost_usd": 12.671726
+}

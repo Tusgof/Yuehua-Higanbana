@@ -1,0 +1,46 @@
+{
+  "cost_granularity": "daily_union",
+  "decision": {
+    "block_cost_usd": 5.0,
+    "reason": "Estimated cost $0.0 is below review threshold $1.0.",
+    "review_cost_usd": 1.0,
+    "status": "pass"
+  },
+  "errors": [],
+  "live_request_count": 1,
+  "mode": "live",
+  "planned_request_count": 3,
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-01-03T20:50:00+00:00",
+      "estimated_cost_usd": 0.0,
+      "note": "Daily union cost cap for 3 planned research window(s); exact for this superset request, not a narrow-window sum.",
+      "scenario": "opra_statistics_oi_probe_2024_01_03",
+      "schema": "statistics",
+      "start": "2024-01-03T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-01-03_daily_union"
+    }
+  ],
+  "summary": {
+    "scenarios": {
+      "opra_statistics_oi_probe_2024_01_03": {
+        "dataset": "OPRA.PILLAR",
+        "first_start": "2024-01-03T14:30:00+00:00",
+        "last_end": "2024-01-03T20:50:00+00:00",
+        "request_count": 1,
+        "schema": "statistics",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ]
+      }
+    },
+    "total_request_count": 1
+  },
+  "total_estimated_cost_usd": 0.0
+}

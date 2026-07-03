@@ -1,0 +1,74 @@
+{
+  "acceptance_rules": {
+    "guarded_policy_must_improve_es99_or_worst_day_loss": true,
+    "guarded_policy_must_not_reduce_oos_sharpe_below_baseline": true,
+    "guarded_policy_must_not_reduce_trade_count_below_minimum": true,
+    "raw_llm_variant_cannot_be_used_as_gate": true
+  },
+  "blockers": [
+    "requires_minimum_trade_count_500",
+    "requires_real_news_archive",
+    "requires_wider_spy_0dte_data"
+  ],
+  "experiment_id": "exp07_cost_latency",
+  "plan_version": "exp07-strategy-ablation-v1",
+  "reason": "Real strategy ablation is blocked until required data archives and sample size exist.",
+  "required_metrics": [
+    "trade_count",
+    "skip_rate",
+    "total_net_pnl",
+    "sharpe",
+    "sortino",
+    "max_drawdown",
+    "es95",
+    "es99",
+    "worst_day_loss",
+    "win_rate",
+    "payoff_ratio",
+    "cost_drag",
+    "benchmark_return"
+  ],
+  "split_policy": {
+    "forbid_oos_tuning": true,
+    "oos_window": {
+      "end": "current_available",
+      "start": "2024-01-01"
+    },
+    "parameters_locked_before_oos": true,
+    "train_window": {
+      "end": "2023-12-31",
+      "start": "2022-05-11"
+    }
+  },
+  "status": "blocked",
+  "strategy_data_evidence": {
+    "closed_trades": 90,
+    "minimum_trade_count": 500,
+    "quote_rows": 21503220,
+    "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\strategy_data_readiness_audit.json"
+  },
+  "variant_count": 3,
+  "variants": [
+    {
+      "can_block_trade": false,
+      "status": "blocked",
+      "uses_guarded_policy": false,
+      "uses_raw_llm_gate": false,
+      "variant_id": "baseline_quant_only"
+    },
+    {
+      "can_block_trade": true,
+      "status": "blocked",
+      "uses_guarded_policy": true,
+      "uses_raw_llm_gate": false,
+      "variant_id": "guarded_policy_gate"
+    },
+    {
+      "can_block_trade": false,
+      "status": "blocked",
+      "uses_guarded_policy": false,
+      "uses_raw_llm_gate": true,
+      "variant_id": "raw_llm_observation_only"
+    }
+  ]
+}

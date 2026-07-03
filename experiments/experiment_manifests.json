@@ -1,0 +1,112 @@
+[
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp01_net_gamma_filter",
+    "hypothesis": "Market-maker net gamma/NOVI filtering improves risk-adjusted performance by reducing false ORB breakouts and ratio-spread tail losses.",
+    "data_window": {"start": "2019-01-01", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["sharpe", "max_drawdown", "win_rate"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp02_llm_gate",
+    "hypothesis": "DeepSeek news/tail-risk filtering reduces ES99 and worst-day loss beyond quantitative filters alone.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["es99", "worst_day_loss", "sharpe"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp03_risk_parity",
+    "hypothesis": "Tail-risk-aware allocation between Sub-System A and Sub-System B reduces max drawdown and improves Sortino.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["max_drawdown", "sortino", "risk_contribution"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp04_account_feasibility",
+    "hypothesis": "A $1,000 cash account can only trade structures whose defined max loss fits tested sizing constraints.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["trade_count", "skip_rate", "max_defined_loss"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp05_structural_break_2022",
+    "hypothesis": "The May 11, 2022 daily-expiration expansion creates a structural break that changes SPY 0DTE strategy performance.",
+    "data_window": {"start": "2019-01-01", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["sharpe", "win_rate", "expected_value"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp06_vix_range",
+    "hypothesis": "The VIX 15-25 filter provides better risk-adjusted performance than low-volatility, high-volatility, or unfiltered regimes.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["sharpe", "sortino", "max_drawdown", "cost_drag"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp07_cost_latency",
+    "hypothesis": "The LLM gate needs a stable prompt variant before strategy use; full-spread execution and latency of 2 minutes or more erase the system edge.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["prompt_decision_stability", "parser_validity", "false_block_review_rate", "net_pnl", "sharpe", "cost_drag"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp08_entry_timing",
+    "hypothesis": "9:35 ORB and 10:00 volatility entries outperform later entry windows after costs.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["win_rate", "average_trade_pnl", "premium_yield"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp09_exit_thresholds",
+    "hypothesis": "The baseline Sub-System A 25/50 exit and conservative Sub-System B stop rules improve net PnL and tail risk.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["net_pnl", "max_drawdown", "win_rate"]
+  },
+  {
+    "record_type": "experiment_manifest",
+    "schema_version": "m2.0",
+    "experiment_id": "exp10_macro_filter",
+    "hypothesis": "Granular event filtering can preserve trade frequency while controlling event-day tail risk.",
+    "data_window": {"start": "2022-05-11", "end": "2026-06-29"},
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "2026-06-29"},
+    "parameters_locked_before_oos": true,
+    "metrics": ["expected_shortfall", "sharpe", "trade_count"]
+  }
+]

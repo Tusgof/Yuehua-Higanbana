@@ -1,0 +1,201 @@
+{
+  "blockers": [
+    "requires_mintrl_psr_sample_adequacy",
+    "regime_coverage:missing_reference_pre_break_regime_trades",
+    "regime_coverage:missing_high_vix_trade_coverage",
+    "regime_coverage:trend_bucket_has_insufficient_prior_bar_history",
+    "greeks_data_probe:normalized_option_quotes_missing_vendor_greeks",
+    "greeks_data_probe:normalized_option_quotes_missing_open_interest"
+  ],
+  "greeks_data_probe": {
+    "blockers": [
+      "normalized_option_quotes_missing_vendor_greeks",
+      "normalized_option_quotes_missing_open_interest"
+    ],
+    "databento_next_probe": "Current cbbo-1m normalized quotes do not include vendor Greeks or OI, but the local derived enrichment probe passed with caveats. Next define gamma aggregation/scaling and validation policy before any NOVI/net-gamma strategy report.",
+    "observed_quote_fields": [
+      "ask",
+      "ask_size",
+      "bid",
+      "bid_size",
+      "databento_symbol",
+      "databento_window",
+      "dte",
+      "expiration_date",
+      "provider",
+      "quote_timestamp_et",
+      "record_type",
+      "right",
+      "schema_version",
+      "source",
+      "strike",
+      "underlying"
+    ],
+    "oi_greeks_enrichment_counts": {
+      "computed_greeks_count": 1750,
+      "greeks_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 1738,
+        "computed_with_caveats": 1750
+      },
+      "open_interest_join_count": 3488,
+      "quote_count": 3488,
+      "underlying_join_count": 3488
+    },
+    "oi_greeks_enrichment_report": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\greeks_oi_enrichment_probe_summary.json",
+    "oi_greeks_enrichment_status": "pass",
+    "oi_greeks_feasibility_report": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\greeks_oi_feasibility_audit.json",
+    "oi_greeks_feasibility_status": "pass",
+    "open_interest_fields_present": [],
+    "sampled_quote_files": 32,
+    "sampled_quote_rows": 3200,
+    "self_computed_greeks_feasibility": "passed_local_iv_delta_gamma_probe_with_caveats",
+    "status": "blocked",
+    "vendor_greek_fields_present": []
+  },
+  "input_paths": {
+    "baseline_summary": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\baselines\\subsystem_a_orb_baseline_summary.json",
+    "macro_calendar": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\macro_calendar\\macro_event.jsonl",
+    "vix_vxv": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\vix_vxv\\vix_vxv.jsonl"
+  },
+  "next_safe_action": "Do not buy broad calendar data yet. The local Greeks/OI enrichment probe passed with caveats; next define gamma aggregation/scaling and validation policy, or choose a targeted sample/regime expansion for pre-break, high-VIX, or major-macro coverage.",
+  "note": "Read-only Risk-first audit from existing local artifacts; no live Databento or OpenRouter calls.",
+  "record_type": "risk_first_data_audit",
+  "regime_coverage_audit": {
+    "blockers": [
+      "missing_reference_pre_break_regime_trades",
+      "missing_high_vix_trade_coverage",
+      "trend_bucket_has_insufficient_prior_bar_history"
+    ],
+    "coverage": {
+      "macro_bucket": {
+        "high_importance_macro_same_day": {
+          "implementable_pnl": -218.36,
+          "trade_count": 6,
+          "win_rate": 0.0
+        },
+        "major_macro_same_day": {
+          "implementable_pnl": -56.2,
+          "trade_count": 20,
+          "win_rate": 0.25
+        },
+        "no_same_day_macro": {
+          "implementable_pnl": 597.2,
+          "trade_count": 55,
+          "win_rate": 0.3636
+        },
+        "other_macro_same_day": {
+          "implementable_pnl": 222.96,
+          "trade_count": 9,
+          "win_rate": 0.4444
+        }
+      },
+      "split": {
+        "in_sample": {
+          "implementable_pnl": 624.04,
+          "trade_count": 41,
+          "win_rate": 0.3415
+        },
+        "oos": {
+          "implementable_pnl": -78.44,
+          "trade_count": 49,
+          "win_rate": 0.3061
+        }
+      },
+      "subperiod_bucket": {
+        "oos_2024_plus": {
+          "implementable_pnl": -78.44,
+          "trade_count": 49,
+          "win_rate": 0.3061
+        },
+        "post_break_train": {
+          "implementable_pnl": 624.04,
+          "trade_count": 41,
+          "win_rate": 0.3415
+        }
+      },
+      "trend_bucket": {
+        "spy_downtrend_below_sma20": {
+          "implementable_pnl": -211.64,
+          "trade_count": 19,
+          "win_rate": 0.2105
+        },
+        "spy_neutral_near_sma20": {
+          "implementable_pnl": 657.72,
+          "trade_count": 13,
+          "win_rate": 0.6154
+        },
+        "spy_uptrend_above_sma20": {
+          "implementable_pnl": 227.32,
+          "trade_count": 53,
+          "win_rate": 0.3208
+        },
+        "trend_insufficient_prior_bars": {
+          "implementable_pnl": -127.8,
+          "trade_count": 5,
+          "win_rate": 0.0
+        }
+      },
+      "vix_bucket": {
+        "vix_low_lt15|term_normal": {
+          "implementable_pnl": 687.24,
+          "trade_count": 46,
+          "win_rate": 0.3696
+        },
+        "vix_normal_15_25|term_normal": {
+          "implementable_pnl": -141.64,
+          "trade_count": 44,
+          "win_rate": 0.2727
+        }
+      }
+    },
+    "methodology": {
+      "macro": "Same-day scheduled macro events from canonical macro archive.",
+      "subperiod": "Reference/pre-break, post-break train, and OOS labels from PROJECT_BRAIN split policy.",
+      "trend": "Ex-ante SPY close versus trailing 20 prior trading-day closes when enough prior bar coverage exists.",
+      "vix": "Previous available VIX/VIX3M close before trade date."
+    },
+    "status": "blocked",
+    "trade_count": 90
+  },
+  "sample_inference_audit": {
+    "blockers": [
+      "requires_mintrl_psr_sample_adequacy"
+    ],
+    "effective_sample_length_autocorr_adjusted": 90.0,
+    "first_order_autocorrelation": -0.02181,
+    "interpretation": "Current evidence is diagnostic only. It may help choose the next data target, but it cannot approve the strategy.",
+    "kurtosis": 3.09085,
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "observed_sharpe": 0.092203,
+    "psr_mintrl_approximation": {
+      "formula_policy": "Lopez-de-Prado-style finite-sample Sharpe approximation using skewness/kurtosis; autocorrelation is handled by effective sample length heuristic because the local wiki does not specify the full closed-form AR(1) adjustment.",
+      "rows": [
+        {
+          "actual_observations": 90,
+          "mintrl_required_observations": 285,
+          "mintrl_status": "under-sampled",
+          "null_sharpe": 0.0,
+          "psr": 0.821497
+        },
+        {
+          "actual_observations": 90,
+          "mintrl_required_observations": null,
+          "mintrl_status": "blocked_observed_sharpe_not_above_null",
+          "null_sharpe": 0.5,
+          "psr": 2.3e-05
+        }
+      ],
+      "significance": "one-sided 95pct"
+    },
+    "return_basis": "per-trade implementable_pnl / starting_equity from closed Sub-System A ORB baseline trades",
+    "sample_length": 90,
+    "skewness": 1.221374,
+    "starting_equity": 1000.0,
+    "status": "blocked"
+  },
+  "schema_version": "risk_first_data_audit_v1",
+  "status": "blocked"
+}

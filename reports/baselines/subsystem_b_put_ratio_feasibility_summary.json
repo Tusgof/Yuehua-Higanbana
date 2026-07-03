@@ -1,0 +1,3503 @@
+{
+  "big_day_dependency": {
+    "method": "remove_top_and_bottom_5pct_by_implementable_pnl",
+    "original_closed_trades": 412,
+    "original_sharpe_proxy": -0.114291,
+    "original_total_implementable_pnl": -5973.44,
+    "removed_each_side": 21,
+    "removed_trade_count": 42,
+    "retained_closed_trades": 370,
+    "retained_sharpe_proxy": -0.249113,
+    "retained_total_implementable_pnl": -9229.4,
+    "status": "pass"
+  },
+  "conclusion": "ไม่ผ่าน",
+  "conclusion_reason": "The fixed capped-risk put ratio template does not fit the current $300 Sub-System B allocation or $20 risk budget on any closed trade. Edge evidence remains under-sampled and underpowered.",
+  "daily_pnl": [
+    {
+      "date": "2023-03-28",
+      "ending_equity": 950.88,
+      "net_pnl": -49.12,
+      "return_on_starting_equity": -0.04912,
+      "starting_equity": 1000.0
+    },
+    {
+      "date": "2023-03-29",
+      "ending_equity": 854.76,
+      "net_pnl": -96.12,
+      "return_on_starting_equity": -0.10108531,
+      "starting_equity": 950.88
+    },
+    {
+      "date": "2023-03-30",
+      "ending_equity": 833.64,
+      "net_pnl": -21.12,
+      "return_on_starting_equity": -0.02470869,
+      "starting_equity": 854.76
+    },
+    {
+      "date": "2023-03-31",
+      "ending_equity": 726.52,
+      "net_pnl": -107.12,
+      "return_on_starting_equity": -0.12849671,
+      "starting_equity": 833.64
+    },
+    {
+      "date": "2023-04-03",
+      "ending_equity": 647.4,
+      "net_pnl": -79.12,
+      "return_on_starting_equity": -0.10890271,
+      "starting_equity": 726.52
+    },
+    {
+      "date": "2023-04-04",
+      "ending_equity": 916.28,
+      "net_pnl": 268.88,
+      "return_on_starting_equity": 0.41532283,
+      "starting_equity": 647.4
+    },
+    {
+      "date": "2023-04-05",
+      "ending_equity": 882.16,
+      "net_pnl": -34.12,
+      "return_on_starting_equity": -0.03723753,
+      "starting_equity": 916.28
+    },
+    {
+      "date": "2023-04-06",
+      "ending_equity": 793.04,
+      "net_pnl": -89.12,
+      "return_on_starting_equity": -0.10102476,
+      "starting_equity": 882.16
+    },
+    {
+      "date": "2023-04-10",
+      "ending_equity": 706.92,
+      "net_pnl": -86.12,
+      "return_on_starting_equity": -0.10859477,
+      "starting_equity": 793.04
+    },
+    {
+      "date": "2023-04-11",
+      "ending_equity": 611.8,
+      "net_pnl": -95.12,
+      "return_on_starting_equity": -0.13455554,
+      "starting_equity": 706.92
+    },
+    {
+      "date": "2023-04-12",
+      "ending_equity": 724.68,
+      "net_pnl": 112.88,
+      "return_on_starting_equity": 0.18450474,
+      "starting_equity": 611.8
+    },
+    {
+      "date": "2023-04-13",
+      "ending_equity": 643.56,
+      "net_pnl": -81.12,
+      "return_on_starting_equity": -0.11193906,
+      "starting_equity": 724.68
+    },
+    {
+      "date": "2023-04-14",
+      "ending_equity": 718.44,
+      "net_pnl": 74.88,
+      "return_on_starting_equity": 0.11635279,
+      "starting_equity": 643.56
+    },
+    {
+      "date": "2023-04-17",
+      "ending_equity": 624.32,
+      "net_pnl": -94.12,
+      "return_on_starting_equity": -0.13100607,
+      "starting_equity": 718.44
+    },
+    {
+      "date": "2023-04-18",
+      "ending_equity": 600.2,
+      "net_pnl": -24.12,
+      "return_on_starting_equity": -0.03863403,
+      "starting_equity": 624.32
+    },
+    {
+      "date": "2023-04-19",
+      "ending_equity": 524.08,
+      "net_pnl": -76.12,
+      "return_on_starting_equity": -0.12682439,
+      "starting_equity": 600.2
+    },
+    {
+      "date": "2023-04-20",
+      "ending_equity": 543.96,
+      "net_pnl": 19.88,
+      "return_on_starting_equity": 0.03793314,
+      "starting_equity": 524.08
+    },
+    {
+      "date": "2023-04-21",
+      "ending_equity": 450.84,
+      "net_pnl": -93.12,
+      "return_on_starting_equity": -0.17118906,
+      "starting_equity": 543.96
+    },
+    {
+      "date": "2023-04-24",
+      "ending_equity": 422.72,
+      "net_pnl": -28.12,
+      "return_on_starting_equity": -0.06237246,
+      "starting_equity": 450.84
+    },
+    {
+      "date": "2023-04-25",
+      "ending_equity": 664.6,
+      "net_pnl": 241.88,
+      "return_on_starting_equity": 0.57219909,
+      "starting_equity": 422.72
+    },
+    {
+      "date": "2023-04-26",
+      "ending_equity": 864.48,
+      "net_pnl": 199.88,
+      "return_on_starting_equity": 0.30075233,
+      "starting_equity": 664.6
+    },
+    {
+      "date": "2023-04-27",
+      "ending_equity": 760.36,
+      "net_pnl": -104.12,
+      "return_on_starting_equity": -0.12044235,
+      "starting_equity": 864.48
+    },
+    {
+      "date": "2023-04-28",
+      "ending_equity": 653.24,
+      "net_pnl": -107.12,
+      "return_on_starting_equity": -0.14088064,
+      "starting_equity": 760.36
+    },
+    {
+      "date": "2023-05-01",
+      "ending_equity": 625.12,
+      "net_pnl": -28.12,
+      "return_on_starting_equity": -0.04304697,
+      "starting_equity": 653.24
+    },
+    {
+      "date": "2023-05-02",
+      "ending_equity": 822.0,
+      "net_pnl": 196.88,
+      "return_on_starting_equity": 0.31494753,
+      "starting_equity": 625.12
+    },
+    {
+      "date": "2023-05-03",
+      "ending_equity": 1008.88,
+      "net_pnl": 186.88,
+      "return_on_starting_equity": 0.22734793,
+      "starting_equity": 822.0
+    },
+    {
+      "date": "2023-05-04",
+      "ending_equity": 985.76,
+      "net_pnl": -23.12,
+      "return_on_starting_equity": -0.0229165,
+      "starting_equity": 1008.88
+    },
+    {
+      "date": "2023-05-05",
+      "ending_equity": 908.64,
+      "net_pnl": -77.12,
+      "return_on_starting_equity": -0.07823405,
+      "starting_equity": 985.76
+    },
+    {
+      "date": "2023-05-08",
+      "ending_equity": 838.52,
+      "net_pnl": -70.12,
+      "return_on_starting_equity": -0.07717028,
+      "starting_equity": 908.64
+    },
+    {
+      "date": "2023-05-09",
+      "ending_equity": 814.4,
+      "net_pnl": -24.12,
+      "return_on_starting_equity": -0.02876497,
+      "starting_equity": 838.52
+    },
+    {
+      "date": "2023-05-10",
+      "ending_equity": 699.28,
+      "net_pnl": -115.12,
+      "return_on_starting_equity": -0.1413556,
+      "starting_equity": 814.4
+    },
+    {
+      "date": "2023-05-11",
+      "ending_equity": 616.16,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": -0.11886512,
+      "starting_equity": 699.28
+    },
+    {
+      "date": "2023-05-12",
+      "ending_equity": 689.04,
+      "net_pnl": 72.88,
+      "return_on_starting_equity": 0.11828097,
+      "starting_equity": 616.16
+    },
+    {
+      "date": "2023-05-15",
+      "ending_equity": 594.92,
+      "net_pnl": -94.12,
+      "return_on_starting_equity": -0.13659584,
+      "starting_equity": 689.04
+    },
+    {
+      "date": "2023-05-16",
+      "ending_equity": 552.8,
+      "net_pnl": -42.12,
+      "return_on_starting_equity": -0.07079944,
+      "starting_equity": 594.92
+    },
+    {
+      "date": "2023-05-17",
+      "ending_equity": 454.68,
+      "net_pnl": -98.12,
+      "return_on_starting_equity": -0.17749638,
+      "starting_equity": 552.8
+    },
+    {
+      "date": "2023-05-18",
+      "ending_equity": 367.56,
+      "net_pnl": -87.12,
+      "return_on_starting_equity": -0.19160728,
+      "starting_equity": 454.68
+    },
+    {
+      "date": "2023-05-19",
+      "ending_equity": 428.44,
+      "net_pnl": 60.88,
+      "return_on_starting_equity": 0.16563282,
+      "starting_equity": 367.56
+    },
+    {
+      "date": "2023-05-22",
+      "ending_equity": 371.32,
+      "net_pnl": -57.12,
+      "return_on_starting_equity": -0.13332089,
+      "starting_equity": 428.44
+    },
+    {
+      "date": "2023-05-23",
+      "ending_equity": 563.2,
+      "net_pnl": 191.88,
+      "return_on_starting_equity": 0.51675105,
+      "starting_equity": 371.32
+    },
+    {
+      "date": "2023-05-24",
+      "ending_equity": 502.08,
+      "net_pnl": -61.12,
+      "return_on_starting_equity": -0.10852273,
+      "starting_equity": 563.2
+    },
+    {
+      "date": "2023-05-25",
+      "ending_equity": 361.96,
+      "net_pnl": -140.12,
+      "return_on_starting_equity": -0.27907903,
+      "starting_equity": 502.08
+    },
+    {
+      "date": "2023-05-26",
+      "ending_equity": 244.84,
+      "net_pnl": -117.12,
+      "return_on_starting_equity": -0.32357167,
+      "starting_equity": 361.96
+    },
+    {
+      "date": "2023-05-31",
+      "ending_equity": 153.72,
+      "net_pnl": -91.12,
+      "return_on_starting_equity": -0.37216141,
+      "starting_equity": 244.84
+    },
+    {
+      "date": "2023-06-01",
+      "ending_equity": 13.6,
+      "net_pnl": -140.12,
+      "return_on_starting_equity": -0.91152745,
+      "starting_equity": 153.72
+    },
+    {
+      "date": "2023-06-02",
+      "ending_equity": -60.52,
+      "net_pnl": -74.12,
+      "return_on_starting_equity": -5.45,
+      "starting_equity": 13.6
+    },
+    {
+      "date": "2023-06-05",
+      "ending_equity": -74.64,
+      "net_pnl": -14.12,
+      "return_on_starting_equity": 0.2333113,
+      "starting_equity": -60.52
+    },
+    {
+      "date": "2023-06-06",
+      "ending_equity": -179.76,
+      "net_pnl": -105.12,
+      "return_on_starting_equity": 1.40836013,
+      "starting_equity": -74.64
+    },
+    {
+      "date": "2023-06-07",
+      "ending_equity": -8.88,
+      "net_pnl": 170.88,
+      "return_on_starting_equity": -0.9506008,
+      "starting_equity": -179.76
+    },
+    {
+      "date": "2023-06-08",
+      "ending_equity": -73.0,
+      "net_pnl": -64.12,
+      "return_on_starting_equity": 7.22072072,
+      "starting_equity": -8.88
+    },
+    {
+      "date": "2023-06-09",
+      "ending_equity": -67.12,
+      "net_pnl": 5.88,
+      "return_on_starting_equity": -0.08054795,
+      "starting_equity": -73.0
+    },
+    {
+      "date": "2023-06-12",
+      "ending_equity": -155.24,
+      "net_pnl": -88.12,
+      "return_on_starting_equity": 1.31287247,
+      "starting_equity": -67.12
+    },
+    {
+      "date": "2023-06-13",
+      "ending_equity": -256.36,
+      "net_pnl": -101.12,
+      "return_on_starting_equity": 0.65137851,
+      "starting_equity": -155.24
+    },
+    {
+      "date": "2023-06-14",
+      "ending_equity": -262.48,
+      "net_pnl": -6.12,
+      "return_on_starting_equity": 0.02387268,
+      "starting_equity": -256.36
+    },
+    {
+      "date": "2023-06-15",
+      "ending_equity": -372.6,
+      "net_pnl": -110.12,
+      "return_on_starting_equity": 0.41953673,
+      "starting_equity": -262.48
+    },
+    {
+      "date": "2023-06-16",
+      "ending_equity": -310.72,
+      "net_pnl": 61.88,
+      "return_on_starting_equity": -0.16607622,
+      "starting_equity": -372.6
+    },
+    {
+      "date": "2023-06-20",
+      "ending_equity": -384.84,
+      "net_pnl": -74.12,
+      "return_on_starting_equity": 0.23854274,
+      "starting_equity": -310.72
+    },
+    {
+      "date": "2023-06-21",
+      "ending_equity": -459.96,
+      "net_pnl": -75.12,
+      "return_on_starting_equity": 0.195198,
+      "starting_equity": -384.84
+    },
+    {
+      "date": "2023-06-22",
+      "ending_equity": -561.08,
+      "net_pnl": -101.12,
+      "return_on_starting_equity": 0.2198452,
+      "starting_equity": -459.96
+    },
+    {
+      "date": "2023-06-23",
+      "ending_equity": -624.2,
+      "net_pnl": -63.12,
+      "return_on_starting_equity": 0.11249733,
+      "starting_equity": -561.08
+    },
+    {
+      "date": "2023-06-26",
+      "ending_equity": -520.32,
+      "net_pnl": 103.88,
+      "return_on_starting_equity": -0.16642102,
+      "starting_equity": -624.2
+    },
+    {
+      "date": "2023-06-27",
+      "ending_equity": -624.44,
+      "net_pnl": -104.12,
+      "return_on_starting_equity": 0.20010763,
+      "starting_equity": -520.32
+    },
+    {
+      "date": "2023-06-28",
+      "ending_equity": -687.56,
+      "net_pnl": -63.12,
+      "return_on_starting_equity": 0.10108257,
+      "starting_equity": -624.44
+    },
+    {
+      "date": "2023-06-29",
+      "ending_equity": -780.68,
+      "net_pnl": -93.12,
+      "return_on_starting_equity": 0.13543545,
+      "starting_equity": -687.56
+    },
+    {
+      "date": "2023-06-30",
+      "ending_equity": -855.8,
+      "net_pnl": -75.12,
+      "return_on_starting_equity": 0.0962238,
+      "starting_equity": -780.68
+    },
+    {
+      "date": "2023-07-05",
+      "ending_equity": -923.92,
+      "net_pnl": -68.12,
+      "return_on_starting_equity": 0.07959804,
+      "starting_equity": -855.8
+    },
+    {
+      "date": "2023-07-06",
+      "ending_equity": -1007.04,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.0899645,
+      "starting_equity": -923.92
+    },
+    {
+      "date": "2023-07-07",
+      "ending_equity": -1031.16,
+      "net_pnl": -24.12,
+      "return_on_starting_equity": 0.02395138,
+      "starting_equity": -1007.04
+    },
+    {
+      "date": "2023-07-10",
+      "ending_equity": -1080.28,
+      "net_pnl": -49.12,
+      "return_on_starting_equity": 0.04763567,
+      "starting_equity": -1031.16
+    },
+    {
+      "date": "2023-07-11",
+      "ending_equity": -1149.4,
+      "net_pnl": -69.12,
+      "return_on_starting_equity": 0.06398341,
+      "starting_equity": -1080.28
+    },
+    {
+      "date": "2023-07-12",
+      "ending_equity": -1155.52,
+      "net_pnl": -6.12,
+      "return_on_starting_equity": 0.00532452,
+      "starting_equity": -1149.4
+    },
+    {
+      "date": "2023-07-13",
+      "ending_equity": -1218.64,
+      "net_pnl": -63.12,
+      "return_on_starting_equity": 0.05462476,
+      "starting_equity": -1155.52
+    },
+    {
+      "date": "2023-07-14",
+      "ending_equity": -1094.76,
+      "net_pnl": 123.88,
+      "return_on_starting_equity": -0.1016543,
+      "starting_equity": -1218.64
+    },
+    {
+      "date": "2023-07-17",
+      "ending_equity": -1187.88,
+      "net_pnl": -93.12,
+      "return_on_starting_equity": 0.08505974,
+      "starting_equity": -1094.76
+    },
+    {
+      "date": "2023-07-18",
+      "ending_equity": -1290.0,
+      "net_pnl": -102.12,
+      "return_on_starting_equity": 0.08596828,
+      "starting_equity": -1187.88
+    },
+    {
+      "date": "2023-07-19",
+      "ending_equity": -1309.12,
+      "net_pnl": -19.12,
+      "return_on_starting_equity": 0.01482171,
+      "starting_equity": -1290.0
+    },
+    {
+      "date": "2023-07-20",
+      "ending_equity": -1117.24,
+      "net_pnl": 191.88,
+      "return_on_starting_equity": -0.14657174,
+      "starting_equity": -1309.12
+    },
+    {
+      "date": "2023-07-21",
+      "ending_equity": -1148.36,
+      "net_pnl": -31.12,
+      "return_on_starting_equity": 0.02785436,
+      "starting_equity": -1117.24
+    },
+    {
+      "date": "2023-07-24",
+      "ending_equity": -1220.48,
+      "net_pnl": -72.12,
+      "return_on_starting_equity": 0.06280261,
+      "starting_equity": -1148.36
+    },
+    {
+      "date": "2023-07-25",
+      "ending_equity": -1305.6,
+      "net_pnl": -85.12,
+      "return_on_starting_equity": 0.06974305,
+      "starting_equity": -1220.48
+    },
+    {
+      "date": "2023-07-26",
+      "ending_equity": -1410.72,
+      "net_pnl": -105.12,
+      "return_on_starting_equity": 0.08051471,
+      "starting_equity": -1305.6
+    },
+    {
+      "date": "2023-07-27",
+      "ending_equity": -1190.84,
+      "net_pnl": 219.88,
+      "return_on_starting_equity": -0.15586367,
+      "starting_equity": -1410.72
+    },
+    {
+      "date": "2023-07-28",
+      "ending_equity": -1263.96,
+      "net_pnl": -73.12,
+      "return_on_starting_equity": 0.06140204,
+      "starting_equity": -1190.84
+    },
+    {
+      "date": "2023-07-31",
+      "ending_equity": -1293.08,
+      "net_pnl": -29.12,
+      "return_on_starting_equity": 0.0230387,
+      "starting_equity": -1263.96
+    },
+    {
+      "date": "2023-08-01",
+      "ending_equity": -1320.2,
+      "net_pnl": -27.12,
+      "return_on_starting_equity": 0.02097318,
+      "starting_equity": -1293.08
+    },
+    {
+      "date": "2023-08-02",
+      "ending_equity": -1131.32,
+      "net_pnl": 188.88,
+      "return_on_starting_equity": -0.14306923,
+      "starting_equity": -1320.2
+    },
+    {
+      "date": "2023-08-03",
+      "ending_equity": -1212.44,
+      "net_pnl": -81.12,
+      "return_on_starting_equity": 0.07170385,
+      "starting_equity": -1131.32
+    },
+    {
+      "date": "2023-08-04",
+      "ending_equity": -944.56,
+      "net_pnl": 267.88,
+      "return_on_starting_equity": -0.22094289,
+      "starting_equity": -1212.44
+    },
+    {
+      "date": "2023-08-07",
+      "ending_equity": -1022.68,
+      "net_pnl": -78.12,
+      "return_on_starting_equity": 0.08270517,
+      "starting_equity": -944.56
+    },
+    {
+      "date": "2023-08-08",
+      "ending_equity": -1094.8,
+      "net_pnl": -72.12,
+      "return_on_starting_equity": 0.07052059,
+      "starting_equity": -1022.68
+    },
+    {
+      "date": "2023-08-09",
+      "ending_equity": -1030.92,
+      "net_pnl": 63.88,
+      "return_on_starting_equity": -0.05834856,
+      "starting_equity": -1094.8
+    },
+    {
+      "date": "2023-08-10",
+      "ending_equity": -734.04,
+      "net_pnl": 296.88,
+      "return_on_starting_equity": -0.28797579,
+      "starting_equity": -1030.92
+    },
+    {
+      "date": "2023-08-11",
+      "ending_equity": -867.16,
+      "net_pnl": -133.12,
+      "return_on_starting_equity": 0.18135251,
+      "starting_equity": -734.04
+    },
+    {
+      "date": "2023-08-14",
+      "ending_equity": -955.28,
+      "net_pnl": -88.12,
+      "return_on_starting_equity": 0.10161908,
+      "starting_equity": -867.16
+    },
+    {
+      "date": "2023-08-15",
+      "ending_equity": -797.4,
+      "net_pnl": 157.88,
+      "return_on_starting_equity": -0.16527092,
+      "starting_equity": -955.28
+    },
+    {
+      "date": "2023-08-16",
+      "ending_equity": -622.52,
+      "net_pnl": 174.88,
+      "return_on_starting_equity": -0.21931277,
+      "starting_equity": -797.4
+    },
+    {
+      "date": "2023-08-17",
+      "ending_equity": -329.64,
+      "net_pnl": 292.88,
+      "return_on_starting_equity": -0.47047484,
+      "starting_equity": -622.52
+    },
+    {
+      "date": "2023-08-18",
+      "ending_equity": -428.76,
+      "net_pnl": -99.12,
+      "return_on_starting_equity": 0.30069166,
+      "starting_equity": -329.64
+    },
+    {
+      "date": "2023-08-21",
+      "ending_equity": -490.88,
+      "net_pnl": -62.12,
+      "return_on_starting_equity": 0.14488292,
+      "starting_equity": -428.76
+    },
+    {
+      "date": "2023-08-22",
+      "ending_equity": -378.0,
+      "net_pnl": 112.88,
+      "return_on_starting_equity": -0.22995437,
+      "starting_equity": -490.88
+    },
+    {
+      "date": "2023-08-23",
+      "ending_equity": -478.12,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": 0.26486772,
+      "starting_equity": -378.0
+    },
+    {
+      "date": "2023-08-24",
+      "ending_equity": -305.24,
+      "net_pnl": 172.88,
+      "return_on_starting_equity": -0.36158287,
+      "starting_equity": -478.12
+    },
+    {
+      "date": "2023-08-25",
+      "ending_equity": -425.36,
+      "net_pnl": -120.12,
+      "return_on_starting_equity": 0.39352641,
+      "starting_equity": -305.24
+    },
+    {
+      "date": "2023-08-28",
+      "ending_equity": -467.48,
+      "net_pnl": -42.12,
+      "return_on_starting_equity": 0.099022,
+      "starting_equity": -425.36
+    },
+    {
+      "date": "2023-08-29",
+      "ending_equity": -622.6,
+      "net_pnl": -155.12,
+      "return_on_starting_equity": 0.33182168,
+      "starting_equity": -467.48
+    },
+    {
+      "date": "2023-08-30",
+      "ending_equity": -677.72,
+      "net_pnl": -55.12,
+      "return_on_starting_equity": 0.08853196,
+      "starting_equity": -622.6
+    },
+    {
+      "date": "2023-08-31",
+      "ending_equity": -701.84,
+      "net_pnl": -24.12,
+      "return_on_starting_equity": 0.03558992,
+      "starting_equity": -677.72
+    },
+    {
+      "date": "2023-09-01",
+      "ending_equity": -726.96,
+      "net_pnl": -25.12,
+      "return_on_starting_equity": 0.03579163,
+      "starting_equity": -701.84
+    },
+    {
+      "date": "2023-09-05",
+      "ending_equity": -829.08,
+      "net_pnl": -102.12,
+      "return_on_starting_equity": 0.1404754,
+      "starting_equity": -726.96
+    },
+    {
+      "date": "2023-09-06",
+      "ending_equity": -795.2,
+      "net_pnl": 33.88,
+      "return_on_starting_equity": -0.04086457,
+      "starting_equity": -829.08
+    },
+    {
+      "date": "2023-09-07",
+      "ending_equity": -875.32,
+      "net_pnl": -80.12,
+      "return_on_starting_equity": 0.10075453,
+      "starting_equity": -795.2
+    },
+    {
+      "date": "2023-09-08",
+      "ending_equity": -880.44,
+      "net_pnl": -5.12,
+      "return_on_starting_equity": 0.00584929,
+      "starting_equity": -875.32
+    },
+    {
+      "date": "2023-09-11",
+      "ending_equity": -966.56,
+      "net_pnl": -86.12,
+      "return_on_starting_equity": 0.09781473,
+      "starting_equity": -880.44
+    },
+    {
+      "date": "2023-09-12",
+      "ending_equity": -860.68,
+      "net_pnl": 105.88,
+      "return_on_starting_equity": -0.10954312,
+      "starting_equity": -966.56
+    },
+    {
+      "date": "2023-09-13",
+      "ending_equity": -882.8,
+      "net_pnl": -22.12,
+      "return_on_starting_equity": 0.02570061,
+      "starting_equity": -860.68
+    },
+    {
+      "date": "2023-09-14",
+      "ending_equity": -965.92,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.09415496,
+      "starting_equity": -882.8
+    },
+    {
+      "date": "2023-09-15",
+      "ending_equity": -718.04,
+      "net_pnl": 247.88,
+      "return_on_starting_equity": -0.25662581,
+      "starting_equity": -965.92
+    },
+    {
+      "date": "2023-09-18",
+      "ending_equity": -793.16,
+      "net_pnl": -75.12,
+      "return_on_starting_equity": 0.10461813,
+      "starting_equity": -718.04
+    },
+    {
+      "date": "2023-09-19",
+      "ending_equity": -869.28,
+      "net_pnl": -76.12,
+      "return_on_starting_equity": 0.09597055,
+      "starting_equity": -793.16
+    },
+    {
+      "date": "2023-09-20",
+      "ending_equity": -570.4,
+      "net_pnl": 298.88,
+      "return_on_starting_equity": -0.34382477,
+      "starting_equity": -869.28
+    },
+    {
+      "date": "2023-09-21",
+      "ending_equity": -497.52,
+      "net_pnl": 72.88,
+      "return_on_starting_equity": -0.12776999,
+      "starting_equity": -570.4
+    },
+    {
+      "date": "2023-09-22",
+      "ending_equity": -474.64,
+      "net_pnl": 22.88,
+      "return_on_starting_equity": -0.0459881,
+      "starting_equity": -497.52
+    },
+    {
+      "date": "2023-09-25",
+      "ending_equity": -562.76,
+      "net_pnl": -88.12,
+      "return_on_starting_equity": 0.1856565,
+      "starting_equity": -474.64
+    },
+    {
+      "date": "2023-09-26",
+      "ending_equity": -382.88,
+      "net_pnl": 179.88,
+      "return_on_starting_equity": -0.31963892,
+      "starting_equity": -562.76
+    },
+    {
+      "date": "2023-09-27",
+      "ending_equity": -315.0,
+      "net_pnl": 67.88,
+      "return_on_starting_equity": -0.17728792,
+      "starting_equity": -382.88
+    },
+    {
+      "date": "2023-09-28",
+      "ending_equity": -439.12,
+      "net_pnl": -124.12,
+      "return_on_starting_equity": 0.39403175,
+      "starting_equity": -315.0
+    },
+    {
+      "date": "2023-09-29",
+      "ending_equity": -182.24,
+      "net_pnl": 256.88,
+      "return_on_starting_equity": -0.58498816,
+      "starting_equity": -439.12
+    },
+    {
+      "date": "2023-10-02",
+      "ending_equity": -197.36,
+      "net_pnl": -15.12,
+      "return_on_starting_equity": 0.08296752,
+      "starting_equity": -182.24
+    },
+    {
+      "date": "2023-10-03",
+      "ending_equity": 92.52,
+      "net_pnl": 289.88,
+      "return_on_starting_equity": -1.468788,
+      "starting_equity": -197.36
+    },
+    {
+      "date": "2023-10-04",
+      "ending_equity": -0.6,
+      "net_pnl": -93.12,
+      "return_on_starting_equity": -1.00648508,
+      "starting_equity": 92.52
+    },
+    {
+      "date": "2023-10-05",
+      "ending_equity": -93.72,
+      "net_pnl": -93.12,
+      "return_on_starting_equity": 155.2,
+      "starting_equity": -0.6
+    },
+    {
+      "date": "2023-10-06",
+      "ending_equity": -215.84,
+      "net_pnl": -122.12,
+      "return_on_starting_equity": 1.3030303,
+      "starting_equity": -93.72
+    },
+    {
+      "date": "2023-10-09",
+      "ending_equity": -326.96,
+      "net_pnl": -111.12,
+      "return_on_starting_equity": 0.5148258,
+      "starting_equity": -215.84
+    },
+    {
+      "date": "2023-10-10",
+      "ending_equity": -441.08,
+      "net_pnl": -114.12,
+      "return_on_starting_equity": 0.34903352,
+      "starting_equity": -326.96
+    },
+    {
+      "date": "2023-10-11",
+      "ending_equity": -531.2,
+      "net_pnl": -90.12,
+      "return_on_starting_equity": 0.20431668,
+      "starting_equity": -441.08
+    },
+    {
+      "date": "2023-10-12",
+      "ending_equity": -491.32,
+      "net_pnl": 39.88,
+      "return_on_starting_equity": -0.0750753,
+      "starting_equity": -531.2
+    },
+    {
+      "date": "2023-10-13",
+      "ending_equity": -176.44,
+      "net_pnl": 314.88,
+      "return_on_starting_equity": -0.64088578,
+      "starting_equity": -491.32
+    },
+    {
+      "date": "2023-10-16",
+      "ending_equity": -267.56,
+      "net_pnl": -91.12,
+      "return_on_starting_equity": 0.51643618,
+      "starting_equity": -176.44
+    },
+    {
+      "date": "2023-10-17",
+      "ending_equity": -389.68,
+      "net_pnl": -122.12,
+      "return_on_starting_equity": 0.45642099,
+      "starting_equity": -267.56
+    },
+    {
+      "date": "2023-10-18",
+      "ending_equity": -136.8,
+      "net_pnl": 252.88,
+      "return_on_starting_equity": -0.64894272,
+      "starting_equity": -389.68
+    },
+    {
+      "date": "2023-10-19",
+      "ending_equity": 130.08,
+      "net_pnl": 266.88,
+      "return_on_starting_equity": -1.95087719,
+      "starting_equity": -136.8
+    },
+    {
+      "date": "2023-10-20",
+      "ending_equity": 342.96,
+      "net_pnl": 212.88,
+      "return_on_starting_equity": 1.63653137,
+      "starting_equity": 130.08
+    },
+    {
+      "date": "2023-10-23",
+      "ending_equity": 255.84,
+      "net_pnl": -87.12,
+      "return_on_starting_equity": -0.25402379,
+      "starting_equity": 342.96
+    },
+    {
+      "date": "2023-10-24",
+      "ending_equity": 187.72,
+      "net_pnl": -68.12,
+      "return_on_starting_equity": -0.26626016,
+      "starting_equity": 255.84
+    },
+    {
+      "date": "2023-10-25",
+      "ending_equity": 256.6,
+      "net_pnl": 68.88,
+      "return_on_starting_equity": 0.36692947,
+      "starting_equity": 187.72
+    },
+    {
+      "date": "2023-10-26",
+      "ending_equity": 367.48,
+      "net_pnl": 110.88,
+      "return_on_starting_equity": 0.43211224,
+      "starting_equity": 256.6
+    },
+    {
+      "date": "2023-10-27",
+      "ending_equity": 588.36,
+      "net_pnl": 220.88,
+      "return_on_starting_equity": 0.60106672,
+      "starting_equity": 367.48
+    },
+    {
+      "date": "2023-10-30",
+      "ending_equity": 476.24,
+      "net_pnl": -112.12,
+      "return_on_starting_equity": -0.1905636,
+      "starting_equity": 588.36
+    },
+    {
+      "date": "2023-10-31",
+      "ending_equity": 357.12,
+      "net_pnl": -119.12,
+      "return_on_starting_equity": -0.25012599,
+      "starting_equity": 476.24
+    },
+    {
+      "date": "2023-11-01",
+      "ending_equity": 221.0,
+      "net_pnl": -136.12,
+      "return_on_starting_equity": -0.38116039,
+      "starting_equity": 357.12
+    },
+    {
+      "date": "2023-11-02",
+      "ending_equity": 96.88,
+      "net_pnl": -124.12,
+      "return_on_starting_equity": -0.56162896,
+      "starting_equity": 221.0
+    },
+    {
+      "date": "2023-11-03",
+      "ending_equity": -5.24,
+      "net_pnl": -102.12,
+      "return_on_starting_equity": -1.05408753,
+      "starting_equity": 96.88
+    },
+    {
+      "date": "2023-11-06",
+      "ending_equity": -14.36,
+      "net_pnl": -9.12,
+      "return_on_starting_equity": 1.74045802,
+      "starting_equity": -5.24
+    },
+    {
+      "date": "2023-11-07",
+      "ending_equity": -118.48,
+      "net_pnl": -104.12,
+      "return_on_starting_equity": 7.25069638,
+      "starting_equity": -14.36
+    },
+    {
+      "date": "2023-11-08",
+      "ending_equity": -174.6,
+      "net_pnl": -56.12,
+      "return_on_starting_equity": 0.47366644,
+      "starting_equity": -118.48
+    },
+    {
+      "date": "2023-11-09",
+      "ending_equity": 147.28,
+      "net_pnl": 321.88,
+      "return_on_starting_equity": -1.84352806,
+      "starting_equity": -174.6
+    },
+    {
+      "date": "2023-11-10",
+      "ending_equity": 47.16,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": -0.67979359,
+      "starting_equity": 147.28
+    },
+    {
+      "date": "2023-11-13",
+      "ending_equity": -53.96,
+      "net_pnl": -101.12,
+      "return_on_starting_equity": -2.14418999,
+      "starting_equity": 47.16
+    },
+    {
+      "date": "2023-11-14",
+      "ending_equity": -152.08,
+      "net_pnl": -98.12,
+      "return_on_starting_equity": 1.81838399,
+      "starting_equity": -53.96
+    },
+    {
+      "date": "2023-11-15",
+      "ending_equity": -227.2,
+      "net_pnl": -75.12,
+      "return_on_starting_equity": 0.49395055,
+      "starting_equity": -152.08
+    },
+    {
+      "date": "2023-11-16",
+      "ending_equity": -277.32,
+      "net_pnl": -50.12,
+      "return_on_starting_equity": 0.22059859,
+      "starting_equity": -227.2
+    },
+    {
+      "date": "2023-11-17",
+      "ending_equity": -353.44,
+      "net_pnl": -76.12,
+      "return_on_starting_equity": 0.27448435,
+      "starting_equity": -277.32
+    },
+    {
+      "date": "2023-11-20",
+      "ending_equity": -418.56,
+      "net_pnl": -65.12,
+      "return_on_starting_equity": 0.18424627,
+      "starting_equity": -353.44
+    },
+    {
+      "date": "2023-11-21",
+      "ending_equity": -477.68,
+      "net_pnl": -59.12,
+      "return_on_starting_equity": 0.14124618,
+      "starting_equity": -418.56
+    },
+    {
+      "date": "2023-11-22",
+      "ending_equity": -524.8,
+      "net_pnl": -47.12,
+      "return_on_starting_equity": 0.09864344,
+      "starting_equity": -477.68
+    },
+    {
+      "date": "2023-11-27",
+      "ending_equity": -614.92,
+      "net_pnl": -90.12,
+      "return_on_starting_equity": 0.17172256,
+      "starting_equity": -524.8
+    },
+    {
+      "date": "2023-11-28",
+      "ending_equity": -706.04,
+      "net_pnl": -91.12,
+      "return_on_starting_equity": 0.14818188,
+      "starting_equity": -614.92
+    },
+    {
+      "date": "2023-11-29",
+      "ending_equity": -485.16,
+      "net_pnl": 220.88,
+      "return_on_starting_equity": -0.31284346,
+      "starting_equity": -706.04
+    },
+    {
+      "date": "2023-11-30",
+      "ending_equity": -554.28,
+      "net_pnl": -69.12,
+      "return_on_starting_equity": 0.14246846,
+      "starting_equity": -485.16
+    },
+    {
+      "date": "2023-12-01",
+      "ending_equity": -662.4,
+      "net_pnl": -108.12,
+      "return_on_starting_equity": 0.19506387,
+      "starting_equity": -554.28
+    },
+    {
+      "date": "2023-12-04",
+      "ending_equity": -741.52,
+      "net_pnl": -79.12,
+      "return_on_starting_equity": 0.11944444,
+      "starting_equity": -662.4
+    },
+    {
+      "date": "2023-12-05",
+      "ending_equity": -859.64,
+      "net_pnl": -118.12,
+      "return_on_starting_equity": 0.15929442,
+      "starting_equity": -741.52
+    },
+    {
+      "date": "2023-12-06",
+      "ending_equity": -655.76,
+      "net_pnl": 203.88,
+      "return_on_starting_equity": -0.23716905,
+      "starting_equity": -859.64
+    },
+    {
+      "date": "2023-12-07",
+      "ending_equity": -766.88,
+      "net_pnl": -111.12,
+      "return_on_starting_equity": 0.16945224,
+      "starting_equity": -655.76
+    },
+    {
+      "date": "2023-12-08",
+      "ending_equity": -903.0,
+      "net_pnl": -136.12,
+      "return_on_starting_equity": 0.17749844,
+      "starting_equity": -766.88
+    },
+    {
+      "date": "2023-12-11",
+      "ending_equity": -965.12,
+      "net_pnl": -62.12,
+      "return_on_starting_equity": 0.06879291,
+      "starting_equity": -903.0
+    },
+    {
+      "date": "2023-12-12",
+      "ending_equity": -1033.24,
+      "net_pnl": -68.12,
+      "return_on_starting_equity": 0.0705819,
+      "starting_equity": -965.12
+    },
+    {
+      "date": "2023-12-13",
+      "ending_equity": -1137.36,
+      "net_pnl": -104.12,
+      "return_on_starting_equity": 0.10077039,
+      "starting_equity": -1033.24
+    },
+    {
+      "date": "2023-12-14",
+      "ending_equity": -1062.48,
+      "net_pnl": 74.88,
+      "return_on_starting_equity": -0.06583667,
+      "starting_equity": -1137.36
+    },
+    {
+      "date": "2023-12-15",
+      "ending_equity": -1135.6,
+      "net_pnl": -73.12,
+      "return_on_starting_equity": 0.06882012,
+      "starting_equity": -1062.48
+    },
+    {
+      "date": "2023-12-18",
+      "ending_equity": -1240.72,
+      "net_pnl": -105.12,
+      "return_on_starting_equity": 0.09256781,
+      "starting_equity": -1135.6
+    },
+    {
+      "date": "2023-12-19",
+      "ending_equity": -1296.84,
+      "net_pnl": -56.12,
+      "return_on_starting_equity": 0.0452318,
+      "starting_equity": -1240.72
+    },
+    {
+      "date": "2023-12-20",
+      "ending_equity": -992.96,
+      "net_pnl": 303.88,
+      "return_on_starting_equity": -0.23432343,
+      "starting_equity": -1296.84
+    },
+    {
+      "date": "2023-12-21",
+      "ending_equity": -1073.08,
+      "net_pnl": -80.12,
+      "return_on_starting_equity": 0.08068804,
+      "starting_equity": -992.96
+    },
+    {
+      "date": "2023-12-22",
+      "ending_equity": -1011.2,
+      "net_pnl": 61.88,
+      "return_on_starting_equity": -0.05766578,
+      "starting_equity": -1073.08
+    },
+    {
+      "date": "2023-12-26",
+      "ending_equity": -1109.32,
+      "net_pnl": -98.12,
+      "return_on_starting_equity": 0.09703323,
+      "starting_equity": -1011.2
+    },
+    {
+      "date": "2023-12-27",
+      "ending_equity": -1122.44,
+      "net_pnl": -13.12,
+      "return_on_starting_equity": 0.01182707,
+      "starting_equity": -1109.32
+    },
+    {
+      "date": "2023-12-28",
+      "ending_equity": -1180.56,
+      "net_pnl": -58.12,
+      "return_on_starting_equity": 0.05178005,
+      "starting_equity": -1122.44
+    },
+    {
+      "date": "2023-12-29",
+      "ending_equity": -1106.68,
+      "net_pnl": 73.88,
+      "return_on_starting_equity": -0.06258047,
+      "starting_equity": -1180.56
+    },
+    {
+      "date": "2024-02-01",
+      "ending_equity": -1190.8,
+      "net_pnl": -84.12,
+      "return_on_starting_equity": 0.07601113,
+      "starting_equity": -1106.68
+    },
+    {
+      "date": "2024-02-02",
+      "ending_equity": -1328.92,
+      "net_pnl": -138.12,
+      "return_on_starting_equity": 0.11598925,
+      "starting_equity": -1190.8
+    },
+    {
+      "date": "2024-02-05",
+      "ending_equity": -1388.04,
+      "net_pnl": -59.12,
+      "return_on_starting_equity": 0.04448725,
+      "starting_equity": -1328.92
+    },
+    {
+      "date": "2024-02-06",
+      "ending_equity": -1457.16,
+      "net_pnl": -69.12,
+      "return_on_starting_equity": 0.04979684,
+      "starting_equity": -1388.04
+    },
+    {
+      "date": "2024-02-07",
+      "ending_equity": -1554.28,
+      "net_pnl": -97.12,
+      "return_on_starting_equity": 0.0666502,
+      "starting_equity": -1457.16
+    },
+    {
+      "date": "2024-02-08",
+      "ending_equity": -1635.4,
+      "net_pnl": -81.12,
+      "return_on_starting_equity": 0.05219137,
+      "starting_equity": -1554.28
+    },
+    {
+      "date": "2024-02-09",
+      "ending_equity": -1705.52,
+      "net_pnl": -70.12,
+      "return_on_starting_equity": 0.04287636,
+      "starting_equity": -1635.4
+    },
+    {
+      "date": "2024-02-12",
+      "ending_equity": -1744.64,
+      "net_pnl": -39.12,
+      "return_on_starting_equity": 0.02293729,
+      "starting_equity": -1705.52
+    },
+    {
+      "date": "2024-02-13",
+      "ending_equity": -1741.76,
+      "net_pnl": 2.88,
+      "return_on_starting_equity": -0.00165077,
+      "starting_equity": -1744.64
+    },
+    {
+      "date": "2024-02-14",
+      "ending_equity": -1841.88,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": 0.05748209,
+      "starting_equity": -1741.76
+    },
+    {
+      "date": "2024-02-15",
+      "ending_equity": -1961.0,
+      "net_pnl": -119.12,
+      "return_on_starting_equity": 0.06467305,
+      "starting_equity": -1841.88
+    },
+    {
+      "date": "2024-02-16",
+      "ending_equity": -2034.12,
+      "net_pnl": -73.12,
+      "return_on_starting_equity": 0.0372871,
+      "starting_equity": -1961.0
+    },
+    {
+      "date": "2024-02-20",
+      "ending_equity": -2039.24,
+      "net_pnl": -5.12,
+      "return_on_starting_equity": 0.00251706,
+      "starting_equity": -2034.12
+    },
+    {
+      "date": "2024-02-21",
+      "ending_equity": -2095.36,
+      "net_pnl": -56.12,
+      "return_on_starting_equity": 0.02752006,
+      "starting_equity": -2039.24
+    },
+    {
+      "date": "2024-02-22",
+      "ending_equity": -2212.48,
+      "net_pnl": -117.12,
+      "return_on_starting_equity": 0.05589493,
+      "starting_equity": -2095.36
+    },
+    {
+      "date": "2024-02-23",
+      "ending_equity": -2193.6,
+      "net_pnl": 18.88,
+      "return_on_starting_equity": -0.00853341,
+      "starting_equity": -2212.48
+    },
+    {
+      "date": "2024-02-26",
+      "ending_equity": -2125.72,
+      "net_pnl": 67.88,
+      "return_on_starting_equity": -0.03094457,
+      "starting_equity": -2193.6
+    },
+    {
+      "date": "2024-02-27",
+      "ending_equity": -2209.84,
+      "net_pnl": -84.12,
+      "return_on_starting_equity": 0.03957247,
+      "starting_equity": -2125.72
+    },
+    {
+      "date": "2024-02-28",
+      "ending_equity": -2277.96,
+      "net_pnl": -68.12,
+      "return_on_starting_equity": 0.03082576,
+      "starting_equity": -2209.84
+    },
+    {
+      "date": "2024-02-29",
+      "ending_equity": -2343.08,
+      "net_pnl": -65.12,
+      "return_on_starting_equity": 0.02858698,
+      "starting_equity": -2277.96
+    },
+    {
+      "date": "2024-03-01",
+      "ending_equity": -2440.2,
+      "net_pnl": -97.12,
+      "return_on_starting_equity": 0.04144972,
+      "starting_equity": -2343.08
+    },
+    {
+      "date": "2024-03-04",
+      "ending_equity": -2494.32,
+      "net_pnl": -54.12,
+      "return_on_starting_equity": 0.02217851,
+      "starting_equity": -2440.2
+    },
+    {
+      "date": "2024-03-05",
+      "ending_equity": -2192.44,
+      "net_pnl": 301.88,
+      "return_on_starting_equity": -0.12102697,
+      "starting_equity": -2494.32
+    },
+    {
+      "date": "2024-03-06",
+      "ending_equity": -2250.56,
+      "net_pnl": -58.12,
+      "return_on_starting_equity": 0.02650928,
+      "starting_equity": -2192.44
+    },
+    {
+      "date": "2024-03-07",
+      "ending_equity": -2333.68,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.03693303,
+      "starting_equity": -2250.56
+    },
+    {
+      "date": "2024-03-08",
+      "ending_equity": -1980.8,
+      "net_pnl": 352.88,
+      "return_on_starting_equity": -0.15121182,
+      "starting_equity": -2333.68
+    },
+    {
+      "date": "2024-03-11",
+      "ending_equity": -2072.92,
+      "net_pnl": -92.12,
+      "return_on_starting_equity": 0.04650646,
+      "starting_equity": -1980.8
+    },
+    {
+      "date": "2024-03-12",
+      "ending_equity": -2214.04,
+      "net_pnl": -141.12,
+      "return_on_starting_equity": 0.06807788,
+      "starting_equity": -2072.92
+    },
+    {
+      "date": "2024-03-13",
+      "ending_equity": -2274.16,
+      "net_pnl": -60.12,
+      "return_on_starting_equity": 0.02715398,
+      "starting_equity": -2214.04
+    },
+    {
+      "date": "2024-03-14",
+      "ending_equity": -2299.28,
+      "net_pnl": -25.12,
+      "return_on_starting_equity": 0.01104584,
+      "starting_equity": -2274.16
+    },
+    {
+      "date": "2024-03-15",
+      "ending_equity": -2380.4,
+      "net_pnl": -81.12,
+      "return_on_starting_equity": 0.03528061,
+      "starting_equity": -2299.28
+    },
+    {
+      "date": "2024-03-18",
+      "ending_equity": -2436.52,
+      "net_pnl": -56.12,
+      "return_on_starting_equity": 0.02357587,
+      "starting_equity": -2380.4
+    },
+    {
+      "date": "2024-03-19",
+      "ending_equity": -2555.64,
+      "net_pnl": -119.12,
+      "return_on_starting_equity": 0.0488894,
+      "starting_equity": -2436.52
+    },
+    {
+      "date": "2024-03-20",
+      "ending_equity": -2722.76,
+      "net_pnl": -167.12,
+      "return_on_starting_equity": 0.06539262,
+      "starting_equity": -2555.64
+    },
+    {
+      "date": "2024-03-21",
+      "ending_equity": -2761.88,
+      "net_pnl": -39.12,
+      "return_on_starting_equity": 0.01436777,
+      "starting_equity": -2722.76
+    },
+    {
+      "date": "2024-03-22",
+      "ending_equity": -2835.0,
+      "net_pnl": -73.12,
+      "return_on_starting_equity": 0.02647472,
+      "starting_equity": -2761.88
+    },
+    {
+      "date": "2024-03-25",
+      "ending_equity": -2898.12,
+      "net_pnl": -63.12,
+      "return_on_starting_equity": 0.02226455,
+      "starting_equity": -2835.0
+    },
+    {
+      "date": "2024-03-26",
+      "ending_equity": -2792.24,
+      "net_pnl": 105.88,
+      "return_on_starting_equity": -0.03653403,
+      "starting_equity": -2898.12
+    },
+    {
+      "date": "2024-03-27",
+      "ending_equity": -2876.36,
+      "net_pnl": -84.12,
+      "return_on_starting_equity": 0.03012635,
+      "starting_equity": -2792.24
+    },
+    {
+      "date": "2024-03-28",
+      "ending_equity": -2948.48,
+      "net_pnl": -72.12,
+      "return_on_starting_equity": 0.02507336,
+      "starting_equity": -2876.36
+    },
+    {
+      "date": "2024-04-01",
+      "ending_equity": -2836.6,
+      "net_pnl": 111.88,
+      "return_on_starting_equity": -0.03794498,
+      "starting_equity": -2948.48
+    },
+    {
+      "date": "2024-04-02",
+      "ending_equity": -2915.72,
+      "net_pnl": -79.12,
+      "return_on_starting_equity": 0.02789255,
+      "starting_equity": -2836.6
+    },
+    {
+      "date": "2024-04-03",
+      "ending_equity": -3031.84,
+      "net_pnl": -116.12,
+      "return_on_starting_equity": 0.0398255,
+      "starting_equity": -2915.72
+    },
+    {
+      "date": "2024-04-04",
+      "ending_equity": -2914.96,
+      "net_pnl": 116.88,
+      "return_on_starting_equity": -0.03855085,
+      "starting_equity": -3031.84
+    },
+    {
+      "date": "2024-04-05",
+      "ending_equity": -3038.08,
+      "net_pnl": -123.12,
+      "return_on_starting_equity": 0.04223729,
+      "starting_equity": -2914.96
+    },
+    {
+      "date": "2024-04-08",
+      "ending_equity": -3091.2,
+      "net_pnl": -53.12,
+      "return_on_starting_equity": 0.01748473,
+      "starting_equity": -3038.08
+    },
+    {
+      "date": "2024-04-09",
+      "ending_equity": -3094.32,
+      "net_pnl": -3.12,
+      "return_on_starting_equity": 0.00100932,
+      "starting_equity": -3091.2
+    },
+    {
+      "date": "2024-04-10",
+      "ending_equity": -3195.44,
+      "net_pnl": -101.12,
+      "return_on_starting_equity": 0.03267923,
+      "starting_equity": -3094.32
+    },
+    {
+      "date": "2024-04-11",
+      "ending_equity": -3302.56,
+      "net_pnl": -107.12,
+      "return_on_starting_equity": 0.03352277,
+      "starting_equity": -3195.44
+    },
+    {
+      "date": "2024-04-15",
+      "ending_equity": -3315.68,
+      "net_pnl": -13.12,
+      "return_on_starting_equity": 0.00397268,
+      "starting_equity": -3302.56
+    },
+    {
+      "date": "2024-04-16",
+      "ending_equity": -3382.8,
+      "net_pnl": -67.12,
+      "return_on_starting_equity": 0.02024321,
+      "starting_equity": -3315.68
+    },
+    {
+      "date": "2024-04-17",
+      "ending_equity": -3140.92,
+      "net_pnl": 241.88,
+      "return_on_starting_equity": -0.0715029,
+      "starting_equity": -3382.8
+    },
+    {
+      "date": "2024-04-18",
+      "ending_equity": -3176.04,
+      "net_pnl": -35.12,
+      "return_on_starting_equity": 0.01118144,
+      "starting_equity": -3140.92
+    },
+    {
+      "date": "2024-04-19",
+      "ending_equity": -2843.16,
+      "net_pnl": 332.88,
+      "return_on_starting_equity": -0.10480976,
+      "starting_equity": -3176.04
+    },
+    {
+      "date": "2024-04-22",
+      "ending_equity": -2977.28,
+      "net_pnl": -134.12,
+      "return_on_starting_equity": 0.04717286,
+      "starting_equity": -2843.16
+    },
+    {
+      "date": "2024-04-23",
+      "ending_equity": -3084.4,
+      "net_pnl": -107.12,
+      "return_on_starting_equity": 0.03597915,
+      "starting_equity": -2977.28
+    },
+    {
+      "date": "2024-04-24",
+      "ending_equity": -3106.52,
+      "net_pnl": -22.12,
+      "return_on_starting_equity": 0.00717157,
+      "starting_equity": -3084.4
+    },
+    {
+      "date": "2024-04-25",
+      "ending_equity": -3240.64,
+      "net_pnl": -134.12,
+      "return_on_starting_equity": 0.04317371,
+      "starting_equity": -3106.52
+    },
+    {
+      "date": "2024-04-29",
+      "ending_equity": -3251.76,
+      "net_pnl": -11.12,
+      "return_on_starting_equity": 0.00343142,
+      "starting_equity": -3240.64
+    },
+    {
+      "date": "2024-04-30",
+      "ending_equity": -3043.88,
+      "net_pnl": 207.88,
+      "return_on_starting_equity": -0.06392846,
+      "starting_equity": -3251.76
+    },
+    {
+      "date": "2024-05-01",
+      "ending_equity": -3157.0,
+      "net_pnl": -113.12,
+      "return_on_starting_equity": 0.03716309,
+      "starting_equity": -3043.88
+    },
+    {
+      "date": "2024-05-02",
+      "ending_equity": -3284.12,
+      "net_pnl": -127.12,
+      "return_on_starting_equity": 0.04026608,
+      "starting_equity": -3157.0
+    },
+    {
+      "date": "2024-05-03",
+      "ending_equity": -3369.24,
+      "net_pnl": -85.12,
+      "return_on_starting_equity": 0.02591866,
+      "starting_equity": -3284.12
+    },
+    {
+      "date": "2024-05-06",
+      "ending_equity": -3452.36,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.02467025,
+      "starting_equity": -3369.24
+    },
+    {
+      "date": "2024-05-07",
+      "ending_equity": -3506.48,
+      "net_pnl": -54.12,
+      "return_on_starting_equity": 0.01567623,
+      "starting_equity": -3452.36
+    },
+    {
+      "date": "2024-05-08",
+      "ending_equity": -3606.6,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": 0.02855285,
+      "starting_equity": -3506.48
+    },
+    {
+      "date": "2024-05-09",
+      "ending_equity": -3714.72,
+      "net_pnl": -108.12,
+      "return_on_starting_equity": 0.02997837,
+      "starting_equity": -3606.6
+    },
+    {
+      "date": "2024-05-10",
+      "ending_equity": -3677.84,
+      "net_pnl": 36.88,
+      "return_on_starting_equity": -0.00992807,
+      "starting_equity": -3714.72
+    },
+    {
+      "date": "2024-05-13",
+      "ending_equity": -3680.96,
+      "net_pnl": -3.12,
+      "return_on_starting_equity": 0.00084832,
+      "starting_equity": -3677.84
+    },
+    {
+      "date": "2024-05-14",
+      "ending_equity": -3772.08,
+      "net_pnl": -91.12,
+      "return_on_starting_equity": 0.02475441,
+      "starting_equity": -3680.96
+    },
+    {
+      "date": "2024-05-15",
+      "ending_equity": -3884.2,
+      "net_pnl": -112.12,
+      "return_on_starting_equity": 0.02972365,
+      "starting_equity": -3772.08
+    },
+    {
+      "date": "2024-05-16",
+      "ending_equity": -3857.32,
+      "net_pnl": 26.88,
+      "return_on_starting_equity": -0.00692034,
+      "starting_equity": -3884.2
+    },
+    {
+      "date": "2024-05-17",
+      "ending_equity": -3937.44,
+      "net_pnl": -80.12,
+      "return_on_starting_equity": 0.0207709,
+      "starting_equity": -3857.32
+    },
+    {
+      "date": "2024-05-20",
+      "ending_equity": -3914.56,
+      "net_pnl": 22.88,
+      "return_on_starting_equity": -0.00581088,
+      "starting_equity": -3937.44
+    },
+    {
+      "date": "2024-05-21",
+      "ending_equity": -4011.68,
+      "net_pnl": -97.12,
+      "return_on_starting_equity": 0.02480994,
+      "starting_equity": -3914.56
+    },
+    {
+      "date": "2024-05-22",
+      "ending_equity": -3906.8,
+      "net_pnl": 104.88,
+      "return_on_starting_equity": -0.02614366,
+      "starting_equity": -4011.68
+    },
+    {
+      "date": "2024-05-23",
+      "ending_equity": -3634.92,
+      "net_pnl": 271.88,
+      "return_on_starting_equity": -0.06959148,
+      "starting_equity": -3906.8
+    },
+    {
+      "date": "2024-05-24",
+      "ending_equity": -3772.04,
+      "net_pnl": -137.12,
+      "return_on_starting_equity": 0.03772298,
+      "starting_equity": -3634.92
+    },
+    {
+      "date": "2024-05-28",
+      "ending_equity": -3797.16,
+      "net_pnl": -25.12,
+      "return_on_starting_equity": 0.00665953,
+      "starting_equity": -3772.04
+    },
+    {
+      "date": "2024-05-29",
+      "ending_equity": -3874.28,
+      "net_pnl": -77.12,
+      "return_on_starting_equity": 0.02030992,
+      "starting_equity": -3797.16
+    },
+    {
+      "date": "2024-05-30",
+      "ending_equity": -3802.4,
+      "net_pnl": 71.88,
+      "return_on_starting_equity": -0.01855312,
+      "starting_equity": -3874.28
+    },
+    {
+      "date": "2024-05-31",
+      "ending_equity": -3889.52,
+      "net_pnl": -87.12,
+      "return_on_starting_equity": 0.02291185,
+      "starting_equity": -3802.4
+    },
+    {
+      "date": "2024-06-03",
+      "ending_equity": -3751.64,
+      "net_pnl": 137.88,
+      "return_on_starting_equity": -0.0354491,
+      "starting_equity": -3889.52
+    },
+    {
+      "date": "2024-06-04",
+      "ending_equity": -3879.76,
+      "net_pnl": -128.12,
+      "return_on_starting_equity": 0.0341504,
+      "starting_equity": -3751.64
+    },
+    {
+      "date": "2024-06-05",
+      "ending_equity": -3995.88,
+      "net_pnl": -116.12,
+      "return_on_starting_equity": 0.02992969,
+      "starting_equity": -3879.76
+    },
+    {
+      "date": "2024-06-06",
+      "ending_equity": -4030.0,
+      "net_pnl": -34.12,
+      "return_on_starting_equity": 0.00853879,
+      "starting_equity": -3995.88
+    },
+    {
+      "date": "2024-06-07",
+      "ending_equity": -4116.12,
+      "net_pnl": -86.12,
+      "return_on_starting_equity": 0.02136973,
+      "starting_equity": -4030.0
+    },
+    {
+      "date": "2024-06-10",
+      "ending_equity": -4206.24,
+      "net_pnl": -90.12,
+      "return_on_starting_equity": 0.02189441,
+      "starting_equity": -4116.12
+    },
+    {
+      "date": "2024-06-11",
+      "ending_equity": -4324.36,
+      "net_pnl": -118.12,
+      "return_on_starting_equity": 0.02808209,
+      "starting_equity": -4206.24
+    },
+    {
+      "date": "2024-06-13",
+      "ending_equity": -4422.48,
+      "net_pnl": -98.12,
+      "return_on_starting_equity": 0.02269006,
+      "starting_equity": -4324.36
+    },
+    {
+      "date": "2024-06-17",
+      "ending_equity": -4509.6,
+      "net_pnl": -87.12,
+      "return_on_starting_equity": 0.01969935,
+      "starting_equity": -4422.48
+    },
+    {
+      "date": "2024-06-18",
+      "ending_equity": -4600.72,
+      "net_pnl": -91.12,
+      "return_on_starting_equity": 0.02020578,
+      "starting_equity": -4509.6
+    },
+    {
+      "date": "2024-06-20",
+      "ending_equity": -4442.84,
+      "net_pnl": 157.88,
+      "return_on_starting_equity": -0.03431637,
+      "starting_equity": -4600.72
+    },
+    {
+      "date": "2024-06-21",
+      "ending_equity": -4546.96,
+      "net_pnl": -104.12,
+      "return_on_starting_equity": 0.02343546,
+      "starting_equity": -4442.84
+    },
+    {
+      "date": "2024-06-24",
+      "ending_equity": -4469.08,
+      "net_pnl": 77.88,
+      "return_on_starting_equity": -0.01712793,
+      "starting_equity": -4546.96
+    },
+    {
+      "date": "2024-06-25",
+      "ending_equity": -4558.2,
+      "net_pnl": -89.12,
+      "return_on_starting_equity": 0.01994146,
+      "starting_equity": -4469.08
+    },
+    {
+      "date": "2024-06-26",
+      "ending_equity": -4641.32,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.01823527,
+      "starting_equity": -4558.2
+    },
+    {
+      "date": "2024-06-27",
+      "ending_equity": -4681.44,
+      "net_pnl": -40.12,
+      "return_on_starting_equity": 0.00864409,
+      "starting_equity": -4641.32
+    },
+    {
+      "date": "2024-06-28",
+      "ending_equity": -4493.56,
+      "net_pnl": 187.88,
+      "return_on_starting_equity": -0.04013295,
+      "starting_equity": -4681.44
+    },
+    {
+      "date": "2024-07-01",
+      "ending_equity": -4567.68,
+      "net_pnl": -74.12,
+      "return_on_starting_equity": 0.01649472,
+      "starting_equity": -4493.56
+    },
+    {
+      "date": "2024-07-02",
+      "ending_equity": -4668.8,
+      "net_pnl": -101.12,
+      "return_on_starting_equity": 0.02213815,
+      "starting_equity": -4567.68
+    },
+    {
+      "date": "2024-07-05",
+      "ending_equity": -4748.92,
+      "net_pnl": -80.12,
+      "return_on_starting_equity": 0.01716073,
+      "starting_equity": -4668.8
+    },
+    {
+      "date": "2024-07-08",
+      "ending_equity": -4720.04,
+      "net_pnl": 28.88,
+      "return_on_starting_equity": -0.00608138,
+      "starting_equity": -4748.92
+    },
+    {
+      "date": "2024-07-09",
+      "ending_equity": -4716.16,
+      "net_pnl": 3.88,
+      "return_on_starting_equity": -0.00082203,
+      "starting_equity": -4720.04
+    },
+    {
+      "date": "2024-07-10",
+      "ending_equity": -4787.28,
+      "net_pnl": -71.12,
+      "return_on_starting_equity": 0.01508007,
+      "starting_equity": -4716.16
+    },
+    {
+      "date": "2024-07-11",
+      "ending_equity": -4412.4,
+      "net_pnl": 374.88,
+      "return_on_starting_equity": -0.07830751,
+      "starting_equity": -4787.28
+    },
+    {
+      "date": "2024-07-12",
+      "ending_equity": -4509.52,
+      "net_pnl": -97.12,
+      "return_on_starting_equity": 0.0220107,
+      "starting_equity": -4412.4
+    },
+    {
+      "date": "2024-07-15",
+      "ending_equity": -4499.64,
+      "net_pnl": 9.88,
+      "return_on_starting_equity": -0.00219092,
+      "starting_equity": -4509.52
+    },
+    {
+      "date": "2024-07-16",
+      "ending_equity": -4594.76,
+      "net_pnl": -95.12,
+      "return_on_starting_equity": 0.02113947,
+      "starting_equity": -4499.64
+    },
+    {
+      "date": "2024-07-17",
+      "ending_equity": -4508.88,
+      "net_pnl": 85.88,
+      "return_on_starting_equity": -0.01869086,
+      "starting_equity": -4594.76
+    },
+    {
+      "date": "2024-07-18",
+      "ending_equity": -4177.0,
+      "net_pnl": 331.88,
+      "return_on_starting_equity": -0.07360586,
+      "starting_equity": -4508.88
+    },
+    {
+      "date": "2024-07-19",
+      "ending_equity": -3887.12,
+      "net_pnl": 289.88,
+      "return_on_starting_equity": -0.06939909,
+      "starting_equity": -4177.0
+    },
+    {
+      "date": "2024-07-22",
+      "ending_equity": -3982.24,
+      "net_pnl": -95.12,
+      "return_on_starting_equity": 0.02447056,
+      "starting_equity": -3887.12
+    },
+    {
+      "date": "2024-07-23",
+      "ending_equity": -3929.36,
+      "net_pnl": 52.88,
+      "return_on_starting_equity": -0.01327896,
+      "starting_equity": -3982.24
+    },
+    {
+      "date": "2024-07-24",
+      "ending_equity": -3621.48,
+      "net_pnl": 307.88,
+      "return_on_starting_equity": -0.07835373,
+      "starting_equity": -3929.36
+    },
+    {
+      "date": "2024-07-25",
+      "ending_equity": -3719.6,
+      "net_pnl": -98.12,
+      "return_on_starting_equity": 0.0270939,
+      "starting_equity": -3621.48
+    },
+    {
+      "date": "2024-07-26",
+      "ending_equity": -3823.72,
+      "net_pnl": -104.12,
+      "return_on_starting_equity": 0.02799226,
+      "starting_equity": -3719.6
+    },
+    {
+      "date": "2024-07-29",
+      "ending_equity": -3849.84,
+      "net_pnl": -26.12,
+      "return_on_starting_equity": 0.00683104,
+      "starting_equity": -3823.72
+    },
+    {
+      "date": "2024-07-30",
+      "ending_equity": -3633.96,
+      "net_pnl": 215.88,
+      "return_on_starting_equity": -0.05607506,
+      "starting_equity": -3849.84
+    },
+    {
+      "date": "2024-07-31",
+      "ending_equity": -3762.08,
+      "net_pnl": -128.12,
+      "return_on_starting_equity": 0.0352563,
+      "starting_equity": -3633.96
+    },
+    {
+      "date": "2024-08-01",
+      "ending_equity": -4005.2,
+      "net_pnl": -243.12,
+      "return_on_starting_equity": 0.06462383,
+      "starting_equity": -3762.08
+    },
+    {
+      "date": "2024-08-02",
+      "ending_equity": -3932.32,
+      "net_pnl": 72.88,
+      "return_on_starting_equity": -0.01819634,
+      "starting_equity": -4005.2
+    },
+    {
+      "date": "2024-08-05",
+      "ending_equity": -3728.44,
+      "net_pnl": 203.88,
+      "return_on_starting_equity": -0.05184726,
+      "starting_equity": -3932.32
+    },
+    {
+      "date": "2024-08-06",
+      "ending_equity": -3846.56,
+      "net_pnl": -118.12,
+      "return_on_starting_equity": 0.03168081,
+      "starting_equity": -3728.44
+    },
+    {
+      "date": "2024-08-07",
+      "ending_equity": -4016.68,
+      "net_pnl": -170.12,
+      "return_on_starting_equity": 0.04422653,
+      "starting_equity": -3846.56
+    },
+    {
+      "date": "2024-08-08",
+      "ending_equity": -4090.8,
+      "net_pnl": -74.12,
+      "return_on_starting_equity": 0.01845305,
+      "starting_equity": -4016.68
+    },
+    {
+      "date": "2024-08-09",
+      "ending_equity": -4201.92,
+      "net_pnl": -111.12,
+      "return_on_starting_equity": 0.02716339,
+      "starting_equity": -4090.8
+    },
+    {
+      "date": "2024-08-12",
+      "ending_equity": -4280.04,
+      "net_pnl": -78.12,
+      "return_on_starting_equity": 0.0185915,
+      "starting_equity": -4201.92
+    },
+    {
+      "date": "2024-08-13",
+      "ending_equity": -4394.16,
+      "net_pnl": -114.12,
+      "return_on_starting_equity": 0.0266633,
+      "starting_equity": -4280.04
+    },
+    {
+      "date": "2024-08-14",
+      "ending_equity": -4482.28,
+      "net_pnl": -88.12,
+      "return_on_starting_equity": 0.02005389,
+      "starting_equity": -4394.16
+    },
+    {
+      "date": "2024-08-15",
+      "ending_equity": -4582.4,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": 0.02233685,
+      "starting_equity": -4482.28
+    },
+    {
+      "date": "2024-08-16",
+      "ending_equity": -4726.52,
+      "net_pnl": -144.12,
+      "return_on_starting_equity": 0.03145077,
+      "starting_equity": -4582.4
+    },
+    {
+      "date": "2024-08-19",
+      "ending_equity": -4829.64,
+      "net_pnl": -103.12,
+      "return_on_starting_equity": 0.02181732,
+      "starting_equity": -4726.52
+    },
+    {
+      "date": "2024-08-20",
+      "ending_equity": -4689.76,
+      "net_pnl": 139.88,
+      "return_on_starting_equity": -0.02896282,
+      "starting_equity": -4829.64
+    },
+    {
+      "date": "2024-08-21",
+      "ending_equity": -4735.88,
+      "net_pnl": -46.12,
+      "return_on_starting_equity": 0.00983419,
+      "starting_equity": -4689.76
+    },
+    {
+      "date": "2024-08-22",
+      "ending_equity": -4355.0,
+      "net_pnl": 380.88,
+      "return_on_starting_equity": -0.08042434,
+      "starting_equity": -4735.88
+    },
+    {
+      "date": "2024-08-23",
+      "ending_equity": -4502.12,
+      "net_pnl": -147.12,
+      "return_on_starting_equity": 0.03378186,
+      "starting_equity": -4355.0
+    },
+    {
+      "date": "2024-08-26",
+      "ending_equity": -4337.24,
+      "net_pnl": 164.88,
+      "return_on_starting_equity": -0.03662275,
+      "starting_equity": -4502.12
+    },
+    {
+      "date": "2024-08-27",
+      "ending_equity": -4457.36,
+      "net_pnl": -120.12,
+      "return_on_starting_equity": 0.02769503,
+      "starting_equity": -4337.24
+    },
+    {
+      "date": "2024-08-28",
+      "ending_equity": -4397.48,
+      "net_pnl": 59.88,
+      "return_on_starting_equity": -0.01343396,
+      "starting_equity": -4457.36
+    },
+    {
+      "date": "2024-08-29",
+      "ending_equity": -4234.6,
+      "net_pnl": 162.88,
+      "return_on_starting_equity": -0.0370394,
+      "starting_equity": -4397.48
+    },
+    {
+      "date": "2024-08-30",
+      "ending_equity": -4287.72,
+      "net_pnl": -53.12,
+      "return_on_starting_equity": 0.01254428,
+      "starting_equity": -4234.6
+    },
+    {
+      "date": "2024-09-03",
+      "ending_equity": -3924.84,
+      "net_pnl": 362.88,
+      "return_on_starting_equity": -0.08463239,
+      "starting_equity": -4287.72
+    },
+    {
+      "date": "2024-09-04",
+      "ending_equity": -3976.96,
+      "net_pnl": -52.12,
+      "return_on_starting_equity": 0.01327952,
+      "starting_equity": -3924.84
+    },
+    {
+      "date": "2024-09-05",
+      "ending_equity": -3763.08,
+      "net_pnl": 213.88,
+      "return_on_starting_equity": -0.05377977,
+      "starting_equity": -3976.96
+    },
+    {
+      "date": "2024-09-06",
+      "ending_equity": -3533.2,
+      "net_pnl": 229.88,
+      "return_on_starting_equity": -0.06108826,
+      "starting_equity": -3763.08
+    },
+    {
+      "date": "2024-09-10",
+      "ending_equity": -3633.32,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": 0.02833692,
+      "starting_equity": -3533.2
+    },
+    {
+      "date": "2024-09-11",
+      "ending_equity": -3754.44,
+      "net_pnl": -121.12,
+      "return_on_starting_equity": 0.0333359,
+      "starting_equity": -3633.32
+    },
+    {
+      "date": "2024-09-12",
+      "ending_equity": -3873.56,
+      "net_pnl": -119.12,
+      "return_on_starting_equity": 0.03172777,
+      "starting_equity": -3754.44
+    },
+    {
+      "date": "2024-09-13",
+      "ending_equity": -3973.68,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": 0.02584702,
+      "starting_equity": -3873.56
+    },
+    {
+      "date": "2024-09-16",
+      "ending_equity": -4048.8,
+      "net_pnl": -75.12,
+      "return_on_starting_equity": 0.01890439,
+      "starting_equity": -3973.68
+    },
+    {
+      "date": "2024-09-17",
+      "ending_equity": -3941.92,
+      "net_pnl": 106.88,
+      "return_on_starting_equity": -0.02639795,
+      "starting_equity": -4048.8
+    },
+    {
+      "date": "2024-09-18",
+      "ending_equity": -3911.04,
+      "net_pnl": 30.88,
+      "return_on_starting_equity": -0.00783375,
+      "starting_equity": -3941.92
+    },
+    {
+      "date": "2024-09-19",
+      "ending_equity": -4046.16,
+      "net_pnl": -135.12,
+      "return_on_starting_equity": 0.03454836,
+      "starting_equity": -3911.04
+    },
+    {
+      "date": "2024-09-20",
+      "ending_equity": -4157.28,
+      "net_pnl": -111.12,
+      "return_on_starting_equity": 0.02746308,
+      "starting_equity": -4046.16
+    },
+    {
+      "date": "2024-09-23",
+      "ending_equity": -4253.4,
+      "net_pnl": -96.12,
+      "return_on_starting_equity": 0.02312089,
+      "starting_equity": -4157.28
+    },
+    {
+      "date": "2024-09-24",
+      "ending_equity": -4312.52,
+      "net_pnl": -59.12,
+      "return_on_starting_equity": 0.01389947,
+      "starting_equity": -4253.4
+    },
+    {
+      "date": "2024-09-25",
+      "ending_equity": -4244.64,
+      "net_pnl": 67.88,
+      "return_on_starting_equity": -0.01574022,
+      "starting_equity": -4312.52
+    },
+    {
+      "date": "2024-09-26",
+      "ending_equity": -4173.76,
+      "net_pnl": 70.88,
+      "return_on_starting_equity": -0.01669871,
+      "starting_equity": -4244.64
+    },
+    {
+      "date": "2024-09-27",
+      "ending_equity": -4134.88,
+      "net_pnl": 38.88,
+      "return_on_starting_equity": -0.00931534,
+      "starting_equity": -4173.76
+    },
+    {
+      "date": "2024-09-30",
+      "ending_equity": -4240.0,
+      "net_pnl": -105.12,
+      "return_on_starting_equity": 0.02542275,
+      "starting_equity": -4134.88
+    },
+    {
+      "date": "2024-10-01",
+      "ending_equity": -4323.12,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.01960377,
+      "starting_equity": -4240.0
+    },
+    {
+      "date": "2024-10-02",
+      "ending_equity": -4444.24,
+      "net_pnl": -121.12,
+      "return_on_starting_equity": 0.0280168,
+      "starting_equity": -4323.12
+    },
+    {
+      "date": "2024-10-03",
+      "ending_equity": -4388.36,
+      "net_pnl": 55.88,
+      "return_on_starting_equity": -0.01257358,
+      "starting_equity": -4444.24
+    },
+    {
+      "date": "2024-10-04",
+      "ending_equity": -4501.48,
+      "net_pnl": -113.12,
+      "return_on_starting_equity": 0.02577728,
+      "starting_equity": -4388.36
+    },
+    {
+      "date": "2024-10-07",
+      "ending_equity": -4259.6,
+      "net_pnl": 241.88,
+      "return_on_starting_equity": -0.05373344,
+      "starting_equity": -4501.48
+    },
+    {
+      "date": "2024-10-08",
+      "ending_equity": -4368.72,
+      "net_pnl": -109.12,
+      "return_on_starting_equity": 0.02561743,
+      "starting_equity": -4259.6
+    },
+    {
+      "date": "2024-10-09",
+      "ending_equity": -4494.84,
+      "net_pnl": -126.12,
+      "return_on_starting_equity": 0.02886887,
+      "starting_equity": -4368.72
+    },
+    {
+      "date": "2024-10-10",
+      "ending_equity": -4577.96,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.01849232,
+      "starting_equity": -4494.84
+    },
+    {
+      "date": "2024-10-11",
+      "ending_equity": -4669.08,
+      "net_pnl": -91.12,
+      "return_on_starting_equity": 0.01990406,
+      "starting_equity": -4577.96
+    },
+    {
+      "date": "2024-10-14",
+      "ending_equity": -4750.2,
+      "net_pnl": -81.12,
+      "return_on_starting_equity": 0.01737387,
+      "starting_equity": -4669.08
+    },
+    {
+      "date": "2024-10-15",
+      "ending_equity": -4383.32,
+      "net_pnl": 366.88,
+      "return_on_starting_equity": -0.07723464,
+      "starting_equity": -4750.2
+    },
+    {
+      "date": "2024-10-16",
+      "ending_equity": -4483.44,
+      "net_pnl": -100.12,
+      "return_on_starting_equity": 0.02284113,
+      "starting_equity": -4383.32
+    },
+    {
+      "date": "2024-10-17",
+      "ending_equity": -4449.56,
+      "net_pnl": 33.88,
+      "return_on_starting_equity": -0.0075567,
+      "starting_equity": -4483.44
+    },
+    {
+      "date": "2024-10-18",
+      "ending_equity": -4532.68,
+      "net_pnl": -83.12,
+      "return_on_starting_equity": 0.0186805,
+      "starting_equity": -4449.56
+    },
+    {
+      "date": "2024-10-21",
+      "ending_equity": -4473.8,
+      "net_pnl": 58.88,
+      "return_on_starting_equity": -0.01299011,
+      "starting_equity": -4532.68
+    },
+    {
+      "date": "2024-10-22",
+      "ending_equity": -4566.92,
+      "net_pnl": -93.12,
+      "return_on_starting_equity": 0.02081452,
+      "starting_equity": -4473.8
+    },
+    {
+      "date": "2024-10-23",
+      "ending_equity": -4361.04,
+      "net_pnl": 205.88,
+      "return_on_starting_equity": -0.04508071,
+      "starting_equity": -4566.92
+    },
+    {
+      "date": "2024-10-24",
+      "ending_equity": -4436.16,
+      "net_pnl": -75.12,
+      "return_on_starting_equity": 0.01722525,
+      "starting_equity": -4361.04
+    },
+    {
+      "date": "2024-10-25",
+      "ending_equity": -4120.28,
+      "net_pnl": 315.88,
+      "return_on_starting_equity": -0.07120573,
+      "starting_equity": -4436.16
+    },
+    {
+      "date": "2024-10-28",
+      "ending_equity": -4187.4,
+      "net_pnl": -67.12,
+      "return_on_starting_equity": 0.01629016,
+      "starting_equity": -4120.28
+    },
+    {
+      "date": "2024-10-29",
+      "ending_equity": -4312.52,
+      "net_pnl": -125.12,
+      "return_on_starting_equity": 0.02988012,
+      "starting_equity": -4187.4
+    },
+    {
+      "date": "2024-10-30",
+      "ending_equity": -4253.64,
+      "net_pnl": 58.88,
+      "return_on_starting_equity": -0.01365327,
+      "starting_equity": -4312.52
+    },
+    {
+      "date": "2024-10-31",
+      "ending_equity": -4138.76,
+      "net_pnl": 114.88,
+      "return_on_starting_equity": -0.02700746,
+      "starting_equity": -4253.64
+    },
+    {
+      "date": "2024-11-01",
+      "ending_equity": -4119.88,
+      "net_pnl": 18.88,
+      "return_on_starting_equity": -0.00456175,
+      "starting_equity": -4138.76
+    },
+    {
+      "date": "2024-11-04",
+      "ending_equity": -4090.0,
+      "net_pnl": 29.88,
+      "return_on_starting_equity": -0.00725264,
+      "starting_equity": -4119.88
+    },
+    {
+      "date": "2024-11-05",
+      "ending_equity": -4192.12,
+      "net_pnl": -102.12,
+      "return_on_starting_equity": 0.02496822,
+      "starting_equity": -4090.0
+    },
+    {
+      "date": "2024-11-06",
+      "ending_equity": -4312.24,
+      "net_pnl": -120.12,
+      "return_on_starting_equity": 0.02865376,
+      "starting_equity": -4192.12
+    },
+    {
+      "date": "2024-11-07",
+      "ending_equity": -4439.36,
+      "net_pnl": -127.12,
+      "return_on_starting_equity": 0.02947888,
+      "starting_equity": -4312.24
+    },
+    {
+      "date": "2024-11-08",
+      "ending_equity": -4517.48,
+      "net_pnl": -78.12,
+      "return_on_starting_equity": 0.01759713,
+      "starting_equity": -4439.36
+    },
+    {
+      "date": "2024-11-11",
+      "ending_equity": -4530.6,
+      "net_pnl": -13.12,
+      "return_on_starting_equity": 0.00290427,
+      "starting_equity": -4517.48
+    },
+    {
+      "date": "2024-11-12",
+      "ending_equity": -4476.72,
+      "net_pnl": 53.88,
+      "return_on_starting_equity": -0.01189246,
+      "starting_equity": -4530.6
+    },
+    {
+      "date": "2024-11-13",
+      "ending_equity": -4574.84,
+      "net_pnl": -98.12,
+      "return_on_starting_equity": 0.02191783,
+      "starting_equity": -4476.72
+    },
+    {
+      "date": "2024-11-14",
+      "ending_equity": -4384.96,
+      "net_pnl": 189.88,
+      "return_on_starting_equity": -0.04150528,
+      "starting_equity": -4574.84
+    },
+    {
+      "date": "2024-11-15",
+      "ending_equity": -4166.08,
+      "net_pnl": 218.88,
+      "return_on_starting_equity": -0.04991608,
+      "starting_equity": -4384.96
+    },
+    {
+      "date": "2024-11-18",
+      "ending_equity": -4287.2,
+      "net_pnl": -121.12,
+      "return_on_starting_equity": 0.02907289,
+      "starting_equity": -4166.08
+    },
+    {
+      "date": "2024-11-19",
+      "ending_equity": -4412.32,
+      "net_pnl": -125.12,
+      "return_on_starting_equity": 0.02918455,
+      "starting_equity": -4287.2
+    },
+    {
+      "date": "2024-11-20",
+      "ending_equity": -4499.44,
+      "net_pnl": -87.12,
+      "return_on_starting_equity": 0.01974471,
+      "starting_equity": -4412.32
+    },
+    {
+      "date": "2024-11-21",
+      "ending_equity": -4611.56,
+      "net_pnl": -112.12,
+      "return_on_starting_equity": 0.02491866,
+      "starting_equity": -4499.44
+    },
+    {
+      "date": "2024-11-22",
+      "ending_equity": -4652.68,
+      "net_pnl": -41.12,
+      "return_on_starting_equity": 0.00891672,
+      "starting_equity": -4611.56
+    },
+    {
+      "date": "2024-11-25",
+      "ending_equity": -4556.8,
+      "net_pnl": 95.88,
+      "return_on_starting_equity": -0.02060748,
+      "starting_equity": -4652.68
+    },
+    {
+      "date": "2024-11-26",
+      "ending_equity": -4665.92,
+      "net_pnl": -109.12,
+      "return_on_starting_equity": 0.02394663,
+      "starting_equity": -4556.8
+    },
+    {
+      "date": "2024-11-27",
+      "ending_equity": -4594.04,
+      "net_pnl": 71.88,
+      "return_on_starting_equity": -0.01540532,
+      "starting_equity": -4665.92
+    },
+    {
+      "date": "2024-12-02",
+      "ending_equity": -4691.16,
+      "net_pnl": -97.12,
+      "return_on_starting_equity": 0.02114043,
+      "starting_equity": -4594.04
+    },
+    {
+      "date": "2024-12-03",
+      "ending_equity": -4764.28,
+      "net_pnl": -73.12,
+      "return_on_starting_equity": 0.01558676,
+      "starting_equity": -4691.16
+    },
+    {
+      "date": "2024-12-04",
+      "ending_equity": -4859.4,
+      "net_pnl": -95.12,
+      "return_on_starting_equity": 0.01996524,
+      "starting_equity": -4764.28
+    },
+    {
+      "date": "2024-12-05",
+      "ending_equity": -4877.52,
+      "net_pnl": -18.12,
+      "return_on_starting_equity": 0.00372886,
+      "starting_equity": -4859.4
+    },
+    {
+      "date": "2024-12-06",
+      "ending_equity": -4833.64,
+      "net_pnl": 43.88,
+      "return_on_starting_equity": -0.00899638,
+      "starting_equity": -4877.52
+    },
+    {
+      "date": "2024-12-09",
+      "ending_equity": -4629.76,
+      "net_pnl": 203.88,
+      "return_on_starting_equity": -0.04217939,
+      "starting_equity": -4833.64
+    },
+    {
+      "date": "2024-12-10",
+      "ending_equity": -4479.88,
+      "net_pnl": 149.88,
+      "return_on_starting_equity": -0.03237317,
+      "starting_equity": -4629.76
+    },
+    {
+      "date": "2024-12-11",
+      "ending_equity": -4537.0,
+      "net_pnl": -57.12,
+      "return_on_starting_equity": 0.01275034,
+      "starting_equity": -4479.88
+    },
+    {
+      "date": "2024-12-12",
+      "ending_equity": -4507.12,
+      "net_pnl": 29.88,
+      "return_on_starting_equity": -0.00658585,
+      "starting_equity": -4537.0
+    },
+    {
+      "date": "2024-12-13",
+      "ending_equity": -4421.24,
+      "net_pnl": 85.88,
+      "return_on_starting_equity": -0.0190543,
+      "starting_equity": -4507.12
+    },
+    {
+      "date": "2024-12-16",
+      "ending_equity": -4483.36,
+      "net_pnl": -62.12,
+      "return_on_starting_equity": 0.01405036,
+      "starting_equity": -4421.24
+    },
+    {
+      "date": "2024-12-17",
+      "ending_equity": -4529.48,
+      "net_pnl": -46.12,
+      "return_on_starting_equity": 0.01028693,
+      "starting_equity": -4483.36
+    },
+    {
+      "date": "2024-12-18",
+      "ending_equity": -4983.6,
+      "net_pnl": -454.12,
+      "return_on_starting_equity": 0.10025875,
+      "starting_equity": -4529.48
+    },
+    {
+      "date": "2024-12-19",
+      "ending_equity": -4888.72,
+      "net_pnl": 94.88,
+      "return_on_starting_equity": -0.01903845,
+      "starting_equity": -4983.6
+    },
+    {
+      "date": "2024-12-20",
+      "ending_equity": -5024.84,
+      "net_pnl": -136.12,
+      "return_on_starting_equity": 0.02784369,
+      "starting_equity": -4888.72
+    },
+    {
+      "date": "2024-12-23",
+      "ending_equity": -5145.96,
+      "net_pnl": -121.12,
+      "return_on_starting_equity": 0.02410425,
+      "starting_equity": -5024.84
+    },
+    {
+      "date": "2024-12-26",
+      "ending_equity": -5249.08,
+      "net_pnl": -103.12,
+      "return_on_starting_equity": 0.02003902,
+      "starting_equity": -5145.96
+    },
+    {
+      "date": "2024-12-27",
+      "ending_equity": -5025.2,
+      "net_pnl": 223.88,
+      "return_on_starting_equity": -0.04265128,
+      "starting_equity": -5249.08
+    },
+    {
+      "date": "2024-12-30",
+      "ending_equity": -5165.32,
+      "net_pnl": -140.12,
+      "return_on_starting_equity": 0.02788347,
+      "starting_equity": -5025.2
+    },
+    {
+      "date": "2024-12-31",
+      "ending_equity": -4973.44,
+      "net_pnl": 191.88,
+      "return_on_starting_equity": -0.03714775,
+      "starting_equity": -5165.32
+    }
+  ],
+  "datasets": [
+    {
+      "closed_trades": 4,
+      "coverage_end": "2023-03-31",
+      "coverage_start": "2023-03-28",
+      "label": "insample_2023_03",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_03",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 4
+      },
+      "total_implementable_pnl": -273.48,
+      "trading_days": 4
+    },
+    {
+      "closed_trades": 19,
+      "coverage_end": "2023-04-28",
+      "coverage_start": "2023-04-03",
+      "label": "insample_2023_04",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_04",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 19
+      },
+      "total_implementable_pnl": -73.28,
+      "trading_days": 19
+    },
+    {
+      "closed_trades": 21,
+      "coverage_end": "2023-05-31",
+      "coverage_start": "2023-05-01",
+      "label": "insample_2023_05",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_05",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 21,
+        "missing_leg_close_quotes": 1
+      },
+      "total_implementable_pnl": -499.52,
+      "trading_days": 22
+    },
+    {
+      "closed_trades": 21,
+      "coverage_end": "2023-06-30",
+      "coverage_start": "2023-06-01",
+      "label": "insample_2023_06",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_06",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 21
+      },
+      "total_implementable_pnl": -1009.52,
+      "trading_days": 21
+    },
+    {
+      "closed_trades": 19,
+      "coverage_end": "2023-07-31",
+      "coverage_start": "2023-07-03",
+      "label": "insample_2023_07",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_07",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 19,
+        "missing_close_quotes": 1
+      },
+      "total_implementable_pnl": -437.28,
+      "trading_days": 20
+    },
+    {
+      "closed_trades": 23,
+      "coverage_end": "2023-08-31",
+      "coverage_start": "2023-08-01",
+      "label": "insample_2023_08",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_08",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 23
+      },
+      "total_implementable_pnl": 591.24,
+      "trading_days": 23
+    },
+    {
+      "closed_trades": 20,
+      "coverage_end": "2023-09-29",
+      "coverage_start": "2023-09-01",
+      "label": "insample_2023_09",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_09",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_implementable_pnl": 519.6,
+      "trading_days": 20
+    },
+    {
+      "closed_trades": 22,
+      "coverage_end": "2023-10-31",
+      "coverage_start": "2023-10-02",
+      "label": "insample_2023_10",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_10",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 22
+      },
+      "total_implementable_pnl": 539.36,
+      "trading_days": 22
+    },
+    {
+      "closed_trades": 20,
+      "coverage_end": "2023-11-30",
+      "coverage_start": "2023-11-01",
+      "label": "insample_2023_11",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_11",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 20,
+        "missing_close_quotes": 1
+      },
+      "total_implementable_pnl": -911.4,
+      "trading_days": 21
+    },
+    {
+      "closed_trades": 20,
+      "coverage_end": "2023-12-29",
+      "coverage_start": "2023-12-01",
+      "label": "insample_2023_12",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_12",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_implementable_pnl": -552.4,
+      "trading_days": 20
+    },
+    {
+      "closed_trades": 0,
+      "coverage_end": "2024-01-31",
+      "coverage_start": "2024-01-02",
+      "label": "oos_2024_01",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\one_month_pilot",
+      "split": "oos",
+      "status_counts": {
+        "structure_unavailable": 21
+      },
+      "total_implementable_pnl": 0,
+      "trading_days": 21
+    },
+    {
+      "closed_trades": 20,
+      "coverage_end": "2024-02-29",
+      "coverage_start": "2024-02-01",
+      "label": "oos_2024_02",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_2025",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_implementable_pnl": -1236.4,
+      "trading_days": 20
+    },
+    {
+      "closed_trades": 20,
+      "coverage_end": "2024-03-28",
+      "coverage_start": "2024-03-01",
+      "label": "oos_2024_03",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_03",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_implementable_pnl": -605.4,
+      "trading_days": 20
+    },
+    {
+      "closed_trades": 20,
+      "coverage_end": "2024-04-30",
+      "coverage_start": "2024-04-01",
+      "label": "oos_2024_04",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_04",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20,
+        "missing_leg_close_quotes": 2
+      },
+      "total_implementable_pnl": -95.4,
+      "trading_days": 22
+    },
+    {
+      "closed_trades": 22,
+      "coverage_end": "2024-05-31",
+      "coverage_start": "2024-05-01",
+      "label": "oos_2024_05",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_05",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 22
+      },
+      "total_implementable_pnl": -845.64,
+      "trading_days": 22
+    },
+    {
+      "closed_trades": 17,
+      "coverage_end": "2024-06-28",
+      "coverage_start": "2024-06-03",
+      "label": "oos_2024_06",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_06",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 17,
+        "missing_leg_close_quotes": 2
+      },
+      "total_implementable_pnl": -604.04,
+      "trading_days": 19
+    },
+    {
+      "closed_trades": 8,
+      "coverage_end": "2024-07-12",
+      "coverage_start": "2024-07-01",
+      "label": "oos_2024_07_partial",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_partial",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 8,
+        "missing_close_quotes": 1
+      },
+      "total_implementable_pnl": -15.96,
+      "trading_days": 9
+    },
+    {
+      "closed_trades": 5,
+      "coverage_end": "2024-07-19",
+      "coverage_start": "2024-07-15",
+      "label": "oos_2024_07_chunk3",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_implementable_pnl": 622.4,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 5,
+      "coverage_end": "2024-07-26",
+      "coverage_start": "2024-07-22",
+      "label": "oos_2024_07_chunk4",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk4",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_implementable_pnl": 63.4,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 3,
+      "coverage_end": "2024-07-31",
+      "coverage_start": "2024-07-29",
+      "label": "oos_2024_07_chunk5",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk5",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_implementable_pnl": 61.64,
+      "trading_days": 3
+    },
+    {
+      "closed_trades": 2,
+      "coverage_end": "2024-08-02",
+      "coverage_start": "2024-08-01",
+      "label": "oos_2024_08_chunk1",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk1",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 2
+      },
+      "total_implementable_pnl": -170.24,
+      "trading_days": 2
+    },
+    {
+      "closed_trades": 5,
+      "coverage_end": "2024-08-09",
+      "coverage_start": "2024-08-05",
+      "label": "oos_2024_08_chunk2",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk2",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_implementable_pnl": -269.6,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 5,
+      "coverage_end": "2024-08-16",
+      "coverage_start": "2024-08-12",
+      "label": "oos_2024_08_chunk3",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_implementable_pnl": -524.6,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 5,
+      "coverage_end": "2024-08-23",
+      "coverage_start": "2024-08-19",
+      "label": "oos_2024_08_chunk4",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk4",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_implementable_pnl": 224.4,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 5,
+      "coverage_end": "2024-08-30",
+      "coverage_start": "2024-08-26",
+      "label": "oos_2024_08_chunk5",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk5",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_implementable_pnl": 214.4,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 4,
+      "coverage_end": "2024-09-06",
+      "coverage_start": "2024-09-03",
+      "label": "oos_2024_09_chunk1",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk1",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 4
+      },
+      "total_implementable_pnl": 754.52,
+      "trading_days": 4
+    },
+    {
+      "closed_trades": 4,
+      "coverage_end": "2024-09-13",
+      "coverage_start": "2024-09-09",
+      "label": "oos_2024_09_chunk2",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk2",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_leg_close_quotes": 1
+      },
+      "total_implementable_pnl": -440.48,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 5,
+      "coverage_end": "2024-09-20",
+      "coverage_start": "2024-09-16",
+      "label": "oos_2024_09_chunk3",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk3",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_implementable_pnl": -183.6,
+      "trading_days": 5
+    },
+    {
+      "closed_trades": 6,
+      "coverage_end": "2024-09-30",
+      "coverage_start": "2024-09-23",
+      "label": "oos_2024_09_remainder",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_remainder_daily_union",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 6
+      },
+      "total_implementable_pnl": -82.72,
+      "trading_days": 6
+    },
+    {
+      "closed_trades": 23,
+      "coverage_end": "2024-10-31",
+      "coverage_start": "2024-10-01",
+      "label": "oos_2024_10",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_10_daily_union",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 23
+      },
+      "total_implementable_pnl": 101.24,
+      "trading_days": 23
+    },
+    {
+      "closed_trades": 19,
+      "coverage_end": "2024-11-29",
+      "coverage_start": "2024-11-01",
+      "label": "oos_2024_11",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_11_daily_union",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 19,
+        "missing_close_quotes": 1
+      },
+      "total_implementable_pnl": -455.28,
+      "trading_days": 20
+    },
+    {
+      "closed_trades": 20,
+      "coverage_end": "2024-12-31",
+      "coverage_start": "2024-12-02",
+      "label": "oos_2024_12",
+      "normalized_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_12_daily_union",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20,
+        "missing_close_quotes": 1
+      },
+      "total_implementable_pnl": -379.4,
+      "trading_days": 21
+    }
+  ],
+  "dsr_assessment": {
+    "reason": "This feasibility run uses one fixed template and does not select best parameters from a search grid.",
+    "status": "not_applicable",
+    "trial_count": 1
+  },
+  "experiment_id": "m4_subsystem_b_put_ratio_feasibility",
+  "feasibility": {
+    "account_1000_feasible_count": 412,
+    "all_trades_fit_1000_account": true,
+    "all_trades_fit_20_risk_budget": false,
+    "all_trades_fit_300_allocation": false,
+    "allocation_300_feasible_count": 0,
+    "checked_trades": 412,
+    "max_defined_loss": 773.0,
+    "median_defined_loss": 566.0,
+    "min_defined_loss": 366.0,
+    "risk_budget_20_feasible_count": 0
+  },
+  "methodology": {
+    "account_equity": 1000.0,
+    "chronological_policy": "2023-03-01..2023-12-29 in-sample, 2024-01-02..2024-12-31 OOS; no OOS tuning from this report",
+    "entry_time": "10:00 ET or nearest available quote at/before 10:00",
+    "exit_model": "forced_close_1545",
+    "fee_per_contract": 0.64,
+    "llm_filter": "disabled",
+    "near_moneyness": 1.0,
+    "news_filter": "disabled",
+    "protective_wing_gap": 10.0,
+    "risk_budget_2pct": 20.0,
+    "short_moneyness": 0.99,
+    "strike_mapping": "nearest discrete strike rounding; wing must be at least $10 below short strike",
+    "subsystem_b_allocation": 300.0
+  },
+  "metrics": {
+    "average_trade_pnl": -14.4986,
+    "es95": -161.4533,
+    "es99": -237.92,
+    "max_drawdown": -6.202878,
+    "payoff_ratio": 1.8012,
+    "sharpe_proxy": 0.052955,
+    "sortino_proxy": 0.747806,
+    "total_cost_drag": 5115.94,
+    "total_implementable_pnl": -5973.44,
+    "total_mid_pnl": -857.5,
+    "trade_count": 412,
+    "win_rate": 0.2961,
+    "worst_day_loss": -454.12
+  },
+  "record_type": "baseline_experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-put-ratio-feasibility-real-data",
+  "sample_adequacy": {
+    "closed_trades": 412,
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "minimum_trade_count_prior": 500,
+    "mintrl_status": "pending_return_distribution",
+    "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+    "psr_status": "pending_return_distribution"
+  },
+  "schema_version": "m4_subsystem_b_feasibility_v1",
+  "splits": {
+    "in_sample": {
+      "closed_trades": 189,
+      "coverage_end": "2023-12-29",
+      "coverage_start": "2023-03-28",
+      "dataset_count": 10,
+      "feasibility": {
+        "account_1000_feasible_count": 189,
+        "all_trades_fit_1000_account": true,
+        "all_trades_fit_20_risk_budget": false,
+        "all_trades_fit_300_allocation": false,
+        "allocation_300_feasible_count": 0,
+        "checked_trades": 189,
+        "max_defined_loss": 695.0,
+        "median_defined_loss": 597.0,
+        "min_defined_loss": 493.0,
+        "risk_budget_20_feasible_count": 0
+      },
+      "metrics": {
+        "average_trade_pnl": -11.1465,
+        "es95": -133.32,
+        "es99": -147.62,
+        "max_drawdown": -2.398303,
+        "payoff_ratio": 2.1143,
+        "sharpe_proxy": 0.077533,
+        "sortino_proxy": 1.247913,
+        "total_cost_drag": 2133.18,
+        "total_implementable_pnl": -2106.68,
+        "total_mid_pnl": 26.5,
+        "trade_count": 189,
+        "win_rate": 0.2751,
+        "worst_day_loss": -155.12
+      },
+      "sample_adequacy": {
+        "closed_trades": 189,
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_trade_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "status_counts": {
+        "closed_forced_1545": 189,
+        "missing_close_quotes": 2,
+        "missing_leg_close_quotes": 1
+      },
+      "trading_days": 192
+    },
+    "oos": {
+      "closed_trades": 223,
+      "coverage_end": "2024-12-31",
+      "coverage_start": "2024-01-02",
+      "dataset_count": 22,
+      "feasibility": {
+        "account_1000_feasible_count": 223,
+        "all_trades_fit_1000_account": true,
+        "all_trades_fit_20_risk_budget": false,
+        "all_trades_fit_300_allocation": false,
+        "allocation_300_feasible_count": 0,
+        "checked_trades": 223,
+        "max_defined_loss": 773.0,
+        "median_defined_loss": 508.0,
+        "min_defined_loss": 366.0,
+        "risk_budget_20_feasible_count": 0
+      },
+      "metrics": {
+        "average_trade_pnl": -17.3397,
+        "es95": -179.4533,
+        "es99": -289.12,
+        "max_drawdown": -4.1424,
+        "payoff_ratio": 1.5816,
+        "sharpe_proxy": -0.05504,
+        "sortino_proxy": -0.037936,
+        "total_cost_drag": 2982.76,
+        "total_implementable_pnl": -3866.76,
+        "total_mid_pnl": -884.0,
+        "trade_count": 223,
+        "win_rate": 0.3139,
+        "worst_day_loss": -454.12
+      },
+      "sample_adequacy": {
+        "closed_trades": 223,
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_trade_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "status_counts": {
+        "closed_forced_1545": 223,
+        "missing_close_quotes": 3,
+        "missing_leg_close_quotes": 5,
+        "structure_unavailable": 21
+      },
+      "trading_days": 252
+    }
+  },
+  "status": "complete",
+  "status_counts": {
+    "closed_forced_1545": 412,
+    "missing_close_quotes": 5,
+    "missing_leg_close_quotes": 6,
+    "structure_unavailable": 21
+  },
+  "strategy": "Sub-System B capped-risk put ratio spread"
+}

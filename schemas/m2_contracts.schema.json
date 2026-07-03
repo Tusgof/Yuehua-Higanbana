@@ -1,0 +1,234 @@
+{
+  "schema_version": "m2.0",
+  "description": "Canonical Milestone 2 data contracts for SPY 0DTE - Higanbana.",
+  "records": {
+    "spy_bar": {
+      "required": ["record_type", "schema_version", "symbol", "timestamp_et", "open", "high", "low", "close", "volume", "source", "provider"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "symbol": "string",
+        "timestamp_et": "datetime",
+        "open": "number",
+        "high": "number",
+        "low": "number",
+        "close": "number",
+        "volume": "integer",
+        "source": "string",
+        "provider": "string"
+      },
+      "rules": ["symbol_spy", "ohlc_consistent", "non_negative_volume"]
+    },
+    "option_quote": {
+      "required": ["record_type", "schema_version", "underlying", "quote_timestamp_et", "expiration_date", "dte", "right", "strike", "bid", "ask", "bid_size", "ask_size", "provider", "source"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "underlying": "string",
+        "quote_timestamp_et": "datetime",
+        "expiration_date": "date",
+        "dte": "number",
+        "right": "string",
+        "strike": "number",
+        "bid": "number",
+        "ask": "number",
+        "bid_size": "integer",
+        "ask_size": "integer",
+        "volume": "integer",
+        "open_interest": "integer",
+        "underlying_price": "number",
+        "provider": "string",
+        "source": "string"
+      },
+      "rules": ["underlying_spy", "right_call_or_put", "bid_ask_valid", "non_negative_sizes"]
+    },
+    "vix_vxv": {
+      "required": ["record_type", "schema_version", "date", "vix_close", "vxv_close", "provider", "source"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "date": "date",
+        "vix_close": "number",
+        "vxv_close": "number",
+        "provider": "string",
+        "source": "string"
+      },
+      "rules": ["positive_vol_indexes"]
+    },
+    "macro_event": {
+      "required": ["record_type", "schema_version", "event_id", "event_type", "event_timestamp_et", "importance", "provider", "source"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "event_id": "string",
+        "event_type": "string",
+        "event_timestamp_et": "datetime",
+        "importance": "string",
+        "actual": "number",
+        "forecast": "number",
+        "previous": "number",
+        "provider": "string",
+        "source": "string"
+      },
+      "rules": ["macro_importance_valid"]
+    },
+    "news_item": {
+      "required": ["record_type", "schema_version", "news_id", "decision_time_et", "fetched_at_et", "published_at_et", "source_name", "headline", "url", "provider"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "news_id": "string",
+        "decision_time_et": "datetime",
+        "fetched_at_et": "datetime",
+        "published_at_et": "datetime",
+        "source_name": "string",
+        "headline": "string",
+        "url": "string",
+        "provider": "string"
+      },
+      "rules": []
+    },
+    "llm_assessment": {
+      "required": ["record_type", "schema_version", "assessment_id", "created_at_et", "provider", "model", "prompt_version", "input_hash", "prompt_text", "output_text", "decision"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "assessment_id": "string",
+        "created_at_et": "datetime",
+        "provider": "string",
+        "model": "string",
+        "prompt_version": "string",
+        "input_hash": "sha256",
+        "prompt_text": "string",
+        "output_text": "string",
+        "decision": "string"
+      },
+      "rules": ["llm_decision_valid"]
+    },
+    "strategy_intent": {
+      "required": ["record_type", "schema_version", "intent_id", "created_at_et", "strategy_id", "decision", "reasons", "entry_time_et", "legs"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "intent_id": "string",
+        "created_at_et": "datetime",
+        "strategy_id": "string",
+        "decision": "string",
+        "reasons": "array",
+        "entry_time_et": "datetime",
+        "legs": "array"
+      },
+      "rules": ["strategy_decision_valid", "non_empty_reasons"]
+    },
+    "option_leg": {
+      "required": ["record_type", "schema_version", "leg_id", "underlying", "expiration_date", "right", "strike", "side", "quantity"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "leg_id": "string",
+        "underlying": "string",
+        "expiration_date": "date",
+        "right": "string",
+        "strike": "number",
+        "side": "string",
+        "quantity": "integer"
+      },
+      "rules": ["underlying_spy", "right_call_or_put", "side_buy_or_sell", "positive_quantity"]
+    },
+    "fill": {
+      "required": ["record_type", "schema_version", "fill_id", "filled_at_et", "intent_id", "leg_id", "side", "quantity", "price", "fill_model"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "fill_id": "string",
+        "filled_at_et": "datetime",
+        "intent_id": "string",
+        "leg_id": "string",
+        "side": "string",
+        "quantity": "integer",
+        "price": "number",
+        "fill_model": "string"
+      },
+      "rules": ["side_buy_or_sell", "positive_quantity", "non_negative_price"]
+    },
+    "trade": {
+      "required": ["record_type", "schema_version", "trade_id", "strategy_id", "opened_at_et", "closed_at_et", "status", "max_defined_loss", "gross_pnl", "net_pnl", "fills"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "trade_id": "string",
+        "strategy_id": "string",
+        "opened_at_et": "datetime",
+        "closed_at_et": "datetime",
+        "status": "string",
+        "max_defined_loss": "number",
+        "gross_pnl": "number",
+        "net_pnl": "number",
+        "fills": "array"
+      },
+      "rules": ["trade_status_valid", "defined_risk_non_negative"]
+    },
+    "daily_pnl": {
+      "required": ["record_type", "schema_version", "date", "starting_equity", "ending_equity", "net_pnl", "trade_count", "benchmark_return"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "date": "date",
+        "starting_equity": "number",
+        "ending_equity": "number",
+        "net_pnl": "number",
+        "trade_count": "integer",
+        "benchmark_return": "number"
+      },
+      "rules": ["non_negative_equity", "non_negative_trade_count"]
+    },
+    "experiment_manifest": {
+      "required": ["record_type", "schema_version", "experiment_id", "hypothesis", "data_window", "train_window", "oos_window", "parameters_locked_before_oos", "metrics"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "experiment_id": "string",
+        "hypothesis": "string",
+        "data_window": "object",
+        "train_window": "object",
+        "oos_window": "object",
+        "parameters_locked_before_oos": "boolean",
+        "metrics": "array"
+      },
+      "rules": ["parameters_locked", "non_empty_metrics"]
+    },
+    "report_metadata": {
+      "required": ["record_type", "schema_version", "report_id", "experiment_id", "generated_at_et", "language", "conclusion", "metrics", "chart_paths"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "report_id": "string",
+        "experiment_id": "string",
+        "generated_at_et": "datetime",
+        "language": "string",
+        "conclusion": "string",
+        "metrics": "object",
+        "chart_paths": "array"
+      },
+      "rules": ["thai_report", "conclusion_valid"]
+    },
+    "data_registry_manifest": {
+      "required": ["record_type", "schema_version", "dataset_id", "provider", "source_url", "ingested_at_et", "coverage_start", "coverage_end", "raw_sha256", "schema_name", "schema_version_applied", "license_notes"],
+      "types": {
+        "record_type": "string",
+        "schema_version": "string",
+        "dataset_id": "string",
+        "provider": "string",
+        "source_url": "string",
+        "ingested_at_et": "datetime",
+        "coverage_start": "date",
+        "coverage_end": "date",
+        "raw_sha256": "sha256",
+        "schema_name": "string",
+        "schema_version_applied": "string",
+        "license_notes": "string"
+      },
+      "rules": ["coverage_order"]
+    }
+  }
+}

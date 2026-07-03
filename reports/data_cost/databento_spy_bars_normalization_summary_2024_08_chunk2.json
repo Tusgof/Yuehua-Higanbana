@@ -1,0 +1,26 @@
+{
+  "coverage_end": "2024-08-09",
+  "coverage_start": "2024-08-05",
+  "input_rows": 2880,
+  "manifest": {
+    "coverage_end": "2024-08-09",
+    "coverage_start": "2024-08-05",
+    "dataset_id": "databento-spy-bars-2024-08-05-to-2024-08-09-084167509c40",
+    "ingested_at_et": "2026-06-30T22:41:30-04:00",
+    "license_notes": "Databento EQUS.MINI ohlcv-1m local cache. Low-cost SPY-only research pull approved by user.",
+    "provider": "Databento",
+    "raw_sha256": "084167509c4048eaf827366e359a44ab606a697dee28c27f5907013df5c59929",
+    "record_type": "data_registry_manifest",
+    "schema_name": "m2_contracts",
+    "schema_version": "m2.0",
+    "schema_version_applied": "m2.0",
+    "source_url": "data\\raw\\spy_0dte\\databento\\spy_bars\\aug_2024_chunk2_spy_ohlcv_1m.dbn.zst"
+  },
+  "output_path": "data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk2\\spy_bar.jsonl",
+  "output_rows": 2880,
+  "provider": "Databento",
+  "raw_path": "data\\raw\\spy_0dte\\databento\\spy_bars\\aug_2024_chunk2_spy_ohlcv_1m.dbn.zst",
+  "registry_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\registry\\datasets.jsonl",
+  "skipped_invalid_ohlc": 0,
+  "skipped_non_spy": 0
+}

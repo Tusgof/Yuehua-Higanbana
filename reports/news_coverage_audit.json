@@ -1,0 +1,124 @@
+{
+  "blockers": [
+    "requires_news_archive_start_by_2022_05_11",
+    "requires_news_topic_coverage_2022",
+    "requires_news_topic_coverage_2023",
+    "requires_news_topic_coverage_2024",
+    "requires_news_topic_coverage_2025",
+    "requires_news_topic_coverage_2026",
+    "requires_news_window_coverage_oos",
+    "requires_news_window_coverage_reference_pre_break",
+    "requires_news_window_coverage_train",
+    "requires_real_news_archive"
+  ],
+  "coverage_end": null,
+  "coverage_start": null,
+  "news_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\news\\news_item.jsonl",
+  "record_count": 0,
+  "required_topics": [
+    "market_panic",
+    "systemic_banking_stress",
+    "war_escalation",
+    "index_halt_circuit_breaker",
+    "macro_policy_risk"
+  ],
+  "status": "blocked",
+  "windows": [
+    {
+      "end": "2022-05-10",
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "start": "2019-01-01",
+      "window": "reference_pre_break"
+    },
+    {
+      "end": "2023-12-31",
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "start": "2022-05-11",
+      "window": "train"
+    },
+    {
+      "end": "2026-07-03",
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "start": "2024-01-01",
+      "window": "oos"
+    }
+  ],
+  "years": [
+    {
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "year": 2022
+    },
+    {
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "year": 2023
+    },
+    {
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "year": 2024
+    },
+    {
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "year": 2025
+    },
+    {
+      "missing_topics": [
+        "index_halt_circuit_breaker",
+        "macro_policy_risk",
+        "market_panic",
+        "systemic_banking_stress",
+        "war_escalation"
+      ],
+      "present_topics": [],
+      "year": 2026
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "blockers": [
+    "requires_minimum_trade_count_500",
+    "requires_reference_pre_break_closed_trades",
+    "requires_reference_pre_break_option_coverage"
+  ],
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "Structural-break testing around 2022-05-11 is deferred because current local SPY 0DTE option coverage has no reference/pre-break observations before 2022-05-11.",
+  "experiment_id": "m5_structural_break_assessment",
+  "input_paths": {
+    "strategy_data_readiness": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\strategy_data_readiness_audit.json"
+  },
+  "methodology": {
+    "data_policy": "Read-only coverage audit from existing strategy-data readiness artifact; no paid API calls and no new data download.",
+    "decision_rule": "Run structural-break statistics only if all three chronological periods have real option coverage and closed trades.",
+    "scope": "Assess whether the May 11 2022 structural-break test can be run from existing local real-data artifacts.",
+    "split_policy": {
+      "forbid_oos_tuning": true,
+      "forbid_random_split": true,
+      "oos": {
+        "end": "current_available",
+        "start": "2024-01-01"
+      },
+      "post_break_train": {
+        "end": "2023-12-31",
+        "start": "2022-05-11"
+      },
+      "reference_pre_break": {
+        "end": "2022-05-10",
+        "start": "2019-01-01"
+      }
+    }
+  },
+  "next_requirements": [
+    "Add or acquire SPY 0DTE option coverage for 2019-01-01 to 2022-05-10 before running a structural-break claim.",
+    "Backfill the missing post-break training window from 2022-05-11 to 2023-02-28 if the test requires full post-break coverage.",
+    "Re-run strategy-data readiness and this M5.7 assessment after coverage changes.",
+    "Keep Jan-Dec 2024 OOS untouched for final evaluation; do not tune M5.7 rules on OOS diagnostics."
+  ],
+  "periods": {
+    "oos": {
+      "bar_rows": 132148,
+      "candidate_days": 51,
+      "closed_trades": 49,
+      "closed_trades_present": true,
+      "coverage_end_actual": "2024-12-31",
+      "coverage_present": true,
+      "coverage_start_actual": "2024-01-02",
+      "dataset_count": 22,
+      "datasets": [
+        "oos_2024_01",
+        "oos_2024_02",
+        "oos_2024_03",
+        "oos_2024_04",
+        "oos_2024_05",
+        "oos_2024_06",
+        "oos_2024_07_partial",
+        "oos_2024_07_chunk3",
+        "oos_2024_07_chunk4",
+        "oos_2024_07_chunk5",
+        "oos_2024_08_chunk1",
+        "oos_2024_08_chunk2",
+        "oos_2024_08_chunk3",
+        "oos_2024_08_chunk4",
+        "oos_2024_08_chunk5",
+        "oos_2024_09_chunk1",
+        "oos_2024_09_chunk2",
+        "oos_2024_09_chunk3",
+        "oos_2024_09_remainder",
+        "oos_2024_10",
+        "oos_2024_11",
+        "oos_2024_12"
+      ],
+      "quote_rows": 13357670,
+      "required_end": "current_available",
+      "required_start": "2024-01-01"
+    },
+    "post_break_train": {
+      "bar_rows": 100365,
+      "candidate_days": 42,
+      "closed_trades": 41,
+      "closed_trades_present": true,
+      "coverage_end_actual": "2023-12-29",
+      "coverage_present": true,
+      "coverage_start_actual": "2023-03-01",
+      "dataset_count": 1,
+      "datasets": [
+        "in_sample_2023_mar_dec"
+      ],
+      "quote_rows": 8145550,
+      "required_end": "2023-12-31",
+      "required_start": "2022-05-11"
+    },
+    "reference_pre_break": {
+      "bar_rows": 0,
+      "candidate_days": 0,
+      "closed_trades": 0,
+      "closed_trades_present": false,
+      "coverage_end_actual": null,
+      "coverage_present": false,
+      "coverage_start_actual": null,
+      "dataset_count": 0,
+      "datasets": [],
+      "quote_rows": 0,
+      "required_end": "2022-05-10",
+      "required_start": "2019-01-01"
+    }
+  },
+  "readiness_totals": {
+    "bar_rows": 232513,
+    "candidate_days": 93,
+    "closed_trades": 90,
+    "dataset_count": 23,
+    "quote_rows": 21503220,
+    "splits": {
+      "in_sample": {
+        "bar_rows": 100365,
+        "candidate_days": 42,
+        "closed_trades": 41,
+        "quote_rows": 8145550
+      },
+      "oos": {
+        "bar_rows": 132148,
+        "candidate_days": 51,
+        "closed_trades": 49,
+        "quote_rows": 13357670
+      }
+    }
+  },
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-structural-break-deferred-real-data",
+  "sample_adequacy": {
+    "actual_closed_trades": 90,
+    "evidence_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "mintrl_required_observations": null,
+    "mintrl_status": "pending_experiment_return_distribution",
+    "note": "Closed-trade count is below the rough prior floor. Treat any Sharpe or PnL result from this coverage as diagnostic only until wider data or computed MinTRL/PSR evidence supports it.",
+    "power_status": "underpowered",
+    "psr_status": "pending_experiment_return_distribution",
+    "rough_minimum_trade_count": 500,
+    "trade_count_floor_met": false
+  },
+  "schema_version": "m5_structural_break_assessment_v1",
+  "status": "deferred"
+}

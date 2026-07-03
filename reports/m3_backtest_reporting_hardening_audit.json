@@ -1,0 +1,59 @@
+{
+  "blockers": [],
+  "checks": [
+    {
+      "blockers": [],
+      "name": "pnl_model",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "sample_adequacy",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "big_day_dependency",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "pnl_report",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "search_summary",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "dsr_assessment",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "sensitivity_report",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "search_log_records",
+      "status": "pass"
+    },
+    {
+      "blockers": [],
+      "name": "guardrail_audit",
+      "status": "pass"
+    }
+  ],
+  "inputs": {
+    "guardrail_audit": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\m3_experiment_guardrails_audit.json",
+    "pnl_report": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\pilots\\dec_2024_daily_union_pilot_pnl_m3_report.md",
+    "pnl_summary": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\pilots\\dec_2024_daily_union_pilot_pnl_m3_summary.json",
+    "search_log": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\experiments\\search_logs\\jan_2024_pilot_sensitivity_search_log.jsonl",
+    "sensitivity_report": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\pilots\\jan_2024_pilot_sensitivity_report.md",
+    "sensitivity_summary": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\pilots\\jan_2024_pilot_sensitivity_summary.json"
+  },
+  "status": "pass"
+}

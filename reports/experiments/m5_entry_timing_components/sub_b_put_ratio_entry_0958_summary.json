@@ -1,0 +1,600 @@
+{
+  "big_day_dependency": {
+    "method": "remove_top_and_bottom_5pct_by_implementable_pnl",
+    "original_closed_trades": 412,
+    "original_sharpe_proxy": -0.113663,
+    "original_total_implementable_pnl": -5855.44,
+    "removed_each_side": 21,
+    "removed_trade_count": 42,
+    "retained_closed_trades": 370,
+    "retained_sharpe_proxy": -0.252319,
+    "retained_total_implementable_pnl": -9105.4,
+    "status": "pass"
+  },
+  "candidate_days": 444,
+  "close_fallback": "nearest_1545_window",
+  "closed_trades": 412,
+  "dataset_count": 32,
+  "datasets": [
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_03\\spy_bar.jsonl",
+      "closed_trades": 4,
+      "label": "insample_2023_03",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_03\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 4
+      },
+      "total_cost_drag": 38.48,
+      "total_implementable_pnl": -236.48,
+      "total_mid_pnl": -198.0,
+      "trading_days": 4
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_04\\spy_bar.jsonl",
+      "closed_trades": 19,
+      "label": "insample_2023_04",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_04\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 19
+      },
+      "total_cost_drag": 198.28,
+      "total_implementable_pnl": 30.72,
+      "total_mid_pnl": 229.0,
+      "trading_days": 19
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_05\\spy_bar.jsonl",
+      "closed_trades": 21,
+      "label": "insample_2023_05",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_05\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 21,
+        "missing_leg_close_quotes": 1
+      },
+      "total_cost_drag": 217.02,
+      "total_implementable_pnl": -347.52,
+      "total_mid_pnl": -130.5,
+      "trading_days": 22
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_06\\spy_bar.jsonl",
+      "closed_trades": 21,
+      "label": "insample_2023_06",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_06\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 21
+      },
+      "total_cost_drag": 203.52,
+      "total_implementable_pnl": -1093.52,
+      "total_mid_pnl": -890.0,
+      "trading_days": 21
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_07\\spy_bar.jsonl",
+      "closed_trades": 19,
+      "label": "insample_2023_07",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_07\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 19,
+        "missing_close_quotes": 1
+      },
+      "total_cost_drag": 191.28,
+      "total_implementable_pnl": -474.28,
+      "total_mid_pnl": -283.0,
+      "trading_days": 20
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_08\\spy_bar.jsonl",
+      "closed_trades": 23,
+      "label": "insample_2023_08",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_08\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 23
+      },
+      "total_cost_drag": 235.76,
+      "total_implementable_pnl": 658.24,
+      "total_mid_pnl": 894.0,
+      "trading_days": 23
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_09\\spy_bar.jsonl",
+      "closed_trades": 20,
+      "label": "insample_2023_09",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_09\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_cost_drag": 219.4,
+      "total_implementable_pnl": 563.6,
+      "total_mid_pnl": 783.0,
+      "trading_days": 20
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_10\\spy_bar.jsonl",
+      "closed_trades": 22,
+      "label": "insample_2023_10",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_10\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 22
+      },
+      "total_cost_drag": 255.14,
+      "total_implementable_pnl": 451.36,
+      "total_mid_pnl": 706.5,
+      "trading_days": 22
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_11\\spy_bar.jsonl",
+      "closed_trades": 20,
+      "label": "insample_2023_11",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_11\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 20,
+        "missing_close_quotes": 1
+      },
+      "total_cost_drag": 222.9,
+      "total_implementable_pnl": -897.4,
+      "total_mid_pnl": -674.5,
+      "trading_days": 21
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_12\\spy_bar.jsonl",
+      "closed_trades": 20,
+      "label": "insample_2023_12",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\insample_2023_12\\option_quote.jsonl",
+      "split": "in_sample",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_cost_drag": 212.4,
+      "total_implementable_pnl": -378.4,
+      "total_mid_pnl": -166.0,
+      "trading_days": 20
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\one_month_pilot\\spy_bar.jsonl",
+      "closed_trades": 0,
+      "label": "oos_2024_01",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\one_month_pilot\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "structure_unavailable": 21
+      },
+      "total_cost_drag": 0,
+      "total_implementable_pnl": 0,
+      "total_mid_pnl": 0,
+      "trading_days": 21
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_2025\\spy_bar.jsonl",
+      "closed_trades": 20,
+      "label": "oos_2024_02",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_2025\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_cost_drag": 191.9,
+      "total_implementable_pnl": -1311.4,
+      "total_mid_pnl": -1119.5,
+      "trading_days": 20
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_03\\spy_bar.jsonl",
+      "closed_trades": 20,
+      "label": "oos_2024_03",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_03\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20
+      },
+      "total_cost_drag": 221.4,
+      "total_implementable_pnl": -590.4,
+      "total_mid_pnl": -369.0,
+      "trading_days": 20
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_04\\spy_bar.jsonl",
+      "closed_trades": 20,
+      "label": "oos_2024_04",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_04\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20,
+        "missing_leg_close_quotes": 2
+      },
+      "total_cost_drag": 270.9,
+      "total_implementable_pnl": -23.4,
+      "total_mid_pnl": 247.5,
+      "trading_days": 22
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_05\\spy_bar.jsonl",
+      "closed_trades": 22,
+      "label": "oos_2024_05",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_05\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 22
+      },
+      "total_cost_drag": 234.64,
+      "total_implementable_pnl": -685.64,
+      "total_mid_pnl": -451.0,
+      "trading_days": 22
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_06\\spy_bar.jsonl",
+      "closed_trades": 17,
+      "label": "oos_2024_06",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_06\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 17,
+        "missing_leg_close_quotes": 2
+      },
+      "total_cost_drag": 178.04,
+      "total_implementable_pnl": -695.04,
+      "total_mid_pnl": -517.0,
+      "trading_days": 19
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_partial\\spy_bar.jsonl",
+      "closed_trades": 8,
+      "label": "oos_2024_07_partial",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_partial\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 8,
+        "missing_close_quotes": 1
+      },
+      "total_cost_drag": 90.46,
+      "total_implementable_pnl": -31.96,
+      "total_mid_pnl": 58.5,
+      "trading_days": 9
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\spy_bar.jsonl",
+      "closed_trades": 5,
+      "label": "oos_2024_07_chunk3",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk3\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_cost_drag": 66.1,
+      "total_implementable_pnl": 773.4,
+      "total_mid_pnl": 839.5,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk4\\spy_bar.jsonl",
+      "closed_trades": 5,
+      "label": "oos_2024_07_chunk4",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk4\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_cost_drag": 54.1,
+      "total_implementable_pnl": -11.6,
+      "total_mid_pnl": 42.5,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk5\\spy_bar.jsonl",
+      "closed_trades": 3,
+      "label": "oos_2024_07_chunk5",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_07_intraday_exit_30m_chunk5\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 3
+      },
+      "total_cost_drag": 32.86,
+      "total_implementable_pnl": 26.64,
+      "total_mid_pnl": 59.5,
+      "trading_days": 3
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk1\\spy_bar.jsonl",
+      "closed_trades": 2,
+      "label": "oos_2024_08_chunk1",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk1\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 2
+      },
+      "total_cost_drag": 92.24,
+      "total_implementable_pnl": -134.24,
+      "total_mid_pnl": -42.0,
+      "trading_days": 2
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk2\\spy_bar.jsonl",
+      "closed_trades": 5,
+      "label": "oos_2024_08_chunk2",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk2\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_cost_drag": 96.1,
+      "total_implementable_pnl": -285.6,
+      "total_mid_pnl": -189.5,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\spy_bar.jsonl",
+      "closed_trades": 5,
+      "label": "oos_2024_08_chunk3",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_cost_drag": 47.6,
+      "total_implementable_pnl": -574.6,
+      "total_mid_pnl": -527.0,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk4\\spy_bar.jsonl",
+      "closed_trades": 5,
+      "label": "oos_2024_08_chunk4",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk4\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_cost_drag": 65.6,
+      "total_implementable_pnl": 185.4,
+      "total_mid_pnl": 251.0,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk5\\spy_bar.jsonl",
+      "closed_trades": 5,
+      "label": "oos_2024_08_chunk5",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk5\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_cost_drag": 60.6,
+      "total_implementable_pnl": 149.4,
+      "total_mid_pnl": 210.0,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk1\\spy_bar.jsonl",
+      "closed_trades": 4,
+      "label": "oos_2024_09_chunk1",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk1\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 4
+      },
+      "total_cost_drag": 81.98,
+      "total_implementable_pnl": 573.52,
+      "total_mid_pnl": 655.5,
+      "trading_days": 4
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk2\\spy_bar.jsonl",
+      "closed_trades": 4,
+      "label": "oos_2024_09_chunk2",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk2\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 4,
+        "missing_leg_close_quotes": 1
+      },
+      "total_cost_drag": 37.48,
+      "total_implementable_pnl": -469.48,
+      "total_mid_pnl": -432.0,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk3\\spy_bar.jsonl",
+      "closed_trades": 5,
+      "label": "oos_2024_09_chunk3",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk3\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 5
+      },
+      "total_cost_drag": 51.1,
+      "total_implementable_pnl": -124.6,
+      "total_mid_pnl": -73.5,
+      "trading_days": 5
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_remainder_daily_union\\spy_bar.jsonl",
+      "closed_trades": 6,
+      "label": "oos_2024_09_remainder",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_09_remainder_daily_union\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 6
+      },
+      "total_cost_drag": 68.22,
+      "total_implementable_pnl": -93.72,
+      "total_mid_pnl": -25.5,
+      "trading_days": 6
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_10_daily_union\\spy_bar.jsonl",
+      "closed_trades": 23,
+      "label": "oos_2024_10",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_10_daily_union\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 23
+      },
+      "total_cost_drag": 257.26,
+      "total_implementable_pnl": 90.24,
+      "total_mid_pnl": 347.5,
+      "trading_days": 23
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_11_daily_union\\spy_bar.jsonl",
+      "closed_trades": 19,
+      "label": "oos_2024_11",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_11_daily_union\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 19,
+        "missing_close_quotes": 1
+      },
+      "total_cost_drag": 217.78,
+      "total_implementable_pnl": -485.28,
+      "total_mid_pnl": -267.5,
+      "trading_days": 20
+    },
+    {
+      "bar_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_12_daily_union\\spy_bar.jsonl",
+      "closed_trades": 20,
+      "label": "oos_2024_12",
+      "quote_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\databento\\oos_2024_12_daily_union\\option_quote.jsonl",
+      "split": "oos",
+      "status_counts": {
+        "closed_forced_1545": 20,
+        "missing_close_quotes": 1
+      },
+      "total_cost_drag": 276.9,
+      "total_implementable_pnl": -413.4,
+      "total_mid_pnl": -136.5,
+      "trading_days": 21
+    }
+  ],
+  "entry_time": "09:58:00",
+  "exit_model": "forced_close_only",
+  "feasibility": {
+    "all_trades_fit_20_risk_budget": false,
+    "all_trades_fit_300_allocation": false,
+    "allocation_300_feasible_count": 0,
+    "checked_trades": 412,
+    "risk_budget_20_feasible_count": 0
+  },
+  "fee_per_contract": 0.64,
+  "fill_model": "half_spread",
+  "metrics": {
+    "average_trade_pnl": -14.2122,
+    "es95": -160.6438,
+    "es99": -237.52,
+    "max_drawdown": -5.488867,
+    "payoff_ratio": 1.782,
+    "sharpe_proxy": 0.050012,
+    "sortino_proxy": 0.606649,
+    "total_cost_drag": 4687.44,
+    "total_implementable_pnl": -5855.44,
+    "total_mid_pnl": -1168.0,
+    "trade_count": 412,
+    "win_rate": 0.2985,
+    "worst_day_loss": -463.12
+  },
+  "sample_adequacy": {
+    "closed_trades": 412,
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "minimum_trade_count_prior": 500,
+    "mintrl_status": "pending_return_distribution",
+    "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+    "psr_status": "pending_return_distribution"
+  },
+  "scenario_id": "sub_b_put_ratio_entry_0958",
+  "skipped_trades": 0,
+  "splits": {
+    "in_sample": {
+      "candidate_days": 192,
+      "closed_trades": 189,
+      "dataset_count": 10,
+      "metrics": {
+        "average_trade_pnl": -9.12,
+        "es95": -119.52,
+        "es99": -134.12,
+        "max_drawdown": -2.049132,
+        "payoff_ratio": 2.133,
+        "sharpe_proxy": 0.073355,
+        "sortino_proxy": 1.01046,
+        "total_cost_drag": 1994.18,
+        "total_implementable_pnl": -1723.68,
+        "total_mid_pnl": 270.5,
+        "trade_count": 189,
+        "win_rate": 0.2804,
+        "worst_day_loss": -139.12
+      },
+      "sample_adequacy": {
+        "closed_trades": 189,
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_trade_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "status_counts": {
+        "closed_forced_1545": 189,
+        "missing_close_quotes": 2,
+        "missing_leg_close_quotes": 1
+      }
+    },
+    "oos": {
+      "candidate_days": 252,
+      "closed_trades": 223,
+      "dataset_count": 22,
+      "metrics": {
+        "average_trade_pnl": -18.5281,
+        "es95": -182.37,
+        "es99": -286.4533,
+        "max_drawdown": -4.4694,
+        "payoff_ratio": 1.5419,
+        "sharpe_proxy": -0.035296,
+        "sortino_proxy": -0.023799,
+        "total_cost_drag": 2693.26,
+        "total_implementable_pnl": -4131.76,
+        "total_mid_pnl": -1438.5,
+        "trade_count": 223,
+        "win_rate": 0.3139,
+        "worst_day_loss": -463.12
+      },
+      "sample_adequacy": {
+        "closed_trades": 223,
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "minimum_trade_count_prior": 500,
+        "mintrl_status": "pending_return_distribution",
+        "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+        "psr_status": "pending_return_distribution"
+      },
+      "status_counts": {
+        "closed_forced_1545": 223,
+        "missing_close_quotes": 3,
+        "missing_leg_close_quotes": 5,
+        "structure_unavailable": 21
+      }
+    }
+  },
+  "status_counts": {
+    "closed_forced_1545": 412,
+    "missing_close_quotes": 5,
+    "missing_leg_close_quotes": 6,
+    "structure_unavailable": 21
+  },
+  "subsystem": "sub_b",
+  "timing_axis": "entry_snapshot_time",
+  "trial_index": 10
+}

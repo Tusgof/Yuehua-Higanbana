@@ -1,0 +1,1419 @@
+{
+  "approval_note": null,
+  "created_at_utc": "2026-07-01T02:50:27+00:00",
+  "decision": {
+    "block_cost_usd": 25.0,
+    "reason": "Estimated cost $2.178158 is below review threshold $5.0.",
+    "review_cost_usd": 5.0,
+    "status": "pass"
+  },
+  "downloaded": [
+    {
+      "bytes": 1769335,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_entry_a_0935.dbn.zst",
+      "sha256": "ea8a65f5a6db7ec3fd99fc8b28c13b4826ab2cfd7cd1eaad3d3170f93f0f29cb",
+      "source": "downloaded",
+      "window": "2024-08-12_entry_a_0935"
+    },
+    {
+      "bytes": 2176803,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_entry_b_1000.dbn.zst",
+      "sha256": "9192ca118c8a24c38f9664b014d4bc335e4b83ef23d773a5cb73f8be91fb607f",
+      "source": "downloaded",
+      "window": "2024-08-12_entry_b_1000"
+    },
+    {
+      "bytes": 2248000,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1030.dbn.zst",
+      "sha256": "79cba95c4c325233187d3c01f49221563352cf35e77f0944a09075073f770130",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1030"
+    },
+    {
+      "bytes": 2316742,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1100.dbn.zst",
+      "sha256": "7f48b216de92824c2ecccde4e68a0e99f20bebd391364d20af060bb7e0df85fb",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1100"
+    },
+    {
+      "bytes": 2353032,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1130.dbn.zst",
+      "sha256": "aa47b0b7b4f25aa34e4c4de8f1cc6cf650c87b37688d68dedfe57e6b6f299bd8",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1130"
+    },
+    {
+      "bytes": 2395313,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1200.dbn.zst",
+      "sha256": "7719527c466d887728e679b458f1b3c98accb0ab6b56bfaa58da66363e379e86",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1200"
+    },
+    {
+      "bytes": 2440836,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1230.dbn.zst",
+      "sha256": "574d93550f0ed0002984b20bafd178941ddd6282a06dac652cfa47f716cd38b4",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1230"
+    },
+    {
+      "bytes": 2428128,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1300.dbn.zst",
+      "sha256": "180d944ff4cbdbf90889c3ecaf7baf4e946267c422a03e2e1b8617184e459531",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1300"
+    },
+    {
+      "bytes": 2456719,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1330.dbn.zst",
+      "sha256": "fe963275e60ba797a58723380ab0b55726333c7c61eaec77443f4524c8e26d41",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1330"
+    },
+    {
+      "bytes": 2461912,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1400.dbn.zst",
+      "sha256": "eb3819760e5e59ac79b754f11c544c1702aff7e2f5165d6dc41b84c2a5fed726",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1400"
+    },
+    {
+      "bytes": 2484808,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1430.dbn.zst",
+      "sha256": "edea0b199ae48228618350791463a88559e473455039867deae08f618515f429",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1430"
+    },
+    {
+      "bytes": 2494372,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1500.dbn.zst",
+      "sha256": "4b1e551df10de6ea8b8b246f004e3d0b9399a43895dcee46d82f0b97fefac6a9",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1500"
+    },
+    {
+      "bytes": 2503437,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1530.dbn.zst",
+      "sha256": "d205a43b8a20d89e8b7605abd9c130bbd2583dfac6e2b095bf213fef972f834c",
+      "source": "downloaded",
+      "window": "2024-08-12_exit_check_1530"
+    },
+    {
+      "bytes": 2512940,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_forced_close_1545.dbn.zst",
+      "sha256": "b8d56060f5348227cebb5a94a69a9de382b09479900b788e566d5aa938af9837",
+      "source": "downloaded",
+      "window": "2024-08-12_forced_close_1545"
+    },
+    {
+      "bytes": 1770240,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_entry_a_0935.dbn.zst",
+      "sha256": "6a8a3b7f52a9c9fd5d2ce5f4fbbe5832c110d30690a721cb9be6f040f9a331dc",
+      "source": "downloaded",
+      "window": "2024-08-13_entry_a_0935"
+    },
+    {
+      "bytes": 2159654,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_entry_b_1000.dbn.zst",
+      "sha256": "a33f42940400ed58079a55d588e9afc03b6f387f6be1cd35fa3776b70c9d85bb",
+      "source": "downloaded",
+      "window": "2024-08-13_entry_b_1000"
+    },
+    {
+      "bytes": 2205405,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1030.dbn.zst",
+      "sha256": "35bfa1bf33f9a7653edea64fc71d3faabf4eb4d77ca6d6f329fbbbf96070ca77",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1030"
+    },
+    {
+      "bytes": 2258144,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1100.dbn.zst",
+      "sha256": "0088fc14803ff86f9675ca7b17a8e44a0f255bed2bc545c7e4d31252b99a9787",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1100"
+    },
+    {
+      "bytes": 2290902,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1130.dbn.zst",
+      "sha256": "c843d8b80fc45e5aeaaf7855d80501247d4603c07bceab94bdfffb5bf0fe2426",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1130"
+    },
+    {
+      "bytes": 2307947,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1200.dbn.zst",
+      "sha256": "af783c87c65f961a7b5f16f79dd9ba1763513399c5a870c2a04e0bb3f850a36e",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1200"
+    },
+    {
+      "bytes": 2339501,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1230.dbn.zst",
+      "sha256": "9058163da339c99cb6ac15fb596f1344171687e090d823bcd950b82769a6bd5d",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1230"
+    },
+    {
+      "bytes": 2378949,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1300.dbn.zst",
+      "sha256": "440dacca6e6b802054aff506446494fca123a50a6ff949a8621f7869589b39de",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1300"
+    },
+    {
+      "bytes": 2377689,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1330.dbn.zst",
+      "sha256": "e7aee105232a1426a553e2b37a2e2d539f02ae1a8d46803977a76cde6fbd0f9e",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1330"
+    },
+    {
+      "bytes": 2397303,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1400.dbn.zst",
+      "sha256": "7e0a5b75ad2df9548dc00b363f531d0ff1d08fd308f328a069612e1873d353cb",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1400"
+    },
+    {
+      "bytes": 2414255,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1430.dbn.zst",
+      "sha256": "e6ad423f555f6e0c2610c307c136a8b05133387b77e0bba67f53d35cdce4d416",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1430"
+    },
+    {
+      "bytes": 2427741,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1500.dbn.zst",
+      "sha256": "3550692e49c817ca239011c84480bcb72f6137d440d4cf1f74e885335034962b",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1500"
+    },
+    {
+      "bytes": 2442517,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1530.dbn.zst",
+      "sha256": "6e134020c28dca1a5b7df7f6f103e9558139cbd74f6c72935f12e9337055ce1a",
+      "source": "downloaded",
+      "window": "2024-08-13_exit_check_1530"
+    },
+    {
+      "bytes": 2439492,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_forced_close_1545.dbn.zst",
+      "sha256": "cd723cb9addf5d13a9f0cdcc56535043625f9c2821a8ada0fd91d9c46185c6d1",
+      "source": "downloaded",
+      "window": "2024-08-13_forced_close_1545"
+    },
+    {
+      "bytes": 1747411,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_entry_a_0935.dbn.zst",
+      "sha256": "383c348859f65748287be15e9b03cc0e5340ff2be45f3b12f37d5decf771616d",
+      "source": "downloaded",
+      "window": "2024-08-14_entry_a_0935"
+    },
+    {
+      "bytes": 2084511,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_entry_b_1000.dbn.zst",
+      "sha256": "fe793d98b60968afae312241d97be4927e3e3fcb5702e43917fe90d565dbe599",
+      "source": "downloaded",
+      "window": "2024-08-14_entry_b_1000"
+    },
+    {
+      "bytes": 2125524,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1030.dbn.zst",
+      "sha256": "bd12b9393eae33722b809ef48950fef30e9836a48dd3eb8207a33358554cc372",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1030"
+    },
+    {
+      "bytes": 2193148,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1100.dbn.zst",
+      "sha256": "166a42e62237620ec8421609a58c9df5e5955fda46ce1161e958886e8e4c809e",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1100"
+    },
+    {
+      "bytes": 2223586,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1130.dbn.zst",
+      "sha256": "0960993ad91726e40e99b077c9e8f1e4fb573de8f52f28ac6b83387bbacdfda6",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1130"
+    },
+    {
+      "bytes": 2245210,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1200.dbn.zst",
+      "sha256": "c0bed27c2398d78a57d43e177916b528e9c55728d84d95606c6477b85c9fb224",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1200"
+    },
+    {
+      "bytes": 2279516,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1230.dbn.zst",
+      "sha256": "0dc3c67a339acf45662b4b8e267bbb877f60691b603d7f5e1149d63fba0a2d46",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1230"
+    },
+    {
+      "bytes": 2291801,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1300.dbn.zst",
+      "sha256": "3f73fdf8f3c03ea4ab2b4166cd2c62d3a7e67b350538ed4efecdf3dbfdee98aa",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1300"
+    },
+    {
+      "bytes": 2288679,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1330.dbn.zst",
+      "sha256": "bcbcc40fda7d1ee15f2927d9756b49f7a52863bb60b88de7aae957a079de936d",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1330"
+    },
+    {
+      "bytes": 2314629,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1400.dbn.zst",
+      "sha256": "e301b2aea7ce4f6907b0894f895eda4b9779a07a707817979414e9414f67cfc1",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1400"
+    },
+    {
+      "bytes": 2312852,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1430.dbn.zst",
+      "sha256": "a090b0bc6a5bce94edbf2d59de06a635827f58752fbaf05d951c18f63ba96f07",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1430"
+    },
+    {
+      "bytes": 2327371,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1500.dbn.zst",
+      "sha256": "1ee6267ba793f6d2e2a5b1409400c98f7dc26e749d0a1dc630e94a161888607e",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1500"
+    },
+    {
+      "bytes": 2345300,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1530.dbn.zst",
+      "sha256": "16fb922f757815b9877a5ebba23445e6a6ff8858e5e1d8632f84754f58c69401",
+      "source": "downloaded",
+      "window": "2024-08-14_exit_check_1530"
+    },
+    {
+      "bytes": 2350463,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_forced_close_1545.dbn.zst",
+      "sha256": "814097c8429d729f4a0511b4434a7967f5fdf80bb41fab38f267664ca53b9fab",
+      "source": "downloaded",
+      "window": "2024-08-14_forced_close_1545"
+    },
+    {
+      "bytes": 1767139,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_entry_a_0935.dbn.zst",
+      "sha256": "56284770102a306d01e4165f50c6f9d237695f1cf75a1bf2e7c185ac19ea3297",
+      "source": "downloaded",
+      "window": "2024-08-15_entry_a_0935"
+    },
+    {
+      "bytes": 2118297,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_entry_b_1000.dbn.zst",
+      "sha256": "6d470faf413b9308c87dc194b99feec612d68923e1a94d30d88d6f7ecd4f9265",
+      "source": "downloaded",
+      "window": "2024-08-15_entry_b_1000"
+    },
+    {
+      "bytes": 2180978,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1030.dbn.zst",
+      "sha256": "4a9749073f63cb3cb8ad48b045c6d1743d956b15392846b38614bdfd2c5f3bd8",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1030"
+    },
+    {
+      "bytes": 2239411,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1100.dbn.zst",
+      "sha256": "468be37d9c32f361e28a8a02eea945daf77beb7dff47563221e7fbb619f08f10",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1100"
+    },
+    {
+      "bytes": 2253735,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1130.dbn.zst",
+      "sha256": "a6bb32ae162bfced30a944ac11414d277594ad45e8ab9bae9462597d6cd00dc3",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1130"
+    },
+    {
+      "bytes": 2290414,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1200.dbn.zst",
+      "sha256": "e68ba3d949984d084a052f0cb938297f1c80a57eb1de73a13c0a543f922fae90",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1200"
+    },
+    {
+      "bytes": 2298725,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1230.dbn.zst",
+      "sha256": "af2aaea095b25b2be36c21c4127e13bc52cd1cf7dfa21fca790e4f1964bdcbf1",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1230"
+    },
+    {
+      "bytes": 2342211,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1300.dbn.zst",
+      "sha256": "d133a02930afe309eca780ee4fd7e91d6d93ec23d0ca2e79a91a6d993943f0db",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1300"
+    },
+    {
+      "bytes": 2347430,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1330.dbn.zst",
+      "sha256": "dca46ccb3dc650ce9da5ff2bba7936294f8986cc7e474951507fc7df767d5633",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1330"
+    },
+    {
+      "bytes": 2363521,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1400.dbn.zst",
+      "sha256": "bd20cd31e0f0e74a03349edc575593de17a9709b7ec79bd8df75f50e7955d974",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1400"
+    },
+    {
+      "bytes": 2366943,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1430.dbn.zst",
+      "sha256": "b13ad9846ce7654a861ef815b96f020012c6b60497feaedfcdbc2604e1716bb8",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1430"
+    },
+    {
+      "bytes": 2381175,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1500.dbn.zst",
+      "sha256": "961f9185c7e6642ddb8fda479633eedf91ac4e4d4d0c5c96bad596b99fb37e1c",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1500"
+    },
+    {
+      "bytes": 2381524,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1530.dbn.zst",
+      "sha256": "41207056696dc940bda8193949eaa9b2cead65cc27360631e23a883542182900",
+      "source": "downloaded",
+      "window": "2024-08-15_exit_check_1530"
+    },
+    {
+      "bytes": 2389153,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_forced_close_1545.dbn.zst",
+      "sha256": "09f97d4419b119a4bae50557b313783b3b051fa977898589f0f1adf952ccf5a1",
+      "source": "downloaded",
+      "window": "2024-08-15_forced_close_1545"
+    },
+    {
+      "bytes": 1636682,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_entry_a_0935.dbn.zst",
+      "sha256": "1c20453c06706307eaef15040ca679fa43a5e9bb124cadcb9ae77cf3aa23357c",
+      "source": "downloaded",
+      "window": "2024-08-16_entry_a_0935"
+    },
+    {
+      "bytes": 1959634,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_entry_b_1000.dbn.zst",
+      "sha256": "ce79dded7dca48a584f7fe806e61088c937128c8b6b00f851a8842730eb648ac",
+      "source": "downloaded",
+      "window": "2024-08-16_entry_b_1000"
+    },
+    {
+      "bytes": 2054601,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1030.dbn.zst",
+      "sha256": "79faa4708b6baf0aa58a35e5d71a53e749f600136cfabce0f492c5df0595be02",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1030"
+    },
+    {
+      "bytes": 2096930,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1100.dbn.zst",
+      "sha256": "23130dbba675046d130773e82770231580e99bc7c04f494125e8f349b946c4f8",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1100"
+    },
+    {
+      "bytes": 2133792,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1130.dbn.zst",
+      "sha256": "43211ab8aa2303e377b9ffc679e81cf3fd7c37f1b43ebc9abcd0f8e4b9118bc8",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1130"
+    },
+    {
+      "bytes": 2158710,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1200.dbn.zst",
+      "sha256": "286ad0140c792d08363ae1feb7e8d0d14b4d99842d665b47e241a0d0961cc786",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1200"
+    },
+    {
+      "bytes": 2185769,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1230.dbn.zst",
+      "sha256": "d7a45951f809d6bf65b10dd4d2ac00eabc83efb3b38dcb7a75e75c1b3eebe953",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1230"
+    },
+    {
+      "bytes": 2214828,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1300.dbn.zst",
+      "sha256": "f346cf588d3195e2b8f102d622a18d58ab449cebfe15bfbe1fe6d78e93d8e282",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1300"
+    },
+    {
+      "bytes": 2230718,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1330.dbn.zst",
+      "sha256": "9c3e62c4e30dcbe5076787c570e3416cdfba56b123ca4899392861485bc63d66",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1330"
+    },
+    {
+      "bytes": 2251638,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1400.dbn.zst",
+      "sha256": "a08b5bfb0f82bd06b630d9142024bcb97c7b0dd9111a416b5aa5af0028f7adbd",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1400"
+    },
+    {
+      "bytes": 2271709,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1430.dbn.zst",
+      "sha256": "bf1363e1c29ec6e5befc29d54f5ee0702abade2a9123f0a15e8d0e5b0754fd1c",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1430"
+    },
+    {
+      "bytes": 2285544,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1500.dbn.zst",
+      "sha256": "7b2f66fb753a8f92b5dba4beada1fe6a2141a1b0a7e092dc55c807b5eb321cb5",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1500"
+    },
+    {
+      "bytes": 2288003,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1530.dbn.zst",
+      "sha256": "b09d61976dabcae665f0b11d154983f0c31eb3f29d4344445a491afef3ae38b3",
+      "source": "downloaded",
+      "window": "2024-08-16_exit_check_1530"
+    },
+    {
+      "bytes": 2295111,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_forced_close_1545.dbn.zst",
+      "sha256": "9a492775aded00598cfe440ff7b869fa0829ec1f48ae29502fabe9a121c71851",
+      "source": "downloaded",
+      "window": "2024-08-16_forced_close_1545"
+    }
+  ],
+  "items": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T13:40:00+00:00",
+      "estimated_cost_usd": 0.031024515629,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T14:05:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T14:35:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T15:05:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T15:35:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T16:05:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T16:35:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T17:05:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T17:35:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T18:05:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T18:35:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T19:05:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T19:35:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-12T19:50:00+00:00",
+      "estimated_cost_usd": 0.032657384872,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-12_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-12T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-12_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T13:40:00+00:00",
+      "estimated_cost_usd": 0.030231773853,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T14:05:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T14:35:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T15:05:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T15:35:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T16:05:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T16:35:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T17:05:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T17:35:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T18:05:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T18:35:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T19:05:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T19:35:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-13T19:50:00+00:00",
+      "estimated_cost_usd": 0.031822919846,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-13_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-13T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-13_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T13:40:00+00:00",
+      "estimated_cost_usd": 0.02967685461,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T14:05:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T14:35:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T15:05:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T15:35:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T16:05:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T16:35:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T17:05:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T17:35:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T18:05:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T18:35:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T19:05:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T19:35:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-14T19:50:00+00:00",
+      "estimated_cost_usd": 0.031238794327,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-14_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-14T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-14_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T13:40:00+00:00",
+      "estimated_cost_usd": 0.029150247574,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T14:05:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T14:35:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T15:05:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T15:35:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T16:05:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T16:35:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T17:05:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T17:35:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T18:05:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T18:35:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T19:05:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T19:35:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-15T19:50:00+00:00",
+      "estimated_cost_usd": 0.03068447113,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-15_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-15T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-15_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T13:40:00+00:00",
+      "estimated_cost_usd": 0.028249919415,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_entry_a_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T14:05:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_entry_b_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T14:35:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T15:05:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T15:35:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T16:05:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T16:35:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T17:05:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T17:35:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T18:05:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T18:35:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T19:05:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T19:35:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-08-16T19:50:00+00:00",
+      "estimated_cost_usd": 0.029736757278,
+      "output_path": "data\\raw\\spy_0dte\\databento\\oos_2024_08_intraday_exit_30m_chunk3\\2024-08-16_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2024-08-16T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-08-16_forced_close_1545"
+    }
+  ],
+  "mode": "download_complete",
+  "request_count": 70,
+  "scenario": "oos_2024_08_intraday_exit_30m_chunk3",
+  "source_cost_report": "reports\\data_cost\\databento_cost_oos_2024_08_intraday_exit_30m_chunk3.json",
+  "total_estimated_cost_usd": 2.178158
+}

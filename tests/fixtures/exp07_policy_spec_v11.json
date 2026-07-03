@@ -1,0 +1,88 @@
+{
+  "policy_version": "exp07-event-policy-v11",
+  "fixture_path": "tests/fixtures/exp07_policy_cases_v11.json",
+  "categories": [
+    {
+      "category_id": "quiet_or_normal_market",
+      "expected_decision": "allow",
+      "description": "No same-day scheduled catalyst, no systemic stress, and no elevated volatility rule hit.",
+      "rules": [
+        "VIX below 25 unless another explicit unknown or block rule fires.",
+        "VIX/VXV term structure is not inverted by the v11 threshold.",
+        "News context is quiet, already digested, future-dated, after close, or non-market operational wording."
+      ],
+      "case_ids": [
+        "quiet_vix18_normal_term_structure",
+        "very_quiet_vix13_no_news",
+        "earnings_next_week_no_catalyst_vix16",
+        "fed_remarks_yesterday_no_data_vix17",
+        "earnings_after_close_vix16",
+        "cpi_tomorrow_vix16",
+        "stress_contained_vix18",
+        "panic_bid_defensives_vix17",
+        "fomc_minutes_next_week_vix16",
+        "treasury_auction_yesterday_vix17",
+        "emergency_drill_vix14",
+        "single_stock_halt_after_close_vix16",
+        "powell_tomorrow_no_major_data_vix17",
+        "cpi_yesterday_digested_vix18",
+        "treasury_auction_tomorrow_vix16",
+        "normal_vix24_vxv25_no_news"
+      ]
+    },
+    {
+      "category_id": "scheduled_or_ambiguous_event",
+      "expected_decision": "unknown",
+      "description": "Same-day scheduled macro, earnings, auction, or ambiguous event risk where the strategy should not rely on raw LLM confidence.",
+      "rules": [
+        "Same-day CPI, PCE, jobs, FOMC, Powell, Fed decision, Treasury auction, or earnings-heavy references are unknown.",
+        "Future-dated references are allow unless same-day markers keep a relevant event active.",
+        "Prior-day scheduled references are allow unless another rule fires."
+      ],
+      "case_ids": [
+        "major_fed_event_vix21",
+        "cpi_release_pending_vix22",
+        "jobs_report_pending_vix19",
+        "earnings_heavy_calendar_vix20",
+        "pce_inflation_pending_vix18",
+        "treasury_auction_pending_vix18",
+        "cpi_next_week_fed_today_vix19",
+        "bank_stress_contained_fed_today_vix21",
+        "cpi_today_earnings_next_month_vix18"
+      ]
+    },
+    {
+      "category_id": "elevated_volatility_unclear",
+      "expected_decision": "unknown",
+      "description": "Volatility is elevated or inverted without enough evidence to classify as systemic tail risk.",
+      "rules": [
+        "VIX >= 25 is unknown unless a block rule fires.",
+        "VIX >= 20 and VIX/VXV >= 1.05 is unknown unless a block rule fires."
+      ],
+      "case_ids": [
+        "high_vol_no_clear_news_vix27",
+        "high_vol_no_news_vix26",
+        "vix_vxv_inversion_vix24"
+      ]
+    },
+    {
+      "category_id": "systemic_or_disorderly_tail_risk",
+      "expected_decision": "block",
+      "description": "Systemic, disorderly, SPY/index halt, war, crash, panic, or VIX >= 30 risk.",
+      "rules": [
+        "VIX >= 30 is block.",
+        "Systemic banking crisis, war shock, market panic, index futures halt, or SPY ETF halt risk is block.",
+        "Non-systemic or future/after-close halt references may be allow when explicitly scoped away from SPY intraday risk."
+      ],
+      "case_ids": [
+        "systemic_banking_panic_vix34",
+        "war_shock_futures_limit_vix42",
+        "regional_bank_halt_vix24",
+        "market_panic_vix28",
+        "banking_stress_spreads_systemic_vix24",
+        "futures_halt_rumor_vix29",
+        "spy_etf_halt_risk_vix23"
+      ]
+    }
+  ]
+}

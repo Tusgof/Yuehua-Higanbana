@@ -1,0 +1,128 @@
+{
+  "blockers": [],
+  "experiment_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports",
+  "git": {
+    "blockers": [],
+    "clean": true,
+    "is_repo": true,
+    "local_head": "9361dcda71db094315af0af46fabb1e0f59d4cbb",
+    "remote_head": "9361dcda71db094315af0af46fabb1e0f59d4cbb",
+    "remote_matches_expected": true
+  },
+  "invalid_log_filenames": [],
+  "naming_convention": "NNN-higanbana-clear-topic-slug.md",
+  "required_logs": [
+    {
+      "expected_pattern": "???-higanbana-exit-behavior-diagnostic-real-data*.md",
+      "matched_logs": [
+        "research_log\\003-higanbana-exit-behavior-diagnostic-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m4_exit_behavior_diagnostic_summary",
+      "summary_path": "reports\\baselines\\m4_exit_behavior_diagnostic_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-orb-baseline-real-data*.md",
+      "matched_logs": [
+        "research_log\\001-higanbana-orb-baseline-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "subsystem_a_orb_baseline_summary",
+      "summary_path": "reports\\baselines\\subsystem_a_orb_baseline_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-put-ratio-feasibility-real-data*.md",
+      "matched_logs": [
+        "research_log\\002-higanbana-put-ratio-feasibility-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "subsystem_b_put_ratio_feasibility_summary",
+      "summary_path": "reports\\baselines\\subsystem_b_put_ratio_feasibility_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-entry-timing-sensitivity-real-data*.md",
+      "matched_logs": [
+        "research_log\\006-higanbana-entry-timing-sensitivity-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m5_entry_timing_sensitivity_summary",
+      "summary_path": "reports\\experiments\\m5_entry_timing_sensitivity_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-exit-target-stop-sensitivity-real-data*.md",
+      "matched_logs": [
+        "research_log\\007-higanbana-exit-target-stop-sensitivity-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m5_exit_target_stop_sensitivity_summary",
+      "summary_path": "reports\\experiments\\m5_exit_target_stop_sensitivity_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-portfolio-construction-diagnostic-real-data*.md",
+      "matched_logs": [
+        "research_log\\009-higanbana-portfolio-construction-diagnostic-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m5_portfolio_construction_diagnostic_summary",
+      "summary_path": "reports\\experiments\\m5_portfolio_construction_diagnostic_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-regime-filter-sensitivity-real-data*.md",
+      "matched_logs": [
+        "research_log\\008-higanbana-regime-filter-sensitivity-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m5_regime_filter_sensitivity_summary",
+      "summary_path": "reports\\experiments\\m5_regime_filter_sensitivity_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-strike-selection-sensitivity-real-data*.md",
+      "matched_logs": [
+        "research_log\\005-higanbana-strike-selection-sensitivity-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m5_strike_selection_sensitivity_summary",
+      "summary_path": "reports\\experiments\\m5_strike_selection_sensitivity_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-structural-break-deferred-real-data*.md",
+      "matched_logs": [
+        "research_log\\010-higanbana-structural-break-deferred-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m5_structural_break_assessment_summary",
+      "summary_path": "reports\\experiments\\m5_structural_break_assessment_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-transaction-cost-latency-sensitivity-real-data*.md",
+      "matched_logs": [
+        "research_log\\004-higanbana-transaction-cost-latency-sensitivity-real-data.md"
+      ],
+      "present": true,
+      "summary_id": "m5_transaction_cost_latency_sensitivity_summary",
+      "summary_path": "reports\\experiments\\m5_transaction_cost_latency_sensitivity_summary.json"
+    }
+  ],
+  "research_log_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\research_log",
+  "sequence": {
+    "blockers": [],
+    "contiguous_from_001": true,
+    "existing_log_count": 10,
+    "next_filename_prefix": "011-higanbana-",
+    "next_log_number": "011",
+    "sequence_issues": [],
+    "valid_log_numbers": [
+      "001",
+      "002",
+      "003",
+      "004",
+      "005",
+      "006",
+      "007",
+      "008",
+      "009",
+      "010"
+    ]
+  },
+  "status": "pass"
+}

@@ -1,0 +1,90 @@
+{
+  "average_net_pnl": -40.0,
+  "best_trade": -40.0,
+  "candidate_days": 1,
+  "close_fallback": "strict_1545",
+  "closed_trades": 1,
+  "evidence_warning": "This is a one-month pilot with too few trades for strategy acceptance.",
+  "exit_model": "forced_close_only",
+  "fee_per_contract": 0.0,
+  "fill_model": "mid",
+  "max_drawdown": -0.04,
+  "mode": "pilot_pnl_only",
+  "sharpe_proxy": null,
+  "skipped_trades": 0,
+  "status_counts": {
+    "closed_forced_1545": 1
+  },
+  "total_net_pnl": -40.0,
+  "trades": [
+    {
+      "close_time_et": "2023-05-31T15:45:00-04:00",
+      "close_timestamps_by_leg_id": {
+        "leg-44c17ac6ab54f911": "2023-05-31T15:45:00-04:00",
+        "leg-bbd2d6ee7227a105": "2023-05-31T15:45:00-04:00"
+      },
+      "closing_prices_by_leg_id": {
+        "leg-44c17ac6ab54f911": 0.01,
+        "leg-bbd2d6ee7227a105": 0.01
+      },
+      "date": "2023-05-31",
+      "direction": "put",
+      "entry_debit": 0.4,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2023-05-31-leg-bbd2d6ee7227a105",
+          "fill_model": "mid",
+          "leg_id": "leg-bbd2d6ee7227a105",
+          "price": 0.625,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2023-05-31-leg-44c17ac6ab54f911",
+          "fill_model": "mid",
+          "leg_id": "leg-44c17ac6ab54f911",
+          "price": 0.225,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2023-05-31T09:35:00-04:00",
+      "exit_model": "forced_close_only",
+      "exit_value": 0.0,
+      "fees": 0.0,
+      "gross_pnl": -40.0,
+      "legs": [
+        {
+          "expiration_date": "2023-05-31",
+          "leg_id": "leg-bbd2d6ee7227a105",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 417.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2023-05-31",
+          "leg_id": "leg-44c17ac6ab54f911",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 415.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 40.0,
+      "net_pnl": -40.0,
+      "reasons": [
+        "entry at mid; exit=forced_1545; close_fallback=strict_1545"
+      ],
+      "status": "closed_forced_1545"
+    }
+  ],
+  "win_rate": 0.0,
+  "worst_trade": -40.0
+}

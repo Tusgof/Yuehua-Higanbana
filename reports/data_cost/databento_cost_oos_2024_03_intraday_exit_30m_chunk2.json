@@ -1,0 +1,1009 @@
+{
+  "decision": {
+    "block_cost_usd": 25.0,
+    "reason": "Estimated cost $1.817626 is below review threshold $5.0.",
+    "review_cost_usd": 5.0,
+    "status": "pass"
+  },
+  "errors": [],
+  "mode": "live",
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T14:40:00+00:00",
+      "estimated_cost_usd": 0.025101602077,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T15:05:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T15:35:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T16:05:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T16:35:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T17:05:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T17:35:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T18:05:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T18:35:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T19:05:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T19:35:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T20:05:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T19:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T20:35:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T20:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-04T20:50:00+00:00",
+      "estimated_cost_usd": 0.026422739029,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-04T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-04_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T14:40:00+00:00",
+      "estimated_cost_usd": 0.025016665459,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T15:05:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T15:35:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T16:05:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T16:35:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T17:05:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T17:35:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T18:05:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T18:35:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T19:05:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T19:35:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T20:05:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T19:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T20:35:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T20:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-05T20:50:00+00:00",
+      "estimated_cost_usd": 0.026333332062,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-05T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-05_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T14:40:00+00:00",
+      "estimated_cost_usd": 0.024473071098,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T15:05:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T15:35:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T16:05:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T16:35:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T17:05:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T17:35:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T18:05:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T18:35:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T19:05:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T19:35:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T20:05:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T19:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T20:35:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T20:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-06T20:50:00+00:00",
+      "estimated_cost_usd": 0.025761127472,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-06T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-06_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T14:40:00+00:00",
+      "estimated_cost_usd": 0.024235248566,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T15:05:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T15:35:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T16:05:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T16:35:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T17:05:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T17:35:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T18:05:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T18:35:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T19:05:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T19:35:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T20:05:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T19:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T20:35:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T20:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-07T20:50:00+00:00",
+      "estimated_cost_usd": 0.025510787964,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-07T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-07_forced_close_1545"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T14:40:00+00:00",
+      "estimated_cost_usd": 0.024954378605,
+      "note": "10-minute window around 9:35 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_entry_a_0935"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T15:05:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 10:00 AM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_entry_b_1000"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T15:35:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 10:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1030"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T16:05:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 11:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1100"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T16:35:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 11:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1130"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T17:05:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 12:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1200"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T17:35:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 12:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1230"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T18:05:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 13:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1300"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T18:35:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 13:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1330"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T19:05:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 14:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1400"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T19:35:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 14:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T20:05:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 15:00 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T19:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1500"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T20:35:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 15:30 ET for target/stop checks",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T20:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_exit_check_1530"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-03-08T20:50:00+00:00",
+      "estimated_cost_usd": 0.026267766953,
+      "note": "10-minute window around 3:45 PM ET",
+      "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "schema": "cbbo-1m",
+      "start": "2024-03-08T20:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-03-08_forced_close_1545"
+    }
+  ],
+  "summary": {
+    "scenarios": {
+      "oos_2024_03_intraday_exit_30m_chunk2": {
+        "dataset": "OPRA.PILLAR",
+        "first_start": "2024-03-04T14:30:00+00:00",
+        "last_end": "2024-03-08T20:50:00+00:00",
+        "request_count": 70,
+        "schema": "cbbo-1m",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ]
+      }
+    },
+    "total_request_count": 70
+  },
+  "total_estimated_cost_usd": 1.817626
+}

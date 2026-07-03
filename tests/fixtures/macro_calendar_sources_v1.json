@@ -1,0 +1,78 @@
+{
+  "source_plan_version": "macro-calendar-sources-v1",
+  "timezone": "America/New_York",
+  "minimum_required_event_types": [
+    "FOMC_DECISION",
+    "FOMC_MINUTES",
+    "CPI",
+    "NFP",
+    "PCE",
+    "JOLTS",
+    "ISM_MANUFACTURING",
+    "ISM_SERVICES",
+    "RETAIL_SALES"
+  ],
+  "sources": [
+    {
+      "source_id": "federal_reserve_fomc_calendar",
+      "provider": "Federal Reserve",
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "event_types": ["FOMC_DECISION", "FOMC_MINUTES"],
+      "default_importance": "high",
+      "release_time_et": "14:00",
+      "parser_status": "planned",
+      "license_notes": "Official public Federal Reserve FOMC calendar and meeting materials."
+    },
+    {
+      "source_id": "bls_release_calendar",
+      "provider": "BLS",
+      "source_url": "https://www.bls.gov/schedule/",
+      "source_url_template": "https://www.bls.gov/schedule/{year}/home.htm",
+      "event_types": ["CPI", "NFP", "PPI", "JOLTS"],
+      "default_importance": "high",
+      "release_time_et": "source_calendar",
+      "parser_status": "planned",
+      "license_notes": "Official public BLS schedule; source page states release times are Eastern Time."
+    },
+    {
+      "source_id": "bea_release_schedule",
+      "provider": "BEA",
+      "source_url": "https://www.bea.gov/news/archive",
+      "capture_mode": "bea_pce_release_pages",
+      "output_extension": "json",
+      "event_types": ["PCE", "GDP"],
+      "default_importance": "high",
+      "release_time_et": "source_calendar",
+      "parser_status": "planned",
+      "license_notes": "Official public BEA release schedule."
+    },
+    {
+      "source_id": "ism_pmi_release_calendar",
+      "provider": "ISM",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/rob-report-calendar/",
+      "event_types": ["ISM_MANUFACTURING", "ISM_SERVICES"],
+      "default_importance": "medium",
+      "release_time_et": "10:00",
+      "parser_status": "planned",
+      "license_notes": "Official ISM release calendar for Manufacturing and Services PMI reports."
+    },
+    {
+      "source_id": "census_retail_release_schedule",
+      "provider": "U.S. Census Bureau",
+      "source_url": "https://www.census.gov/retail/marts/www/MARTSreleasedates.xls",
+      "output_extension": "xls",
+      "event_types": ["RETAIL_SALES"],
+      "default_importance": "medium",
+      "release_time_et": "source_calendar",
+      "parser_status": "planned",
+      "license_notes": "Official public Census release schedule for Monthly Retail Trade."
+    }
+  ],
+  "deferred_sources": [
+    {
+      "source_id": "trading_economics_calendar_api",
+      "provider": "Trading Economics",
+      "reason": "Commercial consolidated API. Requires explicit user approval before use."
+    }
+  ]
+}

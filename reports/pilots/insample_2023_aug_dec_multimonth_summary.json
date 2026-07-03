@@ -1,0 +1,245 @@
+{
+  "adapter_totals": {
+    "bar_rows": 54316,
+    "calendar_days": 106,
+    "candidate_ready_days": 22,
+    "quote_rows": 4093396,
+    "status_counts": {
+      "candidate_ready": 22,
+      "no_trade": 84
+    }
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "coverage_end": "2023-12-29",
+  "coverage_start": "2023-08-01",
+  "evidence_warning": "This combines completed pilot summaries only. Trade count is still far below N >= 500, so it is not strategy acceptance evidence.",
+  "mode": "multimonth_pilot_summary",
+  "month_count": 5,
+  "monthly": [
+    {
+      "bar_rows": 11915,
+      "calendar_days": 23,
+      "candidate_ready_days": 6,
+      "coverage_end": "2023-08-31",
+      "coverage_start": "2023-08-01",
+      "label": "aug_2023",
+      "quote_rows": 857630,
+      "split": "in_sample",
+      "status_counts": {
+        "candidate_ready": 6,
+        "no_trade": 17
+      }
+    },
+    {
+      "bar_rows": 10222,
+      "calendar_days": 20,
+      "candidate_ready_days": 2,
+      "coverage_end": "2023-09-29",
+      "coverage_start": "2023-09-01",
+      "label": "sep_2023",
+      "quote_rows": 792578,
+      "split": "in_sample",
+      "status_counts": {
+        "candidate_ready": 2,
+        "no_trade": 18
+      }
+    },
+    {
+      "bar_rows": 11734,
+      "calendar_days": 22,
+      "candidate_ready_days": 6,
+      "coverage_end": "2023-10-31",
+      "coverage_start": "2023-10-02",
+      "label": "oct_2023",
+      "quote_rows": 889784,
+      "split": "in_sample",
+      "status_counts": {
+        "candidate_ready": 6,
+        "no_trade": 16
+      }
+    },
+    {
+      "bar_rows": 10569,
+      "calendar_days": 21,
+      "candidate_ready_days": 6,
+      "coverage_end": "2023-11-30",
+      "coverage_start": "2023-11-01",
+      "label": "nov_2023",
+      "quote_rows": 816152,
+      "split": "in_sample",
+      "status_counts": {
+        "candidate_ready": 6,
+        "no_trade": 15
+      }
+    },
+    {
+      "bar_rows": 9876,
+      "calendar_days": 20,
+      "candidate_ready_days": 2,
+      "coverage_end": "2023-12-29",
+      "coverage_start": "2023-12-01",
+      "label": "dec_2023",
+      "quote_rows": 737252,
+      "split": "in_sample",
+      "status_counts": {
+        "candidate_ready": 2,
+        "no_trade": 18
+      }
+    }
+  ],
+  "pnl_models": {
+    "forced_close_only": {
+      "average_net_pnl": 14.0,
+      "best_trade": 155.0,
+      "candidate_days": 22,
+      "closed_trades": 22,
+      "exit_model": "forced_close_only",
+      "max_drawdown": -0.200971,
+      "monthly": [
+        {
+          "candidate_days": 6,
+          "closed_trades": 6,
+          "exit_model": "forced_close_only",
+          "label": "aug_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_forced_1545": 6
+          },
+          "total_net_pnl": -55.0
+        },
+        {
+          "candidate_days": 2,
+          "closed_trades": 2,
+          "exit_model": "forced_close_only",
+          "label": "sep_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_forced_1545": 2
+          },
+          "total_net_pnl": -1.0
+        },
+        {
+          "candidate_days": 6,
+          "closed_trades": 6,
+          "exit_model": "forced_close_only",
+          "label": "oct_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_forced_1545": 6
+          },
+          "total_net_pnl": 44.0
+        },
+        {
+          "candidate_days": 6,
+          "closed_trades": 6,
+          "exit_model": "forced_close_only",
+          "label": "nov_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_forced_1545": 6
+          },
+          "total_net_pnl": 199.0
+        },
+        {
+          "candidate_days": 2,
+          "closed_trades": 2,
+          "exit_model": "forced_close_only",
+          "label": "dec_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_forced_1545": 2
+          },
+          "total_net_pnl": 121.0
+        }
+      ],
+      "sharpe_proxy": 0.2028,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_forced_1545": 22
+      },
+      "total_net_pnl": 308.0,
+      "win_rate": 0.3182,
+      "worst_trade": -54.0
+    },
+    "target_stop_25_50": {
+      "average_net_pnl": -0.6364,
+      "best_trade": 27.0,
+      "candidate_days": 22,
+      "closed_trades": 22,
+      "exit_model": "target_stop_25_50",
+      "max_drawdown": -0.064769,
+      "monthly": [
+        {
+          "candidate_days": 6,
+          "closed_trades": 6,
+          "exit_model": "target_stop_25_50",
+          "label": "aug_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_profit_target_25pct": 4,
+            "closed_stop_loss_50pct": 2
+          },
+          "total_net_pnl": 1.0
+        },
+        {
+          "candidate_days": 2,
+          "closed_trades": 2,
+          "exit_model": "target_stop_25_50",
+          "label": "sep_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_profit_target_25pct": 1,
+            "closed_stop_loss_50pct": 1
+          },
+          "total_net_pnl": -12.0
+        },
+        {
+          "candidate_days": 6,
+          "closed_trades": 6,
+          "exit_model": "target_stop_25_50",
+          "label": "oct_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_profit_target_25pct": 4,
+            "closed_stop_loss_50pct": 2
+          },
+          "total_net_pnl": 23.0
+        },
+        {
+          "candidate_days": 6,
+          "closed_trades": 6,
+          "exit_model": "target_stop_25_50",
+          "label": "nov_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_profit_target_25pct": 3,
+            "closed_stop_loss_50pct": 3
+          },
+          "total_net_pnl": -22.0
+        },
+        {
+          "candidate_days": 2,
+          "closed_trades": 2,
+          "exit_model": "target_stop_25_50",
+          "label": "dec_2023",
+          "skipped_trades": 0,
+          "status_counts": {
+            "closed_profit_target_25pct": 1,
+            "closed_stop_loss_50pct": 1
+          },
+          "total_net_pnl": -4.0
+        }
+      ],
+      "sharpe_proxy": -0.039434,
+      "skipped_trades": 0,
+      "status_counts": {
+        "closed_profit_target_25pct": 13,
+        "closed_stop_loss_50pct": 9
+      },
+      "total_net_pnl": -14.0,
+      "win_rate": 0.5909,
+      "worst_trade": -34.0
+    }
+  },
+  "split": "in_sample"
+}

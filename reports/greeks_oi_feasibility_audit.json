@@ -1,0 +1,305 @@
+{
+  "blockers": [],
+  "greek_calculation_probe": {
+    "assumptions": {
+      "caveat": "SPY options are American-style and can be affected by dividends/early exercise; this probe is only to prove field feasibility, not production-grade Greeks.",
+      "dividend_yield": 0.0,
+      "expiration_time_et": "16:00:00",
+      "pricing_model": "European Black-Scholes feasibility probe",
+      "risk_free_rate": 0.05
+    },
+    "delta": 0.499072,
+    "gamma": 0.14988577,
+    "implied_volatility": 0.215206,
+    "mid_price": 1.055,
+    "quote": {
+      "ask": 1.06,
+      "bid": 1.05,
+      "databento_symbol": "SPY   240103C00470000",
+      "quote_timestamp_et": "2024-01-03T09:56:00-05:00",
+      "right": "call",
+      "strike": 470.0
+    },
+    "status": "pass_with_caveats",
+    "underlying_joined_from_bar": {
+      "close": 469.97,
+      "timestamp_et": "2024-01-03T09:56:00-05:00"
+    },
+    "years_to_expiry": 0.0006925418569254186
+  },
+  "input_paths": {
+    "baseline_summary": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\baselines\\subsystem_a_orb_baseline_summary.json",
+    "opra_oi_report": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\databento_opra_statistics_oi_download_probe_2024_01_03.json"
+  },
+  "opra_oi_mapping_audit": {
+    "first_quote_timestamp_et": "2024-01-03T09:31:00-05:00",
+    "first_quote_timestamp_utc": "2024-01-03T14:31:00+00:00",
+    "latest_oi_before_first_quote_examples": {
+      "SPY   240103C00402000": {
+        "quantity": 6,
+        "ts_recv_utc": "2024-01-03 11:30:00.811081672+00:00"
+      },
+      "SPY   240103C00403000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.907542146+00:00"
+      },
+      "SPY   240103C00404000": {
+        "quantity": 5,
+        "ts_recv_utc": "2024-01-03 11:30:02.398635042+00:00"
+      },
+      "SPY   240103C00405000": {
+        "quantity": 6,
+        "ts_recv_utc": "2024-01-03 11:30:03.459593002+00:00"
+      },
+      "SPY   240103C00406000": {
+        "quantity": 4,
+        "ts_recv_utc": "2024-01-03 11:30:01.305861552+00:00"
+      },
+      "SPY   240103C00407000": {
+        "quantity": 8,
+        "ts_recv_utc": "2024-01-03 11:30:02.923885753+00:00"
+      },
+      "SPY   240103C00408000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.864745085+00:00"
+      },
+      "SPY   240103C00409000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:01.439208990+00:00"
+      },
+      "SPY   240103C00410000": {
+        "quantity": 2,
+        "ts_recv_utc": "2024-01-03 11:30:03.425426508+00:00"
+      },
+      "SPY   240103C00411000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:03.541553179+00:00"
+      },
+      "SPY   240103C00412000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:02.516595288+00:00"
+      },
+      "SPY   240103C00413000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.897512599+00:00"
+      },
+      "SPY   240103C00414000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:01.967533074+00:00"
+      },
+      "SPY   240103C00415000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:02.491700901+00:00"
+      },
+      "SPY   240103C00416000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.897503486+00:00"
+      },
+      "SPY   240103C00417000": {
+        "quantity": 160,
+        "ts_recv_utc": "2024-01-03 11:30:01.342759679+00:00"
+      },
+      "SPY   240103C00418000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:01.950422008+00:00"
+      },
+      "SPY   240103C00419000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.917992314+00:00"
+      },
+      "SPY   240103C00420000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:01.860207561+00:00"
+      },
+      "SPY   240103C00421000": {
+        "quantity": 2,
+        "ts_recv_utc": "2024-01-03 11:30:02.899924855+00:00"
+      },
+      "SPY   240103C00422000": {
+        "quantity": 1,
+        "ts_recv_utc": "2024-01-03 11:30:03.433917806+00:00"
+      },
+      "SPY   240103C00423000": {
+        "quantity": 132,
+        "ts_recv_utc": "2024-01-03 11:30:03.435450610+00:00"
+      },
+      "SPY   240103C00424000": {
+        "quantity": 8,
+        "ts_recv_utc": "2024-01-03 11:30:01.850454327+00:00"
+      },
+      "SPY   240103C00425000": {
+        "quantity": 80,
+        "ts_recv_utc": "2024-01-03 11:30:02.899919356+00:00"
+      },
+      "SPY   240103C00426000": {
+        "quantity": 160,
+        "ts_recv_utc": "2024-01-03 11:30:02.378592469+00:00"
+      },
+      "SPY   240103C00427000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.864750543+00:00"
+      },
+      "SPY   240103C00428000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:02.488870330+00:00"
+      },
+      "SPY   240103C00429000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:01.950769400+00:00"
+      },
+      "SPY   240103C00430000": {
+        "quantity": 5,
+        "ts_recv_utc": "2024-01-03 11:30:02.893789020+00:00"
+      },
+      "SPY   240103C00431000": {
+        "quantity": 1,
+        "ts_recv_utc": "2024-01-03 11:30:01.295832414+00:00"
+      },
+      "SPY   240103C00432000": {
+        "quantity": 4,
+        "ts_recv_utc": "2024-01-03 11:30:00.764495611+00:00"
+      },
+      "SPY   240103C00433000": {
+        "quantity": 40,
+        "ts_recv_utc": "2024-01-03 11:30:01.352787944+00:00"
+      },
+      "SPY   240103C00434000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.928016146+00:00"
+      },
+      "SPY   240103C00435000": {
+        "quantity": 6,
+        "ts_recv_utc": "2024-01-03 11:30:02.406237969+00:00"
+      },
+      "SPY   240103C00436000": {
+        "quantity": 26,
+        "ts_recv_utc": "2024-01-03 11:30:00.807228660+00:00"
+      },
+      "SPY   240103C00437000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:03.554193308+00:00"
+      },
+      "SPY   240103C00438000": {
+        "quantity": 1,
+        "ts_recv_utc": "2024-01-03 11:30:01.305866806+00:00"
+      },
+      "SPY   240103C00439000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:01.957509177+00:00"
+      },
+      "SPY   240103C00440000": {
+        "quantity": 19,
+        "ts_recv_utc": "2024-01-03 11:30:03.405369125+00:00"
+      },
+      "SPY   240103C00441000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:02.482453901+00:00"
+      },
+      "SPY   240103C00442000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.911396536+00:00"
+      },
+      "SPY   240103C00443000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:00.907532431+00:00"
+      },
+      "SPY   240103C00444000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:03.048316905+00:00"
+      },
+      "SPY   240103C00445000": {
+        "quantity": 20,
+        "ts_recv_utc": "2024-01-03 11:30:01.342764157+00:00"
+      },
+      "SPY   240103C00446000": {
+        "quantity": 2,
+        "ts_recv_utc": "2024-01-03 11:30:02.912700224+00:00"
+      },
+      "SPY   240103C00447000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:01.994897085+00:00"
+      },
+      "SPY   240103C00448000": {
+        "quantity": 2,
+        "ts_recv_utc": "2024-01-03 11:30:01.295841660+00:00"
+      },
+      "SPY   240103C00449000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:03.010212285+00:00"
+      },
+      "SPY   240103C00450000": {
+        "quantity": 385,
+        "ts_recv_utc": "2024-01-03 11:30:02.362072901+00:00"
+      },
+      "SPY   240103C00451000": {
+        "quantity": 0,
+        "ts_recv_utc": "2024-01-03 11:30:02.478850240+00:00"
+      }
+    },
+    "loaded_open_interest_records": 180279,
+    "mapping_rule": "For a decision timestamp, use only OPEN_INTEREST records for the exact Databento option symbol with ts_recv <= decision timestamp UTC. If no such record exists, treat OI as missing for that decision.",
+    "oi_records_available_before_first_quote_for_sample_symbols": 850,
+    "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\opra_statistics_oi_probe_2024_01_03\\2024-01-03_full_utc_day_statistics.dbn.zst",
+    "reported_open_interest_records": 180279,
+    "sample_quote_symbols_checked": 50,
+    "sample_symbol_match_count": 50,
+    "sample_symbol_matches": [
+      "SPY   240103C00402000",
+      "SPY   240103C00403000",
+      "SPY   240103C00404000",
+      "SPY   240103C00405000",
+      "SPY   240103C00406000",
+      "SPY   240103C00407000",
+      "SPY   240103C00408000",
+      "SPY   240103C00409000",
+      "SPY   240103C00410000",
+      "SPY   240103C00411000"
+    ],
+    "status": "pass"
+  },
+  "quote_field_audit": {
+    "missing_required_fields": [],
+    "observed_fields": [
+      "ask",
+      "ask_size",
+      "bid",
+      "bid_size",
+      "databento_symbol",
+      "databento_window",
+      "dte",
+      "expiration_date",
+      "provider",
+      "quote_timestamp_et",
+      "record_type",
+      "right",
+      "schema_version",
+      "source",
+      "strike",
+      "underlying"
+    ],
+    "quote_count_for_target_date": 3488,
+    "required_fields": [
+      "ask",
+      "bid",
+      "databento_symbol",
+      "expiration_date",
+      "quote_timestamp_et",
+      "right",
+      "strike"
+    ],
+    "status": "pass"
+  },
+  "record_type": "greeks_oi_feasibility_audit",
+  "research_decision": "Feasible with caveats: Databento OPRA statistics can provide exact-symbol reference OI before the target decision timestamp, and current bid/ask quotes plus SPY bars can support a self-computed IV/Delta/Gamma probe. This is not strategy-ready until normalized quote enrichment, rate/dividend policy, American-option caveat handling, and gamma aggregation rules are implemented.",
+  "schema_version": "greeks_oi_feasibility_v1",
+  "status": "pass",
+  "strategy_use_status": "blocked_until_normalized_quote_enrichment_and_gamma_aggregation_policy",
+  "target_date": "2024-01-03",
+  "underlying_join_audit": {
+    "bar_count_for_target_date": 509,
+    "join_rule": "Use the latest SPY 1-minute bar with timestamp_et <= option quote timestamp_et.",
+    "matched_sample_quotes": 100,
+    "sample_quotes_checked": 100,
+    "status": "pass"
+  }
+}

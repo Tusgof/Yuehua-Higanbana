@@ -1,0 +1,863 @@
+[
+  {
+    "case_id": "quiet_vix18_normal_term_structure",
+    "expected_decision": "allow",
+    "input_hash": "976d5cbd392c4f9e4bc64172e7574ef7dae32c1ce6d64d896676549ffbe94683",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet normal pre-open",
+        "trade_date": "2024-01-03",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Quiet market before open",
+          "published_at_et": "2024-01-03T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-01-03",
+        "vix_close": 18.0,
+        "vxv_close": 19.0
+      }
+    }
+  },
+  {
+    "case_id": "very_quiet_vix13_no_news",
+    "expected_decision": "allow",
+    "input_hash": "b25179e95506db8c822f5efde91a7019c3e50d818ef4be709b498866312be10a",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "very quiet pre-open with no listed catalyst",
+        "trade_date": "2024-06-14",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "US equity futures little changed with no major data due before the open",
+          "published_at_et": "2024-06-14T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-06-14",
+        "vix_close": 13.0,
+        "vxv_close": 15.0
+      }
+    }
+  },
+  {
+    "case_id": "systemic_banking_panic_vix34",
+    "expected_decision": "block",
+    "input_hash": "129be90d09e27ddc3da60e05ed0c513fbd9884b3d7b55f30a49f9d95861f95db",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "tail-risk shock",
+        "trade_date": "2024-03-13",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Emergency banking crisis raises systemic panic risk",
+          "published_at_et": "2024-03-13T08:15:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "block",
+        "event_risk_condition": "systemic_or_disorderly",
+        "matched_terms": [
+          "banking crisis",
+          "emergency",
+          "panic",
+          "systemic panic",
+          "vix>=30"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-03-13",
+        "vix_close": 34.0,
+        "vxv_close": 27.0
+      }
+    }
+  },
+  {
+    "case_id": "war_shock_futures_limit_vix42",
+    "expected_decision": "block",
+    "input_hash": "a0200836b422e74c35dec40f891bb33ba419444401f33be0decadabe8628fedb",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "geopolitical shock with disorderly futures",
+        "trade_date": "2024-04-15",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "War escalation triggers emergency risk-off trading and futures near limit down",
+          "published_at_et": "2024-04-15T08:10:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "block",
+        "event_risk_condition": "systemic_or_disorderly",
+        "matched_terms": [
+          "disorderly futures",
+          "emergency",
+          "futures near limit down",
+          "limit down",
+          "war",
+          "vix>=30"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-04-15",
+        "vix_close": 42.0,
+        "vxv_close": 33.0
+      }
+    }
+  },
+  {
+    "case_id": "high_vol_no_clear_news_vix27",
+    "expected_decision": "unknown",
+    "input_hash": "d860562537d437e322e59e6d87879194a3a943e2f26f6262a6e6cdd1295a0514",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "elevated volatility without clear catalyst",
+        "trade_date": "2024-05-01",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Indexes mixed as traders await afternoon Fed remarks",
+          "published_at_et": "2024-05-01T08:30:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "fed remarks"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-05-01",
+        "vix_close": 27.0,
+        "vxv_close": 25.0
+      }
+    }
+  },
+  {
+    "case_id": "major_fed_event_vix21",
+    "expected_decision": "unknown",
+    "input_hash": "af75263e678420c869f55ab24f0c86039ac344187c51aaaff758db890f7cbf9b",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "scheduled macro catalyst later today",
+        "trade_date": "2024-05-01",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Traders await FOMC rate decision and Powell press conference later today",
+          "published_at_et": "2024-05-01T08:30:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "fomc",
+          "powell"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-05-01",
+        "vix_close": 21.0,
+        "vxv_close": 22.0
+      }
+    }
+  },
+  {
+    "case_id": "cpi_release_pending_vix22",
+    "expected_decision": "unknown",
+    "input_hash": "2f89ff760efb1421018aa8373eca7ac72cd67975a2e1126c69a6264749d1bf47",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "scheduled CPI catalyst before FOMC",
+        "trade_date": "2024-06-12",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "US stock futures hold steady as traders await CPI inflation data and Fed decision",
+          "published_at_et": "2024-06-12T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "cpi",
+          "fed decision",
+          "fomc",
+          "inflation data"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-06-12",
+        "vix_close": 22.0,
+        "vxv_close": 23.0
+      }
+    }
+  },
+  {
+    "case_id": "jobs_report_pending_vix19",
+    "expected_decision": "unknown",
+    "input_hash": "d3e3d2944ec9936f14915d066f66cdae3d232a1e47b40215d1ae17e99afdaaf8",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "scheduled jobs catalyst",
+        "trade_date": "2024-04-05",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Market waits for monthly jobs report with Treasury yields little changed",
+          "published_at_et": "2024-04-05T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "jobs report"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-04-05",
+        "vix_close": 19.0,
+        "vxv_close": 20.0
+      }
+    }
+  },
+  {
+    "case_id": "earnings_heavy_calendar_vix20",
+    "expected_decision": "unknown",
+    "input_hash": "ebcade2f2d96b86c19e2d9a9dcc802205e068d436ac91abc546d66d508dfc558",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "earnings-heavy scheduled catalyst without systemic stress",
+        "trade_date": "2024-07-24",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Mega-cap earnings dominate the calendar while broader market stress remains contained",
+          "published_at_et": "2024-07-24T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "earnings",
+          "earnings-heavy",
+          "mega-cap"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-07-24",
+        "vix_close": 20.0,
+        "vxv_close": 21.0
+      }
+    }
+  },
+  {
+    "case_id": "pce_inflation_pending_vix18",
+    "expected_decision": "unknown",
+    "input_hash": "a678749abfe349cecd76838e670bfccb32fa9d90c41b684589ee9adfe7bf87c4",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "scheduled PCE inflation catalyst",
+        "trade_date": "2024-03-29",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "US equity futures drift as traders await PCE inflation data after the open",
+          "published_at_et": "2024-03-29T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "inflation data",
+          "pce"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-03-29",
+        "vix_close": 18.0,
+        "vxv_close": 19.0
+      }
+    }
+  },
+  {
+    "case_id": "high_vol_no_news_vix26",
+    "expected_decision": "unknown",
+    "input_hash": "b9ae2d771d5e2d962e65942f453135265f5d6c9f104047def338380de45fb4ae",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "high volatility without clear same-day catalyst",
+        "trade_date": "2024-08-05",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "US futures mixed with no single catalyst as volatility stays elevated",
+          "published_at_et": "2024-08-05T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "elevated_volatility_unclear",
+        "matched_terms": [
+          "vix>=25"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-08-05",
+        "vix_close": 26.0,
+        "vxv_close": 24.0
+      }
+    }
+  },
+  {
+    "case_id": "earnings_next_week_no_catalyst_vix16",
+    "expected_decision": "allow",
+    "input_hash": "3285bbfb734e86343dcad4dc0ecaee0fbc662e781cba19f059d4c5accb508de6",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet market with earnings season next week",
+        "trade_date": "2024-07-12",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Earnings season begins next week as futures stay quiet",
+          "published_at_et": "2024-07-12T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-07-12",
+        "vix_close": 16.0,
+        "vxv_close": 18.0
+      }
+    }
+  },
+  {
+    "case_id": "fed_remarks_yesterday_no_data_vix17",
+    "expected_decision": "allow",
+    "input_hash": "e7b7c0946dfef5575fc74a3d30c9151eaf157bfe55ebc24752fa49e1b0d2c337",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet market after prior-day Fed remarks",
+        "trade_date": "2024-05-03",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Markets digest Fed remarks from yesterday with no major data due today",
+          "published_at_et": "2024-05-03T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-05-03",
+        "vix_close": 17.0,
+        "vxv_close": 18.0
+      }
+    }
+  },
+  {
+    "case_id": "regional_bank_halt_vix24",
+    "expected_decision": "block",
+    "input_hash": "83d00727ca0907b2258e2416368a5a1725291dc5a9ed9f5b223b7cfee5db3cee",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "single-sector halt with possible contagion",
+        "trade_date": "2024-03-20",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Regional bank shares halt after emergency funding report rattles financials",
+          "published_at_et": "2024-03-20T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "block",
+        "event_risk_condition": "systemic_or_disorderly",
+        "matched_terms": [
+          "emergency",
+          "halt"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-03-20",
+        "vix_close": 24.0,
+        "vxv_close": 23.0
+      }
+    }
+  },
+  {
+    "case_id": "treasury_auction_pending_vix18",
+    "expected_decision": "unknown",
+    "input_hash": "a1bb998069f222ef56c51e8e52fd06f0b823dfccb11f7f84e3371611b4c8a5a2",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "scheduled rates catalyst",
+        "trade_date": "2024-08-07",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Stocks hold flat before Treasury auction that may move yields",
+          "published_at_et": "2024-08-07T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "treasury auction"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-08-07",
+        "vix_close": 18.0,
+        "vxv_close": 19.0
+      }
+    }
+  },
+  {
+    "case_id": "earnings_after_close_vix16",
+    "expected_decision": "allow",
+    "input_hash": "763070a8a26907921e3114e645f384dde975a39fdbf217d9d0eb414802afce18",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet market with mega-cap earnings after the close",
+        "trade_date": "2024-07-18",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Mega-cap earnings due after the close as futures stay quiet",
+          "published_at_et": "2024-07-18T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-07-18",
+        "vix_close": 16.0,
+        "vxv_close": 17.0
+      }
+    }
+  },
+  {
+    "case_id": "cpi_tomorrow_vix16",
+    "expected_decision": "allow",
+    "input_hash": "e166b304b5a7b8b71a5ee2e1866fd5884d5c8313ec36b0c1aaae5dc6c1c1d8b0",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet market with CPI scheduled tomorrow",
+        "trade_date": "2024-06-11",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "CPI inflation data due tomorrow while today's session has no major data due today",
+          "published_at_et": "2024-06-11T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-06-11",
+        "vix_close": 16.0,
+        "vxv_close": 17.0
+      }
+    }
+  },
+  {
+    "case_id": "cpi_next_week_fed_today_vix19",
+    "expected_decision": "unknown",
+    "input_hash": "3095625e808291a11839743e4f5da6b95c6c9310c4a69c31795336969723fa55",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "mixed future CPI reference with same-day Fed event",
+        "trade_date": "2024-06-12",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "CPI revisions are due next week but Fed decision today keeps traders cautious",
+          "published_at_et": "2024-06-12T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "fed decision"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-06-12",
+        "vix_close": 19.0,
+        "vxv_close": 20.0
+      }
+    }
+  },
+  {
+    "case_id": "stress_contained_vix18",
+    "expected_decision": "allow",
+    "input_hash": "d3e39316e01e2851dcb5f2b314cfab044cbeac668671cabc78fe7a5f01978d1a",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "contained stress without systemic tail risk",
+        "trade_date": "2024-07-25",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Broader market stress remains contained as futures trade in a narrow range",
+          "published_at_et": "2024-07-25T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-07-25",
+        "vix_close": 18.0,
+        "vxv_close": 19.0
+      }
+    }
+  },
+  {
+    "case_id": "panic_bid_defensives_vix17",
+    "expected_decision": "allow",
+    "input_hash": "5fe5b49674520ae41ee989636fddc2f3944780f41da71e0beff7a2a1d05e09e3",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "sector-rotation panic wording without broad market stress",
+        "trade_date": "2024-08-09",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Defensive stocks catch a panic bid while index futures stay calm",
+          "published_at_et": "2024-08-09T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-08-09",
+        "vix_close": 17.0,
+        "vxv_close": 18.0
+      }
+    }
+  },
+  {
+    "case_id": "market_panic_vix28",
+    "expected_decision": "block",
+    "input_hash": "dcfbf63b1a0fbfee1f5ffda5986e0cb8b24c76c42490279a67c699ad156e1856",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "broad market panic without VIX>=30",
+        "trade_date": "2024-08-12",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Market panic accelerates as futures slide and liquidity thins",
+          "published_at_et": "2024-08-12T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "block",
+        "event_risk_condition": "systemic_or_disorderly",
+        "matched_terms": [
+          "panic"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-08-12",
+        "vix_close": 28.0,
+        "vxv_close": 26.0
+      }
+    }
+  },
+  {
+    "case_id": "fomc_minutes_next_week_vix16",
+    "expected_decision": "allow",
+    "input_hash": "e79a2d04b150c48baa52dadb3c28281aef943f8d5333bfcafcf39b350acae951",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet market with FOMC minutes next week",
+        "trade_date": "2024-05-10",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "FOMC minutes are due next week while futures stay quiet",
+          "published_at_et": "2024-05-10T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-05-10",
+        "vix_close": 16.0,
+        "vxv_close": 17.0
+      }
+    }
+  },
+  {
+    "case_id": "treasury_auction_yesterday_vix17",
+    "expected_decision": "allow",
+    "input_hash": "b609821f06a8f42a75107cdea0921b3b9310510c1f87dcb0632b9b52277eb259",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet market after prior-day Treasury auction",
+        "trade_date": "2024-08-08",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Markets digest Treasury auction from yesterday with no major data due today",
+          "published_at_et": "2024-08-08T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-08-08",
+        "vix_close": 17.0,
+        "vxv_close": 18.0
+      }
+    }
+  },
+  {
+    "case_id": "emergency_drill_vix14",
+    "expected_decision": "allow",
+    "input_hash": "cd9fbee396d84c3faf36212024baff0a28aa0bcc2c8fa0d202b0be09ddeac0b3",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "operational emergency wording without market stress",
+        "trade_date": "2024-09-06",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Exchange completes emergency drill before open as futures remain calm",
+          "published_at_et": "2024-09-06T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-09-06",
+        "vix_close": 14.0,
+        "vxv_close": 16.0
+      }
+    }
+  },
+  {
+    "case_id": "single_stock_halt_after_close_vix16",
+    "expected_decision": "allow",
+    "input_hash": "c80ac1bf231db1b87324ab72d9cbad30f49fdeca7a3427fe858d57fc9ead3c67",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "single-stock halt after close without index stress",
+        "trade_date": "2024-09-12",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Single stock halt expected after the close while index futures stay calm",
+          "published_at_et": "2024-09-12T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "allow",
+        "event_risk_condition": "none",
+        "matched_terms": []
+      },
+      "vix_vxv": {
+        "date": "2024-09-12",
+        "vix_close": 16.0,
+        "vxv_close": 17.0
+      }
+    }
+  },
+  {
+    "case_id": "bank_stress_contained_fed_today_vix21",
+    "expected_decision": "unknown",
+    "input_hash": "fea77904dfe5d167e0fa8a9502100c5c3b948f0ef6cffa23bf50d7adefe99f31",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "contained bank stress but Fed decision today",
+        "trade_date": "2024-09-18",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Bank stress remains contained but Fed decision today may move rates",
+          "published_at_et": "2024-09-18T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "unknown",
+        "event_risk_condition": "scheduled_or_ambiguous",
+        "matched_terms": [
+          "fed decision"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-09-18",
+        "vix_close": 21.0,
+        "vxv_close": 22.0
+      }
+    }
+  },
+  {
+    "case_id": "banking_stress_spreads_systemic_vix24",
+    "expected_decision": "block",
+    "input_hash": "6e88ce62f784ce0adbcd6a544e58ea58c4740e7db412c3b38c58e2fab06c1d43",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "systemic banking stress spreading",
+        "trade_date": "2024-09-19",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Banking crisis fears spread as funding stress turns systemic",
+          "published_at_et": "2024-09-19T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "block",
+        "event_risk_condition": "systemic_or_disorderly",
+        "matched_terms": [
+          "banking crisis"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-09-19",
+        "vix_close": 24.0,
+        "vxv_close": 25.0
+      }
+    }
+  },
+  {
+    "case_id": "futures_halt_rumor_vix29",
+    "expected_decision": "block",
+    "input_hash": "d3907927c07f3c3bf47b132e0743b0f250861b9f1c114ed04d1f8f7fbd4e4c8f",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "possible index futures halt",
+        "trade_date": "2024-09-20",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Index futures halt rumor hits tape as liquidity thins before the open",
+          "published_at_et": "2024-09-20T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "preclassified_event_policy": {
+        "decision": "block",
+        "event_risk_condition": "systemic_or_disorderly",
+        "matched_terms": [
+          "halt"
+        ]
+      },
+      "vix_vxv": {
+        "date": "2024-09-20",
+        "vix_close": 29.0,
+        "vxv_close": 27.0
+      }
+    }
+  }
+]

@@ -1,0 +1,108 @@
+# Databento Cache Audit
+
+- **Created at UTC**: `2026-06-29T08:26:21+00:00`
+- **Source plan**: `reports\data_cost\databento_download_plan_oos_2024_02_intraday_exit_30m.json`
+- **Scenario**: `oos_2024_2025`
+- **Planned windows**: 280
+- **Present files**: 192
+- **Missing files**: 88
+- **Invalid files**: 0
+- **Total present bytes**: 359230496
+- **All present**: `False`
+
+## Missing Windows
+
+- `2024-02-20_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1030.dbn.zst`
+- `2024-02-20_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1100.dbn.zst`
+- `2024-02-20_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1130.dbn.zst`
+- `2024-02-20_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1200.dbn.zst`
+- `2024-02-20_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1230.dbn.zst`
+- `2024-02-20_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1300.dbn.zst`
+- `2024-02-20_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1330.dbn.zst`
+- `2024-02-20_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1400.dbn.zst`
+- `2024-02-20_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1430.dbn.zst`
+- `2024-02-20_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1500.dbn.zst`
+- `2024-02-20_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-20_exit_check_1530.dbn.zst`
+- `2024-02-21_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1030.dbn.zst`
+- `2024-02-21_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1100.dbn.zst`
+- `2024-02-21_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1130.dbn.zst`
+- `2024-02-21_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1200.dbn.zst`
+- `2024-02-21_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1230.dbn.zst`
+- `2024-02-21_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1300.dbn.zst`
+- `2024-02-21_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1330.dbn.zst`
+- `2024-02-21_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1400.dbn.zst`
+- `2024-02-21_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1430.dbn.zst`
+- `2024-02-21_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1500.dbn.zst`
+- `2024-02-21_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-21_exit_check_1530.dbn.zst`
+- `2024-02-22_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1030.dbn.zst`
+- `2024-02-22_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1100.dbn.zst`
+- `2024-02-22_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1130.dbn.zst`
+- `2024-02-22_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1200.dbn.zst`
+- `2024-02-22_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1230.dbn.zst`
+- `2024-02-22_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1300.dbn.zst`
+- `2024-02-22_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1330.dbn.zst`
+- `2024-02-22_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1400.dbn.zst`
+- `2024-02-22_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1430.dbn.zst`
+- `2024-02-22_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1500.dbn.zst`
+- `2024-02-22_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-22_exit_check_1530.dbn.zst`
+- `2024-02-23_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1030.dbn.zst`
+- `2024-02-23_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1100.dbn.zst`
+- `2024-02-23_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1130.dbn.zst`
+- `2024-02-23_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1200.dbn.zst`
+- `2024-02-23_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1230.dbn.zst`
+- `2024-02-23_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1300.dbn.zst`
+- `2024-02-23_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1330.dbn.zst`
+- `2024-02-23_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1400.dbn.zst`
+- `2024-02-23_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1430.dbn.zst`
+- `2024-02-23_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1500.dbn.zst`
+- `2024-02-23_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-23_exit_check_1530.dbn.zst`
+- `2024-02-26_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1030.dbn.zst`
+- `2024-02-26_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1100.dbn.zst`
+- `2024-02-26_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1130.dbn.zst`
+- `2024-02-26_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1200.dbn.zst`
+- `2024-02-26_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1230.dbn.zst`
+- `2024-02-26_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1300.dbn.zst`
+- `2024-02-26_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1330.dbn.zst`
+- `2024-02-26_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1400.dbn.zst`
+- `2024-02-26_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1430.dbn.zst`
+- `2024-02-26_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1500.dbn.zst`
+- `2024-02-26_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-26_exit_check_1530.dbn.zst`
+- `2024-02-27_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1030.dbn.zst`
+- `2024-02-27_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1100.dbn.zst`
+- `2024-02-27_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1130.dbn.zst`
+- `2024-02-27_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1200.dbn.zst`
+- `2024-02-27_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1230.dbn.zst`
+- `2024-02-27_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1300.dbn.zst`
+- `2024-02-27_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1330.dbn.zst`
+- `2024-02-27_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1400.dbn.zst`
+- `2024-02-27_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1430.dbn.zst`
+- `2024-02-27_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1500.dbn.zst`
+- `2024-02-27_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-27_exit_check_1530.dbn.zst`
+- `2024-02-28_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1030.dbn.zst`
+- `2024-02-28_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1100.dbn.zst`
+- `2024-02-28_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1130.dbn.zst`
+- `2024-02-28_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1200.dbn.zst`
+- `2024-02-28_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1230.dbn.zst`
+- `2024-02-28_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1300.dbn.zst`
+- `2024-02-28_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1330.dbn.zst`
+- `2024-02-28_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1400.dbn.zst`
+- `2024-02-28_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1430.dbn.zst`
+- `2024-02-28_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1500.dbn.zst`
+- `2024-02-28_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-28_exit_check_1530.dbn.zst`
+- `2024-02-29_exit_check_1030` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1030.dbn.zst`
+- `2024-02-29_exit_check_1100` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1100.dbn.zst`
+- `2024-02-29_exit_check_1130` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1130.dbn.zst`
+- `2024-02-29_exit_check_1200` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1200.dbn.zst`
+- `2024-02-29_exit_check_1230` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1230.dbn.zst`
+- `2024-02-29_exit_check_1300` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1300.dbn.zst`
+- `2024-02-29_exit_check_1330` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1330.dbn.zst`
+- `2024-02-29_exit_check_1400` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1400.dbn.zst`
+- `2024-02-29_exit_check_1430` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1430.dbn.zst`
+- `2024-02-29_exit_check_1500` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1500.dbn.zst`
+- `2024-02-29_exit_check_1530` -> `D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\data\raw\spy_0dte\databento\oos_2024_2025\2024-02-29_exit_check_1530.dbn.zst`
+
+## Use Rule
+
+- This audit is offline-only and does not call Databento.
+- Missing windows need explicit user-approved download before real experiments.
+- Present files can be reused by repeated experiments without another Databento request.

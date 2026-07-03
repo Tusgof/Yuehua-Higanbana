@@ -1,0 +1,234 @@
+{
+  "average_net_pnl": -9.56,
+  "best_trade": 4.44,
+  "big_day_dependency": {
+    "note": "Need at least 3 closed trades to remove both best and worst trades.",
+    "removed_trade_count": 0,
+    "status": "insufficient_trades"
+  },
+  "candidate_days": 2,
+  "close_fallback": "nearest_1545_window",
+  "closed_trades": 2,
+  "evidence_warning": "This pilot evidence is under-sampled and must not be treated as strategy acceptance.",
+  "exit_model": "target_stop_25_50",
+  "fee_per_contract": 0.64,
+  "fill_model": "half_spread",
+  "max_drawdown": -0.023456,
+  "mode": "pilot_pnl_only",
+  "pnl_model": {
+    "fee_per_contract_per_side": 0.64,
+    "implementable_pnl": "Entry uses configured fill_model; exit liquidates longs at bid and shorts at ask; fees are subtracted.",
+    "mid_pnl": "Entry and exit at mid price, with no fees; comparison control only."
+  },
+  "sample_adequacy": {
+    "closed_trades": 2,
+    "labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "minimum_trade_count_prior": 500,
+    "mintrl_status": "pending_return_distribution",
+    "power_note": "Point Sharpe is diagnostic only until MinTRL/PSR are calculated on an experiment return distribution.",
+    "psr_status": "pending_return_distribution"
+  },
+  "sharpe_proxy": -0.682857,
+  "skipped_trades": 0,
+  "status_counts": {
+    "closed_profit_target_25pct": 1,
+    "closed_stop_loss_50pct": 1
+  },
+  "total_cost_drag": 9.12,
+  "total_implementable_pnl": -19.12,
+  "total_mid_pnl": -10.0,
+  "total_net_pnl": -19.12,
+  "trades": [
+    {
+      "close_time_et": "2023-09-01T15:45:00-04:00",
+      "close_timestamps_by_leg_id": {
+        "leg-11f5c9eeb7fefc6f": "2023-09-01T09:36:00-04:00",
+        "leg-b4dfc746841f5046": "2023-09-01T09:36:00-04:00"
+      },
+      "closing_mid_prices_by_leg_id": {
+        "leg-11f5c9eeb7fefc6f": 0.525,
+        "leg-b4dfc746841f5046": 0.195
+      },
+      "closing_prices_by_leg_id": {
+        "leg-11f5c9eeb7fefc6f": 0.52,
+        "leg-b4dfc746841f5046": 0.2
+      },
+      "cost_drag": 4.56,
+      "date": "2023-09-01",
+      "direction": "put",
+      "entry_debit": 0.25,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2023-09-01-leg-11f5c9eeb7fefc6f",
+          "fill_model": "half_spread",
+          "leg_id": "leg-11f5c9eeb7fefc6f",
+          "price": 0.38,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2023-09-01-leg-b4dfc746841f5046",
+          "fill_model": "half_spread",
+          "leg_id": "leg-b4dfc746841f5046",
+          "price": 0.13,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_mid_fills": [
+        {
+          "fill_id": "pilot-2023-09-01-leg-11f5c9eeb7fefc6f-mid",
+          "fill_model": "mid",
+          "leg_id": "leg-11f5c9eeb7fefc6f",
+          "price": 0.375,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2023-09-01-leg-b4dfc746841f5046-mid",
+          "fill_model": "mid",
+          "leg_id": "leg-b4dfc746841f5046",
+          "price": 0.135,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2023-09-01T09:35:00-04:00",
+      "exit_model": "target_stop_25_50",
+      "exit_value": 0.32,
+      "fees": 2.56,
+      "gross_pnl": 7.0,
+      "implementable_pnl": 4.44,
+      "legs": [
+        {
+          "expiration_date": "2023-09-01",
+          "leg_id": "leg-11f5c9eeb7fefc6f",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 451.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2023-09-01",
+          "leg_id": "leg-b4dfc746841f5046",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "put",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 449.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 25.0,
+      "mid_exit_value": 0.33,
+      "mid_pnl": 9.0,
+      "net_pnl": 4.44,
+      "reasons": [
+        "entry at half_spread; exit=profit_target_25pct; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_profit_target_25pct"
+    },
+    {
+      "close_time_et": "2023-09-07T15:45:00-04:00",
+      "close_timestamps_by_leg_id": {
+        "leg-1383f4c58667ddc9": "2023-09-07T10:33:00-04:00",
+        "leg-e002d4900dd8c0fd": "2023-09-07T10:33:00-04:00"
+      },
+      "closing_mid_prices_by_leg_id": {
+        "leg-1383f4c58667ddc9": 0.045,
+        "leg-e002d4900dd8c0fd": 0.205
+      },
+      "closing_prices_by_leg_id": {
+        "leg-1383f4c58667ddc9": 0.05,
+        "leg-e002d4900dd8c0fd": 0.2
+      },
+      "cost_drag": 4.56,
+      "date": "2023-09-07",
+      "direction": "call",
+      "entry_debit": 0.36,
+      "entry_fills": [
+        {
+          "fill_id": "pilot-2023-09-07-leg-e002d4900dd8c0fd",
+          "fill_model": "half_spread",
+          "leg_id": "leg-e002d4900dd8c0fd",
+          "price": 0.45,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2023-09-07-leg-1383f4c58667ddc9",
+          "fill_model": "half_spread",
+          "leg_id": "leg-1383f4c58667ddc9",
+          "price": 0.09,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_mid_fills": [
+        {
+          "fill_id": "pilot-2023-09-07-leg-e002d4900dd8c0fd-mid",
+          "fill_model": "mid",
+          "leg_id": "leg-e002d4900dd8c0fd",
+          "price": 0.445,
+          "quantity": 1,
+          "side": "buy"
+        },
+        {
+          "fill_id": "pilot-2023-09-07-leg-1383f4c58667ddc9-mid",
+          "fill_model": "mid",
+          "leg_id": "leg-1383f4c58667ddc9",
+          "price": 0.095,
+          "quantity": 1,
+          "side": "sell"
+        }
+      ],
+      "entry_time_et": "2023-09-07T09:35:00-04:00",
+      "exit_model": "target_stop_25_50",
+      "exit_value": 0.15,
+      "fees": 2.56,
+      "gross_pnl": -21.0,
+      "implementable_pnl": -23.56,
+      "legs": [
+        {
+          "expiration_date": "2023-09-07",
+          "leg_id": "leg-e002d4900dd8c0fd",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "buy",
+          "strike": 445.0,
+          "underlying": "SPY"
+        },
+        {
+          "expiration_date": "2023-09-07",
+          "leg_id": "leg-1383f4c58667ddc9",
+          "quantity": 1,
+          "record_type": "option_leg",
+          "right": "call",
+          "schema_version": "m2.0",
+          "side": "sell",
+          "strike": 447.0,
+          "underlying": "SPY"
+        }
+      ],
+      "max_defined_loss": 36.0,
+      "mid_exit_value": 0.16,
+      "mid_pnl": -19.0,
+      "net_pnl": -23.56,
+      "reasons": [
+        "entry at half_spread; exit=stop_loss_50pct; close_fallback=nearest_1545_window"
+      ],
+      "status": "closed_stop_loss_50pct"
+    }
+  ],
+  "win_rate": 0.5,
+  "worst_trade": -23.56
+}

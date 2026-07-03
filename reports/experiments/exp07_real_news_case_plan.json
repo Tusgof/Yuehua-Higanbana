@@ -1,0 +1,1357 @@
+{
+  "acceptance_bar": {
+    "requires_costed_live_rows": true,
+    "requires_real_news_snapshots": true,
+    "requires_timestamp_clean_inputs": true,
+    "strategy_ablation_required_after_prompt_pass": true,
+    "synthetic_cases_allowed_for_research": false
+  },
+  "blockers": [
+    "requires_real_news_archive",
+    "requires_real_timestamp_clean_news_cases"
+  ],
+  "candidate_day_count": 71,
+  "candidate_queue": [
+    {
+      "capture_status": "blocked",
+      "decision_time_et": "2023-04-03T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-03.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-03.json",
+      "trade_date": "2023-04-03"
+    },
+    {
+      "capture_status": "blocked",
+      "decision_time_et": "2023-04-13T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-13.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-13.json",
+      "trade_date": "2023-04-13"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-04-14T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-14.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-14.json",
+      "trade_date": "2023-04-14"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-04-17T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-17.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-17.json",
+      "trade_date": "2023-04-17"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-04-20T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-20.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-20.json",
+      "trade_date": "2023-04-20"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-04-27T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-27.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-27.json",
+      "trade_date": "2023-04-27"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-04-28T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-28.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-28.json",
+      "trade_date": "2023-04-28"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-05-31T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-05-31.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-05-31.json",
+      "trade_date": "2023-05-31"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-06-01T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-06-01.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-06-01.json",
+      "trade_date": "2023-06-01"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-06-02T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-06-02.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-06-02.json",
+      "trade_date": "2023-06-02"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-06-13T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-06-13.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-06-13.json",
+      "trade_date": "2023-06-13"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-06-16T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-06-16.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-06-16.json",
+      "trade_date": "2023-06-16"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-06-23T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-06-23.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-06-23.json",
+      "trade_date": "2023-06-23"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-06-26T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-06-26.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-06-26.json",
+      "trade_date": "2023-06-26"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-06-27T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-06-27.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-06-27.json",
+      "trade_date": "2023-06-27"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-07-03T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-07-03.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-07-03.json",
+      "trade_date": "2023-07-03"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-07-13T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-07-13.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-07-13.json",
+      "trade_date": "2023-07-13"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-07-18T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-07-18.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-07-18.json",
+      "trade_date": "2023-07-18"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-07-25T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-07-25.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-07-25.json",
+      "trade_date": "2023-07-25"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-07-28T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-07-28.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-07-28.json",
+      "trade_date": "2023-07-28"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-08-01T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-08-01.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-08-01.json",
+      "trade_date": "2023-08-01"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-08-02T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-08-02.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-08-02.json",
+      "trade_date": "2023-08-02"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-08-10T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-08-10.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-08-10.json",
+      "trade_date": "2023-08-10"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-08-11T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-08-11.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-08-11.json",
+      "trade_date": "2023-08-11"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-08-21T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-08-21.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-08-21.json",
+      "trade_date": "2023-08-21"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-08-28T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-08-28.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-08-28.json",
+      "trade_date": "2023-08-28"
+    },
+    {
+      "capture_status": "blocked",
+      "decision_time_et": "2023-09-01T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-09-01.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-09-01.json",
+      "trade_date": "2023-09-01"
+    },
+    {
+      "capture_status": "blocked",
+      "decision_time_et": "2023-09-07T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-09-07.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-09-07.json",
+      "trade_date": "2023-09-07"
+    },
+    {
+      "capture_status": "blocked",
+      "decision_time_et": "2023-10-02T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-10-02.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-10-02.json",
+      "trade_date": "2023-10-02"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-10-05T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-10-05.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-10-05.json",
+      "trade_date": "2023-10-05"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-10-23T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-10-23.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-10-23.json",
+      "trade_date": "2023-10-23"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-10-25T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-10-25.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-10-25.json",
+      "trade_date": "2023-10-25"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-10-27T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-10-27.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-10-27.json",
+      "trade_date": "2023-10-27"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-10-31T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-10-31.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-10-31.json",
+      "trade_date": "2023-10-31"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-11-09T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-11-09.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-11-09.json",
+      "trade_date": "2023-11-09"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-11-10T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-11-10.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-11-10.json",
+      "trade_date": "2023-11-10"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-11-13T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-11-13.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-11-13.json",
+      "trade_date": "2023-11-13"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-11-20T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-11-20.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-11-20.json",
+      "trade_date": "2023-11-20"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-11-27T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-11-27.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-11-27.json",
+      "trade_date": "2023-11-27"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-11-30T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-11-30.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-11-30.json",
+      "trade_date": "2023-11-30"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-12-06T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-12-06.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-12-06.json",
+      "trade_date": "2023-12-06"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2023-12-12T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-12-12.csv",
+      "split": "in_sample",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2023-12-12.json",
+      "trade_date": "2023-12-12"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-01-05T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-01-05.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-01-05.json",
+      "trade_date": "2024-01-05"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-01-08T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-01-08.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-01-08.json",
+      "trade_date": "2024-01-08"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-01-10T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-01-10.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-01-10.json",
+      "trade_date": "2024-01-10"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-01-11T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-01-11.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-01-11.json",
+      "trade_date": "2024-01-11"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-01-29T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-01-29.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-01-29.json",
+      "trade_date": "2024-01-29"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-01-30T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-01-30.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-01-30.json",
+      "trade_date": "2024-01-30"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-02-13T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-02-13.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-02-13.json",
+      "trade_date": "2024-02-13"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-02-14T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-02-14.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-02-14.json",
+      "trade_date": "2024-02-14"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-02-27T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-02-27.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-02-27.json",
+      "trade_date": "2024-02-27"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-03-06T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-03-06.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-03-06.json",
+      "trade_date": "2024-03-06"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-03-07T09:30:00-05:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-03-07.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-03-07.json",
+      "trade_date": "2024-03-07"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-03-12T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-03-12.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-03-12.json",
+      "trade_date": "2024-03-12"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-03-20T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-03-20.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-03-20.json",
+      "trade_date": "2024-03-20"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-04-02T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-04-02.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-04-02.json",
+      "trade_date": "2024-04-02"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-04-08T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-04-08.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-04-08.json",
+      "trade_date": "2024-04-08"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-04-10T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-04-10.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-04-10.json",
+      "trade_date": "2024-04-10"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-04-16T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-04-16.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-04-16.json",
+      "trade_date": "2024-04-16"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-04-18T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-04-18.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-04-18.json",
+      "trade_date": "2024-04-18"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-05-02T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-05-02.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-05-02.json",
+      "trade_date": "2024-05-02"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-05-03T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-05-03.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-05-03.json",
+      "trade_date": "2024-05-03"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-05-15T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-05-15.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-05-15.json",
+      "trade_date": "2024-05-15"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-05-20T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-05-20.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-05-20.json",
+      "trade_date": "2024-05-20"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-05-30T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-05-30.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-05-30.json",
+      "trade_date": "2024-05-30"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-05-31T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-05-31.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-05-31.json",
+      "trade_date": "2024-05-31"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-06-13T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-06-13.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-06-13.json",
+      "trade_date": "2024-06-13"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-06-18T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-06-18.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-06-18.json",
+      "trade_date": "2024-06-18"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-06-21T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-06-21.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-06-21.json",
+      "trade_date": "2024-06-21"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-06-27T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-06-27.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-06-27.json",
+      "trade_date": "2024-06-27"
+    },
+    {
+      "capture_status": "not_attempted",
+      "decision_time_et": "2024-06-28T09:30:00-04:00",
+      "planned_case_groups": [
+        "normal_quiet_day",
+        "scheduled_macro_day",
+        "large_intraday_move_day",
+        "volatility_spike_day",
+        "geopolitical_shock_or_war_risk_day",
+        "banking_or_liquidity_stress_day",
+        "index_etf_futures_disruption_day",
+        "false_alarm_day"
+      ],
+      "raw_output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2024-06-28.csv",
+      "split": "oos",
+      "status_output_path": "reports\\news_gdelt_capture_status\\2024-06-28.json",
+      "trade_date": "2024-06-28"
+    }
+  ],
+  "captured_candidate_count": 0,
+  "collection_status": "ready_to_collect",
+  "gdelt_plan_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_command_plan.json",
+  "news_audit_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_coverage_audit.json",
+  "next_step": "Pause live GDELT retries, then capture one candidate day at a time after 429 pressure clears.",
+  "next_unattempted_trade_date": "2023-04-14",
+  "plan_version": "exp07-real-news-case-plan-v1",
+  "prompt_template_families": [
+    {
+      "failure_mode": "Overconfident or vague rationale.",
+      "family_id": "role_only_analyst",
+      "purpose": "Test whether a simple expert role can interpret real pre-entry news without policy scaffolding."
+    },
+    {
+      "failure_mode": "Becomes a hidden keyword checklist instead of contextual interpretation.",
+      "family_id": "structured_json_classifier",
+      "purpose": "Test parser stability and consistent decision fields."
+    },
+    {
+      "failure_mode": "Overfits to the chosen examples.",
+      "family_id": "few_shot_real_news_examples",
+      "purpose": "Test whether real examples improve ambiguous classification."
+    },
+    {
+      "failure_mode": "May miss latent risk not explicit in headlines.",
+      "family_id": "evidence_first_rubric",
+      "purpose": "Require concrete input evidence before risk classification."
+    },
+    {
+      "failure_mode": "Higher cost and more verbose outputs.",
+      "family_id": "scenario_branching_prompt",
+      "purpose": "Compare benign, base, and stress interpretations before deciding."
+    },
+    {
+      "failure_mode": "Higher cost and slower decision path.",
+      "family_id": "self_consistency_ensemble",
+      "purpose": "Measure agreement across repeated calls or prompt variants."
+    }
+  ],
+  "required_case_groups": [
+    "normal_quiet_day",
+    "scheduled_macro_day",
+    "large_intraday_move_day",
+    "volatility_spike_day",
+    "geopolitical_shock_or_war_risk_day",
+    "banking_or_liquidity_stress_day",
+    "index_etf_futures_disruption_day",
+    "false_alarm_day"
+  ],
+  "required_news_fields": [
+    "published_at",
+    "fetched_at",
+    "source",
+    "url",
+    "headline",
+    "decision_time_et"
+  ],
+  "retry_pressure": {
+    "reason": "5 per-day GDELT capture attempts are blocked; wait before the next --execute retry or switch to an offline/alternate news archive path.",
+    "status": "cooldown_recommended",
+    "threshold": 3
+  },
+  "status": "blocked"
+}

@@ -1,0 +1,330 @@
+{
+  "blockers": [],
+  "experiment_count": 10,
+  "experiments": [
+    {
+      "blockers": [],
+      "experiment_id": "exp01_net_gamma_filter",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp02_llm_gate",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp03_risk_parity",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp04_account_feasibility",
+      "requires_search_log_policy": false,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": null,
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp05_structural_break_2022",
+      "requires_search_log_policy": false,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": null,
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": [
+        "search_like_metrics_without_required_search_policy"
+      ]
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp06_vix_range",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp07_cost_latency",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp08_entry_timing",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp09_exit_thresholds",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "experiment_id": "exp10_macro_filter",
+      "requires_search_log_policy": true,
+      "requires_strike_mapping_policy": true,
+      "search_log_policy": {
+        "dsr_blocker_allowed_if_search_log_incomplete": true,
+        "dsr_required_if_selecting_best_sharpe": true,
+        "parameter_grid_required": true,
+        "record_all_trials_required": true,
+        "search_log_path_template": "reports/experiments/search_logs/{experiment_id}_search_log.jsonl",
+        "trial_count_required": true
+      },
+      "strike_mapping_policy": {
+        "disclose_in_report": true,
+        "interpolation_allowed_for_research_only": false,
+        "method": "nearest_discrete_strike_rounding",
+        "tie_breaker": "prefer_lower_debit_then_nearest_defined_risk"
+      },
+      "validation_policy": {
+        "allowed_split_methods": [
+          "chronological",
+          "expanding_window",
+          "rolling_window",
+          "purged_embargoed"
+        ],
+        "fit_only_before_decision_timestamp": true,
+        "forbid_oos_tuning": true,
+        "forbid_random_split": true,
+        "split_method": "chronological"
+      },
+      "warnings": []
+    }
+  ],
+  "guardrail_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\experiments\\m3_experiment_guardrails.json",
+  "manifest_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\experiments\\experiment_manifests.json",
+  "status": "pass",
+  "warnings": [
+    "exp05_structural_break_2022:search_like_metrics_without_required_search_policy"
+  ]
+}

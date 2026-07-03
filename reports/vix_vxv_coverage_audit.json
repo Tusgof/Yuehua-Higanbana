@@ -1,0 +1,60 @@
+{
+  "as_of_date": "2026-06-30",
+  "blockers": [],
+  "coverage_end": "2026-06-29",
+  "coverage_start": "2022-01-03",
+  "max_staleness_days": 7,
+  "record_count": 1125,
+  "status": "pass",
+  "vix_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\vix_vxv\\vix_vxv.jsonl",
+  "windows": [
+    {
+      "end": "2022-05-10",
+      "record_count": 89,
+      "start": "2019-01-01",
+      "status": "pass",
+      "window": "reference_pre_break"
+    },
+    {
+      "end": "2023-12-31",
+      "record_count": 412,
+      "start": "2022-05-11",
+      "status": "pass",
+      "window": "train"
+    },
+    {
+      "end": "2026-06-30",
+      "record_count": 624,
+      "start": "2024-01-01",
+      "status": "pass",
+      "window": "oos"
+    }
+  ],
+  "years": [
+    {
+      "record_count": 251,
+      "status": "pass",
+      "year": 2022
+    },
+    {
+      "record_count": 250,
+      "status": "pass",
+      "year": 2023
+    },
+    {
+      "record_count": 252,
+      "status": "pass",
+      "year": 2024
+    },
+    {
+      "record_count": 250,
+      "status": "pass",
+      "year": 2025
+    },
+    {
+      "record_count": 122,
+      "status": "pass",
+      "year": 2026
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "plan_version": "exp07-strategy-ablation-v1",
+  "experiment_id": "exp07_cost_latency",
+  "purpose": "Compare strategy results with and without the deterministic guarded Exp07 policy before any LLM gate can affect research or live decisions.",
+  "data_requirements": {
+    "minimum_trade_count": 500,
+    "requires_wider_spy_0dte_data": true,
+    "requires_real_news_archive": true,
+    "requires_real_macro_calendar_archive": true,
+    "requires_bid_ask_quotes": true
+  },
+  "split_policy": {
+    "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+    "oos_window": {"start": "2024-01-01", "end": "current_available"},
+    "parameters_locked_before_oos": true,
+    "forbid_oos_tuning": true
+  },
+  "policy_variants": [
+    {
+      "variant_id": "baseline_quant_only",
+      "description": "Use quantitative filters and execution rules only; no LLM or guarded event-policy filter can block trades.",
+      "uses_raw_llm_gate": false,
+      "uses_guarded_policy": false,
+      "can_block_trade": false
+    },
+    {
+      "variant_id": "guarded_policy_gate",
+      "description": "Apply the deterministic guarded event policy from Exp07 as a trade gate; raw LLM text can inform logs but cannot override the guard.",
+      "uses_raw_llm_gate": false,
+      "uses_guarded_policy": true,
+      "can_block_trade": true
+    },
+    {
+      "variant_id": "raw_llm_observation_only",
+      "description": "Log raw LLM decisions for diagnostics only; raw LLM decisions cannot affect trade selection or sizing.",
+      "uses_raw_llm_gate": true,
+      "uses_guarded_policy": false,
+      "can_block_trade": false
+    }
+  ],
+  "required_metrics": [
+    "trade_count",
+    "skip_rate",
+    "total_net_pnl",
+    "sharpe",
+    "sortino",
+    "max_drawdown",
+    "es95",
+    "es99",
+    "worst_day_loss",
+    "win_rate",
+    "payoff_ratio",
+    "cost_drag",
+    "benchmark_return"
+  ],
+  "acceptance_rules": {
+    "guarded_policy_must_not_reduce_trade_count_below_minimum": true,
+    "guarded_policy_must_improve_es99_or_worst_day_loss": true,
+    "guarded_policy_must_not_reduce_oos_sharpe_below_baseline": true,
+    "raw_llm_variant_cannot_be_used_as_gate": true
+  },
+  "blocked_until": [
+    "requires_wider_spy_0dte_data",
+    "requires_real_news_archive"
+  ]
+}

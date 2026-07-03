@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "quiet_vix18_normal_term_structure",
+    "expected_decision": "allow",
+    "input_hash": "6be0e26b791f3686bef1bb109254489a3c079220607ea5c80bae85dfd10eef4b",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "quiet normal pre-open",
+        "trade_date": "2024-01-03",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Quiet market before open",
+          "published_at_et": "2024-01-03T08:00:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "vix_vxv": {
+        "date": "2024-01-03",
+        "vix_close": 18.0,
+        "vxv_close": 19.0
+      }
+    }
+  },
+  {
+    "case_id": "systemic_banking_panic_vix34",
+    "expected_decision": "block",
+    "input_hash": "87431e3a65dc10183a57c520dfa823647eab3be91dceef020143ceb0a026ca5e",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "tail-risk shock",
+        "trade_date": "2024-03-13",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Emergency banking crisis raises systemic panic risk",
+          "published_at_et": "2024-03-13T08:15:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "vix_vxv": {
+        "date": "2024-03-13",
+        "vix_close": 34.0,
+        "vxv_close": 27.0
+      }
+    }
+  },
+  {
+    "case_id": "high_vol_no_clear_news_vix27",
+    "expected_decision": "unknown",
+    "input_hash": "babb33b7f3cec6f6bf2df875cb91b24d4843b064d8aa99bec2abdd7b0c9baf10",
+    "prompt_input": {
+      "market_context": {
+        "scenario": "elevated volatility without clear catalyst",
+        "trade_date": "2024-05-01",
+        "underlying": "SPY"
+      },
+      "news_items": [
+        {
+          "headline": "Indexes mixed as traders await afternoon Fed remarks",
+          "published_at_et": "2024-05-01T08:30:00-05:00",
+          "source_name": "fixture"
+        }
+      ],
+      "vix_vxv": {
+        "date": "2024-05-01",
+        "vix_close": 27.0,
+        "vxv_close": 25.0
+      }
+    }
+  }
+]

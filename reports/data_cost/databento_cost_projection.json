@@ -1,0 +1,27 @@
+{
+  "average_cost_per_window_usd": 0.02355251,
+  "projections": {
+    "full_research": {
+      "projected_cost_usd": 73.271845,
+      "request_count": 3111
+    },
+    "one_day_sample": {
+      "projected_cost_usd": 0.070658,
+      "request_count": 3
+    },
+    "one_month_pilot": {
+      "projected_cost_usd": 1.483808,
+      "request_count": 63
+    },
+    "oos_2024_2025": {
+      "projected_cost_usd": 26.425911,
+      "request_count": 1122
+    }
+  },
+  "source_error_count": 0,
+  "source_mode": "live",
+  "source_path": "reports\\data_cost\\databento_cost_plan.json",
+  "source_scenario": "one_month_pilot",
+  "source_successful_request_count": 63,
+  "source_total_estimated_cost_usd": 1.483808
+}

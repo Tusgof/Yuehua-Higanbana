@@ -1,0 +1,26 @@
+{
+  "coverage_end": "2024-09-06",
+  "coverage_start": "2024-09-03",
+  "input_rows": 2192,
+  "manifest": {
+    "coverage_end": "2024-09-06",
+    "coverage_start": "2024-09-03",
+    "dataset_id": "databento-spy-bars-2024-09-03-to-2024-09-06-51a973be61d1",
+    "ingested_at_et": "2026-07-01T00:57:10-04:00",
+    "license_notes": "Databento EQUS.MINI ohlcv-1m local cache. Low-cost SPY-only research pull approved by user.",
+    "provider": "Databento",
+    "raw_sha256": "51a973be61d1adb0adfb6200cdf83656f840a98e4215c7dad1c88610072e4cca",
+    "record_type": "data_registry_manifest",
+    "schema_name": "m2_contracts",
+    "schema_version": "m2.0",
+    "schema_version_applied": "m2.0",
+    "source_url": "data\\raw\\spy_0dte\\databento\\spy_bars\\sep_2024_chunk1_spy_ohlcv_1m.dbn.zst"
+  },
+  "output_path": "data\\normalized\\spy_0dte\\databento\\oos_2024_09_intraday_exit_30m_chunk1\\spy_bar.jsonl",
+  "output_rows": 2192,
+  "provider": "Databento",
+  "raw_path": "data\\raw\\spy_0dte\\databento\\spy_bars\\sep_2024_chunk1_spy_ohlcv_1m.dbn.zst",
+  "registry_path": "data\\registry\\databento_oos_2024_09_intraday_exit_30m_chunk1_spy_bar_manifest.json",
+  "skipped_invalid_ohlc": 0,
+  "skipped_non_spy": 0
+}

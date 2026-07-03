@@ -1,0 +1,61 @@
+{
+  "api_key": {
+    "api_key_env": "HIGANBANA_OPENROUTER_API",
+    "configured": true
+  },
+  "assessment_count": 1,
+  "assessment_jsonl": "reports\\experiments\\exp07_prompt_v13_smoke_assessments.jsonl",
+  "by_case": {
+    "quiet_vix18_normal_term_structure": {
+      "decisions": [
+        "allow"
+      ],
+      "expected_decision": "allow",
+      "guarded_decisions": [
+        "allow"
+      ],
+      "guarded_stable_across_prompts": true,
+      "stable_across_prompts": true,
+      "unique_decisions": [
+        "allow"
+      ],
+      "unique_guarded_decisions": [
+        "allow"
+      ]
+    }
+  },
+  "by_variant": {
+    "A": {
+      "assessment_count": 1,
+      "decisions": [
+        "allow"
+      ],
+      "parse_valid_count": 1,
+      "parse_valid_rate": 1.0,
+      "unique_decisions": [
+        "allow"
+      ]
+    }
+  },
+  "case_count": 1,
+  "guarded_mismatch_count": 0,
+  "guarded_mismatches": [],
+  "guarded_stable_case_count": 1,
+  "guarded_unknown_policy_violation_count": 0,
+  "guarded_unknown_policy_violations": [],
+  "input_archive": "reports\\experiments\\exp07_prompt_v13_smoke_inputs.json",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "mode": "live_openrouter",
+  "openrouter_actual_cost_usd": 0.0001645,
+  "openrouter_costed_assessment_count": 1,
+  "openrouter_usage_totals": {
+    "completion_tokens": 451,
+    "prompt_tokens": 294,
+    "total_tokens": 745
+  },
+  "parse_valid_rate": 1.0,
+  "stable_case_count": 1,
+  "unknown_policy_violation_count": 0,
+  "unknown_policy_violations": []
+}

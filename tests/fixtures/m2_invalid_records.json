@@ -1,0 +1,69 @@
+[
+  {
+    "case": "option_quote_missing_bid",
+    "record": {
+      "record_type": "option_quote",
+      "schema_version": "m2.0",
+      "underlying": "SPY",
+      "quote_timestamp_et": "2024-01-03T10:00:00-05:00",
+      "expiration_date": "2024-01-03",
+      "dte": 0.25,
+      "right": "put",
+      "strike": 470,
+      "ask": 1.2,
+      "bid_size": 120,
+      "ask_size": 105,
+      "provider": "synthetic",
+      "source": "fixture"
+    }
+  },
+  {
+    "case": "option_quote_inverted_bid_ask",
+    "record": {
+      "record_type": "option_quote",
+      "schema_version": "m2.0",
+      "underlying": "SPY",
+      "quote_timestamp_et": "2024-01-03T10:00:00-05:00",
+      "expiration_date": "2024-01-03",
+      "dte": 0.25,
+      "right": "put",
+      "strike": 470,
+      "bid": 1.25,
+      "ask": 1.2,
+      "bid_size": 120,
+      "ask_size": 105,
+      "provider": "synthetic",
+      "source": "fixture"
+    }
+  },
+  {
+    "case": "registry_missing_raw_hash",
+    "record": {
+      "record_type": "data_registry_manifest",
+      "schema_version": "m2.0",
+      "dataset_id": "dataset-bad",
+      "provider": "synthetic",
+      "source_url": "file://fixture",
+      "ingested_at_et": "2024-01-04T08:00:00-05:00",
+      "coverage_start": "2024-01-03",
+      "coverage_end": "2024-01-03",
+      "schema_name": "m2_contracts",
+      "schema_version_applied": "m2.0",
+      "license_notes": "Synthetic fixture only."
+    }
+  },
+  {
+    "case": "oos_parameters_not_locked",
+    "record": {
+      "record_type": "experiment_manifest",
+      "schema_version": "m2.0",
+      "experiment_id": "exp-bad",
+      "hypothesis": "Bad fixture.",
+      "data_window": {"start": "2022-05-11", "end": "2025-12-31"},
+      "train_window": {"start": "2022-05-11", "end": "2023-12-31"},
+      "oos_window": {"start": "2024-01-01", "end": "2025-12-31"},
+      "parameters_locked_before_oos": false,
+      "metrics": ["sharpe"]
+    }
+  }
+]

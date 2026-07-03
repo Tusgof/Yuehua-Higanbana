@@ -1,0 +1,13 @@
+{
+  "blockers": [
+    "gdelt_capture_unavailable"
+  ],
+  "decision_time_et": "2023-10-02T09:30:00-04:00",
+  "error": "GDELT returned 429 Too Many Requests; retry later and keep using cached/offline snapshots",
+  "lookback_hours": 24,
+  "max_records": 5,
+  "mode": "execute",
+  "output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-10-02.csv",
+  "source_plan_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\tests\\fixtures\\news_sources_v1.json",
+  "status": "blocked"
+}
