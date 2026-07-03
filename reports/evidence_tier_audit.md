@@ -4,7 +4,7 @@
 - Blocker count: 0
 - Warning count: 28
 - Strict missing metadata: `False`
-- Summary count: 30
+- Summary count: 31
 
 ## Summaries
 
@@ -31,6 +31,7 @@
 | `reports\experiments\exp07_prompt_v9_summary.json` | None | None | no | None | `missing_evidence_metadata:reports\experiments\exp07_prompt_v9_summary.json:hypothesis_id,evidence_tier,tier_blockers` |
 | `reports\experiments\exp07_strategy_ablation_status.json` | None | None | no | None | `missing_evidence_metadata:reports\experiments\exp07_strategy_ablation_status.json:hypothesis_id,evidence_tier,tier_blockers` |
 | `reports\experiments\h_a2_macro_conditioned_reanalysis_summary.json` | `H-A2` | `E1` | no | None | None |
+| `reports\experiments\h_b2_subsystem_b_scale_summary.json` | `H-B2` | `E1` | no | None | None |
 | `reports\experiments\m5_entry_timing_sensitivity_summary.json` | None | None | no | None | `missing_evidence_metadata:reports\experiments\m5_entry_timing_sensitivity_summary.json:hypothesis_id,evidence_tier,tier_blockers` |
 | `reports\experiments\m5_exit_target_stop_sensitivity_summary.json` | None | None | no | None | `missing_evidence_metadata:reports\experiments\m5_exit_target_stop_sensitivity_summary.json:hypothesis_id,evidence_tier,tier_blockers` |
 | `reports\experiments\m5_portfolio_construction_diagnostic_summary.json` | None | None | no | None | `missing_evidence_metadata:reports\experiments\m5_portfolio_construction_diagnostic_summary.json:hypothesis_id,evidence_tier,tier_blockers` |

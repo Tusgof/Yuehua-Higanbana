@@ -13,6 +13,7 @@
 | `subsystem_a_orb_baseline_summary` | `???-higanbana-orb-baseline-real-data*.md` | True |
 | `subsystem_b_put_ratio_feasibility_summary` | `???-higanbana-put-ratio-feasibility-real-data*.md` | True |
 | `h_a2_macro_conditioned_reanalysis_summary` | `???-higanbana-macro-conditioned-orb-reanalysis*.md` | True |
+| `h_b2_subsystem_b_scale_summary` | `???-higanbana-subsystem-b-scale-diagnostic*.md` | True |
 | `m5_entry_timing_sensitivity_summary` | `???-higanbana-entry-timing-sensitivity-real-data*.md` | True |
 | `m5_exit_target_stop_sensitivity_summary` | `???-higanbana-exit-target-stop-sensitivity-real-data*.md` | True |
 | `m5_portfolio_construction_diagnostic_summary` | `???-higanbana-portfolio-construction-diagnostic-real-data*.md` | True |
@@ -27,9 +28,9 @@
 
 ## Sequence
 
-- Existing log count: 11
-- Next log number: `012`
-- Next filename prefix: `012-higanbana-`
+- Existing log count: 12
+- Next log number: `013`
+- Next filename prefix: `013-higanbana-`
 - Contiguous from 001: `True`
 - Sequence issues: None
 
@@ -38,5 +39,5 @@
 - Is git repo: `True`
 - Clean worktree: `True`
 - Remote matches expected: `True`
-- Local HEAD: `7e3cf139cfd5168a31b9587751fbc15d5352e6bc`
-- Remote HEAD: `7e3cf139cfd5168a31b9587751fbc15d5352e6bc`
+- Local HEAD: `3be264ab96346bd37f58260cf858dcb2462d199e`
+- Remote HEAD: `3be264ab96346bd37f58260cf858dcb2462d199e`

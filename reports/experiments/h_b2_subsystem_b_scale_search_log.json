@@ -1,0 +1,154 @@
+[
+  {
+    "account_size_usd": 10000.0,
+    "eligible_trades": 413,
+    "es95": -141.6914,
+    "friction_drag_ratio": 11.708753,
+    "max_drawdown": -0.588764,
+    "oos_implementable_pnl": -3332.88,
+    "protective_wing_gap_usd": 5.0,
+    "risk_budget_usd": 500.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_10000_wing_5",
+    "selected_for_deployment": false,
+    "total_cost_drag": 5163.56,
+    "total_implementable_pnl": -5604.56,
+    "total_mid_pnl": -441.0
+  },
+  {
+    "account_size_usd": 25000.0,
+    "eligible_trades": 413,
+    "es95": -141.6914,
+    "friction_drag_ratio": 11.708753,
+    "max_drawdown": -0.235506,
+    "oos_implementable_pnl": -3332.88,
+    "protective_wing_gap_usd": 5.0,
+    "risk_budget_usd": 1250.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_25000_wing_5",
+    "selected_for_deployment": false,
+    "total_cost_drag": 5163.56,
+    "total_implementable_pnl": -5604.56,
+    "total_mid_pnl": -441.0
+  },
+  {
+    "account_size_usd": 10000.0,
+    "eligible_trades": 90,
+    "es95": -196.12,
+    "friction_drag_ratio": 3.213822,
+    "max_drawdown": -0.151096,
+    "oos_implementable_pnl": -686.68,
+    "protective_wing_gap_usd": 10.0,
+    "risk_budget_usd": 500.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_10000_wing_10",
+    "selected_for_deployment": false,
+    "total_cost_drag": 1139.3,
+    "total_implementable_pnl": -784.8,
+    "total_mid_pnl": 354.5
+  },
+  {
+    "account_size_usd": 25000.0,
+    "eligible_trades": 412,
+    "es95": -161.4533,
+    "friction_drag_ratio": 5.966111,
+    "max_drawdown": -0.25023,
+    "oos_implementable_pnl": -3866.76,
+    "protective_wing_gap_usd": 10.0,
+    "risk_budget_usd": 1250.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_25000_wing_10",
+    "selected_for_deployment": false,
+    "total_cost_drag": 5115.94,
+    "total_implementable_pnl": -5973.44,
+    "total_mid_pnl": -857.5
+  },
+  {
+    "account_size_usd": 10000.0,
+    "eligible_trades": 0,
+    "es95": null,
+    "friction_drag_ratio": null,
+    "max_drawdown": 0.0,
+    "oos_implementable_pnl": 0,
+    "protective_wing_gap_usd": 15.0,
+    "risk_budget_usd": 500.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_10000_wing_15",
+    "selected_for_deployment": false,
+    "total_cost_drag": 0,
+    "total_implementable_pnl": 0,
+    "total_mid_pnl": 0
+  },
+  {
+    "account_size_usd": 25000.0,
+    "eligible_trades": 406,
+    "es95": -168.739,
+    "friction_drag_ratio": 7.161994,
+    "max_drawdown": -0.240695,
+    "oos_implementable_pnl": -3641.04,
+    "protective_wing_gap_usd": 15.0,
+    "risk_budget_usd": 1250.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_25000_wing_15",
+    "selected_for_deployment": false,
+    "total_cost_drag": 5027.72,
+    "total_implementable_pnl": -5729.72,
+    "total_mid_pnl": -702.0
+  },
+  {
+    "account_size_usd": 10000.0,
+    "eligible_trades": 0,
+    "es95": null,
+    "friction_drag_ratio": null,
+    "max_drawdown": 0.0,
+    "oos_implementable_pnl": 0,
+    "protective_wing_gap_usd": 20.0,
+    "risk_budget_usd": 500.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_10000_wing_20",
+    "selected_for_deployment": false,
+    "total_cost_drag": 0,
+    "total_implementable_pnl": 0,
+    "total_mid_pnl": 0
+  },
+  {
+    "account_size_usd": 25000.0,
+    "eligible_trades": 0,
+    "es95": null,
+    "friction_drag_ratio": null,
+    "max_drawdown": 0.0,
+    "oos_implementable_pnl": 0,
+    "protective_wing_gap_usd": 20.0,
+    "risk_budget_usd": 1250.0,
+    "sample_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "scenario_id": "account_25000_wing_20",
+    "selected_for_deployment": false,
+    "total_cost_drag": 0,
+    "total_implementable_pnl": 0,
+    "total_mid_pnl": 0
+  }
+]

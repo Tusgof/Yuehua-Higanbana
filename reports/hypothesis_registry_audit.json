@@ -40,13 +40,13 @@
     {
       "blockers": [],
       "dependency_count": 1,
-      "evidence_count": 1,
+      "evidence_count": 2,
       "evidence_tiers": [
         "E1"
       ],
       "family": "subsystem_b",
       "id": "H-B2",
-      "status": "active",
+      "status": "parked",
       "warnings": []
     },
     {
@@ -88,6 +88,6 @@
   "registry_path": "experiments\\hypothesis_registry.json",
   "reports_root": "reports",
   "status": "pass",
-  "summary_hypothesis_reference_count": 4,
+  "summary_hypothesis_reference_count": 5,
   "warnings": []
 }

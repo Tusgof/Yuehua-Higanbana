@@ -181,7 +181,7 @@
     {
       "id": "H-B2",
       "family": "subsystem_b",
-      "status": "active",
+      "status": "parked",
       "statement": "The put-ratio-with-wing structure may have positive expectancy at simulated $10k to $25k scale where strike granularity and premium-to-account ratios stop binding.",
       "economic_rationale": "If short-dated downside skew is overpriced, a capped-risk structure may monetize it at sufficient account size while preserving survival through the protective wing.",
       "testable_predictions": [
@@ -200,11 +200,12 @@
         "Cost drag exceeds 60% of gross at all wing widths."
       ],
       "required_data": [
-        "Already-cached Sub-System B data from Mar-Dec 2023 and Jan-Dec 2024."
+        "Already-cached Sub-System B data from Mar-Dec 2023 and Jan-Dec 2024.",
+        "H-B2 pre-registration manifest and simulated-scale diagnostic are complete with no new paid data."
       ],
       "mintrl_falsify": {
-        "status": "pending",
-        "method": "compute from the 412-trade Sub-System B return distribution after pre-registered rerun"
+        "status": "pending_review",
+        "method": "compute/review from the pre-registered H-B2 simulated-scale return distributions before declaring formal falsification"
       },
       "evidence": [
         {
@@ -212,6 +213,12 @@
           "evidence_tier": "E1",
           "conclusion": "ไม่ผ่าน",
           "notes": "Supports H-B2 motivation but does not test H-B2 scale."
+        },
+        {
+          "path": "reports/experiments/h_b2_subsystem_b_scale_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Pre-registered 8-trial simulated-scale diagnostic. No scenario has both positive total implementable PnL and positive OOS implementable PnL; cost drag is high where mid PnL is positive. Parked pending MinTRL_falsify review before formal falsification."
         }
       ],
       "dependencies": [
@@ -222,6 +229,11 @@
           "date": "2026-07-03",
           "decision": "active",
           "notes": "Zero-cost rerun track using cached data."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "parked_pending_mintrl_falsify_review",
+          "notes": "H-B2 pre-registration and simulated-scale diagnostic completed with no new paid data. Eight pre-registered trials across $10k/$25k and $5/$10/$15/$20 wings found zero scenarios with both positive total and OOS implementable PnL. Formal falsification is deferred until MinTRL_falsify review; no deployment or paper-trading edge claim is allowed."
         }
       ]
     },

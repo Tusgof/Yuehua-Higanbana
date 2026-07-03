@@ -1,0 +1,81 @@
+{
+  "account_sizes_usd": [
+    10000.0,
+    25000.0
+  ],
+  "capital_rule": {
+    "account_risk_fraction": 0.05,
+    "contract_sizing": "one_1x2x1_spread_per_eligible_day",
+    "eligibility_rule": "max_defined_loss_usd <= account_size_usd * account_risk_fraction",
+    "fractional_contracts": false,
+    "notes": "The rerun tests structure merit at larger simulated account sizes, not optimized deployment sizing."
+  },
+  "chronological_policy": {
+    "in_sample": "2023-03-01..2023-12-31",
+    "oos": "2024-01-01..2024-12-31",
+    "oos_tuning": "forbidden",
+    "split_method": "chronological"
+  },
+  "data_policy": {
+    "allowed_sources": [
+      "already-cached normalized SPY 0DTE Databento data"
+    ],
+    "new_paid_data_allowed": false,
+    "symbol_universe": [
+      "SPY"
+    ]
+  },
+  "decision_rule": {
+    "diagnostic_evidence_tier": "E1",
+    "falsify_if": [
+      "implementable_pnl_usd <= 0 at both simulated account sizes for every pre-registered wing gap after sample adequacy is computed",
+      "oos_implementable_pnl_usd <= 0 at both simulated account sizes for every pre-registered wing gap",
+      "friction_drag_ratio >= 0.60 for every wing gap with positive mid_pnl_usd"
+    ],
+    "keep_active_if": [
+      "at least one pre-registered wing gap has positive implementable_pnl_usd and positive oos_implementable_pnl_usd at a simulated account size",
+      "big_day_dependency status remains pass",
+      "sample adequacy blockers are explicitly reported instead of ignored"
+    ],
+    "deployment_claim_allowed": false
+  },
+  "entry_exit_policy": {
+    "entry_quote_window_et": "09:55..10:00",
+    "entry_selection": "nearest available put quote at or before 10:00 ET",
+    "exit_model": "forced_close_1545",
+    "exit_quote_window_et": "15:35..15:45",
+    "fee_per_contract_usd": 0.64,
+    "fill_model": "implementable uses ask for buys and bid for sells on entry; bid for closing longs and ask for closing shorts",
+    "mid_pnl_control": true
+  },
+  "hypothesis_id": "H-B2",
+  "output_paths": {
+    "report": "reports/experiments/h_b2_subsystem_b_scale_report.md",
+    "search_log": "reports/experiments/h_b2_subsystem_b_scale_search_log.json",
+    "summary": "reports/experiments/h_b2_subsystem_b_scale_summary.json"
+  },
+  "registered_at": "2026-07-03",
+  "schema_version": "h_b2_subsystem_b_scale_preregistration_v1",
+  "search_control": {
+    "dsr_status": "blocked_until_acceptance_grade_return_distribution",
+    "independent_trial_count": 8,
+    "selection_for_deployment": "forbidden",
+    "trial_dimensions": [
+      "account_size_usd",
+      "protective_wing_gap_usd"
+    ]
+  },
+  "strategy_template": {
+    "legs": "long 1 near-ATM put, short 2 downside puts, long 1 deeper protective put",
+    "near_moneyness": 1.0,
+    "option_multiplier": 100,
+    "protective_wing_gap_grid_usd": [
+      5.0,
+      10.0,
+      15.0,
+      20.0
+    ],
+    "short_moneyness": 0.99,
+    "strike_mapping": "nearest discrete strike rounding; no interpolation"
+  }
+}

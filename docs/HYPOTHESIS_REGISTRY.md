@@ -39,7 +39,7 @@ Resurrection is allowed only as a new registry entry with at least one new testa
 ### H-A2: Macro-Conditioned ORB
 
 - **Family**: `subsystem_a`
-- **Status**: `active`
+- **Status**: `parked`
 - **Statement**: The ORB edge, if it exists, is macro-conditioned: excluding high-importance scheduled macro days should improve implementable risk-adjusted OOS returns because non-macro breakout days reflect cleaner order-flow imbalance.
 - **Economic rationale**: On scheduled macro days, the opening range can be dominated by anticipatory positioning and post-release repricing rather than persistent intraday imbalance. Removing those days is a mechanism claim, not merely a fitted filter.
 - **Testable predictions**:
@@ -74,7 +74,7 @@ Resurrection is allowed only as a new registry entry with at least one new testa
   - Results are not dependent on fractional contracts or hidden undefined risk.
 - **Validation criteria**: Pre-registered account sizes, wing grid, sizing rule, search log, DSR or DSR blocker, implementable PnL, ES95, drawdown, and sample labels.
 - **Falsification criteria**: H-B2 is killed if implementable PnL and ES95-adjusted return are negative at both simulated scales with adequate falsification sample, or if cost drag exceeds 60% of gross at all wing widths.
-- **Current evidence**: Not yet rerun under H-B2. Existing H-B1 evidence motivates the new scale hypothesis.
+- **Current evidence**: `reports/experiments/h_b2_subsystem_b_scale_summary.json` is E1 diagnostic evidence. The 8 pre-registered trials found zero scenarios with both positive total implementable PnL and positive OOS implementable PnL. H-B2 is parked pending MinTRL_falsify review, with no deployment or paper-trading edge claim allowed.
 - **Conclusion**: `ยังสรุปไม่ได้`.
 
 ### H-G1: Signed-OI Gamma Proxy Validity

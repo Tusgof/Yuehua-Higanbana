@@ -78,12 +78,12 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| H-B2.1 | Register H-B1 as falsified for `$300` allocation / `$20` risk and H-B2 as simulated-scale structure test | S | RISK | Registry validator passes |
-| H-B2.2 | Pre-register account sizes, wing grid, sizing rule, selection rule, and DSR/search-log handling | M | RISK | Experiment manifest includes fixed grid before run |
-| H-B2.3 | Rerun Sub-System B feasibility using already-cached data only | L | RISK | Summary reports `$10k` and `$25k` results, implementable PnL, ES95, drawdown, cost drag, sample labels, and search log |
-| H-B2.4 | Decide falsified/active/parked based on pre-registered criteria | S | RISK | Registry decision log updated with report link and tier |
+| H-B2.1 | Register H-B1 as falsified for `$300` allocation / `$20` risk and H-B2 as simulated-scale structure test | S | RISK | Complete: registry validator passes and H-B1/H-B2 entries exist |
+| H-B2.2 | Pre-register account sizes, wing grid, sizing rule, selection rule, and DSR/search-log handling | M | RISK | Complete: `experiments\h_b2_subsystem_b_scale_preregistration.json` validates with fixed `$10k`/`$25k`, `$5/$10/$15/$20` wing grid, 5% account-risk eligibility, no fractional contracts, and 8-trial DSR/search-log handling |
+| H-B2.3 | Rerun Sub-System B feasibility using already-cached data only | L | RISK | Complete: `reports\experiments\h_b2_subsystem_b_scale_summary.json`, `.md`, and search log report 8 pre-registered scenarios with implementable PnL, ES95, drawdown, cost drag, sample labels, and no new paid data |
+| H-B2.4 | Decide falsified/active/parked based on pre-registered criteria | S | RISK | Complete: H-B2 is parked pending MinTRL_falsify review; zero scenarios had both positive total and OOS implementable PnL, and no deployment/paper-trading edge claim is allowed |
 
-**Track complete when**: The project knows whether Sub-System B is structurally worth keeping for larger capital research, independent of current small-account feasibility.
+**Track complete when**: Complete for v2 diagnostic. H-B2 is parked pending MinTRL_falsify review, and the project should not spend new effort on Sub-System B unless the hypothesis is revised with a new mechanism or the falsification-review step explicitly reopens it.
 
 ---
 
@@ -148,8 +148,8 @@
 ---
 
 ## Execution Notes
-- **Active track**: H-B2 no-cost work while H-A2 stress expansion is cost-blocked.
-- **Immediate next safe action**: Start H-B2.1/H-B2.2: confirm H-B1/H-B2 registry state, then pre-register `$10k`/`$25k` Sub-System B sizing, wing grid, selection rule, and DSR/search-log handling using already-cached data only.
+- **Active track**: H-G1 no-cost/low-cost setup or H-L1/H-L2 design work while H-A2 stress expansion is cost-blocked and H-B2 is parked.
+- **Immediate next safe action**: Start H-G1.1/H-G1.2: issue gamma aggregation validation policy v2 and pre-register the 12-date regime set before any OPRA statistics/OI purchase. If avoiding paid actions entirely, start H-L1/H-L2 design docs.
 - **Blocked paid actions**: H-A2 top2 2022 H2 stress data download is blocked because live estimate `$20.748872` exceeds the current `$20.0` headroom. Do not download top2 unless the user tops up/cap changes or the plan is explicitly revised to a narrower scope. Any new provider still requires explicit user approval.
 - **Current cost basis**: User-reported actual usage `$105.0`; stop threshold `$125`; current headroom `$20.0`.
 - **Risk checkpoints**: Before every paid pull, after every validator/audit change, before H-A2 stress purchase, before H-G1 12-date OI purchase, before any LLM call, before acceptance, and before paper/dry-run.

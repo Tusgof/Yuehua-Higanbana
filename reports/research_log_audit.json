@@ -5,8 +5,8 @@
     "blockers": [],
     "clean": true,
     "is_repo": true,
-    "local_head": "7e3cf139cfd5168a31b9587751fbc15d5352e6bc",
-    "remote_head": "7e3cf139cfd5168a31b9587751fbc15d5352e6bc",
+    "local_head": "3be264ab96346bd37f58260cf858dcb2462d199e",
+    "remote_head": "3be264ab96346bd37f58260cf858dcb2462d199e",
     "remote_matches_expected": true
   },
   "invalid_log_filenames": [],
@@ -47,6 +47,15 @@
       "present": true,
       "summary_id": "h_a2_macro_conditioned_reanalysis_summary",
       "summary_path": "reports\\experiments\\h_a2_macro_conditioned_reanalysis_summary.json"
+    },
+    {
+      "expected_pattern": "???-higanbana-subsystem-b-scale-diagnostic*.md",
+      "matched_logs": [
+        "research_log\\012-higanbana-subsystem-b-scale-diagnostic.md"
+      ],
+      "present": true,
+      "summary_id": "h_b2_subsystem_b_scale_summary",
+      "summary_path": "reports\\experiments\\h_b2_subsystem_b_scale_summary.json"
     },
     {
       "expected_pattern": "???-higanbana-entry-timing-sensitivity-real-data*.md",
@@ -116,9 +125,9 @@
   "sequence": {
     "blockers": [],
     "contiguous_from_001": true,
-    "existing_log_count": 11,
-    "next_filename_prefix": "012-higanbana-",
-    "next_log_number": "012",
+    "existing_log_count": 12,
+    "next_filename_prefix": "013-higanbana-",
+    "next_log_number": "013",
     "sequence_issues": [],
     "valid_log_numbers": [
       "001",
@@ -131,7 +140,8 @@
       "008",
       "009",
       "010",
-      "011"
+      "011",
+      "012"
     ]
   },
   "status": "pass"

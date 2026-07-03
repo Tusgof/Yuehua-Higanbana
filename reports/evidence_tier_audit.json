@@ -216,6 +216,14 @@
     {
       "acceptance_claim": false,
       "blockers": [],
+      "evidence_tier": "E1",
+      "hypothesis_id": "H-B2",
+      "path": "reports\\experiments\\h_b2_subsystem_b_scale_summary.json",
+      "warnings": []
+    },
+    {
+      "acceptance_claim": false,
+      "blockers": [],
       "evidence_tier": null,
       "hypothesis_id": null,
       "path": "reports\\experiments\\m5_entry_timing_sensitivity_summary.json",
@@ -302,7 +310,7 @@
       "warnings": []
     }
   ],
-  "summary_count": 30,
+  "summary_count": 31,
   "warnings": [
     "missing_evidence_metadata:reports\\baselines\\m4_execution_rule_compliance_audit.json:hypothesis_id,evidence_tier,tier_blockers",
     "missing_evidence_metadata:reports\\baselines\\m4_exit_behavior_diagnostic_summary.json:hypothesis_id,evidence_tier,tier_blockers",
