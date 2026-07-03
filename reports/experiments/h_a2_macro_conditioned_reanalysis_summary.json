@@ -1,0 +1,114 @@
+{
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "Existing M5.5 evidence supports H-A2 only as a diagnostic clue: excluding high-importance macro days improved current implementable PnL and OOS PnL, but the result inherits a 9-trial search, remains under-sampled/underpowered, and cannot be treated as E2 acceptance evidence.",
+  "evidence_tier": "E1",
+  "experiment_id": "h_a2_macro_conditioned_reanalysis",
+  "h_a2_interpretation": {
+    "diagnostic_supporting_points": [
+      "High-importance macro exclusion retained 64 closed trades and improved total implementable PnL versus the unfiltered control.",
+      "The same scenario improved OOS implementable PnL from negative to positive on current cached data.",
+      "The rule is ex-ante because scheduled macro event dates are known before entry."
+    ],
+    "evidence_would_overturn_h_a2": [
+      "Fresh retained no-macro trades have implementable PnL <= 0 after reaching MinTRL_falsify.",
+      "Macro-day exclusion stops improving risk-adjusted results after DSR accounting and untouched validation data.",
+      "The apparent effect is explained by one or two extreme days and fails the big-day dependency check in fresh data."
+    ],
+    "reasons_not_acceptance_grade": [
+      "The rule was selected after inspecting a 9-trial grid.",
+      "The retained sample has only 64 closed trades overall and 34 OOS closed trades.",
+      "The source report labels all scenarios under-sampled and underpowered.",
+      "Reference/pre-break coverage and high-VIX coverage remain missing."
+    ]
+  },
+  "hypothesis_id": "H-A2",
+  "next_actions": [
+    "Run H-A2.3 to investigate whether the cached Aug 2024 high-VIX window has a labeling gap or genuine ORB silence.",
+    "Only after H-A2.3, decide whether estimating 2022 H2 top VIX months is justified.",
+    "Do not claim E2 or operational validation from this re-analysis."
+  ],
+  "no_new_paid_data": true,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-macro-conditioned-orb-reanalysis",
+  "scenario_comparison": {
+    "baseline": {
+      "closed_trades": 90,
+      "es95": -59.56,
+      "filtered_out_trades": 0,
+      "max_drawdown": -0.370769,
+      "oos_implementable_pnl": -78.44,
+      "oos_sharpe_proxy": 0.01581,
+      "scenario_id": "unfiltered_control",
+      "sharpe_proxy": 0.118064,
+      "sortino_proxy": 0.578039,
+      "total_cost_drag": 543.9,
+      "total_implementable_pnl": 545.6
+    },
+    "deltas_vs_baseline": {
+      "exclude_high_importance_macro_same_day": {
+        "closed_trade_delta": -26,
+        "oos_implementable_pnl_delta": 319.4,
+        "oos_sharpe_proxy_delta": 0.117768,
+        "sharpe_proxy_delta": 0.081429,
+        "total_implementable_pnl_delta": 274.56
+      },
+      "exclude_major_macro_same_day": {
+        "closed_trade_delta": -20,
+        "oos_implementable_pnl_delta": 174.16,
+        "oos_sharpe_proxy_delta": 0.05192,
+        "sharpe_proxy_delta": 0.029232,
+        "total_implementable_pnl_delta": 56.2
+      }
+    },
+    "exclude_high_importance_macro_same_day": {
+      "closed_trades": 64,
+      "es95": -53.81,
+      "filtered_out_trades": 28,
+      "max_drawdown": -0.221838,
+      "oos_implementable_pnl": 240.96,
+      "oos_sharpe_proxy": 0.133578,
+      "scenario_id": "exclude_high_importance_macro_same_day",
+      "sharpe_proxy": 0.199493,
+      "sortino_proxy": 1.097362,
+      "total_cost_drag": 368.84,
+      "total_implementable_pnl": 820.16
+    },
+    "exclude_major_macro_same_day": {
+      "closed_trades": 70,
+      "es95": -57.06,
+      "filtered_out_trades": 22,
+      "max_drawdown": -0.277636,
+      "oos_implementable_pnl": 95.72,
+      "oos_sharpe_proxy": 0.06773,
+      "scenario_id": "exclude_major_macro_same_day",
+      "sharpe_proxy": 0.147296,
+      "sortino_proxy": 0.774032,
+      "total_cost_drag": 396.2,
+      "total_implementable_pnl": 601.8
+    }
+  },
+  "schema_version": "h_a2_macro_conditioned_reanalysis_v1",
+  "search_contamination": {
+    "all_trials_recorded": true,
+    "dsr_reason": "The candidate macro filter was identified inside the M5.5 9-trial diagnostic grid. DSR cannot be used as acceptance evidence until a fresh/pre-registered return distribution, effective independent trial count, null Sharpe threshold, skew/kurtosis, and autocorrelation diagnostics exist.",
+    "dsr_status": "blocked",
+    "inherited_trial_count": 9,
+    "selected_metric_in_source": "total_implementable_pnl",
+    "selection_policy": "Best/worst scenarios are diagnostic only. Do not select production filters from this under-sampled grid."
+  },
+  "source_artifacts": {
+    "search_log": "reports\\experiments\\search_logs\\m5_regime_filter_sensitivity_search_log.jsonl",
+    "summary": "reports\\experiments\\m5_regime_filter_sensitivity_summary.json"
+  },
+  "source_trial_count": 9,
+  "status": "complete",
+  "tier_blockers": [
+    "under-sampled",
+    "underpowered",
+    "inherited_9_trial_search_contamination",
+    "dsr_blocked_until_acceptance_grade_return_distribution",
+    "missing_reference_pre_break_coverage",
+    "missing_high_vix_trade_coverage"
+  ]
+}

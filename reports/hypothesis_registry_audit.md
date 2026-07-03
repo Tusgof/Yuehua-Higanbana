@@ -4,7 +4,7 @@
 - Blocker count: 0
 - Warning count: 0
 - Hypothesis count: 7
-- Summary hypothesis references: 0
+- Summary hypothesis references: 1
 - Registry: `experiments\hypothesis_registry.json`
 
 ## Hypotheses

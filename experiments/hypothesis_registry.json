@@ -89,6 +89,12 @@
           "evidence_tier": "E1",
           "conclusion": "ยังสรุปไม่ได้",
           "notes": "Search-contaminated 9-trial diagnostic evidence."
+        },
+        {
+          "path": "reports/experiments/h_a2_macro_conditioned_reanalysis_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Pre-registered v2 re-analysis of existing M5.5 evidence. Inherits 9-trial search contamination and remains blocked by DSR/sample/regime gaps."
         }
       ],
       "dependencies": [
@@ -99,6 +105,11 @@
           "date": "2026-07-03",
           "decision": "active",
           "notes": "Top edge-priority successor to H-A1."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "active_e1_reanalysis_completed",
+          "notes": "H-A2.2 completed using existing M5.5 evidence only; no new paid data. Result remains E1 and cannot support operational validation."
         }
       ]
     },
