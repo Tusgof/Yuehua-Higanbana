@@ -4,7 +4,7 @@
 - Blocker count: 0
 - Warning count: 28
 - Strict missing metadata: `False`
-- Summary count: 29
+- Summary count: 30
 
 ## Summaries
 
@@ -39,6 +39,7 @@
 | `reports\experiments\m5_structural_break_assessment_summary.json` | None | None | no | None | `missing_evidence_metadata:reports\experiments\m5_structural_break_assessment_summary.json:hypothesis_id,evidence_tier,tier_blockers` |
 | `reports\experiments\m5_transaction_cost_latency_sensitivity_summary.json` | None | None | no | None | `missing_evidence_metadata:reports\experiments\m5_transaction_cost_latency_sensitivity_summary.json:hypothesis_id,evidence_tier,tier_blockers` |
 | `reports\diagnostics\gamma_aggregation_diagnostic_summary.json` | None | None | no | None | `missing_evidence_metadata:reports\diagnostics\gamma_aggregation_diagnostic_summary.json:hypothesis_id,evidence_tier,tier_blockers` |
+| `reports\diagnostics\h_a2_high_vix_silence_diagnostic_summary.json` | `H-A2` | `E1` | no | None | None |
 
 ## Blockers
 

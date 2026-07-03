@@ -95,6 +95,12 @@
           "evidence_tier": "E1",
           "conclusion": "ยังสรุปไม่ได้",
           "notes": "Pre-registered v2 re-analysis of existing M5.5 evidence. Inherits 9-trial search contamination and remains blocked by DSR/sample/regime gaps."
+        },
+        {
+          "path": "reports/diagnostics/h_a2_high_vix_silence_diagnostic_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Aug 2024 high-VIX diagnostic found complete VIX/market-data coverage but zero ORB candidate trades during high-VIX dates; this is ORB silence, not a VIX labeling gap."
         }
       ],
       "dependencies": [
@@ -110,6 +116,11 @@
           "date": "2026-07-03",
           "decision": "active_e1_reanalysis_completed",
           "notes": "H-A2.2 completed using existing M5.5 evidence only; no new paid data. Result remains E1 and cannot support operational validation."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "high_vix_silence_diagnostic_completed",
+          "notes": "H-A2.3 completed on cached Aug 2024 data only. VIX labels and market data are present, but ORB produced zero candidate trades on both same-day high-VIX diagnostic dates and prior-close high-VIX ex-ante dates."
         }
       ]
     },

@@ -292,9 +292,17 @@
       "warnings": [
         "missing_evidence_metadata:reports\\diagnostics\\gamma_aggregation_diagnostic_summary.json:hypothesis_id,evidence_tier,tier_blockers"
       ]
+    },
+    {
+      "acceptance_claim": false,
+      "blockers": [],
+      "evidence_tier": "E1",
+      "hypothesis_id": "H-A2",
+      "path": "reports\\diagnostics\\h_a2_high_vix_silence_diagnostic_summary.json",
+      "warnings": []
     }
   ],
-  "summary_count": 29,
+  "summary_count": 30,
   "warnings": [
     "missing_evidence_metadata:reports\\baselines\\m4_execution_rule_compliance_audit.json:hypothesis_id,evidence_tier,tier_blockers",
     "missing_evidence_metadata:reports\\baselines\\m4_exit_behavior_diagnostic_summary.json:hypothesis_id,evidence_tier,tier_blockers",
