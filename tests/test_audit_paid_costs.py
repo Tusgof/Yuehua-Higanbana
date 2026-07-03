@@ -36,8 +36,8 @@ class AuditPaidCostsTests(unittest.TestCase):
         self.assertTrue(result["committed_items"])
         reconciliation = result["cost_guard_reconciliation"]
         self.assertEqual("pass", reconciliation["actual_usage_basis"]["status"])
-        self.assertEqual(64.64, reconciliation["actual_usage_basis"]["used_usd"])
-        self.assertEqual(60.36, reconciliation["actual_usage_basis"]["remaining_usd"])
+        self.assertEqual(105.0, reconciliation["actual_usage_basis"]["used_usd"])
+        self.assertEqual(20.0, reconciliation["actual_usage_basis"]["remaining_usd"])
         self.assertEqual("blocked", reconciliation["known_committed_estimate_basis"]["status"])
         self.assertEqual(169.90613, reconciliation["known_committed_estimate_basis"]["used_usd"])
         self.assertEqual(-44.90613, reconciliation["known_committed_estimate_basis"]["remaining_usd"])

@@ -1,5 +1,12 @@
 {
   "blockers": [],
+  "budget_policy": {
+    "cap_extension_method": "real_payment_on_existing_databento_account_only",
+    "notes": "The user may extend the active cap only by real payment on the existing Databento account. Opening extra accounts or using other identities to harvest duplicate signup credits is prohibited.",
+    "prohibited": [
+      "multi_account_signup_credit_harvesting"
+    ]
+  },
   "committed_items": [
     {
       "estimated_cost_usd": 0.995454,
@@ -865,9 +872,9 @@
   "cost_guard_basis": "user_reported_actual_usage",
   "cost_guard_reconciliation": {
     "actual_usage_basis": {
-      "remaining_usd": 60.36,
+      "remaining_usd": 20.0,
       "status": "pass",
-      "used_usd": 64.64
+      "used_usd": 105.0
     },
     "estimated_only_risk": {
       "estimated_only_total_usd": 7.150193,
@@ -961,7 +968,7 @@
     },
     "stop_threshold_usd": 125.0
   },
-  "cost_guard_used_usd": 64.64,
+  "cost_guard_used_usd": 105.0,
   "estimated_only_items": [
     {
       "estimated_cost_usd": 0.358536,
@@ -1069,7 +1076,7 @@
     }
   ],
   "known_committed_estimated_cost_usd": 169.90613,
-  "remaining_before_stop_usd": 60.36,
+  "remaining_before_stop_usd": 20.0,
   "status": "pass",
   "stop_threshold_usd": 125.0,
   "unpriced_items": [
@@ -1135,9 +1142,9 @@
     }
   ],
   "user_reported_actual_usage": {
-    "actual_usage_usd": 64.64,
-    "notes": "User reported current total Data usage in the provider account. Stop threshold remains $125. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.",
-    "reported_at_utc": "2026-07-01T06:11:30Z",
+    "actual_usage_usd": 105.0,
+    "notes": "User reported current total Databento usage in the provider account. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.",
+    "reported_at_utc": "2026-07-03T01:43:53Z",
     "source": "user_reported_databento_account_usage",
     "source_path": "reports\\data_cost\\user_reported_actual_usage.json"
   }

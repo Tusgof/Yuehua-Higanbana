@@ -84,16 +84,16 @@
     {
       "blockers": [],
       "cost_guard_basis": "user_reported_actual_usage",
-      "cost_guard_used_usd": 64.64,
+      "cost_guard_used_usd": 105.0,
       "known_committed_estimated_cost_usd": 169.90613,
       "name": "paid_cost",
-      "remaining_before_stop_usd": 60.36,
+      "remaining_before_stop_usd": 20.0,
       "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\paid_cost_audit.json",
       "status": "pass",
       "user_reported_actual_usage": {
-        "actual_usage_usd": 64.64,
-        "notes": "User reported current total Data usage in the provider account. Stop threshold remains $125. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.",
-        "reported_at_utc": "2026-07-01T06:11:30Z",
+        "actual_usage_usd": 105.0,
+        "notes": "User reported current total Databento usage in the provider account. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.",
+        "reported_at_utc": "2026-07-03T01:43:53Z",
         "source": "user_reported_databento_account_usage",
         "source_path": "reports\\data_cost\\user_reported_actual_usage.json"
       }

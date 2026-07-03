@@ -4,12 +4,12 @@
 - Stop threshold: `$125.0`
 - Known committed estimated cost: `$169.90613`
 - Cost guard basis: `user_reported_actual_usage`
-- Cost guard used: `$64.64`
-- Remaining before stop: `$60.36`
+- Cost guard used: `$105.0`
+- Remaining before stop: `$20.0`
 
 ## Cost Guard Reconciliation
 
-- Actual-usage basis status: `pass`; used `$64.64`; remaining `$60.36`
+- Actual-usage basis status: `pass`; used `$105.0`; remaining `$20.0`
 - Conservative known-estimate basis status: `blocked`; used `$169.90613`; remaining `$-44.90613`
 - Estimated-only total not yet committed: `$7.150193`
 - Single estimated-only items that would reach stop if committed: `13`
@@ -30,12 +30,18 @@
 | `spy_bars:oos_2024_q4_completion` | `$0.022813` | `$169.928943` | `reports\data_cost\databento_spy_bars_plan_oos_2024_q4_completion.json` |
 | `spy_bars:2024_09_chunk4` | `$0.001556` | `$169.907686` | `reports\data_cost\databento_spy_bars_plan_2024_09_chunk4.json` |
 
+## Budget Policy
+
+- Cap extension method: `real_payment_on_existing_databento_account_only`
+- Prohibited: `multi_account_signup_credit_harvesting`
+- Notes: The user may extend the active cap only by real payment on the existing Databento account. Opening extra accounts or using other identities to harvest duplicate signup credits is prohibited.
+
 ## User-Reported Actual Usage
 
-- Actual usage: `$64.64`
-- Reported at UTC: `2026-07-01T06:11:30Z`
+- Actual usage: `$105.0`
+- Reported at UTC: `2026-07-03T01:43:53Z`
 - Source: `user_reported_databento_account_usage`
-- Notes: User reported current total Data usage in the provider account. Stop threshold remains $125. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.
+- Notes: User reported current total Databento usage in the provider account. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited. Keep estimated committed cost separately for audit traceability, but use user-reported actual usage as the controlling guard for already-scoped SPY-only work.
 
 ## Committed Databento Items
 

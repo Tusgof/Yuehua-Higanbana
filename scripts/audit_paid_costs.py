@@ -13,6 +13,14 @@ DEFAULT_JSON_OUTPUT = PROJECT_ROOT / "reports" / "data_cost" / "paid_cost_audit.
 DEFAULT_REPORT_OUTPUT = PROJECT_ROOT / "reports" / "data_cost" / "paid_cost_audit.md"
 DEFAULT_USER_REPORTED_USAGE_PATH = PROJECT_ROOT / "reports" / "data_cost" / "user_reported_actual_usage.json"
 DEFAULT_STOP_THRESHOLD_USD = 125.0
+BUDGET_POLICY = {
+    "cap_extension_method": "real_payment_on_existing_databento_account_only",
+    "prohibited": ["multi_account_signup_credit_harvesting"],
+    "notes": (
+        "The user may extend the active cap only by real payment on the existing Databento account. "
+        "Opening extra accounts or using other identities to harvest duplicate signup credits is prohibited."
+    ),
+}
 
 
 def audit_paid_costs(
@@ -51,6 +59,7 @@ def audit_paid_costs(
         "committed_items": committed,
         "estimated_only_items": estimated_only,
         "cost_guard_reconciliation": reconciliation,
+        "budget_policy": BUDGET_POLICY,
         "unpriced_items": openrouter_unpriced,
         "blockers": [] if status == "pass" else ["paid_cost_stop_threshold_reached"],
     }
@@ -95,6 +104,12 @@ def write_reports(result: dict[str, Any], json_output: Path = DEFAULT_JSON_OUTPU
         lines.append("")
 
     lines.extend([
+        "## Budget Policy",
+        "",
+        f"- Cap extension method: `{result['budget_policy']['cap_extension_method']}`",
+        f"- Prohibited: `{', '.join(result['budget_policy']['prohibited'])}`",
+        f"- Notes: {result['budget_policy']['notes']}",
+        "",
         "## User-Reported Actual Usage",
         "",
     ])
