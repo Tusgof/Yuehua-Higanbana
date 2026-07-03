@@ -12,6 +12,7 @@ DEFAULT_JSON_OUTPUT = PROJECT_ROOT / "reports" / "research_readiness_audit.json"
 DEFAULT_REPORT_OUTPUT = PROJECT_ROOT / "reports" / "research_readiness_audit.md"
 GREEKS_OI_ENRICHMENT_REPORT = PROJECT_ROOT / "reports" / "greeks_oi_enrichment_probe_summary.json"
 GAMMA_AGGREGATION_POLICY_DOC = PROJECT_ROOT / "docs" / "GAMMA_AGGREGATION_VALIDATION_POLICY.md"
+GAMMA_AGGREGATION_DIAGNOSTIC_SUMMARY = PROJECT_ROOT / "reports" / "diagnostics" / "gamma_aggregation_diagnostic_summary.json"
 DATABENTO_API_KEY_ENVS = ("DATABENTO_API_KEY", "DATABENTO_SPY0DTE_API")
 
 REPORT_PATHS = {
@@ -448,7 +449,9 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
     if "requires_controlled_opra_statistics_download_import_probe" in blockers:
         actions.append("OPRA statistics/OI metadata probe passed with timing caveat; next run a controlled one-day full-day statistics download/import probe, inspect `stat_type` values and timestamp semantics, then decide whether Databento OI can support gamma-family research.")
     if "requires_mintrl_psr_sample_adequacy" in blockers or "requires_wider_spy_0dte_data" in blockers:
-        if GREEKS_OI_ENRICHMENT_REPORT.exists() and GAMMA_AGGREGATION_POLICY_DOC.exists():
+        if GREEKS_OI_ENRICHMENT_REPORT.exists() and GAMMA_AGGREGATION_POLICY_DOC.exists() and GAMMA_AGGREGATION_DIAGNOSTIC_SUMMARY.exists():
+            actions.append("Before any further broad Databento download, use `reports\\risk_first_data_audit.md`, `reports\\greeks_oi_enrichment_probe_report.md`, `docs\\GAMMA_AGGREGATION_VALIDATION_POLICY.md`, and `reports\\diagnostics\\gamma_aggregation_diagnostic_summary.json` as the pre-purchase checkpoint: expand the pre-registered H-G1 gamma/OI regime date set, choose missing-regime H-A2 stress/pre-break coverage, or revise toward a higher-density strategy hypothesis; then re-run paid-cost/readiness audits and confirm actual provider usage remains below the stop threshold.")
+        elif GREEKS_OI_ENRICHMENT_REPORT.exists() and GAMMA_AGGREGATION_POLICY_DOC.exists():
             actions.append("Before any further broad Databento download, use `reports\\risk_first_data_audit.md`, `reports\\greeks_oi_enrichment_probe_report.md`, and `docs\\GAMMA_AGGREGATION_VALIDATION_POLICY.md` as the pre-purchase checkpoint: run a diagnostic gamma aggregation against the policy gates, choose targeted pre-break/high-VIX/major-regime coverage, or revise toward a higher-density strategy hypothesis; then re-run paid-cost/readiness audits and confirm actual provider usage remains below the stop threshold.")
         elif GREEKS_OI_ENRICHMENT_REPORT.exists():
             actions.append("Before any further broad Databento download, use `reports\\risk_first_data_audit.md` and `reports\\greeks_oi_enrichment_probe_report.md` as the pre-purchase checkpoint: define gamma aggregation/scaling validation, choose targeted pre-break/high-VIX/major-regime coverage, or revise toward a higher-density strategy hypothesis; then re-run paid-cost/readiness audits and confirm actual provider usage remains below the stop threshold.")

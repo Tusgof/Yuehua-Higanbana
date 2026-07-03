@@ -43,7 +43,8 @@ class AuditResearchReadinessTests(unittest.TestCase):
         exp07_redesign = next(check for check in result["checks"] if check["name"] == "exp07_prompt_redesign")
         self.assertEqual("blocked", exp07_redesign["status"])
         self.assertTrue(any("confirm actual provider usage remains below" in action for action in result["next_safe_actions"]))
-        self.assertTrue(any("run a diagnostic gamma aggregation against the policy gates" in action for action in result["next_safe_actions"]))
+        self.assertTrue(any("expand the pre-registered H-G1 gamma/OI regime date set" in action for action in result["next_safe_actions"]))
+        self.assertFalse(any("run a diagnostic gamma aggregation against the policy gates" in action for action in result["next_safe_actions"]))
         self.assertFalse(any("define gamma aggregation/scaling validation" in action for action in result["next_safe_actions"]))
         self.assertFalse(any("Continue SPY-only Databento data acquisition" in action for action in result["next_safe_actions"]))
 
