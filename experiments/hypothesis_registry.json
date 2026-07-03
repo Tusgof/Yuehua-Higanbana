@@ -77,7 +77,8 @@
       "required_data": [
         "Pre-registered H-A2 re-analysis from existing M5.5 evidence.",
         "Free Aug 2024 high-VIX labeling/silence investigation.",
-        "If justified, top 2-3 high-VIX months from 2022 H2 after cost guard check."
+        "If justified, top 2-3 high-VIX months from 2022 H2 after cost guard check.",
+        "H-A2.4 projection selected 2022-10 and 2022-09 for top2 live cost check; top3 requires top-up or a lower live quote."
       ],
       "mintrl_falsify": {
         "status": "pending",
@@ -121,6 +122,11 @@
           "date": "2026-07-03",
           "decision": "high_vix_silence_diagnostic_completed",
           "notes": "H-A2.3 completed on cached Aug 2024 data only. VIX labels and market data are present, but ORB produced zero candidate trades on both same-day high-VIX diagnostic dates and prior-close high-VIX ex-ante dates."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "stress_month_purchase_estimate_completed",
+          "notes": "H-A2.4 completed with no new paid data. 2022-10 and 2022-09 are the top VIX-stress months; top2 base projection is $16.923156 inside the current $20 headroom, but high projection exceeds headroom and top3 likely requires top-up. Next step is live metadata cost check for top2 only before any download."
         }
       ]
     },

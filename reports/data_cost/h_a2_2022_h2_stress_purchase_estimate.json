@@ -1,0 +1,160 @@
+{
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "remaining_before_stop_usd": 20.0,
+    "stop_threshold_usd": 125.0,
+    "used_usd": 105.0
+  },
+  "cost_model": {
+    "comparable_month_costs": {
+      "2023-09": 6.128126,
+      "2023-10": 7.271917,
+      "2023-11": 6.722094,
+      "2023-12": 6.601407,
+      "2024-02": 8.605623,
+      "2024-03": 7.101296,
+      "2024-04": 7.480666,
+      "2024-05": 7.848551,
+      "2024-06": 7.091976,
+      "2024-07": 8.362379,
+      "2024-08": 9.285274,
+      "2024-09": 9.187169,
+      "2024-10": 12.671726,
+      "2024-11": 11.060765,
+      "2024-12": 11.504703
+    },
+    "comparable_month_count": 15,
+    "per_month_base_usd": 8.461578,
+    "per_month_high_usd": 12.671726,
+    "per_month_low_usd": 6.128126,
+    "source": "existing Databento download_result artifacts; projection only, not a live Databento quote"
+  },
+  "hypothesis_id": "H-A2",
+  "mode": "projection_no_databento_api_call",
+  "next_actions": [
+    "If continuing H-A2.5, run a live Databento metadata cost check for top2 only before any download.",
+    "Do not buy top3 unless the user tops up or live cost proves top3 remains under the current guard.",
+    "After any live cost estimate, re-run paid-cost audit before download."
+  ],
+  "no_new_paid_data": true,
+  "plan_id": "h_a2_2022_h2_stress_purchase_estimate",
+  "purchase_candidates": [
+    {
+      "candidate_id": "top2",
+      "cost_projection": {
+        "base_usd": 16.923156,
+        "high_usd": 25.343452,
+        "low_usd": 12.256252
+      },
+      "headroom_status": "fits_base_projection",
+      "months": [
+        "2022-10",
+        "2022-09"
+      ],
+      "trade_density_projection": {
+        "base_candidate_ready_days": 8.44,
+        "stress_low_candidate_ready_days": 3.82
+      },
+      "trading_days": 42
+    },
+    {
+      "candidate_id": "top3",
+      "cost_projection": {
+        "base_usd": 25.384734,
+        "high_usd": 38.015178,
+        "low_usd": 18.384378
+      },
+      "headroom_status": "requires_live_cost_or_topup",
+      "months": [
+        "2022-10",
+        "2022-09",
+        "2022-07"
+      ],
+      "trade_density_projection": {
+        "base_candidate_ready_days": 12.45,
+        "stress_low_candidate_ready_days": 5.64
+      },
+      "trading_days": 62
+    }
+  ],
+  "purpose": "Estimate whether 2022 H2 high-VIX months are worth live cost-checking before any Databento purchase.",
+  "ranked_2022_h2_months": [
+    {
+      "avg_vix": 30.0057,
+      "high_vix_days": 21,
+      "max_vix": 33.63,
+      "month": "2022-10",
+      "rank": 1,
+      "stress_vix_days": 11,
+      "trading_days": 21
+    },
+    {
+      "avg_vix": 27.4062,
+      "high_vix_days": 17,
+      "max_vix": 32.6,
+      "month": "2022-09",
+      "rank": 2,
+      "stress_vix_days": 5,
+      "trading_days": 21
+    },
+    {
+      "avg_vix": 24.8685,
+      "high_vix_days": 9,
+      "max_vix": 27.54,
+      "month": "2022-07",
+      "rank": 3,
+      "stress_vix_days": 0,
+      "trading_days": 20
+    },
+    {
+      "avg_vix": 23.4362,
+      "high_vix_days": 5,
+      "max_vix": 26.09,
+      "month": "2022-11",
+      "rank": 4,
+      "stress_vix_days": 0,
+      "trading_days": 21
+    },
+    {
+      "avg_vix": 22.1696,
+      "high_vix_days": 4,
+      "max_vix": 26.21,
+      "month": "2022-08",
+      "rank": 5,
+      "stress_vix_days": 0,
+      "trading_days": 23
+    },
+    {
+      "avg_vix": 21.7843,
+      "high_vix_days": 1,
+      "max_vix": 25.0,
+      "month": "2022-12",
+      "rank": 6,
+      "stress_vix_days": 0,
+      "trading_days": 21
+    }
+  ],
+  "recommendation": {
+    "reason": "Top2 is the only candidate that plausibly fits the current headroom on base projection; top3 likely requires top-up.",
+    "status": "live_cost_check_top2_only"
+  },
+  "record_type": "data_purchase_estimate",
+  "schema_version": "h_a2_2022_h2_stress_purchase_estimate_v1",
+  "selection_policy": {
+    "high_vix_threshold": 25.0,
+    "ranking": "descending by high30 days, then high25 days, then average VIX, then max VIX",
+    "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\normalized\\spy_0dte\\vix_vxv\\vix_vxv.jsonl",
+    "stress_vix_threshold": 30.0,
+    "window": "2022-07-01..2022-12-31"
+  },
+  "status": "complete",
+  "trade_density_model": {
+    "aug_2024_candidate_rate": 0.090909,
+    "note": "Candidate density is uncertain in 2022 because option data is not downloaded yet; use this only as a pre-purchase density warning.",
+    "observed_candidate_ready_days": 93,
+    "observed_month_count": 22,
+    "observed_trade_days": 463,
+    "overall_candidate_rate": 0.200864,
+    "source": "existing pilot adapter summaries; projection only"
+  }
+}

@@ -17,7 +17,7 @@
 - No live LLM research calls until real timestamp-clean news cases exist.
 - No current result may be treated above E1 diagnostic evidence.
 - Every hypothesis/report conclusion must use the project labels `ผ่าน`, `ไม่ผ่าน`, or `ยังสรุปไม่ได้`, with evidence tier and blockers stated beside the conclusion.
-- Next real experiment research log is `011-higanbana-...`.
+- Next real experiment research log is `012-higanbana-...`.
 
 ---
 
@@ -64,8 +64,8 @@
 | H-A2.1 | Register H-A1 as falsified-as-stated with a mechanism autopsy, and H-A2 as the new macro-conditioned hypothesis | M | RISK | Registry validator passes and H-A1/H-A2 decision logs are explicit |
 | H-A2.2 | Re-analyze the existing M5.5 macro-filter result as H-A2 E1 evidence with inherited 9-trial search contamination and DSR blocker/adjustment | M | RISK | Complete: `reports\experiments\h_a2_macro_conditioned_reanalysis_summary.json` cites the 9 M5.5 trials, labels evidence `E1`, records DSR/sample/regime blockers, and does not claim E2 |
 | H-A2.3 | Investigate why cached Aug 2024 VIX-spike windows produced zero high-VIX trades | M | RISK | Complete: `reports\diagnostics\h_a2_high_vix_silence_diagnostic_summary.json` shows complete VIX/market-data coverage and zero ORB candidates on high-VIX dates, so the gap is ORB silence rather than a labeling gap |
-| H-A2.4 | If still justified, estimate 2022 H2 top 2-3 VIX months only, before any purchase | S | RISK | Cost artifact shows expected cost, regime gap, projected trade density, and remaining headroom |
-| H-A2.5 | Buy 2022 H2 stress data only if the decision tree passes and headroom/top-up allows it | L | RISK | Paid-cost audit passes before and after; checkpoint reports added trades, high-VIX coverage, and cost per observation |
+| H-A2.4 | If still justified, estimate 2022 H2 top 2-3 VIX months only, before any purchase | S | RISK | Complete: `reports\data_cost\h_a2_2022_h2_stress_purchase_estimate.json` ranks 2022-10 and 2022-09 as top2, estimates base cost `$16.923156` inside `$20` headroom, and marks top3 as requiring live cost or top-up |
+| H-A2.5 | Buy 2022 H2 stress data only if the decision tree passes and headroom/top-up allows it | L | RISK | First run live Databento metadata cost check for top2 only; proceed to download only if `audit_paid_costs.py` still passes and live estimate keeps total below `$125` |
 | H-A2.6 | Write research log `011-higanbana-...` only if a real experiment or formal deferred/falsification result completes | S | OK | Complete for H-A2.2: `research_log\011-higanbana-macro-conditioned-orb-reanalysis.md` was written and pushed; `python scripts\audit_research_logs.py` passes |
 
 **Track complete when**: H-A2 is either falsified cheaply, remains active with a justified next data target, or earns a clean path toward E2 using untouched validation data.
@@ -149,8 +149,8 @@
 
 ## Execution Notes
 - **Active track**: H-A2 after P0 completion.
-- **Immediate next safe action**: Continue H-A2 with H-A2.4: estimate 2022 H2 top 2-3 VIX months only, before any purchase, to decide whether high-VIX trade coverage can be added inside the current cost guard. Do not buy data yet.
-- **Blocked paid actions**: 2022 H2 stress data requires task-zero cost sync plus headroom/top-up check. Any new provider still requires explicit user approval.
+- **Immediate next safe action**: Continue H-A2 with H-A2.5 pre-download gate: run a live Databento metadata cost check for top2 only (`2022-10`, `2022-09`) before any download. Do not buy top3 unless the user tops up or live cost proves top3 remains under the current guard.
+- **Blocked paid actions**: 2022 H2 stress data download requires live metadata estimate plus `audit_paid_costs.py` pass before and after. Any new provider still requires explicit user approval.
 - **Current cost basis**: User-reported actual usage `$105.0`; stop threshold `$125`; current headroom `$20.0`.
 - **Risk checkpoints**: Before every paid pull, after every validator/audit change, before H-A2 stress purchase, before H-G1 12-date OI purchase, before any LLM call, before acceptance, and before paper/dry-run.
 - **Archive policy**: Before replacing this plan again, archive the current `IMPLEMENT_PLAN.md` under `Backup_IMPLEMENT_PLAN\` and state why.
