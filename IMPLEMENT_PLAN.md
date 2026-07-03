@@ -47,7 +47,7 @@
 | P0.3 | Add `scripts\validate_hypothesis_registry.py` and tests | M | RISK | Complete: `python -m unittest tests.test_validate_hypothesis_registry` passes |
 | P0.4 | Add evidence-tier policy and validator requiring `hypothesis_id`, `evidence_tier`, and `tier_blockers` for experiment summaries | L | RISK | Complete: `python scripts\validate_evidence_tiers.py` passes; tests reject unknown hypothesis IDs, missing metadata on acceptance claims, and acceptance claims below E2 |
 | P0.5 | Fix stale `scripts\audit_research_readiness.py` next action after gamma diagnostic exists | M | RISK | Complete: `python -m unittest tests.test_audit_research_readiness` passes and readiness next action now points to H-G1/H-A2 targeted next steps instead of rerunning the completed gamma diagnostic |
-| P0.6 | Add read-only `scripts\report_project_state.py` | M | OK | Command reports hypothesis status, tier, blockers, next safe action, cost headroom, and news/GDELT status with no network calls |
+| P0.6 | Add read-only `scripts\report_project_state.py` | M | OK | Complete: command reports hypothesis status, tier, blockers, next safe action, cost headroom, and news/GDELT status with no network calls or file writes |
 | P0.7 | Wire registry/tier validators into `scripts\run_fixture_pipeline.py` | S | RISK | `python scripts\run_fixture_pipeline.py` includes the new validators and passes |
 
 **Track complete when**: One command can report current project state from the registry and audits, and no experiment artifact can silently claim acceptance-grade evidence without E2 fields.
@@ -149,7 +149,7 @@
 
 ## Execution Notes
 - **Active track**: P0 after P-1 cost sync.
-- **Immediate next safe action**: Continue P0 with the read-only project-state reporter (P0.6), then wire registry/tier validators into the fixture pipeline (P0.7). Do not buy data yet.
+- **Immediate next safe action**: Complete P0 by wiring registry/tier validators into the fixture pipeline (P0.7). Do not buy data yet.
 - **Blocked paid actions**: 2022 H2 stress data requires task-zero cost sync plus headroom/top-up check. Any new provider still requires explicit user approval.
 - **Current cost basis**: User-reported actual usage `$105.0`; stop threshold `$125`; current headroom `$20.0`.
 - **Risk checkpoints**: Before every paid pull, after every validator/audit change, before H-A2 stress purchase, before H-G1 12-date OI purchase, before any LLM call, before acceptance, and before paper/dry-run.
