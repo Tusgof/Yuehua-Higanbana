@@ -39,7 +39,7 @@ Resurrection is allowed only as a new registry entry with at least one new testa
 ### H-A2: Macro-Conditioned ORB
 
 - **Family**: `subsystem_a`
-- **Status**: `parked`
+- **Status**: `active`
 - **Statement**: The ORB edge, if it exists, is macro-conditioned: excluding high-importance scheduled macro days should improve implementable risk-adjusted OOS returns because non-macro breakout days reflect cleaner order-flow imbalance.
 - **Economic rationale**: On scheduled macro days, the opening range can be dominated by anticipatory positioning and post-release repricing rather than persistent intraday imbalance. Removing those days is a mechanism claim, not merely a fitted filter.
 - **Testable predictions**:
@@ -48,7 +48,7 @@ Resurrection is allowed only as a new registry entry with at least one new testa
   - The effect is not concentrated in one VIX/trend bucket unless the hypothesis is explicitly scope-restricted.
 - **Validation criteria**: E2 requires untouched validation data or DSR accounting for the inherited 9-trial M5.5 search, MinTRL/PSR against `SR0=0` and same-trade-calendar SPY, implementable PnL, big-day survival, and regime coverage or explicit scope restriction.
 - **Falsification criteria**: H-A2 is killed if fresh retained no-macro trades have implementable PnL `<= 0` after reaching `MinTRL_falsify`, or if the macro-day/no-macro mechanism reverses in fresh data.
-- **Current evidence**: M5.5 `exclude_high_importance_macro_same_day` has E1 diagnostic evidence only: 64 closed trades, implementable PnL `$820.16`, OOS `$240.96`, and inherited 9-trial selection contamination.
+- **Current evidence**: M5.5 `exclude_high_importance_macro_same_day` and the H-A2 re-analysis remain E1 diagnostic evidence only. H-A2 is cost-blocked on 2022 H2 stress expansion because the live top2 estimate `$20.748872` exceeds current `$20.0` headroom, but the hypothesis is not falsified or parked.
 - **Conclusion**: `ยังสรุปไม่ได้`.
 
 ### H-B1: Put Ratio At Current Small-Account Sizing
@@ -65,7 +65,7 @@ Resurrection is allowed only as a new registry entry with at least one new testa
 ### H-B2: Put Ratio Structure At Realistic Scale
 
 - **Family**: `subsystem_b`
-- **Status**: `active`
+- **Status**: `parked`
 - **Statement**: The put-ratio-with-wing structure may have positive expectancy at simulated `$10k` to `$25k` scale where strike granularity and premium-to-account ratios stop binding.
 - **Economic rationale**: If short-dated downside skew is overpriced, a capped-risk structure may monetize it at sufficient account size while preserving survival through the protective wing.
 - **Testable predictions**:
@@ -87,9 +87,9 @@ Resurrection is allowed only as a new registry entry with at least one new testa
   - Proxy terciles show monotonic or sign-consistent realized variance differences.
   - The relationship survives across at least 10 dates and at least 3 regimes.
   - Coverage passes the pre-registered v2 policy without retroactively passing v1.
-- **Validation criteria**: `GAMMA_AGGREGATION_VALIDATION_POLICY.md` v2, dual raw-row and bucket-weighted coverage reporting, timestamp discipline, stability, economic-sign validation, and no strategy use before data-validity pass.
+- **Validation criteria**: `GAMMA_AGGREGATION_VALIDATION_POLICY.md` v2, dual raw-row and bucket-weighted coverage reporting, a validated 12-date regime-set manifest, timestamp discipline, stability, economic-sign validation, and no strategy use before data-validity pass.
 - **Falsification criteria**: H-G1 is killed if there is no monotonic or sign-consistent relation between proxy tercile and realized 10:00-15:45 SPY variance across the pre-registered multi-regime date set.
-- **Current evidence**: One-day 2024-01-03 gamma diagnostic is E1 diagnostic and blocked: timestamp/search-log gates pass, coverage fails at raw computed-Greeks rate `0.50172`, stability is under-regime-sampled, and economic-sign validation is blocked.
+- **Current evidence**: One-day 2024-01-03 gamma diagnostic is E1 diagnostic and blocked: timestamp/search-log gates pass, coverage fails at raw computed-Greeks rate `0.50172`, stability is under-regime-sampled, and economic-sign validation is blocked. H-G1.1/H-G1.2 setup now has policy v2 and a pre-registered 12-date regime set; this is pre-experiment control evidence, not strategy validation.
 - **Conclusion**: `ยังสรุปไม่ได้`.
 
 ### H-L1: LLM News Measurement

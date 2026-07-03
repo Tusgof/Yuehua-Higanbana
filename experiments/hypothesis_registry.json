@@ -259,7 +259,8 @@
       "required_data": [
         "Pre-registered 12-date regime set.",
         "OPRA statistics/OI days for the 12-date set.",
-        "Existing quote and SPY bar cache for those dates."
+        "Existing quote and SPY bar cache for those dates.",
+        "H-G1.1 policy v2 and H-G1.2 12-date regime-set pre-registration are complete; 2024-01-03 has an existing OI probe, while the other 11 dates require metadata cost checks before any download."
       ],
       "mintrl_falsify": {
         "status": "not_applicable_yet",
@@ -271,6 +272,12 @@
           "evidence_tier": "E1",
           "conclusion": "ยังสรุปไม่ได้",
           "notes": "One-date diagnostic: timestamp/search-log pass, coverage/stability/economic-sign blocked."
+        },
+        {
+          "path": "experiments/h_g1_gamma_regime_date_set_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Pre-registration control artifact only: locks 12 dates across low/normal/high volatility, macro/no-macro, train/OOS, and 10 unique calendar months before any new OPRA OI purchase."
         }
       ],
       "dependencies": [],
@@ -279,6 +286,11 @@
           "date": "2026-07-03",
           "decision": "active",
           "notes": "Field-unlock track; no NOVI/net-gamma strategy use before H-G1 passes."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "policy_v2_and_regime_date_set_preregistered",
+          "notes": "H-G1.1/H-G1.2 completed as no-cost setup. Policy v2 preserves the v1 failure and adds dual raw-row plus bucket-weighted coverage. The 12-date manifest validates with low/normal/high volatility counts 4/4/4, train/OOS 6/6, macro/no-macro 6/6, and 11 dates still requiring metadata cost checks before OI download."
         }
       ]
     },

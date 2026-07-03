@@ -137,6 +137,7 @@ def main() -> int:
         ("audit_strategy_data_readiness", ["scripts/audit_strategy_data_readiness.py"]),
         ("validate_hypothesis_registry", ["scripts/validate_hypothesis_registry.py"]),
         ("validate_evidence_tiers", ["scripts/validate_evidence_tiers.py"]),
+        ("validate_h_g1_regime_date_set", ["scripts/validate_h_g1_regime_date_set.py"]),
         ("audit_research_readiness", ["scripts/audit_research_readiness.py"]),
         ("audit_research_logs", ["scripts/audit_research_logs.py"]),
         (
@@ -219,6 +220,7 @@ def main() -> int:
             "strategy_data_readiness": str(PROJECT_ROOT / "reports" / "strategy_data_readiness_audit.md"),
             "hypothesis_registry": str(PROJECT_ROOT / "reports" / "hypothesis_registry_audit.md"),
             "evidence_tiers": str(PROJECT_ROOT / "reports" / "evidence_tier_audit.md"),
+            "h_g1_regime_date_set": str(PROJECT_ROOT / "experiments" / "h_g1_gamma_regime_date_set_preregistration.json"),
             "research_readiness": str(PROJECT_ROOT / "reports" / "research_readiness_audit.md"),
             "research_logs": str(PROJECT_ROOT / "reports" / "research_log_audit.md"),
         },

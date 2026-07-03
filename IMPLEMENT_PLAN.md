@@ -93,9 +93,9 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| H-G1.1 | Issue `docs\GAMMA_AGGREGATION_VALIDATION_POLICY.md` v2 before rerun | M | RISK | v1 fail remains preserved; v2 requires dual raw-row and bucket-weighted coverage reporting |
-| H-G1.2 | Pre-register a 12-date regime set across low/normal/high volatility, macro/no-macro, trend, train, and OOS buckets | M | RISK | Date-set manifest validates before any OI purchase |
-| H-G1.3 | Estimate and buy only the 12 OPRA statistics/OI days if cost guard passes | M | RISK | Estimated cost about `$4.30`; `audit_paid_costs.py` passes before and after |
+| H-G1.1 | Issue `docs\GAMMA_AGGREGATION_VALIDATION_POLICY.md` v2 before rerun | M | RISK | Complete: v1 fail remains preserved; v2 requires dual raw-row and bucket-weighted coverage reporting |
+| H-G1.2 | Pre-register a 12-date regime set across low/normal/high volatility, macro/no-macro, trend, train, and OOS buckets | M | RISK | Complete: `python scripts\validate_h_g1_regime_date_set.py` passes with 12 dates, low/normal/high counts 4/4/4, train/OOS 6/6, macro/no-macro 6/6 |
+| H-G1.3 | Estimate and buy only the missing OPRA statistics/OI days if cost guard passes | M | RISK | Next: 2024-01-03 already has OI probe; estimate the remaining 11 dates first; `audit_paid_costs.py` must pass before and after |
 | H-G1.4 | Rerun enrichment and gamma diagnostic under v2 | L | RISK | Report includes v1 fail record, v2 gates, timestamp discipline, stability, economic-sign relation, and blockers |
 | H-G1.5 | Register result as active, falsified, or still blocked | S | RISK | Registry decision log updated; no strategy use unless H-G1 passes |
 
@@ -148,8 +148,8 @@
 ---
 
 ## Execution Notes
-- **Active track**: H-G1 no-cost/low-cost setup or H-L1/H-L2 design work while H-A2 stress expansion is cost-blocked and H-B2 is parked.
-- **Immediate next safe action**: Start H-G1.1/H-G1.2: issue gamma aggregation validation policy v2 and pre-register the 12-date regime set before any OPRA statistics/OI purchase. If avoiding paid actions entirely, start H-L1/H-L2 design docs.
+- **Active track**: H-G1 low-cost data gate or H-L1/H-L2 design work while H-A2 stress expansion is cost-blocked and H-B2 is parked.
+- **Immediate next safe action**: Start H-G1.3: run a metadata cost estimate for the 11 missing OPRA statistics/OI dates in the validated H-G1 manifest before any download. If avoiding paid-adjacent actions entirely, start H-L1/H-L2 design docs.
 - **Blocked paid actions**: H-A2 top2 2022 H2 stress data download is blocked because live estimate `$20.748872` exceeds the current `$20.0` headroom. Do not download top2 unless the user tops up/cap changes or the plan is explicitly revised to a narrower scope. Any new provider still requires explicit user approval.
 - **Current cost basis**: User-reported actual usage `$105.0`; stop threshold `$125`; current headroom `$20.0`.
 - **Risk checkpoints**: Before every paid pull, after every validator/audit change, before H-A2 stress purchase, before H-G1 12-date OI purchase, before any LLM call, before acceptance, and before paper/dry-run.

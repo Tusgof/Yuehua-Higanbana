@@ -15,7 +15,7 @@
 | `H-A2` | `subsystem_a` | `active` | E1 | None |
 | `H-B1` | `subsystem_b` | `falsified` | E1 | None |
 | `H-B2` | `subsystem_b` | `parked` | E1 | None |
-| `H-G1` | `gamma` | `active` | E1 | None |
+| `H-G1` | `gamma` | `active` | E0, E1 | None |
 | `H-L1` | `llm_news` | `active_blocked` | E0 | None |
 | `H-L2` | `llm_price` | `proposed` | None | None |
 

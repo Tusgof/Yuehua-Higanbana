@@ -45,6 +45,7 @@ class FixturePipelineTests(unittest.TestCase):
             "audit_paid_costs",
             "validate_hypothesis_registry",
             "validate_evidence_tiers",
+            "validate_h_g1_regime_date_set",
             "audit_research_readiness",
             "audit_research_logs",
             "import_macro_calendar_snapshot_fixture",
