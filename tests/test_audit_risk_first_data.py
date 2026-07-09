@@ -4,6 +4,9 @@ import importlib.util
 import json
 import tempfile
 from pathlib import Path
+
+from lib.environment import data_root
+from tests.tiers import state_audit
 from unittest import TestCase
 
 
@@ -19,6 +22,7 @@ def load_module():
     return module
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class AuditRiskFirstDataTests(TestCase):
     @classmethod
     def setUpClass(cls) -> None:

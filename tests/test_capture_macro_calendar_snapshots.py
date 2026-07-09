@@ -36,7 +36,11 @@ class CaptureMacroCalendarSnapshotsTests(unittest.TestCase):
         self.assertIn("RETAIL_SALES", plan["required_event_types"])
         for request in plan["requests"]:
             self.assertTrue(request["source_url"].startswith("https://"))
-            self.assertIn("data\\raw\\spy_0dte\\macro_calendar", request["output_path"])
+            output_parts = Path(request["output_path"].replace("\\", "/")).parts
+            self.assertIn(
+                ("data", "raw", "spy_0dte", "macro_calendar"),
+                tuple(output_parts[index : index + 4] for index in range(len(output_parts) - 3)),
+            )
             self.assertRegex(request["output_path"], r"\.(html|json|xls)$")
         bls_request = next(request for request in plan["requests"] if request["source_id"] == "bls_release_calendar")
         self.assertEqual("https://www.bls.gov/schedule/2024/home.htm", bls_request["source_url"])

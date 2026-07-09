@@ -5,12 +5,16 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root, wiki_root
+from tests.tiers import state_audit
+
 from scripts.validate_h_a2_normal_control_exact_replay_preregistration import (
     DEFAULT_PREREG_PATH,
     validate_h_a2_normal_control_exact_replay_preregistration,
 )
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()), ("HIGANBANA_WIKI_ROOT", wiki_root()))
 class H_A2NormalControlExactReplayPreregistrationTests(unittest.TestCase):
     def test_current_preregistration_passes(self) -> None:
         result = validate_h_a2_normal_control_exact_replay_preregistration()

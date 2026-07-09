@@ -17,23 +17,23 @@
   ],
   "wiki_basis": [
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/spy-zero-dte-opening-range-breakout.md",
       "use": "Raw ORB signal is not enough; ORB debit spreads need conditional filters and real fill validation."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/zero-dte-conditional-trading-rules.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/zero-dte-conditional-trading-rules.md",
       "use": "0DTE evidence should be conditional, timestamp-clean, and evaluated against simple baselines."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/regime-filtering-for-zero-dte.md",
       "use": "Regime filters may help but are overfitting risks when sample count is small."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/implementable-option-pnl.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/implementable-option-pnl.md",
       "use": "Mid PnL is a benchmark only; implementable PnL and cost drag control deployable interpretation."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/minimum-track-record-length.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/minimum-track-record-length.md",
       "use": "Sample adequacy must be judged with MinTRL/PSR rather than a fixed N threshold."
     }
   ],

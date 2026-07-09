@@ -5,6 +5,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root, wiki_root
+from tests.tiers import state_audit
+
 from scripts.validate_h_a2_exact_2022_underlying_bar_plan import (
     validate_h_a2_exact_2022_underlying_bar_plan,
 )
@@ -14,6 +17,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PLAN_PATH = PROJECT_ROOT / "experiments" / "h_a2_exact_2022_underlying_bar_plan.json"
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()), ("HIGANBANA_WIKI_ROOT", wiki_root()))
 class ValidateHA2Exact2022UnderlyingBarPlanTests(unittest.TestCase):
     def test_current_plan_passes(self) -> None:
         result = validate_h_a2_exact_2022_underlying_bar_plan()

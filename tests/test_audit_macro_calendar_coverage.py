@@ -6,6 +6,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "audit_macro_calendar_coverage.py"
@@ -21,6 +24,7 @@ def load_auditor():
     return module
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class AuditMacroCalendarCoverageTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

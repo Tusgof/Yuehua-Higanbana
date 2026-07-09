@@ -7,6 +7,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 try:
     from openpyxl import Workbook
 except ModuleNotFoundError:
@@ -32,6 +35,7 @@ class ConvertMacroCalendarCaptureTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.converter = load_converter()
 
+    @state_audit(("HIGANBANA_DATA_ROOT", data_root()))
     def test_convert_real_capture_writes_importer_csv_shape(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             output_path = Path(tmp) / "macro_capture.csv"
@@ -54,6 +58,7 @@ class ConvertMacroCalendarCaptureTests(unittest.TestCase):
             ]:
                 self.assertIn(event_type, result["event_types"])
 
+    @state_audit(("HIGANBANA_DATA_ROOT", data_root()))
     def test_convert_output_can_be_imported_by_macro_importer(self) -> None:
         importer_path = PROJECT_ROOT / "scripts" / "import_macro_calendar_snapshots.py"
         spec = importlib.util.spec_from_file_location("import_macro_calendar_snapshots", importer_path)

@@ -6,7 +6,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import pandas as pd
+try:
+    import pandas as pd
+except ModuleNotFoundError:
+    pd = None
+
+from tests.tiers import state_audit_capability
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +28,7 @@ def load_inspector():
     return module
 
 
+@state_audit_capability("pandas", pd is not None)
 class DatabentoRawInspectionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

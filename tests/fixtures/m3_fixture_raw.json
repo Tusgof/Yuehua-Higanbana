@@ -1,0 +1,89 @@
+{
+  "dataset_id": "m3-fixture-raw-001",
+  "provider": "synthetic",
+  "source_url": "file://tests/fixtures/m3_fixture_raw.json",
+  "ingested_at_et": "2024-01-04T08:00:00-05:00",
+  "coverage_start": "2024-01-03",
+  "coverage_end": "2024-01-03",
+  "schema_name": "m2_contracts",
+  "schema_version_applied": "m2.0",
+  "license_notes": "Synthetic fixture for Milestone 3 importer tests only.",
+  "records": [
+    {
+      "record_type": "spy_bar",
+      "schema_version": "m2.0",
+      "symbol": "SPY",
+      "timestamp_et": "2024-01-03T09:35:00-05:00",
+      "open": 470.1,
+      "high": 470.5,
+      "low": 469.9,
+      "close": 470.2,
+      "volume": 125000,
+      "source": "fixture",
+      "provider": "synthetic"
+    },
+    {
+      "record_type": "option_quote",
+      "schema_version": "m2.0",
+      "underlying": "SPY",
+      "quote_timestamp_et": "2024-01-03T10:00:00-05:00",
+      "expiration_date": "2024-01-03",
+      "dte": 0.25,
+      "right": "put",
+      "strike": 470,
+      "bid": 1.15,
+      "ask": 1.2,
+      "bid_size": 120,
+      "ask_size": 105,
+      "volume": 1000,
+      "open_interest": 3000,
+      "underlying_price": 470.2,
+      "provider": "synthetic",
+      "source": "fixture"
+    },
+    {
+      "record_type": "vix_vxv",
+      "schema_version": "m2.0",
+      "date": "2024-01-03",
+      "vix_close": 14.2,
+      "vxv_close": 16.8,
+      "provider": "FRED",
+      "source": "fixture"
+    },
+    {
+      "record_type": "macro_event",
+      "schema_version": "m2.0",
+      "event_id": "fomc-2024-01-31",
+      "event_type": "FOMC",
+      "event_timestamp_et": "2024-01-31T14:00:00-05:00",
+      "importance": "high",
+      "provider": "Federal Reserve",
+      "source": "fixture"
+    },
+    {
+      "record_type": "news_item",
+      "schema_version": "m2.0",
+      "news_id": "news-001",
+      "decision_time_et": "2024-01-03T09:30:00-05:00",
+      "fetched_at_et": "2024-01-03T09:00:00-05:00",
+      "published_at_et": "2024-01-03T08:45:00-05:00",
+      "source_name": "fixture",
+      "headline": "Market opens cautious before macro data",
+      "url": "https://example.com/news-001",
+      "provider": "synthetic"
+    },
+    {
+      "record_type": "llm_assessment",
+      "schema_version": "m2.0",
+      "assessment_id": "llm-001",
+      "created_at_et": "2024-01-03T09:20:00-05:00",
+      "provider": "DeepSeek",
+      "model": "deepseek-test",
+      "prompt_version": "fixture-v1",
+      "input_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "prompt_text": "Assess volatility and directional bias.",
+      "output_text": "Volatility is acceptable; bias neutral.",
+      "decision": "allow"
+    }
+  ]
+}

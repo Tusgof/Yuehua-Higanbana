@@ -5,12 +5,16 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 from scripts.validate_h_a2_post_exact_replay_sample_expansion_decision import (
     DEFAULT_DECISION_PATH,
     validate_h_a2_post_exact_replay_sample_expansion_decision,
 )
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class H_A2PostExactReplaySampleExpansionDecisionTests(unittest.TestCase):
     def test_current_decision_passes(self) -> None:
         result = validate_h_a2_post_exact_replay_sample_expansion_decision()

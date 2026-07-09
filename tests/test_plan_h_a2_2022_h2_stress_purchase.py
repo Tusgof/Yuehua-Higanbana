@@ -5,6 +5,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "plan_h_a2_2022_h2_stress_purchase.py"
@@ -19,6 +22,7 @@ def load_module():
     return module
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class HA22022H2StressPurchasePlanTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

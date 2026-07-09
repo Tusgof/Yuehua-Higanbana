@@ -8,7 +8,10 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-IBKR_PACKAGE_PYTHON = PROJECT_ROOT.parent / "Yuehua Investment Lab" / ".venv" / "Scripts" / "python.exe"
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from lib.environment import ibkr_python
 
 
 def run_step(name: str, args: list[str]) -> dict[str, object]:
@@ -16,8 +19,9 @@ def run_step(name: str, args: list[str]) -> dict[str, object]:
     if name == "unit_tests":
         env["SPY0DTE_FIXTURE_PIPELINE_CHILD"] = "1"
     step_args = args
-    if name == "probe_ibkr_spy_bars_readiness" and IBKR_PACKAGE_PYTHON.exists():
-        step_args = [*args, "--package-python", str(IBKR_PACKAGE_PYTHON)]
+    package_python = ibkr_python()
+    if name == "probe_ibkr_spy_bars_readiness" and package_python is not None and package_python.exists():
+        step_args = [*args, "--package-python", str(package_python)]
     completed = subprocess.run(
         [sys.executable, *step_args],
         cwd=PROJECT_ROOT,

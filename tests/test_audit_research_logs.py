@@ -6,6 +6,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "audit_research_logs.py"
@@ -25,6 +27,7 @@ class AuditResearchLogsTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.auditor = load_auditor()
 
+    @state_audit(("research_log", PROJECT_ROOT / "research_log"))
     def test_current_research_logs_are_present_and_sequence_is_current(self) -> None:
         result = self.auditor.audit_research_logs()
 

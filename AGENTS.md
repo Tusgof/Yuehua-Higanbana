@@ -84,3 +84,11 @@ The active project is now **SPY 0DTE - Higanbana**.
 - Do not pause only because a task changes more than 3 files, creates or updates experiment artifacts, updates `PROJECT_BRAIN.md` / `IMPLEMENT_PLAN.md` / `AGENTS.md`, writes a research log, pushes a requested git update, or runs tests/audits.
 - Ask a question only when required information is missing and cannot be inferred safely.
 - Hard-stop boundaries remain only for: new paid provider, paid action that would breach the active cost guard, broker/order transmission, real-money launch, destructive filesystem/git operation, or scope change beyond SPY. At these boundaries, stop and report the boundary clearly as out-of-plan instead of framing it as a routine approval request.
+
+## 7. Runtime And Test Tiers
+
+- Supported runtime: Python 3.12 through 3.14.
+- The `hermetic` test tier must run from committed fixtures with the Python standard library only.
+- The `state-audit` tier may use `HIGANBANA_DATA_ROOT`, `HIGANBANA_WIKI_ROOT`, the nested `research_log`, and optional provider packages. Missing state must skip with the missing root named; it must not raise `FileNotFoundError`.
+- Run tiers with `python scripts/run_test_tier.py hermetic`, `python scripts/run_test_tier.py state-audit`, or `python scripts/run_test_tier.py all`.
+- New report writers must include `python_executable`, `python_implementation`, and `python_version` from `lib.environment.interpreter_metadata()`.

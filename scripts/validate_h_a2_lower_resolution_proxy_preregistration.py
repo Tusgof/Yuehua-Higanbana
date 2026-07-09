@@ -2,11 +2,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from lib.environment import expand_configured_tokens
 DEFAULT_PREREG_PATH = PROJECT_ROOT / "experiments" / "h_a2_lower_resolution_proxy_preregistration.json"
 
 
@@ -181,7 +186,7 @@ def _validate_claims_and_guardrails(prereg: dict[str, Any], blockers: list[str])
 
 
 def _load_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(expand_configured_tokens(path.read_text(encoding="utf-8")))
 
 
 def _relative(path: Path) -> str:

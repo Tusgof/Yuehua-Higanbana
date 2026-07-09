@@ -5,12 +5,16 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root, wiki_root
+from tests.tiers import state_audit
+
 from scripts.validate_h_a2_targeted_data_regime_expansion_plan import (
     DEFAULT_PLAN_PATH,
     validate_h_a2_targeted_data_regime_expansion_plan,
 )
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()), ("HIGANBANA_WIKI_ROOT", wiki_root()))
 class ValidateHA2TargetedDataRegimeExpansionPlanTests(unittest.TestCase):
     def test_current_plan_passes(self) -> None:
         result = validate_h_a2_targeted_data_regime_expansion_plan()

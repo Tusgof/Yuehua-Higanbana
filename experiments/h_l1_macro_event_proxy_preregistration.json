@@ -18,9 +18,9 @@
     "vix_vxv": "data/normalized/spy_0dte/vix_vxv.jsonl",
     "existing_trade_baseline": "reports/baselines/subsystem_a_orb_baseline_summary.json",
     "h_a2_lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
-    "wiki_regime_filtering": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
-    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
-    "wiki_llm_training_data_contamination": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/llm-training-data-contamination.md"
+    "wiki_regime_filtering": "${HIGANBANA_WIKI_ROOT}/concepts/regime-filtering-for-zero-dte.md",
+    "wiki_backtest_validation_protocol": "${HIGANBANA_WIKI_ROOT}/concepts/backtest-validation-protocol.md",
+    "wiki_llm_training_data_contamination": "${HIGANBANA_WIKI_ROOT}/concepts/llm-training-data-contamination.md"
   },
   "baseline_definition": {
     "macro_event_labels": [

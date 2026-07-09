@@ -19,19 +19,19 @@
   ],
   "wiki_basis": [
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/implementable-option-pnl.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/implementable-option-pnl.md",
       "use": "Mid PnL is a benchmark only; implementable PnL and cost drag must govern rule interpretation."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/strike-selection-for-zero-dte-spreads.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/strike-selection-for-zero-dte-spreads.md",
       "use": "Strike gap changes debit, delta, win rate, and breakeven behavior; the revised H-A2 rule must explicitly model strike reachability."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/spy-zero-dte-opening-range-breakout.md",
       "use": "Raw ORB direction is not enough; debit spreads require filters and real option-chain validation."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/zero-dte-conditional-trading-rules.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/zero-dte-conditional-trading-rules.md",
       "use": "Conditional 0DTE rules must use information available by the decision timestamp and avoid lookahead leakage."
     }
   ],

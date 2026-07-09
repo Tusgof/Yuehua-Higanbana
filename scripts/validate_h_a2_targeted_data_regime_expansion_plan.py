@@ -2,11 +2,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from lib.environment import expand_configured_tokens
 DEFAULT_PLAN_PATH = PROJECT_ROOT / "experiments" / "h_a2_targeted_data_regime_expansion_plan.json"
 DEFAULT_DOC_PATH = PROJECT_ROOT / "docs" / "H_A2_TARGETED_DATA_REGIME_EXPANSION_PLAN.md"
 H_A2_62_PATH = PROJECT_ROOT / "reports" / "diagnostics" / "h_a2_breakeven_aware_rule_train_diagnostic.json"
@@ -256,7 +261,7 @@ def _validate_guardrails_claims_and_doc(plan: dict[str, Any], doc_text: str, blo
 
 
 def _load_json(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8-sig"))
+    return json.loads(expand_configured_tokens(path.read_text(encoding="utf-8-sig")))
 
 
 def _relative(path: Path) -> str:

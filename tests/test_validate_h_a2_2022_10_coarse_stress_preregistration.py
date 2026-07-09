@@ -5,6 +5,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root, wiki_root
+from tests.tiers import state_audit
+
 from scripts.validate_h_a2_2022_10_coarse_stress_preregistration import (
     validate_h_a2_2022_10_coarse_stress_preregistration,
 )
@@ -14,6 +17,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PREREG_PATH = PROJECT_ROOT / "experiments" / "h_a2_2022_10_coarse_stress_review_preregistration.json"
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()), ("HIGANBANA_WIKI_ROOT", wiki_root()))
 class ValidateHA2CoarseStressPreregistrationTests(unittest.TestCase):
     def test_current_preregistration_passes(self) -> None:
         result = validate_h_a2_2022_10_coarse_stress_preregistration()

@@ -16,8 +16,8 @@
     "option_normalization_summary": "reports/data_cost/databento_normalization_summary_h_a2_2022_10_stress.json",
     "coarse_stress_review": "reports/diagnostics/h_a2_2022_10_coarse_stress_review.json",
     "lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
-    "wiki_orb_concept": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
-    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md"
+    "wiki_orb_concept": "${HIGANBANA_WIKI_ROOT}/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_backtest_validation_protocol": "${HIGANBANA_WIKI_ROOT}/concepts/backtest-validation-protocol.md"
   },
   "hypothesis_first_statement": "H-A2 asks whether the SPY 0DTE ORB edge is conditional on macro/VIX risk state. SPY 1-minute bars are required only for exact ORB timing, path reconstruction, and timestamp-aligned option fills.",
   "exact_inference_gap": "The project has 2022-10 0DTE option quotes and regime labels, but cannot run the exact 2022-10 ORB stress rerun until SPY 1-minute underlying bars for the same window pass coverage, timestamp, provenance, and import validation.",

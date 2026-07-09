@@ -4,6 +4,9 @@ import importlib.util
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "run_h_g1_bucket_policy_comparison.py"
@@ -18,6 +21,7 @@ def load_module():
     return module
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class H_G1BucketPolicyComparisonTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

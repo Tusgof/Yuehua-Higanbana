@@ -5,10 +5,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 from scripts.run_h_a2_lower_resolution_proxy import run_proxy
 from scripts.validate_h_a2_lower_resolution_proxy_summary import validate_h_a2_lower_resolution_proxy_summary
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class HA2LowerResolutionProxyTests(unittest.TestCase):
     def test_runner_writes_valid_summary_report_and_search_log(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

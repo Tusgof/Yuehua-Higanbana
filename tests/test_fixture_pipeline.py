@@ -8,11 +8,19 @@ import unittest
 from unittest import mock
 from pathlib import Path
 
+from lib.environment import data_root, wiki_root
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 class FixturePipelineTests(unittest.TestCase):
+    @state_audit(
+        ("HIGANBANA_DATA_ROOT", data_root()),
+        ("HIGANBANA_WIKI_ROOT", wiki_root()),
+        ("research_log", PROJECT_ROOT / "research_log"),
+    )
     def test_fixture_pipeline_preserves_expected_gates(self) -> None:
         if os.environ.get("SPY0DTE_FIXTURE_PIPELINE_CHILD") == "1":
             self.skipTest("avoid recursive pipeline execution")
@@ -154,7 +162,7 @@ class FixturePipelineTests(unittest.TestCase):
             stderr="",
         )
         package_python = Path(sys.executable)
-        with mock.patch.object(pipeline, "IBKR_PACKAGE_PYTHON", package_python), mock.patch(
+        with mock.patch.object(pipeline, "ibkr_python", return_value=package_python), mock.patch(
             "scripts.run_fixture_pipeline.subprocess.run",
             return_value=completed,
         ) as run:

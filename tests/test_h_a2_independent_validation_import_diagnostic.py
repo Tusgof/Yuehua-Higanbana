@@ -5,6 +5,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 from scripts.run_h_a2_independent_validation_import_diagnostic import (
     run_h_a2_independent_validation_import_diagnostic,
 )
@@ -14,6 +17,7 @@ from scripts.validate_h_a2_independent_validation_import_diagnostic import (
 )
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class H_A2IndependentValidationImportDiagnosticTests(unittest.TestCase):
     def test_run_diagnostic_outputs_local_e1_no_candidate_signal(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

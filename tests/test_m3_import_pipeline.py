@@ -10,7 +10,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 IMPORTER_PATH = PROJECT_ROOT / "scripts" / "import_m3_fixture.py"
-RAW_FIXTURE = PROJECT_ROOT / "data" / "raw" / "spy_0dte" / "m3_fixture_raw.json"
+RAW_FIXTURE = PROJECT_ROOT / "tests" / "fixtures" / "m3_fixture_raw.json"
 
 
 def load_importer():

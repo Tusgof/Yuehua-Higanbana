@@ -5,10 +5,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 from scripts.run_h_a2_2022_10_coarse_stress_review import run_h_a2_2022_10_coarse_stress_review
 from scripts.validate_h_a2_2022_10_coarse_stress_review import validate_h_a2_2022_10_coarse_stress_review
 
 
+@state_audit(("HIGANBANA_DATA_ROOT", data_root()))
 class HA2202210CoarseStressReviewTests(unittest.TestCase):
     def test_temp_report_runs_and_validates(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

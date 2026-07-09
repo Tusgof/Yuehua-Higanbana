@@ -24,8 +24,8 @@
     "spy_bars": "data/normalized/spy_0dte/spy_bar.jsonl",
     "research_readiness_audit": "reports/research_readiness_audit.json",
     "hypothesis_registry": "experiments/hypothesis_registry.json",
-    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
-    "wiki_regime_filtering": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md"
+    "wiki_backtest_validation_protocol": "${HIGANBANA_WIKI_ROOT}/concepts/backtest-validation-protocol.md",
+    "wiki_regime_filtering": "${HIGANBANA_WIKI_ROOT}/concepts/regime-filtering-for-zero-dte.md"
   },
   "analysis_scope": {
     "allowed_input_scope": "Use only existing local artifacts already produced by H-A2.19, L.7, baseline trade outcomes, macro calendar, VIX/VXV, and local SPY bars.",

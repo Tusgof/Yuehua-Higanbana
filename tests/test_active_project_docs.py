@@ -3,6 +3,9 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
+from lib.environment import data_root
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
@@ -64,8 +67,7 @@ class ActiveProjectDocsTests(unittest.TestCase):
             "scripts/plan_gdelt_news_capture_commands.py",
             "scripts/import_gdelt_news_capture_directory.py",
             "scripts/run_fixture_pipeline.py",
-            "data/raw/spy_0dte/m3_fixture_raw.json",
-            "data/registry/datasets.jsonl",
+            "tests/fixtures/m3_fixture_raw.json",
             "experiments/experiment_manifests.json",
             "reports/final_research_review.md",
             "reports/data_cost/databento_cost_dry_run.md",
@@ -137,12 +139,21 @@ class ActiveProjectDocsTests(unittest.TestCase):
             "reports/pilots/jan_2024_pilot_pnl_report.md",
             "reports/pilots/jan_2024_pilot_sensitivity_summary.json",
             "reports/pilots/jan_2024_pilot_sensitivity_report.md",
-            "data/normalized/spy_0dte/databento/one_month_pilot/option_quote.jsonl",
-            "data/normalized/spy_0dte/databento/one_month_pilot/spy_bar.jsonl",
         ]
         for relative_path in required:
             with self.subTest(path=relative_path):
                 self.assertTrue((PROJECT_ROOT / relative_path).exists())
+
+    @state_audit(("HIGANBANA_DATA_ROOT", data_root()))
+    def test_local_state_artifacts_exist(self) -> None:
+        required = [
+            "registry/datasets.jsonl",
+            "normalized/spy_0dte/databento/one_month_pilot/option_quote.jsonl",
+            "normalized/spy_0dte/databento/one_month_pilot/spy_bar.jsonl",
+        ]
+        for relative_path in required:
+            with self.subTest(path=relative_path):
+                self.assertTrue((data_root() / relative_path).exists())
 
     def test_active_scope_is_spy_0dte(self) -> None:
         brain = (PROJECT_ROOT / "PROJECT_BRAIN.md").read_text(encoding="utf-8")

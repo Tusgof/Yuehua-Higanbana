@@ -19,19 +19,19 @@
   ],
   "wiki_basis": [
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/implementable-option-pnl.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/implementable-option-pnl.md",
       "use": "Implementable PnL, bid/ask friction, fees, cost drag, and breakeven math must govern option-strategy evidence."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/minimum-track-record-length.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/minimum-track-record-length.md",
       "use": "Sample adequacy must be measured with MinTRL rather than a fixed N target."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/probabilistic-sharpe-ratio.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/probabilistic-sharpe-ratio.md",
       "use": "PSR must be reported with sample length, skewness, kurtosis, and serial correlation before acceptance claims."
     },
     {
-      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
+      "path": "${HIGANBANA_WIKI_ROOT}/concepts/regime-filtering-for-zero-dte.md",
       "use": "Regime filters can be useful but are overfitting risks; expansion must track volatility, macro, calendar, trend, and liquidity regimes."
     }
   ],

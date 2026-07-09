@@ -65,8 +65,8 @@
     "revised_condition_robustness_summary": "reports/experiments/h_a2_revised_condition_robustness_summary.json",
     "lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
     "hypothesis_registry": "experiments/hypothesis_registry.json",
-    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
-    "wiki_lookahead_bias": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/lookahead-leakage.md"
+    "wiki_backtest_validation_protocol": "${HIGANBANA_WIKI_ROOT}/concepts/backtest-validation-protocol.md",
+    "wiki_lookahead_bias": "${HIGANBANA_WIKI_ROOT}/concepts/lookahead-leakage.md"
   },
   "planned_future_tests": [
     {

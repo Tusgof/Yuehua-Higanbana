@@ -20,9 +20,9 @@
     "h_a2_proxy_first_robustness_summary": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
     "h_l1_macro_event_proxy_baseline_summary": "reports/experiments/h_l1_macro_event_proxy_baseline_summary.json",
     "hypothesis_registry": "experiments/hypothesis_registry.json",
-    "wiki_spy_zero_dte_orb": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
-    "wiki_regime_filtering": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
-    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md"
+    "wiki_spy_zero_dte_orb": "${HIGANBANA_WIKI_ROOT}/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_regime_filtering": "${HIGANBANA_WIKI_ROOT}/concepts/regime-filtering-for-zero-dte.md",
+    "wiki_backtest_validation_protocol": "${HIGANBANA_WIKI_ROOT}/concepts/backtest-validation-protocol.md"
   },
   "revised_condition_design": {
     "base_condition": "Retain the H-A2 deterministic macro/VIX clean-risk concept as a necessary condition, not a sufficient condition.",
