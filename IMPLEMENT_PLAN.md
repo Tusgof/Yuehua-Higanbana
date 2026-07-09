@@ -42,6 +42,67 @@
 
 ---
 
+## Workstream 2: Golden Statistics Anchors
+**Goal**: Make load-bearing statistics conventions testable with fixed golden numbers.
+**Dependencies**: Workstream 1 local remediation
+**Priority**: High
+
+| # | Task | Effort | Risk | Verification |
+|:--|:-----|:------:|:----:|:-------------|
+| DD2.1 | [DONE] Add a shared statistics kernel for new code without migrating frozen scripts | M | RISK | `lib\statistics.py` includes PSR/MinTRL, population skewness, raw population kurtosis, ES, and Black-Scholes helpers |
+| DD2.2 | [DONE] Add hermetic golden-number tests for statistics conventions | M | RISK | `python -m unittest tests.test_statistics_golden` passes and anchors MinTRL `285`, PSR, ES left-tail behavior, and Black-Scholes price/delta/gamma |
+
+**Track complete when**: New statistics code has fixed golden anchors. Existing frozen reports are not rewritten by this track.
+
+---
+
+## Workstream 3: Two-Zone Code Rule
+**Goal**: Keep new hypothesis-independent infrastructure in `lib/` while preserving frozen historical scripts.
+**Dependencies**: Workstream 1 local remediation
+**Priority**: High
+
+| # | Task | Effort | Risk | Verification |
+|:--|:-----|:------:|:----:|:-------------|
+| DD3.1 | [DONE] Start shared `lib/` helpers for new code | S | RISK | `lib\environment.py`, `lib\integrity.py`, `lib\io.py`, and `lib\statistics.py` exist and are imported by new DD scripts |
+| DD3.2 | [DONE] Add helper drift audit without auto-fixing frozen scripts | M | RISK | `python scripts\audit_helper_drift.py` writes `reports\diagnostics\helper_drift_audit.json` and reports `pass_with_findings` with 92 divergent helper copies |
+| DD3.3 | [OPEN] Add readiness metric for new scripts bypassing `lib/` | S | RISK | Future readiness audit should count new scripts without `lib.` imports; target is 0 for new code |
+
+**Track complete when**: New code uses `lib/`, drift is measured, and readiness reports helper-bypass count.
+
+---
+
+## Workstream 4: Gate Integrity
+**Goal**: Prevent silent mutation of locked preregistration artifacts and validators.
+**Dependencies**: Workstream 1 local remediation
+**Priority**: High
+
+| # | Task | Effort | Risk | Verification |
+|:--|:-----|:------:|:----:|:-------------|
+| DD4.1 | [DONE] Seed append-only locked-gate manifest | M | RISK | `experiments\locked_gates.jsonl` has three active locked gates and `python scripts\validate_locked_gates.py` passes |
+| DD4.2 | [DONE] Add hermetic locked-gate hash validation test | S | RISK | `python -m unittest tests.test_validate_locked_gates` passes and rejects hash mismatches |
+| DD4.3 | [DONE] Add locked validator review and agent-version rule to `AGENTS.md` | S | RISK | `AGENTS.md` requires Fable/user review before changing locked validators and commit trailer `Agent: ...` |
+| DD4.4 | [OPEN] Add adversarial-review step to E2 promotion checklist | S | RISK | Acceptance gate docs/scripts must require a refutation-only review before E2 promotion |
+
+**Track complete when**: Locked gates are hash-verified and E2 promotion requires adversarial review.
+
+---
+
+## Workstream 5: Evolution Hygiene
+**Goal**: Reduce long-term artifact drift without deleting evidence.
+**Dependencies**: Workstream 1 local remediation
+**Priority**: Medium
+
+| # | Task | Effort | Risk | Verification |
+|:--|:-----|:------:|:----:|:-------------|
+| DD5.1 | [DONE - PROPOSAL ONLY] Draft report retention policy | S | RISK | `docs\REPORT_RETENTION_POLICY_PROPOSAL.md` exists and explicitly forbids moving/deleting reports before user approval |
+| DD5.2 | [DONE - AUDIT ONLY] Add wiki citation hash audit | M | RISK | `python scripts\audit_wiki_citation_hashes.py` reports 5 citations with missing embedded hashes and no missing files |
+| DD5.3 | [OPEN] Add OPRA statistics ingest schema validation | M | RISK | Boundary import/probe should validate committed schema before analysis use |
+| DD5.4 | [OPEN] Start governance epoch tagging | S | RISK | Future tags should mark policy and plan epochs such as `gamma-policy-v2` |
+
+**Track complete when**: Retention, wiki-hash, provider-schema, and epoch-tag policies have enforceable checks or approved documented blockers.
+
+---
+
 ## Track P-1: Cost-Basis Sync
 **Goal**: Make paid-action decisions use the real cost guard before any new purchase.
 **Dependencies**: none

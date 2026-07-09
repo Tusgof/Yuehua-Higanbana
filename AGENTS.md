@@ -92,3 +92,10 @@ The active project is now **SPY 0DTE - Higanbana**.
 - The `state-audit` tier may use `HIGANBANA_DATA_ROOT`, `HIGANBANA_WIKI_ROOT`, the nested `research_log`, and optional provider packages. Missing state must skip with the missing root named; it must not raise `FileNotFoundError`.
 - Run tiers with `python scripts/run_test_tier.py hermetic`, `python scripts/run_test_tier.py state-audit`, or `python scripts/run_test_tier.py all`.
 - New report writers must include `python_executable`, `python_implementation`, and `python_version` from `lib.environment.interpreter_metadata()`.
+
+## 8. Locked Gate Integrity
+
+- Locked gate hashes are recorded in `experiments/locked_gates.jsonl` and verified by `scripts/validate_locked_gates.py`.
+- Do not edit a locked preregistration artifact or its `scripts/validate_*_preregistration.py` validator silently. A change requires a new manifest entry with a human approval note and review by the user or Fable 5 before merge.
+- Every engineering commit must identify the agent model/version in a commit trailer such as `Agent: Codex (GPT-5)`.
+- New scripts should import hypothesis-independent helpers from `lib/` instead of copy-pasting `_load_json`, `_relative`, guardrail validation, search-log, report-writing, or statistics helpers. Existing frozen scripts are not migrated in place unless a separate remediation task explicitly allows it.

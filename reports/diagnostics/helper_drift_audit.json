@@ -1,0 +1,447 @@
+{
+  "audit_id": "helper_drift_audit",
+  "auto_fix_applied": false,
+  "helper_names": [
+    "_load_json",
+    "_load_jsonl",
+    "_relative",
+    "_validate_guardrails",
+    "_write_reports",
+    "_write_search_log",
+    "write_reports"
+  ],
+  "helper_reports": [
+    {
+      "divergent_files": [
+        {
+          "path": "scripts\\audit_greeks_oi_feasibility.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\audit_paid_costs.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\audit_real_money_launch_gate.py",
+          "sha256": "186d5e25af18e39dcf0e22853d8dbaeaf52ad6d2b31327630989e3a77623bdd2"
+        },
+        {
+          "path": "scripts\\audit_risk_first_data.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\audit_strategy_data_readiness.py",
+          "sha256": "bb2fa574e5b1f076b79579b28ad12d882e8591545dea135eae258b68b5fbef9d"
+        },
+        {
+          "path": "scripts\\download_h_a2_independent_validation_data.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\download_h_a2_normal_control_data.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\enrich_option_quotes_greeks_oi_probe.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\estimate_h_a2_independent_validation_cost.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\evaluate_research_acceptance.py",
+          "sha256": "186d5e25af18e39dcf0e22853d8dbaeaf52ad6d2b31327630989e3a77623bdd2"
+        },
+        {
+          "path": "scripts\\plan_exp07_real_news_cases.py",
+          "sha256": "b484c4b20a0cf596919f49b68c7c65e6dd0be91e3a8e9d65c891537d2e38a32a"
+        },
+        {
+          "path": "scripts\\plan_gdelt_bulk_raw_manifest.py",
+          "sha256": "a8e08a38506fb6d7c242f0eaa5be1300eb12bd5fbaa22ff62c4df1d437a81af0"
+        },
+        {
+          "path": "scripts\\probe_gdelt_gkg_one_file.py",
+          "sha256": "aa508c8f7b53bea0b0cee55e4dc53e32ba85ef8e2b3ad75f2e164dce441fb65c"
+        },
+        {
+          "path": "scripts\\probe_ibkr_spy_bars_readiness.py",
+          "sha256": "828be99852592a2b033642524a11a601251a952e9d08e27af30b72c372f56b4e"
+        },
+        {
+          "path": "scripts\\run_gdelt_doc_api_enrichment_scaffold.py",
+          "sha256": "f7cc7fb6087a103a1c600987538562c63e587ca558966afc25b1a92c14b6663f"
+        },
+        {
+          "path": "scripts\\run_h_a2_breakeven_aware_rule_train_diagnostic.py",
+          "sha256": "969b21de81a51f8b3dc6b97ff14231fc58961554a0dfbd111c57d945b776410f"
+        },
+        {
+          "path": "scripts\\run_h_a2_mechanism_revision_audit.py",
+          "sha256": "969b21de81a51f8b3dc6b97ff14231fc58961554a0dfbd111c57d945b776410f"
+        },
+        {
+          "path": "scripts\\run_h_a2_proxy_first_robustness.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\run_h_g1_data_quality_review.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\run_h_g1_gamma_regime_diagnostic.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\run_h_g1_policy_manifest_decision.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\run_h_l1_macro_event_proxy_baseline.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        },
+        {
+          "path": "scripts\\validate_h_a2_breakeven_aware_rule_preregistration.py",
+          "sha256": "60cc5cc640cecb8096956df2a757fdf4cf0b8e1f07d9bfb868308d26085b5207"
+        },
+        {
+          "path": "scripts\\validate_h_a2_breakeven_aware_rule_train_diagnostic.py",
+          "sha256": "969b21de81a51f8b3dc6b97ff14231fc58961554a0dfbd111c57d945b776410f"
+        },
+        {
+          "path": "scripts\\validate_h_a2_delayed_entry_condition_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_exact_2022_underlying_bar_plan.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_exact_data_prioritization_decision.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_followup_resolution_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_locked_condition_signal_attribution_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_lower_resolution_proxy_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_mechanism_revision_audit.py",
+          "sha256": "969b21de81a51f8b3dc6b97ff14231fc58961554a0dfbd111c57d945b776410f"
+        },
+        {
+          "path": "scripts\\validate_h_a2_mechanism_revision_preregistration.py",
+          "sha256": "60cc5cc640cecb8096956df2a757fdf4cf0b8e1f07d9bfb868308d26085b5207"
+        },
+        {
+          "path": "scripts\\validate_h_a2_original_entry_revision_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_post_two_exact_replay_decision.py",
+          "sha256": "969b21de81a51f8b3dc6b97ff14231fc58961554a0dfbd111c57d945b776410f"
+        },
+        {
+          "path": "scripts\\validate_h_a2_residual_adverse_day_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_revised_condition_robustness_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_revised_opening_followthrough_preregistration.py",
+          "sha256": "6291919ed04f09cb55ab134fc272b3d3c460d3d92c5fe6ac1d30a74d724c5d9a"
+        },
+        {
+          "path": "scripts\\validate_h_a2_targeted_data_regime_expansion_plan.py",
+          "sha256": "60cc5cc640cecb8096956df2a757fdf4cf0b8e1f07d9bfb868308d26085b5207"
+        },
+        {
+          "path": "scripts\\validate_h_g1_gamma_strategy_ablation_preregistration.py",
+          "sha256": "20e04a464e6b1035c683428ad6fbaea242376595619682617a17619aa098f07b"
+        }
+      ],
+      "helper_name": "_load_json",
+      "majority_sha256": "2d89fd1342f18c171e4b77aa991ffacf47bac8171afdfaac54a1328634d13402",
+      "occurrence_count": 96,
+      "variant_count": 12
+    },
+    {
+      "divergent_files": [
+        {
+          "path": "scripts\\audit_risk_first_data.py",
+          "sha256": "5c8c2e2016b647c3a43fc3e696042817b093377e207912f26949fc3b2ec1665f"
+        },
+        {
+          "path": "scripts\\run_gamma_aggregation_diagnostic.py",
+          "sha256": "12dc4388e66907dc32ddad975866982b76225856343b415e98b32bcc041deb39"
+        },
+        {
+          "path": "scripts\\run_h_a2_2022_10_coarse_stress_review.py",
+          "sha256": "392eba1cdfbc41a06a76bd6ce76d1b15d4552b8c3def0f0a1aa433b01b70d88c"
+        }
+      ],
+      "helper_name": "_load_jsonl",
+      "majority_sha256": "c67fd261ecb3759dbca0cb49aa057075af902a47312223129b3e577077566843",
+      "occurrence_count": 5,
+      "variant_count": 4
+    },
+    {
+      "divergent_files": [
+        {
+          "path": "scripts\\run_h_a2_breakeven_aware_rule_train_diagnostic.py",
+          "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
+        },
+        {
+          "path": "scripts\\run_h_a2_locked_condition_signal_attribution.py",
+          "sha256": "bce532bfc976eefe34ba02010103124e32a2ced077f144928f1a33f1c5e88898"
+        },
+        {
+          "path": "scripts\\run_h_a2_mechanism_revision_audit.py",
+          "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
+        },
+        {
+          "path": "scripts\\run_h_a2_proxy_first_robustness.py",
+          "sha256": "0cb7b9cf55d3d9260858bd293bb2816a21ff94ab4c60544399eb3d2804e2a0a1"
+        },
+        {
+          "path": "scripts\\run_h_b2_falsification_review.py",
+          "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
+        },
+        {
+          "path": "scripts\\run_h_l1_macro_event_proxy_baseline.py",
+          "sha256": "0cb7b9cf55d3d9260858bd293bb2816a21ff94ab4c60544399eb3d2804e2a0a1"
+        },
+        {
+          "path": "scripts\\select_h_g1_manifest_v3_replacement.py",
+          "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
+        },
+        {
+          "path": "scripts\\validate_h_a2_breakeven_aware_rule_train_diagnostic.py",
+          "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
+        },
+        {
+          "path": "scripts\\validate_h_a2_mechanism_revision_audit.py",
+          "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
+        },
+        {
+          "path": "scripts\\validate_h_b2_falsification_review.py",
+          "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
+        }
+      ],
+      "helper_name": "_relative",
+      "majority_sha256": "1e91fda8544bd6ee7d407c83815c16374749babc4865d7df4fcda572b80ac10d",
+      "occurrence_count": 94,
+      "variant_count": 4
+    },
+    {
+      "divergent_files": [
+        {
+          "path": "scripts\\validate_h_a2_breakeven_aware_rule_train_diagnostic.py",
+          "sha256": "9b2608552dd48b044f2484fca72ff315862e4e442cbacc9bbc8f0e50bfb32440"
+        },
+        {
+          "path": "scripts\\validate_h_a2_h_l1_post_proxy_decision.py",
+          "sha256": "9b53a3a4030589fcd19dd3e37dbeda8a85d5b6008782799bb375f680a1526784"
+        },
+        {
+          "path": "scripts\\validate_h_a2_independent_validation_feasibility.py",
+          "sha256": "b1034d2c222b7f95ba542db39bac96c374f2239ad6e5e893f18325f2c59af669"
+        },
+        {
+          "path": "scripts\\validate_h_a2_independent_validation_import_diagnostic.py",
+          "sha256": "4a0c1c9d142560483219befdaba789bdc162f735a1748c63d08c277558f20a82"
+        },
+        {
+          "path": "scripts\\validate_h_a2_mechanism_revision_audit.py",
+          "sha256": "5dee467078c5123d64066722e7adc6e745f1ad59dd5d753f83fb838091382ddf"
+        },
+        {
+          "path": "scripts\\validate_h_a2_normal_control_exact_replay.py",
+          "sha256": "a51bcaac94ffee99172a1ec0b7ee4b098e69f3e4c2e68de1e1045672432d30cd"
+        },
+        {
+          "path": "scripts\\validate_h_a2_normal_control_import_diagnostic.py",
+          "sha256": "4a0c1c9d142560483219befdaba789bdc162f735a1748c63d08c277558f20a82"
+        },
+        {
+          "path": "scripts\\validate_h_a2_original_entry_robustness_prioritization.py",
+          "sha256": "fc168efee17d4e03759a348b70fa3e60c36af6c813f592ca1766ad495d456c3b"
+        },
+        {
+          "path": "scripts\\validate_h_a2_post_stress_normalization_control_exact_replay.py",
+          "sha256": "1d91630e332a4e131deeddf60c88280f6112999bc36bf4f0afd6296472c75210"
+        },
+        {
+          "path": "scripts\\validate_h_a2_post_two_exact_replay_decision.py",
+          "sha256": "51607e1800bd2be9637130b2dde4e1b4c6e8c823ed1e437550dc73a4aaa6ca43"
+        }
+      ],
+      "helper_name": "_validate_guardrails",
+      "majority_sha256": "06f67406cdfaf73ba6a9039ee146af6ec92375abffc484b32e7dc2c9c152bf2e",
+      "occurrence_count": 15,
+      "variant_count": 10
+    },
+    {
+      "divergent_files": [],
+      "helper_name": "_write_reports",
+      "majority_sha256": null,
+      "occurrence_count": 0,
+      "variant_count": 0
+    },
+    {
+      "divergent_files": [
+        {
+          "path": "scripts\\run_h_a2_delayed_entry_condition.py",
+          "sha256": "cb482a1f4ef72f8935b7df65708e18d3fef6b4f3449b58c9abe8dba108701945"
+        },
+        {
+          "path": "scripts\\run_h_a2_independent_validation_feasibility.py",
+          "sha256": "c2c76e0d7f52dab5a35e7c1752c4ec6a5d771d5dfebee0c52cd9ccec60f0e933"
+        },
+        {
+          "path": "scripts\\run_h_a2_independent_validation_import_diagnostic.py",
+          "sha256": "189f2bdc0c878e65b354f2287b16987223c3df681320fdce6bcdc9a58a15ac2f"
+        },
+        {
+          "path": "scripts\\run_h_a2_lower_resolution_proxy.py",
+          "sha256": "5755306ddb5683955f4d826b1316390aa9518765afe1b0937b1133ff1545983b"
+        },
+        {
+          "path": "scripts\\run_h_a2_normal_control_exact_replay.py",
+          "sha256": "cdd3d6df205b1cb52785531a71c35bf2e9098b74fc7b7673763d323b4e3c8539"
+        },
+        {
+          "path": "scripts\\run_h_a2_normal_control_import_diagnostic.py",
+          "sha256": "09ba71d065762c44a10c81d6b7dd079228be12168a0bd4c2e662626386bb92d3"
+        },
+        {
+          "path": "scripts\\run_h_a2_original_entry_revision.py",
+          "sha256": "bb147f751617cc8975fc861f2d4be92fd360859dce976edaed830f647d2b42eb"
+        },
+        {
+          "path": "scripts\\run_h_a2_original_entry_robustness_prioritization.py",
+          "sha256": "f4e7172f65f7262bf78a3ba0ad33b71831ec4a914596f5db9970aa0ea3ceba21"
+        },
+        {
+          "path": "scripts\\run_h_a2_post_stress_normalization_control_exact_replay.py",
+          "sha256": "09d26dfba5a7885cfeda68267f0b3752a5b818c2f135eb3bb25ea3ebcab68db6"
+        },
+        {
+          "path": "scripts\\run_h_a2_residual_adverse_day_analysis.py",
+          "sha256": "9ed8b97021fe3e68b7d63610717a7eb8c7d1f05c81b16a302571417961cf92e9"
+        },
+        {
+          "path": "scripts\\run_h_a2_revised_condition_robustness.py",
+          "sha256": "9073a0697f157bc137f3bec6782fa287303374b1f6a7e61d5266cf0c9c914268"
+        },
+        {
+          "path": "scripts\\run_h_a2_revised_opening_followthrough_condition.py",
+          "sha256": "9ed8b97021fe3e68b7d63610717a7eb8c7d1f05c81b16a302571417961cf92e9"
+        }
+      ],
+      "helper_name": "_write_search_log",
+      "majority_sha256": "9921e2cf39ad05400b012bd8bfa8cfe5fd8edb080f437a252d79d7f7ddc3287a",
+      "occurrence_count": 14,
+      "variant_count": 12
+    },
+    {
+      "divergent_files": [
+        {
+          "path": "scripts\\audit_m3_backtest_reporting_hardening.py",
+          "sha256": "79e381761848cd51597054052bcd0d6cec28a5555dbc05630a17676ade85853b"
+        },
+        {
+          "path": "scripts\\audit_macro_calendar_coverage.py",
+          "sha256": "9351c51fdf84024ff8915c4e68f56b7a461e4060fd783b9b2654a6f89b67f586"
+        },
+        {
+          "path": "scripts\\audit_news_coverage.py",
+          "sha256": "193fd2377532994c9a35848ecf06ee39a63a2d14a534325a69563b58f62420cd"
+        },
+        {
+          "path": "scripts\\audit_paid_costs.py",
+          "sha256": "1925a74d80b35baeea4d191e60b388e7fda5e819c1c5f5f8f179888ddd486252"
+        },
+        {
+          "path": "scripts\\audit_real_money_launch_gate.py",
+          "sha256": "6cf16850dff574684843a8820276e9bf7f493641be6ec4def60387fb214f6f66"
+        },
+        {
+          "path": "scripts\\audit_research_logs.py",
+          "sha256": "ce6dea23b23352863f7ee84c2e61a8e2d595590221249ba8f0573b3571ac6a01"
+        },
+        {
+          "path": "scripts\\audit_research_readiness.py",
+          "sha256": "d527403be3b02b111a821e6f17a6e06d05f58f9a75776ce7a286c472194e0782"
+        },
+        {
+          "path": "scripts\\audit_strategy_data_readiness.py",
+          "sha256": "c9258ac7759e88b59c80c52e9b14cfe927c202754cf6c34874c6791b5bcea3e8"
+        },
+        {
+          "path": "scripts\\audit_vix_vxv_coverage.py",
+          "sha256": "ae061499dc1cdcc30ae024f925a6eb1fa49e10fd2dc364fd17888a4e1f02fb66"
+        },
+        {
+          "path": "scripts\\enrich_option_quotes_greeks_oi_probe.py",
+          "sha256": "ba70ce10b094e74f92bf34f1677d249c0625d23669e745445563b17c1e68a8d3"
+        },
+        {
+          "path": "scripts\\import_gdelt_news_capture_directory.py",
+          "sha256": "d2332924aaba9682b6b178daff87f8e396c107d71fe8d2911f6df03991745cb5"
+        },
+        {
+          "path": "scripts\\plan_exp07_real_news_cases.py",
+          "sha256": "34d249954d8e2068d1f9bdefb15caca5fded9f63be71a97948df50aa07bfa71a"
+        },
+        {
+          "path": "scripts\\plan_gdelt_bulk_raw_manifest.py",
+          "sha256": "5d6adf74d15156b50273db5309de8a18bfe082d4889e185712e08553308882d4"
+        },
+        {
+          "path": "scripts\\plan_gdelt_news_capture_commands.py",
+          "sha256": "f3624c94de48f5047fb2bb135b706064369dcb77e495fa6836bde5b712cb8ef0"
+        },
+        {
+          "path": "scripts\\probe_gdelt_gkg_one_file.py",
+          "sha256": "a14f03d423cb7a1b3d1414af90dc55d610be7d77e15c9ba51cbd7f79bea604a7"
+        },
+        {
+          "path": "scripts\\validate_evidence_tiers.py",
+          "sha256": "e4bf76fac09ec163e192e17493aad28e0fb75ed8c675a3791ca39e14ec014c90"
+        },
+        {
+          "path": "scripts\\validate_hypothesis_registry.py",
+          "sha256": "d7c1ea0a1e090a0cc040994a6769c1b734f24bcaac7568fb6e3c969c9be2337a"
+        },
+        {
+          "path": "scripts\\validate_m3_experiment_guardrails.py",
+          "sha256": "437138f0cfaa4a2c3b90a6ab5f47a252a77f1f96a370bcdf887280947760ab98"
+        }
+      ],
+      "helper_name": "write_reports",
+      "majority_sha256": "6a87bdc8864391f124d505aa20784fcd61020ccda44a90f04d1214eee37b1926",
+      "occurrence_count": 20,
+      "variant_count": 19
+    }
+  ],
+  "interpreter": {
+    "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.14.3"
+  },
+  "purpose": "Measure duplicated helper drift without editing frozen experiment scripts.",
+  "script_root": "scripts",
+  "status": "pass_with_findings",
+  "total_divergent_files": 92
+}

@@ -1,0 +1,51 @@
+{
+  "audit_id": "wiki_citation_hash_audit",
+  "blockers": [],
+  "citation_count": 5,
+  "citations": [
+    {
+      "actual_sha256": "90663b67e49dcec90bd641e801f9464e593ff8fe9091b2d70e9f4645381af556",
+      "embedded_sha256": null,
+      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
+      "status": "hash_missing",
+      "wiki_relative_path": "concepts/deflated-sharpe-ratio.md"
+    },
+    {
+      "actual_sha256": "185fe1a16c4e66b3630cb303dbd75acb354e179631de8a9fc1b985451756c94b",
+      "embedded_sha256": null,
+      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
+      "status": "hash_missing",
+      "wiki_relative_path": "concepts/market-maker-net-gamma.md"
+    },
+    {
+      "actual_sha256": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81",
+      "embedded_sha256": null,
+      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
+      "status": "hash_missing",
+      "wiki_relative_path": "concepts/minimum-track-record-length.md"
+    },
+    {
+      "actual_sha256": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5",
+      "embedded_sha256": null,
+      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
+      "status": "hash_missing",
+      "wiki_relative_path": "concepts/probabilistic-sharpe-ratio.md"
+    },
+    {
+      "actual_sha256": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae",
+      "embedded_sha256": null,
+      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
+      "status": "hash_missing",
+      "wiki_relative_path": "concepts/regime-filtering-for-zero-dte.md"
+    }
+  ],
+  "hash_missing_count": 5,
+  "hash_recorded_count": 0,
+  "interpreter": {
+    "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.14.3"
+  },
+  "status": "pass_with_missing_hashes",
+  "wiki_root": "D:\\Fogust\\Workspace\\LLM Wiki\\LLM Wiki\\wiki"
+}
