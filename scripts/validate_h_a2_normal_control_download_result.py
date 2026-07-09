@@ -39,9 +39,9 @@ def validate_h_a2_normal_control_download_result(
         blockers.append("scenario_must_be_h_a2_normal_control_low_normal_vix_control_pack")
     if result.get("download_performed") is not True:
         blockers.append("download_performed_must_be_true")
-    if result.get("source_decision") != "experiments\\h_a2_normal_control_paid_download_decision.json":
+    if _portable_path(result.get("source_decision")) != "experiments/h_a2_normal_control_paid_download_decision.json":
         blockers.append("source_decision_mismatch")
-    if result.get("source_cost_report") != "reports\\data_cost\\h_a2_normal_control_low_normal_vix_control_pack_cost_estimate.json":
+    if _portable_path(result.get("source_cost_report")) != "reports/data_cost/h_a2_normal_control_low_normal_vix_control_pack_cost_estimate.json":
         blockers.append("source_cost_report_mismatch")
     if result.get("download_decision") != "approve_low_normal_vix_control_pack_download_after_paid_cost_audit_pass":
         blockers.append("download_decision_must_match_h_a2_45")
@@ -105,6 +105,10 @@ def _round6(value: Any) -> float | None:
     if value is None:
         return None
     return round(float(value), 6)
+
+
+def _portable_path(value: Any) -> str:
+    return str(value or "").replace("\\", "/")
 
 
 def main(argv: list[str] | None = None) -> int:

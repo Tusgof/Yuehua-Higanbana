@@ -9,9 +9,14 @@ from scripts.validate_h_a2_post_stress_normalization_control_exact_replay import
     DEFAULT_SUMMARY_PATH,
     validate_h_a2_post_stress_normalization_control_exact_replay,
 )
+from tests.tiers import state_audit
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 class H_A2PostStressNormalizationControlExactReplayTests(unittest.TestCase):
+    @state_audit(("HIGANBANA_DATA_ROOT", PROJECT_ROOT / "data"))
     def test_current_summary_validates(self) -> None:
         self.assertTrue(DEFAULT_SUMMARY_PATH.exists(), "run exact replay before this validator test")
         result = validate_h_a2_post_stress_normalization_control_exact_replay()

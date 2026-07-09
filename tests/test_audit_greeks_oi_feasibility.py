@@ -6,6 +6,8 @@ import tempfile
 from pathlib import Path
 from unittest import TestCase
 
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "audit_greeks_oi_feasibility.py"
@@ -23,7 +25,6 @@ class GreeksOiFeasibilityTests(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.audit = load_module()
-        cls.current_result = cls.audit.audit_greeks_oi_feasibility()
 
     def test_parse_databento_option_symbol(self) -> None:
         parsed = self.audit.parse_databento_option_symbol("SPY   240103C00420000")
@@ -57,8 +58,9 @@ class GreeksOiFeasibilityTests(TestCase):
         self.assertIsNotNone(iv)
         self.assertAlmostEqual(0.2, iv, places=4)
 
+    @state_audit(("HIGANBANA_DATA_ROOT", PROJECT_ROOT / "data"))
     def test_current_project_audit_generates_feasibility_report(self) -> None:
-        result = self.current_result
+        result = self.audit.audit_greeks_oi_feasibility()
 
         self.assertEqual("greeks_oi_feasibility_audit", result["record_type"])
         self.assertEqual("pass", result["quote_field_audit"]["status"])
@@ -70,8 +72,9 @@ class GreeksOiFeasibilityTests(TestCase):
             result["strategy_use_status"],
         )
 
+    @state_audit(("HIGANBANA_DATA_ROOT", PROJECT_ROOT / "data"))
     def test_write_reports_creates_json_and_markdown(self) -> None:
-        result = self.current_result
+        result = self.audit.audit_greeks_oi_feasibility()
         with tempfile.TemporaryDirectory() as tmp:
             json_path = Path(tmp) / "greeks_oi_feasibility_audit.json"
             md_path = Path(tmp) / "greeks_oi_feasibility_audit.md"

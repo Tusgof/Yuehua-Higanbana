@@ -8,6 +8,8 @@ from pathlib import Path
 from unittest import TestCase
 from zoneinfo import ZoneInfo
 
+from tests.tiers import state_audit
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "enrich_option_quotes_greeks_oi_probe.py"
@@ -79,6 +81,7 @@ class EnrichOptionQuotesGreeksOiProbeTests(TestCase):
         self.assertIn("delta", enriched)
         self.assertIn("gamma", enriched)
 
+    @state_audit(("HIGANBANA_DATA_ROOT", PROJECT_ROOT / "data"))
     def test_current_project_enrichment_probe_writes_outputs(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -8,12 +8,14 @@ from pathlib import Path
 from scripts.validate_h_a2_independent_validation_download_result import (
     validate_h_a2_independent_validation_download_result,
 )
+from tests.tiers import state_audit
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 class ValidateHA2IndependentValidationDownloadResultTests(unittest.TestCase):
+    @state_audit(("HIGANBANA_DATA_ROOT", PROJECT_ROOT / "data"))
     def test_current_download_result_passes(self) -> None:
         result = validate_h_a2_independent_validation_download_result()
 

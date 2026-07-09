@@ -1,11 +1,17 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
 
 from scripts.run_h_a2_proxy_first_robustness import DEFAULT_SOURCE_SUMMARY_PATH, run_experiment
 from scripts.validate_h_a2_proxy_first_robustness_summary import validate
+from tests.tiers import state_audit
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+
+@state_audit(("HIGANBANA_DATA_ROOT", PROJECT_ROOT / "data"))
 class H_A2ProxyFirstRobustnessTest(unittest.TestCase):
     def test_run_and_validate_local_proxy_summary(self) -> None:
         self.assertTrue(DEFAULT_SOURCE_SUMMARY_PATH.exists())

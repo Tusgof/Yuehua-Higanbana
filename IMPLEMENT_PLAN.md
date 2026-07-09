@@ -31,12 +31,12 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| DD1.1 | [DONE] Split tests into `hermetic` and `state-audit`; missing local roots skip with an explicit root name | L | RISK | Clean-clone hermetic tier: 543 tests passed; local state-audit tier: 147 tests passed |
+| DD1.1 | [DONE] Split tests into `hermetic` and `state-audit`; missing local roots skip with an explicit root name | L | RISK | Linux CI exposed eight additional state-dependent tests; corrected hermetic tier now contains 535 tests |
 | DD1.2 | [DONE] Add `HIGANBANA_DATA_ROOT`, `HIGANBANA_WIKI_ROOT`, and `HIGANBANA_IBKR_PYTHON` environment resolution with untracked `machine.json` fallback | M | RISK | Hermetic forbidden-path test passes for `scripts/`, `tests/`, and `experiments/` |
 | DD1.3 | [DONE] Fix cross-platform path assertions, declare supported Python and optional pinned Databento dependency, and standardize interpreter metadata for new reports | M | RISK | Portability, environment, and Python-version tests pass |
 | DD1.4 | [DONE LOCALLY; CI PENDING PUSH] Add GitHub Actions for the hermetic tier and expose CI status in the control plane | S | RISK | Workflow runs the documented hermetic command on push/PR; remote run requires push |
 | DD1.5 | [DONE WITH DATA BLOCKER] Document backup/restore for the four project stores and add paid-data checksum verification | L | RISK | Coverage is complete, but integrity verification detects two changed Databento files and one resulting directory-hash mismatch |
-| DD1.6 | [DONE LOCALLY] Rehearse the hermetic tier from a clean local clone and run the full local verification loop | L | RISK | Clean-clone hermetic 543 passed; local hermetic 543 passed; state-audit 147 passed; fixture pipeline passed |
+| DD1.6 | [DONE LOCALLY] Rehearse the hermetic tier from a clean local clone and run the full local verification loop | L | RISK | Local corrected hermetic 535 passed; earlier local state-audit 147 passed plus eight corrected state-dependent tests passed directly; fixture pipeline passed |
 
 **Current exit blockers**: confirm or restore the two changed Databento artifacts, obtain a green remote CI run after push, and schedule the physical second-machine restore rehearsal. The paid-data and hypothesis-expansion freeze remains active until these are closed.
 
