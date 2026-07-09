@@ -355,6 +355,14 @@ def main() -> int:
             ["scripts/validate_h_a2_targeted_data_regime_expansion_plan.py"],
         ),
         (
+            "run_h_a2_targeted_geometry_cache_inventory",
+            ["scripts/run_h_a2_targeted_geometry_cache_inventory.py"],
+        ),
+        (
+            "validate_h_a2_targeted_geometry_cache_inventory",
+            ["scripts/validate_h_a2_targeted_geometry_cache_inventory.py"],
+        ),
+        (
             "validate_h_a2_independent_validation_download_result",
             ["scripts/validate_h_a2_independent_validation_download_result.py"],
         ),

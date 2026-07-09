@@ -184,6 +184,9 @@ H_A2_BREAKEVEN_AWARE_RULE_TRAIN_DIAGNOSTIC = (
 H_A2_TARGETED_DATA_REGIME_EXPANSION_PLAN = (
     PROJECT_ROOT / "experiments" / "h_a2_targeted_data_regime_expansion_plan.json"
 )
+H_A2_TARGETED_GEOMETRY_CACHE_INVENTORY = (
+    PROJECT_ROOT / "reports" / "data_cost" / "h_a2_targeted_geometry_cache_inventory_and_cost_plan.json"
+)
 GDELT_BULK_SOURCE_DECISION_NOTE = PROJECT_ROOT / "docs" / "GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md"
 GDELT_BULK_MANIFEST_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_bulk_raw_manifest.json"
 GDELT_GKG_ONE_FILE_PROBE_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_gkg_one_file_parser_probe.json"
@@ -699,9 +702,27 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
     h_a2_targeted_data_regime_expansion_plan = _load_report_artifact(
         H_A2_TARGETED_DATA_REGIME_EXPANSION_PLAN
     )
+    h_a2_targeted_geometry_cache_inventory = _load_report_artifact(
+        H_A2_TARGETED_GEOMETRY_CACHE_INVENTORY
+    )
     h_a2_proxy_robustness = _load_report_artifact(H_A2_PROXY_FIRST_ROBUSTNESS_SUMMARY)
     h_l1_macro_proxy = _load_report_artifact(H_L1_MACRO_EVENT_PROXY_BASELINE_SUMMARY)
     if (
+        h_a2_targeted_geometry_cache_inventory
+        and h_a2_targeted_geometry_cache_inventory.get("status")
+        == "complete_no_download_cost_estimate_deferred"
+        and h_a2_targeted_geometry_cache_inventory.get("experiment_id")
+        == "h_a2_targeted_geometry_cache_inventory_and_cost_estimate"
+    ):
+        target_sets = {
+            item.get("target_set_id"): item
+            for item in h_a2_targeted_geometry_cache_inventory.get("target_sets", [])
+        }
+        train = target_sets.get("train_candidate_geometry_backfill", {})
+        normal = target_sets.get("normal_control_geometry_pack", {})
+        stress = target_sets.get("stress_regime_geometry_pack", {})
+        actions.append(f"H-A2.64 cache inventory is complete as E0 control evidence with no network, no live metadata call, and no paid download. Train geometry cache is ready for {train.get('ready_for_local_geometry_parser_count')}/{train.get('target_date_count')} target dates, normal/control has {normal.get('candidate_ready_count')} candidate-ready dates from existing downloaded packs, and stress geometry remains blocked by {stress.get('missing_underlying_bar_count')} missing real 2022 SPY underlying-bar dates despite local option quotes. Next safe H-A2 work is a local/no-paid train/control geometry parser preregistration or implementation using existing cached SPY bars and OPRA quotes. Do not call Databento metadata while Technical DD Workstream 1 remains open, do not download data, do not run OOS rule evaluation, do not select thresholds for trading, do not request broker/order work, do not approve paper trading, operational validation, real-money trading, or claim E2 from H-A2.64.")
+    elif (
         h_a2_targeted_data_regime_expansion_plan
         and h_a2_targeted_data_regime_expansion_plan.get("status") == "preregistered"
         and h_a2_targeted_data_regime_expansion_plan.get("experiment_id")
