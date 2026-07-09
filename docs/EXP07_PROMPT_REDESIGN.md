@@ -1,5 +1,14 @@
 # Experiment 7 Prompt Redesign
 
+## 2026-07-03 v2 Pointer
+
+This document is superseded for active execution by:
+
+- `docs\LLM_MEASUREMENT_EXPERIMENT_DESIGN.md` for H-L1 news/sentiment/impact measurement.
+- `docs\H_L2_PRICE_INPUT_DESIGN.md` for the separate dormant price-input branch.
+
+Exp07 remains historical context. Do not run live OpenRouter/DeepSeek prompt research from this document alone. Active execution must follow the H-L1/H-L2 design documents, the hypothesis registry, and the real timestamp-clean news blocker.
+
 ## Why The Old Direction Is Not Enough
 
 The previous Exp07 prompt matrix tested whether an LLM could reproduce a hand-written event policy on synthetic cases. That is not the real research question.
@@ -131,4 +140,3 @@ A prompt family is only a candidate if:
 - It remains useful on holdout event types not used to design the prompt.
 
 Passing this prompt bar still does not approve the LLM for strategy use. Strategy use requires a separate ablation against a no-LLM baseline.
-

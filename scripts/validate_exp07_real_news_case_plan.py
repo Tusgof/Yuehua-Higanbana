@@ -103,6 +103,15 @@ def validate_plan(path: Path = DEFAULT_PLAN_PATH) -> list[str]:
     captured_count = int(plan.get("captured_candidate_count", 0))
     if captured_count == 0 and "requires_real_timestamp_clean_news_cases" not in blockers:
         errors.append("0 captured candidates must keep requires_real_timestamp_clean_news_cases blocker")
+    retry_pressure = plan.get("retry_pressure", {})
+    if (
+        isinstance(retry_pressure, dict)
+        and retry_pressure.get("status") == "cooldown_recommended"
+        and plan.get("collection_status") == "ready_to_collect"
+    ):
+        errors.append("cooldown_recommended retry pressure must not report collection_status ready_to_collect")
+    if plan.get("gdelt_live_retry_allowed") is False and plan.get("collection_status") == "ready_to_collect":
+        errors.append("gdelt_live_retry_allowed=false must not report collection_status ready_to_collect")
 
     return errors
 

@@ -1,0 +1,179 @@
+{
+  "schema_version": "h_a2_locked_condition_signal_attribution_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_locked_condition_signal_attribution",
+  "title": "H-A2 locked-condition signal attribution preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register a no-paid local audit to determine whether the locked H-A2 opening-followthrough condition is a deployable entry signal, a delayed-entry candidate, or only a post-decision diagnostic proxy.",
+  "source_decision": "reports/experiments/h_a2_revised_condition_robustness_summary.json",
+  "source_decision_summary": "H-A2.26 kept threshold 0.001 locked with no threshold search and no OOS tuning, but retained OOS has only 13 trade days. Before spending effort on exact replay or treating the condition as a live rule, the project must classify whether the signal is available at the intended decision timestamp and whether the apparent improvement is merely outcome-proxy leakage.",
+  "research_question": "Does the locked threshold 0.001 opening-followthrough condition answer a tradable H-A2 hypothesis, or does it rely on post-entry/post-decision information that should only be treated as diagnostic E1 evidence?",
+  "locked_condition": {
+    "base_condition": "clean macro/VIX regime from prior H-A2 proxy work",
+    "opening_followthrough_threshold": 0.001,
+    "threshold_source": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "threshold_must_not_change": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false
+  },
+  "source_artifacts": {
+    "h_a2_revised_condition_robustness_summary": "reports/experiments/h_a2_revised_condition_robustness_summary.json",
+    "h_a2_revised_condition_robustness_report": "reports/experiments/h_a2_revised_condition_robustness_report.md",
+    "h_a2_revised_condition_robustness_preregistration": "experiments/h_a2_revised_condition_robustness_preregistration.json",
+    "h_a2_revised_condition_summary": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "h_a2_lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "h_a2_proxy_first_robustness_summary": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "hypothesis_registry": "experiments/hypothesis_registry.json",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
+    "wiki_lookahead_bias": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/lookahead-bias.md"
+  },
+  "planned_future_tests": [
+    {
+      "test_id": "decision_timestamp_availability_audit",
+      "question": "At the intended H-A2 decision time, is the 0.001 opening-followthrough value already known, partially known, or still future information?",
+      "minimum_output": [
+        "intended_decision_time_et",
+        "feature_measurement_window",
+        "feature_known_by_decision_time",
+        "timestamp_gap_minutes",
+        "classification"
+      ]
+    },
+    {
+      "test_id": "entry_rule_classification",
+      "question": "Can the locked condition be used as an entry filter, only as a delayed-entry rule, or only as a diagnostic proxy?",
+      "minimum_output": [
+        "baseline_entry_time",
+        "earliest_feature_completion_time",
+        "deployable_entry_filter_allowed",
+        "delayed_entry_candidate_allowed",
+        "diagnostic_proxy_only"
+      ]
+    },
+    {
+      "test_id": "outcome_proxy_leakage_audit",
+      "question": "Is the apparent improvement likely explained by using same-session price movement that is mechanically close to the option PnL outcome?",
+      "minimum_output": [
+        "proxy_return_field",
+        "pnl_field",
+        "same_session_overlap_statement",
+        "correlation_or_rank_summary",
+        "leakage_risk_label"
+      ]
+    },
+    {
+      "test_id": "fixed_threshold_no_search_reconciliation",
+      "question": "Can the audit prove it uses only threshold 0.001 and does not add another threshold, bucket rule, or OOS-selected filter?",
+      "minimum_output": [
+        "locked_threshold",
+        "threshold_source",
+        "new_threshold_count",
+        "new_filter_count",
+        "search_log_statement"
+      ]
+    },
+    {
+      "test_id": "hypothesis_implication_review",
+      "question": "Given the time-availability and leakage findings, what H-A2 hypothesis is still valid to test next?",
+      "minimum_output": [
+        "allowed_future_claim",
+        "forbidden_future_claim",
+        "recommended_next_hypothesis_form",
+        "exact_replay_priority",
+        "research_log_requirement"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "threshold_locked_before_audit": true,
+    "result_must_report_split_counts": true
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_reported_group": true,
+    "mintrl_psr_labels_must_be_preserved": true,
+    "under_sampled_label_required": true,
+    "underpowered_label_required": true,
+    "dsr_not_recomputed_from_new_search": true,
+    "search_log_reference_required": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "classify_as_deployable_entry_filter_only_if": [
+      "The feature is completely known before the intended entry decision timestamp.",
+      "The feature does not require same-session information that overlaps with the outcome period.",
+      "No new threshold, bucket, or OOS-selected filter is introduced."
+    ],
+    "classify_as_delayed_entry_candidate_if": [
+      "The feature is known only after the original entry decision but before a possible delayed entry timestamp.",
+      "Future work would need a separately pre-registered delayed-entry backtest with fill/cost assumptions."
+    ],
+    "classify_as_diagnostic_proxy_only_if": [
+      "The feature is known after the intended trade decision or overlaps materially with the outcome PnL window.",
+      "The apparent improvement is best interpreted as mechanism clue or outcome-proxy evidence, not as a deployable trading rule."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_a2_locked_condition_signal_attribution_summary.json",
+    "summary_md": "reports/experiments/h_a2_locked_condition_signal_attribution_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_locked_condition_signal_attribution_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/029-higanbana-h-a2-locked-condition-signal-attribution.md"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered signal-attribution audit for the locked threshold 0.001 condition.",
+    "The audit may classify the condition as deployable entry filter, delayed-entry candidate, or diagnostic proxy only.",
+    "The audit may support only E1 prioritization, parking, or a revised H-A2 preregistration.",
+    "Exact replay remains blocked until real 2022 SPY underlying bars are available."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter.",
+    "Do not call a post-decision feature a deployable entry signal.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration.",
+    "Do not run live GDELT retries from this preregistration."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "threshold_search_allowed_in_future_run": false,
+    "new_filter_allowed_in_future_run": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "The audit states the intended decision timestamp and the feature measurement window.",
+    "The audit classifies the locked condition as deployable entry filter, delayed-entry candidate, or diagnostic proxy only.",
+    "Threshold 0.001 remains unchanged and no new filter is introduced.",
+    "The audit preserves under-sampled and underpowered labels.",
+    "The next action explicitly chooses exact replay priority, delayed-entry preregistration, H-A2 parking, or another revised-H-A2 preregistration."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Future run can be E1 diagnostic/prioritization evidence only",
+    "No new threshold search",
+    "No new OOS-selected filter",
+    "No exact 2022-10 ORB replay",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

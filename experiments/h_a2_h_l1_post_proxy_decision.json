@@ -1,0 +1,145 @@
+{
+  "schema_version": "h_a2_h_l1_post_proxy_decision_v1",
+  "artifact_type": "decision",
+  "created_date": "2026-07-06",
+  "hypothesis_ids": [
+    "H-A2",
+    "H-L1"
+  ],
+  "evidence_tier": "E0",
+  "status": "decision_complete",
+  "decision": "continue_h_a2_local_residual_analysis_and_keep_h_l1_blocked_until_real_news",
+  "purpose": "Decide the next safe in-plan work after H-A2.19 proxy-first robustness and L.7 macro-event proxy baseline, without treating either result as acceptance-grade evidence.",
+  "source_artifacts": {
+    "h_a2_proxy_first_robustness_summary": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "h_a2_proxy_first_robustness_report": "reports/experiments/h_a2_proxy_first_robustness_report.md",
+    "h_l1_macro_event_proxy_baseline_summary": "reports/experiments/h_l1_macro_event_proxy_baseline_summary.json",
+    "h_l1_macro_event_proxy_baseline_report": "reports/experiments/h_l1_macro_event_proxy_baseline_report.md",
+    "research_readiness_audit": "reports/research_readiness_audit.json",
+    "hypothesis_registry": "experiments/hypothesis_registry.json"
+  },
+  "evidence_review": {
+    "h_a2": {
+      "source_status": "complete",
+      "source_evidence_tier": "E1",
+      "conclusion": "ยังสรุปไม่ได้",
+      "daily_rows": 463,
+      "measured_5m_days": 444,
+      "measured_15m_days": 444,
+      "trade_days": 90,
+      "non_risk_trade_days": 64,
+      "risk_trade_days": 26,
+      "non_risk_minus_risk_5m_proxy": 0.001646,
+      "non_risk_minus_risk_15m_proxy": 0.000669,
+      "non_risk_minus_risk_trade_pnl": 23.375,
+      "after_big_day_trim_non_risk_minus_risk_trade_pnl": 8.042741,
+      "directionally_consistent": true,
+      "exact_2022_orb_tested": false,
+      "under_sampled": true,
+      "underpowered": true
+    },
+    "h_l1": {
+      "source_status": "complete",
+      "source_evidence_tier": "E1",
+      "conclusion": "ยังสรุปไม่ได้",
+      "not_llm_news_evidence": true,
+      "llm_gate_tested": false,
+      "real_news_tested": false,
+      "timestamp_clean_news_cases_exist": false,
+      "macro_only_avg_trade_pnl": -10.56,
+      "clean_avg_trade_pnl": 12.815,
+      "clean_minus_macro_only_avg_trade_pnl": 23.375,
+      "future_llm_incremental_information_target": "Future H-L1 real-news or LLM scores must explain residual adverse days beyond deterministic macro/VIX labels."
+    }
+  },
+  "decision_rationale": [
+    "H-A2.19 gives directionally consistent E1 proxy evidence across 5-minute proxy, 15-minute proxy, and existing implementable trade outcomes.",
+    "The H-A2 signal weakens after big-day trimming but remains positive, so the next question should diagnose residual adverse days rather than jump to paper trading or buy broad data.",
+    "L.7 proves that deterministic macro/VIX labels are already a meaningful baseline; future news or LLM work must add information beyond that baseline.",
+    "Real timestamp-clean news cases remain unavailable, so live LLM prompt research stays blocked.",
+    "Exact 2022-10 ORB replay still requires real 2022 SPY bars, but that external blocker should not stop local mechanism-level residual analysis."
+  ],
+  "selected_next_path": {
+    "path_id": "pre_register_h_a2_residual_adverse_day_analysis",
+    "selected": true,
+    "allowed_next_artifact": "A separate H-A2 residual/adverse-day analysis preregistration using only local artifacts.",
+    "allowed_scope": [
+      "inspect non-risk losing days and macro-only losing days from existing trade outcomes",
+      "compare adverse days against deterministic macro/VIX labels, proxy move size, day-of-week, trend/regime labels where already local",
+      "identify whether H-A2 needs a narrower falsifiable condition before exact replay or data purchase",
+      "keep H-L1 real-news/LLM execution blocked until timestamp-clean news cases exist"
+    ],
+    "allowed_claim": "H-A2 is still active at E1 and worth local residual analysis before any further source execution.",
+    "forbidden_claims": [
+      "Do not claim H-A2 edge is validated.",
+      "Do not claim exact 2022-10 ORB has been tested.",
+      "Do not claim L.7 is LLM or real-news evidence.",
+      "Do not run live LLM calls.",
+      "Do not run live GDELT retries while cooldown is active.",
+      "Do not buy paid data or introduce a new provider.",
+      "Do not approve paper trading, operational validation, or real-money trading."
+    ]
+  },
+  "rejected_paths": [
+    {
+      "path_id": "paper_trading_now",
+      "reason": "No strategy hypothesis has E2 acceptance and H-A2/H-L1 evidence remains E1/E0 only."
+    },
+    {
+      "path_id": "live_llm_prompt_research_now",
+      "reason": "H-L1 lacks real timestamp-clean news cases; L.7 is a deterministic proxy baseline only."
+    },
+    {
+      "path_id": "live_gdelt_retry_now",
+      "reason": "The current command plan reports cooldown and live_retry_allowed=false."
+    },
+    {
+      "path_id": "buy_more_data_now",
+      "reason": "Current headroom is only 5.010294 USD and the immediate local question does not require new paid data."
+    },
+    {
+      "path_id": "exact_2022_orb_replay_now",
+      "reason": "Real 2022-10 SPY underlying bars remain unavailable in local cache and IBKR is externally blocked."
+    }
+  ],
+  "next_artifact_requirements": {
+    "must_be_preregistered_before_analysis": true,
+    "must_use_local_artifacts_only": true,
+    "must_not_use_network": true,
+    "must_not_use_paid_data": true,
+    "must_not_use_broker": true,
+    "must_not_use_llm": true,
+    "must_not_claim_e2": true,
+    "must_report_sample_counts": true,
+    "must_report_big_day_dependency_context": true,
+    "must_explain_how_result_would_revise_or_park_h_a2": true,
+    "must_keep_h_l1_incremental_baseline_rule": true
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "llm_call_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "strategy_pnl_allowed_in_this_artifact": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_decision": false
+  },
+  "planned_outputs": {
+    "decision_json": "experiments/h_a2_h_l1_post_proxy_decision.json",
+    "decision_md": "docs/H_A2_H_L1_POST_PROXY_DECISION.md",
+    "validator": "scripts/validate_h_a2_h_l1_post_proxy_decision.py",
+    "future_preregistration": "experiments/h_a2_residual_adverse_day_analysis_preregistration.json"
+  },
+  "tier_blockers": [
+    "E0 decision artifact only",
+    "Source evidence is E1 proxy evidence",
+    "No exact 2022-10 ORB replay",
+    "No real timestamp-clean news cases",
+    "No LLM call or news sentiment test",
+    "No E2 acceptance claim"
+  ]
+}

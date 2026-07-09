@@ -1,0 +1,333 @@
+{
+  "allowed_claims": [
+    "H-A2.62 defines the cost-adjusted strike-reachability target and checks whether current local train artifacts can support it.",
+    "The current local train artifacts are insufficient to lock a true breakeven-aware option rule.",
+    "A targeted data/regime expansion plan is justified before more broad data buying or OOS rule evaluation."
+  ],
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "Train-only surrogate trials can describe directional followthrough behavior, but the local train rows do not contain the per-candidate entry strike mapping, implementable debit, bid/ask width, and liquidity fields needed to lock a true breakeven-aware option rule.",
+  "cost_adjusted_strike_reachability_target": {
+    "exact_replay_target_cases": [
+      {
+        "candidate_date": "2025-02-11",
+        "direction": "call",
+        "entry_implementable_debit": 0.5,
+        "entry_underlying": 603.52,
+        "forced_close_underlying": 604.93,
+        "implementable_pnl": -26.56,
+        "long_strike": 605.0,
+        "realized_move_to_forced_close": 1.41,
+        "required_move_to_long_strike": 1.48,
+        "strike_reachability_shortfall": 0.07,
+        "target_reached": false
+      },
+      {
+        "candidate_date": "2025-05-05",
+        "direction": "call",
+        "entry_implementable_debit": 0.56,
+        "entry_underlying": 563.12,
+        "forced_close_underlying": 564.38,
+        "implementable_pnl": -32.56,
+        "long_strike": 565.0,
+        "realized_move_to_forced_close": 1.26,
+        "required_move_to_long_strike": 1.88,
+        "strike_reachability_shortfall": 0.62,
+        "target_reached": false
+      }
+    ],
+    "exact_replay_target_reached_count": 0,
+    "status": "defined_but_not_computable_for_train_distribution",
+    "target_definition": "For a call debit vertical, the post-entry underlying move must be large enough that the selected long strike is reached or nearly reached and the forced-close spread value can overcome entry implementable debit, bid/ask friction, and $0.64 per-leg fees. Implementable PnL, not mid PnL, governs the target.",
+    "train_distribution_target_available": false,
+    "train_trade_days_with_surrogate_outcome": 30
+  },
+  "decision": {
+    "candidate_trial_count": 6,
+    "decision": "write_targeted_data_regime_expansion_plan",
+    "evidence_tier_cap": "E1",
+    "exact_sanity_status": "pass_mechanism_problem_confirmed",
+    "next_safe_action": "Pre-register H-A2.63 targeted data/regime expansion plan for breakeven-aware ORB evidence. The plan must name the minimum option-chain fields and windows needed to compute entry strike mapping, entry implementable debit, bid/ask width, liquidity, forced-close value, regime labels, and MinTRL/PSR coverage before any paid download or OOS rule evaluation.",
+    "oos_tuning_used": false,
+    "paid_data_approved": false,
+    "paper_trading_allowed": false,
+    "status": "complete",
+    "target_status": "defined_but_not_computable_for_train_distribution",
+    "true_breakeven_rule_locked": false
+  },
+  "decision_time_feature_audit": {
+    "available_fields": [
+      {
+        "decision_time_status": "available_before_entry",
+        "field": "clean_macro_vix_condition",
+        "scope": "train_daily_rows"
+      },
+      {
+        "decision_time_status": "available_by_09_35_in_existing_proxy_design",
+        "field": "proxy_5m_directional_followthrough",
+        "scope": "train_daily_rows"
+      },
+      {
+        "decision_time_status": "outcome_only_not_live_input",
+        "field": "existing_train_implementable_pnl",
+        "scope": "train_daily_rows"
+      },
+      {
+        "decision_time_status": "available_for_autopsy_not_train_distribution",
+        "field": "exact_replay_entry_strike_debit_liquidity",
+        "scope": "two_exact_replay_sanity_cases_only"
+      }
+    ],
+    "can_lock_true_breakeven_aware_rule_from_current_artifacts": false,
+    "can_run_surrogate_train_trials": true,
+    "exact_replay_autopsy_count": 2,
+    "interpretation": "The current train artifact can test directional surrogate behavior, but it cannot compute the actual option payoff geometry needed for a breakeven-aware rule across the train distribution.",
+    "missing_fields_for_true_rule": [
+      "train_distribution_nearest_discrete_long_strike",
+      "train_distribution_short_strike_width",
+      "train_distribution_entry_mid_debit",
+      "train_distribution_entry_implementable_debit",
+      "train_distribution_entry_bid_ask_width",
+      "train_distribution_entry_quote_size_or_liquidity",
+      "train_distribution_cost_adjusted_strike_reachability_target"
+    ],
+    "status": "blocked_true_breakeven_rule_lock",
+    "train_trade_days_checked": 30
+  },
+  "evidence_tier": "E1",
+  "exact_replay_mechanism_sanity_check": {
+    "candidate_count": 2,
+    "directionally_correct_underlying_count": 2,
+    "interpretation": "The exact replay autopsy confirms the revised target is necessary: direction was right, but payoff feasibility failed.",
+    "long_strike_not_reached_count": 2,
+    "option_pnl_negative_count": 2,
+    "status": "pass_mechanism_problem_confirmed",
+    "total_cost_drag_vs_mid": 9.12,
+    "total_implementable_pnl": -59.12,
+    "total_mid_pnl": -50.0
+  },
+  "experiment_id": "h_a2_breakeven_aware_rule_train_diagnostic",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim the breakeven-aware rule is selected for trading.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading, operational validation, or real-money trading.",
+    "Do not use OOS tuning or an OOS-selected filter.",
+    "Do not approve broad calendar data buying from this diagnostic alone."
+  ],
+  "generated_at_utc": "2026-07-09T05:41:07Z",
+  "guardrails": {
+    "broker_request_used": false,
+    "exact_replay_expansion_used": false,
+    "gdelt_live_retry_used": false,
+    "ibkr_request_used": false,
+    "llm_call_used": false,
+    "network_used": false,
+    "new_provider_used": false,
+    "oos_filter_selection_used": false,
+    "oos_tuning_used": false,
+    "operational_validation_allowed": false,
+    "paid_data_used": false,
+    "paper_trading_allowed": false,
+    "real_money_allowed": false,
+    "strategy_use_allowed": false
+  },
+  "hypothesis_id": "H-A2",
+  "methodology": {
+    "candidate_rule_trials_are_surrogates": true,
+    "chronological_split_required": true,
+    "decision_time_inputs_tested_from_local_train_rows": [
+      "clean_macro_vix_condition",
+      "proxy_5m_directional_followthrough",
+      "prior_vix_bucket_context"
+    ],
+    "future_inputs_excluded": [
+      "future_underlying_close_as_live_input",
+      "forced_close_option_quote_as_live_input",
+      "same_day_realized_pnl_as_live_input",
+      "oos_selected_filter"
+    ],
+    "local_artifacts_only": true,
+    "mode": "local_no_paid_train_only_diagnostic",
+    "oos_rows_used_for_rule_selection": false,
+    "random_split_used": false,
+    "train_split_used_for_trials": "in_sample",
+    "true_breakeven_rule_locked": false
+  },
+  "next_safe_action": "Pre-register H-A2.63 targeted data/regime expansion plan for breakeven-aware ORB evidence. The plan must name the minimum option-chain fields and windows needed to compute entry strike mapping, entry implementable debit, bid/ask width, liquidity, forced-close value, regime labels, and MinTRL/PSR coverage before any paid download or OOS rule evaluation.",
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-breakeven-aware-train-diagnostic",
+  "sample_counts": {
+    "daily_rows": 463,
+    "exact_replay_sanity_candidate_count": 2,
+    "train_candidate_trial_count": 6,
+    "train_non_risk_trade_days": 30
+  },
+  "schema_version": "h_a2_breakeven_aware_rule_train_diagnostic_v1",
+  "selection_risk_control": {
+    "all_trials_recorded": true,
+    "best_trial_selected_for_trading": false,
+    "big_day_dependency_status": "not_claimed_no_acceptance_backtest",
+    "dsr_reason": "The diagnostic records train-only surrogate trials but does not select a deployable best-Sharpe or best-PnL rule.",
+    "dsr_status": "blocked_no_acceptance_selection",
+    "mintrl_psr_status": "blocked_underpowered_e1_diagnostic",
+    "search_log": "reports/diagnostics/search_logs/h_a2_breakeven_aware_rule_train_diagnostic_search_log.jsonl",
+    "trial_count": 6
+  },
+  "source_artifacts": [
+    "experiments/h_a2_breakeven_aware_rule_preregistration.json",
+    "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "reports/diagnostics/h_a2_mechanism_revision_audit.json"
+  ],
+  "source_experiment_ids": {
+    "daily_source": "h_a2_lower_resolution_proxy",
+    "mechanism_audit": "h_a2_mechanism_revision_audit",
+    "preregistration": "h_a2_breakeven_aware_rule_preregistration"
+  },
+  "source_preregistration": "experiments/h_a2_breakeven_aware_rule_preregistration.json",
+  "status": "complete",
+  "tier_blockers": [
+    "E1 train-only diagnostic only",
+    "True breakeven-aware rule cannot be locked from current local train rows",
+    "Per-candidate entry strike mapping is missing for the train distribution",
+    "Per-candidate entry implementable debit and bid/ask/liquidity are missing for the train distribution",
+    "Only two exact replay sanity candidates exist",
+    "No OOS evaluation of a locked revised rule",
+    "No MinTRL/PSR acceptance evidence",
+    "No E2 acceptance claim"
+  ],
+  "train_only_candidate_rule_trials": [
+    {
+      "retained_train_trade_days": 30,
+      "rule": "non-risk train trade days only",
+      "selected_for_trading": false,
+      "selection_reason": "Baseline context only.",
+      "stats": {
+        "avg_implementable_pnl": 19.306667,
+        "best_day_pnl": 166.44,
+        "loss_count": 19,
+        "loss_rate": 0.633333,
+        "total_cost_drag": 164.3,
+        "total_implementable_pnl": 579.2,
+        "total_mid_pnl": 743.5,
+        "trade_day_count": 30,
+        "win_rate": 0.366667,
+        "worst_day_pnl": -57.56
+      },
+      "surrogate_only": true,
+      "threshold": null,
+      "trial_id": "train_baseline_non_risk",
+      "uses_true_breakeven_inputs": false
+    },
+    {
+      "retained_train_trade_days": 17,
+      "rule": "non-risk train trade days with proxy_5m directional followthrough >= 0",
+      "selected_for_trading": false,
+      "selection_reason": "Recorded as a train-only surrogate trial. It cannot be selected as a breakeven-aware rule because strike/debit/liquidity inputs are missing for the train distribution.",
+      "stats": {
+        "avg_implementable_pnl": 61.616471,
+        "best_day_pnl": 166.44,
+        "loss_count": 6,
+        "loss_rate": 0.352941,
+        "total_cost_drag": 105.02,
+        "total_implementable_pnl": 1047.48,
+        "total_mid_pnl": 1152.5,
+        "trade_day_count": 17,
+        "win_rate": 0.647059,
+        "worst_day_pnl": -31.56
+      },
+      "surrogate_only": true,
+      "threshold": 0.0,
+      "trial_id": "train_followthrough_ge_0",
+      "uses_true_breakeven_inputs": false
+    },
+    {
+      "retained_train_trade_days": 16,
+      "rule": "non-risk train trade days with proxy_5m directional followthrough >= 0.001",
+      "selected_for_trading": false,
+      "selection_reason": "Recorded as a train-only surrogate trial. It cannot be selected as a breakeven-aware rule because strike/debit/liquidity inputs are missing for the train distribution.",
+      "stats": {
+        "avg_implementable_pnl": 67.44,
+        "best_day_pnl": 166.44,
+        "loss_count": 5,
+        "loss_rate": 0.3125,
+        "total_cost_drag": 100.46,
+        "total_implementable_pnl": 1079.04,
+        "total_mid_pnl": 1179.5,
+        "trade_day_count": 16,
+        "win_rate": 0.6875,
+        "worst_day_pnl": -26.56
+      },
+      "surrogate_only": true,
+      "threshold": 0.001,
+      "trial_id": "train_followthrough_ge_0.001",
+      "uses_true_breakeven_inputs": false
+    },
+    {
+      "retained_train_trade_days": 15,
+      "rule": "non-risk train trade days with proxy_5m directional followthrough >= 0.002",
+      "selected_for_trading": false,
+      "selection_reason": "Recorded as a train-only surrogate trial. It cannot be selected as a breakeven-aware rule because strike/debit/liquidity inputs are missing for the train distribution.",
+      "stats": {
+        "avg_implementable_pnl": 73.706667,
+        "best_day_pnl": 166.44,
+        "loss_count": 4,
+        "loss_rate": 0.266667,
+        "total_cost_drag": 95.9,
+        "total_implementable_pnl": 1105.6,
+        "total_mid_pnl": 1201.5,
+        "trade_day_count": 15,
+        "win_rate": 0.733333,
+        "worst_day_pnl": -20.56
+      },
+      "surrogate_only": true,
+      "threshold": 0.002,
+      "trial_id": "train_followthrough_ge_0.002",
+      "uses_true_breakeven_inputs": false
+    },
+    {
+      "retained_train_trade_days": 13,
+      "rule": "non-risk train trade days with proxy_5m directional followthrough >= 0.003",
+      "selected_for_trading": false,
+      "selection_reason": "Recorded as a train-only surrogate trial. It cannot be selected as a breakeven-aware rule because strike/debit/liquidity inputs are missing for the train distribution.",
+      "stats": {
+        "avg_implementable_pnl": 86.132308,
+        "best_day_pnl": 166.44,
+        "loss_count": 3,
+        "loss_rate": 0.230769,
+        "total_cost_drag": 86.78,
+        "total_implementable_pnl": 1119.72,
+        "total_mid_pnl": 1206.5,
+        "trade_day_count": 13,
+        "win_rate": 0.769231,
+        "worst_day_pnl": -11.56
+      },
+      "surrogate_only": true,
+      "threshold": 0.003,
+      "trial_id": "train_followthrough_ge_0.003",
+      "uses_true_breakeven_inputs": false
+    },
+    {
+      "retained_train_trade_days": 8,
+      "rule": "non-risk train trade days with proxy_5m directional followthrough >= 0.005",
+      "selected_for_trading": false,
+      "selection_reason": "Recorded as a train-only surrogate trial. It cannot be selected as a breakeven-aware rule because strike/debit/liquidity inputs are missing for the train distribution.",
+      "stats": {
+        "avg_implementable_pnl": 131.815,
+        "best_day_pnl": 166.44,
+        "loss_count": 0,
+        "loss_rate": 0.0,
+        "total_cost_drag": 62.98,
+        "total_implementable_pnl": 1054.52,
+        "total_mid_pnl": 1117.5,
+        "trade_day_count": 8,
+        "win_rate": 1.0,
+        "worst_day_pnl": 52.44
+      },
+      "surrogate_only": true,
+      "threshold": 0.005,
+      "trial_id": "train_followthrough_ge_0.005",
+      "uses_true_breakeven_inputs": false
+    }
+  ]
+}

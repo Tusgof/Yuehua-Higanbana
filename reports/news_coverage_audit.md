@@ -34,4 +34,4 @@
 |:--|:--|:--|:--|
 | reference_pre_break | 2019-01-01 | 2022-05-10 | index_halt_circuit_breaker, macro_policy_risk, market_panic, systemic_banking_stress, war_escalation |
 | train | 2022-05-11 | 2023-12-31 | index_halt_circuit_breaker, macro_policy_risk, market_panic, systemic_banking_stress, war_escalation |
-| oos | 2024-01-01 | 2026-07-03 | index_halt_circuit_breaker, macro_policy_risk, market_panic, systemic_banking_stress, war_escalation |
+| oos | 2024-01-01 | 2026-07-09 | index_halt_circuit_breaker, macro_policy_risk, market_panic, systemic_banking_stress, war_escalation |

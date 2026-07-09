@@ -1,0 +1,633 @@
+{
+  "allowed_claims": [
+    "One-day H-A2 independent-validation raw data was downloaded or cache-confirmed.",
+    "The download preserves the locked 09:35-only H-A2 signal and threshold 0.001.",
+    "The download is data acquisition only and does not validate H-A2 edge."
+  ],
+  "blockers": [],
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "current_used_usd": 119.989706,
+    "decision": "pass",
+    "estimated_download_cost_usd": 0.504662,
+    "projected_remaining_after_download_usd": 4.505632,
+    "projected_used_after_download_usd": 120.494368,
+    "remaining_before_stop_usd": 5.010294,
+    "stop_threshold_usd": 125.0
+  },
+  "download_decision": "approve_sample_cost_probe_high_vix_one_day_download_after_paid_cost_audit_pass",
+  "download_performed": true,
+  "execution": {
+    "cache_count": 0,
+    "downloaded_count": 15,
+    "downloads": [
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3065896,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T13:40:00+00:00",
+        "estimated_cost_usd": 0.034448,
+        "field_group": "option_entry_quote",
+        "note": "10-minute window around 09:35 ET entry",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_entry_0935.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "7a3322c41f09d415e83c1a3c39360a11915c5ddca01da343a2490e079fc21e2a",
+        "source": "downloaded",
+        "start": "2025-04-08T13:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_entry_0935"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3682065,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T14:05:00+00:00",
+        "estimated_cost_usd": 0.036213,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 10:00 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_entry_check_1000.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "e275c04253540aceb66eb268d93e5a18d7f13c6156c1ca14987a9f1c89739870",
+        "source": "downloaded",
+        "start": "2025-04-08T13:55:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_entry_check_1000"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3737751,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T14:35:00+00:00",
+        "estimated_cost_usd": 0.036044,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 10:30 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1030.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "cd2c0a027332b70cdbf708f585548bcbdefe9eec3ceb7785e6fa6ed4d435e35d",
+        "source": "downloaded",
+        "start": "2025-04-08T14:25:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1030"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3813925,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T15:05:00+00:00",
+        "estimated_cost_usd": 0.036078,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 11:00 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1100.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "3808d3e7243acba50a6fa83bd5232051a4bed8947f8f246cd7138c18919b9c77",
+        "source": "downloaded",
+        "start": "2025-04-08T14:55:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1100"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3844311,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T15:35:00+00:00",
+        "estimated_cost_usd": 0.03619,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 11:30 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1130.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "128009079f6180e9e33fa5c150270466f98bbae2dc9cf8a7eba4974ffb56adee",
+        "source": "downloaded",
+        "start": "2025-04-08T15:25:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1130"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3898256,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T16:05:00+00:00",
+        "estimated_cost_usd": 0.036194,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 12:00 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1200.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "0366d00b060933f0de101ade5399c37f7c1a541d40a57f57e2bacaf0169123f7",
+        "source": "downloaded",
+        "start": "2025-04-08T15:55:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1200"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3876975,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T16:35:00+00:00",
+        "estimated_cost_usd": 0.036266,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 12:30 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1230.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "d18d63c55872af8e400d25d3cb35c7ff66ab3b8b8591119f78bf881e81c1e508",
+        "source": "downloaded",
+        "start": "2025-04-08T16:25:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1230"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3948756,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T17:05:00+00:00",
+        "estimated_cost_usd": 0.036228,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 13:00 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1300.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "6a20b27591cf2600fb68d49e8fdc7d7983d4fa990addac116a0e104128096e64",
+        "source": "downloaded",
+        "start": "2025-04-08T16:55:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1300"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3959239,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T17:35:00+00:00",
+        "estimated_cost_usd": 0.036229,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 13:30 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1330.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "7d65db83b7c3153f2aeba641fc38816de1e4087097ef4ece3109ff430f72094a",
+        "source": "downloaded",
+        "start": "2025-04-08T17:25:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1330"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3995109,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T18:05:00+00:00",
+        "estimated_cost_usd": 0.036116,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 14:00 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1400.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "3b58123d8f1adbeb00230a72ae5d16f7c083cf02bcce6ee77babd5a3afb17873",
+        "source": "downloaded",
+        "start": "2025-04-08T17:55:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1400"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 3972149,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T18:35:00+00:00",
+        "estimated_cost_usd": 0.036139,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 14:30 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1430.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "0b31f4e0a7db519adbe3cb477bb69fa0a8f01c4804b4f901603b7a3c234f2e77",
+        "source": "downloaded",
+        "start": "2025-04-08T18:25:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1430"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 4045839,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T19:05:00+00:00",
+        "estimated_cost_usd": 0.036057,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 15:00 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1500.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "bd47d3d3eb0fca1fb649a3410a085daf81f6ef1dda93793481061848a2ae9637",
+        "source": "downloaded",
+        "start": "2025-04-08T18:55:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1500"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 4084137,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T19:35:00+00:00",
+        "estimated_cost_usd": 0.036103,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 15:30 ET check",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1530.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "06f9fc318eb1ad12e1a0bf20c874200670e39130f950f7d3d5f67d58a9dc1636",
+        "source": "downloaded",
+        "start": "2025-04-08T19:25:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_exit_check_1530"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 4078897,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-04-08",
+        "end": "2025-04-08T19:50:00+00:00",
+        "estimated_cost_usd": 0.036113,
+        "field_group": "option_exit_quotes",
+        "note": "10-minute window around 15:45 ET forced close",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_forced_close_1545.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "f32e5b868aa1b283bb9779fde427f404dea87d6ed389787ee16ebc0fbb834a62",
+        "source": "downloaded",
+        "start": "2025-04-08T19:40:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-04-08_forced_close_1545"
+      },
+      {
+        "batch_id": "sample_cost_probe_high_vix_one_day",
+        "bytes": 11288,
+        "dataset": "EQUS.MINI",
+        "date": "2025-04-08",
+        "end": "2025-04-08T20:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "9d46799d73b47ffa2ecf26fb2dad0361bd16a2385fe3b2c97150b3026e802df2",
+        "source": "downloaded",
+        "start": "2025-04-08T13:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-04-08_spy_underlying_full_session"
+      }
+    ],
+    "errors": [],
+    "total_bytes": 54014593
+  },
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not run exact replay directly from this download result.",
+    "Do not change threshold 0.001 or add an OOS-selected filter."
+  ],
+  "hypothesis_id": "H-A2",
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "delayed_entry_component_allowed": false,
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "fifteen_minute_conflict_component_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "oos_tuning_allowed": false,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false
+  },
+  "mode": "download_complete",
+  "paid_cost_audit_before_download": {
+    "cost_guard_basis": "user_reported_actual_usage",
+    "cost_guard_used_usd": 119.989706,
+    "remaining_before_stop_usd": 5.010294,
+    "status": "pass"
+  },
+  "request_count": 15,
+  "requests": [
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T13:40:00+00:00",
+      "estimated_cost_usd": 0.034448,
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_entry_0935.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_entry_0935"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T14:05:00+00:00",
+      "estimated_cost_usd": 0.036213,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_entry_check_1000.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_entry_check_1000"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T14:35:00+00:00",
+      "estimated_cost_usd": 0.036044,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1030.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1030"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T15:05:00+00:00",
+      "estimated_cost_usd": 0.036078,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1100.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1100"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T15:35:00+00:00",
+      "estimated_cost_usd": 0.03619,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1130.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1130"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T16:05:00+00:00",
+      "estimated_cost_usd": 0.036194,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1200.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1200"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T16:35:00+00:00",
+      "estimated_cost_usd": 0.036266,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1230.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1230"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T17:05:00+00:00",
+      "estimated_cost_usd": 0.036228,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1300.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1300"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T17:35:00+00:00",
+      "estimated_cost_usd": 0.036229,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1330.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1330"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T18:05:00+00:00",
+      "estimated_cost_usd": 0.036116,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1400.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1400"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T18:35:00+00:00",
+      "estimated_cost_usd": 0.036139,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1430.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1430"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T19:05:00+00:00",
+      "estimated_cost_usd": 0.036057,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1500.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1500"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T19:35:00+00:00",
+      "estimated_cost_usd": 0.036103,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_exit_check_1530.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1530"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T19:50:00+00:00",
+      "estimated_cost_usd": 0.036113,
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_forced_close_1545.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_forced_close_1545"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "EQUS.MINI",
+      "date": "2025-04-08",
+      "end": "2025-04-08T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_independent_validation_2025_04_08\\2025-04-08_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-04-08T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-04-08_spy_underlying_full_session"
+    }
+  ],
+  "scenario": "h_a2_independent_validation_2025_04_08",
+  "schema_version": "h_a2_independent_validation_download_result_v1",
+  "selected_batch": {
+    "batch_id": "sample_cost_probe_high_vix_one_day",
+    "dates": [
+      "2025-04-08"
+    ],
+    "role": "one-day high-VIX independent validation sample before any larger pack",
+    "vix_context": {
+      "bucket": "vix_above_25",
+      "vix_close": 52.33
+    }
+  },
+  "source_cost_report": "reports\\data_cost\\h_a2_independent_validation_paid_cost_estimate.json",
+  "source_decision": "experiments\\h_a2_independent_validation_paid_download_decision.json",
+  "status": "pass",
+  "total_estimated_cost_usd": 0.504662
+}

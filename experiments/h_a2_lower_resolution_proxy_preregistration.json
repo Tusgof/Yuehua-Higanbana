@@ -1,0 +1,136 @@
+{
+  "schema_version": "h_a2_lower_resolution_proxy_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_lower_resolution_proxy",
+  "title": "H-A2 lower-resolution proxy test",
+  "hypothesis": "The H-A2 macro-conditioned ORB mechanism is real only if scheduled macro-event and volatility-regime labels explain a stable difference in opening-range follow-through and already-observed implementable option outcomes. If lower-resolution opening proxies and existing trade outcomes do not show this relationship, H-A2 should be weakened or deprioritized before chasing exact 2022 SPY 1-minute bars.",
+  "research_question": "Can already-available local data, at 5-minute or 15-minute proxy resolution, weaken, falsify at proxy level, or prioritize H-A2 before any new exact 2022 underlying-bar source is pursued?",
+  "source_artifacts": {
+    "parent_decision": "experiments/h_a2_followup_resolution_preregistration.json",
+    "parent_decision_doc": "docs/H_A2_FOLLOWUP_RESOLUTION_PREREGISTRATION.md",
+    "data_resolution_audit": "docs/HYPOTHESIS_DATA_RESOLUTION_AUDIT.md",
+    "h_a2_reanalysis": "reports/experiments/h_a2_macro_conditioned_reanalysis_summary.json",
+    "h_a2_high_vix_diagnostic": "reports/diagnostics/h_a2_high_vix_silence_diagnostic_summary.json",
+    "h_a2_2022_10_coarse_review": "reports/diagnostics/h_a2_2022_10_coarse_stress_review.json",
+    "baseline_summary": "reports/baselines/subsystem_a_orb_baseline_summary.json",
+    "macro_events": "data/normalized/spy_0dte/macro_event.jsonl",
+    "vix_vxv": "data/normalized/spy_0dte/vix_vxv.jsonl",
+    "spy_bars": "data/normalized/spy_0dte/spy_bar.jsonl",
+    "option_quotes": "data/normalized/spy_0dte/option_quote.jsonl",
+    "wiki_orb_concept": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md"
+  },
+  "minimum_data_resolution": {
+    "mechanism_proxy": {
+      "allowed_resolutions": [
+        "5-minute bars",
+        "15-minute bars",
+        "daily macro/VIX labels",
+        "existing exact-quote trade outcome summaries"
+      ],
+      "one_minute_required": false,
+      "reason": "The proxy question is whether opening follow-through and existing trade outcomes vary coherently by macro/VIX regime. A 5-minute bar can represent the 9:30-9:35 ET opening range, and a 15-minute bar can test a coarser opening-momentum proxy. Neither can prove exact 2022 ORB fills."
+    },
+    "exact_backtest": {
+      "required_resolutions": [
+        "SPY 1-minute bars for the exact tested date range",
+        "SPY 0DTE option bid/ask quotes at entry, exit checks, and forced close"
+      ],
+      "one_minute_required": true,
+      "reason": "Exact ORB entry timing, breakout ordering, stop/target path, and option fill timing require timestamp-aligned intraday bars and option quotes."
+    }
+  },
+  "planned_proxy_tests": [
+    {
+      "test_id": "proxy_opening_followthrough_5m",
+      "input_resolution": "5-minute bars",
+      "decision_timestamp_policy": "Use only labels known before entry for prior-close VIX/VXV and scheduled macro events; same-day post-entry market data cannot define the entry filter.",
+      "measurement": "Compare opening-range follow-through, realized intraday range, and directional persistence by macro-event and VIX regime.",
+      "allowed_claim": "H-A2 mechanism is supported, weakened, or prioritized at E1 proxy level."
+    },
+    {
+      "test_id": "proxy_opening_followthrough_15m",
+      "input_resolution": "15-minute bars",
+      "decision_timestamp_policy": "Use only pre-entry observable labels and the first 15-minute bar as a coarse opening proxy.",
+      "measurement": "Check whether coarser opening momentum preserves the same macro/VIX relationship as the 5-minute proxy.",
+      "allowed_claim": "Data-resolution sensitivity supports or weakens the need for exact ORB work."
+    },
+    {
+      "test_id": "existing_trade_outcome_by_regime",
+      "input_resolution": "existing exact-quote trade summaries",
+      "decision_timestamp_policy": "Reuse only existing 2023-2024 trade artifacts; do not tune filters on OOS after viewing results.",
+      "measurement": "Reconcile proxy labels with existing implementable PnL, trade count, cost drag, and drawdown by macro/VIX regime.",
+      "allowed_claim": "Existing exact-quote outcomes are coherent or incoherent with the lower-resolution mechanism proxy."
+    }
+  ],
+  "split_policy": {
+    "train_or_design_period": "2023-03-28 to 2023-12-31",
+    "oos_period": "2024-01-01 to 2024-12-31",
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true
+  },
+  "trial_policy": {
+    "pre_registered_resolution_trials": [
+      "5-minute opening range",
+      "15-minute opening proxy"
+    ],
+    "pre_registered_regime_trials": [
+      "prior-close VIX high/stress labels",
+      "scheduled high-importance macro event exclusion",
+      "combined VIX plus macro labels"
+    ],
+    "trial_count_must_be_reported": true,
+    "search_log_required": true,
+    "dsr_required_if_sharpe_or_best_trial_is_reported": true
+  },
+  "statistical_policy": {
+    "mintrl_psr_required_if_trade_or_return_series_exists": true,
+    "under_sampled_label_required_below_mintrl": true,
+    "underpowered_label_required_when_power_is_insufficient": true,
+    "big_day_dependency_required_if_strategy_returns_exist": true,
+    "mid_vs_implementable_required_if_option_pnl_exists": true
+  },
+  "allowed_outputs": {
+    "summary_json": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "summary_md": "reports/experiments/h_a2_lower_resolution_proxy_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_lower_resolution_proxy_search_log.jsonl",
+    "research_log_if_run": "research_log/022-higanbana-h-a2-lower-resolution-proxy.md"
+  },
+  "allowed_claims": [
+    "H-A2 is weakened at proxy level.",
+    "H-A2 is falsified at proxy level and should not justify exact 2022 bar-source work without a revised mechanism.",
+    "H-A2 remains worth exact-data prioritization because proxy and existing outcome evidence are directionally coherent."
+  ],
+  "forbidden_claims": [
+    "Do not claim exact 2022-10 ORB entries/exits were tested.",
+    "Do not claim E2 acceptance-grade edge.",
+    "Do not claim deployable strategy edge.",
+    "Do not approve paper trading or operational validation.",
+    "Do not approve real-money trading.",
+    "Do not treat 15-minute proxy evidence as exact 5-minute ORB evidence.",
+    "Do not request IBKR bars or buy new data from this preregistration alone."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "ibkr_request_allowed": false,
+    "llm_call_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "completion_criteria_for_future_run": [
+    "All pre-registered proxy tests are either run or explicitly marked unavailable with source evidence.",
+    "Trial count and search log are reported.",
+    "Chronological train/OOS separation is preserved.",
+    "MinTRL/PSR/DSR, under-sampled, underpowered, and big-day dependency policies are applied where applicable.",
+    "Conclusion is one of the project labels: ผ่าน, ไม่ผ่าน, ยังสรุปไม่ได้.",
+    "Next action states whether H-A2 should be falsified, parked, revised, or prioritized for exact-data work."
+  ]
+}

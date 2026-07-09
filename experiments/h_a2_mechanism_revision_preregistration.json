@@ -1,0 +1,190 @@
+{
+  "schema_version": "h_a2_mechanism_revision_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_mechanism_revision_preregistration",
+  "title": "H-A2 mechanism revision before more sample expansion",
+  "created_date": "2026-07-08",
+  "purpose": "Pre-register a mechanism-first H-A2 revision after two exact-replayed candidates lost money after implementable costs.",
+  "source_artifacts": [
+    "experiments/h_a2_post_two_exact_replay_decision.json",
+    "reports/diagnostics/h_a2_normal_control_exact_replay.json",
+    "reports/diagnostics/h_a2_post_stress_normalization_control_exact_replay.json",
+    "reports/experiments/h_a2_original_entry_robustness_prioritization_summary.json",
+    "reports/experiments/h_a2_proxy_first_robustness_summary.json"
+  ],
+  "wiki_basis": [
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+      "use": "Raw ORB signal is not enough; ORB debit spreads need conditional filters and real fill validation."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/zero-dte-conditional-trading-rules.md",
+      "use": "0DTE evidence should be conditional, timestamp-clean, and evaluated against simple baselines."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
+      "use": "Regime filters may help but are overfitting risks when sample count is small."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/implementable-option-pnl.md",
+      "use": "Mid PnL is a benchmark only; implementable PnL and cost drag control deployable interpretation."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/minimum-track-record-length.md",
+      "use": "Sample adequacy must be judged with MinTRL/PSR rather than a fixed N threshold."
+    }
+  ],
+  "revised_research_question": "Does a SPY 0DTE ORB debit vertical spread have positive implementable expectancy only when early directional continuation is strong enough, scheduled risk is clean, option spread cost is low enough, and the market regime supports follow-through rather than opening-range mean reversion?",
+  "revised_hypothesis": {
+    "claim": "H-A2 should be treated as a conditional continuation hypothesis, not an always-on clean-day ORB hypothesis.",
+    "mechanism": "The trade needs the opening move to continue far enough after entry to overcome debit, bid/ask spread, and per-leg fees before the forced close. Clean macro/VIX labels are necessary context but not sufficient on their own.",
+    "why_current_condition_may_be_wrong": "The locked clean macro/VIX plus 5-minute followthrough condition produced two exact-replayed losses after costs. This suggests the condition may identify direction but not enough post-entry magnitude or option pricing quality to overcome friction.",
+    "what_would_make_it_plausible": [
+      "Local evidence shows that retained candidate days have post-entry directional continuation larger than cost-adjusted breakeven.",
+      "Cost drag is small relative to expected spread movement.",
+      "Performance does not depend on one or two extreme days.",
+      "Results survive chronological split, regime labels, and MinTRL/PSR reporting."
+    ]
+  },
+  "candidate_mechanism_dimensions": [
+    {
+      "dimension": "post_entry_followthrough",
+      "question": "After 09:35, does the underlying continue far enough in the trade direction to overcome option spread cost?",
+      "allowed_local_inputs": [
+        "existing exact replay candidate PnL",
+        "existing H-A2 proxy-first robustness summaries",
+        "existing closed-trade outcomes"
+      ]
+    },
+    {
+      "dimension": "cost_drag",
+      "question": "Is expected movement large enough relative to debit, bid/ask spread, and $0.64 per-leg fees?",
+      "allowed_local_inputs": [
+        "mid_pnl",
+        "implementable_pnl",
+        "cost_drag_vs_mid",
+        "selected vertical debit"
+      ]
+    },
+    {
+      "dimension": "regime_context",
+      "question": "Do VIX/macro/trend regimes explain when ORB continuation is likely versus when the opening move fades?",
+      "allowed_local_inputs": [
+        "local VIX/VXV labels",
+        "local macro calendar",
+        "existing proxy/regime reports"
+      ]
+    },
+    {
+      "dimension": "selection_risk",
+      "question": "Would any revised rule be selected from too many trials or from OOS results?",
+      "allowed_local_inputs": [
+        "search logs",
+        "trial counts",
+        "train/OOS split metadata"
+      ]
+    }
+  ],
+  "planned_next_diagnostic": {
+    "experiment_id": "h_a2_mechanism_revision_audit",
+    "evidence_tier": "E1",
+    "mode": "local_no_paid_diagnostic",
+    "goal": "Use existing local reports only to decide whether a revised H-A2 mechanism is worth targeted data expansion.",
+    "required_outputs": [
+      "Mechanism autopsy table for both exact-replayed losing candidates.",
+      "Comparison of direction signal versus post-entry magnitude and implementable cost drag.",
+      "List of candidate rule dimensions that are logically justified before any parameter search.",
+      "Decision: park current locked condition, preregister train-only revised rule, or write targeted sample/regime expansion plan.",
+      "Explicit statement that this diagnostic cannot claim E2 or paper-trading readiness."
+    ],
+    "forbidden_outputs": [
+      "No new threshold value selected from OOS.",
+      "No new paid data request.",
+      "No exact replay expansion.",
+      "No paper-trading approval.",
+      "No E2 claim."
+    ]
+  },
+  "anti_overfitting_controls": {
+    "threshold_0_001_status": "locked_as_prior_diagnostic_reference_only",
+    "new_threshold_search_allowed": false,
+    "oos_selected_filter_allowed": false,
+    "paid_data_before_mechanism_audit_allowed": false,
+    "train_only_revision_required_before_any_new_rule": true,
+    "search_log_required_for_future_trials": true,
+    "dsr_required_if_selecting_best_trial": true,
+    "chronological_split_required": true,
+    "mintrl_psr_required_for_acceptance_claim": true,
+    "big_day_dependency_required_for_backtest_claim": true
+  },
+  "sample_expansion_policy": {
+    "sample_expansion_allowed_by_this_artifact": false,
+    "future_sample_expansion_condition": "Allowed only after the mechanism audit names a specific regime or inference gap and a separate cost/data decision confirms it is needed.",
+    "must_cover_regimes": [
+      "normal VIX",
+      "high VIX or stress",
+      "macro-event and non-macro days where timestamp-clean labels exist",
+      "trend or momentum context where local data supports it"
+    ],
+    "must_report": [
+      "active trade count after each filter",
+      "MinTRL",
+      "PSR",
+      "DSR or DSR blocker",
+      "mid_pnl",
+      "implementable_pnl",
+      "cost_drag",
+      "big-day dependency"
+    ]
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_allowed": false,
+    "threshold_search_allowed": false,
+    "new_filter_selected_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "allowed_claims": [
+    "H-A2 is now reframed as a conditional continuation hypothesis.",
+    "The next diagnostic is local/no-paid and mechanism-first.",
+    "The two exact replay losses justify mechanism revision before more sample expansion.",
+    "No H-A2 edge, E2, paper trading, or real-money claim is allowed."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim H-A2 is fully falsified as a broad family.",
+    "Do not approve paid data.",
+    "Do not approve exact replay expansion.",
+    "Do not change threshold 0.001.",
+    "Do not select a new OOS filter.",
+    "Do not approve paper trading.",
+    "Do not claim E2 acceptance-grade evidence."
+  ],
+  "completion_criteria": [
+    "The preregistration cites H-A2.58 as the controlling decision.",
+    "The revised research question distinguishes conditional continuation from always-on ORB.",
+    "The plan requires implementable PnL and cost drag.",
+    "The plan requires MinTRL/PSR and anti-overfitting controls.",
+    "The plan forbids paid data, exact replay expansion, threshold search, paper trading, and E2 claims.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Mechanism audit not run yet",
+    "No new strategy PnL",
+    "No MinTRL/PSR acceptance evidence",
+    "No E2 acceptance claim"
+  ]
+}

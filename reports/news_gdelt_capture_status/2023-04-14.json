@@ -1,0 +1,13 @@
+{
+  "blockers": [
+    "gdelt_capture_unavailable"
+  ],
+  "decision_time_et": "2023-04-14T09:30:00-04:00",
+  "error": "GDELT returned a non-JSON response",
+  "lookback_hours": 24,
+  "max_records": 5,
+  "mode": "execute",
+  "output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-14.csv",
+  "source_plan_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\tests\\fixtures\\news_sources_v1.json",
+  "status": "blocked"
+}

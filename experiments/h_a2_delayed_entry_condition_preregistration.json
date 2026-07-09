@@ -1,0 +1,207 @@
+{
+  "schema_version": "h_a2_delayed_entry_condition_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_delayed_entry_condition",
+  "title": "H-A2 delayed-entry condition preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register a local no-paid follow-up that tests whether the locked H-A2 condition can become a delayed-entry candidate after the 15-minute conflict window is known.",
+  "source_decision": "reports/experiments/h_a2_locked_condition_signal_attribution_summary.json",
+  "source_decision_summary": "H-A2.28 found that the locked threshold 0.001 condition is not knowable at the original 09:35 ET entry because the 15-minute conflict component is only known around 09:45 ET. The correct next hypothesis is therefore delayed entry or a separate timestamp-clean original-entry revision, not direct deployable use of the original-entry condition.",
+  "research_question": "If the decision timestamp is moved after the 15-minute conflict window, does the locked H-A2 condition remain economically useful after explicit delayed-entry fill and cost assumptions?",
+  "delayed_entry_rule": {
+    "baseline_original_entry_time_et": "09:35:00",
+    "new_candidate_decision_time_et": "09:45:00",
+    "earliest_candidate_entry_time_et": "09:45:00",
+    "entry_time_must_be_after_feature_completion": true,
+    "clean_macro_vix_condition_required": true,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_source": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "threshold_must_not_change": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false
+  },
+  "source_artifacts": {
+    "signal_attribution_summary": "reports/experiments/h_a2_locked_condition_signal_attribution_summary.json",
+    "signal_attribution_report": "reports/experiments/h_a2_locked_condition_signal_attribution_report.md",
+    "revised_opening_followthrough_summary": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "revised_condition_robustness_summary": "reports/experiments/h_a2_revised_condition_robustness_summary.json",
+    "lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "proxy_first_robustness_summary": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "hypothesis_registry": "experiments/hypothesis_registry.json",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
+    "wiki_lookahead_bias": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/lookahead-leakage.md"
+  },
+  "planned_future_tests": [
+    {
+      "test_id": "delayed_entry_timestamp_cleanliness",
+      "question": "Does every feature used by the delayed-entry rule become known at or before the new candidate decision time?",
+      "minimum_output": [
+        "candidate_decision_time_et",
+        "feature_completion_times_et",
+        "all_features_known_by_decision_time",
+        "timestamp_cleanliness_status",
+        "blocked_if_any_feature_after_decision"
+      ]
+    },
+    {
+      "test_id": "delayed_entry_fill_and_cost_feasibility",
+      "question": "Can the delayed entry be evaluated with explicit fill and cost assumptions rather than reusing the original 09:35 entry PnL?",
+      "minimum_output": [
+        "entry_quote_source_status",
+        "entry_time_et",
+        "fill_assumption",
+        "cost_assumption",
+        "blocked_if_no_delayed_entry_quote"
+      ]
+    },
+    {
+      "test_id": "retained_sample_recount",
+      "question": "How many train/OOS trades remain after the delayed-entry rule without changing threshold 0.001?",
+      "minimum_output": [
+        "train_trade_count",
+        "oos_trade_count",
+        "retained_count",
+        "skipped_count",
+        "under_sampled_label"
+      ]
+    },
+    {
+      "test_id": "implementable_pnl_comparison",
+      "question": "Does delayed-entry implementable PnL remain useful compared with baseline non-risk trades and skipped trades?",
+      "minimum_output": [
+        "baseline_avg_implementable_pnl",
+        "delayed_entry_avg_implementable_pnl",
+        "skipped_avg_implementable_pnl",
+        "cost_drag",
+        "comparison_status"
+      ]
+    },
+    {
+      "test_id": "risk_and_robustness_recheck",
+      "question": "Does the delayed-entry candidate survive basic big-day, concentration, MinTRL/PSR, and DSR/search-log checks?",
+      "minimum_output": [
+        "big_day_dependency_status",
+        "concentration_status",
+        "mintrl_psr_status",
+        "dsr_or_search_log_status",
+        "evidence_tier_cap"
+      ]
+    },
+    {
+      "test_id": "hypothesis_decision",
+      "question": "Should H-A2 continue as delayed-entry candidate, be revised toward timestamp-clean original entry, or be parked?",
+      "minimum_output": [
+        "decision",
+        "allowed_next_action",
+        "forbidden_claims",
+        "research_log_requirement",
+        "e2_status"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "threshold_locked_before_future_run": true,
+    "result_must_report_train_oos_counts": true
+  },
+  "execution_policy": {
+    "future_run_scope": "local_no_paid_diagnostic_only",
+    "original_0935_pnl_must_not_be_reused_as_delayed_entry_pnl": true,
+    "delayed_entry_quote_or_explicit_proxy_required": true,
+    "proxy_result_must_be_labeled_if_no_delayed_quote": true,
+    "entry_market_order_forbidden": true,
+    "implementable_pnl_required_if_quote_data_exists": true,
+    "mid_pnl_may_be_reported_only_as_control": true
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_reported_group": true,
+    "mintrl_psr_labels_must_be_preserved": true,
+    "under_sampled_label_required": true,
+    "underpowered_label_required": true,
+    "search_log_required": true,
+    "dsr_required_if_any_parameter_search_occurs": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "continue_delayed_entry_candidate_if": [
+      "All required features are timestamp-clean at the delayed decision time.",
+      "Delayed-entry fill/cost assumptions are explicit and auditable.",
+      "OOS results remain directionally useful without changing threshold 0.001.",
+      "The result is honestly labeled under-sampled/underpowered when applicable."
+    ],
+    "revise_to_timestamp_clean_original_entry_if": [
+      "Delayed-entry quote or proxy evidence is unavailable.",
+      "Moving entry to 09:45 ET destroys the economic logic or implementable PnL.",
+      "A simpler rule using only 09:35-known information is better supported."
+    ],
+    "park_h_a2_if": [
+      "The delayed-entry candidate cannot be evaluated without new data that is outside the current guardrails.",
+      "The retained sample collapses below any useful diagnostic level.",
+      "Implementable PnL reverses or cost drag consumes the apparent edge."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_a2_delayed_entry_condition_summary.json",
+    "summary_md": "reports/experiments/h_a2_delayed_entry_condition_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_delayed_entry_condition_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/030-higanbana-h-a2-delayed-entry-condition.md"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered delayed-entry follow-up after the 15-minute conflict window.",
+    "The future run may produce E1 diagnostic/prioritization evidence only.",
+    "The future run may decide whether to continue delayed-entry research, revise toward a timestamp-clean original-entry rule, or park H-A2.",
+    "Threshold 0.001 remains locked unless a separate future preregistration explicitly defines a new train-only rule."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not treat original 09:35 PnL as delayed-entry PnL.",
+    "Do not change threshold 0.001 through OOS search.",
+    "Do not add a new OOS-selected filter.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "threshold_search_allowed_in_future_run": false,
+    "new_filter_allowed_in_future_run": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "The future run proves timestamp cleanliness at the delayed decision time or blocks the delayed-entry claim.",
+    "The future run states whether delayed-entry quote data exists or whether the result is proxy-only.",
+    "The future run reports train/OOS retained and skipped counts.",
+    "The future run preserves threshold 0.001 and records no new OOS-selected filter.",
+    "The future run reports sample-adequacy labels and keeps evidence capped at E1.",
+    "The future run writes research log 030 if it completes as a real experiment."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Future run can be E1 diagnostic/prioritization evidence only",
+    "No exact 2022-10 ORB replay",
+    "No paid data",
+    "No IBKR request",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

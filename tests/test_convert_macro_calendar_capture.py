@@ -7,7 +7,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from openpyxl import Workbook
+try:
+    from openpyxl import Workbook
+except ModuleNotFoundError:
+    Workbook = None
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -214,6 +217,8 @@ class ConvertMacroCalendarCaptureTests(unittest.TestCase):
             )
 
     def test_convert_census_retail_xls_uses_capture_year(self) -> None:
+        if Workbook is None:
+            self.skipTest("openpyxl is not installed in this runtime")
         with tempfile.TemporaryDirectory() as tmp:
             capture_root = self._write_minimal_capture(Path(tmp) / "2025-12-31")
             (capture_root / "census_retail_release_schedule.html").unlink()

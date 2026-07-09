@@ -12,14 +12,20 @@ DEFAULT_MANIFEST_PATH = PROJECT_ROOT / "experiments" / "h_g1_gamma_regime_date_s
 
 ALLOWED_SPLITS = {"in_sample", "oos"}
 ALLOWED_VOL_BUCKETS = {"low", "normal", "high"}
-ALLOWED_OI_STATUS = {"existing_probe", "needs_metadata_cost_check"}
+ALLOWED_SCHEMA_VERSIONS = {
+    "h_g1_gamma_regime_date_set_preregistration_v1",
+    "h_g1_gamma_regime_date_set_preregistration_v2",
+    "h_g1_gamma_regime_date_set_preregistration_v3",
+}
+ALLOWED_OI_STATUS = {"existing_probe", "needs_metadata_cost_check", "downloaded"}
 
 
 def validate_h_g1_regime_date_set(manifest_path: Path = DEFAULT_MANIFEST_PATH) -> dict[str, Any]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     blockers: list[str] = []
 
-    if manifest.get("schema_version") != "h_g1_gamma_regime_date_set_preregistration_v1":
+    schema_version = manifest.get("schema_version")
+    if schema_version not in ALLOWED_SCHEMA_VERSIONS:
         blockers.append(f"unsupported_schema_version:{manifest.get('schema_version')}")
     if manifest.get("hypothesis_id") != "H-G1":
         blockers.append(f"unexpected_hypothesis_id:{manifest.get('hypothesis_id')}")
@@ -31,7 +37,7 @@ def validate_h_g1_regime_date_set(manifest_path: Path = DEFAULT_MANIFEST_PATH) -
 
     min_counts = manifest.get("minimum_regime_counts", {})
     expected_count = min_counts.get("total_dates")
-    if expected_count != 12:
+    if schema_version == "h_g1_gamma_regime_date_set_preregistration_v1" and expected_count != 12:
         blockers.append(f"total_dates_not_locked_to_12:{expected_count}")
     if len(dates) != expected_count:
         blockers.append(f"selected_date_count_mismatch:{len(dates)}!={expected_count}")
@@ -119,6 +125,9 @@ def validate_h_g1_regime_date_set(manifest_path: Path = DEFAULT_MANIFEST_PATH) -
     if data_policy.get("existing_oi_probe_date") != "2024-01-03":
         blockers.append(f"unexpected_existing_oi_probe_date:{data_policy.get('existing_oi_probe_date')}")
 
+    if schema_version == "h_g1_gamma_regime_date_set_preregistration_v3":
+        _validate_v3_manifest(blockers, manifest, seen_dates, oi_counts)
+
     return {
         "status": "blocked" if blockers else "pass",
         "blockers": blockers,
@@ -131,6 +140,42 @@ def validate_h_g1_regime_date_set(manifest_path: Path = DEFAULT_MANIFEST_PATH) -
         "unique_calendar_months": len(month_counts),
         "opra_oi_status_counts": dict(sorted(oi_counts.items())),
     }
+
+
+def _validate_v3_manifest(
+    blockers: list[str],
+    manifest: dict[str, Any],
+    seen_dates: set[str],
+    oi_counts: Counter[str],
+) -> None:
+    if "2023-07-12" in seen_dates:
+        blockers.append("v3_removed_date_still_present:2023-07-12")
+    if "2023-09-13" not in seen_dates:
+        blockers.append("v3_expected_replacement_missing:2023-09-13")
+    if oi_counts["needs_metadata_cost_check"] != 1:
+        blockers.append(f"v3_expected_one_metadata_cost_check:{oi_counts['needs_metadata_cost_check']}")
+
+    replacement_audit = manifest.get("replacement_audit", {})
+    if replacement_audit.get("removed_date") != "2023-07-12":
+        blockers.append(f"v3_unexpected_removed_date:{replacement_audit.get('removed_date')}")
+    if replacement_audit.get("selected_replacement_date") != "2023-09-13":
+        blockers.append(f"v3_unexpected_replacement_date:{replacement_audit.get('selected_replacement_date')}")
+
+    candidates = manifest.get("candidate_ranking_table")
+    if not isinstance(candidates, list) or not candidates:
+        blockers.append("v3_candidate_ranking_table_missing")
+        return
+    top = candidates[0]
+    if top.get("date") != "2023-09-13":
+        blockers.append(f"v3_top_rank_candidate_unexpected:{top.get('date')}")
+    if top.get("rank") != 1:
+        blockers.append(f"v3_top_rank_not_one:{top.get('rank')}")
+    if top.get("same_macro_family_as_removed") is not True:
+        blockers.append("v3_top_rank_not_same_macro_family")
+    if top.get("local_option_quote_cache_present") is not True:
+        blockers.append("v3_top_rank_quote_cache_not_present")
+    if top.get("local_spy_bar_cache_present") is not True:
+        blockers.append("v3_top_rank_spy_bar_cache_not_present")
 
 
 def _require_min(blockers: list[str], name: str, observed: int, required: Any) -> None:

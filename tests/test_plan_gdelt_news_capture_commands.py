@@ -50,6 +50,7 @@ class PlanGdeltNewsCaptureCommandsTests(unittest.TestCase):
 
         self.assertEqual("dry_run_no_network", result["mode"])
         self.assertEqual("ready_to_retry", result["status"])
+        self.assertTrue(result["live_retry_allowed"])
         self.assertEqual(["gdelt_capture_unavailable"], result["blockers"])
         self.assertEqual(2, result["candidate_day_count"])
         self.assertEqual("2023-09-15T09:30:00-04:00", result["commands"][0]["decision_time_et"])
@@ -64,6 +65,7 @@ class PlanGdeltNewsCaptureCommandsTests(unittest.TestCase):
             result = {
                 "mode": "dry_run_no_network",
                 "status": "ready_to_retry",
+                "live_retry_allowed": True,
                 "candidate_day_count": 1,
                 "command_count": 1,
                 "max_records": 5,
@@ -86,6 +88,7 @@ class PlanGdeltNewsCaptureCommandsTests(unittest.TestCase):
             self.assertEqual(result, json.loads(json_output.read_text(encoding="utf-8")))
             report = report_output.read_text(encoding="utf-8")
             self.assertIn("# GDELT News Capture Command Plan", report)
+            self.assertIn("- Live retry allowed now: `True`", report)
             self.assertIn("2024-01-05T09:30:00-05:00", report)
 
     def test_plan_includes_daily_retry_statuses(self) -> None:
@@ -192,6 +195,8 @@ class PlanGdeltNewsCaptureCommandsTests(unittest.TestCase):
             )
 
         self.assertEqual("cooldown_recommended", result["retry_pressure"]["status"])
+        self.assertEqual("blocked_cooldown", result["status"])
+        self.assertFalse(result["live_retry_allowed"])
         self.assertEqual(3, result["retry_pressure"]["threshold"])
         self.assertIn("Pause live GDELT --execute retries", result["next_step"])
 

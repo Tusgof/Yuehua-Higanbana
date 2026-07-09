@@ -1,0 +1,83 @@
+{
+  "schema_version": "h_a2_2022_10_single_month_stress_decision_v1",
+  "artifact_type": "h_a2_single_month_stress_scope_revision",
+  "created_date": "2026-07-04",
+  "hypothesis_id": "H-A2",
+  "evidence_tier": "E0",
+  "status": "decision_complete",
+  "decision": "approve_2022_10_single_month_stress_download_under_current_guard",
+  "conclusion": "ยังสรุปไม่ได้",
+  "purpose": "Revise the blocked H-A2 top2 2022 H2 stress purchase into a narrower one-month stress pull that can answer a named high-VIX regime gap while staying below the current $125 cost guard.",
+  "source_top2_gate": "reports/data_cost/h_a2_2022_h2_top2_live_cost_gate.json",
+  "source_single_month_cost_report": "reports/data_cost/databento_cost_h_a2_2022_10_stress.json",
+  "source_stress_purchase_estimate": "reports/data_cost/h_a2_2022_h2_stress_purchase_estimate.json",
+  "selected_month": "2022-10",
+  "selection_reason": {
+    "rank": 1,
+    "avg_vix": 30.0057,
+    "max_vix": 33.63,
+    "high_vix_days": 21,
+    "stress_vix_days": 11,
+    "trading_days": 21,
+    "ranking_policy": "descending by high30 days, then high25 days, then average VIX, then max VIX"
+  },
+  "top2_gate_status": {
+    "status": "blocked",
+    "months": [
+      "2022-10",
+      "2022-09"
+    ],
+    "estimated_cost_usd": 20.748872,
+    "download_allowed_now": false
+  },
+  "single_month_cost_guard": {
+    "basis": "working_databento_usage",
+    "current_used_usd": 109.467226,
+    "stop_threshold_usd": 125.0,
+    "remaining_before_stop_usd": 15.532774,
+    "selected_month_estimated_cost_usd": 10.52248,
+    "projected_used_after_download_usd": 119.989706,
+    "projected_remaining_after_download_usd": 5.010294,
+    "decision": "pass"
+  },
+  "download_scope": {
+    "provider": "Databento",
+    "dataset": "OPRA.PILLAR",
+    "schema": "cbbo-1m",
+    "symbol": "SPY.OPT",
+    "stype_in": "parent",
+    "window_profile": "intraday_exit_30m",
+    "cost_granularity": "daily_union",
+    "month": "2022-10",
+    "live_request_count": 21,
+    "planned_request_count": 294,
+    "cost_report_path": "reports/data_cost/databento_cost_h_a2_2022_10_stress.json",
+    "download_result_path": "reports/data_cost/databento_download_result_h_a2_2022_10_stress.json"
+  },
+  "allowed_actions": [
+    "Download only the approved 2022-10 OPRA cbbo-1m daily-union requests using the locked cost report.",
+    "Reuse cache for any already-present files instead of re-downloading.",
+    "After download, rerun paid-cost audit and update the working cost basis with the committed estimate until provider actual usage is supplied.",
+    "Import/normalize the 2022-10 stress data and rerun H-A2 diagnostics only if required SPY bars and option quotes are present."
+  ],
+  "forbidden_actions": [
+    "Do not download 2022-09 under this decision.",
+    "Do not download the original top2 bundle under this decision.",
+    "Do not download top3 or broad 2022 H2 calendar data under this decision.",
+    "Do not introduce a new paid provider under this decision.",
+    "Do not make an E2 acceptance, paper-trading, or live-trading claim from this purchase decision.",
+    "Do not run live LLM research from this decision."
+  ],
+  "post_download_requirements": [
+    "Rerun scripts/audit_paid_costs.py.",
+    "Check whether 2022-10 SPY underlying bars exist; if missing, estimate their cost separately before any additional download.",
+    "Run the relevant import/normalization path for 2022-10 option quotes.",
+    "Treat any result as E1 unless MinTRL/PSR, DSR/search-log, implementable PnL, big-day dependency, and regime coverage gates pass."
+  ],
+  "network_used": false,
+  "paid_data_downloaded_by_this_decision": false,
+  "paper_trading_allowed": false,
+  "live_trading_allowed": false,
+  "llm_research_allowed": false,
+  "research_log_required": false
+}

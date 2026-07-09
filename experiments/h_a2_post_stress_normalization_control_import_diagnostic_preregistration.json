@@ -1,0 +1,238 @@
+{
+  "schema_version": "h_a2_post_stress_normalization_control_import_diagnostic_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_post_stress_normalization_control_import_diagnostic",
+  "title": "H-A2 post-stress normalization/control import and diagnostic preregistration",
+  "created_date": "2026-07-08",
+  "purpose": "Pre-register the local import, normalization, and data-availability diagnostic for the already-downloaded post-stress normalization/control pack before parsing DBN, reconstructing the locked 09:35 signal, checking entry/exit quote availability, running exact replay, computing PnL, or making any edge claim.",
+  "source_download_result": "reports/data_cost/databento_download_result_h_a2_post_stress_normalization_control_pack.json",
+  "source_download_summary": "H-A2 post-stress normalization/control acquisition downloaded 20 grouped Databento files for 10 dates from 2025-05-05 to 2025-05-16, totaling 1,057,077,119 bytes at logged estimate $5.558642 using selected key env DATABENTO_API_AI. This is E0 data-acquisition evidence only.",
+  "target_sample": {
+    "batch_id": "post_stress_normalization_control_pack",
+    "scenario": "h_a2_post_stress_normalization_control_pack",
+    "date_start": "2025-05-05",
+    "date_end": "2025-05-16",
+    "expected_dates": [
+      "2025-05-05",
+      "2025-05-06",
+      "2025-05-07",
+      "2025-05-08",
+      "2025-05-09",
+      "2025-05-12",
+      "2025-05-13",
+      "2025-05-14",
+      "2025-05-15",
+      "2025-05-16"
+    ],
+    "expected_file_count": 20,
+    "expected_total_bytes": 1057077119,
+    "metadata_grouped_request_count": 20,
+    "planned_required_request_count": 150,
+    "raw_root": "data/raw/spy_0dte/databento/h_a2_post_stress_normalization_control_pack",
+    "selected_key_env": "DATABENTO_API_AI",
+    "estimated_cost_usd": 5.558642,
+    "vix_context": {
+      "bucket": "vix_15_to_25",
+      "observed_vix_close_range": [
+        17.24,
+        24.76
+      ],
+      "observed_vxv_close_range": [
+        20.08,
+        25.41
+      ]
+    },
+    "macro_context": {
+      "high_importance_macro_days_from_local_calendar": 0
+    },
+    "data_quality_notes": [
+      "Databento reported reduced-quality data for 2025-05-06 during download; the diagnostic must preserve this note and inspect the date explicitly."
+    ]
+  },
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false,
+    "delayed_entry_component_allowed": false
+  },
+  "allowed_inputs": [
+    {
+      "input": "download_result",
+      "path": "reports/data_cost/databento_download_result_h_a2_post_stress_normalization_control_pack.json",
+      "use": "control the exact raw files, date range, request count, cost trace, selected key env, and forbidden claims"
+    },
+    {
+      "input": "post_exact_replay_sample_expansion_decision",
+      "path": "experiments/h_a2_post_exact_replay_sample_expansion_decision.json",
+      "use": "confirm why post-stress normalization/control samples were selected after the single-candidate exact replay"
+    },
+    {
+      "input": "post_stress_cost_estimate",
+      "path": "reports/data_cost/h_a2_post_stress_normalization_control_pack_cost_estimate.json",
+      "use": "preserve cost traceability; not used for additional downloads"
+    },
+    {
+      "input": "post_stress_paid_download_decision",
+      "path": "experiments/h_a2_post_stress_normalization_control_paid_download_decision.json",
+      "use": "confirm the approved download scope and selected key env"
+    },
+    {
+      "input": "raw_dbn_files",
+      "path": "data/raw/spy_0dte/databento/h_a2_post_stress_normalization_control_pack",
+      "use": "read only after this preregistration passes to build local normalized diagnostic artifacts"
+    },
+    {
+      "input": "local_vix_vxv_labels",
+      "path": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+      "use": "confirm VIX/VXV labels for the target dates without provider calls"
+    },
+    {
+      "input": "local_macro_labels",
+      "path": "data/normalized/spy_0dte/macro_calendar/macro_event.jsonl",
+      "use": "confirm same-day macro labels without provider calls"
+    }
+  ],
+  "forbidden_inputs": [
+    {
+      "input": "additional_databento_download",
+      "reason": "This step must use only the already-downloaded post-stress normalization/control sample."
+    },
+    {
+      "input": "resume_high_vix_first_acquisition",
+      "reason": "High-VIX-first acquisition remains paused until targeted control diagnostics are understood."
+    },
+    {
+      "input": "new_paid_provider",
+      "reason": "Provider changes remain outside this diagnostic step."
+    },
+    {
+      "input": "ibkr_historical_bars",
+      "reason": "IBKR remains a separate externally blocked data path and is not needed for the downloaded 2025 post-stress normalization/control SPY bars."
+    },
+    {
+      "input": "live_llm_outputs",
+      "reason": "H-L1 remains blocked until real timestamp-clean news cases exist."
+    },
+    {
+      "input": "gdelt_live_retry",
+      "reason": "News capture remains blocked by its own cooldown/upstream response gate."
+    },
+    {
+      "input": "new_oos_selected_filter",
+      "reason": "The diagnostic must not become an OOS tuning pass."
+    }
+  ],
+  "planned_steps": [
+    {
+      "step_id": "raw_file_inventory",
+      "description": "Inventory the 20 raw files, byte counts, sha256 values, datasets, schemas, UTC windows, field groups, and the 2025-05-06 reduced-quality note against the post-stress download result.",
+      "verification": "All expected raw files exist, have positive size, match the 10-date and 20-file scope, and preserve the source download metadata."
+    },
+    {
+      "step_id": "spy_underlying_import",
+      "description": "Parse only the downloaded EQUS.MINI SPY ohlcv-1m regular-session files and normalize UTC/ET timestamps for the 10 target dates.",
+      "verification": "Normalized SPY bars cover the regular session around 09:30-16:00 ET and include the 09:35 decision context for each parsed date."
+    },
+    {
+      "step_id": "opra_quote_import",
+      "description": "Parse only the downloaded OPRA.PILLAR cbbo-1m SPY.OPT grouped windows and normalize symbols, timestamps, bid, ask, and mid fields.",
+      "verification": "Normalized quote inventory reports row counts by date and field group, including entry context and 15:45 forced-close availability."
+    },
+    {
+      "step_id": "timestamp_alignment_check",
+      "description": "Check UTC-to-ET conversion, same-day 0DTE expiry handling, and no use of information after 09:35 for the candidate signal.",
+      "verification": "Diagnostic report flags any missing or late timestamp dependency before any candidate-trade decision."
+    },
+    {
+      "step_id": "candidate_signal_reconstruction",
+      "description": "Reconstruct only the locked 09:35 H-A2 condition using clean macro/VIX labels plus proxy_5m_followthrough threshold 0.001.",
+      "verification": "Report states which dates pass or fail the locked signal without changing threshold or adding a filter."
+    },
+    {
+      "step_id": "entry_exit_quote_availability",
+      "description": "For dates where the locked signal is true, check whether entry and forced-close quote windows contain auditable bid/ask data for candidate option selection.",
+      "verification": "Report classifies each date as candidate_trade_data_ready, candidate_trade_data_blocked, or no_candidate_trade_signal."
+    },
+    {
+      "step_id": "diagnostic_report",
+      "description": "Write a local diagnostic summary and Markdown report with E1-or-lower claims only.",
+      "verification": "Validator confirms no exact replay, no PnL acceptance, no paper-trading approval, and no E2 claim."
+    }
+  ],
+  "planned_outputs": {
+    "future_summary_json": "reports/diagnostics/h_a2_post_stress_normalization_control_import_diagnostic.json",
+    "future_summary_md": "reports/diagnostics/h_a2_post_stress_normalization_control_import_diagnostic.md",
+    "future_search_log": "reports/diagnostics/search_logs/h_a2_post_stress_normalization_control_import_diagnostic_search_log.jsonl",
+    "future_normalized_root": "build/h_a2_post_stress_normalization_control_pack"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered local import/normalization/diagnostic plan for the post-stress normalization/control pack.",
+    "The next step may parse only the already-downloaded raw DBN files and local regime labels.",
+    "The diagnostic may report raw-file inventory, timestamp alignment, locked-signal reconstruction, and quote availability.",
+    "The plan preserves the locked 09:35-only H-A2 signal and threshold 0.001."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not run exact replay directly from this preregistration.",
+    "Do not compute or report acceptance-grade strategy PnL from this preregistration.",
+    "Do not download more validation packs.",
+    "Do not resume high-VIX-first acquisition.",
+    "Do not request IBKR bars.",
+    "Do not call LLMs.",
+    "Do not retry GDELT.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter.",
+    "Do not treat import diagnostics as validation evidence."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "additional_download_allowed": false,
+    "resume_high_vix_first_acquisition_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "local_raw_dbn_parse_allowed_after_preregistration": true,
+    "normalization_diagnostic_allowed_after_preregistration": true,
+    "exact_replay_allowed": false,
+    "strategy_pnl_acceptance_allowed": false,
+    "threshold_search_allowed": false,
+    "new_filter_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "completion_criteria": [
+    "The preregistration names the 2025-05-05 to 2025-05-16 post-stress normalization/control sample and source download result.",
+    "The preregistration names raw-file inventory, SPY bar import, OPRA quote import, timestamp alignment, signal reconstruction, and quote-availability checks.",
+    "The preregistration preserves the 09:35-only signal and threshold 0.001.",
+    "The preregistration allows only local raw parsing after validation and forbids new downloads, exact replay, PnL, paper trading, and E2 claims.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "No import/normalization diagnostic has run yet",
+    "No post-stress validation PnL day has been computed",
+    "No MinTRL/PSR acceptance path proven",
+    "No E2 acceptance claim"
+  ]
+}

@@ -299,7 +299,13 @@ def _parse_ism_from_release_rule(year: int) -> list[dict[str, str]]:
 
 def _parse_census_retail(path: Path, year: int) -> list[dict[str, str]]:
     if path.suffix.lower() == ".xls":
-        return _parse_census_retail_xls(path, year)
+        try:
+            return _parse_census_retail_xls(path, year)
+        except ImportError:
+            html_fallback = path.with_suffix(".html")
+            if html_fallback.exists():
+                return _parse_census_retail(html_fallback, year)
+            raise
 
     text = _read(path)
     section = _section_between(text, r"Advance Monthly Retail Trade Report", r"Monthly Retail Trade Report")

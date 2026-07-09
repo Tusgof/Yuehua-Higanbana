@@ -1,0 +1,501 @@
+{
+  "allowed_claims": [
+    "H-A2 has a pre-registered robustness audit for the locked H-A2.24 revised condition.",
+    "The threshold remains locked at 0.001 and this preregistration does not add a new filter.",
+    "Future output can only support E1 prioritization, parking, or revision decisions.",
+    "Exact replay remains blocked until real 2022 SPY underlying bars are available."
+  ],
+  "baseline_oos": {
+    "avg_implementable_pnl": 7.087059,
+    "best_day_pnl": 150.44,
+    "loss_count": 21,
+    "loss_rate": 0.617647,
+    "total_cost_drag": 204.54,
+    "total_implementable_pnl": 240.96,
+    "total_mid_pnl": 445.5,
+    "trade_day_count": 34,
+    "win_rate": 0.382353,
+    "worst_day_pnl": -55.56
+  },
+  "big_day_dependency_check": {
+    "baseline_oos_after_trim": {
+      "avg_implementable_pnl": 1.773333,
+      "best_day_pnl": 134.44,
+      "loss_count": 19,
+      "loss_rate": 0.633333,
+      "total_cost_drag": 163.8,
+      "total_implementable_pnl": 53.2,
+      "total_mid_pnl": 217.0,
+      "trade_day_count": 30,
+      "win_rate": 0.366667,
+      "worst_day_pnl": -46.56
+    },
+    "baseline_oos_before_trim": {
+      "avg_implementable_pnl": 7.087059,
+      "best_day_pnl": 150.44,
+      "loss_count": 21,
+      "loss_rate": 0.617647,
+      "total_cost_drag": 204.54,
+      "total_implementable_pnl": 240.96,
+      "total_mid_pnl": 445.5,
+      "trade_day_count": 34,
+      "win_rate": 0.382353,
+      "worst_day_pnl": -55.56
+    },
+    "dependency_label": "survives_basic_trim_but_underpowered",
+    "interpretation": "Baseline has enough OOS rows for a 5% tail trim, but retained OOS has only 13 rows so retained-side trimming is underpowered.",
+    "retained_oos_after_trim": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "retained_oos_before_trim": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "status": "diagnostic_underpowered",
+    "survives_extreme_trim": true,
+    "trimmed_each_tail_count_baseline": 2,
+    "trimmed_each_tail_count_retained": 0
+  },
+  "broker_request_used": false,
+  "concentration_fragility_check": {
+    "buckets": {
+      "month": {
+        "bucket_count": 7,
+        "groups": [
+          {
+            "avg_implementable_pnl": 94.773333,
+            "best_day_pnl": 146.44,
+            "bucket": "2024-01",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 27.68,
+            "total_implementable_pnl": 284.32,
+            "total_mid_pnl": 312.0,
+            "trade_day_count": 3,
+            "win_rate": 1.0,
+            "worst_day_pnl": 23.44
+          },
+          {
+            "avg_implementable_pnl": 23.44,
+            "best_day_pnl": 23.44,
+            "bucket": "2024-05",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 5.06,
+            "total_implementable_pnl": 23.44,
+            "total_mid_pnl": 28.5,
+            "trade_day_count": 1,
+            "win_rate": 1.0,
+            "worst_day_pnl": 23.44
+          },
+          {
+            "avg_implementable_pnl": 134.44,
+            "best_day_pnl": 134.44,
+            "bucket": "2024-07",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 14.06,
+            "total_implementable_pnl": 134.44,
+            "total_mid_pnl": 148.5,
+            "trade_day_count": 1,
+            "win_rate": 1.0,
+            "worst_day_pnl": 134.44
+          },
+          {
+            "avg_implementable_pnl": 30.94,
+            "best_day_pnl": 33.44,
+            "bucket": "2024-08",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 11.12,
+            "total_implementable_pnl": 61.88,
+            "total_mid_pnl": 73.0,
+            "trade_day_count": 2,
+            "win_rate": 1.0,
+            "worst_day_pnl": 28.44
+          },
+          {
+            "avg_implementable_pnl": 64.773333,
+            "best_day_pnl": 150.44,
+            "bucket": "2024-09",
+            "loss_count": 1,
+            "loss_rate": 0.333333,
+            "total_cost_drag": 29.18,
+            "total_implementable_pnl": 194.32,
+            "total_mid_pnl": 223.5,
+            "trade_day_count": 3,
+            "win_rate": 0.666667,
+            "worst_day_pnl": -11.56
+          },
+          {
+            "avg_implementable_pnl": 63.94,
+            "best_day_pnl": 114.44,
+            "bucket": "2024-10",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 11.62,
+            "total_implementable_pnl": 127.88,
+            "total_mid_pnl": 139.5,
+            "trade_day_count": 2,
+            "win_rate": 1.0,
+            "worst_day_pnl": 13.44
+          },
+          {
+            "avg_implementable_pnl": 121.44,
+            "best_day_pnl": 121.44,
+            "bucket": "2024-12",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 9.56,
+            "total_implementable_pnl": 121.44,
+            "total_mid_pnl": 131.0,
+            "trade_day_count": 1,
+            "win_rate": 1.0,
+            "worst_day_pnl": 121.44
+          }
+        ],
+        "max_bucket_count": 3,
+        "max_share": 0.230769,
+        "min_bucket_count": 1
+      },
+      "side": {
+        "bucket_count": 2,
+        "groups": [
+          {
+            "avg_implementable_pnl": 99.69,
+            "best_day_pnl": 146.44,
+            "bucket": "call",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 34.24,
+            "total_implementable_pnl": 398.76,
+            "total_mid_pnl": 433.0,
+            "trade_day_count": 4,
+            "win_rate": 1.0,
+            "worst_day_pnl": 23.44
+          },
+          {
+            "avg_implementable_pnl": 60.995556,
+            "best_day_pnl": 150.44,
+            "bucket": "put",
+            "loss_count": 1,
+            "loss_rate": 0.111111,
+            "total_cost_drag": 74.04,
+            "total_implementable_pnl": 548.96,
+            "total_mid_pnl": 623.0,
+            "trade_day_count": 9,
+            "win_rate": 0.888889,
+            "worst_day_pnl": -11.56
+          }
+        ],
+        "max_bucket_count": 9,
+        "max_share": 0.692308,
+        "min_bucket_count": 4
+      },
+      "vix_bucket": {
+        "bucket_count": 2,
+        "groups": [
+          {
+            "avg_implementable_pnl": 93.94,
+            "best_day_pnl": 146.44,
+            "bucket": "low",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 56.36,
+            "total_implementable_pnl": 563.64,
+            "total_mid_pnl": 620.0,
+            "trade_day_count": 6,
+            "win_rate": 1.0,
+            "worst_day_pnl": 23.44
+          },
+          {
+            "avg_implementable_pnl": 54.868571,
+            "best_day_pnl": 150.44,
+            "bucket": "normal",
+            "loss_count": 1,
+            "loss_rate": 0.142857,
+            "total_cost_drag": 51.92,
+            "total_implementable_pnl": 384.08,
+            "total_mid_pnl": 436.0,
+            "trade_day_count": 7,
+            "win_rate": 0.857143,
+            "worst_day_pnl": -11.56
+          }
+        ],
+        "max_bucket_count": 7,
+        "max_share": 0.538462,
+        "min_bucket_count": 6
+      },
+      "weekday": {
+        "bucket_count": 5,
+        "groups": [
+          {
+            "avg_implementable_pnl": 121.44,
+            "best_day_pnl": 121.44,
+            "bucket": "Fri",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 9.56,
+            "total_implementable_pnl": 121.44,
+            "total_mid_pnl": 131.0,
+            "trade_day_count": 1,
+            "win_rate": 1.0,
+            "worst_day_pnl": 121.44
+          },
+          {
+            "avg_implementable_pnl": 102.19,
+            "best_day_pnl": 146.44,
+            "bucket": "Mon",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 33.74,
+            "total_implementable_pnl": 408.76,
+            "total_mid_pnl": 442.5,
+            "trade_day_count": 4,
+            "win_rate": 1.0,
+            "worst_day_pnl": 33.44
+          },
+          {
+            "avg_implementable_pnl": 8.44,
+            "best_day_pnl": 23.44,
+            "bucket": "Thu",
+            "loss_count": 1,
+            "loss_rate": 0.333333,
+            "total_cost_drag": 14.68,
+            "total_implementable_pnl": 25.32,
+            "total_mid_pnl": 40.0,
+            "trade_day_count": 3,
+            "win_rate": 0.666667,
+            "worst_day_pnl": -11.56
+          },
+          {
+            "avg_implementable_pnl": 102.94,
+            "best_day_pnl": 150.44,
+            "bucket": "Tue",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 24.62,
+            "total_implementable_pnl": 205.88,
+            "total_mid_pnl": 230.5,
+            "trade_day_count": 2,
+            "win_rate": 1.0,
+            "worst_day_pnl": 55.44
+          },
+          {
+            "avg_implementable_pnl": 62.106667,
+            "best_day_pnl": 134.44,
+            "bucket": "Wed",
+            "loss_count": 0,
+            "loss_rate": 0.0,
+            "total_cost_drag": 25.68,
+            "total_implementable_pnl": 186.32,
+            "total_mid_pnl": 212.0,
+            "trade_day_count": 3,
+            "win_rate": 1.0,
+            "worst_day_pnl": 23.44
+          }
+        ],
+        "max_bucket_count": 4,
+        "max_share": 0.307692,
+        "min_bucket_count": 1
+      }
+    },
+    "concentration_label": "not_single_bucket_dominated",
+    "interpretation": "No inspected dimension owns 75% or more of retained OOS trades, but several buckets are too small for inference.",
+    "max_bucket_share": 0.692308,
+    "small_bucket_warnings": [
+      "small_bucket_counts:month",
+      "small_bucket_counts:weekday"
+    ],
+    "status": "complete"
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The locked 0.001 revised condition survives basic local robustness checks, but the retained OOS sample is only 13 trade days and remains under-sampled.",
+  "daily_source": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+  "daily_source_experiment_id": "h_a2_lower_resolution_proxy",
+  "decision_rule_application": {
+    "blockers": [
+      "under_sampled",
+      "underpowered",
+      "no_exact_2022_orb_replay",
+      "no_e2_acceptance_claim"
+    ],
+    "decision": "run_locked_condition_robustness_followup_or_exact_replay_when_bars_clear",
+    "evidence_tier": "E1",
+    "next_safe_action": "Keep H-A2 active as E1 prioritization evidence. The next safe step is either exact replay after the 2022 SPY bar blocker clears, or a separately pre-registered local follow-up that does not change threshold 0.001.",
+    "oos_tuning_used": false,
+    "status": "complete",
+    "threshold_locked_before_audit": true,
+    "threshold_search_used": false
+  },
+  "evidence_tier": "E1",
+  "exact_2022_orb_tested": false,
+  "experiment_id": "h_a2_revised_condition_robustness",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not change the threshold from 0.001 in this audit.",
+    "Do not add a new OOS-selected filter.",
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration.",
+    "Do not run live GDELT retries from this preregistration."
+  ],
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:43:03Z",
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "llm_call_used": false,
+  "methodology": {
+    "audit_scope": "OOS retained/skipped robustness around the already locked H-A2.24 condition.",
+    "chronological_split_required": true,
+    "local_artifacts_only": true,
+    "locked_threshold": 0.001,
+    "oos_tuning_used": false,
+    "random_split_used": false,
+    "threshold_locked_before_audit": true,
+    "threshold_search_used": false
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Keep H-A2 active as E1 prioritization evidence. The next safe step is either exact replay after the 2022 SPY bar blocker clears, or a separately pre-registered local follow-up that does not change threshold 0.001.",
+  "operational_validation_allowed": false,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-revised-condition-robustness",
+  "retained_oos": {
+    "avg_implementable_pnl": 72.901538,
+    "best_day_pnl": 150.44,
+    "loss_count": 1,
+    "loss_rate": 0.076923,
+    "total_cost_drag": 108.28,
+    "total_implementable_pnl": 947.72,
+    "total_mid_pnl": 1056.0,
+    "trade_day_count": 13,
+    "win_rate": 0.923077,
+    "worst_day_pnl": -11.56
+  },
+  "sample_adequacy_relabeling": {
+    "evidence_tier_cap": "E1",
+    "interpretation": "Thirteen retained OOS trade days cannot support acceptance-grade MinTRL/PSR inference.",
+    "mintrl_status_or_blocker": "blocked_not_enough_retained_oos_observations",
+    "psr_status_or_blocker": "blocked_not_enough_retained_oos_observations",
+    "sample_count": 13,
+    "status": "diagnostic_underpowered",
+    "under_sampled_label": true,
+    "underpowered_label": true
+  },
+  "sample_counts": {
+    "baseline_oos_non_risk_trade_days": 34,
+    "daily_rows": 463,
+    "retained_oos_trade_days": 13,
+    "retention_rate": 0.382353,
+    "skipped_oos_trade_days": 21
+  },
+  "schema_version": "h_a2_revised_condition_robustness_v1",
+  "skip_cost_tradeoff_check": {
+    "baseline_oos_trade_count": 34,
+    "interpretation": "The locked rule keeps fewer trades, but the skipped set is strongly loss-heavy in current OOS.",
+    "retained_minus_skipped_avg_pnl": 106.556776,
+    "retained_oos": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "retained_oos_trade_count": 13,
+    "retention_rate": 0.382353,
+    "skipped_oos": {
+      "avg_implementable_pnl": -33.655238,
+      "best_day_pnl": 24.44,
+      "loss_count": 20,
+      "loss_rate": 0.952381,
+      "total_cost_drag": 96.26,
+      "total_implementable_pnl": -706.76,
+      "total_mid_pnl": -610.5,
+      "trade_day_count": 21,
+      "win_rate": 0.047619,
+      "worst_day_pnl": -55.56
+    },
+    "skipped_oos_trade_count": 21,
+    "status": "complete"
+  },
+  "skipped_oos": {
+    "avg_implementable_pnl": -33.655238,
+    "best_day_pnl": 24.44,
+    "loss_count": 20,
+    "loss_rate": 0.952381,
+    "total_cost_drag": 96.26,
+    "total_implementable_pnl": -706.76,
+    "total_mid_pnl": -610.5,
+    "trade_day_count": 21,
+    "win_rate": 0.047619,
+    "worst_day_pnl": -55.56
+  },
+  "source_preregistration": "experiments\\h_a2_revised_condition_robustness_preregistration.json",
+  "source_summary": "reports\\experiments\\h_a2_revised_opening_followthrough_condition_summary.json",
+  "source_summary_experiment_id": "h_a2_revised_opening_followthrough_condition",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "threshold_provenance_audit": {
+    "interpretation": "Threshold 0.001 remains fixed from H-A2.24 train-only selection; this audit does not create a new threshold.",
+    "locked_threshold": 0.001,
+    "oos_used_for_threshold_selection": false,
+    "provenance_clean": true,
+    "source_locked_threshold": 0.001,
+    "source_search_log": "reports\\experiments\\search_logs\\h_a2_revised_opening_followthrough_condition_search_log.jsonl",
+    "source_selected_trial_id": "train_threshold_0.001",
+    "source_trial_count": 7,
+    "status": "complete",
+    "threshold_search_used_in_this_audit": false
+  },
+  "tier_blockers": [
+    "E1 diagnostic/prioritization evidence only",
+    "Retained OOS sample has only 13 trade days",
+    "Under-sampled and underpowered versus MinTRL/PSR policy",
+    "No new independent validation data",
+    "No exact 2022-10 ORB replay",
+    "No E2 acceptance claim",
+    "No paper trading, operational validation, or real-money approval"
+  ],
+  "trial_policy": {
+    "all_checks_preregistered": true,
+    "dsr_reason": "This audit does not select a new best Sharpe or new threshold; it only audits the locked H-A2.24 condition.",
+    "dsr_status": "not_recomputed_no_new_threshold_search",
+    "search_log": "reports\\experiments\\search_logs\\h_a2_revised_condition_robustness_search_log.jsonl",
+    "threshold_search_allowed": false,
+    "threshold_search_used": false,
+    "trial_count": 0
+  }
+}

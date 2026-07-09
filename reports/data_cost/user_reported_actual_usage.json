@@ -1,6 +1,6 @@
 {
-  "actual_usage_usd": 109.082227,
-  "notes": "Previous user-reported Databento account usage was $105.0. Codex then executed the approved H-G1 OPRA statistics/OI 11-date pull with logged estimate $4.082227, so the working guard basis is updated to about $109.082227 until the user/provider account view supplies a newer actual total. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited.",
-  "reported_at_utc": "2026-07-03T05:28:29Z",
-  "source": "user_reported_usage_plus_codex_committed_h_g1_download_estimate"
+  "actual_usage_usd": 120.494368,
+  "notes": "Previous working Databento guard basis was $119.989706 after user-reported/account-derived usage plus committed H-G1 and H-A2 2022-10 downloads. Codex then executed the approved H-A2 independent-validation one-day 2025-04-08 Databento pull with logged estimate $0.504662, so the legacy working guard basis is updated to about $120.494368 until the user/provider account view supplies a newer actual total. User added DATABENTO_API_MO and DATABENTO_API_AI as one approved $200 research pool, while each individual key has a $100 maximum-use cap. Future paid Databento actions must choose/log the selected key env, estimate cost first, and stop before the selected key or combined MO/AI pool would exceed cap. Multi-account signup-credit harvesting is prohibited.",
+  "reported_at_utc": "2026-07-06T03:29:00Z",
+  "source": "user_reported_usage_plus_codex_committed_h_g1_and_h_a2_download_estimates"
 }

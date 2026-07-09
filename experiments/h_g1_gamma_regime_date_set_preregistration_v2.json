@@ -1,0 +1,210 @@
+{
+  "schema_version": "h_g1_gamma_regime_date_set_preregistration_v2",
+  "hypothesis_id": "H-G1",
+  "created_at": "2026-07-03",
+  "supersedes": "experiments/h_g1_gamma_regime_date_set_preregistration.json",
+  "purpose": "Repair the H-G1 regime manifest after Databento EQUS.MINI rejected 2023-03-13 and 2023-03-22 SPY bar repair because the dataset starts at 2023-03-28.",
+  "data_policy": {
+    "symbol_universe": [
+      "SPY"
+    ],
+    "new_paid_data_allowed_after_validation": false,
+    "paid_action_before_manifest_validation": "forbidden",
+    "purchase_scope": "No new purchase for this v2 repair rerun; reuse already-downloaded OPRA statistics/OI and existing local quote/SPY bar cache.",
+    "broad_calendar_purchase": "forbidden",
+    "existing_oi_probe_date": "2024-01-03",
+    "cost_guard": {
+      "working_usage_usd": 109.082227,
+      "stop_threshold_usd": 125.0,
+      "remaining_headroom_usd": 15.917773,
+      "requires_metadata_cost_check_before_download": true
+    }
+  },
+  "selection_rules": {
+    "date_count": 10,
+    "date_source": "The original v1 12-date manifest after removing dates with impossible SPY bar repair under Databento EQUS.MINI availability.",
+    "exclusion_policy": "Remove 2023-03-13 and 2023-03-22 only because the provider rejected SPY bar repair as data_start_before_available_start; do not remove dates for poor gamma results.",
+    "volatility_buckets": {
+      "low": "same-day VIX close < 15",
+      "normal": "15 <= same-day VIX close < 25",
+      "high": "same-day VIX close >= 25 or explicitly selected stress window"
+    },
+    "macro_flag": "high_importance_macro=true when official macro calendar has at least one same-day high-importance event",
+    "split_policy": "Preserve both in_sample and oos coverage from the original v1 manifest. This v2 repair is diagnostic only and cannot claim the original 12-date stability target.",
+    "replacement_policy": "Do not buy replacement dates in this v2 repair. If 10-date v2 still fails only because date count is insufficient, create a separate v3 replacement-date manifest before any new paid OI pull."
+  },
+  "repair_notes": {
+    "excluded_dates": [
+      {
+        "date": "2023-03-13",
+        "reason": "Databento EQUS.MINI SPY bars unavailable before 2023-03-28; original manifest had quote/OI data but no repairable underlying bars."
+      },
+      {
+        "date": "2023-03-22",
+        "reason": "Databento EQUS.MINI SPY bars unavailable before 2023-03-28; original manifest had quote/OI data but no repairable underlying bars."
+      }
+    ],
+    "forbidden_claim": "Passing this v2 repair diagnostic would not prove full H-G1 validity; it only isolates whether the remaining blocker is computed-Greeks bucket coverage rather than missing underlying bars."
+  },
+  "minimum_regime_counts": {
+    "total_dates": 10,
+    "low_volatility": 3,
+    "normal_volatility": 3,
+    "high_volatility": 3,
+    "high_importance_macro": 4,
+    "no_high_importance_macro": 4,
+    "in_sample": 4,
+    "oos": 4,
+    "unique_calendar_months": 6
+  },
+  "selected_dates": [
+    {
+      "date": "2023-07-12",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.54,
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "trend_regime": "low_vol_macro",
+      "selection_reason": "Train-period low-volatility CPI date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2023-08-09",
+      "split": "in_sample",
+      "volatility_bucket": "normal",
+      "vix_close": 15.96,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "normal_no_macro",
+      "selection_reason": "Train-period normal-volatility no-high-importance-macro control date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2023-10-27",
+      "split": "in_sample",
+      "volatility_bucket": "normal",
+      "vix_close": 21.27,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "trend_regime": "normal_macro",
+      "selection_reason": "Train-period PCE date with normal/elevated VIX retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2023-12-29",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 12.45,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "low_vol_year_end",
+      "selection_reason": "Train-period low-volatility no-high-importance-macro year-end control date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-01-03",
+      "split": "oos",
+      "volatility_bucket": "low",
+      "vix_close": 14.04,
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "trend_regime": "oos_low_vol_macro",
+      "selection_reason": "Existing OI/enrichment probe date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "existing_probe"
+    },
+    {
+      "date": "2024-05-21",
+      "split": "oos",
+      "volatility_bucket": "low",
+      "vix_close": 11.86,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "oos_low_vol_no_macro",
+      "selection_reason": "OOS very-low-volatility no-high-importance-macro control date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-08-05",
+      "split": "oos",
+      "volatility_bucket": "high",
+      "vix_close": 38.57,
+      "high_importance_macro": false,
+      "macro_events": [
+        "ISM_SERVICES"
+      ],
+      "trend_regime": "oos_vol_spike_stress",
+      "selection_reason": "OOS volatility-spike stress date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-08-07",
+      "split": "oos",
+      "volatility_bucket": "high",
+      "vix_close": 27.85,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "oos_vol_spike_followthrough",
+      "selection_reason": "OOS high-VIX follow-through date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-10-31",
+      "split": "oos",
+      "volatility_bucket": "normal",
+      "vix_close": 23.16,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "trend_regime": "oos_normal_macro",
+      "selection_reason": "OOS PCE macro date with elevated normal VIX retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-12-18",
+      "split": "oos",
+      "volatility_bucket": "high",
+      "vix_close": 27.62,
+      "high_importance_macro": true,
+      "macro_events": [
+        "FOMC_DECISION"
+      ],
+      "trend_regime": "oos_high_vol_macro",
+      "selection_reason": "OOS high-volatility FOMC macro date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    }
+  ],
+  "locked_outputs": {
+    "diagnostic_summary": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v2_10date.json",
+    "diagnostic_report": "reports/diagnostics/h_g1_gamma_regime_diagnostic_report_v2_10date.md",
+    "enrichment_summary": "reports/diagnostics/h_g1_gamma_regime_enrichment_summary_v2_10date.json",
+    "output_jsonl": "data/derived/spy_0dte/h_g1_gamma_regime/option_quote_enriched_10_date_snapshot_v2.jsonl"
+  }
+}

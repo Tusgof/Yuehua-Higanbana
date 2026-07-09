@@ -1,0 +1,75 @@
+{
+  "schema_version": "h_g1_side_aware_bucket_policy_adoption_v1",
+  "hypothesis_id": "H-G1",
+  "created_date": "2026-07-03",
+  "status": "adopted_for_next_diagnostic_only",
+  "policy_id": "h_g1_required_bucket_policy_v3_side_aware",
+  "adopted_candidate": "candidate_b_side_aware_required_bucket",
+  "controlling_doc": "docs/H_G1_SIDE_AWARE_BUCKET_POLICY_ADOPTION.md",
+  "source_preregistration": "experiments/h_g1_bucket_policy_review_preregistration.json",
+  "source_comparison": "reports/diagnostics/h_g1_bucket_policy_comparison.json",
+  "source_bucket_failure_diagnostic": "reports/diagnostics/h_g1_manifest_v3_bucket_failure_diagnostic.json",
+  "source_manifest_v3_summary": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3.json",
+  "adoption_scope": {
+    "diagnostic_rerun_allowed": true,
+    "strategy_use_allowed": false,
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_dates_allowed": false,
+    "new_option_quotes_allowed": false,
+    "new_oi_files_allowed": false,
+    "strategy_pnl_selection_allowed": false
+  },
+  "required_bucket_rules": {
+    "otm_put": {
+      "option_right": "put",
+      "moneyness": "<0.995",
+      "controls_pass_fail": true
+    },
+    "otm_call": {
+      "option_right": "call",
+      "moneyness": ">1.005",
+      "controls_pass_fail": true
+    },
+    "atm": {
+      "option_right": "call_or_put",
+      "moneyness": "0.995<=moneyness<=1.005",
+      "controls_pass_fail": true
+    },
+    "opposite_right_itm_rows": {
+      "treatment": "reported_separately_not_required_bucket_pass_fail",
+      "must_remain_visible": true
+    }
+  },
+  "thresholds": {
+    "computed_row_rate_floor": 0.6,
+    "computed_oi_notional_share_floor": 0.8,
+    "retained_abs_gamma_proxy_share_floor": 0.8
+  },
+  "preserved_locked_facts": {
+    "candidate_b_passed_date_count": 10,
+    "candidate_b_failure_count": 0,
+    "candidate_a_failure_count": 5,
+    "candidate_c_failure_count": 1,
+    "h_g1_15_blocked_rows_in_failed_buckets": 55,
+    "h_g1_15_opposite_right_blocked_row_share": 1.0,
+    "h_g1_15_minimum_failed_bucket_computed_oi_notional_share": 0.880098
+  },
+  "next_allowed_action": "rerun_h_g1_gamma_diagnostic_manifest_v3_side_aware_policy",
+  "forbidden_claims": [
+    "H-G1 pass",
+    "strategy validation from coverage policy",
+    "NOVI/net-gamma strategy filter readiness",
+    "true market-maker net gamma",
+    "paid data or new dates justified by this artifact",
+    "policy superiority based on strategy PnL"
+  ],
+  "evidence_tier": "E0",
+  "tier_blockers": [
+    "Policy adoption only",
+    "No diagnostic rerun under adopted policy yet",
+    "No strategy backtest acceptance",
+    "No true dealer/customer inventory observation"
+  ]
+}
+

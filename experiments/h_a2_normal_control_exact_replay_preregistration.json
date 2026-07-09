@@ -1,0 +1,190 @@
+{
+  "schema_version": "h_a2_normal_control_exact_replay_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_normal_control_exact_replay",
+  "title": "H-A2 normal/control bounded exact replay preregistration",
+  "created_date": "2026-07-07",
+  "purpose": "Pre-register a bounded exact-replay diagnostic for the single normal/control candidate date found by H-A2.48 before computing candidate-trade PnL or making any stronger evidence claim.",
+  "source_import_diagnostic": "reports/diagnostics/h_a2_normal_control_import_diagnostic.json",
+  "source_import_summary": "H-A2.48 parsed the already-downloaded low/normal-VIX control pack locally and found exactly one candidate-ready date, 2025-02-11, with candidate direction call. It did not run exact replay, compute PnL, approve paper trading, or claim E2.",
+  "candidate_scope": {
+    "batch_id": "low_normal_vix_control_pack",
+    "scenario": "h_a2_normal_control_low_normal_vix_control_pack",
+    "candidate_dates": [
+      "2025-02-11"
+    ],
+    "candidate_count": 1,
+    "candidate_direction_by_date": {
+      "2025-02-11": "call"
+    },
+    "blocked_candidate_dates": [],
+    "no_signal_dates_count": 9,
+    "source_total_dates": 10,
+    "source_timestamp_alignment_pass_count": 10,
+    "source_opra_quote_rows": 35284142,
+    "source_0dte_valid_mid_rows": 557254
+  },
+  "locked_signal": {
+    "candidate_decision_time_et": "09:35:00",
+    "entry_time_et": "09:35:00",
+    "forced_close_time_et": "15:45:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false,
+    "delayed_entry_component_allowed": false
+  },
+  "exact_replay_design": {
+    "strategy_family": "Sub-System A ORB directional debit vertical spread",
+    "scope": "diagnostic replay for candidate date only",
+    "entry_order_assumption": "limit_at_mid_control",
+    "entry_fill_model": "Use bid/ask at 09:35 ET and compute mid PnL control plus implementable PnL with explicit spread treatment; do not assume market entry.",
+    "exit_order_assumption": "forced_close_1545",
+    "exit_fill_model": "Use 15:45 ET bid/ask for forced close. Report mid PnL and implementable PnL separately.",
+    "fees_per_leg_usd": 0.64,
+    "strike_selection_rule": {
+      "method": "nearest_discrete_strike_rounding",
+      "selection_basis": "Use only 09:35 ET same-expiry SPY 0DTE call quotes on the candidate date.",
+      "long_leg_rule": "Select the nearest askable 0DTE call strike at or just beyond the locked ORB direction's entry-side moneyness target inherited from the existing Sub-System A baseline code.",
+      "short_leg_rule": "Select the higher call strike that matches the existing baseline spread-width rule when available; if not available, mark the replay blocked rather than choosing a new width from results.",
+      "interpolation_allowed": false,
+      "post_result_strike_selection_allowed": false
+    },
+    "reporting_requirements": [
+      "candidate date and direction",
+      "selected option symbols and strikes",
+      "entry bid/ask/mid",
+      "forced-close bid/ask/mid",
+      "mid_pnl",
+      "implementable_pnl",
+      "fee and spread/cost drag",
+      "blocker if any required quote or strike is missing",
+      "statement that this remains E1 single-candidate diagnostic evidence"
+    ]
+  },
+  "allowed_inputs": [
+    {
+      "input": "h_a2_normal_control_import_diagnostic",
+      "path": "reports/diagnostics/h_a2_normal_control_import_diagnostic.json",
+      "use": "control candidate date, direction, timestamp availability, and forbidden claims"
+    },
+    {
+      "input": "h_a2_normal_control_import_report",
+      "path": "reports/diagnostics/h_a2_normal_control_import_diagnostic.md",
+      "use": "human-readable source diagnostic"
+    },
+    {
+      "input": "normal_control_raw_dbn_files",
+      "path": "data/raw/spy_0dte/databento/h_a2_normal_control_low_normal_vix_control_pack",
+      "use": "read only for 2025-02-11 exact replay after this preregistration passes"
+    },
+    {
+      "input": "normal_control_inventory",
+      "path": "build/h_a2_normal_control_low_normal_vix_control_pack/option_quote_day_inventory.jsonl",
+      "use": "confirm candidate-date quote availability without provider calls"
+    },
+    {
+      "input": "normal_control_spy_bars",
+      "path": "build/h_a2_normal_control_low_normal_vix_control_pack/spy_bar.jsonl",
+      "use": "confirm 09:35 and 15:45 underlying context for candidate date"
+    }
+  ],
+  "forbidden_inputs": [
+    {
+      "input": "additional_databento_download",
+      "reason": "Exact replay must use only the already-downloaded normal/control pack."
+    },
+    {
+      "input": "non_candidate_dates",
+      "reason": "This preregistration covers only 2025-02-11 because H-A2.48 found no other candidate-ready dates."
+    },
+    {
+      "input": "new_oos_selected_filter",
+      "reason": "The replay must not become an OOS tuning or filter-selection pass."
+    },
+    {
+      "input": "ibkr_historical_bars",
+      "reason": "IBKR is not needed for the 2025-02-11 normal/control replay."
+    },
+    {
+      "input": "live_llm_outputs",
+      "reason": "H-L1 remains blocked until real timestamp-clean news cases exist."
+    },
+    {
+      "input": "gdelt_live_retry",
+      "reason": "News capture remains blocked by its own cooldown/upstream response gate."
+    }
+  ],
+  "planned_outputs": {
+    "future_summary_json": "reports/diagnostics/h_a2_normal_control_exact_replay.json",
+    "future_summary_md": "reports/diagnostics/h_a2_normal_control_exact_replay.md",
+    "future_search_log": "reports/diagnostics/search_logs/h_a2_normal_control_exact_replay_search_log.jsonl",
+    "future_research_log_slug": "higanbana-h-a2-normal-control-exact-replay"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered bounded exact-replay plan for the single normal/control candidate date 2025-02-11.",
+    "The future run may compute candidate-date mid_pnl and implementable_pnl only after this preregistration passes.",
+    "The future run must keep the locked 09:35 signal and threshold 0.001 unchanged.",
+    "The future run remains E1 diagnostic evidence unless a separate validation artifact proves a higher evidence tier."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated from this preregistration.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not download more data.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter.",
+    "Do not broaden the replay beyond 2025-02-11.",
+    "Do not call LLMs.",
+    "Do not retry GDELT.",
+    "Do not request IBKR bars."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "additional_download_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "candidate_date_exact_replay_allowed_after_preregistration": true,
+    "candidate_trade_pnl_allowed_after_preregistration": true,
+    "non_candidate_replay_allowed": false,
+    "threshold_search_allowed": false,
+    "new_filter_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "e2_claim_allowed": false,
+    "research_log_required_for_future_run": true,
+    "research_log_required_for_this_preregistration": false
+  },
+  "completion_criteria": [
+    "The preregistration names only candidate date 2025-02-11 and direction call.",
+    "The preregistration references H-A2.48 as the only source of candidate selection.",
+    "The preregistration locks 09:35 entry, 15:45 forced close, threshold 0.001, no new filter, and no OOS tuning.",
+    "The preregistration requires mid_pnl and implementable_pnl to be reported separately with $0.64 per-leg fees.",
+    "The preregistration uses nearest discrete strike rounding and forbids interpolation or post-result strike selection.",
+    "The preregistration allows future exact replay only after validation and forbids E2, paper trading, operational validation, and real-money claims.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "No exact replay has run yet",
+    "Only one candidate date is in scope",
+    "No MinTRL/PSR acceptance path proven",
+    "No E2 acceptance claim"
+  ]
+}

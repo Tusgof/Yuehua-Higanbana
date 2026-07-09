@@ -1,0 +1,271 @@
+{
+  "allowed_claims": [
+    "The locked H-A2 condition is timestamp-clean only after the 15-minute window completes at 09:45 ET.",
+    "Current local artifacts can recount retained/skipped samples under the locked 0.001 rule.",
+    "Current local artifacts cannot support delayed-entry implementable PnL because no 09:45 delayed-entry quote/fill is available.",
+    "This result is E1 proxy-only diagnostic evidence."
+  ],
+  "broker_request_used": false,
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The locked condition is timestamp-clean at 09:45 ET, but current local artifacts do not contain an auditable 09:45 delayed-entry option quote/fill. Therefore this run is proxy-only and cannot claim delayed-entry implementable PnL.",
+  "daily_source": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+  "delayed_entry_fill_and_cost_feasibility": {
+    "blocked_if_no_delayed_entry_quote": true,
+    "cost_assumption": "not_computed_no_0945_quote",
+    "delayed_entry_implementable_pnl_available": false,
+    "entry_quote_source_status": "missing_0945_option_quote_in_preregistered_source_artifacts",
+    "entry_time_et": "09:45:00",
+    "fill_assumption": "not_computed_no_0945_quote",
+    "proxy_result_must_be_labeled": true,
+    "quote_timestamp_hit_count": 0,
+    "quote_timestamp_hits": {},
+    "retained_oos_dates_checked": [
+      "2024-01-08",
+      "2024-01-10",
+      "2024-01-29",
+      "2024-05-30",
+      "2024-07-24",
+      "2024-08-12",
+      "2024-08-28",
+      "2024-09-03",
+      "2024-09-17",
+      "2024-09-26",
+      "2024-10-14",
+      "2024-10-17",
+      "2024-12-27"
+    ],
+    "retained_oos_quote_hit_count": 0,
+    "source_artifact_checked": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+    "source_artifact_has_delayed_quote_fields": false,
+    "source_artifact_quote_like_fields": [],
+    "source_artifact_row_count": 463,
+    "status": "blocked_no_delayed_entry_quote"
+  },
+  "delayed_entry_timestamp_cleanliness": {
+    "all_features_known_by_decision_time": true,
+    "blocked_if_any_feature_after_decision": false,
+    "candidate_decision_time_et": "09:45:00",
+    "feature_completion_times_et": {
+      "no_adverse_measured_15m_conflict": "09:45:00",
+      "proxy_5m_followthrough": "09:35:00"
+    },
+    "feature_measurement_windows": [
+      {
+        "feature": "proxy_5m_followthrough",
+        "known_by_decision_time": true,
+        "window_et": "09:30:00-09:35:00"
+      },
+      {
+        "feature": "no_adverse_measured_15m_conflict",
+        "known_by_decision_time": true,
+        "window_et": "09:30:00-09:45:00"
+      }
+    ],
+    "source_original_entry_classification": "delayed_entry_candidate_and_diagnostic_proxy_only",
+    "status": "complete",
+    "timestamp_cleanliness_status": "pass_for_delayed_0945_decision"
+  },
+  "evidence_tier": "E1",
+  "exact_2022_orb_tested": false,
+  "experiment_id": "h_a2_delayed_entry_condition",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not treat original 09:35 PnL as delayed-entry PnL.",
+    "Do not change threshold 0.001 through OOS search.",
+    "Do not add a new OOS-selected filter.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration."
+  ],
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:41:07Z",
+  "hypothesis_decision": {
+    "allowed_next_action": "Do not claim delayed-entry edge from current artifacts. Next safe work is to pre-register a timestamp-clean original-entry revision using only 09:35-known features, or separately pre-register a no-paid/guarded delayed-entry quote acquisition plan before any delayed-entry PnL test.",
+    "decision": "revise_to_timestamp_clean_original_entry_or_preregister_delayed_quote_acquisition",
+    "e2_status": "forbidden",
+    "evidence_tier": "E1",
+    "forbidden_claims": [
+      "No delayed-entry implementable PnL claim.",
+      "No H-A2 edge validation.",
+      "No E2 evidence.",
+      "No paper trading, operational validation, or real-money approval."
+    ],
+    "research_log_requirement": "research_log/030-higanbana-h-a2-delayed-entry-condition.md",
+    "status": "complete"
+  },
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "implementable_pnl_comparison": {
+    "baseline_avg_implementable_pnl": null,
+    "comparison_status": "not_computable_without_0945_quote",
+    "cost_drag": null,
+    "delayed_entry_avg_implementable_pnl": null,
+    "original_0935_pnl_reused_as_delayed_entry_pnl": false,
+    "original_entry_context_only": {
+      "baseline_oos_avg_implementable_pnl": 7.087059,
+      "not_delayed_entry_pnl": true,
+      "retained_minus_skipped_avg_implementable_pnl": 106.556776,
+      "retained_oos_avg_implementable_pnl": 72.901538,
+      "skipped_oos_avg_implementable_pnl": -33.655238
+    },
+    "skipped_avg_implementable_pnl": null,
+    "status": "blocked_no_delayed_entry_pnl"
+  },
+  "llm_call_used": false,
+  "methodology": {
+    "baseline_original_entry_time_et": "09:35:00",
+    "candidate_decision_time_et": "09:45:00",
+    "chronological_split_required": true,
+    "delayed_entry_result_type": "proxy_only_no_delayed_quote",
+    "earliest_candidate_entry_time_et": "09:45:00",
+    "local_artifacts_only": true,
+    "locked_threshold": 0.001,
+    "new_oos_selected_filter_used": false,
+    "oos_tuning_used": false,
+    "original_0935_pnl_reused_as_delayed_entry_pnl": false,
+    "random_split_used": false,
+    "threshold_search_used": false
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Do not claim delayed-entry edge from current artifacts. Next safe work is to pre-register a timestamp-clean original-entry revision using only 09:35-known features, or separately pre-register a no-paid/guarded delayed-entry quote acquisition plan before any delayed-entry PnL test.",
+  "operational_validation_allowed": false,
+  "original_entry_context_not_delayed_pnl": {
+    "baseline_oos": {
+      "avg_implementable_pnl": 7.087059,
+      "best_day_pnl": 150.44,
+      "loss_count": 21,
+      "loss_rate": 0.617647,
+      "total_cost_drag": 204.54,
+      "total_implementable_pnl": 240.96,
+      "total_mid_pnl": 445.5,
+      "trade_day_count": 34,
+      "win_rate": 0.382353,
+      "worst_day_pnl": -55.56
+    },
+    "purpose": "Context only. These values come from the original existing trade outcomes and are not delayed-entry PnL.",
+    "retained_oos": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "skipped_oos": {
+      "avg_implementable_pnl": -33.655238,
+      "best_day_pnl": 24.44,
+      "loss_count": 20,
+      "loss_rate": 0.952381,
+      "total_cost_drag": 96.26,
+      "total_implementable_pnl": -706.76,
+      "total_mid_pnl": -610.5,
+      "trade_day_count": 21,
+      "win_rate": 0.047619,
+      "worst_day_pnl": -55.56
+    }
+  },
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-delayed-entry-condition",
+  "retained_sample_recount": {
+    "oos_trade_count": 34,
+    "retained_count": 29,
+    "retained_oos_trade_count": 13,
+    "retained_train_trade_count": 16,
+    "skipped_count": 35,
+    "skipped_oos_trade_count": 21,
+    "skipped_train_trade_count": 14,
+    "status": "complete",
+    "train_trade_count": 30,
+    "under_sampled_label": true,
+    "underpowered_label": true
+  },
+  "revised_summary": "reports\\experiments\\h_a2_revised_opening_followthrough_condition_summary.json",
+  "risk_and_robustness_recheck": {
+    "baseline_oos_after_trim": {
+      "avg_implementable_pnl": 1.773333,
+      "best_day_pnl": 134.44,
+      "loss_count": 19,
+      "loss_rate": 0.633333,
+      "total_cost_drag": 163.8,
+      "total_implementable_pnl": 53.2,
+      "total_mid_pnl": 217.0,
+      "trade_day_count": 30,
+      "win_rate": 0.366667,
+      "worst_day_pnl": -46.56
+    },
+    "big_day_dependency_status": "context_only_no_delayed_pnl",
+    "concentration_status": "concentrated_or_underpowered",
+    "dsr_or_search_log_status": "not_recomputed_no_new_threshold_search",
+    "evidence_tier_cap": "E1",
+    "interpretation": "Risk checks remain context-only because delayed-entry PnL is unavailable.",
+    "mintrl_psr_status": "blocked_underpowered_e1_proxy_only",
+    "retained_oos_after_trim_original_entry_context": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "status": "diagnostic_underpowered"
+  },
+  "robustness_summary": "reports\\experiments\\h_a2_revised_condition_robustness_summary.json",
+  "sample_counts": {
+    "baseline_oos_non_risk_trade_days": 34,
+    "baseline_train_non_risk_trade_days": 30,
+    "daily_rows": 463,
+    "oos_retention_rate": 0.382353,
+    "retained_oos_trade_days": 13,
+    "retained_train_trade_days": 16,
+    "skipped_oos_trade_days": 21,
+    "skipped_train_trade_days": 14
+  },
+  "schema_version": "h_a2_delayed_entry_condition_v1",
+  "signal_attribution_summary": "reports\\experiments\\h_a2_locked_condition_signal_attribution_summary.json",
+  "source_experiment_ids": {
+    "daily_source": "h_a2_lower_resolution_proxy",
+    "revised_summary": "h_a2_revised_opening_followthrough_condition",
+    "robustness_summary": "h_a2_revised_condition_robustness",
+    "signal_attribution": "h_a2_locked_condition_signal_attribution"
+  },
+  "source_preregistration": "experiments\\h_a2_delayed_entry_condition_preregistration.json",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E1 proxy-only diagnostic/prioritization evidence only",
+    "No auditable delayed-entry 09:45 option quote/fill in current local artifacts",
+    "Original 09:35 PnL was not reused and cannot stand in for delayed-entry PnL",
+    "Under-sampled and underpowered retained OOS sample",
+    "No exact 2022-10 ORB replay",
+    "No E2 acceptance claim",
+    "No paper trading, operational validation, or real-money approval"
+  ],
+  "trial_policy": {
+    "dsr_reason": "No threshold, filter, or best-Sharpe search was performed in this delayed-entry diagnostic.",
+    "dsr_status": "not_recomputed_no_new_threshold_search",
+    "new_filter_search_used": false,
+    "oos_tuning_used": false,
+    "search_log": "reports\\experiments\\search_logs\\h_a2_delayed_entry_condition_search_log.jsonl",
+    "threshold_search_allowed": false,
+    "threshold_search_used": false,
+    "trial_count": 0
+  }
+}

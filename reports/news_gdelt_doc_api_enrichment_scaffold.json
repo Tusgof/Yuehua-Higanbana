@@ -1,0 +1,73 @@
+{
+  "decision_note": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\docs\\GDELT_GKG_ENRICHMENT_DECISION_NOTE.md",
+  "decision_time_et": "2024-01-29T09:30:00-05:00",
+  "doc_api_fields_proven_by_scaffold": [
+    "headline_from_title",
+    "url_from_article_url",
+    "source_name_from_domain",
+    "published_at_utc_from_seendate",
+    "fetched_at_utc_from_seendate",
+    "topic_from_pre_registered_project_query"
+  ],
+  "gkg_blockers_preserved": [
+    "gkg_has_no_verified_headline_field",
+    "gkg_publication_time_is_surrogate_not_exact",
+    "gkg_topic_mapping_not_pre_registered"
+  ],
+  "gkg_probe_report": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_gkg_one_file_parser_probe.json",
+  "import_result": {
+    "manifest": {
+      "coverage_end": "2024-01-29",
+      "coverage_start": "2024-01-29",
+      "dataset_id": "news-snapshot-38a7b3d29b69",
+      "ingested_at_et": "2026-07-06T14:00:41+07:00",
+      "license_notes": "Offline fixture snapshot from news source plan. Use archived source snapshots for real research imports.",
+      "provider": "news-snapshot",
+      "raw_sha256": "38a7b3d29b6975bbf5d3dc3f09bdbb86121b252cd11ae4ce85c83edca1a7b5be",
+      "record_type": "data_registry_manifest",
+      "schema_name": "m2_contracts",
+      "schema_version": "m2.0",
+      "schema_version_applied": "m2.0",
+      "source_url": "file://D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\build\\news_gdelt_doc_api_enrichment_scaffold\\gdelt_doc_api_scaffold_snapshot.csv"
+    },
+    "normalized_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\build\\news_gdelt_doc_api_enrichment_scaffold\\canonical_import\\data\\normalized\\spy_0dte\\news\\news_item.jsonl",
+    "record_count": 5,
+    "registry_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\build\\news_gdelt_doc_api_enrichment_scaffold\\canonical_import\\data\\registry\\datasets.jsonl",
+    "topics": [
+      "index_halt_circuit_breaker",
+      "macro_policy_risk",
+      "market_panic",
+      "systemic_banking_stress",
+      "war_escalation"
+    ]
+  },
+  "network_calls": 0,
+  "next_step": "News-Unblock priority is now to evaluate alternative timestamp-clean real-news source paths before any live LLM research. Keep this GDELT DOC API scaffold as the current reference path, but do not wait only on GDELT; compare feasible real headline/body, publication timestamp, fetch/availability timestamp, licensing, parser/import, and decision-time discipline paths.",
+  "not_research_evidence": true,
+  "paid_cost_usd": 0.0,
+  "rejected_paths": [
+    "url_slug_surrogate_headline",
+    "broad_gkg_download_before_enrichment_proof",
+    "source_page_title_scrape_without_point_in_time_policy",
+    "bigquery_or_paid_news_provider_without_user_approval",
+    "live_llm_before_real_timestamp_clean_news_cases"
+  ],
+  "remaining_blockers": [
+    "requires_real_gdelt_doc_api_capture_after_cooldown",
+    "requires_real_news_archive",
+    "requires_news_coverage_audit_pass"
+  ],
+  "scaffold_version": "gdelt-doc-api-enrichment-scaffold-v1",
+  "selected_path": "gdelt_doc_api_topic_requery_after_cooldown",
+  "snapshot_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\build\\news_gdelt_doc_api_enrichment_scaffold\\gdelt_doc_api_scaffold_snapshot.csv",
+  "snapshot_row_count": 5,
+  "status": "scaffold_pass_real_archive_blocked",
+  "timestamp_policy": "For DOC API captures, seendate is treated as the replay-visible timestamp and must be <= decision_time_et. This scaffold proves importer compatibility only; real research still requires archived live capture rows.",
+  "topics": [
+    "index_halt_circuit_breaker",
+    "macro_policy_risk",
+    "market_panic",
+    "systemic_banking_stress",
+    "war_escalation"
+  ]
+}

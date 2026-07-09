@@ -31,7 +31,7 @@ class ReportProjectStateTests(unittest.TestCase):
         state = self.reporter.build_project_state()
 
         self.assertIn(state["status"], {"pass", "blocked", "warning"})
-        self.assertEqual(7, len(state["hypotheses"]))
+        self.assertEqual(8, len(state["hypotheses"]))
         self.assertIn("remaining_before_stop_usd", state["paid_cost"])
         self.assertIn("next_safe_actions", state["readiness"])
         self.assertIn("gdelt_command_plan_status", state["news_gdelt"])

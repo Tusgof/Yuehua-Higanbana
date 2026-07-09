@@ -1,0 +1,341 @@
+{
+  "schema_version": "h_a2_independent_validation_paid_cost_plan_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_independent_validation_paid_cost_plan",
+  "title": "H-A2 narrow independent-validation paid-cost estimate plan preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register the exact narrow Databento cost-estimate scope needed to test H-A2 independent validation gaps before any live metadata cost call, paid download, IBKR request, exact replay, paper trading, or E2 claim.",
+  "source_decision": "reports/diagnostics/h_a2_independent_validation_feasibility.json",
+  "source_decision_summary": "H-A2.36 concluded that no-paid sources can define the validation gap and regime requirements, but cannot add independent implementable SPY 0DTE PnL days. Retained OOS remains 14 trade days, high-VIX retained validation coverage is missing, and MinTRL/PSR acceptance remains unproven.",
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false,
+    "delayed_entry_component_allowed": false
+  },
+  "named_validation_gaps": [
+    {
+      "gap_id": "independent_post_2024_sample",
+      "reason": "Current H-A2 evidence has already inspected 2024 OOS; later data is needed to reduce reuse of the current validation sample."
+    },
+    {
+      "gap_id": "high_vix_retained_bucket",
+      "reason": "H-A2.34/H-A2.36 report no retained high-VIX validation bucket."
+    },
+    {
+      "gap_id": "mintrl_psr_acceptance_path",
+      "reason": "Future reports must compute MinTRL/PSR from the realized validation return distribution before any acceptance claim."
+    }
+  ],
+  "allowed_inputs": [
+    {
+      "input": "h_a2_independent_validation_feasibility_summary",
+      "path": "reports/diagnostics/h_a2_independent_validation_feasibility.json",
+      "use": "control the current validation gaps, cost guard, and next-action decision"
+    },
+    {
+      "input": "paid_cost_audit",
+      "path": "reports/data_cost/paid_cost_audit.json",
+      "use": "record current cost guard and stop conditions before any future provider call"
+    },
+    {
+      "input": "vix_vxv_canonical_history",
+      "path": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+      "use": "select high-VIX and control validation windows without provider calls"
+    },
+    {
+      "input": "macro_calendar_coverage_audit",
+      "path": "reports/macro_calendar_coverage_audit.json",
+      "use": "confirm macro labels are already available for proposed validation windows"
+    },
+    {
+      "input": "existing_q4_2024_dryrun_request_map",
+      "path": "reports/data_cost/databento_cost_oos_2024_q4_completion_intraday_exit_30m_dryrun.json",
+      "use": "reuse the existing request-window pattern for 09:35 entry, intraday checks, and forced close"
+    }
+  ],
+  "forbidden_inputs": [
+    {
+      "input": "live_databento_estimate",
+      "reason": "This preregistration defines the estimate scope only; it must not call provider metadata."
+    },
+    {
+      "input": "paid_databento_download",
+      "reason": "Downloads require a later estimate result and a separate download decision."
+    },
+    {
+      "input": "new_paid_provider",
+      "reason": "The current plan is Databento-only under existing provider policy."
+    },
+    {
+      "input": "ibkr_historical_bars",
+      "reason": "IBKR remains a separate externally blocked data path."
+    },
+    {
+      "input": "live_llm_outputs",
+      "reason": "H-L1 remains blocked until real timestamp-clean news cases exist."
+    },
+    {
+      "input": "gdelt_live_retry",
+      "reason": "News capture remains blocked by its own cooldown/upstream response gate."
+    },
+    {
+      "input": "new_oos_selected_filter",
+      "reason": "The cost plan must not become another OOS tuning pass."
+    }
+  ],
+  "candidate_estimate_batches": [
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "priority": 1,
+      "role": "one-day metadata sanity check before estimating larger packs",
+      "dates": [
+        "2025-04-08"
+      ],
+      "vix_context": {
+        "source": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+        "vix_close": 52.33,
+        "bucket": "vix_above_25"
+      },
+      "estimate_only": true,
+      "download_allowed": false
+    },
+    {
+      "batch_id": "high_vix_validation_pack",
+      "priority": 2,
+      "role": "missing high-VIX retained-bucket validation",
+      "dates": [
+        "2025-04-04",
+        "2025-04-07",
+        "2025-04-08",
+        "2025-04-09",
+        "2025-04-10",
+        "2025-04-11"
+      ],
+      "vix_context": {
+        "source": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+        "bucket": "vix_above_25",
+        "observed_vix_close_range": [
+          33.62,
+          52.33
+        ]
+      },
+      "estimate_only": true,
+      "download_allowed": false
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "priority": 3,
+      "role": "post-2024 low/normal-VIX control validation",
+      "period_start": "2025-02-03",
+      "period_end": "2025-02-14",
+      "expected_trading_days_from_local_vix": 10,
+      "vix_context": {
+        "source": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+        "bucket": "vix_below_25",
+        "observed_vix_close_range": [
+          14.77,
+          18.62
+        ]
+      },
+      "estimate_only": true,
+      "download_allowed": false
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "priority": 4,
+      "role": "post-stress normalizing-VIX control validation",
+      "period_start": "2025-05-05",
+      "period_end": "2025-05-16",
+      "expected_trading_days_from_local_vix": 10,
+      "vix_context": {
+        "source": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+        "bucket": "vix_15_to_25",
+        "observed_vix_close_range": [
+          17.24,
+          24.76
+        ]
+      },
+      "estimate_only": true,
+      "download_allowed": false
+    }
+  ],
+  "required_fields": [
+    {
+      "field_group": "option_entry_quote",
+      "dataset": "OPRA.PILLAR",
+      "schema": "cbbo-1m",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "windows_et": [
+        "09:30-09:40"
+      ],
+      "reason": "Reconstruct auditable 09:35 entry bid/ask and implementable entry price."
+    },
+    {
+      "field_group": "option_exit_quotes",
+      "dataset": "OPRA.PILLAR",
+      "schema": "cbbo-1m",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "windows_et": [
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00",
+        "12:30",
+        "13:00",
+        "13:30",
+        "14:00",
+        "14:30",
+        "15:00",
+        "15:30",
+        "15:45"
+      ],
+      "reason": "Keep implementable PnL, stop/target checks, and 15:45 forced-close handling comparable to existing H-A2 artifacts."
+    },
+    {
+      "field_group": "spy_underlying_bars",
+      "dataset": "EQUS.MINI",
+      "schema": "ohlcv-1m",
+      "symbols": [
+        "SPY"
+      ],
+      "windows_et": [
+        "09:30-16:00"
+      ],
+      "reason": "Reconstruct the 09:35 signal and verify underlying context for candidate days."
+    },
+    {
+      "field_group": "existing_regime_labels",
+      "dataset": "local",
+      "schema": "vix_vxv_and_macro_calendar",
+      "symbols": [
+        "SPY"
+      ],
+      "windows_et": [
+        "prior_close_and_same_day_labels"
+      ],
+      "reason": "Use already-local VIX/VXV and macro labels; do not buy news or LLM inputs for this H-A2 cost plan."
+    }
+  ],
+  "cost_guard_preconditions": {
+    "provider": "Databento",
+    "symbol_scope": "SPY only",
+    "current_cost_guard_used_usd": 119.989706,
+    "stop_threshold_usd": 125.0,
+    "current_remaining_before_stop_usd": 5.010294,
+    "cost_guard_basis": "user_reported_actual_usage",
+    "live_metadata_estimate_allowed_by_this_preregistration": false,
+    "paid_download_allowed_by_this_preregistration": false,
+    "future_live_estimate_may_start_only_if": [
+      "This preregistration validator passes.",
+      "The latest paid-cost audit still reports status pass.",
+      "The latest remaining_before_stop_usd is positive.",
+      "No new paid provider is introduced.",
+      "The future estimate command is metadata/cost-only and writes a report before any download."
+    ],
+    "future_download_forbidden_until": [
+      "A live metadata cost estimate report exists for the selected batch.",
+      "Projected cost remains inside the active cost guard or the user tops up by real payment on the existing Databento account.",
+      "A separate download decision artifact names the selected batch and verifies the guard.",
+      "The download still serves H-A2 independent validation gaps without changing threshold 0.001 or adding an OOS-selected filter."
+    ]
+  },
+  "estimate_sequence_rules": {
+    "first_step": "Estimate sample_cost_probe_high_vix_one_day only.",
+    "second_step": "Estimate high_vix_validation_pack only if the one-day estimate is small enough to keep projected usage inside the guard.",
+    "third_step": "Estimate control packs one at a time only after high-VIX estimate is understood.",
+    "never_estimate": [
+      "broad 2025 calendar",
+      "non-SPY universe",
+      "new paid provider",
+      "LLM or news acquisition mixed into H-A2",
+      "download command"
+    ],
+    "stop_conditions": [
+      "paid-cost audit status is not pass",
+      "remaining_before_stop_usd is not positive",
+      "any projected selected batch would breach the active cost guard",
+      "provider scope changes beyond Databento SPY",
+      "the estimate plan cannot preserve the locked 09:35 signal and threshold 0.001"
+    ]
+  },
+  "future_outputs_if_estimate_runner_is_built": {
+    "cost_plan_json": "reports/data_cost/h_a2_independent_validation_paid_cost_plan.json",
+    "cost_plan_md": "reports/data_cost/h_a2_independent_validation_paid_cost_plan.md",
+    "live_estimate_json": "reports/data_cost/h_a2_independent_validation_paid_cost_estimate.json",
+    "live_estimate_md": "reports/data_cost/h_a2_independent_validation_paid_cost_estimate.md",
+    "download_decision_json_if_later_needed": "experiments/h_a2_independent_validation_paid_download_decision.json"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered narrow paid-cost estimate plan.",
+    "The plan names exact independent validation windows, required fields, and cost guard prerequisites.",
+    "The plan may justify a future metadata-only cost estimate if validators and paid-cost audit pass.",
+    "The plan preserves the locked 09:35-only H-A2 signal and threshold 0.001."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not run exact replay from this preregistration.",
+    "Do not buy paid data from this preregistration.",
+    "Do not call live Databento estimates from this preregistration.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter.",
+    "Do not treat cost-estimate planning as validation evidence."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "live_cost_estimate_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_allowed": false,
+    "threshold_search_allowed": false,
+    "new_filter_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "completion_criteria": [
+    "The preregistration names exact windows before any live cost estimate.",
+    "The preregistration names required fields and provider datasets.",
+    "The preregistration records the current cost guard and future stop conditions.",
+    "The preregistration preserves the 09:35-only signal and threshold 0.001.",
+    "The preregistration forbids paid download, exact replay, paper trading, and E2 claims.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "No live metadata cost estimate yet",
+    "No paid data acquired",
+    "No independent validation PnL days added",
+    "No MinTRL/PSR acceptance path proven",
+    "No E2 acceptance claim"
+  ]
+}

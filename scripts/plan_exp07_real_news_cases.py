@@ -80,6 +80,8 @@ def build_plan(gdelt_plan_path: Path = DEFAULT_GDELT_PLAN_PATH, news_audit_path:
     candidate_queue = [_case_candidate_from_command(command) for command in commands if isinstance(command, dict)]
     captured_count = sum(1 for candidate in candidate_queue if candidate["capture_status"] == "captured")
     news_blockers = [] if news_audit is None else list(news_audit.get("blockers", []))
+    retry_pressure = gdelt_plan.get("retry_pressure", {})
+    collection_status = _collection_status(gdelt_plan, candidate_queue)
 
     blockers = []
     if not candidate_queue:
@@ -92,13 +94,15 @@ def build_plan(gdelt_plan_path: Path = DEFAULT_GDELT_PLAN_PATH, news_audit_path:
     return {
         "plan_version": "exp07-real-news-case-plan-v1",
         "status": "blocked" if blockers else "ready_for_prompt_family_pre_experiment",
-        "collection_status": "ready_to_collect" if candidate_queue else "blocked",
+        "collection_status": collection_status,
         "blockers": blockers,
         "gdelt_plan_path": str(gdelt_plan_path),
+        "gdelt_plan_status": gdelt_plan.get("status", "unknown"),
+        "gdelt_live_retry_allowed": gdelt_plan.get("live_retry_allowed", None),
         "news_audit_path": str(news_audit_path),
         "candidate_day_count": len(candidate_queue),
         "captured_candidate_count": captured_count,
-        "retry_pressure": gdelt_plan.get("retry_pressure", {}),
+        "retry_pressure": retry_pressure,
         "next_unattempted_trade_date": gdelt_plan.get("retry_queue_summary", {}).get("next_unattempted_trade_date"),
         "required_news_fields": REQUIRED_NEWS_FIELDS,
         "required_case_groups": REQUIRED_CASE_GROUPS,
@@ -111,7 +115,7 @@ def build_plan(gdelt_plan_path: Path = DEFAULT_GDELT_PLAN_PATH, news_audit_path:
             "requires_costed_live_rows": True,
             "strategy_ablation_required_after_prompt_pass": True,
         },
-        "next_step": _next_step(gdelt_plan.get("retry_pressure", {}), blockers),
+        "next_step": _next_step(retry_pressure, blockers),
     }
 
 
@@ -124,6 +128,8 @@ def write_reports(result: dict[str, Any], json_output: Path = DEFAULT_JSON_OUTPU
         "",
         f"- Status: `{result['status']}`",
         f"- Collection status: `{result['collection_status']}`",
+        f"- GDELT plan status: `{result.get('gdelt_plan_status', 'unknown')}`",
+        f"- GDELT live retry allowed: `{result.get('gdelt_live_retry_allowed')}`",
         f"- Candidate days: `{result['candidate_day_count']}`",
         f"- Captured candidate days: `{result['captured_candidate_count']}`",
         f"- Retry pressure: `{result.get('retry_pressure', {}).get('status', 'unknown')}`",
@@ -171,6 +177,14 @@ def _case_candidate_from_command(command: dict[str, Any]) -> dict[str, Any]:
         "status_output_path": str(command.get("status_output_path", "")),
         "planned_case_groups": REQUIRED_CASE_GROUPS,
     }
+
+
+def _collection_status(gdelt_plan: dict[str, Any], candidate_queue: list[dict[str, Any]]) -> str:
+    if not candidate_queue:
+        return "blocked"
+    if gdelt_plan.get("status") == "blocked_cooldown" or gdelt_plan.get("live_retry_allowed") is False:
+        return "blocked_cooldown"
+    return "ready_to_collect"
 
 
 def _next_step(retry_pressure: dict[str, Any], blockers: list[str]) -> str:

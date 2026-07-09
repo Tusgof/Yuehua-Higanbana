@@ -1,0 +1,789 @@
+{
+  "decision": {
+    "conclusion": "ยังสรุปไม่ได้",
+    "next_safe_action": "Do not use NOVI/net-gamma as a strategy filter yet. Review the bucket policy because the failed row-rate cells are driven by opposite-right ITM rows inside moneyness-only buckets; then choose between a pre-registered side-aware bucket gate, an OI/gamma-notional gate, or another replacement/repair path.",
+    "status": "diagnostic_complete_h_g1_still_blocked"
+  },
+  "evidence_tier": "E1",
+  "failed_bucket_count": 5,
+  "failed_buckets": [
+    {
+      "blocked_count": 12,
+      "blocked_intrinsic_relation_counts": {
+        "below_intrinsic": 12
+      },
+      "blocked_mid_minus_intrinsic": {
+        "max": -0.04,
+        "median": -0.255,
+        "min": -0.265
+      },
+      "blocked_moneyness": {
+        "max": 1.029687,
+        "median": 1.017429,
+        "min": 1.005171
+      },
+      "blocked_side_alignment_counts": {
+        "opposite_right_for_bucket": 12
+      },
+      "blocked_spread": {
+        "max": 0.13,
+        "median": 0.115,
+        "min": 0.02
+      },
+      "blocked_spread_pct_mid": {
+        "max": 0.02934,
+        "median": 0.012532,
+        "min": 0.008772
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 12
+      },
+      "bucket": "otm_call",
+      "computed_abs_gamma_proxy": 228857651.666635,
+      "computed_count": 12,
+      "computed_oi_notional_share": 0.939224,
+      "computed_oi_notional_sum": 5973546048.0,
+      "computed_rate": 0.5,
+      "date": "2023-08-09",
+      "mid_minus_intrinsic": {
+        "max": 0.245,
+        "median": -0.0175,
+        "min": -0.265
+      },
+      "moneyness": {
+        "max": 1.029687,
+        "median": 1.017429,
+        "min": 1.005171
+      },
+      "oi_notional_sum": 6360083868.0,
+      "retained_abs_gamma_proxy_share": 1.0,
+      "row_count": 24,
+      "side_alignment_counts": {
+        "expected_right_for_bucket": 12,
+        "opposite_right_for_bucket": 12
+      },
+      "snapshot_timestamp_counts": {
+        "2023-08-09T09:35:00-04:00": 24
+      },
+      "spread": {
+        "max": 0.13,
+        "median": 0.015,
+        "min": 0.01
+      },
+      "spread_pct_mid": {
+        "max": 2.0,
+        "median": 0.035078,
+        "min": 0.008772
+      },
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 12,
+        "computed_with_caveats": 12
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "ask": 2.29,
+          "bid": 2.27,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 2.28,
+          "mid_minus_intrinsic": -0.04,
+          "moneyness": 1.005171,
+          "oi_notional": 129982596.0,
+          "open_interest": 2897,
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.008772,
+          "strike": 451.0
+        },
+        {
+          "ask": 4.15,
+          "bid": 4.03,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 4.09,
+          "mid_minus_intrinsic": -0.23,
+          "moneyness": 1.009628,
+          "oi_notional": 114233928.0,
+          "open_interest": 2546,
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.02934,
+          "strike": 453.0
+        },
+        {
+          "ask": 3.15,
+          "bid": 3.12,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 3.135,
+          "mid_minus_intrinsic": -0.185,
+          "moneyness": 1.007399,
+          "oi_notional": 97408428.0,
+          "open_interest": 2171,
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.009569,
+          "strike": 452.0
+        },
+        {
+          "ask": 6.12,
+          "bid": 6.01,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 6.065,
+          "mid_minus_intrinsic": -0.255,
+          "moneyness": 1.014086,
+          "oi_notional": 21043092.0,
+          "open_interest": 469,
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.018137,
+          "strike": 455.0
+        },
+        {
+          "ask": 5.13,
+          "bid": 5.01,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 5.07,
+          "mid_minus_intrinsic": -0.25,
+          "moneyness": 1.011857,
+          "oi_notional": 15658932.0,
+          "open_interest": 349,
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.023669,
+          "strike": 454.0
+        }
+      ]
+    },
+    {
+      "blocked_count": 10,
+      "blocked_intrinsic_relation_counts": {
+        "below_intrinsic": 10
+      },
+      "blocked_mid_minus_intrinsic": {
+        "max": -0.06,
+        "median": -0.165,
+        "min": -0.175
+      },
+      "blocked_moneyness": {
+        "max": 0.990985,
+        "median": 0.980919,
+        "min": 0.970852
+      },
+      "blocked_side_alignment_counts": {
+        "opposite_right_for_bucket": 10
+      },
+      "blocked_spread": {
+        "max": 0.15,
+        "median": 0.15,
+        "min": 0.14
+      },
+      "blocked_spread_pct_mid": {
+        "max": 0.035264,
+        "median": 0.017996,
+        "min": 0.011669
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 10
+      },
+      "bucket": "otm_put",
+      "computed_abs_gamma_proxy": 154462379.674885,
+      "computed_count": 12,
+      "computed_oi_notional_share": 0.880098,
+      "computed_oi_notional_sum": 5736959505.0,
+      "computed_rate": 0.545455,
+      "date": "2023-09-13",
+      "mid_minus_intrinsic": {
+        "max": 0.205,
+        "median": 0.005,
+        "min": -0.175
+      },
+      "moneyness": {
+        "max": 0.993222,
+        "median": 0.982037,
+        "min": 0.970852
+      },
+      "oi_notional_sum": 6518546757.0,
+      "retained_abs_gamma_proxy_share": 1.0,
+      "row_count": 22,
+      "side_alignment_counts": {
+        "expected_right_for_bucket": 11,
+        "opposite_right_for_bucket": 11
+      },
+      "snapshot_timestamp_counts": {
+        "2023-09-13T09:35:00-04:00": 22
+      },
+      "spread": {
+        "max": 0.15,
+        "median": 0.05,
+        "min": 0.01
+      },
+      "spread_pct_mid": {
+        "max": 2.0,
+        "median": 0.042022,
+        "min": 0.011669
+      },
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 10,
+        "computed_with_caveats": 12
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "ask": 6.95,
+          "bid": 6.8,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 6.875,
+          "mid_minus_intrinsic": -0.155,
+          "moneyness": 0.984274,
+          "oi_notional": 589274946.0,
+          "open_interest": 13182,
+          "quote_timestamp_et": "2023-09-13T09:35:00-04:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.021818,
+          "strike": 440.0
+        },
+        {
+          "ask": 4.04,
+          "bid": 3.9,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 3.97,
+          "mid_minus_intrinsic": -0.06,
+          "moneyness": 0.990985,
+          "oi_notional": 109164726.0,
+          "open_interest": 2442,
+          "quote_timestamp_et": "2023-09-13T09:35:00-04:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.035264,
+          "strike": 443.0
+        },
+        {
+          "ask": 4.99,
+          "bid": 4.85,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 4.92,
+          "mid_minus_intrinsic": -0.11,
+          "moneyness": 0.988748,
+          "oi_notional": 39696264.0,
+          "open_interest": 888,
+          "quote_timestamp_et": "2023-09-13T09:35:00-04:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.028455,
+          "strike": 442.0
+        },
+        {
+          "ask": 5.97,
+          "bid": 5.82,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 5.895,
+          "mid_minus_intrinsic": -0.135,
+          "moneyness": 0.986511,
+          "oi_notional": 27358236.0,
+          "open_interest": 612,
+          "quote_timestamp_et": "2023-09-13T09:35:00-04:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.025445,
+          "strike": 441.0
+        },
+        {
+          "ask": 7.94,
+          "bid": 7.79,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 7.865,
+          "mid_minus_intrinsic": -0.165,
+          "moneyness": 0.982037,
+          "oi_notional": 5140845.0,
+          "open_interest": 115,
+          "quote_timestamp_et": "2023-09-13T09:35:00-04:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.019072,
+          "strike": 439.0
+        }
+      ]
+    },
+    {
+      "blocked_count": 11,
+      "blocked_intrinsic_relation_counts": {
+        "below_intrinsic": 10,
+        "near_intrinsic": 1
+      },
+      "blocked_mid_minus_intrinsic": {
+        "max": 0.015,
+        "median": -0.09,
+        "min": -0.185
+      },
+      "blocked_moneyness": {
+        "max": 0.992941,
+        "median": 0.98231,
+        "min": 0.971679
+      },
+      "blocked_side_alignment_counts": {
+        "opposite_right_for_bucket": 11
+      },
+      "blocked_spread": {
+        "max": 0.71,
+        "median": 0.55,
+        "min": 0.11
+      },
+      "blocked_spread_pct_mid": {
+        "max": 0.095238,
+        "median": 0.05379,
+        "min": 0.030552
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 11
+      },
+      "bucket": "otm_put",
+      "computed_abs_gamma_proxy": 55690353.672409,
+      "computed_count": 6,
+      "computed_oi_notional_share": 0.906923,
+      "computed_oi_notional_sum": 1574161040.0,
+      "computed_rate": 0.352941,
+      "date": "2024-01-03",
+      "mid_minus_intrinsic": {
+        "max": 0.155,
+        "median": -0.05,
+        "min": -0.185
+      },
+      "moneyness": {
+        "max": 0.992941,
+        "median": 0.984436,
+        "min": 0.971679
+      },
+      "oi_notional_sum": 1735715960.0,
+      "retained_abs_gamma_proxy_share": 1.0,
+      "row_count": 17,
+      "side_alignment_counts": {
+        "expected_right_for_bucket": 6,
+        "opposite_right_for_bucket": 11
+      },
+      "snapshot_timestamp_counts": {
+        "2024-01-03T09:35:00-05:00": 17
+      },
+      "spread": {
+        "max": 0.71,
+        "median": 0.47,
+        "min": 0.01
+      },
+      "spread_pct_mid": {
+        "max": 0.666667,
+        "median": 0.077384,
+        "min": 0.030552
+      },
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 11,
+        "computed_with_caveats": 6
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "ask": 5.52,
+          "bid": 5.05,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 5.285,
+          "mid_minus_intrinsic": -0.035,
+          "moneyness": 0.988689,
+          "oi_notional": 117721096.0,
+          "open_interest": 2503,
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.088931,
+          "strike": 465.0
+        },
+        {
+          "ask": 3.39,
+          "bid": 3.28,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 3.335,
+          "mid_minus_intrinsic": 0.015,
+          "moneyness": 0.992941,
+          "oi_notional": 22528328.0,
+          "open_interest": 479,
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.032984,
+          "strike": 467.0
+        },
+        {
+          "ask": 10.5,
+          "bid": 9.95,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 10.225,
+          "mid_minus_intrinsic": -0.095,
+          "moneyness": 0.978057,
+          "oi_notional": 8277632.0,
+          "open_interest": 176,
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.05379,
+          "strike": 460.0
+        },
+        {
+          "ask": 4.32,
+          "bid": 4.19,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 4.255,
+          "mid_minus_intrinsic": -0.065,
+          "moneyness": 0.990815,
+          "oi_notional": 6772608.0,
+          "open_interest": 144,
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.030552,
+          "strike": 466.0
+        },
+        {
+          "ask": 8.44,
+          "bid": 7.83,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 8.135,
+          "mid_minus_intrinsic": -0.185,
+          "moneyness": 0.98231,
+          "oi_notional": 1881280.0,
+          "open_interest": 40,
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.074985,
+          "strike": 462.0
+        }
+      ]
+    },
+    {
+      "blocked_count": 9,
+      "blocked_intrinsic_relation_counts": {
+        "below_intrinsic": 9
+      },
+      "blocked_mid_minus_intrinsic": {
+        "max": -0.08,
+        "median": -0.12,
+        "min": -0.135
+      },
+      "blocked_moneyness": {
+        "max": 1.029467,
+        "median": 1.014356,
+        "min": 1.0068
+      },
+      "blocked_side_alignment_counts": {
+        "opposite_right_for_bucket": 9
+      },
+      "blocked_spread": {
+        "max": 0.37,
+        "median": 0.36,
+        "min": 0.12
+      },
+      "blocked_spread_pct_mid": {
+        "max": 0.069429,
+        "median": 0.042453,
+        "min": 0.02391
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 9
+      },
+      "bucket": "otm_call",
+      "computed_abs_gamma_proxy": 50454029.667425,
+      "computed_count": 9,
+      "computed_oi_notional_share": 0.984773,
+      "computed_oi_notional_sum": 2923823260.0,
+      "computed_rate": 0.5,
+      "date": "2024-05-21",
+      "mid_minus_intrinsic": {
+        "max": 0.025,
+        "median": -0.0375,
+        "min": -0.135
+      },
+      "moneyness": {
+        "max": 1.029467,
+        "median": 1.014356,
+        "min": 1.0068
+      },
+      "oi_notional_sum": 2969034020.0,
+      "retained_abs_gamma_proxy_share": 1.0,
+      "row_count": 18,
+      "side_alignment_counts": {
+        "expected_right_for_bucket": 9,
+        "opposite_right_for_bucket": 9
+      },
+      "snapshot_timestamp_counts": {
+        "2024-05-21T09:35:00-04:00": 18
+      },
+      "spread": {
+        "max": 0.37,
+        "median": 0.065,
+        "min": 0.01
+      },
+      "spread_pct_mid": {
+        "max": 2.0,
+        "median": 0.234714,
+        "min": 0.02391
+      },
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 9,
+        "computed_with_caveats": 9
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "ask": 3.58,
+          "bid": 3.46,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 3.52,
+          "mid_minus_intrinsic": -0.08,
+          "moneyness": 1.0068,
+          "oi_notional": 32769860.0,
+          "open_interest": 619,
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.034091,
+          "strike": 533.0
+        },
+        {
+          "ask": 4.62,
+          "bid": 4.31,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 4.465,
+          "mid_minus_intrinsic": -0.135,
+          "moneyness": 1.008689,
+          "oi_notional": 5558700.0,
+          "open_interest": 105,
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.069429,
+          "strike": 534.0
+        },
+        {
+          "ask": 6.66,
+          "bid": 6.3,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 6.48,
+          "mid_minus_intrinsic": -0.12,
+          "moneyness": 1.012467,
+          "oi_notional": 3070520.0,
+          "open_interest": 58,
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.055556,
+          "strike": 536.0
+        },
+        {
+          "ask": 10.66,
+          "bid": 10.3,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 10.48,
+          "mid_minus_intrinsic": -0.12,
+          "moneyness": 1.020023,
+          "oi_notional": 1482320.0,
+          "open_interest": 28,
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.034351,
+          "strike": 540.0
+        },
+        {
+          "ask": 5.66,
+          "bid": 5.3,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 5.48,
+          "mid_minus_intrinsic": -0.12,
+          "moneyness": 1.010578,
+          "oi_notional": 1376440.0,
+          "open_interest": 26,
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.065693,
+          "strike": 535.0
+        }
+      ]
+    },
+    {
+      "blocked_count": 13,
+      "blocked_intrinsic_relation_counts": {
+        "below_intrinsic": 13
+      },
+      "blocked_mid_minus_intrinsic": {
+        "max": -0.075,
+        "median": -0.245,
+        "min": -0.25
+      },
+      "blocked_moneyness": {
+        "max": 1.028929,
+        "median": 1.018988,
+        "min": 1.009047
+      },
+      "blocked_side_alignment_counts": {
+        "opposite_right_for_bucket": 13
+      },
+      "blocked_spread": {
+        "max": 0.29,
+        "median": 0.28,
+        "min": 0.09
+      },
+      "blocked_spread_pct_mid": {
+        "max": 0.027397,
+        "median": 0.020401,
+        "min": 0.01512
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 13
+      },
+      "bucket": "otm_call",
+      "computed_abs_gamma_proxy": 147541812.650597,
+      "computed_count": 17,
+      "computed_oi_notional_share": 0.965892,
+      "computed_oi_notional_sum": 5322196782.0,
+      "computed_rate": 0.566667,
+      "date": "2024-12-18",
+      "mid_minus_intrinsic": {
+        "max": 0.475,
+        "median": 0.005,
+        "min": -0.25
+      },
+      "moneyness": {
+        "max": 1.028929,
+        "median": 1.017331,
+        "min": 1.005733
+      },
+      "oi_notional_sum": 5510139138.0,
+      "retained_abs_gamma_proxy_share": 1.0,
+      "row_count": 30,
+      "side_alignment_counts": {
+        "expected_right_for_bucket": 15,
+        "opposite_right_for_bucket": 15
+      },
+      "snapshot_timestamp_counts": {
+        "2024-12-18T09:35:00-05:00": 30
+      },
+      "spread": {
+        "max": 0.29,
+        "median": 0.02,
+        "min": 0.01
+      },
+      "spread_pct_mid": {
+        "max": 2.0,
+        "median": 0.026628,
+        "min": 0.006659
+      },
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 13,
+        "computed_with_caveats": 17
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "ask": 5.43,
+          "bid": 5.34,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 5.385,
+          "mid_minus_intrinsic": -0.075,
+          "moneyness": 1.009047,
+          "oi_notional": 124087824.0,
+          "open_interest": 2056,
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.016713,
+          "strike": 609.0
+        },
+        {
+          "ask": 6.37,
+          "bid": 6.26,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 6.315,
+          "mid_minus_intrinsic": -0.145,
+          "moneyness": 1.010704,
+          "oi_notional": 52870104.0,
+          "open_interest": 876,
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.017419,
+          "strike": 610.0
+        },
+        {
+          "ask": 7.33,
+          "bid": 7.22,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 7.275,
+          "mid_minus_intrinsic": -0.185,
+          "moneyness": 1.01236,
+          "oi_notional": 4586904.0,
+          "open_interest": 76,
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.01512,
+          "strike": 611.0
+        },
+        {
+          "ask": 9.37,
+          "bid": 9.17,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 9.27,
+          "mid_minus_intrinsic": -0.19,
+          "moneyness": 1.015674,
+          "oi_notional": 1931328.0,
+          "open_interest": 32,
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.021575,
+          "strike": 613.0
+        },
+        {
+          "ask": 8.38,
+          "bid": 8.18,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket",
+          "mid": 8.28,
+          "mid_minus_intrinsic": -0.18,
+          "moneyness": 1.014017,
+          "oi_notional": 1569204.0,
+          "open_interest": 26,
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "side_alignment": "opposite_right_for_bucket",
+          "spread_pct_mid": 0.024155,
+          "strike": 612.0
+        }
+      ]
+    }
+  ],
+  "hypothesis_id": "H-G1",
+  "network_used": false,
+  "paid_data_used": false,
+  "record_type": "h_g1_manifest_v3_bucket_failure_diagnostic",
+  "research_log_path": "research_log/016-higanbana-gamma-oi-v3-bucket-policy-diagnostic.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-gamma-oi-v3-bucket-policy-diagnostic",
+  "schema_version": "h_g1_manifest_v3_bucket_failure_diagnostic_v1",
+  "source_diagnostic_summary": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\diagnostics\\h_g1_gamma_regime_diagnostic_summary_v3.json",
+  "source_input_jsonl": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\derived\\spy_0dte\\h_g1_gamma_regime\\option_quote_enriched_manifest_v3_snapshot.jsonl",
+  "summary": {
+    "all_failed_buckets_are_bracket_blocks": true,
+    "blocked_rows_in_failed_buckets": 55,
+    "high_notional_failure_count": 5,
+    "minimum_failed_bucket_computed_oi_notional_share": 0.880098,
+    "minimum_failed_bucket_gamma_proxy_share": 1.0,
+    "opposite_right_blocked_row_share": 1.0,
+    "opposite_right_blocked_rows": 55,
+    "primary_diagnosis": "All blocked rows inside failed buckets are opposite-right ITM options created by moneyness-only buckets. The failure is primarily a bucket-definition/policy problem, not an OI join or timestamp problem.",
+    "weak_notional_failure_count": 0
+  },
+  "tier_blockers": [
+    "E1 diagnostic only",
+    "No strategy backtest acceptance",
+    "H-G1 policy gate still blocked"
+  ],
+  "total_rows": 2822
+}

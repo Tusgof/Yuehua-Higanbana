@@ -29,7 +29,9 @@ class PlanExp07RealNewsCasesTests(unittest.TestCase):
         result = self.planner.build_plan()
 
         self.assertEqual("blocked", result["status"])
-        self.assertEqual("ready_to_collect", result["collection_status"])
+        self.assertEqual("blocked_cooldown", result["collection_status"])
+        self.assertEqual("blocked_cooldown", result["gdelt_plan_status"])
+        self.assertFalse(result["gdelt_live_retry_allowed"])
         self.assertEqual(71, result["candidate_day_count"])
         self.assertEqual(0, result["captured_candidate_count"])
         self.assertIn("requires_real_timestamp_clean_news_cases", result["blockers"])
@@ -65,6 +67,7 @@ class PlanExp07RealNewsCasesTests(unittest.TestCase):
             result = self.planner.build_plan(gdelt_plan_path, news_audit_path)
 
         self.assertEqual("ready_for_prompt_family_pre_experiment", result["status"])
+        self.assertEqual("ready_to_collect", result["collection_status"])
         self.assertEqual([], result["blockers"])
         self.assertEqual(1, result["captured_candidate_count"])
         self.assertEqual("in_sample", result["candidate_queue"][0]["split"])
@@ -80,7 +83,9 @@ class PlanExp07RealNewsCasesTests(unittest.TestCase):
             result = json.loads(output_path.read_text(encoding="utf-8"))
             report = report_path.read_text(encoding="utf-8")
             self.assertEqual("blocked", result["status"])
+            self.assertEqual("blocked_cooldown", result["collection_status"])
             self.assertIn("Exp07 Real News Case Plan", report)
+            self.assertIn("Collection status: `blocked_cooldown`", report)
             self.assertIn("structured_json_classifier", report)
             self.assertIn("requires_real_timestamp_clean_news_cases", report)
 

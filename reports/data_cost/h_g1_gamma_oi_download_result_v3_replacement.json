@@ -1,0 +1,74 @@
+{
+  "blockers": [],
+  "cost_gate_decision": {
+    "blockers": [],
+    "download_allowed_under_current_guard": true,
+    "reason": "Estimated H-G1 OI cost $0.384999 fits within remaining headroom $15.917773.",
+    "status": "pass"
+  },
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "remaining_before_stop_usd": 15.917773,
+    "status": "pass",
+    "stop_threshold_usd": 125.0,
+    "used_usd": 109.082227
+  },
+  "download_performed": true,
+  "execution": {
+    "cache_count": 0,
+    "downloaded_count": 1,
+    "downloads": [
+      {
+        "bytes": 2971020,
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-09-13",
+        "end": "2023-09-14T00:00:00+00:00",
+        "estimated_cost_usd": 0.384999,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "raw_path": "data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_v3_replacement\\2023-09-13_full_utc_day_statistics.dbn.zst",
+        "schema": "statistics",
+        "sha256": "447d70eee13c9ebff73c09d16546698fb0f634c1f7961bca54bb6eacdb77e357",
+        "source": "downloaded",
+        "start": "2023-09-13T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-09-13_full_utc_day_statistics"
+      }
+    ],
+    "errors": [],
+    "total_bytes": 2971020
+  },
+  "hypothesis_id": "H-G1",
+  "mode": "download_complete",
+  "paid_cost_audit_before_download": {
+    "cost_guard_basis": "user_reported_actual_usage",
+    "cost_guard_used_usd": 109.082227,
+    "remaining_before_stop_usd": 15.917773,
+    "status": "pass"
+  },
+  "request_count": 1,
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-09-13",
+      "end": "2023-09-14T00:00:00+00:00",
+      "estimated_cost_usd": 0.384999,
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_g1_gamma_oi_v3_replacement\\2023-09-13_full_utc_day_statistics.dbn.zst",
+      "schema": "statistics",
+      "start": "2023-09-13T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-09-13_full_utc_day_statistics"
+    }
+  ],
+  "scenario": "h_g1_gamma_oi_v3_replacement",
+  "schema_version": "h_g1_gamma_oi_download_result_v1",
+  "source_cost_report": "reports\\data_cost\\h_g1_gamma_oi_v3_replacement_cost_estimate.json",
+  "status": "pass",
+  "total_estimated_cost_usd": 0.384999
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "h_g1_gamma_regime_date_set_preregistration_v3_plan",
+  "hypothesis_id": "H-G1",
+  "created_at": "2026-07-03",
+  "status": "plan_only_no_paid_data",
+  "supersedes": "experiments/h_g1_gamma_regime_date_set_preregistration_v2.json",
+  "source_decision": "reports/diagnostics/h_g1_policy_manifest_decision.json",
+  "policy_review_artifact": "docs/H_G1_POLICY_V2_1_REVIEW.md",
+  "purpose": "Pre-register the replacement-date decision rules required after H-G1.9 rejected policy revision alone. This plan must be converted into a concrete v3 manifest before any new OPRA OI purchase.",
+  "data_policy": {
+    "symbol_universe": [
+      "SPY"
+    ],
+    "network_used_to_create_plan": false,
+    "paid_data_used_to_create_plan": false,
+    "new_paid_data_allowed_after_validation": true,
+    "paid_action_before_concrete_manifest_validation": "forbidden",
+    "broad_calendar_purchase": "forbidden",
+    "purchase_scope": "At most one replacement full UTC day of OPRA statistics/OI for the validated v3 manifest unless a later audit proves more than one replacement is required.",
+    "requires_metadata_cost_check_before_download": true,
+    "cost_guard": {
+      "working_usage_usd": 109.082227,
+      "stop_threshold_usd": 125.0,
+      "remaining_headroom_usd": 15.917773
+    }
+  },
+  "blocked_bucket_to_repair": {
+    "date": "2023-07-12",
+    "bucket": "otm_put",
+    "computed_oi_notional_share": 0.662545,
+    "minimum_required_computed_oi_notional_share": 0.8,
+    "source": "reports/diagnostics/h_g1_policy_manifest_decision.json",
+    "replacement_required": true
+  },
+  "replacement_objective": {
+    "remove_date": "2023-07-12",
+    "replacement_count": 1,
+    "target_split": "in_sample",
+    "target_volatility_bucket": "low",
+    "target_high_importance_macro": true,
+    "preferred_macro_events": [
+      "CPI",
+      "PCE",
+      "FOMC_DECISION",
+      "JOLTS"
+    ],
+    "reason": "Removing 2023-07-12 without replacement would reduce in_sample count below 4 and high_importance_macro count below 4. A low-volatility in-sample macro replacement preserves the v2 regime balance while avoiding post-hoc gamma-result selection."
+  },
+  "candidate_selection_rules": {
+    "allowed_window": {
+      "start": "2023-03-28",
+      "end": "2023-12-31",
+      "reason": "Databento EQUS.MINI SPY bars are unavailable before 2023-03-28; v3 replacement must remain in the original in-sample period."
+    },
+    "must_have_before_metadata_cost_check": [
+      "local option quote cache present",
+      "local SPY 1-minute bar cache present",
+      "official macro calendar label available",
+      "VIX close label available",
+      "not already used in H-G1 v1 or v2 diagnostics",
+      "no gamma/OI result viewed for the candidate date"
+    ],
+    "ranking_order_before_oi_purchase": [
+      "same macro event family as removed date, preferably CPI",
+      "lowest absolute deviation from removed date VIX close 13.54 while staying in low-volatility bucket",
+      "same split in_sample",
+      "earliest calendar date after 2023-03-28 if still tied"
+    ],
+    "forbidden_selection_inputs": [
+      "computed gamma proxy",
+      "computed IV/gamma success rate",
+      "future OI coverage result",
+      "strategy PnL",
+      "post-decision realized volatility"
+    ]
+  },
+  "concrete_manifest_requirements": {
+    "schema_version": "h_g1_gamma_regime_date_set_preregistration_v3",
+    "total_dates": 10,
+    "minimum_regime_counts": {
+      "low_volatility": 3,
+      "normal_volatility": 3,
+      "high_volatility": 3,
+      "high_importance_macro": 4,
+      "no_high_importance_macro": 4,
+      "in_sample": 4,
+      "oos": 4,
+      "unique_calendar_months": 6
+    },
+    "must_preserve_dates_from_v2_except_removed_date": true,
+    "must_record_candidate_ranking_table": true,
+    "must_validate_before_paid_oi": true
+  },
+  "post_manifest_sequence": [
+    "Create concrete v3 manifest using only candidate-selection rules in this plan.",
+    "Run manifest validator and paid-cost audit.",
+    "Run live metadata cost estimate for the single replacement OI day only.",
+    "Download replacement OPRA statistics/OI only if cost guard passes.",
+    "Rerun H-G1 enrichment/diagnostic under the review-only v2.1 coverage rule.",
+    "Keep H-G1 diagnostic-only unless all gates pass and later MinTRL/PSR strategy evidence exists."
+  ],
+  "forbidden_claims": [
+    "H-G1 coverage pass",
+    "NOVI/net-gamma strategy filter readiness",
+    "true market-maker net gamma",
+    "v2.1 policy adoption",
+    "paid data approval before concrete v3 manifest validation"
+  ]
+}

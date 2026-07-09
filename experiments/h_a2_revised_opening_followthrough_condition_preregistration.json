@@ -1,0 +1,181 @@
+{
+  "schema_version": "h_a2_revised_opening_followthrough_condition_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_revised_opening_followthrough_condition",
+  "title": "H-A2 revised opening-followthrough condition preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register the revised H-A2 condition before any exact replay, paid data, IBKR request, LLM call, paper trading, or new deployable filter claim.",
+  "source_decision": "reports/diagnostics/h_a2_residual_adverse_day_analysis.json",
+  "source_decision_summary": "H-A2.22 found the current macro/VIX clean-risk split is too coarse. Non-risk losses remain common and 30 of 40 non-risk losing days have negative 5-minute followthrough, so H-A2 must be revised before exact replay.",
+  "hypothesis": "A macro-conditioned ORB edge, if real, should require both a clean macro/VIX regime and a minimum opening-followthrough confirmation after the first 5-minute opening range. The revised condition should reduce residual non-risk losses without being selected from OOS outcomes.",
+  "research_question": "Can H-A2 be restated as a narrower, falsifiable opening-followthrough condition using only in-sample design evidence, while preserving chronological discipline and preventing OOS tuning?",
+  "source_artifacts": {
+    "h_a2_residual_adverse_day_analysis": "reports/diagnostics/h_a2_residual_adverse_day_analysis.json",
+    "h_a2_residual_adverse_day_report": "reports/diagnostics/h_a2_residual_adverse_day_analysis.md",
+    "h_a2_residual_adverse_day_search_log": "reports/diagnostics/search_logs/h_a2_residual_adverse_day_analysis_search_log.jsonl",
+    "h_a2_residual_adverse_day_preregistration": "experiments/h_a2_residual_adverse_day_analysis_preregistration.json",
+    "h_a2_proxy_first_robustness_summary": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "h_l1_macro_event_proxy_baseline_summary": "reports/experiments/h_l1_macro_event_proxy_baseline_summary.json",
+    "hypothesis_registry": "experiments/hypothesis_registry.json",
+    "wiki_spy_zero_dte_orb": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_regime_filtering": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md"
+  },
+  "revised_condition_design": {
+    "base_condition": "Retain the H-A2 deterministic macro/VIX clean-risk concept as a necessary condition, not a sufficient condition.",
+    "new_condition_family": "opening_followthrough_confirmation",
+    "candidate_condition_source": "Use H-A2.22 diagnostic evidence only to define the family of checks. Do not select the final threshold from OOS outcomes.",
+    "allowed_in_sample_candidate_checks": [
+      "5-minute followthrough sign agrees with the ORB direction",
+      "15-minute followthrough sign is not adverse or absent when 5-minute followthrough is weak",
+      "opening followthrough magnitude exceeds a pre-registered train-only threshold",
+      "skip ambiguous days where 5-minute and 15-minute proxies conflict"
+    ],
+    "forbidden_design_moves": [
+      "Do not choose the final threshold from OOS PnL.",
+      "Do not add macro-event subfilters from OOS losses without a separate preregistration.",
+      "Do not treat 5-minute proxy checks as exact 2022-10 ORB replay.",
+      "Do not convert this preregistration into a paper-trading approval."
+    ]
+  },
+  "planned_future_tests": [
+    {
+      "test_id": "train_only_threshold_lock",
+      "question": "Which opening-followthrough threshold, if any, can be locked using in-sample data only?",
+      "minimum_output": [
+        "candidate_threshold_grid",
+        "train_only_selection_rule",
+        "trial_count",
+        "search_log",
+        "dsr_or_no_best_sharpe_policy"
+      ]
+    },
+    {
+      "test_id": "chronological_oos_holdout_check",
+      "question": "After the train-only condition is locked, does OOS performance improve without tuning on OOS?",
+      "minimum_output": [
+        "in_sample_trade_count",
+        "oos_trade_count",
+        "oos_implementable_pnl",
+        "oos_loss_rate",
+        "oos_cost_drag",
+        "under_sampled_underpowered_labels"
+      ]
+    },
+    {
+      "test_id": "residual_loss_reduction_check",
+      "question": "Does the revised condition reduce non-risk residual losses identified in H-A2.22?",
+      "minimum_output": [
+        "baseline_non_risk_loss_count",
+        "revised_condition_loss_count",
+        "skipped_trade_count",
+        "largest_remaining_losses",
+        "big_day_dependency_context"
+      ]
+    },
+    {
+      "test_id": "mechanism_consistency_check",
+      "question": "Is the revised condition logically consistent with ORB as intraday momentum rather than a fitted blacklist?",
+      "minimum_output": [
+        "condition_rationale",
+        "failure_modes",
+        "what_would_falsify_the_revised_condition",
+        "exact_replay_blockers_remaining",
+        "next_safe_action"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "train_or_design_period": "2023-03-28 to 2023-12-31",
+    "oos_period": "2024-01-01 to 2024-12-31",
+    "thresholds_fit_only_on_train": true,
+    "result_must_report_split_counts": true
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_condition": true,
+    "trade_count_after_filter_required": true,
+    "mintrl_psr_required_if_return_or_trade_series_exists": true,
+    "under_sampled_label_required_below_mintrl": true,
+    "underpowered_label_required_when_power_is_insufficient": true,
+    "dsr_or_search_log_required_for_threshold_grid": true,
+    "big_day_dependency_context_required": true,
+    "mid_vs_implementable_required_if_option_pnl_exists": true,
+    "benchmark_or_baseline_comparison_required": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "run_local_revised_condition_test_if": [
+      "This preregistration validates and the future runner can use existing local artifacts and in-sample threshold selection only.",
+      "The runner can separate train-only threshold selection from untouched OOS evaluation."
+    ],
+    "park_revised_condition_if": [
+      "No train-only threshold rule can be stated without OOS tuning.",
+      "The revised condition mostly removes trades without preserving enough sample for inference."
+    ],
+    "prioritize_exact_replay_if": [
+      "The revised condition improves residual-loss behavior in OOS without OOS tuning, but remains under-sampled.",
+      "The main remaining blocker becomes exact 2022-10 entry/exit replay rather than hypothesis wording."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "summary_md": "reports/experiments/h_a2_revised_opening_followthrough_condition_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_revised_opening_followthrough_condition_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/027-higanbana-h-a2-revised-opening-followthrough-condition.md"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered revised condition ready for a local E1 diagnostic test.",
+    "Opening-followthrough confirmation is a mechanism candidate, not a validated edge.",
+    "Future exact replay remains blocked until real 2022-10 SPY underlying bars are available.",
+    "Future H-L1 news or LLM scores must add information beyond deterministic macro/VIX and opening-followthrough baselines."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration.",
+    "Do not run live GDELT retries from this preregistration."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "strategy_pnl_allowed_in_future_run": true,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "The train-only threshold rule is recorded before OOS evaluation.",
+    "Every candidate condition reports trial count and search log.",
+    "Every condition reports trade count, split count, implementable PnL, cost drag, and skipped-trade count.",
+    "MinTRL/PSR, under-sampled, underpowered, DSR/search-log, and big-day context are reported where applicable.",
+    "Conclusion uses one project label: ผ่าน, ไม่ผ่าน, or ยังสรุปไม่ได้.",
+    "The next action explicitly chooses local revised-condition test continuation, exact replay prioritization, or H-A2 parking."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Future run can be E1 diagnostic only unless exact validation data and acceptance gates are added later",
+    "No exact 2022-10 ORB replay",
+    "No real timestamp-clean news cases",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

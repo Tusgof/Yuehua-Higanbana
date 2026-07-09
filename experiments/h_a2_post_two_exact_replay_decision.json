@@ -1,0 +1,140 @@
+{
+  "schema_version": "h_a2_post_two_exact_replay_decision_v1",
+  "artifact_type": "decision_artifact",
+  "hypothesis_id": "H-A2",
+  "status": "decision_complete",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_post_two_exact_replay_decision",
+  "title": "H-A2 decision after two bounded exact replays",
+  "created_date": "2026-07-08",
+  "purpose": "Decide the next H-A2 path after two pre-registered exact-replayed candidates both lost money after implementable costs.",
+  "source_artifacts": [
+    "reports/diagnostics/h_a2_normal_control_exact_replay.json",
+    "reports/diagnostics/h_a2_post_stress_normalization_control_exact_replay.json"
+  ],
+  "source_result_summary": {
+    "candidate_count": 2,
+    "total_mid_pnl": -50.0,
+    "total_implementable_pnl": -59.12,
+    "total_cost_drag_vs_mid": 9.12,
+    "all_candidates_negative_mid_pnl": true,
+    "all_candidates_negative_implementable_pnl": true,
+    "all_candidates_under_sampled": true,
+    "all_candidates_underpowered": true,
+    "mintrl_psr_status": "blocked_two_trade_underpowered",
+    "candidate_results": [
+      {
+        "source_experiment": "h_a2_normal_control_exact_replay",
+        "source_path": "reports/diagnostics/h_a2_normal_control_exact_replay.json",
+        "candidate_date": "2025-02-11",
+        "direction": "call",
+        "mid_pnl": -22.0,
+        "implementable_pnl": -26.56,
+        "cost_drag_vs_mid": 4.56,
+        "sample_count": 1,
+        "under_sampled": true,
+        "underpowered": true
+      },
+      {
+        "source_experiment": "h_a2_post_stress_normalization_control_exact_replay",
+        "source_path": "reports/diagnostics/h_a2_post_stress_normalization_control_exact_replay.json",
+        "candidate_date": "2025-05-05",
+        "direction": "call",
+        "mid_pnl": -28.0,
+        "implementable_pnl": -32.56,
+        "cost_drag_vs_mid": 4.56,
+        "sample_count": 1,
+        "under_sampled": true,
+        "underpowered": true
+      }
+    ]
+  },
+  "decision": {
+    "selected_next_step": "revise_h_a2_mechanism_before_more_sample_expansion",
+    "decision_label": "ยังสรุปไม่ได้",
+    "reason": "The two exact-replayed candidates are still statistically insufficient, but both are negative after implementable costs. Continuing to buy more data for the same locked condition without revisiting the market mechanism would risk scaling a weak or incorrectly specified hypothesis.",
+    "why_not_continue_data_expansion_now": "The current locked condition has produced two losing exact replays. More samples may still be needed later, but the next step should first define what market condition should make ORB debit spreads work and what evidence would falsify that revised condition.",
+    "why_not_falsify_h_a2_now": "Two trades are under-sampled and underpowered, so this cannot reject H-A2 as a broader macro-conditioned ORB family.",
+    "why_not_claim_edge": "Both exact-replayed candidates lost money after spread and fees, MinTRL/PSR is blocked, and no E2 acceptance gate is satisfied.",
+    "why_not_change_threshold_directly": "Changing threshold 0.001 after seeing two exact replay losses would be post-result tuning unless a new train-only preregistration explicitly defines the revised rule."
+  },
+  "next_required_artifact": {
+    "experiment_id": "h_a2_mechanism_revision_preregistration",
+    "artifact_type": "preregistration",
+    "goal": "Define the revised H-A2 market mechanism before any more exact replay or paid data expansion.",
+    "must_include": [
+      "Clear statement of what market behavior ORB debit spreads need to profit.",
+      "Whether H-A2 is a clean-regime continuation hypothesis, a regime-filtered conditional hypothesis, or should be parked.",
+      "Train-only rule-revision boundaries.",
+      "Explicit anti-overfitting controls for threshold/filter changes.",
+      "Sample/regime expansion criteria that follow from the revised mechanism.",
+      "Falsification criteria and evidence that would overturn the revised H-A2 claim."
+    ],
+    "must_not_include": [
+      "New paid data approval.",
+      "Exact replay approval.",
+      "Threshold search approval.",
+      "OOS-selected filter approval.",
+      "Paper trading approval.",
+      "E2 acceptance claim."
+    ]
+  },
+  "locked_signal_status": {
+    "existing_threshold": 0.001,
+    "existing_entry_time_et": "09:35:00",
+    "status": "diagnostic_only_pending_mechanism_revision",
+    "can_be_used_for_new_trades": false,
+    "can_be_used_for_paper_trading": false,
+    "can_be_used_for_e2_claim": false
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_allowed": false,
+    "threshold_search_allowed": false,
+    "new_filter_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_decision": false
+  },
+  "allowed_claims": [
+    "H-A2 has two exact-replayed candidate trades and both are negative after implementable costs.",
+    "The current locked condition remains E1 diagnostic evidence only.",
+    "The next safe action is a mechanism-revision preregistration before more sample expansion or paid data.",
+    "H-A2 is not validated and is not accepted for paper trading."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 is fully falsified as a broader strategy family.",
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not buy more data from this decision.",
+    "Do not broaden exact replay from this decision.",
+    "Do not change threshold 0.001 from this decision.",
+    "Do not add an OOS-selected filter from this decision."
+  ],
+  "completion_criteria": [
+    "The decision cites both exact replay source artifacts.",
+    "The decision reports both candidate dates and PnL values exactly from source artifacts.",
+    "The decision records that both candidates are negative after implementable costs.",
+    "The decision chooses mechanism revision before additional sample expansion.",
+    "The decision forbids paid data, exact replay, threshold search, paper trading, and E2 claims.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 decision artifact only",
+    "Only two exact-replayed candidate trades",
+    "Both exact-replayed candidates are negative after implementable costs",
+    "MinTRL/PSR blocked",
+    "No revised H-A2 mechanism preregistered yet",
+    "No E2 acceptance claim"
+  ]
+}

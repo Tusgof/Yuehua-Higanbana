@@ -1,0 +1,992 @@
+{
+  "active_trade_count_by_filter": {
+    "baseline_quant_only": 2,
+    "positive_gamma_proxy_only": 0,
+    "skip_extreme_negative_gamma_proxy_days": 0,
+    "skip_negative_gamma_proxy_days": 0
+  },
+  "baseline_component_root": "reports\\baselines\\subsystem_a_components",
+  "big_day_dependency_result": {
+    "reason": "The intersection sample has fewer than 3 active trades for every variant, so removing the most extreme 5% winner and loser cannot produce a stable recomputed series.",
+    "status": "blocked_insufficient_observations",
+    "variant_results": {
+      "baseline_quant_only": {
+        "active_trade_count": 2,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      },
+      "positive_gamma_proxy_only": {
+        "active_trade_count": 0,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      },
+      "skip_extreme_negative_gamma_proxy_days": {
+        "active_trade_count": 0,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      },
+      "skip_negative_gamma_proxy_days": {
+        "active_trade_count": 0,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      }
+    }
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The preregistered gamma ablation ran without new data, but only 2 baseline closed trades intersect the available gamma-proxy dates. The filtered variants do not create acceptance-grade evidence and must remain diagnostic.",
+  "coverage": {
+    "baseline_closed_trade_count": 90,
+    "covered_trade_dates": [
+      "2023-10-27",
+      "2024-12-18"
+    ],
+    "excluded_baseline_closed_trade_count": 88,
+    "excluded_reason": "baseline_trade_date_not_in_gamma_proxy_date_set",
+    "gamma_date_count": 10,
+    "intersection_closed_trade_count": 2
+  },
+  "dsr_or_dsr_blocker": {
+    "effective_trial_count": 4,
+    "reason": "The preregistered selection rule forbids best-Sharpe selection; all four trials are logged and no variant is selected for deployment.",
+    "status": "not_applicable_no_best_sharpe_selection"
+  },
+  "evidence_tier": "E1",
+  "experiment_id": "h_g1_gamma_strategy_ablation",
+  "forbidden_claims_preserved": [
+    "H-G1 strategy edge validated",
+    "NOVI/net-gamma strategy filter ready",
+    "true market-maker net gamma",
+    "dealer net gamma",
+    "paper trading approved from H-G1.22"
+  ],
+  "hypothesis_id": "H-G1",
+  "network_used": false,
+  "new_data_requested": false,
+  "next_actions": [
+    "Do not use H-G1 as a trading filter from this diagnostic.",
+    "Decide whether H-G1 should be parked or whether a separate sample-expansion plan is justified.",
+    "Return to News-Unblock N.7 if prioritizing timestamp-clean news before further gamma work."
+  ],
+  "no_oos_tuning": true,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "random_split_used": false,
+  "record_type": "experiment_summary",
+  "regime_trade_counts": {
+    "baseline_quant_only": {
+      "by_macro_flag": {
+        "high_importance_macro": 2
+      },
+      "by_split": {
+        "oos": 1,
+        "train": 1
+      },
+      "by_volatility_bucket": {
+        "high": 1,
+        "normal": 1
+      }
+    },
+    "positive_gamma_proxy_only": {
+      "by_macro_flag": {},
+      "by_split": {},
+      "by_volatility_bucket": {}
+    },
+    "skip_extreme_negative_gamma_proxy_days": {
+      "by_macro_flag": {},
+      "by_split": {},
+      "by_volatility_bucket": {}
+    },
+    "skip_negative_gamma_proxy_days": {
+      "by_macro_flag": {},
+      "by_split": {},
+      "by_volatility_bucket": {}
+    }
+  },
+  "research_log_path": "research_log/020-higanbana-gamma-strategy-ablation-diagnostic.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-gamma-strategy-ablation-diagnostic",
+  "schema_version": "h_g1_gamma_strategy_ablation_v1",
+  "search_log": {
+    "all_trials_recorded": true,
+    "best_sharpe_selection_allowed": false,
+    "path": "reports\\experiments\\search_logs\\h_g1_gamma_strategy_ablation_search_log.jsonl",
+    "selected_for_deployment": false,
+    "trial_count": 4
+  },
+  "skipped_trade_count_by_filter": {
+    "baseline_quant_only": 0,
+    "positive_gamma_proxy_only": 2,
+    "skip_extreme_negative_gamma_proxy_days": 2,
+    "skip_negative_gamma_proxy_days": 2
+  },
+  "source_gamma_diagnostic": "reports\\diagnostics\\h_g1_gamma_regime_diagnostic_summary_v3_side_aware.json",
+  "source_gamma_enrichment": "reports\\diagnostics\\h_g1_gamma_regime_enrichment_summary_v3_side_aware.json",
+  "source_preregistration": "experiments\\h_g1_gamma_strategy_ablation_preregistration.json",
+  "status": "complete_underpowered",
+  "strategy_pnl_used": true,
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "intersection_sample_too_small",
+    "under-sampled",
+    "underpowered",
+    "mintrl_psr_blocked_insufficient_observations",
+    "all_gamma_variants_collapse_or_reduce_the_trade_sample",
+    "no_e2_acceptance",
+    "signed_oi_gamma_proxy_is_not_true_market_maker_net_gamma"
+  ],
+  "train_only_thresholds": {
+    "bottom_bucket_count": 2,
+    "cutoff": 31651573.7778,
+    "method": "bottom_tercile_by_ceiling_count",
+    "thresholds_frozen_before_oos": true,
+    "train_date_count": 4,
+    "train_values": [
+      {
+        "date": "2023-10-27",
+        "net_oi_gamma_proxy": -263366694.684101
+      },
+      {
+        "date": "2023-08-09",
+        "net_oi_gamma_proxy": 31651573.7778
+      },
+      {
+        "date": "2023-09-13",
+        "net_oi_gamma_proxy": 54327921.802996
+      },
+      {
+        "date": "2023-12-29",
+        "net_oi_gamma_proxy": 1150453555.763625
+      }
+    ]
+  },
+  "variant_count_policy": {
+    "additional_variants_allowed_without_new_preregistration": false,
+    "baseline_count": 1,
+    "gamma_variant_count": 3,
+    "total_trial_count": 4
+  },
+  "variant_results": [
+    {
+      "active_trade_count": 2,
+      "active_trade_count_by_filter": {
+        "baseline_quant_only": 2
+      },
+      "active_trade_dates": [
+        "2023-10-27",
+        "2024-12-18"
+      ],
+      "benchmark_comparison": {
+        "benchmark_variant": "baseline_quant_only",
+        "cost_drag_delta": 0.0,
+        "implementable_pnl_delta": 0.0,
+        "max_drawdown_delta": 0.0,
+        "mid_pnl_delta": 0.0,
+        "oos_implementable_pnl_delta": 0.0,
+        "trade_count_delta": 0
+      },
+      "big_day_dependency_result": {
+        "active_trade_count": 2,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      },
+      "daily_pnl": [
+        {
+          "date": "2023-10-27",
+          "ending_equity": 1126.44,
+          "net_pnl": 126.44,
+          "return_on_starting_equity": 0.12644,
+          "starting_equity": 1000.0
+        },
+        {
+          "date": "2024-12-18",
+          "ending_equity": 1230.88,
+          "net_pnl": 104.44,
+          "return_on_starting_equity": 0.09271688,
+          "starting_equity": 1126.44
+        }
+      ],
+      "description": "Existing timestamp-clean Sub-System A ORB quantitative rule with no gamma proxy filter.",
+      "drawdown_curve": [
+        {
+          "drawdown": 0.0,
+          "equity": 1000.0,
+          "index": 0
+        },
+        {
+          "drawdown": 0.0,
+          "equity": 1126.44,
+          "index": 1
+        },
+        {
+          "drawdown": 0.0,
+          "equity": 1230.88,
+          "index": 2
+        }
+      ],
+      "equity_curve": [
+        1000.0,
+        1126.44,
+        1230.88
+      ],
+      "gamma_filter": "none",
+      "metrics": {
+        "cost_drag": 57.12,
+        "daily_pnl": [
+          {
+            "date": "2023-10-27",
+            "ending_equity": 1126.44,
+            "net_pnl": 126.44,
+            "return_on_starting_equity": 0.12644,
+            "starting_equity": 1000.0
+          },
+          {
+            "date": "2024-12-18",
+            "ending_equity": 1230.88,
+            "net_pnl": 104.44,
+            "return_on_starting_equity": 0.09271688,
+            "starting_equity": 1126.44
+          }
+        ],
+        "distribution_inputs": {
+          "first_order_autocorrelation": null,
+          "kurtosis": null,
+          "observed_sharpe": 6.498713,
+          "sample_length": 2,
+          "skewness": null,
+          "status": "blocked_insufficient_observations"
+        },
+        "drawdown_curve": [
+          {
+            "drawdown": 0.0,
+            "equity": 1000.0,
+            "index": 0
+          },
+          {
+            "drawdown": 0.0,
+            "equity": 1126.44,
+            "index": 1
+          },
+          {
+            "drawdown": 0.0,
+            "equity": 1230.88,
+            "index": 2
+          }
+        ],
+        "equity_curve": [
+          1000.0,
+          1126.44,
+          1230.88
+        ],
+        "es95": 104.44,
+        "es99": 104.44,
+        "friction_drag_ratio": 0.198333,
+        "implementable_pnl": 230.88,
+        "max_drawdown": 0.0,
+        "mid_pnl": 288.0,
+        "payoff_ratio": null,
+        "sample_length": 2,
+        "sharpe": 6.498713,
+        "sortino": null,
+        "trade_count": 2,
+        "win_rate": 1.0,
+        "worst_day_loss": 104.44
+      },
+      "mintrl": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "MinTRL",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 2,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "psr": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "PSR",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 2,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "regime_trade_counts": {
+        "by_macro_flag": {
+          "high_importance_macro": 2
+        },
+        "by_split": {
+          "oos": 1,
+          "train": 1
+        },
+        "by_volatility_bucket": {
+          "high": 1,
+          "normal": 1
+        }
+      },
+      "skipped_trade_count": 0,
+      "skipped_trade_count_by_filter": {
+        "baseline_quant_only": 0
+      },
+      "skipped_trade_dates": [],
+      "splits": {
+        "oos": {
+          "cost_drag": 46.56,
+          "daily_pnl": [
+            {
+              "date": "2024-12-18",
+              "ending_equity": 1104.44,
+              "net_pnl": 104.44,
+              "return_on_starting_equity": 0.10444,
+              "starting_equity": 1000.0
+            }
+          ],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 1,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            },
+            {
+              "drawdown": 0.0,
+              "equity": 1104.44,
+              "index": 1
+            }
+          ],
+          "equity_curve": [
+            1000.0,
+            1104.44
+          ],
+          "es95": 104.44,
+          "es99": 104.44,
+          "friction_drag_ratio": 0.308344,
+          "implementable_pnl": 104.44,
+          "max_drawdown": 0.0,
+          "mid_pnl": 151.0,
+          "payoff_ratio": null,
+          "sample_length": 1,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 1,
+          "win_rate": 1.0,
+          "worst_day_loss": 104.44
+        },
+        "train": {
+          "cost_drag": 10.56,
+          "daily_pnl": [
+            {
+              "date": "2023-10-27",
+              "ending_equity": 1126.44,
+              "net_pnl": 126.44,
+              "return_on_starting_equity": 0.12644,
+              "starting_equity": 1000.0
+            }
+          ],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 1,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            },
+            {
+              "drawdown": 0.0,
+              "equity": 1126.44,
+              "index": 1
+            }
+          ],
+          "equity_curve": [
+            1000.0,
+            1126.44
+          ],
+          "es95": 126.44,
+          "es99": 126.44,
+          "friction_drag_ratio": 0.07708,
+          "implementable_pnl": 126.44,
+          "max_drawdown": 0.0,
+          "mid_pnl": 137.0,
+          "payoff_ratio": null,
+          "sample_length": 1,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 1,
+          "win_rate": 1.0,
+          "worst_day_loss": 126.44
+        }
+      },
+      "train_only_bottom_tercile_cutoff": null,
+      "under_sampled_label": true,
+      "underpowered_label": true,
+      "variant_id": "baseline_quant_only",
+      "variant_type": "baseline"
+    },
+    {
+      "active_trade_count": 0,
+      "active_trade_count_by_filter": {
+        "skip_negative_gamma_proxy_days": 0
+      },
+      "active_trade_dates": [],
+      "benchmark_comparison": {
+        "benchmark_variant": "baseline_quant_only",
+        "cost_drag_delta": -57.12,
+        "implementable_pnl_delta": -230.88,
+        "max_drawdown_delta": 0.0,
+        "mid_pnl_delta": -288.0,
+        "oos_implementable_pnl_delta": -104.44,
+        "trade_count_delta": -2
+      },
+      "big_day_dependency_result": {
+        "active_trade_count": 0,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      },
+      "daily_pnl": [],
+      "description": "Skip otherwise valid baseline trades when the decision-time signed-OI gamma proxy is negative.",
+      "drawdown_curve": [
+        {
+          "drawdown": 0.0,
+          "equity": 1000.0,
+          "index": 0
+        }
+      ],
+      "equity_curve": [
+        1000.0
+      ],
+      "gamma_filter": "signed_oi_gamma_proxy < 0",
+      "metrics": {
+        "cost_drag": 0,
+        "daily_pnl": [],
+        "distribution_inputs": {
+          "first_order_autocorrelation": null,
+          "kurtosis": null,
+          "observed_sharpe": null,
+          "sample_length": 0,
+          "skewness": null,
+          "status": "blocked_insufficient_observations"
+        },
+        "drawdown_curve": [
+          {
+            "drawdown": 0.0,
+            "equity": 1000.0,
+            "index": 0
+          }
+        ],
+        "equity_curve": [
+          1000.0
+        ],
+        "es95": null,
+        "es99": null,
+        "friction_drag_ratio": null,
+        "implementable_pnl": 0,
+        "max_drawdown": 0.0,
+        "mid_pnl": 0,
+        "payoff_ratio": null,
+        "sample_length": 0,
+        "sharpe": null,
+        "sortino": null,
+        "trade_count": 0,
+        "win_rate": 0.0,
+        "worst_day_loss": 0.0
+      },
+      "mintrl": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "MinTRL",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 0,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "psr": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "PSR",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 0,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "regime_trade_counts": {
+        "by_macro_flag": {},
+        "by_split": {},
+        "by_volatility_bucket": {}
+      },
+      "skipped_trade_count": 2,
+      "skipped_trade_count_by_filter": {
+        "skip_negative_gamma_proxy_days": 2
+      },
+      "skipped_trade_dates": [
+        "2023-10-27",
+        "2024-12-18"
+      ],
+      "splits": {
+        "oos": {
+          "cost_drag": 0,
+          "daily_pnl": [],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 0,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            }
+          ],
+          "equity_curve": [
+            1000.0
+          ],
+          "es95": null,
+          "es99": null,
+          "friction_drag_ratio": null,
+          "implementable_pnl": 0,
+          "max_drawdown": 0.0,
+          "mid_pnl": 0,
+          "payoff_ratio": null,
+          "sample_length": 0,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 0,
+          "win_rate": 0.0,
+          "worst_day_loss": 0.0
+        },
+        "train": {
+          "cost_drag": 0,
+          "daily_pnl": [],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 0,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            }
+          ],
+          "equity_curve": [
+            1000.0
+          ],
+          "es95": null,
+          "es99": null,
+          "friction_drag_ratio": null,
+          "implementable_pnl": 0,
+          "max_drawdown": 0.0,
+          "mid_pnl": 0,
+          "payoff_ratio": null,
+          "sample_length": 0,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 0,
+          "win_rate": 0.0,
+          "worst_day_loss": 0.0
+        }
+      },
+      "train_only_bottom_tercile_cutoff": null,
+      "under_sampled_label": true,
+      "underpowered_label": true,
+      "variant_id": "skip_negative_gamma_proxy_days",
+      "variant_type": "gamma_filter"
+    },
+    {
+      "active_trade_count": 0,
+      "active_trade_count_by_filter": {
+        "skip_extreme_negative_gamma_proxy_days": 0
+      },
+      "active_trade_dates": [],
+      "benchmark_comparison": {
+        "benchmark_variant": "baseline_quant_only",
+        "cost_drag_delta": -57.12,
+        "implementable_pnl_delta": -230.88,
+        "max_drawdown_delta": 0.0,
+        "mid_pnl_delta": -288.0,
+        "oos_implementable_pnl_delta": -104.44,
+        "trade_count_delta": -2
+      },
+      "big_day_dependency_result": {
+        "active_trade_count": 0,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      },
+      "daily_pnl": [],
+      "description": "Skip otherwise valid baseline trades in the most negative train-fitted signed-OI gamma proxy tercile.",
+      "drawdown_curve": [
+        {
+          "drawdown": 0.0,
+          "equity": 1000.0,
+          "index": 0
+        }
+      ],
+      "equity_curve": [
+        1000.0
+      ],
+      "gamma_filter": "signed_oi_gamma_proxy <= train_only_bottom_tercile_cutoff",
+      "metrics": {
+        "cost_drag": 0,
+        "daily_pnl": [],
+        "distribution_inputs": {
+          "first_order_autocorrelation": null,
+          "kurtosis": null,
+          "observed_sharpe": null,
+          "sample_length": 0,
+          "skewness": null,
+          "status": "blocked_insufficient_observations"
+        },
+        "drawdown_curve": [
+          {
+            "drawdown": 0.0,
+            "equity": 1000.0,
+            "index": 0
+          }
+        ],
+        "equity_curve": [
+          1000.0
+        ],
+        "es95": null,
+        "es99": null,
+        "friction_drag_ratio": null,
+        "implementable_pnl": 0,
+        "max_drawdown": 0.0,
+        "mid_pnl": 0,
+        "payoff_ratio": null,
+        "sample_length": 0,
+        "sharpe": null,
+        "sortino": null,
+        "trade_count": 0,
+        "win_rate": 0.0,
+        "worst_day_loss": 0.0
+      },
+      "mintrl": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "MinTRL",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 0,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "psr": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "PSR",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 0,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "regime_trade_counts": {
+        "by_macro_flag": {},
+        "by_split": {},
+        "by_volatility_bucket": {}
+      },
+      "skipped_trade_count": 2,
+      "skipped_trade_count_by_filter": {
+        "skip_extreme_negative_gamma_proxy_days": 2
+      },
+      "skipped_trade_dates": [
+        "2023-10-27",
+        "2024-12-18"
+      ],
+      "splits": {
+        "oos": {
+          "cost_drag": 0,
+          "daily_pnl": [],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 0,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            }
+          ],
+          "equity_curve": [
+            1000.0
+          ],
+          "es95": null,
+          "es99": null,
+          "friction_drag_ratio": null,
+          "implementable_pnl": 0,
+          "max_drawdown": 0.0,
+          "mid_pnl": 0,
+          "payoff_ratio": null,
+          "sample_length": 0,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 0,
+          "win_rate": 0.0,
+          "worst_day_loss": 0.0
+        },
+        "train": {
+          "cost_drag": 0,
+          "daily_pnl": [],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 0,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            }
+          ],
+          "equity_curve": [
+            1000.0
+          ],
+          "es95": null,
+          "es99": null,
+          "friction_drag_ratio": null,
+          "implementable_pnl": 0,
+          "max_drawdown": 0.0,
+          "mid_pnl": 0,
+          "payoff_ratio": null,
+          "sample_length": 0,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 0,
+          "win_rate": 0.0,
+          "worst_day_loss": 0.0
+        }
+      },
+      "train_only_bottom_tercile_cutoff": 31651573.7778,
+      "under_sampled_label": true,
+      "underpowered_label": true,
+      "variant_id": "skip_extreme_negative_gamma_proxy_days",
+      "variant_type": "gamma_filter"
+    },
+    {
+      "active_trade_count": 0,
+      "active_trade_count_by_filter": {
+        "positive_gamma_proxy_only": 0
+      },
+      "active_trade_dates": [],
+      "benchmark_comparison": {
+        "benchmark_variant": "baseline_quant_only",
+        "cost_drag_delta": -57.12,
+        "implementable_pnl_delta": -230.88,
+        "max_drawdown_delta": 0.0,
+        "mid_pnl_delta": -288.0,
+        "oos_implementable_pnl_delta": -104.44,
+        "trade_count_delta": -2
+      },
+      "big_day_dependency_result": {
+        "active_trade_count": 0,
+        "reason": "Need at least 3 active trades before removing extreme winners and losers.",
+        "removed_each_side": 0,
+        "status": "blocked_insufficient_observations"
+      },
+      "daily_pnl": [],
+      "description": "Allow otherwise valid baseline trades only when the decision-time signed-OI gamma proxy is positive.",
+      "drawdown_curve": [
+        {
+          "drawdown": 0.0,
+          "equity": 1000.0,
+          "index": 0
+        }
+      ],
+      "equity_curve": [
+        1000.0
+      ],
+      "gamma_filter": "signed_oi_gamma_proxy > 0",
+      "metrics": {
+        "cost_drag": 0,
+        "daily_pnl": [],
+        "distribution_inputs": {
+          "first_order_autocorrelation": null,
+          "kurtosis": null,
+          "observed_sharpe": null,
+          "sample_length": 0,
+          "skewness": null,
+          "status": "blocked_insufficient_observations"
+        },
+        "drawdown_curve": [
+          {
+            "drawdown": 0.0,
+            "equity": 1000.0,
+            "index": 0
+          }
+        ],
+        "equity_curve": [
+          1000.0
+        ],
+        "es95": null,
+        "es99": null,
+        "friction_drag_ratio": null,
+        "implementable_pnl": 0,
+        "max_drawdown": 0.0,
+        "mid_pnl": 0,
+        "payoff_ratio": null,
+        "sample_length": 0,
+        "sharpe": null,
+        "sortino": null,
+        "trade_count": 0,
+        "win_rate": 0.0,
+        "worst_day_loss": 0.0
+      },
+      "mintrl": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "MinTRL",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 0,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "psr": {
+        "labels": [
+          "under-sampled",
+          "underpowered"
+        ],
+        "metric": "PSR",
+        "reason": "The active trade sample is too small for reliable Sharpe inference.",
+        "sample_length": 0,
+        "status": "blocked_insufficient_observations",
+        "value": null
+      },
+      "regime_trade_counts": {
+        "by_macro_flag": {},
+        "by_split": {},
+        "by_volatility_bucket": {}
+      },
+      "skipped_trade_count": 2,
+      "skipped_trade_count_by_filter": {
+        "positive_gamma_proxy_only": 2
+      },
+      "skipped_trade_dates": [
+        "2023-10-27",
+        "2024-12-18"
+      ],
+      "splits": {
+        "oos": {
+          "cost_drag": 0,
+          "daily_pnl": [],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 0,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            }
+          ],
+          "equity_curve": [
+            1000.0
+          ],
+          "es95": null,
+          "es99": null,
+          "friction_drag_ratio": null,
+          "implementable_pnl": 0,
+          "max_drawdown": 0.0,
+          "mid_pnl": 0,
+          "payoff_ratio": null,
+          "sample_length": 0,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 0,
+          "win_rate": 0.0,
+          "worst_day_loss": 0.0
+        },
+        "train": {
+          "cost_drag": 0,
+          "daily_pnl": [],
+          "distribution_inputs": {
+            "first_order_autocorrelation": null,
+            "kurtosis": null,
+            "observed_sharpe": null,
+            "sample_length": 0,
+            "skewness": null,
+            "status": "blocked_insufficient_observations"
+          },
+          "drawdown_curve": [
+            {
+              "drawdown": 0.0,
+              "equity": 1000.0,
+              "index": 0
+            }
+          ],
+          "equity_curve": [
+            1000.0
+          ],
+          "es95": null,
+          "es99": null,
+          "friction_drag_ratio": null,
+          "implementable_pnl": 0,
+          "max_drawdown": 0.0,
+          "mid_pnl": 0,
+          "payoff_ratio": null,
+          "sample_length": 0,
+          "sharpe": null,
+          "sortino": null,
+          "trade_count": 0,
+          "win_rate": 0.0,
+          "worst_day_loss": 0.0
+        }
+      },
+      "train_only_bottom_tercile_cutoff": null,
+      "under_sampled_label": true,
+      "underpowered_label": true,
+      "variant_id": "positive_gamma_proxy_only",
+      "variant_type": "gamma_filter"
+    }
+  ]
+}

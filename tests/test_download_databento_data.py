@@ -35,10 +35,17 @@ class DatabentoDownloadTests(unittest.TestCase):
     def test_default_databento_key_env_falls_back_to_project_alias(self) -> None:
         previous_default = os.environ.get("DATABENTO_API_KEY")
         previous_alias = os.environ.get("DATABENTO_SPY0DTE_API")
+        previous_mo = os.environ.get("DATABENTO_API_MO")
+        previous_ai = os.environ.get("DATABENTO_API_AI")
         os.environ.pop("DATABENTO_API_KEY", None)
         os.environ["DATABENTO_SPY0DTE_API"] = "test-key"
+        os.environ.pop("DATABENTO_API_MO", None)
+        os.environ.pop("DATABENTO_API_AI", None)
         try:
             self.assertEqual("test-key", self.downloader._databento_api_key_from_env())
+            os.environ.pop("DATABENTO_SPY0DTE_API", None)
+            os.environ["DATABENTO_API_AI"] = "ai-key"
+            self.assertEqual("ai-key", self.downloader._databento_api_key_from_env())
         finally:
             if previous_default is not None:
                 os.environ["DATABENTO_API_KEY"] = previous_default
@@ -48,6 +55,14 @@ class DatabentoDownloadTests(unittest.TestCase):
                 os.environ["DATABENTO_SPY0DTE_API"] = previous_alias
             else:
                 os.environ.pop("DATABENTO_SPY0DTE_API", None)
+            if previous_mo is not None:
+                os.environ["DATABENTO_API_MO"] = previous_mo
+            else:
+                os.environ.pop("DATABENTO_API_MO", None)
+            if previous_ai is not None:
+                os.environ["DATABENTO_API_AI"] = previous_ai
+            else:
+                os.environ.pop("DATABENTO_API_AI", None)
 
     def test_build_download_plan_from_passed_cost_report(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -204,6 +219,48 @@ class DatabentoDownloadTests(unittest.TestCase):
             self.assertEqual("downloaded", result["downloaded"][0]["source"])
             self.assertEqual(len(b"retry-ok"), result["downloaded"][0]["bytes"])
 
+    def test_execute_download_plan_retries_transient_provider_error_when_requested(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = Path(tmp) / "raw" / "one_month_pilot" / "2024-01-02_entry_a_0935.dbn.zst"
+            output_path.parent.mkdir(parents=True)
+            plan = {
+                "mode": "download_plan",
+                "items": [
+                    {
+                        "dataset": "OPRA.PILLAR",
+                        "symbols": ["SPY.OPT"],
+                        "schema": "cbbo-1m",
+                        "stype_in": "parent",
+                        "start": "2024-01-02T14:30:00+00:00",
+                        "end": "2024-01-02T14:40:00+00:00",
+                        "window": "2024-01-02_entry_a_0935",
+                        "output_path": str(output_path),
+                    }
+                ],
+            }
+            previous_key = os.environ.get("TEST_DATABENTO_KEY")
+            previous_module = sys.modules.get("databento")
+            os.environ["TEST_DATABENTO_KEY"] = "test-key"
+            sys.modules["databento"] = _fake_databento_module(payload=b"provider-retry-ok", fail_provider_once=True)
+            try:
+                result = self.downloader.execute_download_plan(
+                    plan,
+                    "TEST_DATABENTO_KEY",
+                    per_request_retries=1,
+                    retry_sleep_seconds=0,
+                )
+            finally:
+                if previous_key is None:
+                    os.environ.pop("TEST_DATABENTO_KEY", None)
+                else:
+                    os.environ["TEST_DATABENTO_KEY"] = previous_key
+                if previous_module is None:
+                    sys.modules.pop("databento", None)
+                else:
+                    sys.modules["databento"] = previous_module
+            self.assertEqual("downloaded", result["downloaded"][0]["source"])
+            self.assertEqual(len(b"provider-retry-ok"), result["downloaded"][0]["bytes"])
+
 
 def _cost_report(status: str) -> dict:
     return {
@@ -227,7 +284,7 @@ def _cost_report(status: str) -> dict:
     }
 
 
-def _fake_databento_module(payload: bytes | None = None, fail_once: bool = False):
+def _fake_databento_module(payload: bytes | None = None, fail_once: bool = False, fail_provider_once: bool = False):
     class FakeTimeSeries:
         def __init__(self):
             self.failed = False
@@ -239,6 +296,10 @@ def _fake_databento_module(payload: bytes | None = None, fail_once: bool = False
                 self.failed = True
                 Path(kwargs["path"]).write_bytes(b"stale-temp")
                 raise FileExistsError(kwargs["path"])
+            if fail_provider_once and not self.failed:
+                self.failed = True
+                Path(kwargs["path"]).write_bytes(b"partial-temp")
+                raise RuntimeError("transient provider error")
             Path(kwargs["path"]).write_bytes(payload)
 
     class FakeHistorical:

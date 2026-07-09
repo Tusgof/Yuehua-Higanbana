@@ -1,0 +1,1606 @@
+{
+  "allowed_output_status": "policy_review_only",
+  "candidate_results": {
+    "candidate_a_current_v2_moneyness_only": {
+      "blocked_date_count": 5,
+      "date_count": 10,
+      "failure_count": 5,
+      "failures": [
+        "2023-08-09:otm_call_computed_rate_below_60pct",
+        "2023-09-13:otm_put_computed_rate_below_60pct",
+        "2024-01-03:otm_put_computed_rate_below_60pct",
+        "2024-05-21:otm_call_computed_rate_below_60pct",
+        "2024-12-18:otm_call_computed_rate_below_60pct"
+      ],
+      "notes": [
+        "Baseline current-v2 policy keeps moneyness-only pass/fail.",
+        "Source v3 required-bucket failures: {'2023-08-09': ['otm_call_computed_rate_below_60pct'], '2023-09-13': ['otm_put_computed_rate_below_60pct'], '2024-01-03': ['otm_put_computed_rate_below_60pct'], '2024-05-21': ['otm_call_computed_rate_below_60pct'], '2024-12-18': ['otm_call_computed_rate_below_60pct']}"
+      ],
+      "passed_date_count": 5,
+      "per_date": {
+        "2023-08-09": {
+          "blockers": [
+            "otm_call_computed_rate_below_60pct"
+          ],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 8,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 6532197516.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 985546763.604396,
+              "oi_notional_sum": 6532197516.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 8
+            },
+            "otm_call": {
+              "blocked_count": 12,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 12
+              },
+              "computed_count": 12,
+              "computed_oi_notional_share": 0.939224,
+              "computed_oi_notional_sum": 5973546048.0,
+              "computed_rate": 0.5,
+              "observable_abs_gamma_proxy_sum": 228857651.666635,
+              "oi_notional_sum": 6360083868.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 24
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 22,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 6584334132.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 236879892.753146,
+              "oi_notional_sum": 6584334132.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.980154,
+            "computed_oi_notional_sum": 19090077696.0,
+            "observable_abs_gamma_proxy_sum": 1451284308.024177,
+            "oi_notional_sum": 19476615516.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "blocked"
+        },
+        "2023-09-13": {
+          "blockers": [
+            "otm_put_computed_rate_below_60pct"
+          ],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5280720687.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 741300419.683558,
+              "oi_notional_sum": 5280720687.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 22,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4287151809.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 152576784.953257,
+              "oi_notional_sum": 4287151809.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            },
+            "otm_put": {
+              "blocked_count": 10,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 10
+              },
+              "computed_count": 12,
+              "computed_oi_notional_share": 0.880098,
+              "computed_oi_notional_sum": 5736959505.0,
+              "computed_rate": 0.545455,
+              "observable_abs_gamma_proxy_sum": 154462379.674885,
+              "oi_notional_sum": 6518546757.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.951413,
+            "computed_oi_notional_sum": 15304832001.0,
+            "observable_abs_gamma_proxy_sum": 1048339584.3117,
+            "oi_notional_sum": 16086419253.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "blocked"
+        },
+        "2023-10-27": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 8,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4983791580.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 491724716.42981,
+              "oi_notional_sum": 4983791580.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 8
+            },
+            "otm_call": {
+              "blocked_count": 8,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 8
+              },
+              "computed_count": 14,
+              "computed_oi_notional_share": 0.751624,
+              "computed_oi_notional_sum": 9876603933.0,
+              "computed_rate": 0.636364,
+              "observable_abs_gamma_proxy_sum": 335482621.814709,
+              "oi_notional_sum": 13140354411.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 20,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 7150412844.000001,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 273246421.453624,
+              "oi_notional_sum": 7150412844.000001,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 20
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.870868,
+            "computed_oi_notional_sum": 22010808357.0,
+            "observable_abs_gamma_proxy_sum": 1100453759.698143,
+            "oi_notional_sum": 25274558835.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "pass"
+        },
+        "2023-12-29": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 13995876900.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 2006441478.642884,
+              "oi_notional_sum": 13995876900.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 9,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 9
+              },
+              "computed_count": 15,
+              "computed_oi_notional_share": 0.999718,
+              "computed_oi_notional_sum": 17947286506.0,
+              "computed_rate": 0.625,
+              "observable_abs_gamma_proxy_sum": 684469560.906304,
+              "oi_notional_sum": 17952340374.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 24
+            },
+            "otm_put": {
+              "blocked_count": 1,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 1
+              },
+              "computed_count": 23,
+              "computed_oi_notional_share": 0.992212,
+              "computed_oi_notional_sum": 20171941986.0,
+              "computed_rate": 0.958333,
+              "observable_abs_gamma_proxy_sum": 517221413.632045,
+              "oi_notional_sum": 20330280624.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 24
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.996875,
+            "computed_oi_notional_sum": 52115105392.0,
+            "observable_abs_gamma_proxy_sum": 3208132453.181233,
+            "oi_notional_sum": 52278497898.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "pass"
+        },
+        "2024-01-03": {
+          "blockers": [
+            "otm_put_computed_rate_below_60pct"
+          ],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5074799832.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 668399744.908354,
+              "oi_notional_sum": 5074799832.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 17,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4389120304.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 212180036.864494,
+              "oi_notional_sum": 4389120304.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 17
+            },
+            "otm_put": {
+              "blocked_count": 11,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 11
+              },
+              "computed_count": 6,
+              "computed_oi_notional_share": 0.906923,
+              "computed_oi_notional_sum": 1574161040.0,
+              "computed_rate": 0.352941,
+              "observable_abs_gamma_proxy_sum": 55690353.672409,
+              "oi_notional_sum": 1735715960.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 17
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.985575,
+            "computed_oi_notional_sum": 11038081176.0,
+            "observable_abs_gamma_proxy_sum": 936270135.445257,
+            "oi_notional_sum": 11199636096.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "blocked"
+        },
+        "2024-05-21": {
+          "blockers": [
+            "otm_call_computed_rate_below_60pct"
+          ],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 1,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 1
+              },
+              "computed_count": 11,
+              "computed_oi_notional_share": 0.981204,
+              "computed_oi_notional_sum": 6668428280.0,
+              "computed_rate": 0.916667,
+              "observable_abs_gamma_proxy_sum": 1030010025.922125,
+              "oi_notional_sum": 6796172500.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_call": {
+              "blocked_count": 9,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 9
+              },
+              "computed_count": 9,
+              "computed_oi_notional_share": 0.984773,
+              "computed_oi_notional_sum": 2923823260.0,
+              "computed_rate": 0.5,
+              "observable_abs_gamma_proxy_sum": 50454029.667425,
+              "oi_notional_sum": 2969034020.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 18
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5686973620.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 114219191.111112,
+              "oi_notional_sum": 5686973620.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.988807,
+            "computed_oi_notional_sum": 15279225160.0,
+            "observable_abs_gamma_proxy_sum": 1194683246.700662,
+            "oi_notional_sum": 15452180140.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "blocked"
+        },
+        "2024-08-05": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 688915020.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 22718464.183138,
+              "oi_notional_sum": 688915020.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 3884092440.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 99220105.229655,
+              "oi_notional_sum": 3884092440.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 598052770.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 12662707.475872,
+              "oi_notional_sum": 598052770.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 1.0,
+            "computed_oi_notional_sum": 5171060230.0,
+            "observable_abs_gamma_proxy_sum": 134601276.888665,
+            "oi_notional_sum": 5171060230.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "pass"
+        },
+        "2024-08-07": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 2398931847.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 161426736.02844,
+              "oi_notional_sum": 2398931847.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4999454161.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 125136817.630331,
+              "oi_notional_sum": 4999454161.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            },
+            "otm_put": {
+              "blocked_count": 6,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 6
+              },
+              "computed_count": 20,
+              "computed_oi_notional_share": 0.910996,
+              "computed_oi_notional_sum": 4661653919.0,
+              "computed_rate": 0.769231,
+              "observable_abs_gamma_proxy_sum": 153563926.880631,
+              "oi_notional_sum": 5117097089.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.96361,
+            "computed_oi_notional_sum": 12060039927.0,
+            "observable_abs_gamma_proxy_sum": 440127480.539402,
+            "oi_notional_sum": 12515483097.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "pass"
+        },
+        "2024-10-31": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4512788028.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 385509921.533733,
+              "oi_notional_sum": 4512788028.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 30,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 14642210688.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 357988678.123396,
+              "oi_notional_sum": 14642210688.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            },
+            "otm_put": {
+              "blocked_count": 10,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 10
+              },
+              "computed_count": 20,
+              "computed_oi_notional_share": 0.908232,
+              "computed_oi_notional_sum": 12631505628.0,
+              "computed_rate": 0.666667,
+              "observable_abs_gamma_proxy_sum": 322517836.727932,
+              "oi_notional_sum": 13907788734.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.961398,
+            "computed_oi_notional_sum": 31786504344.0,
+            "observable_abs_gamma_proxy_sum": 1066016436.385061,
+            "oi_notional_sum": 33062787450.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "pass"
+        },
+        "2024-12-18": {
+          "blockers": [
+            "otm_call_computed_rate_below_60pct"
+          ],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 12,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4059349686.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 362647975.774455,
+              "oi_notional_sum": 4059349686.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_call": {
+              "blocked_count": 13,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 13
+              },
+              "computed_count": 17,
+              "computed_oi_notional_share": 0.965892,
+              "computed_oi_notional_sum": 5322196782.0,
+              "computed_rate": 0.566667,
+              "observable_abs_gamma_proxy_sum": 147541812.650597,
+              "oi_notional_sum": 5510139138.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 30,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 3913655130.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 111936645.084175,
+              "oi_notional_sum": 3913655130.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            }
+          },
+          "combined_required_bucket_metrics": {
+            "computed_oi_notional_share": 0.986061,
+            "computed_oi_notional_sum": 13295201598.0,
+            "observable_abs_gamma_proxy_sum": 622126433.509227,
+            "oi_notional_sum": 13483143954.0,
+            "retained_abs_gamma_proxy_share": 1.0
+          },
+          "status": "blocked"
+        }
+      },
+      "policy_id": "candidate_a_current_v2_moneyness_only",
+      "required_bucket_gate": "moneyness_only",
+      "status": "policy_candidate_blocked"
+    },
+    "candidate_b_side_aware_required_bucket": {
+      "blocked_date_count": 0,
+      "date_count": 10,
+      "failure_count": 0,
+      "failures": [],
+      "notes": [
+        "Side-aware policy directly separates opposite-right ITM rows from otm_put/otm_call pass-fail gates.",
+        "Opposite-right ITM rows remain reportable and are not hidden."
+      ],
+      "passed_date_count": 10,
+      "per_date": {
+        "2023-08-09": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 8,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 6532197516.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 985546763.604396,
+              "oi_notional_sum": 6532197516.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 8
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 12,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5973546048.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 228857651.666635,
+              "oi_notional_sum": 5973546048.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 11,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5860882500.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 191078159.313214,
+              "oi_notional_sum": 5860882500.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 11
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 12,
+            "otm_put_opposite_right_call_rows": 11
+          },
+          "status": "pass"
+        },
+        "2023-09-13": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5280720687.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 741300419.683558,
+              "oi_notional_sum": 5280720687.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 11,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4036412682.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 137994214.377317,
+              "oi_notional_sum": 4036412682.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 11
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 11,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5599274265.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 147631265.554378,
+              "oi_notional_sum": 5599274265.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 11
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 11,
+            "otm_put_opposite_right_call_rows": 11
+          },
+          "status": "pass"
+        },
+        "2023-10-27": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 8,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4983791580.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 491724716.42981,
+              "oi_notional_sum": 4983791580.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 8
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 11,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 8285356980.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 223969115.812638,
+              "oi_notional_sum": 8285356980.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 11
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 6833495664.000001,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 255207368.341911,
+              "oi_notional_sum": 6833495664.000001,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 11,
+            "otm_put_opposite_right_call_rows": 10
+          },
+          "status": "pass"
+        },
+        "2023-12-29": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 13995876900.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 2006441478.642884,
+              "oi_notional_sum": 13995876900.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 12,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 17827519370.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 678434159.624869,
+              "oi_notional_sum": 17827519370.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 12,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 14032398248.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 331953902.904666,
+              "oi_notional_sum": 14032398248.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 12,
+            "otm_put_opposite_right_call_rows": 12
+          },
+          "status": "pass"
+        },
+        "2024-01-03": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5074799832.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 668399744.908354,
+              "oi_notional_sum": 5074799832.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 5,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 3194037184.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 136995070.183618,
+              "oi_notional_sum": 3194037184.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 5
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 6,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 1574161040.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 55690353.672409,
+              "oi_notional_sum": 1574161040.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 6
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 12,
+            "otm_put_opposite_right_call_rows": 11
+          },
+          "status": "pass"
+        },
+        "2024-05-21": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 1,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 1
+              },
+              "computed_count": 11,
+              "computed_oi_notional_share": 0.981204,
+              "computed_oi_notional_sum": 6668428280.0,
+              "computed_rate": 0.916667,
+              "observable_abs_gamma_proxy_sum": 1030010025.922125,
+              "oi_notional_sum": 6796172500.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 9,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 2923823260.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 50454029.667425,
+              "oi_notional_sum": 2923823260.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 9
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 13,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5197437440.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 101347015.31429,
+              "oi_notional_sum": 5197437440.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 13
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 9,
+            "otm_put_opposite_right_call_rows": 13
+          },
+          "status": "pass"
+        },
+        "2024-08-05": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 688915020.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 22718464.183138,
+              "oi_notional_sum": 688915020.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 13,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 71102910.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 1441893.156332,
+              "oi_notional_sum": 71102910.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 13
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 13,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 593855190.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 12586632.698217,
+              "oi_notional_sum": 593855190.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 13
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 13,
+            "otm_put_opposite_right_call_rows": 13
+          },
+          "status": "pass"
+        },
+        "2024-08-07": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 2398931847.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 161426736.02844,
+              "oi_notional_sum": 2398931847.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 13,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4656998983.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 111287443.099836,
+              "oi_notional_sum": 4656998983.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 13
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 13,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 3429259613.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 101683463.247163,
+              "oi_notional_sum": 3429259613.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 13
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 13,
+            "otm_put_opposite_right_call_rows": 13
+          },
+          "status": "pass"
+        },
+        "2024-10-31": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4512788028.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 385509921.533733,
+              "oi_notional_sum": 4512788028.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 15,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 10131780078.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 161358607.887509,
+              "oi_notional_sum": 10131780078.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 15
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 15,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 11781742686.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 281771789.705939,
+              "oi_notional_sum": 11781742686.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 15
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 15,
+            "otm_put_opposite_right_call_rows": 15
+          },
+          "status": "pass"
+        },
+        "2024-12-18": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 12,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4059349686.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 362647975.774455,
+              "oi_notional_sum": 4059349686.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 15,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5113492650.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 135834695.980683,
+              "oi_notional_sum": 5113492650.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 15
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 15,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 3695113296.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 102358096.789207,
+              "oi_notional_sum": 3695113296.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 15
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 15,
+            "otm_put_opposite_right_call_rows": 15
+          },
+          "status": "pass"
+        }
+      },
+      "policy_id": "candidate_b_side_aware_required_bucket",
+      "required_bucket_gate": "side_aware",
+      "status": "policy_candidate_passes_coverage_review"
+    },
+    "candidate_c_notional_weighted_coverage": {
+      "blocked_date_count": 1,
+      "date_count": 10,
+      "failure_count": 1,
+      "failures": [
+        "2023-10-27:otm_call_oi_notional_share_below_floor"
+      ],
+      "notes": [
+        "Notional-weighted policy treats low row-rate as a warning only when OI-notional and observable gamma-proxy representation pass.",
+        "This candidate is more permissive on row count but still blocks economically weak notional coverage."
+      ],
+      "passed_date_count": 9,
+      "per_date": {
+        "2023-08-09": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 8,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 6532197516.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 985546763.604396,
+              "oi_notional_sum": 6532197516.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 8
+            },
+            "otm_call": {
+              "blocked_count": 12,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 12
+              },
+              "computed_count": 12,
+              "computed_oi_notional_share": 0.939224,
+              "computed_oi_notional_sum": 5973546048.0,
+              "computed_rate": 0.5,
+              "observable_abs_gamma_proxy_sum": 228857651.666635,
+              "oi_notional_sum": 6360083868.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 24
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 22,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 6584334132.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 236879892.753146,
+              "oi_notional_sum": 6584334132.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 12,
+            "otm_put_opposite_right_call_rows": 11
+          },
+          "status": "pass",
+          "warnings": [
+            "otm_call_row_rate_warning"
+          ]
+        },
+        "2023-09-13": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5280720687.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 741300419.683558,
+              "oi_notional_sum": 5280720687.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 22,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4287151809.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 152576784.953257,
+              "oi_notional_sum": 4287151809.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            },
+            "otm_put": {
+              "blocked_count": 10,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 10
+              },
+              "computed_count": 12,
+              "computed_oi_notional_share": 0.880098,
+              "computed_oi_notional_sum": 5736959505.0,
+              "computed_rate": 0.545455,
+              "observable_abs_gamma_proxy_sum": 154462379.674885,
+              "oi_notional_sum": 6518546757.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 11,
+            "otm_put_opposite_right_call_rows": 11
+          },
+          "status": "pass",
+          "warnings": [
+            "otm_put_row_rate_warning"
+          ]
+        },
+        "2023-10-27": {
+          "blockers": [
+            "otm_call_oi_notional_share_below_floor"
+          ],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 8,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4983791580.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 491724716.42981,
+              "oi_notional_sum": 4983791580.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 8
+            },
+            "otm_call": {
+              "blocked_count": 8,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 8
+              },
+              "computed_count": 14,
+              "computed_oi_notional_share": 0.751624,
+              "computed_oi_notional_sum": 9876603933.0,
+              "computed_rate": 0.636364,
+              "observable_abs_gamma_proxy_sum": 335482621.814709,
+              "oi_notional_sum": 13140354411.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 22
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 20,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 7150412844.000001,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 273246421.453624,
+              "oi_notional_sum": 7150412844.000001,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 20
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 11,
+            "otm_put_opposite_right_call_rows": 10
+          },
+          "status": "blocked",
+          "warnings": []
+        },
+        "2023-12-29": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 13995876900.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 2006441478.642884,
+              "oi_notional_sum": 13995876900.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 9,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 9
+              },
+              "computed_count": 15,
+              "computed_oi_notional_share": 0.999718,
+              "computed_oi_notional_sum": 17947286506.0,
+              "computed_rate": 0.625,
+              "observable_abs_gamma_proxy_sum": 684469560.906304,
+              "oi_notional_sum": 17952340374.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 24
+            },
+            "otm_put": {
+              "blocked_count": 1,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 1
+              },
+              "computed_count": 23,
+              "computed_oi_notional_share": 0.992212,
+              "computed_oi_notional_sum": 20171941986.0,
+              "computed_rate": 0.958333,
+              "observable_abs_gamma_proxy_sum": 517221413.632045,
+              "oi_notional_sum": 20330280624.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 24
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 12,
+            "otm_put_opposite_right_call_rows": 12
+          },
+          "status": "pass",
+          "warnings": []
+        },
+        "2024-01-03": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5074799832.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 668399744.908354,
+              "oi_notional_sum": 5074799832.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 17,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4389120304.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 212180036.864494,
+              "oi_notional_sum": 4389120304.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 17
+            },
+            "otm_put": {
+              "blocked_count": 11,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 11
+              },
+              "computed_count": 6,
+              "computed_oi_notional_share": 0.906923,
+              "computed_oi_notional_sum": 1574161040.0,
+              "computed_rate": 0.352941,
+              "observable_abs_gamma_proxy_sum": 55690353.672409,
+              "oi_notional_sum": 1735715960.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 17
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 12,
+            "otm_put_opposite_right_call_rows": 11
+          },
+          "status": "pass",
+          "warnings": [
+            "otm_put_row_rate_warning"
+          ]
+        },
+        "2024-05-21": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 1,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 1
+              },
+              "computed_count": 11,
+              "computed_oi_notional_share": 0.981204,
+              "computed_oi_notional_sum": 6668428280.0,
+              "computed_rate": 0.916667,
+              "observable_abs_gamma_proxy_sum": 1030010025.922125,
+              "oi_notional_sum": 6796172500.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_call": {
+              "blocked_count": 9,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 9
+              },
+              "computed_count": 9,
+              "computed_oi_notional_share": 0.984773,
+              "computed_oi_notional_sum": 2923823260.0,
+              "computed_rate": 0.5,
+              "observable_abs_gamma_proxy_sum": 50454029.667425,
+              "oi_notional_sum": 2969034020.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 18
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 5686973620.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 114219191.111112,
+              "oi_notional_sum": 5686973620.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 9,
+            "otm_put_opposite_right_call_rows": 13
+          },
+          "status": "pass",
+          "warnings": [
+            "otm_call_row_rate_warning"
+          ]
+        },
+        "2024-08-05": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 688915020.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 22718464.183138,
+              "oi_notional_sum": 688915020.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 3884092440.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 99220105.229655,
+              "oi_notional_sum": 3884092440.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 598052770.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 12662707.475872,
+              "oi_notional_sum": 598052770.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 13,
+            "otm_put_opposite_right_call_rows": 13
+          },
+          "status": "pass",
+          "warnings": []
+        },
+        "2024-08-07": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 2398931847.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 161426736.02844,
+              "oi_notional_sum": 2398931847.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 26,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4999454161.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 125136817.630331,
+              "oi_notional_sum": 4999454161.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            },
+            "otm_put": {
+              "blocked_count": 6,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 6
+              },
+              "computed_count": 20,
+              "computed_oi_notional_share": 0.910996,
+              "computed_oi_notional_sum": 4661653919.0,
+              "computed_rate": 0.769231,
+              "observable_abs_gamma_proxy_sum": 153563926.880631,
+              "oi_notional_sum": 5117097089.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 26
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 13,
+            "otm_put_opposite_right_call_rows": 13
+          },
+          "status": "pass",
+          "warnings": []
+        },
+        "2024-10-31": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 10,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4512788028.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 385509921.533733,
+              "oi_notional_sum": 4512788028.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 10
+            },
+            "otm_call": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 30,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 14642210688.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 357988678.123396,
+              "oi_notional_sum": 14642210688.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            },
+            "otm_put": {
+              "blocked_count": 10,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 10
+              },
+              "computed_count": 20,
+              "computed_oi_notional_share": 0.908232,
+              "computed_oi_notional_sum": 12631505628.0,
+              "computed_rate": 0.666667,
+              "observable_abs_gamma_proxy_sum": 322517836.727932,
+              "oi_notional_sum": 13907788734.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 15,
+            "otm_put_opposite_right_call_rows": 15
+          },
+          "status": "pass",
+          "warnings": []
+        },
+        "2024-12-18": {
+          "blockers": [],
+          "bucket_metrics": {
+            "atm": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 12,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 4059349686.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 362647975.774455,
+              "oi_notional_sum": 4059349686.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 12
+            },
+            "otm_call": {
+              "blocked_count": 13,
+              "blocked_status_counts": {
+                "blocked_mid_outside_black_scholes_bracket": 13
+              },
+              "computed_count": 17,
+              "computed_oi_notional_share": 0.965892,
+              "computed_oi_notional_sum": 5322196782.0,
+              "computed_rate": 0.566667,
+              "observable_abs_gamma_proxy_sum": 147541812.650597,
+              "oi_notional_sum": 5510139138.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            },
+            "otm_put": {
+              "blocked_count": 0,
+              "blocked_status_counts": {},
+              "computed_count": 30,
+              "computed_oi_notional_share": 1.0,
+              "computed_oi_notional_sum": 3913655130.0,
+              "computed_rate": 1.0,
+              "observable_abs_gamma_proxy_sum": 111936645.084175,
+              "oi_notional_sum": 3913655130.0,
+              "retained_abs_gamma_proxy_share": 1.0,
+              "row_count": 30
+            }
+          },
+          "reported_opposite_right_itm_rows": {
+            "otm_call_opposite_right_put_rows": 15,
+            "otm_put_opposite_right_call_rows": 15
+          },
+          "status": "pass",
+          "warnings": [
+            "otm_call_row_rate_warning"
+          ]
+        }
+      },
+      "policy_id": "candidate_c_notional_weighted_coverage",
+      "required_bucket_gate": "notional_weighted",
+      "status": "policy_candidate_blocked",
+      "warnings": [
+        "2023-08-09:otm_call_row_rate_warning",
+        "2023-09-13:otm_put_row_rate_warning",
+        "2024-01-03:otm_put_row_rate_warning",
+        "2024-05-21:otm_call_row_rate_warning",
+        "2024-12-18:otm_call_row_rate_warning"
+      ]
+    }
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "date_count": 10,
+  "decision": {
+    "next_safe_action": "If continuing H-G1, draft an explicit policy adoption artifact for the side-aware required-bucket gate and rerun the gamma diagnostic under that policy. Do not treat this comparison as strategy validation, do not use strategy PnL for policy selection, and do not use NOVI/net-gamma as a strategy filter.",
+    "status": "h_g1_still_blocked_policy_review_only"
+  },
+  "evidence_tier": "E1",
+  "forbidden_claims_preserved": [
+    "H-G1 pass",
+    "policy adopted by pre-registration alone",
+    "NOVI/net-gamma strategy filter readiness",
+    "true market-maker net gamma",
+    "strategy validation from coverage policy"
+  ],
+  "h_g1_15_locked_facts": {
+    "blocked_rows_in_failed_buckets": 55,
+    "failed_bucket_count": 5,
+    "minimum_failed_bucket_computed_oi_notional_share": 0.880098,
+    "minimum_failed_bucket_gamma_proxy_share": 1.0,
+    "opposite_right_blocked_row_share": 1.0,
+    "weak_notional_failure_count": 0
+  },
+  "hypothesis_id": "H-G1",
+  "network_used": false,
+  "paid_data_used": false,
+  "quote_count": 2822,
+  "recommendation": {
+    "h_g1_15_primary_diagnosis": "All blocked rows inside failed buckets are opposite-right ITM options created by moneyness-only buckets. The failure is primarily a bucket-definition/policy problem, not an OI join or timestamp problem.",
+    "policy_adopted_now": false,
+    "reason": "Side-aware buckets target the diagnosed mechanism: H-G1.15 found all blocked failed-bucket rows were opposite-right ITM rows caused by moneyness-only buckets. This candidate passes coverage review without using strategy PnL, new dates, or paid data.",
+    "recommended_for_separate_policy_adoption_review": "candidate_b_side_aware_required_bucket",
+    "strategy_use_allowed": false
+  },
+  "record_type": "h_g1_bucket_policy_comparison",
+  "research_log_path": "research_log/017-higanbana-gamma-bucket-policy-comparison.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-gamma-bucket-policy-comparison",
+  "schema_version": "h_g1_bucket_policy_comparison_v1",
+  "source_bucket_failure_diagnostic": "reports\\diagnostics\\h_g1_manifest_v3_bucket_failure_diagnostic.json",
+  "source_input_jsonl": "data\\derived\\spy_0dte\\h_g1_gamma_regime\\option_quote_enriched_manifest_v3_snapshot.jsonl",
+  "source_preregistration": "experiments\\h_g1_bucket_policy_review_preregistration.json",
+  "source_v3_summary": "reports\\diagnostics\\h_g1_gamma_regime_diagnostic_summary_v3.json",
+  "status": "policy_review_complete_h_g1_still_blocked",
+  "strategy_pnl_used": false,
+  "tier_blockers": [
+    "E1 policy-review diagnostic only",
+    "No strategy backtest acceptance",
+    "No MinTRL/PSR acceptance evidence for a trading rule",
+    "Policy is not adopted by this comparison alone"
+  ]
+}

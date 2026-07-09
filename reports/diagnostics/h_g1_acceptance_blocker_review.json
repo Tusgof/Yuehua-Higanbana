@@ -1,0 +1,167 @@
+{
+  "acceptance_blockers": [
+    {
+      "blocker_id": "strategy_ablation_missing",
+      "category": "strategy_evidence",
+      "next_action": "Design a separate H-G1 strategy-ablation preregistration before any NOVI/net-gamma filter can be used.",
+      "required_evidence_to_clear": [
+        "Pre-registered strategy rule that states how the gamma proxy affects entry, skip, sizing, or exit.",
+        "Baseline versus gamma-filtered implementable PnL on chronological train/OOS splits.",
+        "Ablation showing whether improvements come from fewer trades, better average return, lower tail loss, or hidden exposure changes."
+      ],
+      "severity": "hard_blocker",
+      "status": "blocked",
+      "why_it_blocks_acceptance": "H-G1.19 validates a proxy data pipeline, not a trading rule. No backtest compares baseline strategy versus NOVI/net-gamma-filtered strategy."
+    },
+    {
+      "blocker_id": "mintrl_psr_missing",
+      "category": "statistical_power",
+      "next_action": "Compute MinTRL/PSR only after strategy-ablation returns exist.",
+      "required_evidence_to_clear": [
+        "Trade-level or day-level return distribution for a pre-registered gamma-filtered strategy.",
+        "Observed Sharpe, sample length, skewness, kurtosis, and first-order autocorrelation.",
+        "MinTRL and PSR against explicit Sharpe null thresholds, with under-sampled or underpowered labels where needed."
+      ],
+      "severity": "hard_blocker",
+      "status": "blocked",
+      "why_it_blocks_acceptance": "There is no strategy-return series for the gamma rule, so Sharpe, PSR, and MinTRL cannot yet be computed for a deployable claim."
+    },
+    {
+      "blocker_id": "dsr_search_log_missing",
+      "category": "multiple_testing",
+      "next_action": "Require a search log and DSR policy in the next gamma strategy-ablation preregistration.",
+      "required_evidence_to_clear": [
+        "Pre-registered parameter grid and complete trial log before strategy testing.",
+        "Effective trial count and DSR or a documented DSR blocker if a best Sharpe is selected.",
+        "No OOS tuning after viewing validation results."
+      ],
+      "severity": "hard_blocker",
+      "status": "blocked",
+      "why_it_blocks_acceptance": "Future gamma thresholds, sign buckets, moneyness buckets, or regime filters can create selection bias if the best result is chosen after many trials."
+    },
+    {
+      "blocker_id": "big_day_dependency_missing",
+      "category": "robustness",
+      "next_action": "Add big-day dependency checks to the gamma strategy-ablation report template.",
+      "required_evidence_to_clear": [
+        "Remove the most extreme 5% winning/losing trades or close days from the gamma-filtered strategy.",
+        "Report whether Sharpe, drawdown, ES95/ES99, and conclusion survive."
+      ],
+      "severity": "hard_blocker",
+      "status": "blocked",
+      "why_it_blocks_acceptance": "The diagnostic has only proxy-volatility association evidence. It does not show whether strategy performance survives removing extreme winning or losing days."
+    },
+    {
+      "blocker_id": "implementable_pnl_missing",
+      "category": "execution_realism",
+      "next_action": "Use project option-backtest reporting rules before any acceptance claim.",
+      "required_evidence_to_clear": [
+        "Mid PnL and implementable PnL reported separately.",
+        "Bid/ask spread treatment, per-leg fees, slippage, and forced-close assumptions disclosed.",
+        "Cost drag quantified for the gamma-filtered strategy."
+      ],
+      "severity": "hard_blocker",
+      "status": "blocked",
+      "why_it_blocks_acceptance": "No strategy PnL was used in H-G1.19, so there is no mid PnL versus implementable PnL split or cost-drag measurement."
+    },
+    {
+      "blocker_id": "proxy_inventory_caveat",
+      "category": "data_semantics",
+      "next_action": "Preserve forbidden claims in all H-G1 reports and strategy docs.",
+      "required_evidence_to_clear": [
+        "Report wording must use signed-OI gamma proxy unless true inventory data is acquired.",
+        "Any future true net-gamma claim must identify a source that distinguishes dealer/customer positioning."
+      ],
+      "severity": "hard_blocker",
+      "status": "blocked",
+      "why_it_blocks_acceptance": "The signal is signed-OI gamma proxy from OPRA open interest and self-computed Greeks. It is not true dealer/customer inventory or true market-maker net gamma."
+    },
+    {
+      "blocker_id": "regime_sample_depth_limited",
+      "category": "regime_coverage",
+      "next_action": "Let strategy-ablation sample planning determine whether more data is justified; do not buy broad data from this artifact alone.",
+      "required_evidence_to_clear": [
+        "Strategy evidence across train/OOS, low/normal/high volatility, macro/no-macro, and stress regimes.",
+        "Explicit labels when any filtered regime remains under-sampled."
+      ],
+      "severity": "soft_blocker",
+      "status": "blocked",
+      "why_it_blocks_acceptance": "H-G1.19 covers 10 pre-registered diagnostic dates, enough for data-validity diagnostics but not enough to prove stable strategy behavior across market regimes."
+    }
+  ],
+  "allowed_next_action": "preregister_h_g1_strategy_ablation_or_return_to_news_unblock",
+  "blocker_summary": {
+    "hard_blocker_count": 6,
+    "hard_blockers": [
+      "strategy_ablation_missing",
+      "mintrl_psr_missing",
+      "dsr_search_log_missing",
+      "big_day_dependency_missing",
+      "implementable_pnl_missing",
+      "proxy_inventory_caveat"
+    ],
+    "soft_blocker_count": 1,
+    "soft_blockers": [
+      "regime_sample_depth_limited"
+    ],
+    "strategy_use_allowed": false,
+    "total_blockers": 7
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "evidence_tier": "E1",
+  "forbidden_claims_preserved": [
+    "H-G1 strategy edge validated",
+    "NOVI/net-gamma strategy filter ready",
+    "true market-maker net gamma",
+    "paper trading approved from H-G1.19",
+    "paid data justified solely by H-G1.20"
+  ],
+  "hypothesis_id": "H-G1",
+  "network_used": false,
+  "new_data_requested": false,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "passed_data_validity_facts": {
+    "computed_greeks_count": 2089,
+    "date_count": 10,
+    "diagnostic_status": "pass_diagnostic_only",
+    "economic_sign_correlation": -0.199367,
+    "economic_sign_observation_count": 10,
+    "in_sample_dates": 4,
+    "network_used": false,
+    "oos_dates": 6,
+    "open_interest_join_rate": 0.989369,
+    "paid_data_used": false,
+    "policy_id": "h_g1_required_bucket_policy_v3_side_aware",
+    "quote_count": 2822,
+    "raw_computed_greeks_rate": 0.740255,
+    "retained_abs_gamma_proxy_share": 1.0,
+    "side_aware_required_bucket_oi_notional_share": 0.999271,
+    "strategy_pnl_used": false,
+    "strategy_use_allowed": false,
+    "underlying_join_rate": 1.0
+  },
+  "record_type": "h_g1_acceptance_blocker_review",
+  "references": [
+    "wiki/concepts/backtest-validation-protocol.md",
+    "wiki/concepts/minimum-track-record-length.md",
+    "wiki/concepts/probabilistic-sharpe-ratio.md",
+    "wiki/concepts/deflated-sharpe-ratio.md",
+    "wiki/concepts/implementable-option-pnl.md"
+  ],
+  "research_log_path": "research_log/019-higanbana-gamma-acceptance-blocker-review.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-gamma-acceptance-blocker-review",
+  "schema_version": "h_g1_acceptance_blocker_review_v1",
+  "source_diagnostic": "reports\\diagnostics\\h_g1_gamma_regime_diagnostic_summary_v3_side_aware.json",
+  "status": "blocked_before_strategy_use",
+  "strategy_pnl_used": false,
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E1 acceptance blocker review only",
+    "No gamma-filtered strategy-return series",
+    "No MinTRL/PSR/DSR for a trading rule",
+    "No implementable PnL or big-day dependency test",
+    "No true dealer/customer inventory data"
+  ]
+}

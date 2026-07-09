@@ -2,6 +2,7 @@
   "blockers": [
     "gdelt_capture_not_captured:2023-04-03",
     "gdelt_capture_not_captured:2023-04-13",
+    "gdelt_capture_not_captured:2023-04-14",
     "gdelt_capture_not_captured:2023-09-01",
     "gdelt_capture_not_captured:2023-09-07",
     "gdelt_capture_not_captured:2023-10-02",
@@ -57,17 +58,18 @@
       "blockers": [
         "gdelt_capture_not_captured:2023-04-03",
         "gdelt_capture_not_captured:2023-04-13",
+        "gdelt_capture_not_captured:2023-04-14",
         "gdelt_capture_not_captured:2023-09-01",
         "gdelt_capture_not_captured:2023-09-07",
         "gdelt_capture_not_captured:2023-10-02",
         "gdelt_capture_unavailable"
       ],
-      "file_count": 5,
+      "file_count": 6,
       "name": "gdelt_capture_status",
       "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_status",
       "status": "blocked",
       "status_counts": {
-        "blocked": 5
+        "blocked": 6
       }
     },
     {
@@ -75,8 +77,8 @@
         "gdelt_retry_cooldown_recommended"
       ],
       "name": "gdelt_command_plan",
-      "next_unattempted_trade_date": "2023-04-14",
-      "not_attempted_count": 66,
+      "next_unattempted_trade_date": "2023-04-17",
+      "not_attempted_count": 65,
       "retry_pressure_status": "cooldown_recommended",
       "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_command_plan.json",
       "status": "blocked"
@@ -84,17 +86,17 @@
     {
       "blockers": [],
       "cost_guard_basis": "user_reported_actual_usage",
-      "cost_guard_used_usd": 109.082227,
-      "known_committed_estimated_cost_usd": 173.988357,
+      "cost_guard_used_usd": 120.494368,
+      "known_committed_estimated_cost_usd": 196.358053,
       "name": "paid_cost",
-      "remaining_before_stop_usd": 15.917773,
+      "remaining_before_stop_usd": 4.505632,
       "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\data_cost\\paid_cost_audit.json",
       "status": "pass",
       "user_reported_actual_usage": {
-        "actual_usage_usd": 109.082227,
-        "notes": "Previous user-reported Databento account usage was $105.0. Codex then executed the approved H-G1 OPRA statistics/OI 11-date pull with logged estimate $4.082227, so the working guard basis is updated to about $109.082227 until the user/provider account view supplies a newer actual total. Stop threshold remains $125 until topped up by real payment on the existing Databento account only. Multi-account signup-credit harvesting is prohibited.",
-        "reported_at_utc": "2026-07-03T05:28:29Z",
-        "source": "user_reported_usage_plus_codex_committed_h_g1_download_estimate",
+        "actual_usage_usd": 120.494368,
+        "notes": "Previous working Databento guard basis was $119.989706 after user-reported/account-derived usage plus committed H-G1 and H-A2 2022-10 downloads. Codex then executed the approved H-A2 independent-validation one-day 2025-04-08 Databento pull with logged estimate $0.504662, so the legacy working guard basis is updated to about $120.494368 until the user/provider account view supplies a newer actual total. User added DATABENTO_API_MO and DATABENTO_API_AI as one approved $200 research pool, while each individual key has a $100 maximum-use cap. Future paid Databento actions must choose/log the selected key env, estimate cost first, and stop before the selected key or combined MO/AI pool would exceed cap. Multi-account signup-credit harvesting is prohibited.",
+        "reported_at_utc": "2026-07-06T03:29:00Z",
+        "source": "user_reported_usage_plus_codex_committed_h_g1_and_h_a2_download_estimates",
         "source_path": "reports\\data_cost\\user_reported_actual_usage.json"
       }
     },
@@ -178,10 +180,20 @@
     }
   ],
   "environment": {
+    "DATABENTO_API_AI": {
+      "machine": false,
+      "process": true,
+      "user": true
+    },
     "DATABENTO_API_KEY": {
       "machine": false,
       "process": false,
       "user": false
+    },
+    "DATABENTO_API_MO": {
+      "machine": false,
+      "process": true,
+      "user": true
     },
     "DATABENTO_SPY0DTE_API": {
       "machine": false,
@@ -195,10 +207,13 @@
     }
   },
   "next_safe_actions": [
+    "H-A2.63 targeted data/regime expansion plan is pre-registered as E0 control evidence after H-A2.62. It converts the blocker from vague sample-size shortage into specific target sets ['train_candidate_geometry_backfill', 'normal_control_geometry_pack', 'stress_regime_geometry_pack', 'oos_locked_rule_evaluation_pack']: train candidate geometry backfill first, normal/control geometry pack, stress-regime geometry pack, and future OOS locked-rule evaluation pack. Next safe H-A2 work is H-A2.64: h_a2_targeted_geometry_cache_inventory_and_cost_estimate as cache inventory plus metadata/cost estimate only. Required missing fields include entry strike mapping, entry implementable debit, bid/ask width, quote size/liquidity, forced-close value, regime labels, and MinTRL/PSR coverage. Do not download data yet, do not broad-buy calendar data, do not run OOS rule evaluation, do not select thresholds, do not call LLMs/GDELT, do not request broker/order work, do not approve paper trading, operational validation, real-money trading, or claim E2 from H-A2.63.",
+    "News-Unblock priority is now to evaluate alternative timestamp-clean real-news source paths instead of waiting only on GDELT. Use `reports\\news_gdelt_doc_api_enrichment_scaffold.md` as the current GDELT scaffold reference, but next write a source-decision artifact comparing feasible real headline/body, publication timestamp, fetch/availability timestamp, licensing, parser/import, and decision-time discipline paths before any live LLM research. Keep GKG as candidate index only; do not broad-download GKG or run LLM research yet.",
     "Pause additional live GDELT `--execute` retries until HTTP 429 pressure clears; monitor the command plan before retrying one candidate day.",
     "Do not run another synthetic Exp07 prompt matrix as research; build real timestamp-clean news cases first.",
     "Use `reports\\experiments\\exp07_real_news_case_plan.md` as the collection plan before any Exp07 prompt-family run.",
-    "Before any further broad Databento download, use `reports\\risk_first_data_audit.md`, `reports\\greeks_oi_enrichment_probe_report.md`, `docs\\GAMMA_AGGREGATION_VALIDATION_POLICY.md`, and `reports\\diagnostics\\gamma_aggregation_diagnostic_summary.json` as the pre-purchase checkpoint: expand the pre-registered H-G1 gamma/OI regime date set, choose missing-regime H-A2 stress/pre-break coverage, or revise toward a higher-density strategy hypothesis; then re-run paid-cost/readiness audits and confirm actual provider usage remains below the stop threshold."
+    "H-A2.17 IBKR readiness gate rerun is complete and externally blocked: Python clients are available (`ib_insync, ibapi`), but no local IBKR API port is listening on 7497/7496/4002/4001. No historical data was requested, no order was transmitted, no paid data was used, and no new provider was introduced. Next start local TWS/Gateway with API enabled and confirm market-data permission, then rerun the readiness probe. If local IBKR cannot be made available, stop for clear user direction before Alpaca or any new paid provider. Do not treat fixture bars as real data, rerun exact H-A2 stress diagnostics, approve paper trading, or claim H-A2 edge from H-A2.16/H-A2.17.",
+    "H-G1.24a no-paid local-cache overlap scan is complete and blocked: no additional baseline trade dates have local quote, local SPY bar, and local OI files beyond the current 2-date gamma intersection. H-G1 remains parked; do not run a metadata cost check, paid data download, new gamma ablation, strategy use, paper trading, or true net-gamma claim from this scan. Active edge work should prefer News-Unblock N.7 or H-A2 once their external blockers clear."
   ],
   "status": "blocked"
 }

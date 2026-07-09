@@ -1,0 +1,59 @@
+{
+  "schema_version": "h_g1_post_ablation_decision_v1",
+  "artifact_type": "h_g1_post_ablation_decision",
+  "created_date": "2026-07-04",
+  "hypothesis_id": "H-G1",
+  "evidence_tier": "E1",
+  "status": "decision_complete",
+  "conclusion": "ยังสรุปไม่ได้",
+  "source_strategy_ablation_summary": "reports/experiments/h_g1_gamma_strategy_ablation_summary.json",
+  "source_preregistration": "experiments/h_g1_gamma_strategy_ablation_preregistration.json",
+  "source_acceptance_blocker_review": "reports/diagnostics/h_g1_acceptance_blocker_review.json",
+  "network_used": false,
+  "paid_data_used": false,
+  "new_data_requested": false,
+  "new_strategy_pnl_used": false,
+  "source_strategy_pnl_reviewed": true,
+  "strategy_use_allowed": false,
+  "paper_trading_allowed": false,
+  "paid_data_allowed_from_h_g1_22": false,
+  "true_net_gamma_claim_allowed": false,
+  "research_log_required": false,
+  "decision": "park_h_g1_pending_sample_expansion_plan",
+  "selected_next_safe_action": "return_to_news_unblock_n7",
+  "decision_reason": [
+    "H-G1.22 used the locked H-G1.21 ablation design and completed without paid data or network calls.",
+    "Only 2 of 90 baseline closed trades intersect the available gamma-proxy date set.",
+    "All three gamma-filtered variants collapse to 0 active trades.",
+    "MinTRL/PSR and big-day dependency checks are blocked by insufficient observations.",
+    "Buying more gamma data directly from H-G1.22 would be a sample-expansion project, not evidence that the filter works."
+  ],
+  "tier_blockers": [
+    "intersection_sample_too_small",
+    "under-sampled",
+    "underpowered",
+    "all_gamma_variants_collapse_or_reduce_the_trade_sample",
+    "mintrl_psr_blocked_insufficient_observations",
+    "big_day_dependency_blocked_insufficient_observations",
+    "signed_oi_gamma_proxy_is_not_true_market_maker_net_gamma",
+    "no_e2_acceptance"
+  ],
+  "reopen_conditions": [
+    "A separate pre-registered sample-expansion plan estimates expected gamma-date/trade overlap before any paid data pull.",
+    "The plan names which inference gap the new sample will answer and how MinTRL/PSR, regime coverage, and cost guard will be evaluated.",
+    "The user explicitly approves any paid gamma-specific expansion if the projected cost exceeds the current guard or introduces a new provider.",
+    "Future non-gamma work discovers additional timestamp-clean cached decision days that materially improve gamma overlap without new paid data."
+  ],
+  "forbidden_actions": [
+    "Do not use H-G1 as a trading filter from H-G1.22.",
+    "Do not approve paper trading from H-G1.22.",
+    "Do not buy paid data from H-G1.22 alone.",
+    "Do not claim true market-maker net gamma or dealer net gamma from signed-OI gamma proxy evidence.",
+    "Do not add new gamma variants, change H-G1 dates, or tune OOS without a new pre-registration."
+  ],
+  "next_actions": [
+    "Treat H-G1 as parked, not falsified, because the current failure is sample-overlap and statistical power.",
+    "Return active implementation to News-Unblock N.7 to build real timestamp-clean news cases.",
+    "Reopen H-G1 only through a separate sample-expansion decision artifact or a new mechanism hypothesis."
+  ]
+}

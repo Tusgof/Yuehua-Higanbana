@@ -82,10 +82,12 @@ Done:
 - Candidate-day GDELT capture command planner exists at `scripts\plan_gdelt_news_capture_commands.py`; it writes a no-network retry plan from existing pilot candidate-ready days.
 - Multi-snapshot GDELT directory importer exists at `scripts\import_gdelt_news_capture_directory.py`; it combines captured per-day CSV files and reuses the single-snapshot importer validation.
 - Coverage auditor exists at `scripts\audit_news_coverage.py`. It checks canonical real news archive coverage by topic across reference, train, and OOS windows and writes `reports\news_coverage_audit.*`.
+- GDELT bulk raw-file source decision exists at `docs\GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md`. It keeps DOC API as the primary query path, adds bulk raw files as a free candidate probe path, and requires a no-download manifest/size probe before any bulk data download.
 
 Still pending:
 
 - Successful real GDELT snapshot capture. A small manual probe on 2026-06-30 returned HTTP 429, so live capture should be retried later and treated as an external availability issue.
+- Bulk raw-file manifest/size probe. The approved next step is metadata planning only, not raw article download.
 - Passing coverage audit with real article counts by date/topic. Current audit is `blocked` because no canonical real news archive exists at `data\normalized\spy_0dte\news\news_item.jsonl`.
 - Strategy ablation using the real news archive.
 

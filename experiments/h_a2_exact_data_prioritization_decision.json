@@ -1,0 +1,129 @@
+{
+  "schema_version": "h_a2_exact_data_prioritization_decision_v1",
+  "artifact_type": "decision",
+  "created_date": "2026-07-05",
+  "hypothesis_id": "H-A2",
+  "evidence_tier": "E0",
+  "status": "decision_complete",
+  "decision": "narrow_exact_data_plan_is_justified_but_not_approved_for_execution",
+  "purpose": "Decide what H-A2.13 permits after the lower-resolution proxy result, without treating SPY 1-minute bars as the hypothesis itself.",
+  "research_question": "Does the directionally coherent H-A2.13 proxy evidence justify a separate narrowly scoped exact-data plan, or should H-A2 be narrowed further before any data-source work?",
+  "source_artifacts": {
+    "h_a2_lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "h_a2_lower_resolution_proxy_report": "reports/experiments/h_a2_lower_resolution_proxy_report.md",
+    "h_a2_lower_resolution_proxy_preregistration": "experiments/h_a2_lower_resolution_proxy_preregistration.json",
+    "h_a2_followup_resolution_preregistration": "experiments/h_a2_followup_resolution_preregistration.json",
+    "h_a2_2022_spy_bar_source_decision": "experiments/h_a2_2022_spy_bar_source_decision.json",
+    "h_a2_2022_spy_bar_source_decision_doc": "docs/H_A2_2022_SPY_BAR_SOURCE_DECISION.md",
+    "hypothesis_data_resolution_audit": "docs/HYPOTHESIS_DATA_RESOLUTION_AUDIT.md",
+    "wiki_orb_concept": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md"
+  },
+  "evidence_review": {
+    "proxy_result_status": "complete",
+    "proxy_evidence_tier": "E1",
+    "proxy_conclusion": "ยังสรุปไม่ได้",
+    "directionally_coherent": true,
+    "measured_proxy_days": 444,
+    "daily_row_count": 463,
+    "trial_count": 7,
+    "existing_trade_days": 90,
+    "combined_risk_trade_days": 26,
+    "non_risk_trade_days": 64,
+    "combined_risk_avg_implementable_pnl": -10.56,
+    "non_risk_avg_implementable_pnl": 12.815,
+    "trade_avg_pnl_risk_minus_non_risk": -23.375,
+    "exact_2022_orb_tested": false,
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "data_resolution_logic": {
+    "hypothesis_first_rule": "H-A2 is a macro/VIX-conditioned ORB hypothesis. SPY 1-minute bars are only one method for testing exact ORB timing and fill-path claims.",
+    "one_minute_bars_required_for": [
+      "exact 2022-10 ORB entry timing",
+      "breakout ordering",
+      "stop/target path reconstruction",
+      "timestamp-aligned option fill timing",
+      "acceptance-grade exact stress rerun"
+    ],
+    "one_minute_bars_not_required_for": [
+      "mechanism proxy review",
+      "coarse stress/regime review",
+      "prioritization decision",
+      "deciding whether a narrow source plan is worth drafting"
+    ],
+    "minimum_next_question": "Can an exact 2022-10 stress rerun falsify or strengthen the H-A2 mechanism under the same non-risk/risk split observed in H-A2.13?"
+  },
+  "decision_rationale": [
+    "The lower-resolution proxy and existing exact-quote trade outcomes both show risk-labeled macro/VIX days underperforming non-risk days.",
+    "The result is still E1 only and cannot validate edge, but it is stronger than a blind data chase because the next exact-data question is now named.",
+    "Because the current evidence does not test exact 2022-10 ORB entries/exits, the next artifact should be a narrow exact-data plan, not an immediate provider request.",
+    "A valid next plan must state why exact 1-minute bars are necessary for the exact stress rerun and must preserve the no-paper-trading and no-edge-claim gates."
+  ],
+  "selected_next_path": {
+    "path_id": "draft_narrow_exact_2022_underlying_bar_plan",
+    "selected": true,
+    "allowed_next_artifact": "A separate H-A2 exact 2022 underlying-bar acquisition/import plan or preregistration.",
+    "allowed_scope": [
+      "2022-10 SPY underlying bars needed to use already-downloaded 2022-10 option quotes",
+      "coverage and timestamp validation requirements",
+      "no-paid/no-network readiness recheck where possible",
+      "cost/approval gate if a new provider or paid source is proposed"
+    ],
+    "allowed_claim": "H-A2 remains worth a narrowly scoped exact-data plan.",
+    "forbidden_claims": [
+      "Do not claim H-A2 edge is validated.",
+      "Do not claim exact 2022-10 ORB has been tested.",
+      "Do not approve paper trading or operational validation.",
+      "Do not approve IBKR historical-bar requests from this decision alone.",
+      "Do not approve paid data or a new provider from this decision alone."
+    ]
+  },
+  "rejected_paths": [
+    {
+      "path_id": "request_ibkr_bars_now",
+      "reason": "H-A2.13 justifies planning, not execution. IBKR remains externally blocked unless local TWS/Gateway is listening and a separate data-only probe plan passes."
+    },
+    {
+      "path_id": "buy_new_provider_now",
+      "reason": "Any new provider or paid source requires explicit user approval and cost/source policy. Current headroom is only 5.010294 USD."
+    },
+    {
+      "path_id": "narrow_h_a2_without_exact_plan",
+      "reason": "The proxy evidence is directionally coherent enough to justify a narrow exact-data plan before narrowing the hypothesis further."
+    },
+    {
+      "path_id": "paper_trading_or_operational_validation",
+      "reason": "No strategy hypothesis has E2 acceptance; H-A2.13 and this decision are not acceptance-grade evidence."
+    }
+  ],
+  "next_plan_requirements": {
+    "must_state_hypothesis_first": true,
+    "must_name_exact_inference_gap": true,
+    "must_limit_scope_to_2022_10_underlying_bars_before_any_2022_09_option_data": true,
+    "must_explain_why_1_minute_bars_are_required_for_exact_rerun": true,
+    "must_preserve_no_order_transmission": true,
+    "must_preserve_no_paper_trading": true,
+    "must_require_coverage_timestamp_import_validation_before_rerun": true,
+    "must_require_user_approval_for_new_provider_or_paid_source": true,
+    "must_not_use_proxy_result_as_e2_evidence": true
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "ibkr_request_allowed": false,
+    "llm_call_allowed": false,
+    "strategy_pnl_allowed_in_this_artifact": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_decision": false
+  },
+  "planned_outputs": {
+    "decision_json": "experiments/h_a2_exact_data_prioritization_decision.json",
+    "decision_md": "docs/H_A2_EXACT_DATA_PRIORITIZATION_DECISION.md",
+    "validator": "scripts/validate_h_a2_exact_data_prioritization_decision.py",
+    "future_plan_artifact": "experiments/h_a2_exact_2022_underlying_bar_plan.json"
+  }
+}

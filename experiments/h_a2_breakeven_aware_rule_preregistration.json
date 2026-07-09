@@ -1,0 +1,207 @@
+{
+  "schema_version": "h_a2_breakeven_aware_rule_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "experiment_id": "h_a2_breakeven_aware_rule_preregistration",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "created_date": "2026-07-08",
+  "title": "H-A2 breakeven-aware train-only revised rule preregistration",
+  "purpose": "Pre-register a revised H-A2 rule family after H-A2.60 showed that directionally correct ORB candidates can still lose when the selected debit vertical does not reach the long strike or overcome implementable friction.",
+  "source_artifacts": [
+    "reports/diagnostics/h_a2_mechanism_revision_audit.json",
+    "experiments/h_a2_mechanism_revision_preregistration.json",
+    "experiments/h_a2_post_two_exact_replay_decision.json",
+    "reports/diagnostics/h_a2_normal_control_exact_replay.json",
+    "reports/diagnostics/h_a2_post_stress_normalization_control_exact_replay.json",
+    "reports/experiments/h_a2_original_entry_robustness_prioritization_summary.json",
+    "reports/experiments/h_a2_proxy_first_robustness_summary.json"
+  ],
+  "wiki_basis": [
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/implementable-option-pnl.md",
+      "use": "Mid PnL is a benchmark only; implementable PnL and cost drag must govern rule interpretation."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/strike-selection-for-zero-dte-spreads.md",
+      "use": "Strike gap changes debit, delta, win rate, and breakeven behavior; the revised H-A2 rule must explicitly model strike reachability."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+      "use": "Raw ORB direction is not enough; debit spreads require filters and real option-chain validation."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/zero-dte-conditional-trading-rules.md",
+      "use": "Conditional 0DTE rules must use information available by the decision timestamp and avoid lookahead leakage."
+    }
+  ],
+  "revised_research_question": "Can H-A2 identify SPY 0DTE ORB debit vertical candidates whose decision-time state makes a cost-adjusted strike-reachability target plausible, rather than merely predicting underlying direction?",
+  "revised_hypothesis": {
+    "claim": "The current H-A2 locked condition should be replaced by a breakeven-aware conditional continuation hypothesis before more exact replay expansion.",
+    "mechanism_target": "The underlying must move far enough after entry for the selected vertical to approach or exceed the long strike and overcome debit, bid/ask spread, and per-leg fees before forced close.",
+    "allowed_decision_time_inputs": [
+      "opening_range_geometry_available_at_09_35_et",
+      "entry_time_spy_price",
+      "nearest_discrete_strike_mapping_at_entry",
+      "entry_mid_debit_and_implementable_debit",
+      "entry_bid_ask_width_or_liquidity_proxy",
+      "clean_macro_vix_regime_labels_available_before_entry",
+      "calendar_and_regime_labels_available_before_entry"
+    ],
+    "forbidden_live_inputs": [
+      "future_underlying_close",
+      "future_post_entry_followthrough_to_close",
+      "forced_close_option_quote",
+      "same_day_realized_pnl_after_entry",
+      "oos_result_selected_filter"
+    ],
+    "why_this_is_not_more_filter_piling": "The revision changes the research target from direction-only classification to payoff feasibility. It does not add protective policies after seeing losses; it requires the option payoff geometry and implementable friction to be modeled before a trade can be considered plausible."
+  },
+  "rule_family_to_preregister": {
+    "rule_family_id": "breakeven_aware_orb_debit_vertical",
+    "base_strategy": "Sub-System A SPY 0DTE ORB directional debit vertical spread",
+    "entry_time_et": "09:35:00",
+    "forced_close_time_et": "15:45:00",
+    "strike_mapping_method": "nearest_discrete_strike_rounding",
+    "fee_per_leg_usd": 0.64,
+    "cost_model_required": true,
+    "mid_pnl_control_required": true,
+    "implementable_pnl_governing_metric": true,
+    "candidate_rule_dimensions": [
+      {
+        "dimension": "strike_reachability_margin",
+        "role": "payoff_feasibility_target",
+        "description": "Measure whether the selected long strike is reachable enough for the debit vertical to overcome cost. This target is evaluated in training diagnostics but cannot be used as a live input unless it is predicted from decision-time variables."
+      },
+      {
+        "dimension": "entry_debit_and_cost_drag",
+        "role": "decision_time_input",
+        "description": "Use entry quote-derived debit, bid/ask width, and fee assumptions to reject trades where friction dominates plausible payoff."
+      },
+      {
+        "dimension": "opening_range_strength",
+        "role": "decision_time_input",
+        "description": "Use only the 09:30-09:35 ET range and breakout state available at decision time to represent early momentum strength."
+      },
+      {
+        "dimension": "regime_context",
+        "role": "decision_time_input",
+        "description": "Use macro/VIX/calendar labels as context, not as a replacement for strike reachability and cost feasibility."
+      },
+      {
+        "dimension": "selection_risk",
+        "role": "validation_control",
+        "description": "Record all candidate rule trials, forbid OOS tuning, and use DSR or an explicit DSR blocker if selecting a best trial."
+      }
+    ]
+  },
+  "planned_next_diagnostic": {
+    "experiment_id": "h_a2_breakeven_aware_rule_train_diagnostic",
+    "evidence_tier": "E1",
+    "mode": "local_no_paid_train_only_diagnostic",
+    "goal": "Use existing local artifacts only to define and stress-test a train-only breakeven-aware H-A2 revised rule candidate before any OOS rule selection or paid data expansion.",
+    "allowed_data_scope": [
+      "training_split_rows_only_for_rule_selection",
+      "existing_local_h_a2_reports",
+      "existing exact replay autopsy as mechanism sanity check",
+      "entry-time quote and strike metadata already present in local artifacts where available"
+    ],
+    "required_outputs": [
+      "Decision-time feature list and explicit future/leakage exclusion list.",
+      "Train-only candidate rule trial table with complete search log.",
+      "Cost-adjusted strike-reachability target definition.",
+      "Mid PnL versus implementable PnL interpretation rules.",
+      "Decision: park H-A2, preregister OOS evaluation of a single locked rule, or write targeted data/regime expansion plan.",
+      "Explicit statement that this diagnostic cannot claim E2 or paper-trading readiness."
+    ],
+    "forbidden_outputs": [
+      "No OOS-selected filter.",
+      "No threshold chosen from OOS results.",
+      "No new paid data request.",
+      "No exact replay expansion.",
+      "No broker or IBKR request.",
+      "No live LLM or GDELT call.",
+      "No paper-trading approval.",
+      "No E2 claim."
+    ]
+  },
+  "anti_overfitting_controls": {
+    "train_only_rule_selection_required": true,
+    "chronological_split_required": true,
+    "random_split_allowed": false,
+    "oos_tuning_allowed": false,
+    "post_result_filter_addition_allowed": false,
+    "threshold_0_001_status": "locked_as_prior_diagnostic_reference_only",
+    "future_outcome_as_live_input_allowed": false,
+    "search_log_required": true,
+    "trial_count_required": true,
+    "dsr_required_if_selecting_best_trial": true,
+    "mintrl_psr_required_for_acceptance_claim": true,
+    "big_day_dependency_required_for_backtest_claim": true
+  },
+  "sample_and_data_policy": {
+    "paid_data_allowed_by_this_artifact": false,
+    "exact_replay_expansion_allowed_by_this_artifact": false,
+    "future_paid_data_condition": "Allowed only after the train-only diagnostic names a specific inference or regime gap that cannot be resolved from local artifacts.",
+    "must_report_if_later_expanded": [
+      "active trade count after each filter",
+      "MinTRL",
+      "PSR",
+      "DSR or DSR blocker",
+      "mid_pnl",
+      "implementable_pnl",
+      "cost_drag",
+      "strike reachability",
+      "big-day dependency",
+      "regime coverage"
+    ]
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_expansion_allowed": false,
+    "oos_filter_selection_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "allowed_claims": [
+    "H-A2.61 pre-registers a breakeven-aware train-only revised rule family.",
+    "The revision separates future payoff targets from decision-time inputs to avoid lookahead leakage.",
+    "No paid data, exact replay expansion, E2 claim, or paper trading is approved."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim H-A2 is fully falsified as a broad strategy family.",
+    "Do not claim the breakeven-aware rule is selected for trading.",
+    "Do not approve paid data.",
+    "Do not approve exact replay expansion.",
+    "Do not change threshold 0.001 as a tradable rule.",
+    "Do not select an OOS filter.",
+    "Do not approve paper trading, operational validation, or real-money trading.",
+    "Do not claim E2 acceptance-grade evidence."
+  ],
+  "completion_criteria": [
+    "The artifact cites H-A2.60 as the controlling mechanism audit.",
+    "The revised hypothesis distinguishes payoff feasibility from direction prediction.",
+    "Allowed decision-time inputs and forbidden future inputs are explicit.",
+    "The next diagnostic is local/no-paid/train-only.",
+    "Search-log, DSR, chronological split, MinTRL/PSR, and big-day controls are required.",
+    "Paid data, exact replay expansion, OOS filter selection, paper trading, and E2 claims are forbidden.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "No revised-rule diagnostic run yet",
+    "No OOS evaluation of a locked revised rule",
+    "No MinTRL/PSR acceptance evidence",
+    "No E2 acceptance claim"
+  ],
+  "next_safe_action": "Run H-A2.62 `h_a2_breakeven_aware_rule_train_diagnostic` as a local/no-paid/train-only E1 diagnostic using existing artifacts only."
+}

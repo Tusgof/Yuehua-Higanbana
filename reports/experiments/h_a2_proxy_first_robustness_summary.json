@@ -1,0 +1,374 @@
+{
+  "allowed_claims": [
+    "H-A2 is weakened at proxy level.",
+    "H-A2 remains worth exact-data prioritization at E1 only.",
+    "H-A2 should be revised before any further exact-data source work.",
+    "1-minute bars remain required only for exact replay, not for mechanism-level proxy testing."
+  ],
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "Proxy evidence is useful for prioritization, but it is not exact entry/exit replay and remains under-sampled for acceptance.",
+  "evidence_tier": "E1",
+  "exact_2022_orb_tested": false,
+  "existing_trade_reconciliation_check": {
+    "groups": {
+      "all": {
+        "avg_implementable_pnl": 6.062222,
+        "best_day_pnl": 166.44,
+        "total_cost_drag": 543.9,
+        "total_implementable_pnl": 545.6,
+        "total_mid_pnl": 1089.5,
+        "trade_day_count": 90,
+        "win_rate": 0.322222,
+        "worst_day_pnl": -62.56
+      },
+      "combined_risk": {
+        "avg_implementable_pnl": -10.56,
+        "best_day_pnl": 126.44,
+        "total_cost_drag": 175.06,
+        "total_implementable_pnl": -274.56,
+        "total_mid_pnl": -99.5,
+        "trade_day_count": 26,
+        "win_rate": 0.192308,
+        "worst_day_pnl": -62.56
+      },
+      "in_sample": {
+        "avg_implementable_pnl": 15.220488,
+        "best_day_pnl": 166.44,
+        "total_cost_drag": 224.96,
+        "total_implementable_pnl": 624.04,
+        "total_mid_pnl": 849.0,
+        "trade_day_count": 41,
+        "win_rate": 0.341463,
+        "worst_day_pnl": -57.56
+      },
+      "non_risk": {
+        "avg_implementable_pnl": 12.815,
+        "best_day_pnl": 166.44,
+        "total_cost_drag": 368.84,
+        "total_implementable_pnl": 820.16,
+        "total_mid_pnl": 1189.0,
+        "trade_day_count": 64,
+        "win_rate": 0.375,
+        "worst_day_pnl": -57.56
+      },
+      "oos": {
+        "avg_implementable_pnl": -1.600816,
+        "best_day_pnl": 150.44,
+        "total_cost_drag": 318.94,
+        "total_implementable_pnl": -78.44,
+        "total_mid_pnl": 240.5,
+        "trade_day_count": 49,
+        "win_rate": 0.306122,
+        "worst_day_pnl": -62.56
+      }
+    },
+    "no_oos_tuning_statement": "No threshold or filter was tuned on OOS in this run; labels were inherited from preregistered source rows.",
+    "risk_non_risk_direction_consistent": true,
+    "status": "complete"
+  },
+  "experiment_id": "h_a2_proxy_first_robustness",
+  "forbidden_claims": [
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR data from this preregistration.",
+    "Do not buy paid data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration."
+  ],
+  "fragility_and_big_day_check": {
+    "after_trim": {
+      "non_risk": {
+        "avg_implementable_pnl": 4.134915,
+        "best_day_pnl": 150.44,
+        "total_cost_drag": 331.54,
+        "total_implementable_pnl": 243.96,
+        "total_mid_pnl": 575.5,
+        "trade_day_count": 59,
+        "win_rate": 0.338983,
+        "worst_day_pnl": -55.56
+      },
+      "non_risk_minus_risk": 8.042741,
+      "risk": {
+        "avg_implementable_pnl": -3.907826,
+        "best_day_pnl": 126.44,
+        "total_cost_drag": 160.88,
+        "total_implementable_pnl": -89.88,
+        "total_mid_pnl": 71.0,
+        "trade_day_count": 23,
+        "win_rate": 0.217391,
+        "worst_day_pnl": -44.56
+      }
+    },
+    "before_trim": {
+      "non_risk": {
+        "avg_implementable_pnl": 12.815,
+        "best_day_pnl": 166.44,
+        "total_cost_drag": 368.84,
+        "total_implementable_pnl": 820.16,
+        "total_mid_pnl": 1189.0,
+        "trade_day_count": 64,
+        "win_rate": 0.375,
+        "worst_day_pnl": -57.56
+      },
+      "non_risk_minus_risk": 23.375,
+      "risk": {
+        "avg_implementable_pnl": -10.56,
+        "best_day_pnl": 126.44,
+        "total_cost_drag": 175.06,
+        "total_implementable_pnl": -274.56,
+        "total_mid_pnl": -99.5,
+        "trade_day_count": 26,
+        "win_rate": 0.192308,
+        "worst_day_pnl": -62.56
+      }
+    },
+    "mintrl_psr_or_blocker": "Blocked for acceptance; trade sample is diagnostic only.",
+    "status": "diagnostic_underpowered",
+    "survives_extreme_trim": true,
+    "trade_day_count": 90,
+    "trimmed_each_tail_count": 4,
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "generated_at_utc": "2026-07-09T05:43:03Z",
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "llm_call_used": false,
+  "macro_vix_separation_check": {
+    "groups": {
+      "macro_only": {
+        "proxy_15m": {
+          "avg_directional_followthrough_to_close_pct": -0.000566,
+          "measured_day_count": 105,
+          "positive_followthrough_rate": 0.5,
+          "signal_count": 16
+        },
+        "proxy_5m": {
+          "avg_directional_followthrough_to_close_pct": -0.00053,
+          "measured_day_count": 105,
+          "positive_followthrough_rate": 0.392857,
+          "signal_count": 28
+        },
+        "sample_count": 108,
+        "split_counts": {
+          "in_sample": 49,
+          "oos": 59
+        },
+        "trade_outcomes": {
+          "avg_implementable_pnl": -10.56,
+          "best_day_pnl": 126.44,
+          "total_cost_drag": 175.06,
+          "total_implementable_pnl": -274.56,
+          "total_mid_pnl": -99.5,
+          "trade_day_count": 26,
+          "win_rate": 0.192308,
+          "worst_day_pnl": -62.56
+        }
+      },
+      "macro_plus_vix_risk": {
+        "proxy_15m": {
+          "avg_directional_followthrough_to_close_pct": null,
+          "measured_day_count": 0,
+          "positive_followthrough_rate": null,
+          "signal_count": 0
+        },
+        "proxy_5m": {
+          "avg_directional_followthrough_to_close_pct": null,
+          "measured_day_count": 0,
+          "positive_followthrough_rate": null,
+          "signal_count": 0
+        },
+        "sample_count": 1,
+        "split_counts": {
+          "in_sample": 1
+        },
+        "trade_outcomes": {
+          "avg_implementable_pnl": null,
+          "best_day_pnl": null,
+          "total_cost_drag": 0.0,
+          "total_implementable_pnl": 0.0,
+          "total_mid_pnl": 0.0,
+          "trade_day_count": 0,
+          "win_rate": null,
+          "worst_day_pnl": null
+        }
+      },
+      "no_macro_no_vix_risk": {
+        "proxy_15m": {
+          "avg_directional_followthrough_to_close_pct": 0.000103,
+          "measured_day_count": 335,
+          "positive_followthrough_rate": 0.509804,
+          "signal_count": 51
+        },
+        "proxy_5m": {
+          "avg_directional_followthrough_to_close_pct": 0.001116,
+          "measured_day_count": 335,
+          "positive_followthrough_rate": 0.538462,
+          "signal_count": 65
+        },
+        "sample_count": 348,
+        "split_counts": {
+          "in_sample": 159,
+          "oos": 189
+        },
+        "trade_outcomes": {
+          "avg_implementable_pnl": 12.815,
+          "best_day_pnl": 166.44,
+          "total_cost_drag": 368.84,
+          "total_implementable_pnl": 820.16,
+          "total_mid_pnl": 1189.0,
+          "trade_day_count": 64,
+          "win_rate": 0.375,
+          "worst_day_pnl": -57.56
+        }
+      },
+      "vix_risk_only": {
+        "proxy_15m": {
+          "avg_directional_followthrough_to_close_pct": null,
+          "measured_day_count": 4,
+          "positive_followthrough_rate": null,
+          "signal_count": 0
+        },
+        "proxy_5m": {
+          "avg_directional_followthrough_to_close_pct": null,
+          "measured_day_count": 4,
+          "positive_followthrough_rate": null,
+          "signal_count": 0
+        },
+        "sample_count": 6,
+        "split_counts": {
+          "in_sample": 2,
+          "oos": 4
+        },
+        "trade_outcomes": {
+          "avg_implementable_pnl": null,
+          "best_day_pnl": null,
+          "total_cost_drag": 0.0,
+          "total_implementable_pnl": 0.0,
+          "total_mid_pnl": 0.0,
+          "trade_day_count": 0,
+          "win_rate": null,
+          "worst_day_pnl": null
+        }
+      }
+    },
+    "interpretation": "This separates macro labels from prior-close VIX risk instead of adding more policy rules.",
+    "status": "complete"
+  },
+  "methodology": {
+    "chronological_split_required": true,
+    "one_minute_required_for_exact_replay": true,
+    "one_minute_required_for_this_proxy_test": false,
+    "oos_tuning_used": false,
+    "proxy_scope": "Uses existing local H-A2.13 daily rows only; this is mechanism-level proxy evidence.",
+    "random_split_used": false
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Use H-A2.19 as E1 prioritization evidence only: proxy evidence remains directionally coherent, but exact 2022-10 ORB replay still requires real 2022 SPY bars before any E2 claim.",
+  "operational_validation_allowed": false,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-proxy-first-robustness",
+  "resolution_monotonicity_check": {
+    "directional_consistency_note": "Positive values mean non-risk days outperform combined macro/VIX risk days.",
+    "directionally_consistent": true,
+    "existing_trade_outcomes": {
+      "non_risk": {
+        "avg_implementable_pnl": 12.815,
+        "best_day_pnl": 166.44,
+        "total_cost_drag": 368.84,
+        "total_implementable_pnl": 820.16,
+        "total_mid_pnl": 1189.0,
+        "trade_day_count": 64,
+        "win_rate": 0.375,
+        "worst_day_pnl": -57.56
+      },
+      "non_risk_minus_risk": 23.375,
+      "risk": {
+        "avg_implementable_pnl": -10.56,
+        "best_day_pnl": 126.44,
+        "total_cost_drag": 175.06,
+        "total_implementable_pnl": -274.56,
+        "total_mid_pnl": -99.5,
+        "trade_day_count": 26,
+        "win_rate": 0.192308,
+        "worst_day_pnl": -62.56
+      }
+    },
+    "proxy_15m": {
+      "non_risk": {
+        "avg_directional_followthrough_to_close_pct": 0.000103,
+        "measured_day_count": 335,
+        "positive_followthrough_rate": 0.509804,
+        "signal_count": 51
+      },
+      "non_risk_minus_risk": 0.000669,
+      "risk": {
+        "avg_directional_followthrough_to_close_pct": -0.000566,
+        "measured_day_count": 109,
+        "positive_followthrough_rate": 0.5,
+        "signal_count": 16
+      }
+    },
+    "proxy_5m": {
+      "non_risk": {
+        "avg_directional_followthrough_to_close_pct": 0.001116,
+        "measured_day_count": 335,
+        "positive_followthrough_rate": 0.538462,
+        "signal_count": 65
+      },
+      "non_risk_minus_risk": 0.001646,
+      "risk": {
+        "avg_directional_followthrough_to_close_pct": -0.00053,
+        "measured_day_count": 109,
+        "positive_followthrough_rate": 0.392857,
+        "signal_count": 28
+      }
+    },
+    "status": "complete"
+  },
+  "sample_counts": {
+    "daily_rows": 463,
+    "measured_15m_days": 444,
+    "measured_5m_days": 444,
+    "split_counts": {
+      "in_sample": 211,
+      "oos": 252
+    },
+    "trade_days": 90
+  },
+  "sample_policy": {
+    "mintrl_psr_status": "blocked_not_acceptance_return_series",
+    "reason": "Existing option-trade rows remain too sparse for E2 acceptance; proxy rows are not deployable returns.",
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "schema_version": "h_a2_proxy_first_robustness_v1",
+  "source_preregistration": "experiments\\h_a2_proxy_first_robustness_preregistration.json",
+  "source_summary": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+  "source_summary_experiment_id": "h_a2_lower_resolution_proxy",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E1 proxy evidence only",
+    "No exact 2022-10 ORB replay",
+    "No independent new data",
+    "Existing option outcomes remain under-sampled and underpowered",
+    "No E2 acceptance claim",
+    "No paper trading, operational validation, or real-money approval"
+  ],
+  "trial_policy": {
+    "all_trials_recorded": true,
+    "dsr_reason": "All pre-registered checks are logged; no best Sharpe is selected as acceptance evidence.",
+    "dsr_status": "diagnostic_not_acceptance",
+    "search_log": "reports\\experiments\\search_logs\\h_a2_proxy_first_robustness_search_log.jsonl",
+    "trial_count": 4
+  }
+}

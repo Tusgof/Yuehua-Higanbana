@@ -1,0 +1,387 @@
+{
+  "allowed_claims": [
+    "H-A2 should be revised before further exact-data work.",
+    "H-A2 should be parked at E1 until new evidence exists.",
+    "H-A2 remains active at E1 and exact replay is still worth prioritizing.",
+    "Future H-L1 news or LLM scores must explain adverse days beyond this deterministic baseline."
+  ],
+  "big_day_dependency_context": {
+    "after_trim_non_risk_minus_risk_trade_pnl": 8.042741,
+    "before_trim_non_risk_minus_risk_trade_pnl": 23.375,
+    "interpretation": "The directional gap survives but weakens materially after trimming, so this remains diagnostic rather than acceptance-grade.",
+    "source": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "survives_extreme_trim": true
+  },
+  "broker_request_used": false,
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "Residual losses are real and frequent, but local labels show enough structure to justify a narrower H-A2 revision before exact replay; the sample remains underpowered and cannot validate an edge.",
+  "decision_rule_application": {
+    "blockers": [
+      "under_sampled",
+      "underpowered",
+      "no_exact_2022_orb_replay",
+      "no_e2_acceptance_claim"
+    ],
+    "decision": "revise_h_a2_before_exact_replay",
+    "evidence_tier": "E1",
+    "next_safe_action": "Pre-register a revised H-A2 condition that adds opening-followthrough failure-mode checks before any exact replay, paid data, IBKR request, LLM call, or paper trading.",
+    "park_h_a2_rule_result": false,
+    "prioritize_exact_replay_rule_result": true,
+    "revise_h_a2_rule_result": true,
+    "status": "complete"
+  },
+  "evidence_tier": "E1",
+  "exact_2022_orb_tested": false,
+  "experiment_id": "h_a2_residual_adverse_day_analysis",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not claim deterministic macro/VIX evidence is LLM or real-news evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration.",
+    "Do not run live GDELT retries from this preregistration."
+  ],
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:43:03Z",
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "llm_call_used": false,
+  "macro_only_loss_profile": {
+    "avg_losing_implementable_pnl": -34.940952,
+    "interpretation": "Macro-only losses are frequent enough that future H-L1 news/LLM work must add information beyond this deterministic label.",
+    "losing_trade_days": 21,
+    "loss_rate": 0.807692,
+    "macro_event_type_counts": {
+      "CPI": 8,
+      "FOMC_DECISION": 1,
+      "FOMC_MINUTES": 1,
+      "JOLTS": 6,
+      "NFP": 2,
+      "PCE": 4
+    },
+    "proxy_signal_counts": {
+      "proxy_15m": {
+        "call": 3,
+        "none": 17,
+        "put": 1
+      },
+      "proxy_5m": {
+        "call": 10,
+        "put": 11
+      }
+    },
+    "reference_trade_days": 26,
+    "split_counts": {
+      "in_sample": 8,
+      "oos": 13
+    },
+    "status": "complete",
+    "worst_losing_days": [
+      {
+        "cost_drag": 4.56,
+        "date": "2024-03-20",
+        "implementable_pnl": -62.56,
+        "macro_event_types": [
+          "FOMC_DECISION"
+        ],
+        "mid_pnl": -58.0,
+        "prior_vix_close": 13.82,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-07-30",
+        "implementable_pnl": -61.56,
+        "macro_event_types": [
+          "JOLTS"
+        ],
+        "mid_pnl": -57.0,
+        "prior_vix_close": 16.6,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "call",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 5.06,
+        "date": "2024-09-11",
+        "implementable_pnl": -60.56,
+        "macro_event_types": [
+          "CPI"
+        ],
+        "mid_pnl": -55.5,
+        "prior_vix_close": 19.08,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-06-28",
+        "implementable_pnl": -44.56,
+        "macro_event_types": [
+          "PCE"
+        ],
+        "mid_pnl": -40.0,
+        "prior_vix_close": 12.24,
+        "proxy_15m_signal": "call",
+        "proxy_5m_signal": "call",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2023-05-31",
+        "implementable_pnl": -43.56,
+        "macro_event_types": [
+          "JOLTS"
+        ],
+        "mid_pnl": -39.0,
+        "prior_vix_close": 17.46,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "in_sample"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-03-12",
+        "implementable_pnl": -42.56,
+        "macro_event_types": [
+          "CPI"
+        ],
+        "mid_pnl": -38.0,
+        "prior_vix_close": 15.22,
+        "proxy_15m_signal": "put",
+        "proxy_5m_signal": "put",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-05-03",
+        "implementable_pnl": -42.56,
+        "macro_event_types": [
+          "NFP"
+        ],
+        "mid_pnl": -38.0,
+        "prior_vix_close": 14.68,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2023-08-10",
+        "implementable_pnl": -41.56,
+        "macro_event_types": [
+          "CPI"
+        ],
+        "mid_pnl": -37.0,
+        "prior_vix_close": 15.96,
+        "proxy_15m_signal": "call",
+        "proxy_5m_signal": "call",
+        "split": "in_sample"
+      }
+    ]
+  },
+  "methodology": {
+    "analysis_scope": "Use only existing local artifacts already produced by H-A2.19, L.7, baseline trade outcomes, macro calendar, VIX/VXV, and local SPY bars.",
+    "chronological_split_required": true,
+    "local_artifacts_only": true,
+    "no_new_filter_selected": true,
+    "oos_tuning_used": false,
+    "random_split_used": false
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Pre-register a revised H-A2 condition that adds opening-followthrough failure-mode checks before any exact replay, paid data, IBKR request, LLM call, or paper trading.",
+  "non_risk_failure_mode_check": {
+    "features_not_available_locally": [
+      "real timestamp-clean news text",
+      "exact 2022-10 SPY 1-minute replay",
+      "pre-entry order-book or liquidity microstructure beyond current quotes"
+    ],
+    "negative_5m_followthrough_loss_days": 30,
+    "negative_5m_followthrough_loss_share": 0.75,
+    "non_risk_loss_days": 40,
+    "non_risk_reference_days": 64,
+    "oos_loss_days": 21,
+    "oos_loss_share": 0.525,
+    "revision_candidate": "Revise H-A2 to require a cleaner opening-followthrough condition and explicitly test whether non-risk OOS losses cluster around weak 5-minute/15-minute followthrough before exact replay.",
+    "status": "complete"
+  },
+  "operational_validation_allowed": false,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-residual-adverse-day-analysis",
+  "residual_loss_bucket_profile": {
+    "avg_losing_implementable_pnl": -32.935,
+    "day_of_week_counts": {
+      "Friday": 5,
+      "Monday": 14,
+      "Thursday": 12,
+      "Tuesday": 5,
+      "Wednesday": 4
+    },
+    "interpretation": "Non-risk losses remain common, so the current clean/risk split is too coarse by itself.",
+    "losing_trade_days": 40,
+    "loss_rate": 0.625,
+    "prior_vix_state_counts": {
+      "normal_or_low_vix": 40
+    },
+    "proxy_signal_counts": {
+      "proxy_15m": {
+        "call": 4,
+        "none": 35,
+        "put": 1
+      },
+      "proxy_5m": {
+        "call": 19,
+        "put": 21
+      }
+    },
+    "reference_trade_days": 64,
+    "split_counts": {
+      "in_sample": 19,
+      "oos": 21
+    },
+    "status": "complete",
+    "worst_losing_days": [
+      {
+        "cost_drag": 4.56,
+        "date": "2023-10-23",
+        "implementable_pnl": -57.56,
+        "macro_event_types": [],
+        "mid_pnl": -53.0,
+        "prior_vix_close": 21.71,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "in_sample"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-07-17",
+        "implementable_pnl": -55.56,
+        "macro_event_types": [],
+        "mid_pnl": -51.0,
+        "prior_vix_close": 13.19,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "call",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-09-16",
+        "implementable_pnl": -53.56,
+        "macro_event_types": [],
+        "mid_pnl": -49.0,
+        "prior_vix_close": 16.56,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2023-10-31",
+        "implementable_pnl": -48.56,
+        "macro_event_types": [],
+        "mid_pnl": -44.0,
+        "prior_vix_close": 19.75,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "in_sample"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-06-21",
+        "implementable_pnl": -46.56,
+        "macro_event_types": [],
+        "mid_pnl": -42.0,
+        "prior_vix_close": 13.28,
+        "proxy_15m_signal": "put",
+        "proxy_5m_signal": "call",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-07-25",
+        "implementable_pnl": -46.56,
+        "macro_event_types": [],
+        "mid_pnl": -42.0,
+        "prior_vix_close": 18.04,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-04-16",
+        "implementable_pnl": -43.56,
+        "macro_event_types": [],
+        "mid_pnl": -39.0,
+        "prior_vix_close": 19.23,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "put",
+        "split": "oos"
+      },
+      {
+        "cost_drag": 4.56,
+        "date": "2024-11-12",
+        "implementable_pnl": -43.56,
+        "macro_event_types": [],
+        "mid_pnl": -39.0,
+        "prior_vix_close": 14.97,
+        "proxy_15m_signal": "none",
+        "proxy_5m_signal": "call",
+        "split": "oos"
+      }
+    ]
+  },
+  "sample_counts": {
+    "daily_rows": 463,
+    "macro_only_losing_trade_days": 21,
+    "macro_only_trade_days": 26,
+    "non_risk_losing_trade_days": 40,
+    "non_risk_trade_days": 64,
+    "split_counts": {
+      "in_sample": 41,
+      "oos": 49
+    },
+    "trade_days": 90
+  },
+  "sample_policy": {
+    "mintrl_psr_status": "blocked_underpowered_e1_diagnostic",
+    "reason": "Only 90 existing trade days are available, and residual buckets are smaller than the full trade sample.",
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "schema_version": "h_a2_residual_adverse_day_analysis_v1",
+  "source_preregistration": "experiments\\h_a2_residual_adverse_day_analysis_preregistration.json",
+  "source_summary": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+  "source_summary_experiment_id": "h_a2_lower_resolution_proxy",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E1 diagnostic only",
+    "Residual buckets are under-sampled and underpowered",
+    "No exact 2022-10 ORB replay",
+    "No new independent validation data",
+    "No E2 acceptance claim",
+    "No paper trading, operational validation, or real-money approval"
+  ],
+  "trial_policy": {
+    "all_trials_recorded": true,
+    "dsr_reason": "The analysis applies pre-registered diagnostic buckets; it does not select a best Sharpe or new deployable filter.",
+    "dsr_status": "not_acceptance_no_best_sharpe_selected",
+    "search_log": "reports\\diagnostics\\search_logs\\h_a2_residual_adverse_day_analysis_search_log.jsonl",
+    "trial_count": 4
+  }
+}

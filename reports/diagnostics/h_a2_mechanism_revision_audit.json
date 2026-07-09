@@ -1,0 +1,193 @@
+{
+  "aggregate_findings": {
+    "average_cost_drag_vs_mid": 4.56,
+    "candidate_count": 2,
+    "cost_drag_material": true,
+    "direction_signal_not_sufficient": true,
+    "directionally_correct_underlying_count": 2,
+    "long_strike_not_reached_count": 2,
+    "mintrl_psr_status": "blocked_two_trade_underpowered",
+    "option_pnl_negative_count": 2,
+    "strike_reachability_issue": true,
+    "total_cost_drag_vs_mid": 9.12,
+    "total_implementable_pnl": -59.12,
+    "total_mid_pnl": -50.0,
+    "total_underlying_entry_to_forced_close_move": 2.67,
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "allowed_claims": [
+    "H-A2.60 explains why two directionally correct exact replays still lost money after implementable costs.",
+    "Direction alone is insufficient for the current H-A2 ORB debit vertical condition.",
+    "A train-only revised rule focused on cost-adjusted magnitude and strike reachability is justified as the next control artifact.",
+    "The result is E1 diagnostic evidence only."
+  ],
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The two exact-replayed candidates were directionally correct at the underlying level, but the selected call verticals still lost money because the forced-close underlying price did not reach the long strike and implementable cost drag remained material.",
+  "decision": {
+    "decision_label": "ยังสรุปไม่ได้",
+    "next_required_artifact": "h_a2_breakeven_aware_rule_preregistration",
+    "reason": "The current locked condition should not receive more sample expansion as-is. The next useful step is a train-only revised-rule preregistration focused on cost-adjusted magnitude and strike reachability.",
+    "selected_next_step": "preregister_train_only_revised_rule",
+    "why_not_falsify_h_a2_family": "Only two exact-replayed candidates exist, both under-sampled and underpowered. This can reject the current locked condition as expansion-ready, but cannot falsify ORB debit spreads as a family.",
+    "why_not_more_data_now": "More exact replays under the same direction-only condition may only repeat the same misspecified payoff problem and consume the approved Databento budget without improving the hypothesis."
+  },
+  "evidence_tier": "E1",
+  "experiment_id": "h_a2_mechanism_revision_audit",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim H-A2 is fully falsified as a broad strategy family.",
+    "Do not approve paid data from this audit alone.",
+    "Do not broaden exact replay from this audit alone.",
+    "Do not change threshold 0.001 from this audit.",
+    "Do not select a new OOS filter from this audit.",
+    "Do not approve paper trading, operational validation, or real-money trading.",
+    "Do not claim E2 acceptance-grade evidence."
+  ],
+  "generated_at_utc": "2026-07-08T14:23:25Z",
+  "guardrails": {
+    "broker_request_used": false,
+    "exact_replay_expansion_used": false,
+    "gdelt_live_retry_used": false,
+    "ibkr_request_used": false,
+    "llm_call_used": false,
+    "network_used": false,
+    "new_oos_filter_selected": false,
+    "new_provider_used": false,
+    "operational_validation_allowed": false,
+    "paid_data_used": false,
+    "paper_trading_allowed": false,
+    "real_money_allowed": false,
+    "strategy_use_allowed": false,
+    "threshold_search_used": false
+  },
+  "hypothesis_id": "H-A2",
+  "mechanism_autopsy": [
+    {
+      "candidate_date": "2025-02-11",
+      "cost_drag_vs_mid": 4.56,
+      "direction": "call",
+      "direction_signal_correct_to_forced_close": true,
+      "entry_implementable_debit": 0.5,
+      "entry_mid_debit": 0.49,
+      "entry_time_et": "09:35:00",
+      "failure_mode": "direction_correct_but_option_spread_lost_value_before_forced_close",
+      "forced_close_implementable_credit": 0.26,
+      "forced_close_mid_value": 0.27,
+      "forced_close_time_et": "15:45:00",
+      "implementable_pnl": -26.56,
+      "long_strike": 605.0,
+      "long_strike_above_forced_close": true,
+      "mechanism_note": "Underlying direction was correct, but the forced-close price did not reach the long strike; therefore the debit vertical did not gain enough value to overcome debit, spread, and fees.",
+      "mid_pnl": -22.0,
+      "proxy_5m_followthrough_to_close_pct": 0.002336,
+      "realized_long_gap": 1.48,
+      "realized_width": 2.0,
+      "short_strike": 607.0,
+      "source_experiment": "h_a2_normal_control_exact_replay",
+      "underlying_entry_close": 603.52,
+      "underlying_entry_to_forced_close_move": 1.41,
+      "underlying_forced_close": 604.93
+    },
+    {
+      "candidate_date": "2025-05-05",
+      "cost_drag_vs_mid": 4.56,
+      "direction": "call",
+      "direction_signal_correct_to_forced_close": true,
+      "entry_implementable_debit": 0.56,
+      "entry_mid_debit": 0.55,
+      "entry_time_et": "09:35:00",
+      "failure_mode": "direction_correct_but_option_spread_lost_value_before_forced_close",
+      "forced_close_implementable_credit": 0.26,
+      "forced_close_mid_value": 0.27,
+      "forced_close_time_et": "15:45:00",
+      "implementable_pnl": -32.56,
+      "long_strike": 565.0,
+      "long_strike_above_forced_close": true,
+      "mechanism_note": "Underlying direction was correct, but the forced-close price did not reach the long strike; therefore the debit vertical did not gain enough value to overcome debit, spread, and fees.",
+      "mid_pnl": -28.0,
+      "proxy_5m_followthrough_to_close_pct": 0.002238,
+      "realized_long_gap": 1.88,
+      "realized_width": 2.0,
+      "short_strike": 567.0,
+      "source_experiment": "h_a2_post_stress_normalization_control_exact_replay",
+      "underlying_entry_close": 563.12,
+      "underlying_entry_to_forced_close_move": 1.26,
+      "underlying_forced_close": 564.38
+    }
+  ],
+  "next_safe_action": "Pre-register H-A2.61 as a train-only revised rule focused on cost-adjusted post-entry magnitude, strike reachability, and implementable friction before any more paid data, exact replay expansion, threshold/filter change, E2 claim, paper trading, operational validation, or real-money work.",
+  "preregistration_controls_confirmed": {
+    "mode": "local_no_paid_diagnostic",
+    "new_threshold_search_allowed": false,
+    "oos_selected_filter_allowed": false,
+    "paid_data_before_mechanism_audit_allowed": false,
+    "planned_next_diagnostic": "h_a2_mechanism_revision_audit"
+  },
+  "record_type": "experiment_summary",
+  "research_log_path": "research_log/039-higanbana-h-a2-mechanism-revision-audit.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-mechanism-revision-audit",
+  "rule_dimension_assessment": [
+    {
+      "assessment": "logically_justified_before_parameter_search",
+      "dimension": "post_entry_followthrough",
+      "future_rule_constraint": "A future train-only rule should measure magnitude against strike reachability or cost-adjusted breakeven, not direction alone.",
+      "reason": "Both candidates moved in the expected direction after entry, but the move was not enough for the selected vertical spread to produce positive implementable PnL."
+    },
+    {
+      "assessment": "logically_justified_before_parameter_search",
+      "dimension": "strike_reachability",
+      "future_rule_constraint": "Nearest discrete strike rounding and realized strike gap must be part of any revised rule.",
+      "reason": "In both exact replays, the forced-close underlying price remained below the long call strike."
+    },
+    {
+      "assessment": "logically_justified_before_parameter_search",
+      "dimension": "cost_drag",
+      "future_rule_constraint": "Mid PnL must remain diagnostic only; implementable PnL is the governing metric.",
+      "reason": "The two trades lost $9.12 more on implementable PnL than on mid PnL after fees/spread assumptions."
+    },
+    {
+      "assessment": "supporting_context_not_sufficient_alone",
+      "dimension": "regime_context",
+      "future_rule_constraint": "Regime labels may prioritize samples, but must not replace post-entry magnitude and cost checks.",
+      "reason": "Clean macro/VIX and normal/post-stress context did not prevent losses in the two exact replays."
+    },
+    {
+      "assessment": "must_control_before_any_new_rule",
+      "dimension": "selection_risk",
+      "future_rule_constraint": "Any revised rule must be pre-registered as train-only with search log, DSR handling, chronological split, MinTRL/PSR labels, and big-day dependency checks.",
+      "reason": "Changing threshold or filters after these two losses would be post-result tuning."
+    }
+  ],
+  "sample_policy": {
+    "mintrl_psr_status": "blocked_two_trade_underpowered",
+    "sample_count": 2,
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "schema_version": "h_a2_mechanism_revision_audit_v1",
+  "source_artifacts": [
+    "experiments/h_a2_mechanism_revision_preregistration.json",
+    "reports/diagnostics/h_a2_normal_control_exact_replay.json",
+    "reports/diagnostics/h_a2_post_stress_normalization_control_exact_replay.json",
+    "experiments/h_a2_post_two_exact_replay_decision.json",
+    "reports/experiments/h_a2_original_entry_robustness_prioritization_summary.json",
+    "reports/experiments/h_a2_proxy_first_robustness_summary.json"
+  ],
+  "source_preregistration": "experiments/h_a2_mechanism_revision_preregistration.json",
+  "status": "complete",
+  "tier_blockers": [
+    "E1 local mechanism diagnostic only",
+    "sample_count_2_under_sampled",
+    "MinTRL/PSR blocked",
+    "No new independent validation distribution",
+    "No E2 acceptance claim"
+  ],
+  "trial_policy": {
+    "dsr_status": "not_applicable_no_parameter_search",
+    "search_log": "reports/diagnostics/search_logs/h_a2_mechanism_revision_audit_search_log.jsonl",
+    "threshold_0_001_status": "locked_as_prior_diagnostic_reference_only",
+    "trial_count": 1
+  }
+}

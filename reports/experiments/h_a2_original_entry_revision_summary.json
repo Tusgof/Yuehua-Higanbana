@@ -1,0 +1,328 @@
+{
+  "allowed_claims": [
+    "H-A2 has a timestamp-clean original-entry revision that uses only 09:35-known features.",
+    "The 15-minute conflict component was excluded from this original-entry test.",
+    "The current result is E1 diagnostic/prioritization evidence only."
+  ],
+  "baseline_condition": {
+    "oos": {
+      "avg_implementable_pnl": 7.087059,
+      "best_day_pnl": 150.44,
+      "loss_count": 21,
+      "loss_rate": 0.617647,
+      "total_cost_drag": 204.54,
+      "total_implementable_pnl": 240.96,
+      "total_mid_pnl": 445.5,
+      "trade_day_count": 34,
+      "win_rate": 0.382353,
+      "worst_day_pnl": -55.56
+    },
+    "train": {
+      "avg_implementable_pnl": 19.306667,
+      "best_day_pnl": 166.44,
+      "loss_count": 19,
+      "loss_rate": 0.633333,
+      "total_cost_drag": 164.3,
+      "total_implementable_pnl": 579.2,
+      "total_mid_pnl": 743.5,
+      "trade_day_count": 30,
+      "win_rate": 0.366667,
+      "worst_day_pnl": -57.56
+    }
+  },
+  "broker_request_used": false,
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The 09:35-only revision is timestamp-clean and retains useful original-entry context, but the OOS retained sample has only 14 trade days and remains under-sampled/underpowered.",
+  "daily_source": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+  "delayed_entry_source_summary": "reports\\experiments\\h_a2_delayed_entry_condition_summary.json",
+  "evidence_tier": "E1",
+  "exact_2022_orb_tested": false,
+  "experiment_id": "h_a2_original_entry_revision",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not use the 15-minute conflict component for an original 09:35 entry decision.",
+    "Do not treat original 09:35 PnL as delayed-entry PnL.",
+    "Do not change threshold 0.001 through OOS search.",
+    "Do not add a new OOS-selected filter.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration."
+  ],
+  "forbidden_feature_exclusion": {
+    "all_forbidden_features_excluded": true,
+    "delayed_entry_component_used": false,
+    "fifteen_minute_conflict_component_used": false,
+    "forbidden_features": [
+      "no_adverse_measured_15m_conflict",
+      "delayed_entry_0945_quote_or_fill",
+      "oos_loss_blacklist_or_new_filter"
+    ],
+    "new_oos_selected_filter_used": false,
+    "status": "complete"
+  },
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:43:03Z",
+  "hypothesis_decision": {
+    "allowed_next_action": "Keep H-A2 active as E1 diagnostic evidence and run a stricter original-entry robustness/prioritization review or plan independent validation data before any E2, exact replay, paper trading, or paid action.",
+    "decision": "continue_original_entry_revision_under_e1",
+    "e2_status": "forbidden",
+    "evidence_tier": "E1",
+    "forbidden_claims": [
+      "No H-A2 edge validation.",
+      "No E2 evidence.",
+      "No paper trading, operational validation, or real-money approval."
+    ],
+    "research_log_requirement": "research_log/031-higanbana-h-a2-original-entry-revision.md",
+    "status": "complete"
+  },
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "llm_call_used": false,
+  "methodology": {
+    "baseline_original_entry_time_et": "09:35:00",
+    "candidate_decision_time_et": "09:35:00",
+    "chronological_split_required": true,
+    "delayed_entry_component_used": false,
+    "earliest_candidate_entry_time_et": "09:35:00",
+    "excluded_features": [
+      "no_adverse_measured_15m_conflict",
+      "delayed_entry_0945_quote_or_fill",
+      "oos_loss_blacklist_or_new_filter"
+    ],
+    "fifteen_minute_conflict_component_used": false,
+    "local_artifacts_only": true,
+    "locked_threshold": 0.001,
+    "new_oos_selected_filter_used": false,
+    "oos_tuning_used": false,
+    "original_0935_pnl_labeled_as_delayed_entry_pnl": false,
+    "random_split_used": false,
+    "result_type": "timestamp_clean_original_entry_context",
+    "threshold_search_used": false,
+    "threshold_source": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "used_features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ]
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Keep H-A2 active as E1 diagnostic evidence and run a stricter original-entry robustness/prioritization review or plan independent validation data before any E2, exact replay, paper trading, or paid action.",
+  "operational_validation_allowed": false,
+  "original_entry_implementable_pnl_check": {
+    "baseline_avg_implementable_pnl": 7.087059,
+    "baseline_total_implementable_pnl": 240.96,
+    "comparison_status": "directionally_useful_but_underpowered",
+    "cost_drag": 113.34,
+    "retained_avg_implementable_pnl": 69.44,
+    "retained_minus_skipped_avg_implementable_pnl": 106.0,
+    "retained_total_implementable_pnl": 972.16,
+    "skipped_avg_implementable_pnl": -36.56,
+    "status": "complete"
+  },
+  "original_entry_revision_condition": {
+    "condition": "non-risk trade day and 09:30-09:35 directional followthrough >= locked threshold 0.001",
+    "largest_remaining_oos_losses": [
+      {
+        "cost_drag": 4.56,
+        "date": "2024-09-26",
+        "implementable_pnl": -11.56,
+        "mid_pnl": -7.0,
+        "prior_vix_close": 15.41,
+        "proxy_5m_followthrough": 0.002267,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 5.06,
+        "date": "2024-10-17",
+        "implementable_pnl": 13.44,
+        "mid_pnl": 18.5,
+        "prior_vix_close": 19.58,
+        "proxy_5m_followthrough": 0.002688,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 6.56,
+        "date": "2024-01-10",
+        "implementable_pnl": 23.44,
+        "mid_pnl": 30.0,
+        "prior_vix_close": 12.76,
+        "proxy_5m_followthrough": 0.002379,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 5.06,
+        "date": "2024-05-30",
+        "implementable_pnl": 23.44,
+        "mid_pnl": 28.5,
+        "prior_vix_close": 14.28,
+        "proxy_5m_followthrough": 0.003396,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 5.06,
+        "date": "2024-03-07",
+        "implementable_pnl": 24.44,
+        "mid_pnl": 29.5,
+        "prior_vix_close": 14.5,
+        "proxy_5m_followthrough": 0.00374,
+        "split": "oos"
+      }
+    ],
+    "locked_threshold": 0.001,
+    "oos": {
+      "avg_implementable_pnl": 69.44,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.071429,
+      "total_cost_drag": 113.34,
+      "total_implementable_pnl": 972.16,
+      "total_mid_pnl": 1085.5,
+      "trade_day_count": 14,
+      "win_rate": 0.928571,
+      "worst_day_pnl": -11.56
+    },
+    "train": {
+      "avg_implementable_pnl": 67.44,
+      "best_day_pnl": 166.44,
+      "loss_count": 5,
+      "loss_rate": 0.3125,
+      "total_cost_drag": 100.46,
+      "total_implementable_pnl": 1079.04,
+      "total_mid_pnl": 1179.5,
+      "trade_day_count": 16,
+      "win_rate": 0.6875,
+      "worst_day_pnl": -26.56
+    }
+  },
+  "original_entry_sample_recount": {
+    "oos_trade_count": 34,
+    "retained_oos_trade_count": 14,
+    "retained_train_trade_count": 16,
+    "skipped_oos_trade_count": 20,
+    "skipped_train_trade_count": 14,
+    "status": "complete",
+    "train_trade_count": 30,
+    "under_sampled_label": true,
+    "underpowered_label": true
+  },
+  "original_entry_timestamp_cleanliness": {
+    "all_features_known_by_decision_time": true,
+    "candidate_decision_time_et": "09:35:00",
+    "feature_completion_times_et": {
+      "clean_macro_vix_condition": "09:35:00",
+      "proxy_5m_followthrough": "09:35:00"
+    },
+    "forbidden_feature_exclusion_status": "pass",
+    "status": "complete",
+    "timestamp_cleanliness_status": "pass_for_original_0935_decision"
+  },
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-original-entry-revision",
+  "risk_and_sample_adequacy_check": {
+    "baseline_oos_after_trim": {
+      "avg_implementable_pnl": 1.773333,
+      "best_day_pnl": 134.44,
+      "loss_count": 19,
+      "loss_rate": 0.633333,
+      "total_cost_drag": 163.8,
+      "total_implementable_pnl": 53.2,
+      "total_mid_pnl": 217.0,
+      "trade_day_count": 30,
+      "win_rate": 0.366667,
+      "worst_day_pnl": -46.56
+    },
+    "big_day_dependency_status": "context_only_underpowered",
+    "concentration_status": "concentrated_or_underpowered",
+    "dsr_or_search_log_status": "not_recomputed_no_new_threshold_search",
+    "evidence_tier_cap": "E1",
+    "interpretation": "Risk checks are diagnostic only because retained OOS sample is small.",
+    "mintrl_psr_status": "blocked_underpowered_e1_diagnostic",
+    "retained_oos_after_trim": {
+      "avg_implementable_pnl": 69.44,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.071429,
+      "total_cost_drag": 113.34,
+      "total_implementable_pnl": 972.16,
+      "total_mid_pnl": 1085.5,
+      "trade_day_count": 14,
+      "win_rate": 0.928571,
+      "worst_day_pnl": -11.56
+    },
+    "search_log": "reports\\experiments\\search_logs\\h_a2_original_entry_revision_search_log.jsonl",
+    "status": "diagnostic_underpowered",
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "sample_counts": {
+    "baseline_oos_non_risk_trade_days": 34,
+    "baseline_train_non_risk_trade_days": 30,
+    "daily_rows": 463,
+    "oos_retention_rate": 0.411765,
+    "retained_oos_trade_days": 14,
+    "retained_train_trade_days": 16,
+    "skipped_oos_trade_days": 20,
+    "skipped_train_trade_days": 14
+  },
+  "schema_version": "h_a2_original_entry_revision_v1",
+  "skipped_condition": {
+    "oos": {
+      "avg_implementable_pnl": -36.56,
+      "best_day_pnl": -12.56,
+      "loss_count": 20,
+      "loss_rate": 1.0,
+      "total_cost_drag": 91.2,
+      "total_implementable_pnl": -731.2,
+      "total_mid_pnl": -640.0,
+      "trade_day_count": 20,
+      "win_rate": 0.0,
+      "worst_day_pnl": -55.56
+    },
+    "train": {
+      "avg_implementable_pnl": -35.702857,
+      "best_day_pnl": -22.56,
+      "loss_count": 14,
+      "loss_rate": 1.0,
+      "total_cost_drag": 63.84,
+      "total_implementable_pnl": -499.84,
+      "total_mid_pnl": -436.0,
+      "trade_day_count": 14,
+      "win_rate": 0.0,
+      "worst_day_pnl": -57.56
+    }
+  },
+  "source_experiment_ids": {
+    "daily_source": "h_a2_lower_resolution_proxy",
+    "delayed_entry_source_summary": "h_a2_delayed_entry_condition"
+  },
+  "source_preregistration": "experiments\\h_a2_original_entry_revision_preregistration.json",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E1 diagnostic/prioritization evidence only",
+    "Under-sampled and underpowered retained OOS sample",
+    "No exact 2022-10 ORB replay",
+    "No independent new validation data",
+    "No E2 acceptance claim",
+    "No paper trading, operational validation, or real-money approval"
+  ],
+  "trial_policy": {
+    "dsr_reason": "No threshold, filter, or best-Sharpe search was performed in this original-entry revision.",
+    "dsr_status": "not_recomputed_no_new_threshold_search",
+    "new_filter_search_used": false,
+    "oos_tuning_used": false,
+    "search_log": "reports\\experiments\\search_logs\\h_a2_original_entry_revision_search_log.jsonl",
+    "threshold_search_allowed": false,
+    "threshold_search_used": false,
+    "trial_count": 0
+  }
+}

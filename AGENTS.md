@@ -73,5 +73,14 @@ The active project is now **SPY 0DTE - Higanbana**.
 - Use the local LLM Wiki at `D:\Fogust\Workspace\LLM Wiki\LLM Wiki\wiki` as the primary knowledge source for 0DTE research rationale and report citations.
 - IBKR options permission is pending, so paper trading may be used as an operational bridge. It is not evidence of edge and must not replace backtest validation.
 - DeepSeek is the planned LLM provider for this project. Do not assume Claude unless the user explicitly changes this.
+- Supported Databento credential envs are `DATABENTO_API_KEY`, `DATABENTO_SPY0DTE_API`, `DATABENTO_API_MO`, and `DATABENTO_API_AI`. Do not store key values. `DATABENTO_API_MO` and `DATABENTO_API_AI` form one approved $200 research pool, each individual key remains capped at $100, and the selected key env must be logged before paid Databento actions.
 - Entry market orders are prohibited. Unfilled entry limits should skip according to the tested protocol.
-- When unsure whether a change belongs to the active SPY 0DTE scope, stop and ask before editing code.
+- When unsure whether a change belongs to the active SPY 0DTE scope, do not guess; surface the blocker and evidence before editing code.
+
+## 6. Proceed-By-Default Project Workflow
+
+- Default project behavior is **proceed by default** for normal in-plan SPY-only Higanbana work, without approval prompts. Do not ask for approval. State the intended change, affected files, and verification path, then continue.
+- This includes multi-file edits, experiment scaffolds, local scripts/tests/audits, no-paid data processing, existing approved providers inside the active cost guard, coherent project-control document updates, requested git status/commit/push work, research-log maintenance, and verification-loop runs.
+- Do not pause only because a task changes more than 3 files, creates or updates experiment artifacts, updates `PROJECT_BRAIN.md` / `IMPLEMENT_PLAN.md` / `AGENTS.md`, writes a research log, pushes a requested git update, or runs tests/audits.
+- Ask a question only when required information is missing and cannot be inferred safely.
+- Hard-stop boundaries remain only for: new paid provider, paid action that would breach the active cost guard, broker/order transmission, real-money launch, destructive filesystem/git operation, or scope change beyond SPY. At these boundaries, stop and report the boundary clearly as out-of-plan instead of framing it as a routine approval request.

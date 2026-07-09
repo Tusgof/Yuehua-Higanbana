@@ -1,0 +1,1229 @@
+{
+  "additional_no_paid_candidate_dates": [],
+  "artifact_type": "h_g1_local_cache_overlap_scan",
+  "candidate_dates_no_paid_gamma_ready": [
+    {
+      "date": "2023-10-27",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "no_paid_gamma_ready",
+      "split": "train",
+      "vix_close": 21.27,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-12-18",
+      "high_importance_macro": true,
+      "macro_events": [
+        "FOMC_DECISION"
+      ],
+      "source": "no_paid_gamma_ready",
+      "split": "oos",
+      "vix_close": 27.62,
+      "volatility_bucket": "high"
+    }
+  ],
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "This is a no-paid local-cache overlap scan, not a strategy test.",
+  "current_ablation_coverage": {
+    "baseline_closed_trade_count": 90,
+    "covered_trade_dates": [
+      "2023-10-27",
+      "2024-12-18"
+    ],
+    "excluded_baseline_closed_trade_count": 88,
+    "excluded_reason": "baseline_trade_date_not_in_gamma_proxy_date_set",
+    "gamma_date_count": 10,
+    "intersection_closed_trade_count": 2
+  },
+  "current_covered_trade_dates": [
+    "2023-10-27",
+    "2024-12-18"
+  ],
+  "evidence_tier": "E0",
+  "forbidden_actions_preserved": [
+    "Do not use H-G1 as a trading filter from this plan.",
+    "Do not approve paper trading from this plan.",
+    "Do not buy paid data from this plan alone.",
+    "Do not claim true market-maker net gamma or dealer net gamma from the signed-OI gamma proxy.",
+    "Do not add new gamma strategy variants or tune OOS before a new preregistered ablation.",
+    "Do not buy broad calendar data; every future pull must name the inference gap, dates, fields, expected overlap, regime gap, and cost guard."
+  ],
+  "hypothesis_id": "H-G1",
+  "local_cache_counts": {
+    "additional_no_paid_gamma_ready_dates": 0,
+    "baseline_closed_trade_dates": 90,
+    "current_baseline_gamma_intersection": 2,
+    "current_gamma_dates": 10,
+    "local_oi_dates": 13,
+    "local_option_quote_dates": 90,
+    "local_spy_bar_dates": 90,
+    "projected_no_paid_gamma_ready_intersection": 2,
+    "quote_bar_cached_baseline_dates_missing_oi": 88
+  },
+  "mintrl_psr_feasibility_gate": {
+    "additional_no_paid_closed_trade_count": 0,
+    "current_intersection_closed_trade_count": 2,
+    "fixed_n_rule_used": false,
+    "projected_no_paid_closed_trade_count": 2,
+    "reason": "No additional baseline trade dates have local quote, local SPY bar, and local OI files outside the current H-G1 gamma date set. The no-paid expanded sample remains too small to estimate Sharpe distribution inputs such as skewness, kurtosis, first-order autocorrelation, PSR, or MinTRL.",
+    "status": "blocked_insufficient_observations"
+  },
+  "network_used": false,
+  "new_data_requested": false,
+  "next_safe_action": "Keep H-G1 parked. Return to News-Unblock or H-A2 external blockers; do not run a new gamma ablation or paid gamma cost gate from this scan because no additional no-paid gamma-ready baseline trade dates were found.",
+  "paid_data_approved": false,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "quote_bar_cached_but_missing_oi_date_sample": [
+    {
+      "date": "2023-04-03",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 18.55,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-13",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.8,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-14",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.07,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-17",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 16.95,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-20",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.17,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.03,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-28",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.78,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-05-31",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.94,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-06-01",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.65,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-06-02",
+      "high_importance_macro": true,
+      "macro_events": [
+        "NFP"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.6,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-13",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.61,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-16",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.54,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-23",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.44,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-26",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.25,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.74,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-13",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.61,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-18",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.3,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-25",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.86,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-28",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.33,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-08-01",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.93,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-08-02",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 16.09,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-08-10",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.85,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-08-11",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.84,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-08-21",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.13,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-08-28",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.08,
+      "volatility_bucket": "normal"
+    }
+  ],
+  "quote_bar_cached_but_missing_oi_dates": [
+    {
+      "date": "2023-04-03",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 18.55,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-13",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.8,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-14",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.07,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-17",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 16.95,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-20",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.17,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.03,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-04-28",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.78,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-05-31",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.94,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-06-01",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.65,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-06-02",
+      "high_importance_macro": true,
+      "macro_events": [
+        "NFP"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.6,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-13",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.61,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-16",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.54,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-23",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.44,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-26",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.25,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-06-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.74,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-13",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.61,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-18",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.3,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-25",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.86,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-07-28",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.33,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-08-01",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.93,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-08-02",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 16.09,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-08-10",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.85,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-08-11",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.84,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-08-21",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.13,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-08-28",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.08,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-09-01",
+      "high_importance_macro": true,
+      "macro_events": [
+        "NFP"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.09,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-09-07",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.4,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-10-02",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 17.61,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-10-05",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 18.49,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-10-23",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 20.37,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-10-25",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 20.19,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-10-31",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 18.14,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-11-09",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 15.29,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2023-11-10",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.17,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-11-13",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 14.76,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-11-20",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 13.41,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-11-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 12.69,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-11-30",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 12.92,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-12-06",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 12.97,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2023-12-12",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "train",
+      "vix_close": 12.07,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-01-08",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.08,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-01-10",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.69,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-01-29",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.6,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-01-30",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.31,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-02-13",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 15.85,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-02-14",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.38,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-02-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.43,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-03-06",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.5,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-03-07",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.44,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-03-12",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.84,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-03-20",
+      "high_importance_macro": true,
+      "macro_events": [
+        "FOMC_DECISION"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.04,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-04-02",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.61,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-04-08",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 15.19,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-04-10",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI",
+        "FOMC_MINUTES"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 15.8,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-04-16",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 18.4,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-04-18",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 18.0,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-05-02",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.68,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-05-03",
+      "high_importance_macro": true,
+      "macro_events": [
+        "NFP"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.49,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-05-15",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.45,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-05-20",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.15,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-05-30",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.47,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-05-31",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.92,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-06-13",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 11.94,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-06-18",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.3,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-06-21",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.2,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-06-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.24,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-06-28",
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.44,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-07-10",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 12.85,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-07-17",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.48,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-07-24",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 18.04,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-07-25",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 18.46,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-07-30",
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 17.69,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-08-12",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 20.71,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-08-28",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 17.11,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-09-03",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 20.72,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-09-11",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 17.69,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-09-16",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 17.14,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-09-17",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 17.61,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-09-26",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 15.37,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-10-14",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 19.7,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-10-17",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 19.11,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-11-04",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 21.98,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-11-12",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.71,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-11-20",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 17.16,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-11-21",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 16.87,
+      "volatility_bucket": "normal"
+    },
+    {
+      "date": "2024-11-25",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 14.6,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-12-11",
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 13.58,
+      "volatility_bucket": "low"
+    },
+    {
+      "date": "2024-12-27",
+      "high_importance_macro": false,
+      "macro_events": [],
+      "source": "quote_bar_cached_but_missing_oi",
+      "split": "oos",
+      "vix_close": 15.95,
+      "volatility_bucket": "normal"
+    }
+  ],
+  "regime_counts": {
+    "additional_no_paid_candidates": {
+      "by_macro_flag": {},
+      "by_split": {},
+      "by_volatility_bucket": {}
+    },
+    "current_intersection": {
+      "by_macro_flag": {
+        "high_importance_macro": 2
+      },
+      "by_split": {
+        "oos": 1,
+        "train": 1
+      },
+      "by_volatility_bucket": {
+        "high": 1,
+        "normal": 1
+      }
+    },
+    "projected_no_paid_candidates": {
+      "by_macro_flag": {
+        "high_importance_macro": 2
+      },
+      "by_split": {
+        "oos": 1,
+        "train": 1
+      },
+      "by_volatility_bucket": {
+        "high": 1,
+        "normal": 1
+      }
+    },
+    "quote_bar_cached_but_missing_oi": {
+      "by_macro_flag": {
+        "high_importance_macro": 24,
+        "no_high_importance_macro": 64
+      },
+      "by_split": {
+        "oos": 48,
+        "train": 40
+      },
+      "by_volatility_bucket": {
+        "low": 48,
+        "normal": 40
+      }
+    }
+  },
+  "research_log_required": false,
+  "schema_version": "h_g1_local_cache_overlap_scan_v1",
+  "source_baseline_summary": "reports\\baselines\\subsystem_a_orb_baseline_summary.json",
+  "source_gamma_enrichment": "reports\\diagnostics\\h_g1_gamma_regime_enrichment_summary_v3_side_aware.json",
+  "source_sample_expansion_plan": "experiments\\h_g1_sample_expansion_plan.json",
+  "source_strategy_ablation_summary": "reports\\experiments\\h_g1_gamma_strategy_ablation_summary.json",
+  "status": "blocked_no_additional_no_paid_overlap",
+  "strategy_pnl_used": false,
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E0 scan only",
+    "no additional no-paid gamma-ready baseline trade dates",
+    "MinTRL/PSR not computable for expanded sample",
+    "no strategy PnL reviewed",
+    "no paid cost gate passed",
+    "H-G1 remains parked"
+  ],
+  "true_net_gamma_claim_allowed": false
+}

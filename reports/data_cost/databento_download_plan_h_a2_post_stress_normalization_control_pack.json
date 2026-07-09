@@ -1,0 +1,471 @@
+{
+  "allowed_claims": [
+    "H-A2 raw data was downloaded or cache-confirmed for the approved dates only.",
+    "The download preserves the locked 09:35-only H-A2 signal and threshold 0.001.",
+    "The download is data acquisition only and does not validate H-A2 edge."
+  ],
+  "approved_download_scope": {
+    "datasets": [
+      "OPRA.PILLAR",
+      "EQUS.MINI"
+    ],
+    "dates": [
+      "2025-05-05",
+      "2025-05-06",
+      "2025-05-07",
+      "2025-05-08",
+      "2025-05-09",
+      "2025-05-12",
+      "2025-05-13",
+      "2025-05-14",
+      "2025-05-15",
+      "2025-05-16"
+    ],
+    "download_result_path": "reports/data_cost/databento_download_result_h_a2_post_stress_normalization_control_pack.json",
+    "metadata_grouped_request_count": 20,
+    "option_symbol": "SPY.OPT",
+    "planned_required_request_count": 150,
+    "provider": "Databento",
+    "raw_output_root": "data/raw/spy_0dte/databento/h_a2_post_stress_normalization_control_pack",
+    "schemas": [
+      "cbbo-1m",
+      "ohlcv-1m"
+    ],
+    "selected_key_env": "DATABENTO_API_AI",
+    "symbol_scope": "SPY only",
+    "underlying_symbol": "SPY"
+  },
+  "blockers": [
+    "requires_execute"
+  ],
+  "cost_guard": {
+    "basis": "selected_key_mo_ai_pool",
+    "decision": "pass_under_selected_key_and_mo_ai_pool_caps",
+    "estimated_download_cost_usd": 5.558642,
+    "legacy_cost_guard_used_usd": 120.494368,
+    "legacy_guard_would_be_exceeded": true,
+    "legacy_projected_used_if_downloaded_usd": 126.05301,
+    "legacy_stop_threshold_usd": 125.0,
+    "mo_ai_combined_pool_cap_usd": 200.0,
+    "projected_mo_ai_pool_usage_if_downloaded_usd": 10.957555,
+    "projected_selected_key_usage_if_downloaded_usd": 5.558642,
+    "selected_key_cap_usd": 100.0,
+    "selected_key_env": "DATABENTO_API_AI"
+  },
+  "download_decision": "approve_post_stress_normalization_control_pack_download_after_paid_cost_audit_pass",
+  "download_performed": false,
+  "execution": null,
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not run exact replay directly from this download result.",
+    "Do not change threshold 0.001 or add an OOS-selected filter."
+  ],
+  "hypothesis_id": "H-A2",
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "delayed_entry_component_allowed": false,
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "fifteen_minute_conflict_component_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "oos_tuning_allowed": false,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false
+  },
+  "metadata_grouped_request_count": 20,
+  "mode": "download_plan",
+  "paid_cost_audit_before_download": {
+    "cost_guard_basis": "user_reported_actual_usage",
+    "cost_guard_used_usd": 120.494368,
+    "remaining_before_stop_usd": 4.505632,
+    "status": "pass"
+  },
+  "planned_required_request_count": 150,
+  "request_count": 20,
+  "requests": [
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T19:50:00+00:00",
+      "estimated_cost_usd": 0.574186,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-05_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-05",
+      "end": "2025-05-05T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-05_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-05T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-05_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T19:50:00+00:00",
+      "estimated_cost_usd": 0.586906,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-06_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-06",
+      "end": "2025-05-06T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-06_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-06T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-06_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T19:50:00+00:00",
+      "estimated_cost_usd": 0.582034,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-07_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-07",
+      "end": "2025-05-07T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-07_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-07T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-07_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T19:50:00+00:00",
+      "estimated_cost_usd": 0.577799,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-08_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-08",
+      "end": "2025-05-08T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-08_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-08T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-08_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T19:50:00+00:00",
+      "estimated_cost_usd": 0.561536,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-09_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-09",
+      "end": "2025-05-09T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-09_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-09T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-09_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T19:50:00+00:00",
+      "estimated_cost_usd": 0.546023,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-12_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-12",
+      "end": "2025-05-12T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-12_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-12T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-12_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T19:50:00+00:00",
+      "estimated_cost_usd": 0.527548,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-13_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-13",
+      "end": "2025-05-13T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-13_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-13T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-13_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T19:50:00+00:00",
+      "estimated_cost_usd": 0.538452,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-14_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-14",
+      "end": "2025-05-14T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-14_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-14T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-14_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T19:50:00+00:00",
+      "estimated_cost_usd": 0.5311,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-15_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-15",
+      "end": "2025-05-15T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-15_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-15T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-15_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T19:50:00+00:00",
+      "estimated_cost_usd": 0.530618,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-16_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-16",
+      "end": "2025-05-16T20:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "data\\raw\\spy_0dte\\databento\\h_a2_post_stress_normalization_control_pack\\2025-05-16_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-16T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-16_spy_underlying_full_session"
+    }
+  ],
+  "scenario": "h_a2_post_stress_normalization_control_pack",
+  "schema_version": "h_a2_post_stress_normalization_control_download_result_v1",
+  "selected_batch": {
+    "batch_id": "post_stress_normalization_control_pack",
+    "dates": [
+      "2025-05-05",
+      "2025-05-06",
+      "2025-05-07",
+      "2025-05-08",
+      "2025-05-09",
+      "2025-05-12",
+      "2025-05-13",
+      "2025-05-14",
+      "2025-05-15",
+      "2025-05-16"
+    ],
+    "macro_context": {
+      "high_importance_macro_days_from_local_calendar": 0
+    },
+    "period_end": "2025-05-16",
+    "period_start": "2025-05-05",
+    "role": "second normal/control validation pack after H-A2.49 single-candidate exact replay",
+    "vix_context": {
+      "bucket": "vix_15_to_25",
+      "observed_vix_close_range": [
+        17.24,
+        24.76
+      ],
+      "observed_vxv_close_range": [
+        20.08,
+        25.41
+      ]
+    }
+  },
+  "source_cost_report": "reports\\data_cost\\h_a2_post_stress_normalization_control_pack_cost_estimate.json",
+  "source_decision": "experiments\\h_a2_post_stress_normalization_control_paid_download_decision.json",
+  "status": "blocked",
+  "total_estimated_cost_usd": 5.558642
+}

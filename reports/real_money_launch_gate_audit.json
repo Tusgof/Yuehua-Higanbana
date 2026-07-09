@@ -1,0 +1,41 @@
+{
+  "blockers": [
+    "checklist_missing:backup_close_order_plan_tested",
+    "checklist_missing:cash_account_constraints_documented",
+    "checklist_missing:defined_risk_only_confirmed",
+    "checklist_missing:forced_close_tested",
+    "checklist_missing:kill_switch_tested",
+    "checklist_missing:options_permission_approved",
+    "checklist_missing:research_acceptance_passed",
+    "checklist_missing:user_real_money_approval_recorded",
+    "ibkr_config_not_live:paper",
+    "ibkr_options_permission_not_confirmed",
+    "ibkr_transmit_disabled",
+    "kill_switch_enabled",
+    "research_acceptance_not_approved:blocked",
+    "research_acceptance_real_money_not_allowed"
+  ],
+  "notes": [
+    "This audit is read-only and never transmits orders.",
+    "The example config is expected to remain blocked until research, permission, approval, and kill-switch gates pass."
+  ],
+  "real_money_allowed": false,
+  "required_checklist_flags": [
+    "research_acceptance_passed",
+    "options_permission_approved",
+    "cash_account_constraints_documented",
+    "defined_risk_only_confirmed",
+    "user_real_money_approval_recorded",
+    "kill_switch_tested",
+    "forced_close_tested",
+    "backup_close_order_plan_tested"
+  ],
+  "schema_version": "real_money_launch_gate_audit_v1",
+  "source_paths": {
+    "acceptance": "reports\\research_acceptance_evaluation.json",
+    "checklist": "config\\real_money_launch_checklist.example.json",
+    "ibkr_config": "config\\ibkr.example.json",
+    "kill_switch": "config\\kill_switch.json"
+  },
+  "status": "blocked"
+}

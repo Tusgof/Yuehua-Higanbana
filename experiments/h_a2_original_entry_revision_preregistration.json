@@ -1,0 +1,229 @@
+{
+  "schema_version": "h_a2_original_entry_revision_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_original_entry_revision",
+  "title": "H-A2 timestamp-clean original-entry revision preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register a local no-paid H-A2 follow-up that removes the 15-minute conflict component and tests only features known by the original 09:35 ET entry decision.",
+  "source_decision": "reports/experiments/h_a2_delayed_entry_condition_summary.json",
+  "source_decision_summary": "H-A2.30 found the locked 09:45 delayed-entry condition is timestamp-clean but delayed-entry implementable PnL is not computable because no auditable 09:45 option quote/fill exists in current artifacts. The next safe original-entry path is to pre-register a 09:35-known feature set before any new run.",
+  "research_question": "Can H-A2 be restated as a timestamp-clean original-entry rule using only information known by 09:35 ET, without reusing the 15-minute conflict component or adding an OOS-selected filter?",
+  "original_entry_rule": {
+    "baseline_original_entry_time_et": "09:35:00",
+    "candidate_decision_time_et": "09:35:00",
+    "earliest_candidate_entry_time_et": "09:35:00",
+    "entry_time_must_be_at_or_after_feature_completion": true,
+    "clean_macro_vix_condition_required": true,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_source": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "threshold_must_not_change": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "delayed_entry_component_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false
+  },
+  "allowed_features": [
+    {
+      "feature": "clean_macro_vix_condition",
+      "known_by_et": "09:35:00",
+      "source": "existing deterministic macro/VIX labels",
+      "rule": "May use only labels that are known before or at the entry decision timestamp."
+    },
+    {
+      "feature": "proxy_5m_followthrough",
+      "known_by_et": "09:35:00",
+      "source": "09:30:00-09:35:00 opening window",
+      "rule": "May test threshold 0.001 as already locked; no new threshold search."
+    }
+  ],
+  "forbidden_features": [
+    {
+      "feature": "no_adverse_measured_15m_conflict",
+      "known_by_et": "09:45:00",
+      "reason": "Not knowable at original 09:35 ET entry."
+    },
+    {
+      "feature": "delayed_entry_0945_quote_or_fill",
+      "known_by_et": "09:45:00",
+      "reason": "Belongs to a separate delayed-entry quote acquisition branch."
+    },
+    {
+      "feature": "oos_loss_blacklist_or_new_filter",
+      "known_by_et": "after_oos_review",
+      "reason": "Would create OOS-selected filter leakage."
+    }
+  ],
+  "source_artifacts": {
+    "delayed_entry_condition_summary": "reports/experiments/h_a2_delayed_entry_condition_summary.json",
+    "delayed_entry_condition_report": "reports/experiments/h_a2_delayed_entry_condition_report.md",
+    "signal_attribution_summary": "reports/experiments/h_a2_locked_condition_signal_attribution_summary.json",
+    "revised_opening_followthrough_summary": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "revised_condition_robustness_summary": "reports/experiments/h_a2_revised_condition_robustness_summary.json",
+    "lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "hypothesis_registry": "experiments/hypothesis_registry.json",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
+    "wiki_lookahead_bias": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/lookahead-leakage.md"
+  },
+  "planned_future_tests": [
+    {
+      "test_id": "original_entry_timestamp_cleanliness",
+      "question": "Does every feature used by the original-entry revision become known at or before 09:35 ET?",
+      "minimum_output": [
+        "candidate_decision_time_et",
+        "feature_completion_times_et",
+        "all_features_known_by_decision_time",
+        "forbidden_feature_exclusion_status",
+        "timestamp_cleanliness_status"
+      ]
+    },
+    {
+      "test_id": "original_entry_sample_recount",
+      "question": "How many train/OOS trades remain after the 09:35-known rule without changing threshold 0.001?",
+      "minimum_output": [
+        "train_trade_count",
+        "oos_trade_count",
+        "retained_train_trade_count",
+        "retained_oos_trade_count",
+        "skipped_oos_trade_count"
+      ]
+    },
+    {
+      "test_id": "original_entry_implementable_pnl_check",
+      "question": "Does the original-entry revision retain useful implementable PnL using actual 09:35 original-entry trade outcomes?",
+      "minimum_output": [
+        "baseline_avg_implementable_pnl",
+        "retained_avg_implementable_pnl",
+        "skipped_avg_implementable_pnl",
+        "cost_drag",
+        "comparison_status"
+      ]
+    },
+    {
+      "test_id": "risk_and_sample_adequacy_check",
+      "question": "Does the revised original-entry rule survive basic big-day, concentration, MinTRL/PSR, and DSR/search-log checks?",
+      "minimum_output": [
+        "big_day_dependency_status",
+        "concentration_status",
+        "mintrl_psr_status",
+        "dsr_or_search_log_status",
+        "evidence_tier_cap"
+      ]
+    },
+    {
+      "test_id": "hypothesis_decision",
+      "question": "Should H-A2 continue as timestamp-clean original-entry research, return to delayed-entry quote acquisition, or be parked?",
+      "minimum_output": [
+        "decision",
+        "allowed_next_action",
+        "forbidden_claims",
+        "research_log_requirement",
+        "e2_status"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "threshold_locked_before_future_run": true,
+    "result_must_report_train_oos_counts": true
+  },
+  "execution_policy": {
+    "future_run_scope": "local_no_paid_diagnostic_only",
+    "original_0935_pnl_allowed_for_original_entry_pnl": true,
+    "original_0935_pnl_must_not_be_labeled_as_delayed_entry_pnl": true,
+    "entry_market_order_forbidden": true,
+    "implementable_pnl_required": true,
+    "mid_pnl_may_be_reported_only_as_control": true
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_reported_group": true,
+    "mintrl_psr_labels_must_be_preserved": true,
+    "under_sampled_label_required": true,
+    "underpowered_label_required": true,
+    "search_log_required": true,
+    "dsr_required_if_any_parameter_search_occurs": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "continue_original_entry_revision_if": [
+      "All used features are timestamp-clean by 09:35 ET.",
+      "The 15-minute conflict component is excluded.",
+      "OOS retained results remain directionally useful without changing threshold 0.001.",
+      "The result is honestly labeled under-sampled/underpowered when applicable."
+    ],
+    "return_to_delayed_quote_acquisition_if": [
+      "The original-entry revision loses the observed diagnostic signal.",
+      "The economic logic requires the 15-minute confirmation to avoid false positives.",
+      "Delayed-entry quote acquisition can be planned inside guardrails."
+    ],
+    "park_h_a2_if": [
+      "The retained sample collapses below a useful diagnostic level.",
+      "Implementable PnL reverses or cost drag consumes the apparent edge.",
+      "The mechanism can no longer be stated without OOS-selected filters."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_a2_original_entry_revision_summary.json",
+    "summary_md": "reports/experiments/h_a2_original_entry_revision_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_original_entry_revision_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/031-higanbana-h-a2-original-entry-revision.md"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered timestamp-clean original-entry revision ready for a local E1 diagnostic test.",
+    "The revision may use only features known by 09:35 ET.",
+    "The future run may produce E1 diagnostic/prioritization evidence only.",
+    "Threshold 0.001 remains locked unless a separate future preregistration explicitly defines a new train-only rule."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not use the 15-minute conflict component for an original 09:35 entry decision.",
+    "Do not treat original 09:35 PnL as delayed-entry PnL.",
+    "Do not change threshold 0.001 through OOS search.",
+    "Do not add a new OOS-selected filter.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "threshold_search_allowed_in_future_run": false,
+    "new_filter_allowed_in_future_run": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "The future run proves all used features are known by 09:35 ET or blocks the original-entry claim.",
+    "The future run proves the 15-minute conflict component is excluded.",
+    "The future run reports train/OOS retained and skipped counts.",
+    "The future run preserves threshold 0.001 and records no new OOS-selected filter.",
+    "The future run reports sample-adequacy labels and keeps evidence capped at E1.",
+    "The future run writes research log 031 if it completes as a real experiment."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Future run can be E1 diagnostic/prioritization evidence only",
+    "No exact 2022-10 ORB replay",
+    "No paid data",
+    "No IBKR request",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

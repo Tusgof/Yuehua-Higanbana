@@ -1,0 +1,93 @@
+{
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "remaining_before_stop_usd": 15.917773,
+    "status": "pass",
+    "stop_threshold_usd": 125.0,
+    "used_usd": 109.082227
+  },
+  "cost_result": {
+    "download_performed": false,
+    "errors": [],
+    "live_request_count": 1,
+    "mode": "live_metadata_cost_no_download",
+    "requests": [
+      {
+        "dataset": "OPRA.PILLAR",
+        "date": "2023-09-13",
+        "end": "2023-09-14T00:00:00+00:00",
+        "estimated_cost_usd": 0.384999,
+        "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+        "schema": "statistics",
+        "start": "2023-09-13T00:00:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2023-09-13_full_utc_day_statistics"
+      }
+    ],
+    "total_estimated_cost_usd": 0.384999
+  },
+  "decision": {
+    "blockers": [],
+    "download_allowed_under_current_guard": true,
+    "reason": "Estimated H-G1 OI cost $0.384999 fits within remaining headroom $15.917773.",
+    "status": "pass"
+  },
+  "download_performed": false,
+  "existing_probe_dates": [
+    {
+      "date": "2024-01-03",
+      "opra_oi_status": "existing_probe"
+    }
+  ],
+  "hypothesis_id": "H-G1",
+  "manifest_schema_version": "h_g1_gamma_regime_date_set_preregistration_v3",
+  "manifest_validation": {
+    "blockers": [],
+    "date_count": 10,
+    "hypothesis_id": "H-G1",
+    "macro_counts": {
+      "high_importance_macro": 5,
+      "no_high_importance_macro": 5
+    },
+    "manifest_path": "experiments\\h_g1_gamma_regime_date_set_preregistration_v3.json",
+    "opra_oi_status_counts": {
+      "downloaded": 8,
+      "existing_probe": 1,
+      "needs_metadata_cost_check": 1
+    },
+    "split_counts": {
+      "in_sample": 4,
+      "oos": 6
+    },
+    "status": "pass",
+    "unique_calendar_months": 9,
+    "volatility_bucket_counts": {
+      "high": 3,
+      "low": 4,
+      "normal": 3
+    }
+  },
+  "missing_oi_date_count": 1,
+  "mode": "live_metadata_cost_no_download",
+  "planned_requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "date": "2023-09-13",
+      "end": "2023-09-14T00:00:00+00:00",
+      "note": "Full UTC day OPRA statistics request. Prior probe found intraday windows can show $0.0 while full-day records carry the usable open-interest payload.",
+      "schema": "statistics",
+      "start": "2023-09-13T00:00:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2023-09-13_full_utc_day_statistics"
+    }
+  ],
+  "projected_usage_if_downloaded_usd": 109.467226,
+  "scenario": "h_g1_gamma_oi_v3_replacement",
+  "schema_version": "h_g1_gamma_oi_cost_estimate_v1"
+}

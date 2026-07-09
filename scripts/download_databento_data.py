@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -14,7 +15,7 @@ DEFAULT_COST_REPORT = PROJECT_ROOT / "reports" / "data_cost" / "databento_cost_p
 DEFAULT_OUTPUT_ROOT = PROJECT_ROOT / "data" / "raw" / "spy_0dte" / "databento"
 DEFAULT_PLAN_PATH = PROJECT_ROOT / "reports" / "data_cost" / "databento_download_plan.json"
 DEFAULT_API_KEY_ENV = "DATABENTO_API_KEY"
-DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API",)
+DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
 
 
 def build_download_plan(
@@ -85,7 +86,12 @@ def validate_cost_report_for_download(
         )
 
 
-def execute_download_plan(plan: dict[str, Any], api_key_env: str = DEFAULT_API_KEY_ENV) -> dict[str, Any]:
+def execute_download_plan(
+    plan: dict[str, Any],
+    api_key_env: str = DEFAULT_API_KEY_ENV,
+    per_request_retries: int = 0,
+    retry_sleep_seconds: float = 10.0,
+) -> dict[str, Any]:
     api_key = _databento_api_key_from_env(api_key_env)
     if not api_key:
         raise RuntimeError(f"missing Databento API key environment variable: {_databento_env_names(api_key_env)}")
@@ -101,14 +107,7 @@ def execute_download_plan(plan: dict[str, Any], api_key_env: str = DEFAULT_API_K
             output_path.unlink()
         if not output_path.exists():
             temp_path = output_path.with_name(f"{output_path.name}.download")
-            if temp_path.exists():
-                temp_path.unlink()
-            try:
-                _download_range(client, item, temp_path)
-            except FileExistsError:
-                if temp_path.exists():
-                    temp_path.unlink()
-                _download_range(client, item, temp_path)
+            _download_with_retries(client, item, temp_path, per_request_retries, retry_sleep_seconds)
             temp_path.replace(output_path)
             source = "downloaded"
         downloaded.append(
@@ -160,6 +159,34 @@ def _download_range(client: Any, item: dict[str, Any], temp_path: Path) -> None:
     )
 
 
+def _download_with_retries(
+    client: Any,
+    item: dict[str, Any],
+    temp_path: Path,
+    per_request_retries: int,
+    retry_sleep_seconds: float,
+) -> None:
+    attempts = max(0, per_request_retries) + 1
+    for attempt in range(attempts):
+        if temp_path.exists():
+            temp_path.unlink()
+        try:
+            _download_range(client, item, temp_path)
+            return
+        except FileExistsError:
+            if temp_path.exists():
+                temp_path.unlink()
+            _download_range(client, item, temp_path)
+            return
+        except Exception:
+            if temp_path.exists():
+                temp_path.unlink()
+            if attempt + 1 >= attempts:
+                raise
+            if retry_sleep_seconds > 0:
+                time.sleep(retry_sleep_seconds)
+
+
 def _single_scenario(report: dict[str, Any]) -> str:
     scenarios = report.get("summary", {}).get("scenarios", {})
     if len(scenarios) != 1:
@@ -184,6 +211,8 @@ def main() -> int:
     parser.add_argument("--max-download-requests", default=100, type=int)
     parser.add_argument("--allow-review-decision", action="store_true")
     parser.add_argument("--approval-note")
+    parser.add_argument("--per-request-retries", type=int, default=0)
+    parser.add_argument("--retry-sleep-seconds", type=float, default=10.0)
     parser.add_argument("--execute", action="store_true", help="Actually download data. Default only writes a plan.")
     args = parser.parse_args()
 
@@ -194,7 +223,16 @@ def main() -> int:
         allow_review_decision=args.allow_review_decision,
         approval_note=args.approval_note,
     )
-    result = execute_download_plan(plan, args.api_key_env) if args.execute else plan
+    result = (
+        execute_download_plan(
+            plan,
+            args.api_key_env,
+            per_request_retries=args.per_request_retries,
+            retry_sleep_seconds=args.retry_sleep_seconds,
+        )
+        if args.execute
+        else plan
+    )
     write_plan(result, args.plan_path)
     print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
     return 0

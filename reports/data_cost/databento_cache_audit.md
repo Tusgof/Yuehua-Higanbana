@@ -1,6 +1,6 @@
 # Databento Cache Audit
 
-- **Created at UTC**: `2026-07-02T20:01:13+00:00`
+- **Created at UTC**: `2026-07-09T05:40:31+00:00`
 - **Source plan**: `reports\data_cost\databento_download_plan.json`
 - **Scenario**: `one_month_pilot`
 - **Planned windows**: 63

@@ -31,16 +31,21 @@ class AuditPaidCostsTests(unittest.TestCase):
         self.assertEqual("pass", result["status"])
         self.assertGreaterEqual(result["known_committed_estimated_cost_usd"], result["stop_threshold_usd"])
         self.assertEqual("user_reported_actual_usage", result["cost_guard_basis"])
+        self.assertIn("DATABENTO_API_MO", result["budget_policy"]["approved_databento_key_envs"])
+        self.assertIn("DATABENTO_API_AI", result["budget_policy"]["approved_databento_key_envs"])
+        self.assertEqual(100.0, result["budget_policy"]["per_key_caps_usd"]["DATABENTO_API_MO"])
+        self.assertEqual(100.0, result["budget_policy"]["per_key_caps_usd"]["DATABENTO_API_AI"])
+        self.assertEqual(200.0, result["budget_policy"]["combined_pool_caps_usd"]["DATABENTO_API_MO+DATABENTO_API_AI"])
         self.assertLess(result["cost_guard_used_usd"], result["stop_threshold_usd"])
         self.assertGreater(result["remaining_before_stop_usd"], 0)
         self.assertTrue(result["committed_items"])
         reconciliation = result["cost_guard_reconciliation"]
         self.assertEqual("pass", reconciliation["actual_usage_basis"]["status"])
-        self.assertEqual(109.082227, reconciliation["actual_usage_basis"]["used_usd"])
-        self.assertEqual(15.917773, reconciliation["actual_usage_basis"]["remaining_usd"])
+        self.assertEqual(120.494368, reconciliation["actual_usage_basis"]["used_usd"])
+        self.assertEqual(4.505632, reconciliation["actual_usage_basis"]["remaining_usd"])
         self.assertEqual("blocked", reconciliation["known_committed_estimate_basis"]["status"])
-        self.assertEqual(173.988357, reconciliation["known_committed_estimate_basis"]["used_usd"])
-        self.assertEqual(-48.988357, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
+        self.assertEqual(196.358053, reconciliation["known_committed_estimate_basis"]["used_usd"])
+        self.assertEqual(-71.358053, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
         self.assertFalse(any(item["item_id"] == "spy_bars:2024_08_chunk5" for item in result["estimated_only_items"]))
 
     def test_temp_cost_root_sums_completed_downloads_without_dry_run(self) -> None:
@@ -83,11 +88,24 @@ class AuditPaidCostsTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
+            (root / "h_g1_gamma_oi_download_result_v3_replacement.json").write_text(
+                json.dumps(
+                    {
+                        "mode": "download_complete",
+                        "status": "pass",
+                        "scenario": "h_g1_gamma_oi_v3_replacement",
+                        "total_estimated_cost_usd": 0.384999,
+                    }
+                ),
+                encoding="utf-8",
+            )
 
             result = self.auditor.audit_paid_costs(root, stop_threshold_usd=10.0, experiment_root=root / "experiments")
 
         self.assertEqual("pass", result["status"])
-        self.assertEqual(7.037138, result["known_committed_estimated_cost_usd"])
+        self.assertEqual(7.422137, result["known_committed_estimated_cost_usd"])
+        self.assertIn("h_g1_gamma_oi_12_date", {item["item_id"] for item in result["committed_items"]})
+        self.assertIn("h_g1_gamma_oi_v3_replacement", {item["item_id"] for item in result["committed_items"]})
         self.assertEqual([], result["estimated_only_items"])
 
     def test_stop_threshold_blocks_when_committed_cost_reaches_limit(self) -> None:
@@ -151,6 +169,70 @@ class AuditPaidCostsTests(unittest.TestCase):
             [{"estimated_cost_usd": 0.001631, "item_id": "spy_bars:2024_08_chunk5", "mode": "plan", "provider": "Databento", "scenario": None, "source_path": str(root / "databento_spy_bars_plan_2024_08_chunk5.json")}],
             result["estimated_only_items"],
         )
+
+    def test_h_a2_metadata_estimate_is_estimated_only_until_download_decision(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "h_a2_independent_validation_paid_cost_estimate.json").write_text(
+                json.dumps(
+                    {
+                        "mode": "live_metadata_cost_no_download",
+                        "experiment_id": "h_a2_independent_validation_paid_cost_plan",
+                        "batch_id": "sample_cost_probe_high_vix_one_day",
+                        "cost_result": {"total_estimated_cost_usd": 0.504662},
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = self.auditor.audit_paid_costs(root, stop_threshold_usd=10.0, experiment_root=root / "experiments")
+
+        self.assertEqual(0.0, result["known_committed_estimated_cost_usd"])
+        self.assertEqual(
+            [
+                {
+                    "estimated_cost_usd": 0.504662,
+                    "item_id": "h_a2_independent_validation:sample_cost_probe_high_vix_one_day",
+                    "mode": "live_metadata_cost_no_download",
+                    "provider": "Databento",
+                    "scenario": "h_a2_independent_validation_paid_cost_plan",
+                    "source_path": str(root / "h_a2_independent_validation_paid_cost_estimate.json"),
+                }
+            ],
+            result["estimated_only_items"],
+        )
+
+    def test_h_a2_metadata_estimate_is_not_estimated_only_after_download_result_exists(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            estimate_path = root / "h_a2_independent_validation_paid_cost_estimate.json"
+            estimate_path.write_text(
+                json.dumps(
+                    {
+                        "mode": "live_metadata_cost_no_download",
+                        "experiment_id": "h_a2_independent_validation_paid_cost_plan",
+                        "batch_id": "sample_cost_probe_high_vix_one_day",
+                        "cost_result": {"total_estimated_cost_usd": 0.504662},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (root / "databento_download_result_h_a2_independent_validation_2025_04_08.json").write_text(
+                json.dumps(
+                    {
+                        "mode": "download_complete",
+                        "scenario": "h_a2_independent_validation_2025_04_08",
+                        "total_estimated_cost_usd": 0.504662,
+                        "source_cost_report": str(estimate_path),
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = self.auditor.audit_paid_costs(root, stop_threshold_usd=10.0, experiment_root=root / "experiments")
+
+        self.assertEqual(0.504662, result["known_committed_estimated_cost_usd"])
+        self.assertEqual([], result["estimated_only_items"])
 
     def test_openrouter_prompt_summary_cost_is_counted_when_recorded(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

@@ -150,10 +150,15 @@ class DatabentoCostEstimatorTests(unittest.TestCase):
     def test_default_databento_key_env_falls_back_to_project_alias(self) -> None:
         previous_default = os.environ.get("DATABENTO_API_KEY")
         previous_alias = os.environ.get("DATABENTO_SPY0DTE_API")
+        previous_mo = os.environ.get("DATABENTO_API_MO")
         os.environ.pop("DATABENTO_API_KEY", None)
         os.environ["DATABENTO_SPY0DTE_API"] = "test-key"
+        os.environ.pop("DATABENTO_API_MO", None)
         try:
             self.assertEqual("test-key", self.estimator._databento_api_key_from_env())
+            os.environ.pop("DATABENTO_SPY0DTE_API", None)
+            os.environ["DATABENTO_API_MO"] = "mo-key"
+            self.assertEqual("mo-key", self.estimator._databento_api_key_from_env())
         finally:
             if previous_default is not None:
                 os.environ["DATABENTO_API_KEY"] = previous_default
@@ -163,6 +168,10 @@ class DatabentoCostEstimatorTests(unittest.TestCase):
                 os.environ["DATABENTO_SPY0DTE_API"] = previous_alias
             else:
                 os.environ.pop("DATABENTO_SPY0DTE_API", None)
+            if previous_mo is not None:
+                os.environ["DATABENTO_API_MO"] = previous_mo
+            else:
+                os.environ.pop("DATABENTO_API_MO", None)
 
     def test_markdown_report_contains_scenario_summary_and_decision_rule(self) -> None:
         requests = self.estimator.build_cost_requests("one_day_sample", start_date=date(2024, 1, 3))

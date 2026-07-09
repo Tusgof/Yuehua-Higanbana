@@ -1,0 +1,147 @@
+{
+  "schema_version": "h_a2_exact_2022_underlying_bar_plan_v1",
+  "artifact_type": "plan",
+  "created_date": "2026-07-05",
+  "hypothesis_id": "H-A2",
+  "evidence_tier": "E0",
+  "status": "plan_complete",
+  "decision": "build_bounded_acquisition_import_tool_before_any_source_execution",
+  "purpose": "Define the narrow exact-data path needed to test H-A2 on the already-downloaded 2022-10 option quotes without turning SPY 1-minute bars into the hypothesis itself.",
+  "source_artifacts": {
+    "exact_data_prioritization_decision": "experiments/h_a2_exact_data_prioritization_decision.json",
+    "exact_data_prioritization_decision_doc": "docs/H_A2_EXACT_DATA_PRIORITIZATION_DECISION.md",
+    "spy_bar_source_decision": "experiments/h_a2_2022_spy_bar_source_decision.json",
+    "spy_bar_source_decision_doc": "docs/H_A2_2022_SPY_BAR_SOURCE_DECISION.md",
+    "databento_spy_bar_unavailable_report": "reports/data_cost/databento_spy_bars_plan_h_a2_2022_10_unavailable.json",
+    "option_normalization_summary": "reports/data_cost/databento_normalization_summary_h_a2_2022_10_stress.json",
+    "coarse_stress_review": "reports/diagnostics/h_a2_2022_10_coarse_stress_review.json",
+    "lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "wiki_orb_concept": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md"
+  },
+  "hypothesis_first_statement": "H-A2 asks whether the SPY 0DTE ORB edge is conditional on macro/VIX risk state. SPY 1-minute bars are required only for exact ORB timing, path reconstruction, and timestamp-aligned option fills.",
+  "exact_inference_gap": "The project has 2022-10 0DTE option quotes and regime labels, but cannot run the exact 2022-10 ORB stress rerun until SPY 1-minute underlying bars for the same window pass coverage, timestamp, provenance, and import validation.",
+  "planned_scope": {
+    "symbol": "SPY",
+    "data_type": "underlying_bars",
+    "bar_size": "1 minute",
+    "window_start": "2022-10-03",
+    "window_end": "2022-10-31",
+    "session": "regular_trading_hours",
+    "timezone": "America/New_York",
+    "minimum_fields": [
+      "timestamp",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "trading_day_count": 21,
+    "quote_available_day_count": 13,
+    "quote_available_dates": [
+      "2022-10-03",
+      "2022-10-05",
+      "2022-10-07",
+      "2022-10-10",
+      "2022-10-12",
+      "2022-10-14",
+      "2022-10-17",
+      "2022-10-19",
+      "2022-10-21",
+      "2022-10-24",
+      "2022-10-26",
+      "2022-10-28",
+      "2022-10-31"
+    ],
+    "full_window_required_reason": "The 13 quote-available dates are the minimum exact-rerun target, but the full 21-day October 2022 window is required to audit no-trade days, quote-missing days, regime labels, and accidental survivorship/filtering effects."
+  },
+  "why_1_minute_bars_are_required": [
+    "The ORB rule uses the 9:30-9:35 ET opening range and breakout ordering.",
+    "Exact entry timing cannot be reconstructed from daily, 15-minute, or 5-minute proxy bars without changing the tested mechanism.",
+    "Stop/target path and 3:45 PM ET forced-close logic require intraday path information.",
+    "Option quote selection must be aligned to the underlying decision timestamp to avoid lookahead."
+  ],
+  "source_execution_order": [
+    {
+      "rank": 1,
+      "step_id": "local_cache_rescan",
+      "description": "Rescan local normalized/raw roots for 2022-10 SPY 1-minute bars before any external request.",
+      "network_allowed": false,
+      "paid_data_allowed": false,
+      "orders_allowed": false,
+      "must_pass_before_next_step": false
+    },
+    {
+      "rank": 2,
+      "step_id": "build_bounded_data_only_tool",
+      "description": "Implement a bounded acquisition/import tool with fixture tests, dry-run mode, source manifest writing, timestamp conversion, and canonical spy_bar output validation before any live IBKR request.",
+      "network_allowed": false,
+      "paid_data_allowed": false,
+      "orders_allowed": false,
+      "must_pass_before_next_step": true
+    },
+    {
+      "rank": 3,
+      "step_id": "ibkr_data_only_probe_if_ready",
+      "description": "Use the existing IBKR account only for a data-only historical-bars request if local TWS/Gateway is listening and Python client readiness passes.",
+      "network_allowed_after_gate": true,
+      "paid_data_allowed": false,
+      "orders_allowed": false,
+      "approval_required_before_execute": false,
+      "required_gate": "reports/diagnostics/ibkr_spy_bars_readiness_probe_h_a2_2022_10.json status == ready_for_manual_data_probe"
+    },
+    {
+      "rank": 4,
+      "step_id": "new_provider_source_decision_if_ibkr_unavailable",
+      "description": "If IBKR cannot be made available, stop and create a new source decision for Alpaca, FirstRate Data, Alpha Vantage, Massive/Polygon-style aggregates, Tiingo, or another source.",
+      "network_allowed_after_gate": false,
+      "paid_data_allowed_after_user_approval": true,
+      "orders_allowed": false,
+      "approval_required_before_execute": true
+    }
+  ],
+  "validation_gates_before_exact_rerun": {
+    "provenance_required": true,
+    "raw_hash_or_request_manifest_required": true,
+    "license_notes_required": true,
+    "coverage_audit_required": true,
+    "timestamp_conversion_to_et_required": true,
+    "canonical_import_required": true,
+    "orb_timestamp_coverage_required": true,
+    "full_session_coverage_required": true,
+    "join_to_existing_2022_10_option_quotes_required": true,
+    "no_lookahead_timestamp_rule_required": true,
+    "rerun_allowed_only_after_all_gates_pass": true
+  },
+  "planned_outputs": {
+    "plan_json": "experiments/h_a2_exact_2022_underlying_bar_plan.json",
+    "plan_md": "docs/H_A2_EXACT_2022_UNDERLYING_BAR_PLAN.md",
+    "validator": "scripts/validate_h_a2_exact_2022_underlying_bar_plan.py",
+    "next_tool": "scripts/acquire_h_a2_2022_spy_bars.py",
+    "future_manifest": "reports/data_cost/h_a2_2022_spy_bars_acquisition_manifest.json",
+    "future_coverage_audit": "reports/diagnostics/h_a2_2022_spy_bars_coverage_audit.json",
+    "future_import_summary": "reports/data_cost/h_a2_2022_spy_bars_import_summary.json"
+  },
+  "allowed_next_action": "Implement and test the bounded H-A2 2022 SPY bar acquisition/import tool in dry-run and fixture mode. Do not execute a live IBKR historical-bars request until readiness status is ready_for_manual_data_probe.",
+  "forbidden_actions": [
+    "Do not request IBKR historical bars from this plan artifact alone before the bounded tool and readiness gate pass.",
+    "Do not buy 2022-09 option data while 2022-10 SPY underlying bars are unresolved.",
+    "Do not buy or use a new provider without explicit user approval.",
+    "Do not transmit orders or enable broker execution.",
+    "Do not run exact H-A2 stress diagnostics until SPY bars pass coverage, timestamp, provenance, import, and option-join validation.",
+    "Do not approve paper trading, operational validation, real-money trading, or an H-A2 edge claim from this plan."
+  ],
+  "guardrails": {
+    "network_used_by_this_artifact": false,
+    "paid_data_used_by_this_artifact": false,
+    "new_provider_used_by_this_artifact": false,
+    "ibkr_request_used_by_this_artifact": false,
+    "llm_call_used_by_this_artifact": false,
+    "strategy_pnl_used_by_this_artifact": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_plan": false
+  }
+}

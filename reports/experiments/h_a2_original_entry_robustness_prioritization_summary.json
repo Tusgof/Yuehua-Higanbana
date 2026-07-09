@@ -1,0 +1,253 @@
+{
+  "allowed_claims": [
+    "H-A2.32 survived this local robustness/prioritization review as E1 diagnostic evidence.",
+    "Independent validation-data planning is worth considering, but not approved as a paid action by this run."
+  ],
+  "baseline_condition": {
+    "oos": {
+      "avg_implementable_pnl": 7.087059,
+      "best_day_pnl": 150.44,
+      "loss_count": 21,
+      "loss_rate": 0.617647,
+      "total_cost_drag": 204.54,
+      "total_implementable_pnl": 240.96,
+      "total_mid_pnl": 445.5,
+      "trade_day_count": 34,
+      "win_rate": 0.382353,
+      "worst_day_pnl": -55.56
+    },
+    "train": {
+      "avg_implementable_pnl": 19.306667,
+      "best_day_pnl": 166.44,
+      "loss_count": 19,
+      "loss_rate": 0.633333,
+      "total_cost_drag": 164.3,
+      "total_implementable_pnl": 579.2,
+      "total_mid_pnl": 743.5,
+      "trade_day_count": 30,
+      "win_rate": 0.366667,
+      "worst_day_pnl": -57.56
+    }
+  },
+  "broker_request_used": false,
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The H-A2.32 09:35-only rule remains directionally useful after local robustness checks, but retained OOS still has only 14 trade days and cannot support an E2 or paper-trading claim.",
+  "daily_source": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+  "evidence_tier": "E1",
+  "exact_replay_used": false,
+  "experiment_id": "h_a2_original_entry_robustness_prioritization",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not run exact replay from this preregistration.",
+    "Do not buy paid data from this preregistration.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration.",
+    "Do not change threshold 0.001 through OOS review.",
+    "Do not add a new OOS-selected filter."
+  ],
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:43:03Z",
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "leave_one_and_big_day_dependency": {
+    "big_day_dependency_status": "pass_directional_but_underpowered",
+    "extreme_day_removal_status": "pass_directional_but_underpowered",
+    "largest_day_share": 0.151153,
+    "leave_one_out_min_avg_pnl": 63.209231,
+    "retained_after_extreme_day_removal_avg_pnl": 69.44,
+    "retained_oos_count": 14,
+    "skipped_after_extreme_day_removal_avg_pnl": -36.837778,
+    "status": "complete"
+  },
+  "llm_call_used": false,
+  "methodology": {
+    "candidate_decision_time_et": "09:35:00",
+    "chronological_split_required": true,
+    "delayed_entry_component_used": false,
+    "fifteen_minute_conflict_component_used": false,
+    "local_artifacts_only": true,
+    "locked_threshold": 0.001,
+    "new_oos_selected_filter_used": false,
+    "oos_tuning_used": false,
+    "random_split_used": false,
+    "result_type": "original_entry_robustness_prioritization",
+    "threshold_search_used": false,
+    "used_features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ]
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Pre-register an independent validation-data plan or no-paid validation feasibility plan before any paid data, IBKR request, exact replay, paper trading, or E2 claim.",
+  "operational_validation_allowed": false,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "regime_and_calendar_concentration": {
+    "calendar_bucket_counts": {
+      "months": {
+        "2024-01": 3,
+        "2024-03": 1,
+        "2024-05": 1,
+        "2024-07": 1,
+        "2024-08": 2,
+        "2024-09": 3,
+        "2024-10": 2,
+        "2024-12": 1
+      },
+      "weekdays": {
+        "0": 4,
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 1
+      }
+    },
+    "concentration_status": "concentrated_underpowered",
+    "empty_critical_buckets": [
+      "vix_above_25"
+    ],
+    "largest_bucket_share": 0.5,
+    "regime_bucket_counts": {
+      "vix_15_to_25": 7,
+      "vix_below_15": 7
+    },
+    "status": "complete"
+  },
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-original-entry-robustness-prioritization",
+  "retained_condition": {
+    "oos": {
+      "avg_implementable_pnl": 69.44,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.071429,
+      "total_cost_drag": 113.34,
+      "total_implementable_pnl": 972.16,
+      "total_mid_pnl": 1085.5,
+      "trade_day_count": 14,
+      "win_rate": 0.928571,
+      "worst_day_pnl": -11.56
+    },
+    "train": {
+      "avg_implementable_pnl": 67.44,
+      "best_day_pnl": 166.44,
+      "loss_count": 5,
+      "loss_rate": 0.3125,
+      "total_cost_drag": 100.46,
+      "total_implementable_pnl": 1079.04,
+      "total_mid_pnl": 1179.5,
+      "trade_day_count": 16,
+      "win_rate": 0.6875,
+      "worst_day_pnl": -26.56
+    }
+  },
+  "sample_counts": {
+    "baseline_oos_non_risk_trade_days": 34,
+    "baseline_train_non_risk_trade_days": 30,
+    "daily_rows": 463,
+    "oos_retention_rate": 0.411765,
+    "retained_oos_trade_days": 14,
+    "retained_train_trade_days": 16,
+    "skipped_oos_trade_days": 20,
+    "skipped_train_trade_days": 14
+  },
+  "schema_version": "h_a2_original_entry_robustness_prioritization_v1",
+  "skip_cost_tradeoff": {
+    "baseline_avg_implementable_pnl": 7.087059,
+    "baseline_oos_count": 34,
+    "retained_avg_implementable_pnl": 69.44,
+    "retained_minus_skipped_avg_pnl": 106.0,
+    "retained_oos_count": 14,
+    "skip_cost_status": "directionally_useful_but_sample_reducing",
+    "skipped_avg_implementable_pnl": -36.56,
+    "skipped_oos_count": 20,
+    "skipped_total_implementable_pnl": -731.2,
+    "status": "complete"
+  },
+  "skipped_condition": {
+    "oos": {
+      "avg_implementable_pnl": -36.56,
+      "best_day_pnl": -12.56,
+      "loss_count": 20,
+      "loss_rate": 1.0,
+      "total_cost_drag": 91.2,
+      "total_implementable_pnl": -731.2,
+      "total_mid_pnl": -640.0,
+      "trade_day_count": 20,
+      "win_rate": 0.0,
+      "worst_day_pnl": -55.56
+    },
+    "train": {
+      "avg_implementable_pnl": -35.702857,
+      "best_day_pnl": -22.56,
+      "loss_count": 14,
+      "loss_rate": 1.0,
+      "total_cost_drag": 63.84,
+      "total_implementable_pnl": -499.84,
+      "total_mid_pnl": -436.0,
+      "trade_day_count": 14,
+      "win_rate": 0.0,
+      "worst_day_pnl": -57.56
+    }
+  },
+  "source_experiment_ids": {
+    "daily_source": "h_a2_lower_resolution_proxy",
+    "source_summary": "h_a2_original_entry_revision"
+  },
+  "source_preregistration": "experiments\\h_a2_original_entry_robustness_prioritization_preregistration.json",
+  "source_rule_integrity": {
+    "candidate_decision_time_et": "09:35:00",
+    "forbidden_feature_absence": true,
+    "locked_threshold": 0.001,
+    "rule_integrity_status": "pass_preserved_h_a2_32_rule",
+    "status": "pass",
+    "used_features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ]
+  },
+  "source_summary": "reports\\experiments\\h_a2_original_entry_revision_summary.json",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E1 diagnostic/prioritization evidence only",
+    "Retained OOS sample has 14 trade days",
+    "MinTRL/PSR remains blocked by insufficient sample",
+    "No independent validation data yet",
+    "No exact 2022-10 ORB replay",
+    "No E2 acceptance claim",
+    "No paper trading, operational validation, or real-money approval"
+  ],
+  "trial_policy": {
+    "dsr_reason": "The review preserves H-A2.32 and performs robustness diagnostics only.",
+    "dsr_status": "not_recomputed_no_new_parameter_search",
+    "new_filter_search_used": false,
+    "oos_tuning_used": false,
+    "search_log": "reports\\experiments\\search_logs\\h_a2_original_entry_robustness_prioritization_search_log.jsonl",
+    "threshold_search_used": false,
+    "trial_count": 0
+  },
+  "validation_priority_decision": {
+    "allowed_next_action": "Pre-register an independent validation-data plan or no-paid validation feasibility plan before any paid data, IBKR request, exact replay, paper trading, or E2 claim.",
+    "decision": "prioritize_independent_validation_plan_under_e1",
+    "evidence_tier_cap": "E1",
+    "forbidden_claims": [
+      "No H-A2 edge validation.",
+      "No E2 evidence.",
+      "No exact replay, paid data, IBKR request, LLM call, paper trading, operational validation, or real-money approval."
+    ],
+    "sample_adequacy_labels": [
+      "under-sampled",
+      "underpowered"
+    ],
+    "status": "complete"
+  }
+}

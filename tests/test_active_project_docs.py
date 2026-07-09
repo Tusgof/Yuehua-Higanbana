@@ -154,11 +154,11 @@ class ActiveProjectDocsTests(unittest.TestCase):
         for relative_path in ["PROJECT_BRAIN.md", "IMPLEMENT_PLAN.md", "docs/NEXT_USER_INPUTS.md"]:
             with self.subTest(path=relative_path):
                 text = (PROJECT_ROOT / relative_path).read_text(encoding="utf-8")
-                self.assertIn("ผ่าน", text)
-                self.assertIn("ไม่ผ่าน", text)
-                self.assertIn("ยังสรุปไม่ได้", text)
-                self.assertNotIn("เธ", text)
-                self.assertNotIn("เน", text)
+                self.assertIn("\u0e1c\u0e48\u0e32\u0e19", text)
+                self.assertIn("\u0e44\u0e21\u0e48\u0e1c\u0e48\u0e32\u0e19", text)
+                self.assertIn("\u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49", text)
+                self.assertNotIn("\u0e40\u0e19\u20ac\u0e40\u0e18\u02d8", text)
+                self.assertNotIn("\u0e40\u0e19\u20ac\u0e40\u0e18\u2122", text)
 
     def test_real_money_guardrails_block_early_transmit(self) -> None:
         guardrails = (PROJECT_ROOT / "docs" / "REAL_MONEY_GUARDRAILS.md").read_text(encoding="utf-8")
@@ -179,6 +179,19 @@ class ActiveProjectDocsTests(unittest.TestCase):
         self.assertNotIn("<local secret>", env_example)
         self.assertNotIn("<confirm-openrouter-model-id>", env_example)
         self.assertNotIn("sk-", env_example)
+
+    def test_no_approval_policy_is_authoritative(self) -> None:
+        docs = {
+            "PROJECT_BRAIN.md": (PROJECT_ROOT / "PROJECT_BRAIN.md").read_text(encoding="utf-8"),
+            "IMPLEMENT_PLAN.md": (PROJECT_ROOT / "IMPLEMENT_PLAN.md").read_text(encoding="utf-8"),
+            "AGENTS.md": (PROJECT_ROOT / "AGENTS.md").read_text(encoding="utf-8"),
+        }
+        for relative_path, text in docs.items():
+            with self.subTest(path=relative_path):
+                self.assertIn("normal in-plan SPY-only", text)
+                self.assertIn("without approval prompts", text)
+                self.assertIn("Hard-stop boundaries", text)
+                self.assertIn("out-of-plan", text)
 
 
 if __name__ == "__main__":

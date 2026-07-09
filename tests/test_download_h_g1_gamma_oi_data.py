@@ -11,6 +11,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "download_h_g1_gamma_oi_data.py"
 COST_REPORT_PATH = PROJECT_ROOT / "reports" / "data_cost" / "h_g1_gamma_oi_12_date_cost_estimate.json"
+V3_COST_REPORT_PATH = PROJECT_ROOT / "reports" / "data_cost" / "h_g1_gamma_oi_v3_replacement_cost_estimate.json"
 
 
 def load_downloader():
@@ -78,6 +79,30 @@ class H_G1GammaOiDownloaderTests(unittest.TestCase):
         self.assertEqual("download_complete", result["mode"])
         self.assertEqual(2, execution["downloaded_count"])
         self.assertEqual(24, execution["total_bytes"])
+
+    def test_v3_download_plan_preserves_replacement_scenario(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            plan = self.downloader.build_download_plan(V3_COST_REPORT_PATH, Path(tmp))
+            execution = self.downloader.execute_downloads(
+                plan,
+                downloader=lambda request: {**request, "source": "downloaded", "bytes": 12, "sha256": "abc"},
+            )
+            result = self.downloader.build_result(
+                plan,
+                paid_cost_audit={
+                    "status": "pass",
+                    "cost_guard_basis": "user_reported_actual_usage",
+                    "cost_guard_used_usd": 109.082227,
+                    "remaining_before_stop_usd": 15.917773,
+                },
+                execution=execution,
+            )
+
+        self.assertEqual("h_g1_gamma_oi_v3_replacement", plan["scenario"])
+        self.assertEqual(1, plan["request_count"])
+        self.assertEqual("2023-09-13", plan["requests"][0]["date"])
+        self.assertEqual("pass", result["status"])
+        self.assertEqual("h_g1_gamma_oi_v3_replacement", result["scenario"])
 
     def test_blocks_when_cost_gate_does_not_pass(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

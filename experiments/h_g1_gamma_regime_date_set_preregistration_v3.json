@@ -1,0 +1,563 @@
+{
+  "schema_version": "h_g1_gamma_regime_date_set_preregistration_v3",
+  "hypothesis_id": "H-G1",
+  "created_at": "2026-07-03",
+  "supersedes": "experiments/h_g1_gamma_regime_date_set_preregistration_v2.json",
+  "source_plan": "experiments/h_g1_gamma_regime_date_set_preregistration_v3_plan.json",
+  "purpose": "Replace the weak 2023-07-12 otm_put bucket before any new OI purchase, using only the locked H-G1.10 ranking rules and local macro/VIX/cache evidence.",
+  "data_policy": {
+    "symbol_universe": [
+      "SPY"
+    ],
+    "new_paid_data_allowed_after_validation": true,
+    "paid_action_before_manifest_validation": "forbidden",
+    "purchase_scope": "At most one replacement full UTC day of OPRA statistics/OI for 2023-09-13 after this manifest validates and metadata cost guard passes.",
+    "broad_calendar_purchase": "forbidden",
+    "existing_oi_probe_date": "2024-01-03",
+    "cost_guard": {
+      "working_usage_usd": 109.082227,
+      "stop_threshold_usd": 125.0,
+      "remaining_headroom_usd": 15.917773
+    },
+    "requires_metadata_cost_check_before_download": true
+  },
+  "replacement_audit": {
+    "removed_date": "2023-07-12",
+    "removed_bucket": "otm_put",
+    "selected_replacement_date": "2023-09-13",
+    "ranking_rules_source": "experiments/h_g1_gamma_regime_date_set_preregistration_v3_plan.json",
+    "candidate_selection_report": "reports/diagnostics/h_g1_manifest_v3_candidate_selection.json",
+    "forbidden_inputs_not_used": [
+      "computed gamma proxy",
+      "computed IV/gamma success rate",
+      "future OI coverage result",
+      "strategy PnL",
+      "post-decision realized volatility"
+    ],
+    "macro_source": "data/normalized/spy_0dte/macro_calendar/macro_event.jsonl",
+    "vix_source": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+    "local_cache_root": "data/normalized/spy_0dte/databento"
+  },
+  "candidate_ranking_table": [
+    {
+      "rank": 1,
+      "date": "2023-09-13",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.48,
+      "vix_abs_deviation_from_removed": 0.06,
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "preferred_macro_events_present": [
+        "CPI"
+      ],
+      "same_macro_family_as_removed": true,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 2,
+      "date": "2023-11-14",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 14.16,
+      "vix_abs_deviation_from_removed": 0.62,
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "preferred_macro_events_present": [
+        "CPI"
+      ],
+      "same_macro_family_as_removed": true,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 3,
+      "date": "2023-06-13",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 14.61,
+      "vix_abs_deviation_from_removed": 1.07,
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "preferred_macro_events_present": [
+        "CPI"
+      ],
+      "same_macro_family_as_removed": true,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 4,
+      "date": "2023-12-12",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 12.07,
+      "vix_abs_deviation_from_removed": 1.47,
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "preferred_macro_events_present": [
+        "CPI"
+      ],
+      "same_macro_family_as_removed": true,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 5,
+      "date": "2023-08-31",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.57,
+      "vix_abs_deviation_from_removed": 0.03,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "preferred_macro_events_present": [
+        "PCE"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 6,
+      "date": "2023-06-30",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.59,
+      "vix_abs_deviation_from_removed": 0.05,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "preferred_macro_events_present": [
+        "PCE"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 7,
+      "date": "2023-07-28",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.33,
+      "vix_abs_deviation_from_removed": 0.21,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "preferred_macro_events_present": [
+        "PCE"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 8,
+      "date": "2023-06-14",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.88,
+      "vix_abs_deviation_from_removed": 0.34,
+      "high_importance_macro": true,
+      "macro_events": [
+        "FOMC_DECISION"
+      ],
+      "preferred_macro_events_present": [
+        "FOMC_DECISION"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 9,
+      "date": "2023-07-26",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.19,
+      "vix_abs_deviation_from_removed": 0.35,
+      "high_importance_macro": true,
+      "macro_events": [
+        "FOMC_DECISION"
+      ],
+      "preferred_macro_events_present": [
+        "FOMC_DECISION"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 10,
+      "date": "2023-08-01",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.93,
+      "vix_abs_deviation_from_removed": 0.39,
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "preferred_macro_events_present": [
+        "JOLTS"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 11,
+      "date": "2023-12-22",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.03,
+      "vix_abs_deviation_from_removed": 0.51,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "preferred_macro_events_present": [
+        "PCE"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 12,
+      "date": "2023-11-30",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 12.92,
+      "vix_abs_deviation_from_removed": 0.62,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "preferred_macro_events_present": [
+        "PCE"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 13,
+      "date": "2023-12-05",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 12.85,
+      "vix_abs_deviation_from_removed": 0.69,
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "preferred_macro_events_present": [
+        "JOLTS"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 14,
+      "date": "2023-08-29",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 14.45,
+      "vix_abs_deviation_from_removed": 0.91,
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "preferred_macro_events_present": [
+        "JOLTS"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    },
+    {
+      "rank": 15,
+      "date": "2023-12-13",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 12.19,
+      "vix_abs_deviation_from_removed": 1.35,
+      "high_importance_macro": true,
+      "macro_events": [
+        "FOMC_DECISION"
+      ],
+      "preferred_macro_events_present": [
+        "FOMC_DECISION"
+      ],
+      "same_macro_family_as_removed": false,
+      "local_option_quote_cache_present": true,
+      "local_spy_bar_cache_present": true,
+      "selection_inputs": [
+        "macro_event_type",
+        "same_day_vix_close",
+        "local_quote_cache_presence",
+        "local_spy_bar_cache_presence"
+      ]
+    }
+  ],
+  "minimum_regime_counts": {
+    "total_dates": 10,
+    "low_volatility": 3,
+    "normal_volatility": 3,
+    "high_volatility": 3,
+    "high_importance_macro": 4,
+    "no_high_importance_macro": 4,
+    "in_sample": 4,
+    "oos": 4,
+    "unique_calendar_months": 6
+  },
+  "selected_dates": [
+    {
+      "date": "2023-09-13",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 13.48,
+      "high_importance_macro": true,
+      "macro_events": [
+        "CPI"
+      ],
+      "trend_regime": "low_vol_macro_replacement",
+      "selection_reason": "H-G1 v3 replacement for 2023-07-12 selected by locked plan rules: same preferred CPI family first, then closest same-day VIX close to 13.54, with local option quote and SPY bar cache present. Gamma/OI/PnL inputs were not used.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "needs_metadata_cost_check"
+    },
+    {
+      "date": "2023-08-09",
+      "split": "in_sample",
+      "volatility_bucket": "normal",
+      "vix_close": 15.96,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "normal_no_macro",
+      "selection_reason": "Train-period normal-volatility no-high-importance-macro control date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2023-10-27",
+      "split": "in_sample",
+      "volatility_bucket": "normal",
+      "vix_close": 21.27,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "trend_regime": "normal_macro",
+      "selection_reason": "Train-period PCE date with normal/elevated VIX retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2023-12-29",
+      "split": "in_sample",
+      "volatility_bucket": "low",
+      "vix_close": 12.45,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "low_vol_year_end",
+      "selection_reason": "Train-period low-volatility no-high-importance-macro year-end control date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-01-03",
+      "split": "oos",
+      "volatility_bucket": "low",
+      "vix_close": 14.04,
+      "high_importance_macro": true,
+      "macro_events": [
+        "JOLTS"
+      ],
+      "trend_regime": "oos_low_vol_macro",
+      "selection_reason": "Existing OI/enrichment probe date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "existing_probe"
+    },
+    {
+      "date": "2024-05-21",
+      "split": "oos",
+      "volatility_bucket": "low",
+      "vix_close": 11.86,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "oos_low_vol_no_macro",
+      "selection_reason": "OOS very-low-volatility no-high-importance-macro control date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-08-05",
+      "split": "oos",
+      "volatility_bucket": "high",
+      "vix_close": 38.57,
+      "high_importance_macro": false,
+      "macro_events": [
+        "ISM_SERVICES"
+      ],
+      "trend_regime": "oos_vol_spike_stress",
+      "selection_reason": "OOS volatility-spike stress date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-08-07",
+      "split": "oos",
+      "volatility_bucket": "high",
+      "vix_close": 27.85,
+      "high_importance_macro": false,
+      "macro_events": [],
+      "trend_regime": "oos_vol_spike_followthrough",
+      "selection_reason": "OOS high-VIX follow-through date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-10-31",
+      "split": "oos",
+      "volatility_bucket": "normal",
+      "vix_close": 23.16,
+      "high_importance_macro": true,
+      "macro_events": [
+        "PCE"
+      ],
+      "trend_regime": "oos_normal_macro",
+      "selection_reason": "OOS PCE macro date with elevated normal VIX retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    },
+    {
+      "date": "2024-12-18",
+      "split": "oos",
+      "volatility_bucket": "high",
+      "vix_close": 27.62,
+      "high_importance_macro": true,
+      "macro_events": [
+        "FOMC_DECISION"
+      ],
+      "trend_regime": "oos_high_vol_macro",
+      "selection_reason": "OOS high-volatility FOMC macro date retained from v1.",
+      "local_quote_cache_status": "present",
+      "local_spy_bar_cache_status": "present",
+      "opra_oi_status": "downloaded"
+    }
+  ],
+  "locked_outputs": {
+    "candidate_selection_json": "reports/diagnostics/h_g1_manifest_v3_candidate_selection.json",
+    "candidate_selection_report": "reports/diagnostics/h_g1_manifest_v3_candidate_selection.md",
+    "next_required_step": "Run metadata cost check for one replacement OPRA statistics/OI day only after manifest validation passes."
+  }
+}

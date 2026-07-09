@@ -1,14 +1,15 @@
 # GDELT News Capture Command Plan
 
 - Mode: `dry_run_no_network`
-- Status: `ready_to_retry`
+- Status: `blocked_cooldown`
+- Live retry allowed now: `False`
 - Candidate days: `71`
 - Command count: `71`
 - Max records per topic: `5`
 - Lookback hours: `24`
 - Latest capture status: `blocked`
-- Daily status files: `5`
-- Not-attempted candidate days: `66`
+- Daily status files: `6`
+- Not-attempted candidate days: `65`
 - Retry pressure: `cooldown_recommended`
 
 ## Blockers
@@ -18,12 +19,12 @@
 ## Retry Pressure
 
 - Status: `cooldown_recommended`
-- Reason: 5 per-day GDELT capture attempts are blocked; wait before the next --execute retry or switch to an offline/alternate news archive path.
+- Reason: 6 per-day GDELT capture attempts are blocked; wait before the next --execute retry or switch to an offline/alternate news archive path.
 
 ## Next Unattempted Command
 
 ```powershell
-python scripts\capture_gdelt_news_snapshots.py --decision-time-et 2023-04-14T09:30:00-04:00 --lookback-hours 24 --max-records 5 --output-path data\raw\spy_0dte\news\gdelt\2023-04-14.csv --status-output-path reports\news_gdelt_capture_status\2023-04-14.json --execute
+python scripts\capture_gdelt_news_snapshots.py --decision-time-et 2023-04-17T09:30:00-04:00 --lookback-hours 24 --max-records 5 --output-path data\raw\spy_0dte\news\gdelt\2023-04-17.csv --status-output-path reports\news_gdelt_capture_status\2023-04-17.json --execute
 ```
 
 

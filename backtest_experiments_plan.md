@@ -104,6 +104,8 @@ To validate the trading edge of our proposed 0DTE trading system, we must conduc
 
 ## Experiment 7: Transaction Cost & Execution Latency Sensitivity
 
+**v2 execution note (2026-07-03)**: Experiment 7 is no longer the active execution container for LLM work. LLM work is split into H-L1 (`docs\LLM_MEASUREMENT_EXPERIMENT_DESIGN.md`) for real timestamp-clean news measurement and H-L2 (`docs\H_L2_PRICE_INPUT_DESIGN.md`) for a separate dormant price-input branch. Do not run live LLM prompt research until the real-news blocker is removed.
+
 * **Objective**: To test prompt robustness for the LLM gate first, then test the system's vulnerability to transaction costs (bid-ask spread) and execution delays (latency).
 * **Experimental Setup**:
   - **Prompt Pre-Experiment**: Before using the LLM gate in later experiments, compare multiple prompt variants for the OpenRouter DeepSeek V4 flash thinking target model:

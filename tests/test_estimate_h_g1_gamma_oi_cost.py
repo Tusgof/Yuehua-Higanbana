@@ -11,6 +11,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = PROJECT_ROOT / "scripts" / "estimate_h_g1_gamma_oi_cost.py"
 MANIFEST_PATH = PROJECT_ROOT / "experiments" / "h_g1_gamma_regime_date_set_preregistration.json"
+V3_MANIFEST_PATH = PROJECT_ROOT / "experiments" / "h_g1_gamma_regime_date_set_preregistration_v3.json"
 
 
 def load_estimator():
@@ -38,6 +39,28 @@ class H_G1GammaOiCostEstimatorTests(unittest.TestCase):
         self.assertTrue(all(request.symbols == ["SPY.OPT"] for request in requests))
         self.assertTrue(all(request.start.endswith("T00:00:00+00:00") for request in requests))
         self.assertTrue(all(request.window.endswith("_full_utc_day_statistics") for request in requests))
+
+    def test_v3_builds_one_replacement_cost_request(self) -> None:
+        manifest, requests, existing = self.estimator.build_full_day_requests(V3_MANIFEST_PATH)
+        result = self.estimator.build_result(
+            manifest,
+            requests,
+            existing,
+            self.estimator.estimate_live_cost(requests, cost_provider=lambda _request: 0.25),
+            manifest_validation={"status": "pass"},
+            paid_cost_audit={
+                "status": "pass",
+                "cost_guard_basis": "user_reported_actual_usage",
+                "cost_guard_used_usd": 109.082227,
+                "stop_threshold_usd": 125.0,
+                "remaining_before_stop_usd": 15.917773,
+            },
+        )
+
+        self.assertEqual(1, len(requests))
+        self.assertEqual("2023-09-13", requests[0].date)
+        self.assertEqual("h_g1_gamma_oi_v3_replacement", result["scenario"])
+        self.assertEqual("pass", result["decision"]["status"])
 
     def test_live_cost_result_uses_injected_provider_without_download(self) -> None:
         _manifest, requests, _existing = self.estimator.build_full_day_requests(MANIFEST_PATH)

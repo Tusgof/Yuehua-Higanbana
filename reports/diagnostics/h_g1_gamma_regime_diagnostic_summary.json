@@ -1,0 +1,969 @@
+{
+  "blockers": [
+    "coverage_gate:blocked"
+  ],
+  "computed_greeks_count": 2095,
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The pre-registered gamma proxy diagnostic still has policy blockers: coverage_gate:blocked",
+  "date_count": 12,
+  "decision_time_et": "09:35:00",
+  "enrichment_summary": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\diagnostics\\h_g1_gamma_regime_enrichment_summary.json",
+  "evidence_tier": "E1",
+  "hypothesis_id": "H-G1",
+  "input_jsonl": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\derived\\spy_0dte\\h_g1_gamma_regime\\option_quote_enriched_12_date_snapshot.jsonl",
+  "per_date": {
+    "2023-03-13": {
+      "bucket_stats": {
+        "unknown": {
+          "computed_count": 0,
+          "computed_oi_notional_share": 0.0,
+          "computed_oi_notional_sum": 0.0,
+          "computed_rate": 0.0,
+          "oi_notional_share": 0.0,
+          "oi_notional_sum": 0.0,
+          "row_count": 260
+        }
+      },
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 0.0,
+        "net_oi_gamma_proxy": null,
+        "scaled_net_oi_gamma_proxy": null,
+        "underlying_notional_sum": 0.0
+      },
+      "open_interest_join_count": 260,
+      "quote_count": 260,
+      "realized_volatility": {
+        "full_day_realized_volatility": null,
+        "next_10m_realized_volatility": null,
+        "reason": "missing_spy_bars",
+        "status": "blocked"
+      },
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "underlying_join_count": 0
+    },
+    "2023-03-22": {
+      "bucket_stats": {
+        "unknown": {
+          "computed_count": 0,
+          "computed_oi_notional_share": 0.0,
+          "computed_oi_notional_sum": 0.0,
+          "computed_rate": 0.0,
+          "oi_notional_share": 0.0,
+          "oi_notional_sum": 0.0,
+          "row_count": 270
+        }
+      },
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 0.0,
+        "net_oi_gamma_proxy": null,
+        "scaled_net_oi_gamma_proxy": null,
+        "underlying_notional_sum": 0.0
+      },
+      "open_interest_join_count": 270,
+      "quote_count": 270,
+      "realized_volatility": {
+        "full_day_realized_volatility": null,
+        "next_10m_realized_volatility": null,
+        "reason": "missing_spy_bars",
+        "status": "blocked"
+      },
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "underlying_join_count": 0
+    },
+    "2023-07-12": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 8,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 7827441648.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.329103,
+          "oi_notional_sum": 7827441648.0,
+          "row_count": 8
+        },
+        "deep_call": {
+          "computed_count": 84,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 37253112.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.001566,
+          "oi_notional_sum": 37253112.0,
+          "row_count": 84
+        },
+        "deep_put": {
+          "computed_count": 62,
+          "computed_oi_notional_share": 0.973081,
+          "computed_oi_notional_sum": 4613221704.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.199327,
+          "oi_notional_sum": 4740838180.0,
+          "row_count": 124
+        },
+        "otm_call": {
+          "computed_count": 24,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 2591324684.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.108952,
+          "oi_notional_sum": 2591324684.0,
+          "row_count": 24
+        },
+        "otm_put": {
+          "computed_count": 12,
+          "computed_oi_notional_share": 0.662545,
+          "computed_oi_notional_sum": 5689497164.0,
+          "computed_rate": 0.545455,
+          "oi_notional_share": 0.361052,
+          "oi_notional_sum": 8587333664.0,
+          "row_count": 22
+        }
+      },
+      "computed_greeks_count": 190,
+      "computed_greeks_rate": 0.7251908396946565,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 1478326965.614717,
+        "gamma_proxy_row_count": 190,
+        "net_oi_gamma_proxy": 1233760570.178979,
+        "scaled_net_oi_gamma_proxy": 0.059433312,
+        "underlying_notional_sum": 20758738312.0
+      },
+      "open_interest_join_count": 262,
+      "quote_count": 262,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0002562265,
+        "next_10m_realized_volatility": 0.0003664704,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [
+        "otm_put_computed_rate_below_60pct"
+      ],
+      "underlying_join_count": 262
+    },
+    "2023-08-09": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 8,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 6532197516.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.29763,
+          "oi_notional_sum": 6532197516.0,
+          "row_count": 8
+        },
+        "deep_call": {
+          "computed_count": 43,
+          "computed_oi_notional_share": 0.998841,
+          "computed_oi_notional_sum": 618639984.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.02822,
+          "oi_notional_sum": 619357872.0,
+          "row_count": 86
+        },
+        "deep_put": {
+          "computed_count": 114,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 1851388284.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.084356,
+          "oi_notional_sum": 1851388284.0,
+          "row_count": 114
+        },
+        "otm_call": {
+          "computed_count": 12,
+          "computed_oi_notional_share": 0.939224,
+          "computed_oi_notional_sum": 5973546048.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.289788,
+          "oi_notional_sum": 6360083868.0,
+          "row_count": 24
+        },
+        "otm_put": {
+          "computed_count": 22,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 6584334132.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.300006,
+          "oi_notional_sum": 6584334132.0,
+          "row_count": 22
+        }
+      },
+      "computed_greeks_count": 199,
+      "computed_greeks_rate": 0.7834645669291339,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 1453928353.557057,
+        "gamma_proxy_row_count": 199,
+        "net_oi_gamma_proxy": 31651573.7778,
+        "scaled_net_oi_gamma_proxy": 0.0014680621,
+        "underlying_notional_sum": 21560105964.0
+      },
+      "open_interest_join_count": 254,
+      "quote_count": 254,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0002645049,
+        "next_10m_realized_volatility": 0.0003103253,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "underlying_join_count": 254
+    },
+    "2023-10-27": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 8,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 4983791580.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.069757,
+          "oi_notional_sum": 4983791580.0,
+          "row_count": 8
+        },
+        "deep_call": {
+          "computed_count": 87,
+          "computed_oi_notional_share": 0.964193,
+          "computed_oi_notional_sum": 16762395069.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.243334,
+          "oi_notional_sum": 17384893227.0,
+          "row_count": 174
+        },
+        "deep_put": {
+          "computed_count": 106,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 28785182004.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.402902,
+          "oi_notional_sum": 28785182004.0,
+          "row_count": 106
+        },
+        "otm_call": {
+          "computed_count": 14,
+          "computed_oi_notional_share": 0.751624,
+          "computed_oi_notional_sum": 9876603933.0,
+          "computed_rate": 0.636364,
+          "oi_notional_share": 0.183924,
+          "oi_notional_sum": 13140354411.0,
+          "row_count": 22
+        },
+        "otm_put": {
+          "computed_count": 20,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 7150412844.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.100083,
+          "oi_notional_sum": 7150412844.0,
+          "row_count": 20
+        }
+      },
+      "computed_greeks_count": 235,
+      "computed_greeks_rate": 0.7121212121212122,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 1134640151.395895,
+        "gamma_proxy_row_count": 235,
+        "net_oi_gamma_proxy": -263366694.684101,
+        "scaled_net_oi_gamma_proxy": -0.0038983569,
+        "underlying_notional_sum": 67558385430.0
+      },
+      "open_interest_join_count": 330,
+      "quote_count": 330,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0004611564,
+        "next_10m_realized_volatility": 0.0005256501,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [],
+      "underlying_join_count": 330
+    },
+    "2023-12-29": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 10,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 13995876900.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.110039,
+          "oi_notional_sum": 13995876900.0,
+          "row_count": 10
+        },
+        "deep_call": {
+          "computed_count": 19,
+          "computed_oi_notional_share": 0.999972,
+          "computed_oi_notional_sum": 6868254290.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.054001,
+          "oi_notional_sum": 6868445002.0,
+          "row_count": 38
+        },
+        "deep_put": {
+          "computed_count": 274,
+          "computed_oi_notional_share": 0.953349,
+          "computed_oi_notional_sum": 64869161104.0,
+          "computed_rate": 0.919463,
+          "oi_notional_share": 0.534973,
+          "oi_notional_sum": 68043466988.0,
+          "row_count": 298
+        },
+        "otm_call": {
+          "computed_count": 15,
+          "computed_oi_notional_share": 0.999718,
+          "computed_oi_notional_sum": 17947286506.0,
+          "computed_rate": 0.625,
+          "oi_notional_share": 0.141145,
+          "oi_notional_sum": 17952340374.0,
+          "row_count": 24
+        },
+        "otm_put": {
+          "computed_count": 23,
+          "computed_oi_notional_share": 0.992212,
+          "computed_oi_notional_sum": 20171941986.0,
+          "computed_rate": 0.958333,
+          "oi_notional_share": 0.159841,
+          "oi_notional_sum": 20330280624.0,
+          "row_count": 24
+        }
+      },
+      "computed_greeks_count": 341,
+      "computed_greeks_rate": 0.8654822335025381,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 3240122543.445136,
+        "gamma_proxy_row_count": 341,
+        "net_oi_gamma_proxy": 1150453555.763625,
+        "scaled_net_oi_gamma_proxy": 0.009288899,
+        "underlying_notional_sum": 123852520786.0
+      },
+      "open_interest_join_count": 394,
+      "quote_count": 394,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.000224679,
+        "next_10m_realized_volatility": 0.0001713945,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [],
+      "underlying_join_count": 394
+    },
+    "2024-01-03": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 10,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 5074799832.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.451031,
+          "oi_notional_sum": 5074799832.0,
+          "row_count": 10
+        },
+        "deep_call": {
+          "computed_count": 25,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 282192.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 2.5e-05,
+          "oi_notional_sum": 282192.0,
+          "row_count": 25
+        },
+        "deep_put": {
+          "computed_count": 1,
+          "computed_oi_notional_share": 0.0,
+          "computed_oi_notional_sum": 0.0,
+          "computed_rate": 0.018182,
+          "oi_notional_share": 0.00459,
+          "oi_notional_sum": 51641136.0,
+          "row_count": 55
+        },
+        "otm_call": {
+          "computed_count": 17,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 4389120304.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.39009,
+          "oi_notional_sum": 4389120304.0,
+          "row_count": 17
+        },
+        "otm_put": {
+          "computed_count": 6,
+          "computed_oi_notional_share": 0.906923,
+          "computed_oi_notional_sum": 1574161040.0,
+          "computed_rate": 0.352941,
+          "oi_notional_share": 0.154264,
+          "oi_notional_sum": 1735715960.0,
+          "row_count": 17
+        }
+      },
+      "computed_greeks_count": 59,
+      "computed_greeks_rate": 0.47580645161290325,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 936272563.279896,
+        "gamma_proxy_row_count": 59,
+        "net_oi_gamma_proxy": -233314845.306008,
+        "scaled_net_oi_gamma_proxy": -0.0211367245,
+        "underlying_notional_sum": 11038363368.0
+      },
+      "open_interest_join_count": 124,
+      "quote_count": 124,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0002968646,
+        "next_10m_realized_volatility": 0.0002303108,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [
+        "otm_put_computed_rate_below_60pct"
+      ],
+      "underlying_join_count": 124
+    },
+    "2024-05-21": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 11,
+          "computed_oi_notional_share": 0.981204,
+          "computed_oi_notional_sum": 6668428280.0,
+          "computed_rate": 0.916667,
+          "oi_notional_share": 0.377588,
+          "oi_notional_sum": 6796172500.0,
+          "row_count": 12
+        },
+        "deep_call": {
+          "computed_count": 11,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 168508020.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.009362,
+          "oi_notional_sum": 168508020.0,
+          "row_count": 22
+        },
+        "deep_put": {
+          "computed_count": 140,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 2378223620.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.132132,
+          "oi_notional_sum": 2378223620.0,
+          "row_count": 140
+        },
+        "otm_call": {
+          "computed_count": 9,
+          "computed_oi_notional_share": 0.984773,
+          "computed_oi_notional_sum": 2923823260.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.164956,
+          "oi_notional_sum": 2969034020.0,
+          "row_count": 18
+        },
+        "otm_put": {
+          "computed_count": 26,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 5686973620.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.315962,
+          "oi_notional_sum": 5686973620.0,
+          "row_count": 26
+        }
+      },
+      "computed_greeks_count": 197,
+      "computed_greeks_rate": 0.9036697247706422,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 1196512399.802971,
+        "gamma_proxy_row_count": 197,
+        "net_oi_gamma_proxy": -83066037.246511,
+        "scaled_net_oi_gamma_proxy": -0.0046598361,
+        "underlying_notional_sum": 17825956800.0
+      },
+      "open_interest_join_count": 218,
+      "quote_count": 218,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0001176138,
+        "next_10m_realized_volatility": 8.81388e-05,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "underlying_join_count": 218
+    },
+    "2024-08-05": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 10,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 688915020.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.03298,
+          "oi_notional_sum": 688915020.0,
+          "row_count": 10
+        },
+        "deep_call": {
+          "computed_count": 63,
+          "computed_oi_notional_share": 0.709408,
+          "computed_oi_notional_sum": 9917448220.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.66925,
+          "oi_notional_sum": 13979886620.0,
+          "row_count": 126
+        },
+        "deep_put": {
+          "computed_count": 84,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 1737951690.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.0832,
+          "oi_notional_sum": 1737951690.0,
+          "row_count": 84
+        },
+        "otm_call": {
+          "computed_count": 26,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 3884092440.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.185941,
+          "oi_notional_sum": 3884092440.0,
+          "row_count": 26
+        },
+        "otm_put": {
+          "computed_count": 26,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 598052770.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.02863,
+          "oi_notional_sum": 598052770.0,
+          "row_count": 26
+        }
+      },
+      "computed_greeks_count": 209,
+      "computed_greeks_rate": 0.7683823529411765,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 161257053.619669,
+        "gamma_proxy_row_count": 179,
+        "net_oi_gamma_proxy": -118509563.504558,
+        "scaled_net_oi_gamma_proxy": -0.0070430478,
+        "underlying_notional_sum": 16826460140.0
+      },
+      "open_interest_join_count": 242,
+      "quote_count": 272,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0009783003,
+        "next_10m_realized_volatility": 0.0017133869,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [],
+      "underlying_join_count": 272
+    },
+    "2024-08-07": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 10,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 2398931847.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.111303,
+          "oi_notional_sum": 2398931847.0,
+          "row_count": 10
+        },
+        "deep_call": {
+          "computed_count": 92,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 3135363881.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.145471,
+          "oi_notional_sum": 3135363881.0,
+          "row_count": 92
+        },
+        "deep_put": {
+          "computed_count": 108,
+          "computed_oi_notional_share": 0.983618,
+          "computed_oi_notional_sum": 5805710235.0,
+          "computed_rate": 0.5,
+          "oi_notional_share": 0.273852,
+          "oi_notional_sum": 5902405951.0,
+          "row_count": 216
+        },
+        "otm_call": {
+          "computed_count": 26,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 4999454161.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.231958,
+          "oi_notional_sum": 4999454161.0,
+          "row_count": 26
+        },
+        "otm_put": {
+          "computed_count": 20,
+          "computed_oi_notional_share": 0.910996,
+          "computed_oi_notional_sum": 4661653919.0,
+          "computed_rate": 0.769231,
+          "oi_notional_share": 0.237416,
+          "oi_notional_sum": 5117097089.0,
+          "row_count": 26
+        }
+      },
+      "computed_greeks_count": 256,
+      "computed_greeks_rate": 0.6918918918918919,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 451840428.158061,
+        "gamma_proxy_row_count": 256,
+        "net_oi_gamma_proxy": 50713030.338901,
+        "scaled_net_oi_gamma_proxy": 0.0024147781,
+        "underlying_notional_sum": 21001114043.0
+      },
+      "open_interest_join_count": 370,
+      "quote_count": 370,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0006007063,
+        "next_10m_realized_volatility": 0.0006992699,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [],
+      "underlying_join_count": 370
+    },
+    "2024-10-31": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 10,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 4512788028.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.040537,
+          "oi_notional_sum": 4512788028.0,
+          "row_count": 10
+        },
+        "deep_call": {
+          "computed_count": 59,
+          "computed_oi_notional_share": 0.998079,
+          "computed_oi_notional_sum": 4420733730.0,
+          "computed_rate": 0.983333,
+          "oi_notional_share": 0.039787,
+          "oi_notional_sum": 4429243434.0,
+          "row_count": 60
+        },
+        "deep_put": {
+          "computed_count": 119,
+          "computed_oi_notional_share": 0.891846,
+          "computed_oi_notional_sum": 65846652102.0,
+          "computed_rate": 0.450758,
+          "oi_notional_share": 0.663217,
+          "oi_notional_sum": 73831859346.0,
+          "row_count": 264
+        },
+        "otm_call": {
+          "computed_count": 30,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 14642210688.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.131528,
+          "oi_notional_sum": 14642210688.0,
+          "row_count": 30
+        },
+        "otm_put": {
+          "computed_count": 20,
+          "computed_oi_notional_share": 0.908232,
+          "computed_oi_notional_sum": 12631505628.0,
+          "computed_rate": 0.666667,
+          "oi_notional_share": 0.124931,
+          "oi_notional_sum": 13907788734.0,
+          "row_count": 30
+        }
+      },
+      "computed_greeks_count": 238,
+      "computed_greeks_rate": 0.6040609137055838,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 1080962094.070966,
+        "gamma_proxy_row_count": 238,
+        "net_oi_gamma_proxy": -436422340.392468,
+        "scaled_net_oi_gamma_proxy": -0.004276391,
+        "underlying_notional_sum": 102053890176.0
+      },
+      "open_interest_join_count": 394,
+      "quote_count": 394,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0002866408,
+        "next_10m_realized_volatility": 0.0003438848,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [],
+      "underlying_join_count": 394
+    },
+    "2024-12-18": {
+      "bucket_stats": {
+        "atm": {
+          "computed_count": 12,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 4059349686.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.220177,
+          "oi_notional_sum": 4059349686.0,
+          "row_count": 12
+        },
+        "deep_call": {
+          "computed_count": 24,
+          "computed_oi_notional_share": 0.999233,
+          "computed_oi_notional_sum": 392904540.0,
+          "computed_rate": 0.545455,
+          "oi_notional_share": 0.021327,
+          "oi_notional_sum": 393206310.0,
+          "row_count": 44
+        },
+        "deep_put": {
+          "computed_count": 88,
+          "computed_oi_notional_share": 0.98081,
+          "computed_oi_notional_sum": 4472895294.0,
+          "computed_rate": 0.88,
+          "oi_notional_share": 0.247354,
+          "oi_notional_sum": 4560408594.0,
+          "row_count": 100
+        },
+        "otm_call": {
+          "computed_count": 17,
+          "computed_oi_notional_share": 0.965892,
+          "computed_oi_notional_sum": 5322196782.0,
+          "computed_rate": 0.566667,
+          "oi_notional_share": 0.298867,
+          "oi_notional_sum": 5510139138.0,
+          "row_count": 30
+        },
+        "otm_put": {
+          "computed_count": 30,
+          "computed_oi_notional_share": 1.0,
+          "computed_oi_notional_sum": 3913655130.0,
+          "computed_rate": 1.0,
+          "oi_notional_share": 0.212275,
+          "oi_notional_sum": 3913655130.0,
+          "row_count": 30
+        }
+      },
+      "computed_greeks_count": 171,
+      "computed_greeks_rate": 0.7916666666666666,
+      "gamma_aggregate": {
+        "abs_local_gamma_exposure_sum": 625900888.807344,
+        "gamma_proxy_row_count": 171,
+        "net_oi_gamma_proxy": -19012960.143664,
+        "scaled_net_oi_gamma_proxy": -0.0010469114,
+        "underlying_notional_sum": 18161001432.0
+      },
+      "open_interest_join_count": 216,
+      "quote_count": 216,
+      "realized_volatility": {
+        "bar_count_after_decision": 370,
+        "full_day_realized_volatility": 0.0004427842,
+        "next_10m_realized_volatility": 0.0002267523,
+        "status": "pass"
+      },
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "underlying_join_count": 216
+    }
+  },
+  "policy_version": "GAMMA_AGGREGATION_VALIDATION_POLICY.md v2",
+  "quote_count": 3364,
+  "record_type": "h_g1_gamma_regime_diagnostic",
+  "research_decision": "ยังสรุปไม่ได้: H-G1 ยังไม่ผ่าน policy v2 จึงห้ามใช้ signed-OI gamma proxy เป็น NOVI/net-gamma strategy filter",
+  "research_log_path": "research_log/013-higanbana-gamma-oi-regime-diagnostic.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-gamma-oi-regime-diagnostic",
+  "schema_version": "h_g1_gamma_regime_diagnostic_v1",
+  "status": "blocked",
+  "strategy_use_status": "diagnostic_only_blocked_by_policy_gates",
+  "tier_blockers": [
+    "E1 diagnostic only",
+    "H-G1 is a data-validity proxy test, not a strategy acceptance test",
+    "No MinTRL/PSR acceptance evidence for a trading rule"
+  ],
+  "validation_gates": {
+    "coverage": {
+      "blockers": [
+        "raw_row_coverage_gate_failed",
+        "bucket_weighted_coverage_gate_failed"
+      ],
+      "bucket_weighted_coverage": {
+        "computed_required_bucket_oi_notional_share": 0.956671,
+        "note": "OI-notional share is reported because gamma exposure is not observable for rows where IV/Gamma cannot be computed.",
+        "required_bucket_failures": {
+          "2023-03-13": [
+            "otm_put_missing",
+            "atm_missing",
+            "otm_call_missing"
+          ],
+          "2023-03-22": [
+            "otm_put_missing",
+            "atm_missing",
+            "otm_call_missing"
+          ],
+          "2023-07-12": [
+            "otm_put_computed_rate_below_60pct"
+          ],
+          "2023-08-09": [
+            "otm_call_computed_rate_below_60pct"
+          ],
+          "2024-01-03": [
+            "otm_put_computed_rate_below_60pct"
+          ],
+          "2024-05-21": [
+            "otm_call_computed_rate_below_60pct"
+          ],
+          "2024-12-18": [
+            "otm_call_computed_rate_below_60pct"
+          ]
+        },
+        "required_buckets": [
+          "otm_put",
+          "atm",
+          "otm_call"
+        ],
+        "status": "blocked"
+      },
+      "raw_row_coverage": {
+        "blockers": [
+          "underlying_join_rate_below_95pct",
+          "computed_greeks_rate_below_70pct"
+        ],
+        "computed_greeks_rate": 0.622771,
+        "open_interest_join_rate": 0.991082,
+        "status": "blocked",
+        "underlying_join_rate": 0.842449
+      },
+      "status": "blocked"
+    },
+    "economic_sign": {
+      "blockers": [],
+      "expected_sign": "negative_or_zero",
+      "full_day_volatility_correlation": -0.273079,
+      "method": "Pearson correlation between decision-time net OI gamma proxy and same-day realized volatility after decision time.",
+      "observation_count": 10,
+      "observations": [
+        {
+          "date": "2023-07-12",
+          "full_day_realized_volatility": 0.0002562265,
+          "net_oi_gamma_proxy": 1233760570.178979,
+          "next_10m_realized_volatility": 0.0003664704
+        },
+        {
+          "date": "2023-08-09",
+          "full_day_realized_volatility": 0.0002645049,
+          "net_oi_gamma_proxy": 31651573.7778,
+          "next_10m_realized_volatility": 0.0003103253
+        },
+        {
+          "date": "2023-10-27",
+          "full_day_realized_volatility": 0.0004611564,
+          "net_oi_gamma_proxy": -263366694.684101,
+          "next_10m_realized_volatility": 0.0005256501
+        },
+        {
+          "date": "2023-12-29",
+          "full_day_realized_volatility": 0.000224679,
+          "net_oi_gamma_proxy": 1150453555.763625,
+          "next_10m_realized_volatility": 0.0001713945
+        },
+        {
+          "date": "2024-01-03",
+          "full_day_realized_volatility": 0.0002968646,
+          "net_oi_gamma_proxy": -233314845.306008,
+          "next_10m_realized_volatility": 0.0002303108
+        },
+        {
+          "date": "2024-05-21",
+          "full_day_realized_volatility": 0.0001176138,
+          "net_oi_gamma_proxy": -83066037.246511,
+          "next_10m_realized_volatility": 8.81388e-05
+        },
+        {
+          "date": "2024-08-05",
+          "full_day_realized_volatility": 0.0009783003,
+          "net_oi_gamma_proxy": -118509563.504558,
+          "next_10m_realized_volatility": 0.0017133869
+        },
+        {
+          "date": "2024-08-07",
+          "full_day_realized_volatility": 0.0006007063,
+          "net_oi_gamma_proxy": 50713030.338901,
+          "next_10m_realized_volatility": 0.0006992699
+        },
+        {
+          "date": "2024-10-31",
+          "full_day_realized_volatility": 0.0002866408,
+          "net_oi_gamma_proxy": -436422340.392468,
+          "next_10m_realized_volatility": 0.0003438848
+        },
+        {
+          "date": "2024-12-18",
+          "full_day_realized_volatility": 0.0004427842,
+          "net_oi_gamma_proxy": -19012960.143664,
+          "next_10m_realized_volatility": 0.0002267523
+        }
+      ],
+      "status": "pass"
+    },
+    "search_log": {
+      "reason": "No gamma threshold, quartile, or best bucket was selected in this diagnostic.",
+      "status": "pass"
+    },
+    "stability": {
+      "available_dates": [
+        "2023-03-13",
+        "2023-03-22",
+        "2023-07-12",
+        "2023-08-09",
+        "2023-10-27",
+        "2023-12-29",
+        "2024-01-03",
+        "2024-05-21",
+        "2024-08-05",
+        "2024-08-07",
+        "2024-10-31",
+        "2024-12-18"
+      ],
+      "blockers": [],
+      "label": "pre_registered_regime_set_covered",
+      "minimum_regime_counts": {
+        "high_importance_macro": 4,
+        "high_volatility": 3,
+        "in_sample": 4,
+        "low_volatility": 3,
+        "no_high_importance_macro": 4,
+        "normal_volatility": 3,
+        "oos": 4,
+        "total_dates": 12,
+        "unique_calendar_months": 6
+      },
+      "regime_counts": {
+        "high_importance_macro": 6,
+        "high_volatility": 4,
+        "in_sample": 6,
+        "low_volatility": 4,
+        "no_high_importance_macro": 6,
+        "normal_volatility": 4,
+        "oos": 6
+      },
+      "status": "pass"
+    },
+    "timestamp_discipline": {
+      "blockers": [],
+      "checked_open_interest_rows": 3334,
+      "checked_underlying_rows": 2834,
+      "future_open_interest_rows": 0,
+      "future_underlying_rows": 0,
+      "status": "pass",
+      "timestamp_parse_errors": 0
+    }
+  }
+}

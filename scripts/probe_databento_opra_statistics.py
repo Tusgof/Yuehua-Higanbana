@@ -11,7 +11,7 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_API_KEY_ENV = "DATABENTO_API_KEY"
-DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API",)
+DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
 DEFAULT_METADATA_REPORT = PROJECT_ROOT / "reports" / "data_cost" / "databento_opra_statistics_oi_probe_2024_01_03_schema.json"
 DEFAULT_RAW_PATH = (
     PROJECT_ROOT

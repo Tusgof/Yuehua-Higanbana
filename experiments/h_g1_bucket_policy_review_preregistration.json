@@ -1,0 +1,87 @@
+{
+  "schema_version": "h_g1_bucket_policy_review_preregistration_v1",
+  "hypothesis_id": "H-G1",
+  "created_date": "2026-07-03",
+  "status": "preregistered_review_only_not_adopted",
+  "review_artifact": "docs/H_G1_BUCKET_POLICY_REVIEW.md",
+  "controlling_policy": "docs/GAMMA_AGGREGATION_VALIDATION_POLICY.md",
+  "source_evidence": {
+    "manifest_v3_summary": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3.json",
+    "bucket_failure_diagnostic": "reports/diagnostics/h_g1_manifest_v3_bucket_failure_diagnostic.json",
+    "manifest_v3_enriched_rows": "data/derived/spy_0dte/h_g1_gamma_regime/option_quote_enriched_manifest_v3_snapshot.jsonl"
+  },
+  "locked_h_g1_15_facts": {
+    "failed_bucket_count": 5,
+    "blocked_rows_in_failed_buckets": 55,
+    "opposite_right_blocked_row_share": 1.0,
+    "minimum_failed_bucket_computed_oi_notional_share": 0.880098,
+    "minimum_failed_bucket_gamma_proxy_share": 1.0,
+    "weak_notional_failure_count": 0
+  },
+  "review_question": "Should required-bucket pass/fail remain moneyness-only, or should a pre-registered side-aware or notional-weighted coverage policy be evaluated for H-G1 diagnostics?",
+  "candidate_policies": [
+    {
+      "policy_id": "candidate_a_current_v2_moneyness_only",
+      "status": "baseline",
+      "description": "Keep current v2 moneyness-only required-bucket row-rate and notional gates.",
+      "required_bucket_gate": "moneyness_only",
+      "row_rate_floor": 0.6,
+      "computed_oi_notional_share_floor": 0.8,
+      "retained_abs_gamma_proxy_share_floor": 0.8,
+      "opposite_right_itm_treatment": "included_in_moneyness_bucket_pass_fail"
+    },
+    {
+      "policy_id": "candidate_b_side_aware_required_bucket",
+      "status": "candidate",
+      "description": "Use side-aware pass/fail for otm_put and otm_call while reporting opposite-right ITM rows separately.",
+      "required_bucket_gate": "side_aware",
+      "row_rate_floor": 0.6,
+      "computed_oi_notional_share_floor": 0.8,
+      "retained_abs_gamma_proxy_share_floor": 0.8,
+      "opposite_right_itm_treatment": "reported_separately_not_pass_fail"
+    },
+    {
+      "policy_id": "candidate_c_notional_weighted_coverage",
+      "status": "candidate",
+      "description": "Keep moneyness bucket labels but treat row-rate failures as warnings when OI-notional and gamma-proxy representation pass.",
+      "required_bucket_gate": "notional_weighted",
+      "row_rate_floor": 0.6,
+      "computed_oi_notional_share_floor": 0.8,
+      "retained_abs_gamma_proxy_share_floor": 0.8,
+      "opposite_right_itm_treatment": "reported_separately_and_included_in_notional_diagnostics"
+    }
+  ],
+  "rerun_policy": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_dates_allowed": false,
+    "new_option_quotes_allowed": false,
+    "new_oi_files_allowed": false,
+    "strategy_pnl_selection_allowed": false,
+    "allowed_output_status": "policy_review_only",
+    "research_log_required_if_diagnostic_result_completed": true,
+    "next_research_log_prefix": "017-higanbana-"
+  },
+  "acceptance_criteria": [
+    "Validator passes before any comparison rerun.",
+    "All candidate policies use manifest-v3 rows only.",
+    "Opposite-right ITM rows are reported explicitly.",
+    "Timestamp discipline and raw-row coverage remain visible.",
+    "Any selected candidate is justified by mechanism and data lineage, not by strategy PnL.",
+    "Result remains E1 or lower until a separate strategy-independent validation report exists."
+  ],
+  "failure_criteria": [
+    "Any candidate uses new dates, new paid data, new OI files, or strategy PnL selection.",
+    "Any candidate hides opposite-right ITM rows.",
+    "Any candidate claims true dealer net gamma from OI-only proxy data.",
+    "Any candidate upgrades H-G1 to strategy-ready."
+  ],
+  "forbidden_claims": [
+    "H-G1 pass",
+    "policy adopted by pre-registration alone",
+    "NOVI/net-gamma strategy filter readiness",
+    "true market-maker net gamma",
+    "strategy validation from coverage policy"
+  ],
+  "next_safe_action": "Run a no-paid policy-comparison diagnostic using this pre-registration and manifest-v3 rows only."
+}

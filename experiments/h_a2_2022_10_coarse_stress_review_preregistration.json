@@ -1,0 +1,90 @@
+{
+  "schema_version": "h_a2_2022_10_coarse_stress_review_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "purpose": "Pre-register a no-paid coarse stress/regime review of October 2022 before seeking another exact SPY 1-minute bar source.",
+  "research_question": "Does the already-downloaded 2022-10 stress month contain enough macro/volatility/0DTE quote context to justify continuing H-A2 exact rerun work, even though exact ORB execution remains blocked by missing 2022 SPY 1-minute bars?",
+  "decision_frame": {
+    "data_resolution_principle": "SPY 1-minute bars are required only for exact ORB execution evidence, not for coarse mechanism review.",
+    "allowed_claim": "October 2022 is or is not a useful stress/regime window for prioritizing H-A2 follow-up.",
+    "forbidden_claims": [
+      "Do not claim H-A2 edge is validated.",
+      "Do not claim exact ORB entries/exits were tested.",
+      "Do not approve paper trading or operational validation.",
+      "Do not use this review to justify real-money trading.",
+      "Do not call this LLM/news evidence."
+    ]
+  },
+  "input_paths": {
+    "data_resolution_audit": "docs/HYPOTHESIS_DATA_RESOLUTION_AUDIT.md",
+    "option_normalization_summary": "reports/data_cost/databento_normalization_summary_h_a2_2022_10_stress.json",
+    "vix_vxv": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+    "macro_calendar": "data/normalized/spy_0dte/macro_calendar/macro_event.jsonl",
+    "stress_purchase_estimate": "reports/data_cost/h_a2_2022_h2_stress_purchase_estimate.json",
+    "spy_bar_unavailable_report": "reports/data_cost/databento_spy_bars_plan_h_a2_2022_10_unavailable.json"
+  },
+  "method": {
+    "window": {
+      "start": "2022-10-03",
+      "end": "2022-10-31"
+    },
+    "unit": "trading_day",
+    "metrics": [
+      "trading_day_count",
+      "0dte_quote_available_day_count",
+      "0dte_quote_missing_day_count",
+      "same_day_high_vix_day_count",
+      "same_day_stress_vix_day_count",
+      "prior_close_high_vix_day_count",
+      "prior_close_stress_vix_day_count",
+      "high_importance_macro_day_count",
+      "overlap_between_0dte_quote_availability_and_vix_macro_regimes"
+    ],
+    "volatility_thresholds": {
+      "high_vix": 25.0,
+      "stress_vix": 30.0
+    },
+    "macro_policy": {
+      "use_only_high_importance_events": true,
+      "same_day_event_flag_is_proxy_only": true
+    },
+    "lookahead_policy": {
+      "same_day_vix_close": "diagnostic_only_not_ex_ante",
+      "prior_close_vix": "ex_ante_proxy_allowed",
+      "macro_calendar": "scheduled events are known before the trade date when source timestamp policy supports it"
+    }
+  },
+  "decision_rules": {
+    "continue_exact_rerun_research_if": [
+      "At least one 0DTE quote-available day overlaps with prior-close or same-day high/stress VIX.",
+      "At least one 0DTE quote-available day overlaps with a high-importance macro event or the month has enough non-macro stress days to test the mechanism later."
+    ],
+    "deprioritize_exact_rerun_if": [
+      "0DTE quote availability is too sparse to cover the stress/macro regimes.",
+      "The month contains no useful volatility or macro-regime contrast for H-A2."
+    ],
+    "output_status_values": [
+      "continue_exact_rerun_research",
+      "deprioritize_exact_rerun_research",
+      "blocked_input_missing"
+    ]
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "ibkr_request_allowed": false,
+    "llm_call_allowed": false,
+    "strategy_pnl_allowed": false,
+    "paper_trading_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "planned_outputs": {
+    "summary_json": "reports/diagnostics/h_a2_2022_10_coarse_stress_review.json",
+    "summary_md": "reports/diagnostics/h_a2_2022_10_coarse_stress_review.md",
+    "next_research_log_if_diagnostic_runs": "021-higanbana-h-a2-2022-10-coarse-stress-review.md"
+  }
+}

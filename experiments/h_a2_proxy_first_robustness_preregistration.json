@@ -1,0 +1,145 @@
+{
+  "schema_version": "h_a2_proxy_first_robustness_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_proxy_first_robustness",
+  "title": "H-A2 proxy-first robustness test",
+  "created_date": "2026-07-05",
+  "purpose": "Pre-register a second proxy-first H-A2 robustness path before chasing SPY 2022 1-minute bars again.",
+  "user_decision_context": "The user clarified that SPY 1-minute bars are a method for answering the ORB hypothesis, not the hypothesis itself. If the ORB mechanism is real, lower-resolution evidence should still say something useful about the mechanism before exact replay is pursued again.",
+  "hypothesis": "The H-A2 macro-conditioned ORB mechanism should show a stable relationship between opening-session behavior, volatility or macro-event regime, and existing option-trade outcomes even when measured through coarser local proxies. If the relationship disappears outside exact 1-minute replay, the hypothesis is too fragile to justify more exact-data effort without revision.",
+  "research_question": "Can local, no-paid lower-resolution evidence falsify, weaken, or prioritize H-A2 before any further SPY 2022 1-minute bar source work?",
+  "source_artifacts": {
+    "implement_plan": "IMPLEMENT_PLAN.md",
+    "project_brain": "PROJECT_BRAIN.md",
+    "data_resolution_audit": "docs/HYPOTHESIS_DATA_RESOLUTION_AUDIT.md",
+    "previous_proxy_preregistration": "experiments/h_a2_lower_resolution_proxy_preregistration.json",
+    "previous_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "existing_trade_baseline": "reports/baselines/subsystem_a_orb_baseline_summary.json",
+    "macro_events": "data/normalized/spy_0dte/macro_event.jsonl",
+    "vix_vxv": "data/normalized/spy_0dte/vix_vxv.jsonl",
+    "spy_bars": "data/normalized/spy_0dte/spy_bar.jsonl",
+    "wiki_orb_concept": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_regime_filtering": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md"
+  },
+  "data_resolution_position": {
+    "one_minute_bars_are_method_not_hypothesis": true,
+    "one_minute_required_for_exact_replay": true,
+    "one_minute_required_for_proxy_falsification": false,
+    "allowed_proxy_resolutions": [
+      "daily macro-event and VIX/VXV regime labels",
+      "15-minute opening-session proxy",
+      "5-minute opening-range proxy where available",
+      "existing exact-quote trade outcome reconciliation"
+    ],
+    "forbidden_interpretation": "A proxy pass must not be interpreted as exact 2022-10 ORB entry/exit validation."
+  },
+  "planned_tests": [
+    {
+      "test_id": "resolution_monotonicity_check",
+      "question": "Does the H-A2 signal direction remain coherent across daily-regime, 15-minute, 5-minute, and existing trade-outcome views?",
+      "minimum_output": [
+        "sample_count_by_resolution",
+        "train_oos_label_by_resolution",
+        "macro_event_vs_no_event_comparison",
+        "vix_regime_comparison",
+        "directional_consistency_note"
+      ]
+    },
+    {
+      "test_id": "macro_vix_separation_check",
+      "question": "Is the apparent effect driven by macro-event labels, VIX regime labels, or a combined risk label?",
+      "minimum_output": [
+        "macro_only_bucket",
+        "vix_only_bucket",
+        "combined_risk_bucket",
+        "non_risk_bucket",
+        "active_sample_count_after_each_filter"
+      ]
+    },
+    {
+      "test_id": "existing_trade_reconciliation_check",
+      "question": "Do the proxy labels agree with already-observed implementable option outcomes without re-tuning on OOS?",
+      "minimum_output": [
+        "trade_count_by_label",
+        "implementable_pnl_by_label_if_available",
+        "cost_drag_by_label_if_available",
+        "drawdown_or_adverse_day_note",
+        "no_oos_tuning_statement"
+      ]
+    },
+    {
+      "test_id": "fragility_and_big_day_check",
+      "question": "Does the proxy evidence collapse when extreme observations or small active buckets are isolated?",
+      "minimum_output": [
+        "top_5_percent_extreme_observation_note",
+        "under_sampled_labels",
+        "underpowered_labels",
+        "mintrl_psr_or_blocker",
+        "claim_downgrade_if_needed"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "train_or_design_period": "2023-03-28 to 2023-12-31",
+    "oos_period": "2024-01-01 to 2024-12-31",
+    "pre_2023_reference_period": "Use only if local data already exists; do not acquire new data from this preregistration."
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_bucket": true,
+    "mintrl_psr_required_if_return_or_trade_series_exists": true,
+    "under_sampled_label_required_below_mintrl": true,
+    "underpowered_label_required_when_power_is_insufficient": true,
+    "dsr_or_search_log_required_if_best_trial_is_reported": true,
+    "big_day_dependency_required_if_strategy_returns_exist": true,
+    "mid_vs_implementable_required_if_option_pnl_exists": true
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "summary_md": "reports/experiments/h_a2_proxy_first_robustness_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_proxy_first_robustness_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/024-higanbana-h-a2-proxy-first-robustness.md"
+  },
+  "allowed_claims": [
+    "H-A2 is weakened at proxy level.",
+    "H-A2 remains worth exact-data prioritization at E1 only.",
+    "H-A2 should be revised before any further exact-data source work.",
+    "1-minute bars remain required only for exact replay, not for mechanism-level proxy testing."
+  ],
+  "forbidden_claims": [
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR data from this preregistration.",
+    "Do not buy paid data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "ibkr_request_allowed": false,
+    "llm_call_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "All planned tests are run or explicitly marked unavailable with source evidence.",
+    "Every bucket reports sample count.",
+    "Chronological split and no-OOS-tuning discipline are stated.",
+    "MinTRL/PSR/DSR, under-sampled, underpowered, and big-day dependency handling is reported where applicable.",
+    "Conclusion uses one project label: \u0e1c\u0e48\u0e32\u0e19, \u0e44\u0e21\u0e48\u0e1c\u0e48\u0e32\u0e19, or \u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49.",
+    "The next action states whether H-A2 should be revised, parked, falsified at proxy level, or prioritized for exact replay."
+  ]
+}

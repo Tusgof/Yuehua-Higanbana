@@ -1,0 +1,116 @@
+{
+  "schema_version": "h_g1_sample_expansion_plan_v1",
+  "artifact_type": "h_g1_sample_expansion_plan",
+  "created_date": "2026-07-04",
+  "hypothesis_id": "H-G1",
+  "evidence_tier": "E0",
+  "status": "plan_complete",
+  "conclusion": "ยังสรุปไม่ได้",
+  "source_post_ablation_decision": "experiments/h_g1_post_ablation_decision.json",
+  "source_strategy_ablation_summary": "reports/experiments/h_g1_gamma_strategy_ablation_summary.json",
+  "source_gamma_diagnostic": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3_side_aware.json",
+  "network_used": false,
+  "paid_data_used": false,
+  "new_data_requested": false,
+  "strategy_pnl_used": false,
+  "strategy_use_allowed": false,
+  "paper_trading_allowed": false,
+  "paid_data_approved": false,
+  "true_net_gamma_claim_allowed": false,
+  "research_log_required": false,
+  "decision": "keep_h_g1_parked_with_preregistered_sample_expansion_requirements",
+  "selected_next_safe_action": "run_no_paid_local_cache_overlap_scan_or_return_to_news_unblock",
+  "inference_gap": {
+    "problem": "H-G1.22 tested the gamma proxy on only 2 baseline closed trades that intersected the gamma-proxy date set, while all gamma-filtered variants collapsed to 0 active trades.",
+    "why_more_data_may_be_justified": "The current result is underpowered because of sample overlap, not because the signed-OI gamma proxy mechanism was economically falsified.",
+    "why_more_data_is_not_yet_approved": "More data would be a sample-expansion project. It must first estimate expected overlap, regime coverage, MinTRL/PSR feasibility, and cost before any purchase or strategy claim."
+  },
+  "sample_expansion_sequence": [
+    {
+      "step_id": "h_g1_24_a",
+      "name": "no_paid_local_cache_overlap_scan",
+      "purpose": "Use only existing baseline trades, cached quote days, macro/VIX labels, and existing gamma artifacts to estimate how many additional gamma-valid dates could intersect Sub-System A trades without new paid data.",
+      "network_allowed": false,
+      "paid_data_allowed": false,
+      "verification": "Write a scan summary with candidate dates, expected trade overlap, train/OOS split, volatility buckets, macro/no-macro counts, and explicit zero-paid-data guardrails."
+    },
+    {
+      "step_id": "h_g1_24_b",
+      "name": "mintrl_psr_feasibility_gate",
+      "purpose": "Before any data purchase, state the Sharpe null threshold, expected return series granularity, and the conditions under which MinTRL and PSR can be computed after the expanded sample exists.",
+      "network_allowed": false,
+      "paid_data_allowed": false,
+      "verification": "The gate must mark the plan blocked if expected active trades remain too small to estimate skewness, kurtosis, first-order autocorrelation, or a meaningful Sharpe distribution."
+    },
+    {
+      "step_id": "h_g1_24_c",
+      "name": "targeted_cost_gate_only_if_overlap_scan_passes",
+      "purpose": "Estimate cost only for named dates and named fields needed to clear the overlap/regime gap; never buy broad calendar data from this plan alone.",
+      "network_allowed": true,
+      "paid_data_allowed": false,
+      "verification": "A metadata-only cost estimate must pass the active cost guard before any download, and user approval is required if a new provider is introduced or projected cost exceeds the guard."
+    },
+    {
+      "step_id": "h_g1_24_d",
+      "name": "new_preregistered_ablation_only_after_data_validity",
+      "purpose": "If sample expansion later passes coverage and cost gates, create a new preregistered ablation rather than reusing H-G1.22.",
+      "network_allowed": false,
+      "paid_data_allowed": false,
+      "verification": "The new ablation must lock variants, chronological split, search log/DSR policy, MinTRL/PSR reporting, implementable PnL, and big-day dependency before reviewing strategy PnL."
+    }
+  ],
+  "minimum_evidence_requirements": {
+    "sample_size_rule": "No fixed N is accepted as universal. The expanded sample must compute MinTRL/PSR from the observed return distribution, including sample length, skewness, kurtosis, and first-order autocorrelation where estimable.",
+    "pre_purchase_warning_floor": "If the no-paid overlap scan cannot plausibly produce enough observations for Sharpe inference, the plan must remain blocked instead of buying more data.",
+    "required_regime_coverage": [
+      "chronological train and OOS split",
+      "low, normal, and high volatility buckets where data exists",
+      "macro and no-macro days",
+      "stress or high-volatility subperiods when available",
+      "trend or momentum regime labels when already available without lookahead",
+      "gamma/liquidity regime buckets only when the signed-OI gamma proxy passes timestamp and coverage gates"
+    ],
+    "required_reporting": [
+      "active trade count before and after every gamma filter",
+      "MinTRL and PSR or explicit blockers",
+      "DSR or explicit no-best-Sharpe-selection reason",
+      "mid PnL and implementable PnL with cost drag",
+      "big-day dependency check",
+      "benchmark comparison against baseline_quant_only",
+      "under-sampled and underpowered labels whenever sample length is below MinTRL or inference inputs are not estimable"
+    ]
+  },
+  "cost_policy": {
+    "current_cost_guard_used_usd": 119.989706,
+    "stop_threshold_usd": 125.0,
+    "remaining_before_stop_usd": 5.010294,
+    "broad_calendar_buying_allowed": false,
+    "new_provider_requires_user_approval": true,
+    "metadata_cost_check_required_before_download": true,
+    "paid_download_allowed_by_this_artifact": false,
+    "cap_extension_policy": "Cap extension is allowed only by real payment on the existing Databento account. Multi-account signup-credit harvesting is prohibited."
+  },
+  "forbidden_actions": [
+    "Do not use H-G1 as a trading filter from this plan.",
+    "Do not approve paper trading from this plan.",
+    "Do not buy paid data from this plan alone.",
+    "Do not claim true market-maker net gamma or dealer net gamma from the signed-OI gamma proxy.",
+    "Do not add new gamma strategy variants or tune OOS before a new preregistered ablation.",
+    "Do not buy broad calendar data; every future pull must name the inference gap, dates, fields, expected overlap, regime gap, and cost guard."
+  ],
+  "references": [
+    "wiki/concepts/minimum-track-record-length.md",
+    "wiki/concepts/probabilistic-sharpe-ratio.md",
+    "wiki/concepts/deflated-sharpe-ratio.md",
+    "wiki/concepts/regime-filtering-for-zero-dte.md",
+    "wiki/concepts/market-maker-net-gamma.md"
+  ],
+  "tier_blockers": [
+    "E0 plan only",
+    "no new data requested",
+    "no strategy PnL reviewed",
+    "no MinTRL/PSR computed for an expanded sample yet",
+    "no paid cost gate passed for new H-G1 data",
+    "H-G1 remains parked"
+  ]
+}

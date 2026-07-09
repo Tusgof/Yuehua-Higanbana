@@ -1,0 +1,48 @@
+{
+  "candidate_policy": {
+    "name": "v2.1_review_candidate_not_adopted",
+    "notional_floor": 0.8,
+    "rationale": "H-G1 signal is exposure-weighted; row-rate alone can overweight low-notional rows, but notional coverage cannot excuse a material uncovered bucket.",
+    "row_rate_floor_treatment": "warning_not_primary_pass_gate"
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "decision": {
+    "forbidden_actions": [
+      "Do not claim H-G1 coverage pass.",
+      "Do not use NOVI/net-gamma as a strategy filter.",
+      "Do not buy replacement OI before a v3 manifest validates.",
+      "Do not edit policy v2 to make the current 10-date set pass silently."
+    ],
+    "recommended_next_step": "Draft policy v2.1 as a review artifact and create a manifest v3 replacement plan for the below-floor bucket before any new paid OI pull.",
+    "status": "policy_revision_alone_rejected_manifest_v3_required",
+    "why": "Four failures look like row-rate policy strictness, but 2023-07-12 otm_put keeps only 0.662545 computed OI-notional coverage; relaxing the policy alone would hide a material uncovered bucket."
+  },
+  "evidence_tier": "E1",
+  "findings": {
+    "all_failures_are_black_scholes_bracket_blocks": true,
+    "below_notional_floor_buckets": [
+      "2023-07-12 otm_put"
+    ],
+    "below_notional_floor_count": 1,
+    "failed_bucket_count": 5,
+    "high_notional_row_rate_failure_buckets": [
+      "2023-08-09 otm_call",
+      "2024-01-03 otm_put",
+      "2024-05-21 otm_call",
+      "2024-12-18 otm_call"
+    ],
+    "high_notional_row_rate_failure_count": 4
+  },
+  "hypothesis_id": "H-G1",
+  "network_used": false,
+  "paid_data_used": false,
+  "record_type": "h_g1_policy_manifest_decision",
+  "schema_version": "h_g1_policy_manifest_decision_v1",
+  "source_diagnostic": "reports\\diagnostics\\h_g1_bucket_failure_diagnostic.json",
+  "tier_blockers": [
+    "E1 diagnostic decision only",
+    "H-G1 remains coverage-blocked",
+    "No strategy-return MinTRL/PSR evidence",
+    "No true dealer-side gamma inventory data"
+  ]
+}

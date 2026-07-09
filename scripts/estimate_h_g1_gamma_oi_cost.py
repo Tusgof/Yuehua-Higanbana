@@ -18,7 +18,7 @@ DEFAULT_SCHEMA = "statistics"
 DEFAULT_SYMBOL = "SPY.OPT"
 DEFAULT_STYPE_IN = "parent"
 DEFAULT_API_KEY_ENV = "DATABENTO_API_KEY"
-DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API",)
+DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
 
 
 @dataclass(frozen=True)
@@ -146,6 +146,7 @@ def build_result(
     return {
         "schema_version": "h_g1_gamma_oi_cost_estimate_v1",
         "hypothesis_id": manifest.get("hypothesis_id"),
+        "scenario": _scenario_for_manifest(manifest),
         "mode": "dry_run_no_download" if cost_result is None else cost_result.get("mode"),
         "download_performed": False,
         "manifest_schema_version": manifest.get("schema_version"),
@@ -160,6 +161,12 @@ def build_result(
     }
 
 
+def _scenario_for_manifest(manifest: dict[str, Any]) -> str:
+    if manifest.get("schema_version") == "h_g1_gamma_regime_date_set_preregistration_v3":
+        return "h_g1_gamma_oi_v3_replacement"
+    return "h_g1_gamma_oi_12_date"
+
+
 def render_markdown(result: dict[str, Any]) -> str:
     decision = result["decision"]
     cost_guard = result["cost_guard"]
@@ -169,6 +176,7 @@ def render_markdown(result: dict[str, Any]) -> str:
         "# H-G1 Gamma/OI Cost Gate",
         "",
         f"- **Hypothesis**: `{result.get('hypothesis_id')}`",
+        f"- **Scenario**: `{result.get('scenario')}`",
         f"- **Mode**: `{result.get('mode')}`",
         f"- **Download performed**: `{result.get('download_performed')}`",
         f"- **Missing OI dates estimated**: {result.get('missing_oi_date_count')}",

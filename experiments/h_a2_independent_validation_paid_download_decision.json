@@ -1,0 +1,133 @@
+{
+  "schema_version": "h_a2_independent_validation_paid_download_decision_v1",
+  "artifact_type": "download_decision",
+  "hypothesis_id": "H-A2",
+  "evidence_tier": "E0",
+  "status": "decision_complete",
+  "decision": "approve_sample_cost_probe_high_vix_one_day_download_after_paid_cost_audit_pass",
+  "conclusion": "ยังสรุปไม่ได้",
+  "created_date": "2026-07-06",
+  "purpose": "Convert the H-A2.38 metadata-only Databento cost estimate into a tightly scoped one-day paid download decision for independent validation data, without changing the locked H-A2 signal or making an edge claim.",
+  "source_preregistration": "experiments/h_a2_independent_validation_paid_cost_plan_preregistration.json",
+  "source_metadata_estimate": "reports/data_cost/h_a2_independent_validation_paid_cost_estimate.json",
+  "source_paid_cost_audit": "reports/data_cost/paid_cost_audit.json",
+  "selected_batch": {
+    "batch_id": "sample_cost_probe_high_vix_one_day",
+    "dates": [
+      "2025-04-08"
+    ],
+    "role": "one-day high-VIX independent validation sample before any larger pack",
+    "vix_context": {
+      "bucket": "vix_above_25",
+      "vix_close": 52.33
+    }
+  },
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false,
+    "delayed_entry_component_allowed": false
+  },
+  "approved_download_scope": {
+    "provider": "Databento",
+    "symbol_scope": "SPY only",
+    "request_count": 15,
+    "datasets": [
+      "OPRA.PILLAR",
+      "EQUS.MINI"
+    ],
+    "schemas": [
+      "cbbo-1m",
+      "ohlcv-1m"
+    ],
+    "date": "2025-04-08",
+    "option_symbol": "SPY.OPT",
+    "underlying_symbol": "SPY",
+    "windows": [
+      "09:30-09:40 ET option entry quote window",
+      "10:00 ET through 15:45 ET option exit/check windows",
+      "09:30-16:00 ET SPY underlying regular session"
+    ],
+    "download_result_path": "reports/data_cost/databento_download_result_h_a2_independent_validation_2025_04_08.json",
+    "raw_output_root": "data/raw/spy_0dte/databento/h_a2_independent_validation_2025_04_08"
+  },
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "current_used_usd": 119.989706,
+    "stop_threshold_usd": 125.0,
+    "remaining_before_stop_usd": 5.010294,
+    "estimated_download_cost_usd": 0.504662,
+    "projected_used_after_download_usd": 120.494368,
+    "projected_remaining_after_download_usd": 4.505632,
+    "decision": "pass"
+  },
+  "pre_download_requirements": [
+    "Run python scripts/audit_paid_costs.py after this decision artifact is created and before any download.",
+    "Proceed only if the latest paid-cost audit status is pass.",
+    "Proceed only if projected_used_after_download_usd remains below the active stop_threshold_usd.",
+    "Use only the 15 requests already costed in reports/data_cost/h_a2_independent_validation_paid_cost_estimate.json.",
+    "Reuse any local cache if present and record cache reuse in the download result."
+  ],
+  "allowed_actions": [
+    "Download only the approved Databento requests for sample_cost_probe_high_vix_one_day on 2025-04-08 after paid-cost audit passes.",
+    "Write a download result JSON/Markdown report under reports/data_cost.",
+    "Rerun paid-cost audit after download and treat the downloaded estimate as committed cost until provider actual usage is supplied.",
+    "After download, create a separate import/normalization/diagnostic step before any H-A2 validation claim."
+  ],
+  "forbidden_actions": [
+    "Do not download any date other than 2025-04-08 under this decision.",
+    "Do not estimate or download the broad 2025 calendar under this decision.",
+    "Do not download high_vix_validation_pack, low_normal_vix_control_pack, or post_stress_normalization_control_pack under this decision.",
+    "Do not introduce a new paid provider.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter.",
+    "Do not reuse original 09:35 PnL as delayed-entry PnL.",
+    "Do not run exact replay directly from this decision.",
+    "Do not request IBKR bars.",
+    "Do not call LLMs.",
+    "Do not retry GDELT.",
+    "Do not approve paper trading, operational validation, real-money trading, or E2 evidence from this decision."
+  ],
+  "guardrails": {
+    "network_allowed_for_download_after_paid_cost_audit_pass": true,
+    "paid_data_allowed_after_paid_cost_audit_pass": true,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_allowed": false,
+    "threshold_search_allowed": false,
+    "new_filter_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "paid_data_downloaded_by_this_decision": false,
+    "research_log_required_for_this_decision": false
+  },
+  "completion_criteria": [
+    "The decision cites the H-A2.37 preregistration and H-A2.38 live metadata estimate.",
+    "The decision selects only sample_cost_probe_high_vix_one_day for 2025-04-08.",
+    "The decision preserves the 09:35-only signal and threshold 0.001.",
+    "The decision caps scope to the 15 metadata-costed requests.",
+    "The decision confirms projected usage remains below $125.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 download decision only",
+    "No paid download has been performed by this artifact",
+    "No independent validation PnL days added yet",
+    "No import or normalization result yet",
+    "No MinTRL/PSR acceptance path proven",
+    "No E2 acceptance claim"
+  ]
+}

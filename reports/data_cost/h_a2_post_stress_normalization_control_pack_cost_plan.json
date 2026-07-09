@@ -1,0 +1,2368 @@
+{
+  "batch": {
+    "batch_id": "post_stress_normalization_control_pack",
+    "dates": [
+      "2025-05-05",
+      "2025-05-06",
+      "2025-05-07",
+      "2025-05-08",
+      "2025-05-09",
+      "2025-05-12",
+      "2025-05-13",
+      "2025-05-14",
+      "2025-05-15",
+      "2025-05-16"
+    ],
+    "download_allowed_by_this_artifact": false,
+    "estimate_only_next": true,
+    "expected_trading_days_from_local_vix": 10,
+    "macro_context": {
+      "high_importance_macro_days_from_local_calendar": 0
+    },
+    "period_end": "2025-05-16",
+    "period_start": "2025-05-05",
+    "priority": 1,
+    "role": "second normal/control validation metadata estimate after H-A2.49",
+    "vix_context": {
+      "bucket": "vix_15_to_25",
+      "observed_vix_close_range": [
+        17.24,
+        24.76
+      ],
+      "observed_vxv_close_range": [
+        20.08,
+        25.41
+      ]
+    }
+  },
+  "batch_id": "post_stress_normalization_control_pack",
+  "batch_role": "second normal/control validation metadata estimate after H-A2.49",
+  "cost_guard": {
+    "active_guard_for_selected_key": "mo_ai_pool",
+    "basis": "user_reported_actual_usage",
+    "remaining_before_stop_usd": 4.505632,
+    "status": "pass",
+    "stop_threshold_usd": 125.0,
+    "used_usd": 120.494368
+  },
+  "cost_result": null,
+  "decision": {
+    "blockers": [
+      "requires_live_metadata_cost"
+    ],
+    "download_allowed_under_current_guard": false,
+    "reason": "Dry-run only; run with --live before any H-A2 independent-validation download decision.",
+    "separate_download_decision_required": true,
+    "status": "blocked"
+  },
+  "download_performed": false,
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_post_exact_replay_sample_expansion_decision",
+  "forbidden_next_actions": [
+    "paid_download_without_separate_decision_artifact",
+    "broad_2025_calendar_estimate",
+    "new_paid_provider",
+    "threshold_search",
+    "new_oos_selected_filter",
+    "exact_replay",
+    "paper_trading_or_e2_claim"
+  ],
+  "hypothesis_id": "H-A2",
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "delayed_entry_component_allowed": false,
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "fifteen_minute_conflict_component_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "oos_tuning_allowed": false,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false
+  },
+  "mode": "dry_run_no_download",
+  "planned_request_count": 150,
+  "planned_requests": [
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-05",
+      "end": "2025-05-05T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-05T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-05_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-05",
+      "end": "2025-05-05T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-05T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-05_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-06",
+      "end": "2025-05-06T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-06T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-06_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-06",
+      "end": "2025-05-06T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-06T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-06_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-07",
+      "end": "2025-05-07T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-07T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-07_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-07",
+      "end": "2025-05-07T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-07T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-07_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-08",
+      "end": "2025-05-08T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-08T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-08_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-08",
+      "end": "2025-05-08T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-08T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-08_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-09",
+      "end": "2025-05-09T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-09T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-09_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-09",
+      "end": "2025-05-09T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-09T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-09_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-12",
+      "end": "2025-05-12T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-12T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-12_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-12",
+      "end": "2025-05-12T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-12T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-12_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-13",
+      "end": "2025-05-13T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-13T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-13_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-13",
+      "end": "2025-05-13T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-13T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-13_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-14",
+      "end": "2025-05-14T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-14T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-14_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-14",
+      "end": "2025-05-14T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-14T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-14_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-15",
+      "end": "2025-05-15T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-15T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-15_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-15",
+      "end": "2025-05-15T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-15T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-15_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_entry_0935"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_entry_check_1000"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1030"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1100"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1130"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1200"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1230"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1300"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1330"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1400"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1430"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1500"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_exit_check_1530"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-05-16",
+      "end": "2025-05-16T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-05-16T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-05-16_forced_close_1545"
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-05-16",
+      "end": "2025-05-16T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-05-16T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-05-16_spy_underlying_full_session"
+    }
+  ],
+  "preregistration_validation": {
+    "blockers": [],
+    "candidate_batch_count": 1,
+    "decision_path": "experiments\\h_a2_post_exact_replay_sample_expansion_decision.json",
+    "evidence_tier": "E0",
+    "exact_replay_allowed": false,
+    "experiment_id": "h_a2_post_exact_replay_sample_expansion_decision",
+    "first_batch_expected_trading_days": 10,
+    "first_batch_id": "post_stress_normalization_control_pack",
+    "hypothesis_id": "H-A2",
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "paper_trading_allowed": false,
+    "selected_key_env_for_next_metadata_estimate": "DATABENTO_API_AI",
+    "selected_next_step": "metadata_estimate_post_stress_normalization_control_pack",
+    "status": "pass"
+  },
+  "projected_selected_key_usage_if_downloaded_usd": null,
+  "projected_usage_if_downloaded_usd": null,
+  "schema_version": "h_a2_independent_validation_cost_estimate_v1",
+  "selected_key_env_for_metadata_estimate": "DATABENTO_API_AI",
+  "selected_key_policy": {
+    "active_guard": "mo_ai_pool",
+    "key_value_stored": false,
+    "mo_ai_combined_pool_cap_usd": 200.0,
+    "selected_key_cap_usd": 100.0,
+    "selected_key_env": "DATABENTO_API_AI"
+  }
+}

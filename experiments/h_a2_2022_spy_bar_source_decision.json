@@ -1,0 +1,104 @@
+{
+  "schema_version": "h_a2_2022_spy_bar_source_decision_v1",
+  "created_date": "2026-07-04",
+  "hypothesis_id": "H-A2",
+  "evidence_tier": "E0",
+  "status": "decision_complete",
+  "problem": "H-A2 2022-10 stress option quotes are downloaded and normalized, but ORB/backtest rerun is blocked because Databento EQUS.MINI cannot supply 2022 SPY 1-minute underlying bars.",
+  "blocking_evidence": "reports/data_cost/databento_spy_bars_plan_h_a2_2022_10_unavailable.json",
+  "required_data": {
+    "symbol": "SPY",
+    "bar_size": "1 minute",
+    "fields": ["timestamp", "open", "high", "low", "close", "volume"],
+    "minimum_window": "2022-10-03 through 2022-10-31 regular trading hours",
+    "timestamp_requirement": "exchange-time or UTC timestamps convertible to ET without lookahead"
+  },
+  "local_cache_result": {
+    "status": "missing",
+    "notes": "Local normalized/raw SPY bars currently cover Databento 2023-03-28 onward and 2024 extensions; no 2022-10 SPY 1-minute bars were found."
+  },
+  "selected_next_action": "run_no_paid_ibkr_data_only_probe_if_local_ibkr_setup_is_available",
+  "selected_reason": [
+    "User already has an IBKR account, and PROJECT_BRAIN.md allows IBKR data-only use if it is the best data source while order transmission remains blocked.",
+    "IBKR official historical-data limitations indicate 1-minute-and-greater bar hard limits have been lifted, but pacing and slow-loading constraints remain.",
+    "This probe spends no Databento headroom and does not introduce a new paid provider."
+  ],
+  "fallback_order": [
+    {
+      "rank": 1,
+      "provider": "IBKR TWS API",
+      "action": "data-only historical bars probe for SPY 2022-10",
+      "cost_status": "no new provider purchase if account/data permissions already exist",
+      "approval_required_before_execute": false,
+      "acceptance_use": "candidate source if timestamps, coverage, and volume fields validate",
+      "blockers": ["requires_local_tws_or_gateway_session", "requires_market_data_permission_if_not_enabled", "requires_paced_requests"]
+    },
+    {
+      "rank": 2,
+      "provider": "Alpaca Market Data",
+      "action": "free-plan historical aggregate-bars probe",
+      "cost_status": "$0/mo plan advertised, but new account/API credentials may be required",
+      "approval_required_before_execute": true,
+      "acceptance_use": "candidate source only after provenance, coverage, and license notes are recorded",
+      "blockers": ["new_external_account_or_api_key", "must_confirm_terms_and_data_quality"]
+    },
+    {
+      "rank": 3,
+      "provider": "FirstRate Data",
+      "action": "one-off SPY intraday CSV purchase or sample inspection",
+      "cost_status": "paid new provider",
+      "approval_required_before_execute": true,
+      "acceptance_use": "likely clean CSV source if sample/schema and license pass",
+      "blockers": ["new_paid_provider", "price_must_be_confirmed_before_purchase", "current_databento_headroom_is_only_5_010294"]
+    },
+    {
+      "rank": 4,
+      "provider": "Alpha Vantage Premium",
+      "action": "premium historical intraday API probe",
+      "cost_status": "paid new provider, official listed entry plan 49.99/month",
+      "approval_required_before_execute": true,
+      "acceptance_use": "candidate only if it can return 2022-10 1-minute SPY bars and license fits",
+      "blockers": ["new_paid_provider", "monthly_subscription", "must_confirm_2022_intraday_access"]
+    },
+    {
+      "rank": 5,
+      "provider": "Massive/Polygon-style stock aggregates",
+      "action": "historical aggregates API probe",
+      "cost_status": "paid new provider for historical intraday access",
+      "approval_required_before_execute": true,
+      "acceptance_use": "candidate only if cost and license are approved",
+      "blockers": ["new_paid_provider", "monthly_subscription"]
+    },
+    {
+      "rank": 6,
+      "provider": "Tiingo IEX",
+      "action": "IEX intraday bars probe",
+      "cost_status": "low-cost or existing subscription dependent",
+      "approval_required_before_execute": true,
+      "acceptance_use": "diagnostic only unless IEX-only bars are explicitly accepted as a proxy; not preferred for acceptance-grade ORB against OPRA quotes",
+      "blockers": ["single_exchange_not_consolidated_market", "new_provider_or_credentials"]
+    }
+  ],
+  "forbidden_actions": [
+    "Do not buy 2022-09 option data while 2022 underlying bars are the active H-A2 blocker.",
+    "Do not use Databento EQUS.MINI again for 2022-10 unless provider availability changes.",
+    "Do not buy a new paid provider without explicit user approval.",
+    "Do not transmit orders or enable broker execution while using IBKR as a data-only source.",
+    "Do not treat IEX-only bars as acceptance-grade consolidated SPY bars without a separate proxy decision.",
+    "Do not rerun H-A2 stress diagnostics until 2022-10 SPY bars pass coverage and timestamp validation."
+  ],
+  "source_urls_checked": [
+    "https://interactivebrokers.github.io/tws-api/historical_limitations.html",
+    "https://www.interactivebrokers.com/campus/ibkr-quant-news/retrieving-historical-data-from-ibkr/",
+    "https://alpaca.markets/data",
+    "https://firstratedata.com/i/etf/SPY",
+    "https://www.alphavantage.co/documentation/",
+    "https://www.alphavantage.co/premium/",
+    "https://massive.com/docs/rest/stocks/overview",
+    "https://www.tiingo.com/documentation/iex"
+  ],
+  "research_log_required": false,
+  "paper_trading_allowed": false,
+  "live_trading_allowed": false,
+  "paid_data_allowed_by_this_decision": false
+}

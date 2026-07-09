@@ -1,0 +1,240 @@
+{
+  "allowed_claims": [
+    "H-A2 independent validation requirements are now defined as E1 diagnostic evidence.",
+    "No-paid sources can support gap planning but cannot validate the edge without new implementable PnL days."
+  ],
+  "broker_request_used": false,
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "No-paid sources can define the validation gap and regime requirements, but they cannot add independent implementable SPY 0DTE PnL days. H-A2 remains active but validation requires a separate no-paid gap report or a future paid-cost estimate plan after cost-guard review.",
+  "coverage_context": {
+    "macro_calendar_status": "pass",
+    "paid_cost_status": "pass",
+    "strategy_data_status": "blocked",
+    "vix_vxv_status": "pass"
+  },
+  "current_gap_inventory": {
+    "claim_upgrade_blockers": [
+      "retained_oos_trade_days_below_independent_validation_need",
+      "high_vix_retained_bucket_missing",
+      "mintrl_psr_not_computed_for_acceptance",
+      "independent_validation_data_not_defined_yet"
+    ],
+    "current_candidate_days": 93,
+    "current_oos_closed_trades": 49,
+    "current_total_closed_trades": 90,
+    "mintrl_psr_status": {
+      "mintrl_status": "pending_experiment_return_distribution",
+      "power_status": "underpowered",
+      "psr_status": "pending_experiment_return_distribution"
+    },
+    "missing_regime_buckets": [
+      "vix_above_25"
+    ],
+    "retained_oos_trade_days": 14,
+    "sample_adequacy": {
+      "actual_closed_trades": 90,
+      "evidence_labels": [
+        "under-sampled",
+        "underpowered"
+      ],
+      "mintrl_required_observations": null,
+      "mintrl_status": "pending_experiment_return_distribution",
+      "note": "Closed-trade count is below the rough prior floor. Treat any Sharpe or PnL result from this coverage as diagnostic only until wider data or computed MinTRL/PSR evidence supports it.",
+      "power_status": "underpowered",
+      "psr_status": "pending_experiment_return_distribution",
+      "rough_minimum_trade_count": 500,
+      "trade_count_floor_met": false
+    },
+    "status": "complete"
+  },
+  "evidence_tier": "E1",
+  "exact_replay_used": false,
+  "experiment_id": "h_a2_independent_validation_feasibility",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not run exact replay from this diagnostic.",
+    "Do not buy paid data from this diagnostic.",
+    "Do not call live Databento estimates from this diagnostic.",
+    "Do not request IBKR bars from this diagnostic.",
+    "Do not call LLMs from this diagnostic.",
+    "Do not retry GDELT from this diagnostic.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter."
+  ],
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:41:21Z",
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "live_cost_estimate_used": false,
+  "llm_call_used": false,
+  "methodology": {
+    "candidate_decision_time_et": "09:35:00",
+    "chronological_split_required": true,
+    "delayed_entry_component_used": false,
+    "fifteen_minute_conflict_component_used": false,
+    "local_artifacts_only": true,
+    "locked_threshold": 0.001,
+    "new_oos_selected_filter_used": false,
+    "oos_tuning_used": false,
+    "random_split_used": false,
+    "threshold_search_used": false,
+    "used_features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ]
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_action_selection": {
+    "allowed_next_action": "Run a no-paid validation gap report or wait for real top-up before any live estimate or paid acquisition plan.",
+    "decision": "pause_paid_path_run_no_paid_gap_report_or_wait_for_topup",
+    "evidence_tier_cap": "E1",
+    "forbidden_next_actions": [
+      "No paid data download.",
+      "No live Databento estimate from this run.",
+      "No IBKR historical request.",
+      "No exact replay.",
+      "No LLM call.",
+      "No GDELT retry.",
+      "No paper trading.",
+      "No E2 claim."
+    ],
+    "research_log_requirement": "research_log/033-higanbana-h-a2-independent-validation-feasibility.md",
+    "status": "complete"
+  },
+  "next_safe_action": "Run a no-paid validation gap report or wait for real top-up before any live estimate or paid acquisition plan.",
+  "no_paid_source_inventory": {
+    "free_source_inventory": [
+      {
+        "adds_option_trade_pnl": false,
+        "source": "Cboe VIX/VIX3M history and official macro calendar",
+        "usable_for": "regime labels only"
+      },
+      {
+        "adds_option_trade_pnl": false,
+        "source": "IBKR historical bars",
+        "status": "externally_blocked_local_api_unavailable",
+        "usable_for": "possible SPY underlying bars only after local TWS/Gateway is available"
+      }
+    ],
+    "local_source_inventory": [
+      {
+        "adds_independent_trade_days": false,
+        "source": "reports/strategy_data_readiness_audit.json",
+        "usable_for": "current trade count and split inventory"
+      },
+      {
+        "adds_independent_trade_days": false,
+        "source": "reports/macro_calendar_coverage_audit.json",
+        "usable_for": "macro-event regime labels through 2026"
+      },
+      {
+        "adds_independent_trade_days": false,
+        "source": "reports/vix_vxv_coverage_audit.json",
+        "usable_for": "volatility-regime labels through 2026-06-29"
+      },
+      {
+        "adds_independent_trade_days": false,
+        "source": "reports/data_cost/databento_cost_oos_2024_q4_completion_intraday_exit_30m_dryrun.json",
+        "usable_for": "already-written request map for later cost planning"
+      }
+    ],
+    "no_paid_feasibility_status": "no_paid_can_plan_but_cannot_validate_edge",
+    "status": "complete",
+    "unusable_no_paid_dates": [
+      "No currently identified no-paid source adds independent SPY 0DTE option quote/fill PnL days.",
+      "Existing local sources can support regime planning and gap inventory but not new independent implementable PnL."
+    ],
+    "usable_no_paid_dates": []
+  },
+  "operational_validation_allowed": false,
+  "paid_data_decision_tree": {
+    "candidate_provider_scope": {
+      "avoid": "broad calendar buying without MinTRL/regime rationale",
+      "existing_dryrun_request_count": 980,
+      "existing_dryrun_review_cost_usd": 5.0,
+      "preferred_scope": "SPY only, narrow validation windows, month-by-month or regime-targeted batches"
+    },
+    "cost_guard_preconditions": {
+      "current_remaining_before_stop_usd": 4.505632,
+      "live_cost_estimate_allowed_by_this_run": false,
+      "paid_download_allowed_by_this_run": false,
+      "requires_new_preregistration_before_cost_or_download": true
+    },
+    "minimum_required_fields": [
+      "SPY 0DTE option bid/ask around 09:35 ET",
+      "SPY 0DTE option bid/ask at exit or defined intraday exit checks",
+      "SPY underlying bars sufficient for 09:35 signal reconstruction",
+      "VIX/VIX3M and macro-event labels for every candidate day"
+    ],
+    "named_hypothesis_gap": "H-A2 retained original-entry signal lacks independent validation sample and high-VIX retained coverage.",
+    "purchase_forbidden_until": [
+      "A separate paid-cost estimate plan names exact periods, fields, and regime gaps.",
+      "The active cost guard has enough headroom or the user tops up by real payment on the existing Databento account.",
+      "A live estimate passes the project cost guard before any download."
+    ],
+    "status": "complete"
+  },
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-independent-validation-feasibility",
+  "schema_version": "h_a2_independent_validation_feasibility_v1",
+  "source_preregistration": "experiments\\h_a2_independent_validation_feasibility_preregistration.json",
+  "source_summary": "reports\\experiments\\h_a2_original_entry_robustness_prioritization_summary.json",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "E1 diagnostic feasibility evidence only",
+    "No independent validation PnL days added",
+    "No high-VIX retained validation coverage yet",
+    "MinTRL/PSR acceptance path remains unproven",
+    "No paid data or live cost estimate used",
+    "No exact replay",
+    "No E2 acceptance claim"
+  ],
+  "trial_policy": {
+    "dsr_status": "not_recomputed_no_parameter_search",
+    "new_filter_search_used": false,
+    "oos_tuning_used": false,
+    "search_log": "reports\\diagnostics\\search_logs\\h_a2_independent_validation_feasibility_search_log.jsonl",
+    "threshold_search_used": false,
+    "trial_count": 0
+  },
+  "validation_target_definition": {
+    "chronological_embargo_rule": "Do not use current OOS diagnostics to tune new filters; future validation must be chronologically later or separately justified and pre-registered.",
+    "high_vix_requirement": "Validation plan must either include retained high-VIX trade opportunities or explicitly scope H-A2 away from high-VIX conditions before testing.",
+    "required_regime_buckets": [
+      "vix_below_15",
+      "vix_15_to_25",
+      "vix_above_25",
+      "scheduled_macro",
+      "non_macro"
+    ],
+    "required_trade_count_or_mintrl_method": "Compute MinTRL from the future validation return distribution; until then retain under-sampled/underpowered labels.",
+    "status": "complete",
+    "validation_period_candidates": [
+      {
+        "period": "future_or_unseen_oos_after_current_2024_12_31",
+        "reason": "Separates validation from the current H-A2.32/H-A2.34 OOS evidence already inspected.",
+        "role": "preferred_independent_validation"
+      },
+      {
+        "period": "reference_pre_break_2019_01_01_to_2022_05_10",
+        "reason": "Useful for regime context, but 0DTE structure and data availability may differ before the post-2022 regime.",
+        "role": "structural-break context only unless exact option data is available"
+      },
+      {
+        "period": "targeted_high_vix_windows_not_used_in_threshold_selection",
+        "reason": "H-A2.34 has no retained high-VIX bucket, so any validation plan must explicitly cover high-VIX or state a scoped hypothesis.",
+        "role": "missing-regime validation"
+      }
+    ]
+  }
+}

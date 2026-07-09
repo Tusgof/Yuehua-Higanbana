@@ -1,0 +1,275 @@
+{
+  "schema_version": "h_a2_normal_control_sample_decision_v1",
+  "artifact_type": "decision_preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_normal_control_sample_decision",
+  "title": "H-A2 normal/control independent-validation sample decision",
+  "created_date": "2026-07-06",
+  "purpose": "Supersede the prior high-VIX-first validation sequence and pre-register normal/control validation samples before any additional Databento pull, exact replay, paper trading, or E2 claim.",
+  "source_decisions": [
+    "reports/diagnostics/h_a2_independent_validation_import_diagnostic.json",
+    "experiments/h_a2_independent_validation_paid_cost_plan_preregistration.json",
+    "reports/data_cost/paid_cost_audit.json"
+  ],
+  "user_decision_record": {
+    "date": "2026-07-06",
+    "decision": "normal_control_samples_next",
+    "reason": "The first independent-validation high-VIX sample was useful availability evidence but produced no candidate trade. The next sample must test whether H-A2's apparent edge is specific to normal/control regimes instead of collecting more stress-regime evidence."
+  },
+  "supersedes_sequence": {
+    "artifact": "experiments/h_a2_independent_validation_paid_cost_plan_preregistration.json",
+    "old_first_batch": "sample_cost_probe_high_vix_one_day",
+    "new_first_batch": "low_normal_vix_control_pack",
+    "high_vix_path_status": "paused_until_normal_control_evidence_exists",
+    "reason": "High-VIX coverage is still a validation gap, but the immediate question is whether the locked H-A2 signal has independent behavior in normal/control regimes."
+  },
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false,
+    "delayed_entry_component_allowed": false
+  },
+  "sample_policy": {
+    "primary_question": "Does the locked 09:35 H-A2 rule still produce candidate trades and implementable validation evidence in normal/control regimes?",
+    "normal_control_definition": {
+      "prior_vix_close_max": 25.0,
+      "high_importance_macro_required": false,
+      "source_vix_path": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+      "source_macro_path": "data/normalized/spy_0dte/macro_calendar/macro_event.jsonl"
+    },
+    "selection_method": "Use local VIX/VXV and macro labels only. Do not inspect or tune future option PnL before selecting the sample.",
+    "market_regime_note": "This is a control sample, not acceptance evidence. It tests whether stress-only collection is misleading and whether a normal-regime exact replay path is worth funding."
+  },
+  "selected_key_env_for_next_metadata_estimate": "DATABENTO_API_MO",
+  "budget_policy_snapshot": {
+    "legacy_guard_used_usd": 120.494368,
+    "legacy_stop_threshold_usd": 125.0,
+    "legacy_remaining_before_stop_usd": 4.505632,
+    "mo_ai_combined_pool_cap_usd": 200.0,
+    "selected_key_cap_usd": 100.0,
+    "selected_key_env_logged_without_value": true,
+    "download_requires_separate_decision": true
+  },
+  "candidate_estimate_batches": [
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "priority": 1,
+      "role": "first normal/control independent-validation metadata estimate",
+      "period_start": "2025-02-03",
+      "period_end": "2025-02-14",
+      "dates": [
+        "2025-02-03",
+        "2025-02-04",
+        "2025-02-05",
+        "2025-02-06",
+        "2025-02-07",
+        "2025-02-10",
+        "2025-02-11",
+        "2025-02-12",
+        "2025-02-13",
+        "2025-02-14"
+      ],
+      "expected_trading_days_from_local_vix": 10,
+      "vix_context": {
+        "bucket": "vix_below_25",
+        "observed_vix_close_range": [
+          14.77,
+          18.62
+        ],
+        "observed_vxv_close_range": [
+          17.81,
+          19.55
+        ]
+      },
+      "macro_context": {
+        "high_importance_macro_days_from_local_calendar": 0
+      },
+      "estimate_only_next": true,
+      "download_allowed_by_this_artifact": false
+    },
+    {
+      "batch_id": "post_stress_normalization_control_pack",
+      "priority": 2,
+      "role": "secondary normalizing-volatility control estimate after the first pack is understood",
+      "period_start": "2025-05-05",
+      "period_end": "2025-05-16",
+      "dates": [
+        "2025-05-05",
+        "2025-05-06",
+        "2025-05-07",
+        "2025-05-08",
+        "2025-05-09",
+        "2025-05-12",
+        "2025-05-13",
+        "2025-05-14",
+        "2025-05-15",
+        "2025-05-16"
+      ],
+      "expected_trading_days_from_local_vix": 10,
+      "vix_context": {
+        "bucket": "vix_15_to_25",
+        "observed_vix_close_range": [
+          17.24,
+          24.76
+        ],
+        "observed_vxv_close_range": [
+          20.08,
+          25.41
+        ]
+      },
+      "macro_context": {
+        "high_importance_macro_days_from_local_calendar": 0
+      },
+      "estimate_only_next": true,
+      "download_allowed_by_this_artifact": false
+    }
+  ],
+  "required_fields": [
+    {
+      "field_group": "option_entry_quote",
+      "dataset": "OPRA.PILLAR",
+      "schema": "cbbo-1m",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "windows_et": [
+        "09:30-09:40"
+      ],
+      "reason": "Reconstruct auditable 09:35 entry bid/ask and implementable entry price."
+    },
+    {
+      "field_group": "option_exit_quotes",
+      "dataset": "OPRA.PILLAR",
+      "schema": "cbbo-1m",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "windows_et": [
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00",
+        "12:30",
+        "13:00",
+        "13:30",
+        "14:00",
+        "14:30",
+        "15:00",
+        "15:30",
+        "15:45"
+      ],
+      "reason": "Keep implementable PnL, stop/target checks, and 15:45 forced-close handling comparable to existing H-A2 artifacts."
+    },
+    {
+      "field_group": "spy_underlying_bars",
+      "dataset": "EQUS.MINI",
+      "schema": "ohlcv-1m",
+      "symbols": [
+        "SPY"
+      ],
+      "windows_et": [
+        "09:30-16:00"
+      ],
+      "reason": "Reconstruct the 09:35 signal and verify underlying context for candidate days."
+    },
+    {
+      "field_group": "existing_regime_labels",
+      "dataset": "local",
+      "schema": "vix_vxv_and_macro_calendar",
+      "symbols": [
+        "SPY"
+      ],
+      "windows_et": [
+        "prior_close_and_same_day_labels"
+      ],
+      "reason": "Use already-local VIX/VXV and macro labels; do not buy news or LLM inputs for this H-A2 decision."
+    }
+  ],
+  "future_execution_sequence": {
+    "next_step": "Build or update the H-A2 independent-validation cost-estimate runner so the first metadata-only estimate targets low_normal_vix_control_pack using DATABENTO_API_MO.",
+    "estimate_scope": "metadata_only",
+    "estimate_batch_order": [
+      "low_normal_vix_control_pack",
+      "post_stress_normalization_control_pack"
+    ],
+    "download_forbidden_until": [
+      "The metadata-only estimate report exists for the selected batch.",
+      "The latest paid-cost audit passes.",
+      "Projected selected-key and MO/AI pool usage remain under cap.",
+      "A separate download decision artifact names the selected batch and confirms it still serves H-A2 normal/control validation without threshold changes."
+    ],
+    "do_not_do": [
+      "Do not download broad 2025 calendar data.",
+      "Do not resume high-VIX-first acquisition before normal/control estimate decision.",
+      "Do not change threshold 0.001.",
+      "Do not add an OOS-selected filter.",
+      "Do not run exact replay, paper trading, or E2 acceptance from this artifact."
+    ]
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "live_cost_estimate_allowed_by_this_artifact": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_allowed": false,
+    "threshold_search_allowed": false,
+    "new_filter_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "allowed_claims": [
+    "H-A2 normal/control independent-validation sample selection is pre-registered.",
+    "The prior high-VIX-first acquisition sequence is paused until normal/control evidence is planned.",
+    "The next allowed implementation step is a metadata-only cost estimate for low_normal_vix_control_pack, after validator and paid-cost audit pass.",
+    "The locked 09:35-only H-A2 signal and threshold 0.001 are preserved."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not download paid data from this artifact.",
+    "Do not call live Databento metadata estimates from this artifact itself.",
+    "Do not request IBKR bars from this artifact.",
+    "Do not call LLMs from this artifact.",
+    "Do not retry GDELT from this artifact.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter.",
+    "Do not treat sample-decision planning as validation evidence."
+  ],
+  "completion_criteria": [
+    "The decision names exact normal/control sample dates before any additional provider call.",
+    "The selected sample dates have local VIX below 25 and no high-importance macro day in the local macro calendar.",
+    "The decision records the selected Databento key env name without storing key value.",
+    "The decision preserves the locked 09:35-only signal and threshold 0.001.",
+    "The decision forbids paid download, exact replay, paper trading, and E2 claims.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 decision/preregistration only",
+    "No live metadata cost estimate yet",
+    "No paid data acquired",
+    "No normal/control PnL days added",
+    "No MinTRL/PSR acceptance path proven",
+    "No E2 acceptance claim"
+  ]
+}

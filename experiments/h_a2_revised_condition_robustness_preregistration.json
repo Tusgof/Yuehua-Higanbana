@@ -1,0 +1,193 @@
+{
+  "schema_version": "h_a2_revised_condition_robustness_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_revised_condition_robustness",
+  "title": "H-A2 revised condition robustness preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register a no-paid robustness audit for the H-A2.24 revised opening-followthrough condition before any additional local run, exact replay, data purchase, IBKR request, LLM call, paper trading, or E2 claim.",
+  "source_decision": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+  "source_decision_summary": "H-A2.24 locked threshold 0.001 using train only and improved local OOS residual-loss behavior, but the revised OOS sample has only 13 trade days. The result is E1 prioritization evidence only and needs robustness checks before deciding whether to spend effort on exact replay.",
+  "hypothesis": "If the revised H-A2 opening-followthrough condition is more than a small-sample accident, its OOS improvement should not depend on one or two extreme days, one calendar bucket, one side, or hidden OOS threshold tuning. The threshold remains locked at 0.001 and must not be changed by this robustness audit.",
+  "research_question": "Is the H-A2.24 revised opening-followthrough result robust enough to prioritize exact replay later, or is it too concentrated/fragile to justify more source work?",
+  "locked_condition": {
+    "base_condition": "clean macro/VIX regime from prior H-A2 proxy work",
+    "opening_followthrough_threshold": 0.001,
+    "threshold_source": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "threshold_lock_policy": "Threshold 0.001 is fixed before this audit. Do not fit, search, widen, narrow, or replace the threshold in this preregistration or future robustness run.",
+    "oos_tuning_forbidden": true
+  },
+  "source_artifacts": {
+    "h_a2_revised_condition_summary": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "h_a2_revised_condition_report": "reports/experiments/h_a2_revised_opening_followthrough_condition_report.md",
+    "h_a2_revised_condition_search_log": "reports/experiments/search_logs/h_a2_revised_opening_followthrough_condition_search_log.jsonl",
+    "h_a2_revised_condition_preregistration": "experiments/h_a2_revised_opening_followthrough_condition_preregistration.json",
+    "h_a2_residual_adverse_day_analysis": "reports/diagnostics/h_a2_residual_adverse_day_analysis.json",
+    "h_a2_proxy_first_robustness_summary": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "hypothesis_registry": "experiments/hypothesis_registry.json",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
+    "wiki_minimum_track_record_length": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/minimum-track-record-length.md",
+    "wiki_probabilistic_sharpe_ratio": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/probabilistic-sharpe-ratio.md"
+  },
+  "planned_future_tests": [
+    {
+      "test_id": "threshold_provenance_audit",
+      "question": "Can the audit prove threshold 0.001 was selected from train only and not changed after OOS review?",
+      "minimum_output": [
+        "locked_threshold",
+        "train_selection_rule",
+        "candidate_threshold_grid_from_h_a2_24",
+        "search_log_reference",
+        "oos_not_used_for_threshold_statement"
+      ]
+    },
+    {
+      "test_id": "big_day_dependency_check",
+      "question": "Does the revised OOS improvement survive removing the most extreme 5% winning/losing trade days where sample size allows?",
+      "minimum_output": [
+        "baseline_oos_trade_count",
+        "revised_oos_trade_count",
+        "extreme_day_removal_count",
+        "post_removal_avg_pnl",
+        "post_removal_loss_rate",
+        "dependency_label"
+      ]
+    },
+    {
+      "test_id": "concentration_fragility_check",
+      "question": "Is the apparent OOS improvement concentrated in one side, month, weekday, or volatility bucket?",
+      "minimum_output": [
+        "side_bucket_counts",
+        "month_bucket_counts",
+        "weekday_bucket_counts",
+        "vix_bucket_counts",
+        "small_bucket_warnings",
+        "concentration_label"
+      ]
+    },
+    {
+      "test_id": "skip_cost_tradeoff_check",
+      "question": "How much opportunity is sacrificed by the revised condition, and does retained-trade behavior justify that sacrifice as E1 prioritization evidence?",
+      "minimum_output": [
+        "baseline_oos_trade_count",
+        "revised_oos_trade_count",
+        "skipped_oos_trade_count",
+        "retention_rate",
+        "skipped_trade_avg_pnl",
+        "retained_trade_avg_pnl",
+        "interpretation"
+      ]
+    },
+    {
+      "test_id": "sample_adequacy_relabeling",
+      "question": "Does the robustness audit keep the result honestly labeled under MinTRL/PSR and under-sampled/underpowered policy?",
+      "minimum_output": [
+        "sample_count",
+        "mintrl_status_or_blocker",
+        "psr_status_or_blocker",
+        "under_sampled_label",
+        "underpowered_label",
+        "evidence_tier_cap"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "thresholds_fit_only_on_train": true,
+    "threshold_locked_before_audit": true,
+    "oos_period_remains_2024": true,
+    "result_must_report_split_counts": true
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_bucket": true,
+    "trade_count_after_filter_required": true,
+    "mintrl_psr_required_if_return_or_trade_series_exists": true,
+    "under_sampled_label_required_below_mintrl": true,
+    "underpowered_label_required_when_power_is_insufficient": true,
+    "dsr_not_recomputed_from_new_search": true,
+    "search_log_reference_required": true,
+    "big_day_dependency_required": true,
+    "mid_vs_implementable_required_if_option_pnl_exists": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "prioritize_exact_replay_later_if": [
+      "Threshold provenance is clean: 0.001 remains train-only and unchanged.",
+      "OOS improvement does not depend on one or two extreme days.",
+      "No single concentration bucket fully explains the retained-trade improvement, or the scope restriction is explicitly stated.",
+      "Result remains under-sampled E1 but has coherent mechanism evidence worth exact replay when external bars become available."
+    ],
+    "park_revised_condition_if": [
+      "OOS improvement collapses after removing one or two extreme days.",
+      "Retained trades are too few or too concentrated to support even prioritization evidence.",
+      "The audit discovers OOS threshold tuning or an undocumented post-result filter."
+    ],
+    "revise_h_a2_again_if": [
+      "The condition reduces losses only by skipping nearly all opportunity.",
+      "The mechanism is better explained by a calendar, side, or volatility bucket than by opening-followthrough confirmation."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_a2_revised_condition_robustness_summary.json",
+    "summary_md": "reports/experiments/h_a2_revised_condition_robustness_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_revised_condition_robustness_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/028-higanbana-h-a2-revised-condition-robustness.md"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered robustness audit for the locked H-A2.24 revised condition.",
+    "The threshold remains locked at 0.001 and this preregistration does not add a new filter.",
+    "Future output can only support E1 prioritization, parking, or revision decisions.",
+    "Exact replay remains blocked until real 2022 SPY underlying bars are available."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not change the threshold from 0.001 in this audit.",
+    "Do not add a new OOS-selected filter.",
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration.",
+    "Do not run live GDELT retries from this preregistration."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "strategy_pnl_allowed_in_future_run": true,
+    "threshold_search_allowed_in_future_run": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "Threshold 0.001 is shown as locked before the robustness audit.",
+    "The audit reports big-day dependency, concentration, retention/skipped trade cost, and sample adequacy labels.",
+    "Every reported bucket includes sample count and small-sample warning where needed.",
+    "The result uses implementable PnL where trade PnL is reported.",
+    "Conclusion uses one project label: ผ่าน, ไม่ผ่าน, or ยังสรุปไม่ได้.",
+    "The next action explicitly chooses exact replay prioritization, H-A2 parking, or another revised-H-A2 preregistration."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Future run can be E1 diagnostic/prioritization evidence only",
+    "No new threshold search",
+    "No exact 2022-10 ORB replay",
+    "No real timestamp-clean news cases",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

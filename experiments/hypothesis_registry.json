@@ -37,12 +37,12 @@
         {
           "path": "reports/baselines/subsystem_a_orb_baseline_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ยังสรุปไม่ได้"
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน"
         },
         {
           "path": "reports/experiments/m5_regime_filter_sensitivity_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ยังสรุปไม่ได้"
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน"
         }
       ],
       "dependencies": [],
@@ -89,20 +89,176 @@
         {
           "path": "reports/experiments/m5_regime_filter_sensitivity_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ยังสรุปไม่ได้",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
           "notes": "Search-contaminated 9-trial diagnostic evidence."
         },
         {
           "path": "reports/experiments/h_a2_macro_conditioned_reanalysis_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ยังสรุปไม่ได้",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
           "notes": "Pre-registered v2 re-analysis of existing M5.5 evidence. Inherits 9-trial search contamination and remains blocked by DSR/sample/regime gaps."
         },
         {
           "path": "reports/diagnostics/h_a2_high_vix_silence_diagnostic_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ยังสรุปไม่ได้",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
           "notes": "Aug 2024 high-VIX diagnostic found complete VIX/market-data coverage but zero ORB candidate trades during high-VIX dates; this is ORB silence, not a VIX labeling gap."
+        },
+        {
+          "path": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.19 proxy-first robustness is directionally consistent across 5-minute proxy, 15-minute proxy, and existing trade outcomes, but remains under-sampled and not exact 2022-10 ORB replay."
+        },
+        {
+          "path": "experiments/h_a2_h_l1_post_proxy_decision.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Post-proxy decision selects a local H-A2 residual/adverse-day analysis preregistration before any further source execution, paid data, paper trading, or E2 claim."
+        },
+        {
+          "path": "experiments/h_a2_residual_adverse_day_analysis_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.21 pre-registers local-only residual/adverse-day analysis before execution."
+        },
+        {
+          "path": "reports/diagnostics/h_a2_residual_adverse_day_analysis.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.22 finds non-risk losses remain common and opening-followthrough failure mode is strong enough to revise H-A2 before exact replay; no E2 or paper-trading claim is allowed."
+        },
+        {
+          "path": "experiments/h_a2_revised_opening_followthrough_condition_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.23 pre-registers the revised opening-followthrough condition before any local diagnostic run; thresholds must be train-only and no exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim is allowed."
+        },
+        {
+          "path": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.24 locks a 0.001 opening-followthrough threshold using train only, then evaluates untouched OOS. OOS non-risk loss count drops from 21 to 1, but revised OOS keeps only 13 trade days, so evidence remains under-sampled E1 and does not approve exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim."
+        },
+        {
+          "path": "experiments/h_a2_revised_condition_robustness_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.25 pre-registers a no-paid robustness audit for the locked H-A2.24 threshold 0.001. The audit must check threshold provenance, big-day dependency, concentration, skip-cost tradeoff, and sample adequacy without threshold search or OOS tuning."
+        },
+        {
+          "path": "reports/experiments/h_a2_revised_condition_robustness_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.25 robustness audit completed with threshold 0.001 still locked, no threshold search, and no OOS tuning. Retained OOS remains only 13 trade days, so this is under-sampled E1 prioritization evidence only and does not approve paid data, IBKR request, LLM call, paper trading, operational validation, real-money trading, or E2 claim."
+        },
+        {
+          "path": "experiments/h_a2_locked_condition_signal_attribution_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.27 pre-registers a no-paid local signal-attribution audit for the locked threshold 0.001 condition. The next audit must classify the condition as deployable entry filter, delayed-entry candidate, or diagnostic proxy only before any exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim."
+        },
+        {
+          "path": "reports/experiments/h_a2_locked_condition_signal_attribution_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.27 completed the signal-attribution audit. Threshold 0.001 stayed locked and no new threshold/filter search was used, but the full condition includes a 15-minute conflict component known after the 09:35 ET original entry. Treat it as delayed-entry candidate and diagnostic proxy only, not deployable entry-filter evidence."
+        },
+        {
+          "path": "experiments/h_a2_delayed_entry_condition_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "?????????????",
+          "notes": "H-A2.29 pre-registered the delayed-entry follow-up after H-A2.28 found the full locked condition is not knowable at original 09:35 ET entry. Candidate decision time is 09:45 ET, threshold 0.001 remains locked, original 09:35 PnL must not be reused, and future work is local no-paid E1 diagnostic only."
+        },
+        {
+          "path": "reports/experiments/h_a2_delayed_entry_condition_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "?????????????",
+          "notes": "H-A2.29 delayed-entry diagnostic completed as proxy-only evidence. The locked condition is timestamp-clean at 09:45 ET, but current source artifacts do not contain auditable 09:45 delayed-entry option quotes/fills, so delayed-entry implementable PnL is not computable and original 09:35 PnL was not reused."
+        },
+        {
+          "path": "experiments/h_a2_original_entry_revision_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.31 pre-registered a timestamp-clean original-entry branch using only 09:35-known features. Threshold 0.001 stays locked, the 15-minute conflict component is forbidden, and no OOS-selected filter is allowed."
+        },
+        {
+          "path": "reports/experiments/h_a2_original_entry_revision_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.32 completed as local no-paid E1 diagnostic evidence. The 09:35-only rule is timestamp-clean and excludes the 15-minute conflict component. OOS retained trades are 14 with avg implementable PnL 69.44 versus baseline 7.087059, but the result remains under-sampled/underpowered and does not approve exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim."
+        },
+        {
+          "path": "experiments/h_a2_original_entry_robustness_prioritization_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.33 pre-registers a stricter original-entry robustness/prioritization review before any claim upgrade. It preserves the H-A2.32 09:35-only rule and threshold 0.001, forbids threshold search/OOS tuning/new filters, and requires leave-one/big-day, regime/calendar concentration, skip-cost, and validation-priority decision checks."
+        },
+        {
+          "path": "reports/experiments/h_a2_original_entry_robustness_prioritization_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.34 completed the pre-registered local no-paid robustness/prioritization review. Leave-one-out remains positive and skip-cost is directionally useful, but retained OOS has only 14 trade days, high-VIX retained coverage is absent, and evidence remains under-sampled/underpowered. Decision is to pre-register independent validation-data planning or no-paid validation feasibility before any paid data, IBKR request, exact replay, paper trading, or E2 claim."
+        },
+        {
+          "path": "experiments/h_a2_independent_validation_feasibility_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-A2.35 pre-registers a no-paid independent validation-data feasibility plan before any paid data, live cost estimate, IBKR request, exact replay, paper trading, or E2 claim. It preserves the locked 09:35-only signal and threshold 0.001, then requires gap inventory, validation target definition, no-paid source inventory, paid decision tree, and next-action selection."
+        },
+        {
+          "path": "reports/diagnostics/h_a2_independent_validation_feasibility.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.35 completed the no-paid independent validation feasibility diagnostic. No-paid sources can define gaps and regime requirements but cannot add independent implementable SPY 0DTE PnL days. Decision is to draft a separate narrow paid-cost estimate plan before any live estimate, paid data, IBKR request, exact replay, paper trading, or E2 claim."
+        },
+        {
+          "path": "experiments/h_a2_independent_validation_paid_cost_plan_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.37 pre-registers a narrow paid-cost estimate plan for independent validation windows. It names exact high-VIX and control windows, required Databento fields, and cost guard prerequisites before any live metadata estimate. No live estimate, paid download, IBKR request, exact replay, paper trading, or E2 claim is approved by this preregistration."
+        },
+        {
+          "path": "reports/data_cost/h_a2_independent_validation_paid_cost_estimate.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.38 ran the metadata-only Databento cost estimate for sample_cost_probe_high_vix_one_day (2025-04-08). Estimated cost is $0.504662 for 15 requests, no download was performed, projected usage would remain inside the current $125 guard, and a separate download decision artifact is still required before any data pull."
+        },
+        {
+          "path": "experiments/h_a2_independent_validation_paid_download_decision.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.39 completed the one-day paid download decision. Scope is capped to 2025-04-08, 15 Databento requests, locked 09:35-only signal, and threshold 0.001. It approves no broad 2025 data, exact replay, paper trading, or E2 claim."
+        },
+        {
+          "path": "reports/data_cost/databento_download_result_h_a2_independent_validation_2025_04_08.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.40 downloaded/cache-confirmed the 2025-04-08 one-day independent-validation raw data: 15 Databento requests, 54,014,593 bytes, and logged estimate $0.504662. This is data acquisition only; next safe work is a separate import/normalization/diagnostic preregistration before any exact replay or edge claim."
+        },
+        {
+          "path": "experiments/h_a2_independent_validation_import_diagnostic_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-A2.41 pre-registers the local import/normalization/diagnostic step for the 2025-04-08 one-day independent-validation raw data. It allows only local parsing of already-downloaded DBN files after validator pass, preserves the 09:35-only signal and threshold 0.001, and forbids additional downloads, exact replay, paper trading, and E2 claims."
+        },
+        {
+          "path": "reports/diagnostics/h_a2_independent_validation_import_diagnostic.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.42 completed the local import/normalization/diagnostic for the 2025-04-08 one-day independent-validation sample. All 15 raw DBN files parse locally; SPY bars cover 09:30-15:59 ET; OPRA windows contain 1,686,591 quote rows and 43,965 0DTE valid-mid rows. The locked 09:35 5-minute put followthrough passes threshold 0.001, but clean macro/VIX is false because prior VIX was 46.98, so there is no candidate trade signal, no exact replay, no PnL, and no E2 claim."
+        },
+        {
+          "path": "experiments/h_a2_normal_control_sample_decision.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-A2.43 pre-registers the normal/control independent-validation sample decision. It pauses the prior high-VIX-first acquisition sequence, selects low_normal_vix_control_pack (2025-02-03 to 2025-02-14) as the first metadata-only estimate target, logs selected key env DATABENTO_API_MO without key value, preserves 09:35-only threshold 0.001, and forbids download, exact replay, paper trading, and E2 claims from the decision artifact."
+        },
+        {
+          "path": "reports/data_cost/h_a2_normal_control_low_normal_vix_control_pack_cost_estimate.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-A2.44 completed the normal/control metadata-only cost gate. The low_normal_vix_control_pack estimate covers 10 normal/control local-VIX dates, 150 planned required windows grouped into 20 conservative Databento metadata calls, selected key env DATABENTO_API_MO, estimated cost $5.398913, projected selected-key usage $5.398913 under the $100 per-key cap and $200 MO/AI pool cap, no download performed, and separate download decision still required."
         }
       ],
       "dependencies": [
@@ -133,6 +289,126 @@
           "date": "2026-07-03",
           "decision": "stress_top2_download_cost_blocked",
           "notes": "H-A2.5 live metadata cost check completed with no data download. 2022-10 estimate is $10.52248 and 2022-09 estimate is $10.226392, combined $20.748872. This exceeds the current $20.0 headroom, so top2 download is blocked until real top-up/cap change or explicit narrower-scope revision."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "post_proxy_decision_completed",
+          "notes": "H-A2.19 and L.7 are useful E1 proxy evidence but not acceptance-grade. Next safe H-A2 work is a preregistered local residual/adverse-day analysis using existing artifacts only."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "residual_adverse_day_analysis_completed",
+          "notes": "H-A2.22 completed as E1 diagnostic evidence. Decision is revise_h_a2_before_exact_replay; next safe H-A2 work is a revised-condition preregistration before exact replay, paid data, IBKR request, LLM call, or paper trading."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "revised_opening_followthrough_preregistration_completed",
+          "notes": "H-A2.23 completed as E0 control evidence. Next safe H-A2 work is a local-only revised-condition diagnostic with train-only threshold selection and no OOS tuning, exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "revised_opening_followthrough_condition_completed",
+          "notes": "H-A2.24 completed as E1 diagnostic evidence. Train-only threshold 0.001 materially improves local OOS residual-loss behavior, but the revised OOS sample has only 13 trade days. Next safe action is to keep this as prioritization evidence and wait for the external 2022 SPY bar blocker before exact replay; no paid data, IBKR request, LLM call, paper trading, or E2 claim is approved."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "revised_condition_robustness_preregistered",
+          "notes": "H-A2.25 completed as E0 control evidence. Next safe action is to run the no-paid robustness audit against locked threshold 0.001 with no threshold search, OOS tuning, exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "revised_condition_robustness_completed",
+          "notes": "H-A2.25 completed as E1 diagnostic evidence. Threshold provenance is clean, big-day dependency and concentration checks do not show single-day or single-bucket dominance, but retained OOS has only 13 trade days and remains under-sampled/underpowered. Next safe H-A2 work is exact replay after the 2022 SPY bar blocker clears, or a separately pre-registered local follow-up that does not change threshold 0.001."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "locked_condition_signal_attribution_preregistered",
+          "notes": "H-A2.27 completed as E0 control evidence. Next safe in-plan work is to run a no-paid local signal-attribution audit that determines whether threshold 0.001 is available at the decision timestamp and should be treated as deployable entry filter, delayed-entry candidate, or diagnostic proxy only. No threshold change, new OOS-selected filter, paid data, IBKR request, LLM call, paper trading, or E2 claim is allowed."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "locked_condition_signal_attribution_completed",
+          "notes": "H-A2.27 completed as E1 diagnostic evidence. The full locked condition is not knowable at the original 09:35 ET entry because the 15-minute conflict check completes around 09:45 ET. Next safe H-A2 work is a separately pre-registered delayed-entry test or timestamp-clean original-entry revision; no exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim is approved from this result."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "delayed_entry_condition_preregistered",
+          "notes": "H-A2.29 completed as E0 control evidence. Next safe H-A2 work is to run a no-paid local delayed-entry diagnostic with candidate decision time 09:45 ET, locked threshold 0.001, explicit fill/cost handling, train/OOS retained counts, sample-adequacy labels, and no E2/paper-trading claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "delayed_entry_diagnostic_complete_proxy_only",
+          "notes": "H-A2.29 found the locked condition is timestamp-clean at 09:45 ET, but delayed-entry PnL cannot be computed from current source artifacts because no auditable 09:45 quote/fill exists. Next safe work is a timestamp-clean original-entry revision preregistration or a separate delayed-entry quote acquisition preregistration."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "original_entry_revision_completed",
+          "notes": "H-A2.32 completed the timestamp-clean 09:35-only original-entry diagnostic. Retained OOS has 14 trade days and remains E1 under-sampled/underpowered evidence only; next safe work is stricter original-entry robustness/prioritization review or independent validation planning before any E2, exact replay, paid data, IBKR request, LLM call, or paper trading."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "original_entry_robustness_prioritization_preregistered",
+          "notes": "H-A2.33 completed as E0 control evidence. Next safe work is to run the local no-paid robustness/prioritization review, preserving the 09:35-only rule and threshold 0.001 while checking leave-one/big-day dependency, regime/calendar concentration, skip-cost tradeoff, and whether independent validation-data planning is justified."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "original_entry_robustness_prioritization_completed",
+          "notes": "H-A2.34 completed as E1 diagnostic/prioritization evidence. The 09:35-only rule survives leave-one/big-day and skip-cost checks directionally, but retained OOS remains 14 trade days and high-VIX retained coverage is missing. Next safe work is an independent validation-data plan or no-paid validation feasibility plan before any paid data, IBKR request, exact replay, paper trading, or E2 claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_feasibility_preregistered",
+          "notes": "H-A2.35 completed as E0 control evidence. Next safe H-A2 work is to run the no-paid validation feasibility diagnostic against this preregistration. No paid data, live cost estimate, IBKR request, exact replay, LLM call, GDELT retry, paper trading, or E2 claim is approved."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_feasibility_completed",
+          "notes": "H-A2.35 completed as E1 diagnostic evidence. No-paid sources can support gap planning but cannot validate the edge with new implementable PnL days. Next safe work is a separate preregistered paid-cost estimate plan for narrow independent validation windows; no live estimate or download is approved."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_paid_cost_plan_preregistered",
+          "notes": "H-A2.37 completed as E0 control evidence. The plan names exact candidate cost-estimate windows, starting with one high-VIX sample day 2025-04-08, then a high-VIX pack and two control packs. Next safe work is to build or run a metadata-only cost-estimate plan/runner if the validator and paid-cost audit pass; paid download and E2 claims remain forbidden."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_metadata_cost_estimate_completed",
+          "notes": "H-A2.38 completed as E0 cost-gate evidence. Databento metadata estimate for 2025-04-08 is $0.504662 and no download was performed. Next safe work is a separate one-day download decision artifact before any data pull; no broad 2025 estimate, threshold change, exact replay, paper trading, or E2 claim is approved."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_one_day_download_decision_completed",
+          "notes": "H-A2.39 completed as E0 control evidence. The decision approves only the 2025-04-08 one-day sample after paid-cost audit pass and preserves locked threshold 0.001 with no broad data, exact replay, paper trading, or E2 claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_one_day_download_completed",
+          "notes": "H-A2.40 completed as E0 data-acquisition evidence. The one-day 2025-04-08 sample was downloaded/cache-confirmed with 15 Databento requests and 54,014,593 bytes. Next safe H-A2 work is a preregistered import/normalization/diagnostic step before parsing or deciding candidate-trade availability."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_import_diagnostic_preregistered",
+          "notes": "H-A2.41 completed as E0 control evidence. The next safe H-A2 work is to implement and run a local-only import/normalization/diagnostic for the already-downloaded 2025-04-08 raw DBN files before exact replay, paper trading, or any E2 edge claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "independent_validation_import_diagnostic_completed_no_candidate_signal",
+          "notes": "H-A2.42 completed as E1 import/availability evidence. The 2025-04-08 high-VIX sample parses and has sufficient local quote availability, but the locked H-A2 09:35 rule has no candidate trade because clean macro/VIX is false. Next safe H-A2 work is to pre-register a normal/control independent-validation sample decision or no-paid validation gap decision before any additional data pull, exact replay, IBKR request, LLM call, paper trading, or E2 claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "next_independent_validation_priority_normal_control_samples",
+          "notes": "User selected normal/control independent-validation samples next, to test whether the H-A2 edge is specific to normal regimes instead of only collecting more high-VIX/stress availability evidence. Keep the locked 09:35-only rule and threshold 0.001; pre-register the normal/control sample decision before any additional Databento pull, exact replay, paper trading, or E2 claim."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "normal_control_sample_decision_preregistered",
+          "notes": "H-A2.43 completed as E0 control evidence. The next safe implementation step is to build or update the metadata-only cost-estimate runner for low_normal_vix_control_pack using selected key env DATABENTO_API_MO, after validator and paid-cost audit pass. No download, high-VIX-first acquisition, exact replay, threshold change, OOS-selected filter, paper trading, or E2 claim is approved."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "normal_control_metadata_estimate_completed",
+          "notes": "H-A2.44 completed as E0 cost-control evidence. Databento metadata estimate for low_normal_vix_control_pack is $5.398913 using selected key env DATABENTO_API_MO, no download was performed, and the next safe work is a separate normal/control download decision artifact before any data pull."
         }
       ]
     },
@@ -140,8 +416,8 @@
       "id": "H-B1",
       "family": "subsystem_b",
       "status": "falsified",
-      "statement": "Capped-risk put ratio spreads are feasible and profitable under $300 allocation and $20 risk budget on a $1,000 account.",
-      "economic_rationale": "Selling short-dated downside skew may have premium edge if tail risk is capped by a protective wing.",
+      "statement": "The tested current-account, always-eligible capped-risk put ratio spread template is feasible and profitable under $300 allocation and $20 risk budget on a $1,000 account.",
+      "economic_rationale": "Selling short-dated downside skew may have premium edge if tail risk is capped by a protective wing, but the tested H-B1 form did not condition entries on market regime or structure suitability.",
       "testable_predictions": [
         "A meaningful share of trades fits the $300 allocation and $20 risk budget.",
         "Implementable PnL is not structurally negative after costs."
@@ -166,7 +442,7 @@
         {
           "path": "reports/baselines/subsystem_b_put_ratio_feasibility_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ไม่ผ่าน"
+          "conclusion": "เนเธกเนเธเนเธฒเธ"
         }
       ],
       "dependencies": [],
@@ -175,6 +451,11 @@
           "date": "2026-07-03",
           "decision": "falsified",
           "notes": "Current small-account H-B1 is killed; H-B2 tests the structure at larger simulated scale."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "falsified_form_not_strategy_family",
+          "notes": "User challenged whether the failed test asked the right question. H-B1 falsifies the current-account / effectively always-eligible framing, not the entire capped put ratio spread family. A future Sub-System B branch must ask which market regimes, volatility/skew states, or filters make the structure suitable, rather than assuming it should work every day."
         }
       ]
     },
@@ -182,26 +463,30 @@
       "id": "H-B2",
       "family": "subsystem_b",
       "status": "parked",
-      "statement": "The put-ratio-with-wing structure may have positive expectancy at simulated $10k to $25k scale where strike granularity and premium-to-account ratios stop binding.",
-      "economic_rationale": "If short-dated downside skew is overpriced, a capped-risk structure may monetize it at sufficient account size while preserving survival through the protective wing.",
+      "statement": "The put-ratio-with-wing structure may have positive expectancy at simulated $10k to $25k scale only under appropriate market regimes or entry filters where strike granularity, premium-to-account ratios, volatility/skew state, and tail-risk context are favorable.",
+      "economic_rationale": "If short-dated downside skew is overpriced, a capped-risk structure may monetize it at sufficient account size while preserving survival through the protective wing. The current grid may have failed because it treated structure eligibility too broadly, not necessarily because the structure has no conditional use.",
       "testable_predictions": [
         "Cost drag is not the dominant share of gross edge at all wing widths.",
         "Implementable PnL and ES95-adjusted return are not negative at both simulated scales.",
-        "Results are not dependent on fractional contracts or hidden undefined risk."
+        "Results are not dependent on fractional contracts or hidden undefined risk.",
+        "A pre-registered regime/suitability filter can identify conditions where the structure's tail-risk and skew-premium tradeoff is economically coherent."
       ],
       "validation_criteria": [
         "Pre-register $10k and $25k account sizes.",
         "Pre-register wing grid and sizing rule.",
+        "Pre-register any regime/suitability filter before rerun; do not add filters after seeing OOS PnL.",
         "Record search log and DSR or DSR blocker.",
         "Report implementable PnL, ES95, drawdown, cost drag, and sample labels."
       ],
       "falsification_criteria": [
-        "Implementable PnL and ES95-adjusted return are negative at both simulated scales with adequate falsification sample.",
-        "Cost drag exceeds 60% of gross at all wing widths."
+        "Implementable PnL and ES95-adjusted return are negative at both simulated scales with adequate falsification sample under the pre-registered suitability scope.",
+        "Cost drag exceeds 60% of gross at all wing widths.",
+        "No logically justified volatility/skew/regime filter can be specified without OOS fitting."
       ],
       "required_data": [
         "Already-cached Sub-System B data from Mar-Dec 2023 and Jan-Dec 2024.",
-        "H-B2 pre-registration manifest and simulated-scale diagnostic are complete with no new paid data."
+        "H-B2 pre-registration manifest and simulated-scale diagnostic are complete with no new paid data.",
+        "Any H-B2 reopening requires a new pre-registered mechanism note that defines the market regime or suitability filter before testing."
       ],
       "mintrl_falsify": {
         "status": "pending_review",
@@ -211,13 +496,13 @@
         {
           "path": "reports/baselines/subsystem_b_put_ratio_feasibility_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ไม่ผ่าน",
+          "conclusion": "เนเธกเนเธเนเธฒเธ",
           "notes": "Supports H-B2 motivation but does not test H-B2 scale."
         },
         {
           "path": "reports/experiments/h_b2_subsystem_b_scale_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ยังสรุปไม่ได้",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
           "notes": "Pre-registered 8-trial simulated-scale diagnostic. No scenario has both positive total implementable PnL and positive OOS implementable PnL; cost drag is high where mid PnL is positive. Parked pending MinTRL_falsify review before formal falsification."
         }
       ],
@@ -234,13 +519,18 @@
           "date": "2026-07-03",
           "decision": "parked_pending_mintrl_falsify_review",
           "notes": "H-B2 pre-registration and simulated-scale diagnostic completed with no new paid data. Eight pre-registered trials across $10k/$25k and $5/$10/$15/$20 wings found zero scenarios with both positive total and OOS implementable PnL. Formal falsification is deferred until MinTRL_falsify review; no deployment or paper-trading edge claim is allowed."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "reframe_before_reopening_as_regime_conditioned_structure",
+          "notes": "User challenged the original question: capped put ratio spreads should not be judged as if they must work every day. H-B2 stays parked for the current grid, but any future reopening must first state the real hypothesis: under which volatility/skew/regime/suitability conditions should this structure earn premium without unacceptable tail risk? No new H-B2 effort should run until that mechanism and filter are pre-registered."
         }
       ]
     },
     {
       "id": "H-G1",
       "family": "gamma",
-      "status": "active",
+      "status": "parked",
       "statement": "A signed-OI gamma proxy aggregated from OPRA open interest and self-computed Greeks carries economic signal: high positive proxy days should exhibit attenuated realized intraday volatility.",
       "economic_rationale": "Positive aggregate dealer-style gamma exposure can damp realized volatility through hedging flows, while negative gamma can amplify moves. Current data supports only proxy validity, not true dealer inventory claims.",
       "testable_predictions": [
@@ -260,7 +550,19 @@
         "Pre-registered 12-date regime set.",
         "OPRA statistics/OI days for the 12-date set.",
         "Existing quote and SPY bar cache for those dates.",
-        "H-G1.1 policy v2 and H-G1.2 12-date regime-set pre-registration are complete; 2024-01-03 has an existing OI probe, while the other 11 dates require metadata cost checks before any download."
+        "H-G1.1 policy v2, H-G1.2 12-date regime-set pre-registration, H-G1.3 OI purchase, and H-G1.4 diagnostic are complete. H-G1 remains blocked by v2 coverage failures before strategy use.",
+        "H-G1.12 metadata cost gate for the concrete v3 replacement day is complete. Exactly one OPRA statistics/OI day, 2023-09-13, is approved for controlled download under the current cost guard.",
+        "H-G1.13 downloaded the approved 2023-09-13 replacement OI day.",
+        "H-G1.14 manifest-v3 enrichment/diagnostic rerun is complete using the original 11-date OI download result plus the 2023-09-13 replacement OI download result. Raw-row coverage and economic-sign gates pass, but bucket-weighted coverage still blocks H-G1 strategy use.",
+        "H-G1.15 manifest-v3 bucket-failure diagnostic is complete. The remaining failures are diagnosed as a moneyness-only bucket policy issue: all blocked rows in the failed buckets are opposite-right ITM rows, not OI join, timestamp, or paid-data availability failures.",
+        "H-G1.16 bucket-policy review pre-registration is complete. It locks current v2 moneyness-only, side-aware required-bucket, and OI/gamma-notional coverage candidates before any no-paid comparison rerun.",
+        "H-G1.17 bucket-policy comparison is complete. Candidate B side-aware required-bucket passes coverage review and is recommended for separate policy-adoption review, but policy is not adopted and strategy use is still forbidden.",
+        "H-G1.18 side-aware bucket policy adoption is complete. Candidate B is adopted as h_g1_required_bucket_policy_v3_side_aware for the next diagnostic rerun only; strategy use, paid data, new dates, new OI files, new option quotes, and strategy-PnL selection remain forbidden.",
+        "H-G1.19 side-aware data-validity diagnostic is complete. Status is pass_diagnostic_only under h_g1_required_bucket_policy_v3_side_aware; raw-row coverage, side-aware required-bucket coverage, timestamp, stability, economic-sign, and search-log gates pass, but strategy use remains forbidden.",
+        "H-G1.20 acceptance blocker review is complete. It records six hard blockers and one soft blocker before any NOVI/net-gamma strategy use.",
+        "H-G1.21 strategy-ablation pre-registration is complete. It locks baseline versus three gamma-filtered variants, chronological split, search log/DSR policy, MinTRL/PSR, implementable PnL, big-day dependency, proxy wording, and no OOS tuning before any strategy PnL review.",
+        "H-G1.22 strategy ablation is complete but underpowered: only 2 of 90 baseline closed trades intersect gamma-proxy dates, and all gamma-filtered variants have 0 active trades.",
+        "H-G1.23 decision is complete. H-G1 is parked pending a separate sample-expansion plan; active implementation returns to News-Unblock N.7."
       ],
       "mintrl_falsify": {
         "status": "not_applicable_yet",
@@ -270,14 +572,140 @@
         {
           "path": "reports/diagnostics/gamma_aggregation_diagnostic_summary.json",
           "evidence_tier": "E1",
-          "conclusion": "ยังสรุปไม่ได้",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
           "notes": "One-date diagnostic: timestamp/search-log pass, coverage/stability/economic-sign blocked."
         },
         {
           "path": "experiments/h_g1_gamma_regime_date_set_preregistration.json",
           "evidence_tier": "E0",
-          "conclusion": "ยังสรุปไม่ได้",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
           "notes": "Pre-registration control artifact only: locks 12 dates across low/normal/high volatility, macro/no-macro, train/OOS, and 10 unique calendar months before any new OPRA OI purchase."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "?????????????",
+          "notes": "12-date v2 diagnostic: stability, timestamp discipline, economic sign, and search-log gates pass, but coverage gate is blocked by raw-row coverage and required-bucket coverage failures. No NOVI/net-gamma strategy use is allowed."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v2_10date.json",
+          "evidence_tier": "E1",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "10-date repair diagnostic after Databento EQUS.MINI proved 2023-03-13/2023-03-22 SPY bars are unavailable. Raw-row coverage, stability, timestamp discipline, economic sign, and search-log gates pass, but required-bucket computed-Greeks coverage still fails on 5 dates. No NOVI/net-gamma strategy use is allowed."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_bucket_failure_diagnostic.json",
+          "evidence_tier": "E1",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "No-purchase diagnostic: all 5 required-bucket failures are Black-Scholes bracket blocks. Four retain high computed OI-notional share, but 2023-07-12 otm_put retains only 0.662545, so H-G1 remains blocked."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_policy_manifest_decision.json",
+          "evidence_tier": "E1",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "Decision artifact rejects policy revision alone. Next safe action is to draft policy v2.1 as a review artifact and create a manifest v3 replacement plan before any new paid OI pull."
+        },
+        {
+          "path": "experiments/h_g1_gamma_regime_date_set_preregistration_v3_plan.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-G1.10 planning artifact: policy v2.1 remains review-only, and the manifest v3 replacement plan locks one in-sample low-volatility high-importance-macro replacement for 2023-07-12 before any metadata cost check or paid OI pull."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_manifest_v3_candidate_selection.json",
+          "evidence_tier": "E0",
+          "conclusion": "?????????????",
+          "notes": "H-G1.11 no-network/no-paid candidate selection artifact: 15 eligible candidates were ranked by locked macro/VIX/local-cache rules, selecting 2023-09-13 as the CPI low-volatility in-sample replacement for 2023-07-12. Gamma/OI/PnL inputs were not used."
+        },
+        {
+          "path": "experiments/h_g1_gamma_regime_date_set_preregistration_v3.json",
+          "evidence_tier": "E0",
+          "conclusion": "?????????????",
+          "notes": "H-G1.11 concrete manifest v3 replaces 2023-07-12 with 2023-09-13, validates with 10 dates, and marks exactly one OPRA OI day as needs_metadata_cost_check before any paid download."
+        },
+        {
+          "path": "reports/data_cost/h_g1_gamma_oi_v3_replacement_cost_estimate.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-G1.12 metadata cost gate only: one 2023-09-13 OPRA statistics/OI full UTC day is estimated at $0.384999, projected usage is $109.467226 under the $125 guard, and no download was performed. This is cost-control evidence, not a gamma proxy result."
+        },
+        {
+          "path": "reports/data_cost/h_g1_gamma_oi_download_result_v3_replacement.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-G1.13 controlled data-acquisition artifact only: exactly one approved 2023-09-13 OPRA statistics/OI DBN file was downloaded, 2,971,020 bytes with checksum 447d70eee13c9ebff73c09d16546698fb0f634c1f7961bca54bb6eacdb77e357. This is not a gamma proxy result."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3.json",
+          "evidence_tier": "E1",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-G1.14 manifest-v3 diagnostic: 10 dates, 2,822 quote rows, 2,089 computed Greeks rows, raw-row coverage passes with computed Greeks rate 0.740255, underlying join rate 1.0, and open-interest join rate 0.989369. Economic-sign gate passes with 10 observations and correlation -0.199367, but bucket-weighted coverage fails on five date/bucket cells. No NOVI/net-gamma strategy use is allowed."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_manifest_v3_bucket_failure_diagnostic.json",
+          "evidence_tier": "E1",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-G1.15 manifest-v3 bucket-failure diagnostic: all 55 blocked rows inside the five failed buckets are opposite-right ITM rows created by moneyness-only bucket definitions. Minimum computed OI-notional share is 0.880098, so H-G1 remains blocked pending pre-registered bucket-policy review rather than paid OI expansion."
+        },
+        {
+          "path": "experiments/h_g1_bucket_policy_review_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-G1.16 pre-registration/control artifact only: locks three policy candidates, forbids paid data/new dates/strategy-PnL selection, and allows only a no-paid policy-comparison diagnostic using manifest-v3 rows. It does not adopt a new policy or validate strategy use."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_bucket_policy_comparison.json",
+          "evidence_tier": "E1",
+          "conclusion": "เน€เธเธเน€เธเธ‘เน€เธยเน€เธเธเน€เธเธเน€เธเธเน€เธยเน€เธยเน€เธเธเน€เธยเน€เธยเน€เธโ€เน€เธย",
+          "notes": "H-G1.17 no-paid policy-review diagnostic: candidate A current v2 moneyness-only remains blocked with 5 failures, candidate B side-aware required-bucket passes coverage review across 10/10 dates with 0 failures, and candidate C notional-weighted remains blocked with 1 failure and 5 warnings. Candidate B is recommended for separate policy-adoption review, but policy_adopted_now=false and strategy_use_allowed=false."
+        },
+        {
+          "path": "experiments/h_g1_side_aware_bucket_policy_adoption.json",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-G1.18 control artifact: adopts candidate B as h_g1_required_bucket_policy_v3_side_aware for the next diagnostic rerun only. It forbids strategy use, paid data, new dates, new OI files, new option quotes, and strategy-PnL selection."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3_side_aware.json",
+          "evidence_tier": "E1",
+          "conclusion": "เธเนเธฒเธ",
+          "notes": "H-G1.19 side-aware data-validity diagnostic: status pass_diagnostic_only, 10 dates, 2,822 quote rows, 2,089 computed Greeks rows, coverage/timestamp/stability/economic-sign/search-log gates pass under h_g1_required_bucket_policy_v3_side_aware. Strategy_use_allowed=false; this is not strategy acceptance."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_acceptance_blocker_review.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-G1.20 acceptance blocker review: status blocked_before_strategy_use. H-G1.19 data-validity passed, but strategy use and paper trading remain forbidden by missing strategy ablation, MinTRL/PSR, DSR/search log, big-day dependency, implementable PnL, proxy-inventory caveat, and limited regime sample depth."
+        },
+        {
+          "path": "experiments/h_g1_gamma_strategy_ablation_preregistration.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-G1.21 control artifact: locks baseline_quant_only against three gamma-filtered variants before strategy PnL review. It requires chronological split, train-only threshold fitting, complete search log/DSR policy, MinTRL/PSR labels, mid versus implementable PnL, big-day dependency, and signed-OI gamma proxy wording. It does not validate strategy edge or paper trading."
+        },
+        {
+          "path": "reports/experiments/h_g1_gamma_strategy_ablation_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-G1.22 no-paid strategy ablation completed with status complete_underpowered. Only 2 of 90 baseline closed trades intersect the gamma-proxy date set; all three gamma-filtered variants collapse to 0 active trades. MinTRL/PSR and big-day dependency are blocked by insufficient observations, and strategy use/paper trading remain forbidden."
+        },
+        {
+          "path": "experiments/h_g1_post_ablation_decision.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-G1.23 post-ablation decision parks H-G1 pending a separate sample-expansion plan. H-G1 is not strategy-ready, does not justify paid data from H-G1.22 alone, and cannot approve paper trading or true net-gamma claims."
+        },
+        {
+          "path": "experiments/h_g1_sample_expansion_plan.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-G1.24 sample-expansion plan locks the no-paid local-cache overlap scan, MinTRL/PSR feasibility gate, targeted cost gate, and new-preregistration requirement before any H-G1 paid data or strategy reuse. H-G1 remains parked; this artifact does not approve strategy use, paper trading, paid data, or true net-gamma claims."
+        },
+        {
+          "path": "reports/diagnostics/h_g1_local_cache_overlap_scan.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "H-G1.24a no-paid local-cache overlap scan found 0 additional baseline trade dates with local quote, local SPY bar, and local OI files beyond the current 2-date gamma intersection. H-G1 remains parked; this scan does not approve metadata cost checks, paid downloads, new gamma ablations, strategy use, paper trading, or true net-gamma claims."
         }
       ],
       "dependencies": [],
@@ -291,6 +719,101 @@
           "date": "2026-07-03",
           "decision": "policy_v2_and_regime_date_set_preregistered",
           "notes": "H-G1.1/H-G1.2 completed as no-cost setup. Policy v2 preserves the v1 failure and adds dual raw-row plus bucket-weighted coverage. The 12-date manifest validates with low/normal/high volatility counts 4/4/4, train/OOS 6/6, macro/no-macro 6/6, and 11 dates still requiring metadata cost checks before OI download."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "active_blocked_after_v2_diagnostic",
+          "notes": "H-G1.4 completed on the pre-registered 12-date snapshot set. Coverage gate failed: raw computed-Greeks rate 0.622771 is below 0.70, underlying join rate 0.842449 is below 0.95 due missing March 2023 SPY bars, and required-bucket coverage fails on 7 of 12 dates. Economic sign check is directionally acceptable on 10 observable dates but cannot override coverage failures."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "active_blocked_after_manifest_v2_repair_diagnostic",
+          "notes": "Databento EQUS.MINI cannot repair the two March 2023 dates because SPY bars start at 2023-03-28. Manifest v2 preserves v1, removes only the unavailable dates, and reruns H-G1 on 10 usable dates. Raw-row coverage passes, but required-bucket computed-Greeks failures remain on 2023-07-12, 2023-08-09, 2024-01-03, 2024-05-21, and 2024-12-18."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "policy_revision_alone_rejected_manifest_v3_required",
+          "notes": "H-G1.9 decision artifact finds that row-rate strictness explains four failures, but 2023-07-12 otm_put is below the 0.80 computed OI-notional floor. Policy v2 must not be relaxed to pass the current set silently; draft policy v2.1 as review-only and create a manifest v3 replacement plan before paid OI."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "policy_v2_1_review_and_manifest_v3_plan_complete",
+          "notes": "H-G1.10 completed with docs/H_G1_POLICY_V2_1_REVIEW.md and experiments/h_g1_gamma_regime_date_set_preregistration_v3_plan.json. The next step is a concrete v3 manifest using locked candidate-ranking rules; no metadata cost check or paid OI pull is allowed before that concrete manifest validates."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "manifest_v3_concrete_replacement_selected",
+          "notes": "H-G1.11 completed with reports/diagnostics/h_g1_manifest_v3_candidate_selection.json and experiments/h_g1_gamma_regime_date_set_preregistration_v3.json. The selected replacement is 2023-09-13, chosen from 15 eligible local-cache candidates by CPI-first and closest-VIX ranking. Next step is metadata cost check for exactly one replacement OPRA statistics/OI day before any download."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "manifest_v3_replacement_cost_gate_passed",
+          "notes": "H-G1.12 completed with reports/data_cost/h_g1_gamma_oi_v3_replacement_cost_estimate.json. The live metadata cost estimate covers exactly one 2023-09-13 OPRA statistics/OI full UTC day, costs $0.384999, projects usage $109.467226, and passes the $125 guard. Next step is controlled one-day OI download only."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "manifest_v3_replacement_oi_downloaded",
+          "notes": "H-G1.13 completed with reports/data_cost/h_g1_gamma_oi_download_result_v3_replacement.json and one raw DBN file for 2023-09-13. Working cost basis is now $109.467226 with $15.532774 headroom. Next step is manifest-v3 enrichment/diagnostic rerun."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "active_blocked_after_manifest_v3_diagnostic",
+          "notes": "H-G1.14 completed with reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3.json. Raw-row coverage, timestamp discipline, stability, economic sign, and search-log gates pass, but bucket-weighted coverage remains blocked on 2023-08-09 otm_call, 2023-09-13 otm_put, 2024-01-03 otm_put, 2024-05-21 otm_call, and 2024-12-18 otm_call. Next step is v3 bucket-failure diagnosis; no NOVI/net-gamma strategy use is allowed."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "active_blocked_pending_bucket_policy_review",
+          "notes": "H-G1.15 completed with reports/diagnostics/h_g1_manifest_v3_bucket_failure_diagnostic.json. All 55 blocked rows in the five failed buckets are opposite-right ITM rows caused by moneyness-only bucket definitions, while minimum computed OI-notional share is 0.880098. Next step is a pre-registered bucket-policy review; no policy change, replacement date, paid OI pull, or NOVI/net-gamma strategy use is allowed before that review."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "bucket_policy_review_preregistered_still_blocked",
+          "notes": "H-G1.16 completed with docs/H_G1_BUCKET_POLICY_REVIEW.md and experiments/h_g1_bucket_policy_review_preregistration.json. The next safe action is a no-paid policy-comparison diagnostic using manifest-v3 rows only. No policy adoption, paid data pull, strategy-PnL selection, or NOVI/net-gamma strategy use is allowed."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "bucket_policy_comparison_complete_still_blocked",
+          "notes": "H-G1.17 completed with reports/diagnostics/h_g1_bucket_policy_comparison.json and research_log/017-higanbana-gamma-bucket-policy-comparison.md. Side-aware required buckets pass coverage review and are recommended for a separate policy-adoption artifact, but no policy has been adopted and no NOVI/net-gamma strategy use is allowed."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "side_aware_policy_adopted_for_next_diagnostic_only",
+          "notes": "H-G1.18 completed with docs/H_G1_SIDE_AWARE_BUCKET_POLICY_ADOPTION.md and experiments/h_g1_side_aware_bucket_policy_adoption.json. Candidate B is adopted only for a manifest-v3 diagnostic rerun under policy id h_g1_required_bucket_policy_v3_side_aware. Strategy use, paid data, new dates, new OI files, new option quotes, and strategy-PnL selection remain forbidden."
+        },
+        {
+          "date": "2026-07-04",
+          "decision": "side_aware_data_validity_diagnostic_passed_not_strategy_ready",
+          "notes": "H-G1.19 completed with reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3_side_aware.json and research_log/018-higanbana-gamma-side-aware-diagnostic.md. Result is pass_diagnostic_only and E1 proxy-validity evidence; NOVI/net-gamma strategy use remains forbidden pending acceptance blocker review and strategy evidence."
+        },
+        {
+          "date": "2026-07-04",
+          "decision": "acceptance_blocker_review_complete_strategy_use_forbidden",
+          "notes": "H-G1.20 completed with reports/diagnostics/h_g1_acceptance_blocker_review.json. H-G1 remains E1 proxy-validity only; next H-G1 action is pre-registering a gamma strategy-ablation study, or returning to News-Unblock N.7 after GDELT cooldown."
+        },
+        {
+          "date": "2026-07-04",
+          "decision": "gamma_strategy_ablation_preregistered",
+          "notes": "H-G1.21 completed with experiments/h_g1_gamma_strategy_ablation_preregistration.json and docs/H_G1_GAMMA_STRATEGY_ABLATION_PREREGISTRATION.md. Next H-G1 action is implementing the no-paid strategy-ablation runner against this artifact; no extra variants, OOS tuning, paper trading approval, or true market-maker net gamma claim is allowed."
+        },
+        {
+          "date": "2026-07-04",
+          "decision": "gamma_strategy_ablation_complete_underpowered",
+          "notes": "H-G1.22 completed with reports/experiments/h_g1_gamma_strategy_ablation_summary.json and research_log/020-higanbana-gamma-strategy-ablation-diagnostic.md. H-G1 remains E1 and underpowered: only 2 intersecting baseline trades and 0 active trades after every gamma filter. Next safe action is to park H-G1, draft a separate sample-expansion decision, or return to News-Unblock N.7."
+        },
+        {
+          "date": "2026-07-04",
+          "decision": "parked_pending_sample_expansion_plan",
+          "notes": "H-G1.23 completed with experiments/h_g1_post_ablation_decision.json and docs/H_G1_POST_ABLATION_DECISION.md. H-G1 is parked, not falsified, because the current blocker is sample-overlap/statistical power. No gamma filter, paid data from H-G1.22 alone, paper trading approval, or true market-maker net-gamma claim is allowed. Active implementation returns to News-Unblock N.7."
+        },
+        {
+          "date": "2026-07-04",
+          "decision": "sample_expansion_plan_preregistered_h_g1_still_parked",
+          "notes": "H-G1.24 completed with experiments/h_g1_sample_expansion_plan.json and docs/H_G1_SAMPLE_EXPANSION_PLAN.md. The plan allows only a no-paid local-cache overlap scan or return to News-Unblock; paid data, strategy use, paper trading, and true net-gamma claims remain forbidden."
+        },
+        {
+          "date": "2026-07-04",
+          "decision": "local_cache_overlap_scan_blocked_no_additional_no_paid_overlap",
+          "notes": "H-G1.24a completed with reports/diagnostics/h_g1_local_cache_overlap_scan.json. No additional no-paid gamma-ready baseline trade dates were found, projected no-paid gamma-ready intersection remains 2, and MinTRL/PSR remains blocked by insufficient observations. H-G1 stays parked and active edge work should return to News-Unblock or H-A2 external blockers."
         }
       ]
     },
@@ -329,8 +852,26 @@
         {
           "path": "docs/EXP07_PROMPT_REDESIGN.md",
           "evidence_tier": "E0",
-          "conclusion": "ยังสรุปไม่ได้",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
           "notes": "Design/scaffold evidence only."
+        },
+        {
+          "path": "docs/LLM_MEASUREMENT_EXPERIMENT_DESIGN.md",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-L1 design artifact. Live LLM research remains blocked until real timestamp-clean news cases exist."
+        },
+        {
+          "path": "reports/experiments/h_l1_macro_event_proxy_baseline_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "L.7 deterministic macro/VIX proxy baseline is not LLM/news evidence. It sets the incremental-information baseline that future real-news or LLM scores must beat."
+        },
+        {
+          "path": "experiments/h_a2_h_l1_post_proxy_decision.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Post-proxy decision keeps H-L1 live execution blocked until real timestamp-clean news exists and preserves the deterministic baseline comparison rule."
         }
       ],
       "dependencies": [],
@@ -339,6 +880,21 @@
           "date": "2026-07-03",
           "decision": "active_blocked",
           "notes": "Design work can proceed; live research is blocked until timestamp-clean news exists."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "design_complete_still_blocked",
+          "notes": "H-L1 measurement design now defines prompt families, masking policies, 5-call stability, contamination controls, output schema, and incremental-information tests. Live execution remains blocked by missing timestamp-clean news."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "macro_vix_baseline_complete_live_llm_still_blocked",
+          "notes": "L.7 completed as E1 deterministic proxy baseline. Future real-news or LLM scores must add information beyond macro/VIX labels; live LLM research remains blocked until real timestamp-clean news cases exist."
+        },
+        {
+          "date": "2026-07-06",
+          "decision": "news_source_unblock_priority_broadened",
+          "notes": "User selected fixing the real timestamp-clean news source as a priority and allowed evaluating alternatives instead of waiting only on GDELT. Next news work should compare feasible source paths for timestamp-clean real headlines and fetch timestamps before any live LLM prompt research."
         }
       ]
     },
@@ -372,7 +928,14 @@
         "status": "not_started",
         "reason": "Design-only proposed branch."
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "path": "docs/H_L2_PRICE_INPUT_DESIGN.md",
+          "evidence_tier": "E0",
+          "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
+          "notes": "H-L2 dormant design artifact. It separates price-input exit assistance from H-L1 news/sentiment and forbids future same-day data."
+        }
+      ],
       "dependencies": [
         "H-L1"
       ],
@@ -381,6 +944,65 @@
           "date": "2026-07-03",
           "decision": "proposed",
           "notes": "Dormant until H-L1 measurement validity is designed and news cases exist."
+        },
+        {
+          "date": "2026-07-03",
+          "decision": "design_complete_dormant",
+          "notes": "H-L2 price-input design is complete as E0 scaffold evidence. No live calls are allowed until a chronological case manifest, parser/simulator plumbing, and cost guard are ready."
+        }
+      ]
+    },
+    {
+      "id": "H-L3",
+      "family": "llm_news",
+      "status": "active_blocked",
+      "statement": "A text filter trained on timestamp-clean SPY market outcomes after the decision time reduces strategy tail loss and adds information beyond semantic sentiment plus VIX and macro-calendar controls.",
+      "economic_rationale": "Text labels tied to subsequent market outcomes may capture trade-relevant downside risk that generic positive/negative tone misses. The SMARTyBERT paper motivates the construct, but its stock-level next-day labels and validation-tuned thresholds are not directly transferable to same-day SPY 0DTE.",
+      "testable_predictions": [
+        "A market-outcome-trained score predicts post-decision SPY downside or adverse excursion better than a semantic sentiment score on untouched chronological data.",
+        "The market-based filter improves ES99 and worst-day loss relative to quantitative-only and semantic-filter controls without collapsing active-trade count below an acceptance-grade sample.",
+        "Any strategy benefit survives implementable costs, DSR adjustment, big-day dependency checks, and separate Sub-System A and Sub-System B ablations."
+      ],
+      "validation_criteria": [
+        "Use real news records with publication and availability timestamps before the applicable strategy decision time.",
+        "Define SPY-specific post-decision labels using chronological train/validation/test splits and no random shuffling.",
+        "Compare quantitative-only, semantic-only, market-based-only, quantitative-plus-semantic, and quantitative-plus-market-based arms.",
+        "Keep the 09:35 Sub-System A entry test separate from any 10:00 delayed-entry branch.",
+        "Freeze aggregation thresholds on validation data; do not import the paper's 0.5 and 2.0 thresholds as SPY defaults.",
+        "Report active trades, implementable PnL, ES99 uncertainty, MinTRL/PSR for Sharpe, DSR trial count, and big-day dependency."
+      ],
+      "falsification_criteria": [
+        "Market-based scores add no predictive information beyond semantic sentiment, VIX, and macro-calendar controls.",
+        "Tail-risk improvement disappears on untouched chronological data or after implementable costs.",
+        "The filter leaves too few tail observations or active trades for a credible conclusion.",
+        "Timestamp cleanliness, label chronology, or source licensing cannot be demonstrated."
+      ],
+      "required_data": [
+        "Real timestamp-clean pre-entry news with publication and availability timestamps.",
+        "Chronological SPY post-decision returns and adverse-excursion targets.",
+        "Semantic sentiment benchmark and deterministic VIX/macro controls.",
+        "Separate implementable strategy outcomes for Sub-System A and Sub-System B."
+      ],
+      "mintrl_falsify": {
+        "status": "blocked",
+        "reason": "No real timestamp-clean news archive or SPY-specific market-label design exists yet; ES99 also requires a separate tail-sample uncertainty plan."
+      },
+      "evidence": [
+        {
+          "path": "docs/HYPOTHESIS_REGISTRY.md",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Hypothesis registration and guardrail design only; no model training or strategy result exists."
+        }
+      ],
+      "dependencies": [
+        "H-L1"
+      ],
+      "decision_log": [
+        {
+          "date": "2026-07-09",
+          "decision": "active_blocked",
+          "notes": "Registered from the user-proposed market-based versus semantic filter experiment as a SPY-specific hypothesis inspired by SMARTyBERT, not a direct replication."
         }
       ]
     }

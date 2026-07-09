@@ -14,7 +14,9 @@ DEFAULT_EXPERIMENT_ROOT = PROJECT_ROOT / "reports"
 DEFAULT_JSON_OUTPUT = PROJECT_ROOT / "reports" / "research_log_audit.json"
 DEFAULT_REPORT_OUTPUT = PROJECT_ROOT / "reports" / "research_log_audit.md"
 EXPECTED_REMOTE = "https://github.com/Tusgof/Yuehua_Research_log"
+QUICK_READ_HEADINGS = ("### อ่านแบบเร็ว", "### เธญเนเธฒเธเนเธเธเน€เธฃเนเธง")
 LOG_FILENAME_RE = re.compile(r"^\d{3}-higanbana-[a-z0-9]+(?:-[a-z0-9]+)*\.md$")
+MOJIBAKE_MARKERS = ("เธ", "เน€", "เน", "เน", "โ€", "�")
 
 
 GitRunner = Callable[[Path, list[str]], str]
@@ -29,10 +31,12 @@ def audit_research_logs(
     required_logs = _required_completed_experiment_logs(experiment_root, research_log_root)
     missing_logs = [item for item in required_logs if not item["present"]]
     naming_issues = _research_log_naming_issues(research_log_root)
+    readability_issues = _research_log_readability_issues(research_log_root)
     sequence_status = _research_log_sequence_status(research_log_root)
     git_status = _git_status(research_log_root, expected_remote, git_runner or _run_git)
     blockers = [f"missing_research_log:{item['summary_id']}" for item in missing_logs]
     blockers.extend(f"invalid_research_log_filename:{name}" for name in naming_issues)
+    blockers.extend(f"research_log_readability_issue:{item['name']}:{item['issue']}" for item in readability_issues)
     blockers.extend(sequence_status["blockers"])
     blockers.extend(git_status["blockers"])
 
@@ -43,6 +47,7 @@ def audit_research_logs(
         "experiment_root": str(experiment_root),
         "naming_convention": "NNN-higanbana-clear-topic-slug.md",
         "invalid_log_filenames": naming_issues,
+        "readability_issues": readability_issues,
         "sequence": sequence_status,
         "required_logs": required_logs,
         "git": git_status,
@@ -78,6 +83,18 @@ def write_reports(result: dict[str, Any], json_output: Path = DEFAULT_JSON_OUTPU
     )
     if result["invalid_log_filenames"]:
         lines.extend(f"- `{name}`" for name in result["invalid_log_filenames"])
+    else:
+        lines.append("- None")
+
+    lines.extend(
+        [
+            "",
+            "## Readability Issues",
+            "",
+        ]
+    )
+    if result["readability_issues"]:
+        lines.extend(f"- `{item['name']}`: `{item['issue']}`" for item in result["readability_issues"])
     else:
         lines.append("- None")
 
@@ -119,7 +136,7 @@ def _required_completed_experiment_logs(experiment_root: Path, research_log_root
     if not experiment_root.exists():
         return items
     for path in sorted(experiment_root.glob("**/*.json")):
-        payload = json.loads(path.read_text(encoding="utf-8"))
+        payload = json.loads(path.read_text(encoding="utf-8-sig"))
         if not isinstance(payload, dict):
             continue
         if payload.get("research_log_required") is not True:
@@ -145,6 +162,21 @@ def _research_log_naming_issues(research_log_root: Path) -> list[str]:
     if not research_log_root.exists():
         return []
     return sorted(path.name for path in research_log_root.glob("*.md") if not LOG_FILENAME_RE.match(path.name))
+
+
+def _research_log_readability_issues(research_log_root: Path) -> list[dict[str, str]]:
+    if not research_log_root.exists():
+        return []
+    issues: list[dict[str, str]] = []
+    for path in sorted(research_log_root.glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        if not any(heading in text for heading in QUICK_READ_HEADINGS):
+            issues.append({"name": path.name, "issue": "missing_quick_read_section"})
+        for marker in MOJIBAKE_MARKERS:
+            if marker in text:
+                issues.append({"name": path.name, "issue": f"mojibake_marker:{marker}"})
+                break
+    return issues
 
 
 def _research_log_sequence_status(research_log_root: Path) -> dict[str, Any]:

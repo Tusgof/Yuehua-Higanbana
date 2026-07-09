@@ -1,0 +1,139 @@
+{
+  "blockers": [
+    "gkg_has_no_verified_headline_field",
+    "gkg_publication_time_is_surrogate_not_exact",
+    "gkg_topic_mapping_not_pre_registered"
+  ],
+  "column_count_histogram": {
+    "27": 605
+  },
+  "field_mapping": {
+    "decision_time_et": {
+      "note": "Decision timestamp comes from the pre-existing candidate-day command plan.",
+      "source": "manifest item decision_time_et",
+      "status": "pass"
+    },
+    "fetched_at_et": {
+      "note": "Usable only as GDELT seen/index time, not as exact fetch replay time.",
+      "source": "GKG DATE / file timestamp",
+      "status": "surrogate_only"
+    },
+    "headline": {
+      "note": "URL slug can be a diagnostic surrogate only; do not import it as a real headline.",
+      "source": "not present as verified GKG column",
+      "status": "blocked"
+    },
+    "published_at_et": {
+      "note": "Publication time is not proven by this field.",
+      "source": "GKG DATE / file timestamp",
+      "status": "surrogate_only"
+    },
+    "source_name": {
+      "note": "Maps to the canonical source name when non-empty.",
+      "source": "source_common_name",
+      "status": "pass"
+    },
+    "topic": {
+      "note": "Project topic mapping must be pre-registered before canonical import.",
+      "source": "themes/v2_themes",
+      "status": "blocked"
+    },
+    "url": {
+      "note": "Canonical importer currently accepts HTTPS URLs.",
+      "source": "document_identifier",
+      "status": "pass"
+    }
+  },
+  "https_url_count": 598,
+  "inner_filename": "20240128221500.gkg.csv",
+  "manifest_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_bulk_raw_manifest.json",
+  "mode": "one_file_controlled_probe",
+  "next_step": "Do not broad-download GKG files yet. Decide whether to enrich this one-file GKG probe through a source page/title fetch, a GDELT DOC API join, or another timestamp-clean news source; then rerun canonical import/audit only if verified headlines and timestamp policy pass.",
+  "non_empty_source_count": 605,
+  "probe_version": "gdelt-gkg-one-file-parser-probe-v1",
+  "raw_zip_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\news\\gdelt_bulk_probe\\20240128221500.gkg.csv.zip",
+  "raw_zip_sha256": "5228f882e0fc4477a74b732b76df6e350ccbfddd488c38798de0360332277dec",
+  "row_count": 605,
+  "sample_rows": [
+    {
+      "gkg_record_id": "20240128221500-0",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "japantoday.com",
+      "url": "https://japantoday.com/category/crime/update1-bombing-fugitive-worked-for-decades-at-building-contractor",
+      "url_slug_surrogate": "update1 bombing fugitive worked for decades at building contractor"
+    },
+    {
+      "gkg_record_id": "20240128221500-1",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "wfaa.com",
+      "url": "https://www.wfaa.com/article/news/crime/fort-worth-texas-west-7th-police-case-chase-saturday-night-january-2024/287-eccc16c1-069d-4a24-a901-94c3adc01643",
+      "url_slug_surrogate": "287 eccc16c1 069d 4a24 a901 94c3adc01643"
+    },
+    {
+      "gkg_record_id": "20240128221500-2",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "indiatimes.com",
+      "url": "https://timesofindia.indiatimes.com/city/dehradun/tiger-kills-woman-near-corbett-2nd-in-2-days-latest-news/articleshow/107210837.cms",
+      "url_slug_surrogate": "107210837"
+    },
+    {
+      "gkg_record_id": "20240128221500-3",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "fox23.com",
+      "url": "https://www.fox23.com/news/a-quiet-weekend-at-the-box-office-with-the-beekeeper-on-top-and-some-oscar/article_c62ebe9e-598c-5f8b-9c5f-e702148fe407.html",
+      "url_slug_surrogate": "article c62ebe9e 598c 5f8b 9c5f e702148fe407"
+    },
+    {
+      "gkg_record_id": "20240128221500-4",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "morningjournal.com",
+      "url": "https://www.morningjournal.com/2024/01/28/friendship-apl-accepting-raffle-item-donations-for-annual-wags-to-riches/",
+      "url_slug_surrogate": "friendship apl accepting raffle item donations for annual wags to riches"
+    },
+    {
+      "gkg_record_id": "20240128221500-5",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "hot1077radio.com",
+      "url": "https://www.hot1077radio.com/news/saweetie-drops-new-single-immortal-freestyle/",
+      "url_slug_surrogate": "saweetie drops new single immortal freestyle"
+    },
+    {
+      "gkg_record_id": "20240128221500-6",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "ndtv.com",
+      "url": "https://www.ndtv.com/world-news/xi-jinpings-break-new-ground-message-to-france-days-after-emmanuel-macrons-india-visit-4950225",
+      "url_slug_surrogate": "xi jinpings break new ground message to france days after emmanuel macrons india visit 4950225"
+    },
+    {
+      "gkg_record_id": "20240128221500-7",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "barryanddistrictnews.co.uk",
+      "url": "https://www.barryanddistrictnews.co.uk/news/national/uk-today/24080134.holly-willoughby-apologises-swearing-dancing-ice/",
+      "url_slug_surrogate": "24080134"
+    },
+    {
+      "gkg_record_id": "20240128221500-8",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "scmp.com",
+      "url": "https://www.scmp.com/comment/opinion/article/3249803/amid-rising-tensions-across-taiwan-strait-asean-has-tread-carefully",
+      "url_slug_surrogate": "amid rising tensions across taiwan strait asean has tread carefully"
+    },
+    {
+      "gkg_record_id": "20240128221500-9",
+      "gkg_timestamp_utc": "2024-01-28T22:15:00Z",
+      "source_name": "theadvocate.com.au",
+      "url": "https://www.theadvocate.com.au/story/8499984/top-attractions-in-zeehan-tasmania-as-rated-by-visitors/?cs=2605",
+      "url_slug_surrogate": "top attractions in zeehan tasmania as rated by visitors"
+    }
+  ],
+  "selected_file": {
+    "basename": "20240128221500.gkg.csv.zip",
+    "compressed_bytes": 2513043,
+    "decision_time_et": "2024-01-29T09:30:00-05:00",
+    "gdelt_file_timestamp_utc": "20240128221500",
+    "source_url": "http://data.gdeltproject.org/gdeltv2/20240128221500.gkg.csv.zip",
+    "trade_date": "2024-01-29"
+  },
+  "status": "blocked_requires_enrichment_or_policy",
+  "url_slug_surrogate_count": 605
+}

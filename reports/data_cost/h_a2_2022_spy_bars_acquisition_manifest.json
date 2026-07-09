@@ -1,0 +1,73 @@
+{
+  "artifact_type": "bounded_data_tool_manifest",
+  "bar_size": "1 minute",
+  "canonical_output_path": "build\\h_a2_2022_spy_bars_fixture\\spy_bar.jsonl",
+  "evidence_tier": "E0",
+  "expected_trading_day_count": 21,
+  "forbidden_actions_preserved": [
+    "Do not request live IBKR historical bars from dry-run or fixture mode.",
+    "Do not transmit orders.",
+    "Do not buy data or introduce a new provider from this tool run.",
+    "Do not rerun exact H-A2 stress diagnostics until real SPY bars pass coverage, timestamp, provenance, import, and option-join validation.",
+    "Do not approve paper trading, operational validation, real-money trading, or an H-A2 edge claim from fixture data."
+  ],
+  "generated_at_utc": "2026-07-09T05:38:36+00:00",
+  "guardrails": {
+    "broker_execution_enabled": false,
+    "external_network_used": false,
+    "fixture_data_imported": true,
+    "ibkr_historical_request_used": false,
+    "llm_call_used": false,
+    "new_provider_used": false,
+    "orders_transmitted": false,
+    "paid_data_used": false,
+    "real_source_data_imported": false,
+    "strategy_pnl_used": false
+  },
+  "hypothesis_id": "H-A2",
+  "license_notes_required_for_real_source": true,
+  "mode": "fixture",
+  "purpose": "Bound the SPY 2022-10 underlying-bar acquisition/import path before any live IBKR historical-bars request.",
+  "quote_available_dates": [
+    "2022-10-03",
+    "2022-10-05",
+    "2022-10-07",
+    "2022-10-10",
+    "2022-10-12",
+    "2022-10-14",
+    "2022-10-17",
+    "2022-10-19",
+    "2022-10-21",
+    "2022-10-24",
+    "2022-10-26",
+    "2022-10-28",
+    "2022-10-31"
+  ],
+  "quote_available_day_count": 13,
+  "real_source_license_notes": null,
+  "request_template": {
+    "bar_size": "1 min",
+    "currency": "USD",
+    "exchange": "SMART",
+    "orders_allowed": false,
+    "provider_candidate": "IBKR",
+    "security_type": "STK",
+    "transmit_allowed": false,
+    "use_rth": true,
+    "what_to_show": "TRADES"
+  },
+  "schema_version": "h_a2_2022_spy_bars_acquisition_manifest_v1",
+  "session": "regular_trading_hours",
+  "source_option_summary": "reports\\data_cost\\databento_normalization_summary_h_a2_2022_10_stress.json",
+  "source_plan": "experiments\\h_a2_exact_2022_underlying_bar_plan.json",
+  "status": "fixture_tool_pass",
+  "symbol": "SPY",
+  "tier_blockers": [
+    "E0 tool/fixture artifact only",
+    "No real SPY 2022-10 bars have been requested or imported",
+    "Fixture bars cannot support strategy PnL, exact rerun, paper trading, or edge claims"
+  ],
+  "timezone": "America/New_York",
+  "window_end": "2022-10-31",
+  "window_start": "2022-10-03"
+}

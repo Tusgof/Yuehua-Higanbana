@@ -14,7 +14,7 @@ DEFAULT_RAW_ROOT = PROJECT_ROOT / "data" / "raw" / "spy_0dte" / "databento" / "h
 DEFAULT_JSON_REPORT = PROJECT_ROOT / "reports" / "data_cost" / "h_g1_gamma_oi_download_result.json"
 DEFAULT_MD_REPORT = PROJECT_ROOT / "reports" / "data_cost" / "h_g1_gamma_oi_download_result.md"
 DEFAULT_API_KEY_ENV = "DATABENTO_API_KEY"
-DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API",)
+DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
 
 
 def build_download_plan(cost_report_path: Path = DEFAULT_COST_REPORT, raw_root: Path = DEFAULT_RAW_ROOT) -> dict[str, Any]:
@@ -32,6 +32,7 @@ def build_download_plan(cost_report_path: Path = DEFAULT_COST_REPORT, raw_root: 
     return {
         "mode": "download_plan",
         "hypothesis_id": cost_report.get("hypothesis_id"),
+        "scenario": cost_report.get("scenario") or "h_g1_gamma_oi_12_date",
         "source_cost_report": _relative(cost_report_path),
         "cost_gate_decision": cost_report.get("decision"),
         "cost_guard": cost_report.get("cost_guard"),
@@ -79,7 +80,7 @@ def build_result(plan: dict[str, Any], paid_cost_audit: dict[str, Any], executio
         "mode": "download_complete" if execution is not None and status == "pass" else "download_plan",
         "status": status,
         "hypothesis_id": plan.get("hypothesis_id"),
-        "scenario": "h_g1_gamma_oi_12_date",
+        "scenario": plan.get("scenario") or "h_g1_gamma_oi_12_date",
         "download_performed": execution is not None,
         "source_cost_report": plan.get("source_cost_report"),
         "total_estimated_cost_usd": plan.get("total_estimated_cost_usd"),

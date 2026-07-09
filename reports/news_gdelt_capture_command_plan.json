@@ -67,7 +67,17 @@
       "command": "python scripts\\capture_gdelt_news_snapshots.py --decision-time-et 2023-04-14T09:30:00-04:00 --lookback-hours 24 --max-records 5 --output-path data\\raw\\spy_0dte\\news\\gdelt\\2023-04-14.csv --status-output-path reports\\news_gdelt_capture_status\\2023-04-14.json --execute",
       "decision_time_et": "2023-04-14T09:30:00-04:00",
       "latest_status": {
-        "status": "not_attempted"
+        "blockers": [
+          "gdelt_capture_unavailable"
+        ],
+        "decision_time_et": "2023-04-14T09:30:00-04:00",
+        "error": "GDELT returned a non-JSON response",
+        "lookback_hours": 24,
+        "max_records": 5,
+        "mode": "execute",
+        "output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-14.csv",
+        "source_plan_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\tests\\fixtures\\news_sources_v1.json",
+        "status": "blocked"
       },
       "output_path": "data\\raw\\spy_0dte\\news\\gdelt\\2023-04-14.csv",
       "status_output_path": "reports\\news_gdelt_capture_status\\2023-04-14.json",
@@ -785,7 +795,7 @@
     }
   ],
   "daily_status_counts": {
-    "blocked": 5
+    "blocked": 6
   },
   "daily_status_dir": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_status",
   "latest_capture_status": {
@@ -802,21 +812,22 @@
     "status": "blocked"
   },
   "latest_capture_status_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_status.json",
+  "live_retry_allowed": false,
   "lookback_hours": 24,
   "max_records": 5,
   "mode": "dry_run_no_network",
   "next_step": "GDELT 429 pressure is persistent. Pause live GDELT --execute retries before trying the next candidate day, then import and audit only after a real CSV capture succeeds.",
   "retry_pressure": {
-    "reason": "5 per-day GDELT capture attempts are blocked; wait before the next --execute retry or switch to an offline/alternate news archive path.",
+    "reason": "6 per-day GDELT capture attempts are blocked; wait before the next --execute retry or switch to an offline/alternate news archive path.",
     "status": "cooldown_recommended",
     "threshold": 3
   },
   "retry_queue_summary": {
-    "attempted_status_file_count": 5,
-    "blocked_status_file_count": 5,
-    "next_unattempted_command": "python scripts\\capture_gdelt_news_snapshots.py --decision-time-et 2023-04-14T09:30:00-04:00 --lookback-hours 24 --max-records 5 --output-path data\\raw\\spy_0dte\\news\\gdelt\\2023-04-14.csv --status-output-path reports\\news_gdelt_capture_status\\2023-04-14.json --execute",
-    "next_unattempted_trade_date": "2023-04-14",
-    "not_attempted_count": 66
+    "attempted_status_file_count": 6,
+    "blocked_status_file_count": 6,
+    "next_unattempted_command": "python scripts\\capture_gdelt_news_snapshots.py --decision-time-et 2023-04-17T09:30:00-04:00 --lookback-hours 24 --max-records 5 --output-path data\\raw\\spy_0dte\\news\\gdelt\\2023-04-17.csv --status-output-path reports\\news_gdelt_capture_status\\2023-04-17.json --execute",
+    "next_unattempted_trade_date": "2023-04-17",
+    "not_attempted_count": 65
   },
-  "status": "ready_to_retry"
+  "status": "blocked_cooldown"
 }

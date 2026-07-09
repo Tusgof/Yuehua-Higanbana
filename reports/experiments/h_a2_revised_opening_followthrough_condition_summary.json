@@ -1,0 +1,332 @@
+{
+  "allowed_claims": [
+    "H-A2 has a pre-registered revised condition ready for a local E1 diagnostic test.",
+    "Opening-followthrough confirmation is a mechanism candidate, not a validated edge.",
+    "Future exact replay remains blocked until real 2022-10 SPY underlying bars are available.",
+    "Future H-L1 news or LLM scores must add information beyond deterministic macro/VIX and opening-followthrough baselines."
+  ],
+  "baseline_condition": {
+    "oos": {
+      "avg_implementable_pnl": 7.087059,
+      "best_day_pnl": 150.44,
+      "loss_count": 21,
+      "loss_rate": 0.617647,
+      "total_cost_drag": 204.54,
+      "total_implementable_pnl": 240.96,
+      "total_mid_pnl": 445.5,
+      "trade_day_count": 34,
+      "win_rate": 0.382353,
+      "worst_day_pnl": -55.56
+    },
+    "train": {
+      "avg_implementable_pnl": 19.306667,
+      "best_day_pnl": 166.44,
+      "loss_count": 19,
+      "loss_rate": 0.633333,
+      "total_cost_drag": 164.3,
+      "total_implementable_pnl": 579.2,
+      "total_mid_pnl": 743.5,
+      "trade_day_count": 30,
+      "win_rate": 0.366667,
+      "worst_day_pnl": -57.56
+    }
+  },
+  "big_day_dependency_context": {
+    "baseline_oos_after_trim": {
+      "avg_implementable_pnl": 1.773333,
+      "best_day_pnl": 134.44,
+      "loss_count": 19,
+      "loss_rate": 0.633333,
+      "total_cost_drag": 163.8,
+      "total_implementable_pnl": 53.2,
+      "total_mid_pnl": 217.0,
+      "trade_day_count": 30,
+      "win_rate": 0.366667,
+      "worst_day_pnl": -46.56
+    },
+    "baseline_oos_before_trim": {
+      "avg_implementable_pnl": 7.087059,
+      "best_day_pnl": 150.44,
+      "loss_count": 21,
+      "loss_rate": 0.617647,
+      "total_cost_drag": 204.54,
+      "total_implementable_pnl": 240.96,
+      "total_mid_pnl": 445.5,
+      "trade_day_count": 34,
+      "win_rate": 0.382353,
+      "worst_day_pnl": -55.56
+    },
+    "interpretation": "This is a context check only; small revised OOS sample makes big-day inference underpowered.",
+    "revised_oos_after_trim": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "revised_oos_before_trim": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "status": "diagnostic_underpowered",
+    "survives_extreme_trim": true,
+    "trimmed_each_tail_count_baseline": 2,
+    "trimmed_each_tail_count_revised": 0
+  },
+  "broker_request_used": false,
+  "chronological_oos_holdout_check": {
+    "baseline_oos": {
+      "avg_implementable_pnl": 7.087059,
+      "best_day_pnl": 150.44,
+      "loss_count": 21,
+      "loss_rate": 0.617647,
+      "total_cost_drag": 204.54,
+      "total_implementable_pnl": 240.96,
+      "total_mid_pnl": 445.5,
+      "trade_day_count": 34,
+      "win_rate": 0.382353,
+      "worst_day_pnl": -55.56
+    },
+    "oos_tuning_used": false,
+    "revised_oos": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "status": "complete",
+    "threshold_locked_before_oos": true
+  },
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The train-only opening-followthrough rule materially improves local OOS residual-loss behavior, but the remaining sample is under-sampled and this is still proxy evidence, not exact replay or acceptance-grade validation.",
+  "decision_rule_application": {
+    "blockers": [
+      "under_sampled",
+      "underpowered",
+      "no_exact_2022_orb_replay",
+      "no_e2_acceptance_claim"
+    ],
+    "decision": "prioritize_exact_replay_when_external_bar_blocker_clears",
+    "evidence_tier": "E1",
+    "next_safe_action": "Keep the revised condition as E1 prioritization evidence and prioritize exact replay when the 2022 SPY bar blocker clears; no paid data, IBKR request, LLM call, or paper trading is approved from this result.",
+    "oos_tuning_used": false,
+    "status": "complete",
+    "threshold_locked_before_oos": true
+  },
+  "evidence_tier": "E1",
+  "exact_2022_orb_tested": false,
+  "experiment_id": "h_a2_revised_opening_followthrough_condition",
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration.",
+    "Do not run live GDELT retries from this preregistration."
+  ],
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:43:03Z",
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "llm_call_used": false,
+  "mechanism_consistency_check": {
+    "condition_rationale": "ORB is an intraday momentum hypothesis; adverse or weak opening followthrough contradicts that mechanism.",
+    "exact_replay_blockers_remaining": [
+      "2022-10 real SPY underlying bars remain externally blocked.",
+      "Current result uses local lower-resolution proxy rows, not exact 2022-10 replay."
+    ],
+    "failure_modes": [
+      "The condition may remove too many trades to reach MinTRL.",
+      "The proxy may not match exact executable 0DTE entries/exits.",
+      "The apparent improvement may depend on the current small OOS sample."
+    ],
+    "status": "complete",
+    "what_would_falsify_the_revised_condition": [
+      "Exact replay shows no improvement after the threshold is locked.",
+      "Additional regimes show the rule only worked on a few lucky dates.",
+      "The condition fails after costs or big-day trimming."
+    ]
+  },
+  "methodology": {
+    "base_condition": "Retain the H-A2 deterministic macro/VIX clean-risk concept as a necessary condition, not a sufficient condition.",
+    "chronological_split_required": true,
+    "local_artifacts_only": true,
+    "new_condition_family": "opening_followthrough_confirmation",
+    "oos_tuning_used": false,
+    "random_split_used": false,
+    "threshold_selection_rule": "Select the first ascending threshold that cuts train loss rate by at least 50% while retaining at least half of train non-risk trade days.",
+    "thresholds_fit_only_on_train": true
+  },
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Keep the revised condition as E1 prioritization evidence and prioritize exact replay when the 2022 SPY bar blocker clears; no paid data, IBKR request, LLM call, or paper trading is approved from this result.",
+  "operational_validation_allowed": false,
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-revised-opening-followthrough-condition",
+  "residual_loss_reduction_check": {
+    "baseline_oos_loss_count": 21,
+    "baseline_train_loss_count": 19,
+    "oos_avg_pnl_change": 65.814479,
+    "oos_loss_count_reduction": 20,
+    "oos_loss_rate_change": -0.540724,
+    "revised_oos_loss_count": 1,
+    "revised_train_loss_count": 5,
+    "status": "complete",
+    "train_loss_count_reduction": 14
+  },
+  "revised_condition": {
+    "condition": "non-risk trade day and 5-minute directional followthrough >= locked train-only threshold, with no adverse measured 15-minute conflict",
+    "largest_remaining_oos_losses": [
+      {
+        "cost_drag": 4.56,
+        "date": "2024-09-26",
+        "implementable_pnl": -11.56,
+        "mid_pnl": -7.0,
+        "prior_vix_close": 15.41,
+        "proxy_15m_followthrough": 0.0,
+        "proxy_5m_followthrough": 0.002267,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 5.06,
+        "date": "2024-10-17",
+        "implementable_pnl": 13.44,
+        "mid_pnl": 18.5,
+        "prior_vix_close": 19.58,
+        "proxy_15m_followthrough": 0.0,
+        "proxy_5m_followthrough": 0.002688,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 6.56,
+        "date": "2024-01-10",
+        "implementable_pnl": 23.44,
+        "mid_pnl": 30.0,
+        "prior_vix_close": 12.76,
+        "proxy_15m_followthrough": 0.0,
+        "proxy_5m_followthrough": 0.002379,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 5.06,
+        "date": "2024-05-30",
+        "implementable_pnl": 23.44,
+        "mid_pnl": 28.5,
+        "prior_vix_close": 14.28,
+        "proxy_15m_followthrough": 0.0,
+        "proxy_5m_followthrough": 0.003396,
+        "split": "oos"
+      },
+      {
+        "cost_drag": 5.06,
+        "date": "2024-08-28",
+        "implementable_pnl": 28.44,
+        "mid_pnl": 33.5,
+        "prior_vix_close": 15.43,
+        "proxy_15m_followthrough": 0.0,
+        "proxy_5m_followthrough": 0.004028,
+        "split": "oos"
+      }
+    ],
+    "locked_threshold": 0.001,
+    "oos": {
+      "avg_implementable_pnl": 72.901538,
+      "best_day_pnl": 150.44,
+      "loss_count": 1,
+      "loss_rate": 0.076923,
+      "total_cost_drag": 108.28,
+      "total_implementable_pnl": 947.72,
+      "total_mid_pnl": 1056.0,
+      "trade_day_count": 13,
+      "win_rate": 0.923077,
+      "worst_day_pnl": -11.56
+    },
+    "train": {
+      "avg_implementable_pnl": 67.44,
+      "best_day_pnl": 166.44,
+      "loss_count": 5,
+      "loss_rate": 0.3125,
+      "total_cost_drag": 100.46,
+      "total_implementable_pnl": 1079.04,
+      "total_mid_pnl": 1179.5,
+      "trade_day_count": 16,
+      "win_rate": 0.6875,
+      "worst_day_pnl": -26.56
+    }
+  },
+  "sample_counts": {
+    "baseline_oos_non_risk_trade_days": 34,
+    "baseline_train_non_risk_trade_days": 30,
+    "daily_rows": 463,
+    "revised_oos_trade_days": 13,
+    "revised_train_trade_days": 16,
+    "skipped_oos_trade_days": 21,
+    "skipped_train_trade_days": 14
+  },
+  "sample_policy": {
+    "mintrl_psr_status": "blocked_underpowered_e1_diagnostic",
+    "reason": "The revised condition keeps only a small OOS trade subset, so MinTRL/PSR cannot support acceptance.",
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "schema_version": "h_a2_revised_opening_followthrough_condition_v1",
+  "source_preregistration": "experiments\\h_a2_revised_opening_followthrough_condition_preregistration.json",
+  "source_summary": "reports\\experiments\\h_a2_lower_resolution_proxy_summary.json",
+  "source_summary_experiment_id": "h_a2_lower_resolution_proxy",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "threshold_lock": {
+    "locked_threshold": 0.001,
+    "oos_used_for_selection": false,
+    "selected_train_loss_rate": 0.3125,
+    "selected_train_sample_count": 16,
+    "selected_trial_id": "train_threshold_0.001",
+    "selection_rule": "Select the first ascending threshold that cuts train loss rate by at least 50% while retaining at least half of train non-risk trade days.",
+    "status": "locked"
+  },
+  "tier_blockers": [
+    "E1 diagnostic only",
+    "Under-sampled and underpowered after revised condition",
+    "Train-only threshold grid is diagnostic and not acceptance-grade DSR",
+    "No exact 2022-10 ORB replay",
+    "No independent new validation data",
+    "No E2 acceptance claim",
+    "No paper trading, operational validation, or real-money approval"
+  ],
+  "trial_policy": {
+    "all_trials_recorded": true,
+    "dsr_reason": "A train-only threshold grid is logged, but no acceptance-grade Sharpe or deployable filter is claimed.",
+    "dsr_status": "diagnostic_threshold_grid_not_acceptance",
+    "search_log": "reports\\experiments\\search_logs\\h_a2_revised_opening_followthrough_condition_search_log.jsonl",
+    "selected_trial_id": "train_threshold_0.001",
+    "trial_count": 7
+  }
+}

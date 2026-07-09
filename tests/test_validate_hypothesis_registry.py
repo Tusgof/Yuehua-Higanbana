@@ -30,7 +30,7 @@ class ValidateHypothesisRegistryTests(unittest.TestCase):
 
         self.assertEqual("pass", result["status"])
         self.assertEqual([], result["blockers"])
-        self.assertEqual(7, result["hypothesis_count"])
+        self.assertEqual(8, result["hypothesis_count"])
 
     def test_rejects_missing_falsification_criteria(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

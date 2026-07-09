@@ -1,11 +1,13 @@
 # Exp07 Real News Case Plan
 
 - Status: `blocked`
-- Collection status: `ready_to_collect`
+- Collection status: `blocked_cooldown`
+- GDELT plan status: `blocked_cooldown`
+- GDELT live retry allowed: `False`
 - Candidate days: `71`
 - Captured candidate days: `0`
 - Retry pressure: `cooldown_recommended`
-- Next unattempted trade date: `2023-04-14`
+- Next unattempted trade date: `2023-04-17`
 
 ## Blockers
 
@@ -49,7 +51,7 @@
 |:--|:--|:--|:--|
 | `2023-04-03` | `2023-04-03T09:30:00-04:00` | `in_sample` | `blocked` |
 | `2023-04-13` | `2023-04-13T09:30:00-04:00` | `in_sample` | `blocked` |
-| `2023-04-14` | `2023-04-14T09:30:00-04:00` | `in_sample` | `not_attempted` |
+| `2023-04-14` | `2023-04-14T09:30:00-04:00` | `in_sample` | `blocked` |
 | `2023-04-17` | `2023-04-17T09:30:00-04:00` | `in_sample` | `not_attempted` |
 | `2023-04-20` | `2023-04-20T09:30:00-04:00` | `in_sample` | `not_attempted` |
 | `2023-04-27` | `2023-04-27T09:30:00-04:00` | `in_sample` | `not_attempted` |

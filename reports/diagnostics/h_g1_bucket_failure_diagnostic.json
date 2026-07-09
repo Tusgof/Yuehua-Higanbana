@@ -1,0 +1,474 @@
+{
+  "record_type": "h_g1_bucket_failure_diagnostic",
+  "schema_version": "h_g1_bucket_failure_diagnostic_v1",
+  "hypothesis_id": "H-G1",
+  "source_input_jsonl": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\derived\\spy_0dte\\h_g1_gamma_regime\\option_quote_enriched_10_date_snapshot_v2.jsonl",
+  "source_diagnostic_summary": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\diagnostics\\h_g1_gamma_regime_diagnostic_summary_v2_10date.json",
+  "paid_data_used": false,
+  "network_used": false,
+  "total_rows": 2834,
+  "greeks_status_counts": {
+    "blocked_mid_outside_black_scholes_bracket": 739,
+    "computed_with_caveats": 2095
+  },
+  "failed_bucket_count": 5,
+  "failed_buckets": [
+    {
+      "date": "2023-07-12",
+      "bucket": "otm_put",
+      "row_count": 22,
+      "computed_count": 12,
+      "blocked_count": 10,
+      "computed_rate": 0.545455,
+      "oi_notional_sum": 8587333664.0,
+      "computed_oi_notional_sum": 5689497164.0,
+      "computed_oi_notional_share": 0.662545,
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 10,
+        "computed_with_caveats": 12
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 10
+      },
+      "right_counts": {
+        "call": 11,
+        "put": 11
+      },
+      "blocked_right_counts": {
+        "call": 10
+      },
+      "moneyness_range": {
+        "min": 0.971613,
+        "max": 0.994
+      },
+      "mid_range": {
+        "min": 0.015,
+        "max": 12.51
+      },
+      "blocked_mid_range": {
+        "min": 3.64,
+        "max": 12.51
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "quote_timestamp_et": "2023-07-12T09:35:00-04:00",
+          "right": "call",
+          "strike": 441.0,
+          "moneyness": 0.987284,
+          "mid": 5.545,
+          "open_interest": 12839,
+          "oi_notional": 573492452.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-07-12T09:35:00-04:00",
+          "right": "call",
+          "strike": 443.0,
+          "moneyness": 0.991761,
+          "mid": 3.64,
+          "open_interest": 12612,
+          "oi_notional": 563352816.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-07-12T09:35:00-04:00",
+          "right": "call",
+          "strike": 440.0,
+          "moneyness": 0.985045,
+          "mid": 6.54,
+          "open_interest": 11869,
+          "oi_notional": 530164492.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-07-12T09:35:00-04:00",
+          "right": "call",
+          "strike": 442.0,
+          "moneyness": 0.989523,
+          "mid": 4.565,
+          "open_interest": 11240,
+          "oi_notional": 502068320.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-07-12T09:35:00-04:00",
+          "right": "call",
+          "strike": 439.0,
+          "moneyness": 0.982806,
+          "mid": 7.525,
+          "open_interest": 6108,
+          "oi_notional": 272832144.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        }
+      ]
+    },
+    {
+      "date": "2023-08-09",
+      "bucket": "otm_call",
+      "row_count": 24,
+      "computed_count": 12,
+      "blocked_count": 12,
+      "computed_rate": 0.5,
+      "oi_notional_sum": 6360083868.0,
+      "computed_oi_notional_sum": 5973546048.0,
+      "computed_oi_notional_share": 0.939224,
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 12,
+        "computed_with_caveats": 12
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 12
+      },
+      "right_counts": {
+        "call": 12,
+        "put": 12
+      },
+      "blocked_right_counts": {
+        "put": 12
+      },
+      "moneyness_range": {
+        "min": 1.005171,
+        "max": 1.029687
+      },
+      "mid_range": {
+        "min": 0.005,
+        "max": 13.055
+      },
+      "blocked_mid_range": {
+        "min": 2.28,
+        "max": 13.055
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "strike": 451.0,
+          "moneyness": 1.005171,
+          "mid": 2.28,
+          "open_interest": 2897,
+          "oi_notional": 129982596.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "strike": 453.0,
+          "moneyness": 1.009628,
+          "mid": 4.09,
+          "open_interest": 2546,
+          "oi_notional": 114233928.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "strike": 452.0,
+          "moneyness": 1.007399,
+          "mid": 3.135,
+          "open_interest": 2171,
+          "oi_notional": 97408428.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "strike": 455.0,
+          "moneyness": 1.014086,
+          "mid": 6.065,
+          "open_interest": 469,
+          "oi_notional": 21043092.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2023-08-09T09:35:00-04:00",
+          "right": "put",
+          "strike": 454.0,
+          "moneyness": 1.011857,
+          "mid": 5.07,
+          "open_interest": 349,
+          "oi_notional": 15658932.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        }
+      ]
+    },
+    {
+      "date": "2024-01-03",
+      "bucket": "otm_put",
+      "row_count": 17,
+      "computed_count": 6,
+      "blocked_count": 11,
+      "computed_rate": 0.352941,
+      "oi_notional_sum": 1735715960.0,
+      "computed_oi_notional_sum": 1574161040.0,
+      "computed_oi_notional_share": 0.906923,
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 11,
+        "computed_with_caveats": 6
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 11
+      },
+      "right_counts": {
+        "call": 11,
+        "put": 6
+      },
+      "blocked_right_counts": {
+        "call": 11
+      },
+      "moneyness_range": {
+        "min": 0.971679,
+        "max": 0.992941
+      },
+      "mid_range": {
+        "min": 0.015,
+        "max": 13.27
+      },
+      "blocked_mid_range": {
+        "min": 3.335,
+        "max": 13.27
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "strike": 465.0,
+          "moneyness": 0.988689,
+          "mid": 5.285,
+          "open_interest": 2503,
+          "oi_notional": 117721096.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "strike": 467.0,
+          "moneyness": 0.992941,
+          "mid": 3.335,
+          "open_interest": 479,
+          "oi_notional": 22528328.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "strike": 460.0,
+          "moneyness": 0.978057,
+          "mid": 10.225,
+          "open_interest": 176,
+          "oi_notional": 8277632.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "strike": 466.0,
+          "moneyness": 0.990815,
+          "mid": 4.255,
+          "open_interest": 144,
+          "oi_notional": 6772608.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-01-03T09:35:00-05:00",
+          "right": "call",
+          "strike": 462.0,
+          "moneyness": 0.98231,
+          "mid": 8.135,
+          "open_interest": 40,
+          "oi_notional": 1881280.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        }
+      ]
+    },
+    {
+      "date": "2024-05-21",
+      "bucket": "otm_call",
+      "row_count": 18,
+      "computed_count": 9,
+      "blocked_count": 9,
+      "computed_rate": 0.5,
+      "oi_notional_sum": 2969034020.0,
+      "computed_oi_notional_sum": 2923823260.0,
+      "computed_oi_notional_share": 0.984773,
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 9,
+        "computed_with_caveats": 9
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 9
+      },
+      "right_counts": {
+        "call": 9,
+        "put": 9
+      },
+      "blocked_right_counts": {
+        "put": 9
+      },
+      "moneyness_range": {
+        "min": 1.0068,
+        "max": 1.029467
+      },
+      "mid_range": {
+        "min": 0.005,
+        "max": 15.475
+      },
+      "blocked_mid_range": {
+        "min": 3.52,
+        "max": 15.475
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "strike": 533.0,
+          "moneyness": 1.0068,
+          "mid": 3.52,
+          "open_interest": 619,
+          "oi_notional": 32769860.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "strike": 534.0,
+          "moneyness": 1.008689,
+          "mid": 4.465,
+          "open_interest": 105,
+          "oi_notional": 5558700.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "strike": 536.0,
+          "moneyness": 1.012467,
+          "mid": 6.48,
+          "open_interest": 58,
+          "oi_notional": 3070520.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "strike": 540.0,
+          "moneyness": 1.020023,
+          "mid": 10.48,
+          "open_interest": 28,
+          "oi_notional": 1482320.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-05-21T09:35:00-04:00",
+          "right": "put",
+          "strike": 535.0,
+          "moneyness": 1.010578,
+          "mid": 5.48,
+          "open_interest": 26,
+          "oi_notional": 1376440.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        }
+      ]
+    },
+    {
+      "date": "2024-12-18",
+      "bucket": "otm_call",
+      "row_count": 30,
+      "computed_count": 17,
+      "blocked_count": 13,
+      "computed_rate": 0.566667,
+      "oi_notional_sum": 5510139138.0,
+      "computed_oi_notional_sum": 5322196782.0,
+      "computed_oi_notional_share": 0.965892,
+      "status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 13,
+        "computed_with_caveats": 17
+      },
+      "blocked_status_counts": {
+        "blocked_mid_outside_black_scholes_bracket": 13
+      },
+      "right_counts": {
+        "call": 15,
+        "put": 15
+      },
+      "blocked_right_counts": {
+        "put": 13
+      },
+      "moneyness_range": {
+        "min": 1.005733,
+        "max": 1.028929
+      },
+      "mid_range": {
+        "min": 0.005,
+        "max": 17.21
+      },
+      "blocked_mid_range": {
+        "min": 5.385,
+        "max": 17.21
+      },
+      "top_blocked_by_oi_notional": [
+        {
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "strike": 609.0,
+          "moneyness": 1.009047,
+          "mid": 5.385,
+          "open_interest": 2056,
+          "oi_notional": 124087824.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "strike": 610.0,
+          "moneyness": 1.010704,
+          "mid": 6.315,
+          "open_interest": 876,
+          "oi_notional": 52870104.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "strike": 611.0,
+          "moneyness": 1.01236,
+          "mid": 7.275,
+          "open_interest": 76,
+          "oi_notional": 4586904.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "strike": 613.0,
+          "moneyness": 1.015674,
+          "mid": 9.27,
+          "open_interest": 32,
+          "oi_notional": 1931328.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        },
+        {
+          "quote_timestamp_et": "2024-12-18T09:35:00-05:00",
+          "right": "put",
+          "strike": 612.0,
+          "moneyness": 1.014017,
+          "mid": 8.28,
+          "open_interest": 26,
+          "oi_notional": 1569204.0,
+          "greeks_status": "blocked_mid_outside_black_scholes_bracket"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "all_failures_are_black_scholes_bracket_blocks": true,
+    "high_notional_low_row_rate_failure_count": 4,
+    "low_notional_low_row_rate_failure_count": 1,
+    "minimum_failed_bucket_computed_oi_notional_share": 0.662545,
+    "maximum_failed_bucket_computed_oi_notional_share": 0.984773,
+    "interpretation": "Most failures need policy review, but at least one failed bucket also has weak OI-notional coverage; H-G1 should remain blocked until that date/bucket is repaired or replaced."
+  },
+  "decision": {
+    "status": "diagnostic_complete_h_g1_still_blocked",
+    "next_safe_action": "Review whether the v2 policy should use OI-notional coverage as the primary bucket gate, or replace the low-notional failed dates with a v3 pre-registered date set. Do not claim H-G1 pass yet."
+  }
+}

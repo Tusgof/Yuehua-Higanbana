@@ -49,7 +49,7 @@
       "trade_date": "2023-04-13"
     },
     {
-      "capture_status": "not_attempted",
+      "capture_status": "blocked",
       "decision_time_et": "2023-04-14T09:30:00-04:00",
       "planned_case_groups": [
         "normal_quiet_day",
@@ -1292,11 +1292,13 @@
     }
   ],
   "captured_candidate_count": 0,
-  "collection_status": "ready_to_collect",
+  "collection_status": "blocked_cooldown",
+  "gdelt_live_retry_allowed": false,
   "gdelt_plan_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_gdelt_capture_command_plan.json",
+  "gdelt_plan_status": "blocked_cooldown",
   "news_audit_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\news_coverage_audit.json",
   "next_step": "Pause live GDELT retries, then capture one candidate day at a time after 429 pressure clears.",
-  "next_unattempted_trade_date": "2023-04-14",
+  "next_unattempted_trade_date": "2023-04-17",
   "plan_version": "exp07-real-news-case-plan-v1",
   "prompt_template_families": [
     {
@@ -1349,7 +1351,7 @@
     "decision_time_et"
   ],
   "retry_pressure": {
-    "reason": "5 per-day GDELT capture attempts are blocked; wait before the next --execute retry or switch to an offline/alternate news archive path.",
+    "reason": "6 per-day GDELT capture attempts are blocked; wait before the next --execute retry or switch to an offline/alternate news archive path.",
     "status": "cooldown_recommended",
     "threshold": 3
   },

@@ -1,0 +1,448 @@
+{
+  "baseline_summary_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\baselines\\subsystem_a_orb_baseline_summary.json",
+  "bucket_failures_after_underlying": [
+    {
+      "baseline_bar_rows_for_date": 596,
+      "baseline_quote_rows_for_date": 36418,
+      "computed_greeks_count": 190,
+      "computed_greeks_rate": 0.725191,
+      "date": "2023-07-12",
+      "enrichment_bar_rows": 596,
+      "high_importance_macro": true,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 262,
+      "quote_snapshot_rows": 262,
+      "required_bucket_blockers": [
+        "otm_put_computed_rate_below_60pct"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 262,
+      "volatility_bucket": "low"
+    },
+    {
+      "baseline_bar_rows_for_date": 532,
+      "baseline_quote_rows_for_date": 35306,
+      "computed_greeks_count": 199,
+      "computed_greeks_rate": 0.783465,
+      "date": "2023-08-09",
+      "enrichment_bar_rows": 532,
+      "high_importance_macro": false,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 254,
+      "quote_snapshot_rows": 254,
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 254,
+      "volatility_bucket": "normal"
+    },
+    {
+      "baseline_bar_rows_for_date": 509,
+      "baseline_quote_rows_for_date": 3488,
+      "computed_greeks_count": 59,
+      "computed_greeks_rate": 0.475806,
+      "date": "2024-01-03",
+      "enrichment_bar_rows": 509,
+      "high_importance_macro": true,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 124,
+      "quote_snapshot_rows": 124,
+      "required_bucket_blockers": [
+        "otm_put_computed_rate_below_60pct"
+      ],
+      "split": "oos",
+      "underlying_join_count": 124,
+      "volatility_bucket": "low"
+    },
+    {
+      "baseline_bar_rows_for_date": 511,
+      "baseline_quote_rows_for_date": 30302,
+      "computed_greeks_count": 197,
+      "computed_greeks_rate": 0.90367,
+      "date": "2024-05-21",
+      "enrichment_bar_rows": 511,
+      "high_importance_macro": false,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 218,
+      "quote_snapshot_rows": 218,
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "split": "oos",
+      "underlying_join_count": 218,
+      "volatility_bucket": "low"
+    },
+    {
+      "baseline_bar_rows_for_date": 618,
+      "baseline_quote_rows_for_date": 81864,
+      "computed_greeks_count": 171,
+      "computed_greeks_rate": 0.791667,
+      "date": "2024-12-18",
+      "enrichment_bar_rows": 618,
+      "high_importance_macro": true,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 216,
+      "quote_snapshot_rows": 216,
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "split": "oos",
+      "underlying_join_count": 216,
+      "volatility_bucket": "high"
+    }
+  ],
+  "date_reviews": [
+    {
+      "baseline_bar_rows_for_date": 0,
+      "baseline_quote_rows_for_date": 36140,
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "date": "2023-03-13",
+      "enrichment_bar_rows": 0,
+      "high_importance_macro": false,
+      "issue_class": "manifest_cache_mismatch_missing_spy_bars",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 260,
+      "quote_snapshot_rows": 260,
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 0,
+      "volatility_bucket": "high"
+    },
+    {
+      "baseline_bar_rows_for_date": 0,
+      "baseline_quote_rows_for_date": 37530,
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "date": "2023-03-22",
+      "enrichment_bar_rows": 0,
+      "high_importance_macro": true,
+      "issue_class": "manifest_cache_mismatch_missing_spy_bars",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 270,
+      "quote_snapshot_rows": 270,
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 0,
+      "volatility_bucket": "normal"
+    },
+    {
+      "baseline_bar_rows_for_date": 596,
+      "baseline_quote_rows_for_date": 36418,
+      "computed_greeks_count": 190,
+      "computed_greeks_rate": 0.725191,
+      "date": "2023-07-12",
+      "enrichment_bar_rows": 596,
+      "high_importance_macro": true,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 262,
+      "quote_snapshot_rows": 262,
+      "required_bucket_blockers": [
+        "otm_put_computed_rate_below_60pct"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 262,
+      "volatility_bucket": "low"
+    },
+    {
+      "baseline_bar_rows_for_date": 532,
+      "baseline_quote_rows_for_date": 35306,
+      "computed_greeks_count": 199,
+      "computed_greeks_rate": 0.783465,
+      "date": "2023-08-09",
+      "enrichment_bar_rows": 532,
+      "high_importance_macro": false,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 254,
+      "quote_snapshot_rows": 254,
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 254,
+      "volatility_bucket": "normal"
+    },
+    {
+      "baseline_bar_rows_for_date": 528,
+      "baseline_quote_rows_for_date": 45870,
+      "computed_greeks_count": 235,
+      "computed_greeks_rate": 0.712121,
+      "date": "2023-10-27",
+      "enrichment_bar_rows": 528,
+      "high_importance_macro": true,
+      "issue_class": "passes_current_data_quality_review",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 330,
+      "quote_snapshot_rows": 330,
+      "required_bucket_blockers": [],
+      "split": "in_sample",
+      "underlying_join_count": 330,
+      "volatility_bucket": "normal"
+    },
+    {
+      "baseline_bar_rows_for_date": 433,
+      "baseline_quote_rows_for_date": 54766,
+      "computed_greeks_count": 341,
+      "computed_greeks_rate": 0.865482,
+      "date": "2023-12-29",
+      "enrichment_bar_rows": 433,
+      "high_importance_macro": false,
+      "issue_class": "passes_current_data_quality_review",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 394,
+      "quote_snapshot_rows": 394,
+      "required_bucket_blockers": [],
+      "split": "in_sample",
+      "underlying_join_count": 394,
+      "volatility_bucket": "low"
+    },
+    {
+      "baseline_bar_rows_for_date": 509,
+      "baseline_quote_rows_for_date": 3488,
+      "computed_greeks_count": 59,
+      "computed_greeks_rate": 0.475806,
+      "date": "2024-01-03",
+      "enrichment_bar_rows": 509,
+      "high_importance_macro": true,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 124,
+      "quote_snapshot_rows": 124,
+      "required_bucket_blockers": [
+        "otm_put_computed_rate_below_60pct"
+      ],
+      "split": "oos",
+      "underlying_join_count": 124,
+      "volatility_bucket": "low"
+    },
+    {
+      "baseline_bar_rows_for_date": 511,
+      "baseline_quote_rows_for_date": 30302,
+      "computed_greeks_count": 197,
+      "computed_greeks_rate": 0.90367,
+      "date": "2024-05-21",
+      "enrichment_bar_rows": 511,
+      "high_importance_macro": false,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 218,
+      "quote_snapshot_rows": 218,
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "split": "oos",
+      "underlying_join_count": 218,
+      "volatility_bucket": "low"
+    },
+    {
+      "baseline_bar_rows_for_date": 522,
+      "baseline_quote_rows_for_date": 37808,
+      "computed_greeks_count": 209,
+      "computed_greeks_rate": 0.768382,
+      "date": "2024-08-05",
+      "enrichment_bar_rows": 522,
+      "high_importance_macro": false,
+      "issue_class": "passes_current_data_quality_review",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 242,
+      "quote_snapshot_rows": 272,
+      "required_bucket_blockers": [],
+      "split": "oos",
+      "underlying_join_count": 272,
+      "volatility_bucket": "high"
+    },
+    {
+      "baseline_bar_rows_for_date": 622,
+      "baseline_quote_rows_for_date": 51430,
+      "computed_greeks_count": 256,
+      "computed_greeks_rate": 0.691892,
+      "date": "2024-08-07",
+      "enrichment_bar_rows": 622,
+      "high_importance_macro": false,
+      "issue_class": "passes_current_data_quality_review",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 370,
+      "quote_snapshot_rows": 370,
+      "required_bucket_blockers": [],
+      "split": "oos",
+      "underlying_join_count": 370,
+      "volatility_bucket": "high"
+    },
+    {
+      "baseline_bar_rows_for_date": 550,
+      "baseline_quote_rows_for_date": 149326,
+      "computed_greeks_count": 238,
+      "computed_greeks_rate": 0.604061,
+      "date": "2024-10-31",
+      "enrichment_bar_rows": 550,
+      "high_importance_macro": true,
+      "issue_class": "passes_current_data_quality_review",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 394,
+      "quote_snapshot_rows": 394,
+      "required_bucket_blockers": [],
+      "split": "oos",
+      "underlying_join_count": 394,
+      "volatility_bucket": "normal"
+    },
+    {
+      "baseline_bar_rows_for_date": 618,
+      "baseline_quote_rows_for_date": 81864,
+      "computed_greeks_count": 171,
+      "computed_greeks_rate": 0.791667,
+      "date": "2024-12-18",
+      "enrichment_bar_rows": 618,
+      "high_importance_macro": true,
+      "issue_class": "bucket_computed_greeks_coverage_failure",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 216,
+      "quote_snapshot_rows": 216,
+      "required_bucket_blockers": [
+        "otm_call_computed_rate_below_60pct"
+      ],
+      "split": "oos",
+      "underlying_join_count": 216,
+      "volatility_bucket": "high"
+    }
+  ],
+  "decision": {
+    "conclusion": "ยังสรุปไม่ได้",
+    "forbidden_claims": [
+      "do_not_claim_gamma_proxy_validity",
+      "do_not_use_novi_or_net_gamma_strategy_filter",
+      "do_not_buy_more_opra_oi_until_underlying_cache_issue_is_resolved"
+    ],
+    "next_safe_action": "ทำ H-G1 manifest v2 หรือ repair cache เฉพาะ 2023-03-13 และ 2023-03-22 ก่อน rerun; จากนั้นตรวจ bucket failures ที่เหลือโดยไม่ใช้ signed-OI gamma proxy เป็น trading filter จนกว่า policy gate จะผ่าน",
+    "reason": "H-G1 ยังเป็น data-quality blocker ไม่ใช่ strategy blocker; สองวัน March 2023 ไม่มี SPY bars จริงใน cache แม้ manifest ระบุ present และยังมี bucket-level IV/Greeks coverage failures หลังตัดวันดังกล่าวออก"
+  },
+  "diagnostic_summary_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\diagnostics\\h_g1_gamma_regime_diagnostic_summary.json",
+  "enrichment_summary_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\diagnostics\\h_g1_gamma_regime_enrichment_summary.json",
+  "hypothesis_id": "H-G1",
+  "manifest_mismatches": [
+    {
+      "baseline_bar_rows_for_date": 0,
+      "baseline_quote_rows_for_date": 36140,
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "date": "2023-03-13",
+      "enrichment_bar_rows": 0,
+      "high_importance_macro": false,
+      "issue_class": "manifest_cache_mismatch_missing_spy_bars",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 260,
+      "quote_snapshot_rows": 260,
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 0,
+      "volatility_bucket": "high"
+    },
+    {
+      "baseline_bar_rows_for_date": 0,
+      "baseline_quote_rows_for_date": 37530,
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "date": "2023-03-22",
+      "enrichment_bar_rows": 0,
+      "high_importance_macro": true,
+      "issue_class": "manifest_cache_mismatch_missing_spy_bars",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 270,
+      "quote_snapshot_rows": 270,
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 0,
+      "volatility_bucket": "normal"
+    }
+  ],
+  "manifest_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\experiments\\h_g1_gamma_regime_date_set_preregistration.json",
+  "missing_underlying_dates": [
+    {
+      "baseline_bar_rows_for_date": 0,
+      "baseline_quote_rows_for_date": 36140,
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "date": "2023-03-13",
+      "enrichment_bar_rows": 0,
+      "high_importance_macro": false,
+      "issue_class": "manifest_cache_mismatch_missing_spy_bars",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 260,
+      "quote_snapshot_rows": 260,
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 0,
+      "volatility_bucket": "high"
+    },
+    {
+      "baseline_bar_rows_for_date": 0,
+      "baseline_quote_rows_for_date": 37530,
+      "computed_greeks_count": 0,
+      "computed_greeks_rate": 0.0,
+      "date": "2023-03-22",
+      "enrichment_bar_rows": 0,
+      "high_importance_macro": true,
+      "issue_class": "manifest_cache_mismatch_missing_spy_bars",
+      "manifest_spy_bar_cache_status": "present",
+      "open_interest_join_count": 270,
+      "quote_snapshot_rows": 270,
+      "required_bucket_blockers": [
+        "otm_put_missing",
+        "atm_missing",
+        "otm_call_missing"
+      ],
+      "split": "in_sample",
+      "underlying_join_count": 0,
+      "volatility_bucket": "normal"
+    }
+  ],
+  "network_calls": 0,
+  "paid_cost_usd": 0.0,
+  "record_type": "h_g1_data_quality_review",
+  "schema_version": "h_g1_data_quality_review_v1",
+  "status": "complete_no_purchase_review",
+  "summary": {
+    "bucket_failure_after_underlying_date_count": 5,
+    "date_count": 12,
+    "excluding_missing_underlying_dates": {
+      "computed_greeks_rate": 0.739238,
+      "date_count": 10,
+      "quote_count": 2834,
+      "underlying_join_rate": 1.0
+    },
+    "manifest_spy_bar_mismatch_count": 2,
+    "missing_underlying_date_count": 2,
+    "original_raw_row_coverage": {
+      "computed_greeks_rate": 0.622771,
+      "quote_count": 3364,
+      "underlying_join_rate": 0.842449
+    }
+  }
+}

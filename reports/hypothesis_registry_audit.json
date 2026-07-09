@@ -16,8 +16,9 @@
     {
       "blockers": [],
       "dependency_count": 1,
-      "evidence_count": 3,
+      "evidence_count": 29,
       "evidence_tiers": [
+        "E0",
         "E1"
       ],
       "family": "subsystem_a",
@@ -52,22 +53,23 @@
     {
       "blockers": [],
       "dependency_count": 0,
-      "evidence_count": 2,
+      "evidence_count": 23,
       "evidence_tiers": [
         "E0",
         "E1"
       ],
       "family": "gamma",
       "id": "H-G1",
-      "status": "active",
+      "status": "parked",
       "warnings": []
     },
     {
       "blockers": [],
       "dependency_count": 0,
-      "evidence_count": 1,
+      "evidence_count": 4,
       "evidence_tiers": [
-        "E0"
+        "E0",
+        "E1"
       ],
       "family": "llm_news",
       "id": "H-L1",
@@ -77,18 +79,32 @@
     {
       "blockers": [],
       "dependency_count": 1,
-      "evidence_count": 0,
-      "evidence_tiers": [],
+      "evidence_count": 1,
+      "evidence_tiers": [
+        "E0"
+      ],
       "family": "llm_price",
       "id": "H-L2",
       "status": "proposed",
       "warnings": []
+    },
+    {
+      "blockers": [],
+      "dependency_count": 1,
+      "evidence_count": 1,
+      "evidence_tiers": [
+        "E0"
+      ],
+      "family": "llm_news",
+      "id": "H-L3",
+      "status": "active_blocked",
+      "warnings": []
     }
   ],
-  "hypothesis_count": 7,
+  "hypothesis_count": 8,
   "registry_path": "experiments\\hypothesis_registry.json",
   "reports_root": "reports",
   "status": "pass",
-  "summary_hypothesis_reference_count": 7,
+  "summary_hypothesis_reference_count": 59,
   "warnings": []
 }

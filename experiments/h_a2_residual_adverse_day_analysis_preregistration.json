@@ -1,0 +1,196 @@
+{
+  "schema_version": "h_a2_residual_adverse_day_analysis_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_residual_adverse_day_analysis",
+  "title": "H-A2 residual adverse-day analysis",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register a local-only analysis of why H-A2 still has adverse trade days after deterministic macro/VIX filtering, before buying data, chasing exact 2022 1-minute bars, or running LLM/news research.",
+  "hypothesis": "If H-A2 is a real macro-conditioned ORB mechanism, residual losing days should cluster around explainable local features such as macro-event subtype, VIX/VXV state, weak opening followthrough, OOS regime, or adverse existing trade-outcome structure. If losses remain broad and unexplained after these local checks, H-A2 should be revised or parked before further exact-data work.",
+  "research_question": "What explains non-risk losing days and macro-only losing days in the current H-A2 evidence, and should H-A2 be revised, parked, or prioritized for exact replay?",
+  "source_decision": "experiments/h_a2_h_l1_post_proxy_decision.json",
+  "source_artifacts": {
+    "post_proxy_decision": "experiments/h_a2_h_l1_post_proxy_decision.json",
+    "post_proxy_decision_doc": "docs/H_A2_H_L1_POST_PROXY_DECISION.md",
+    "h_a2_proxy_first_robustness_summary": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
+    "h_a2_proxy_first_robustness_report": "reports/experiments/h_a2_proxy_first_robustness_report.md",
+    "h_l1_macro_event_proxy_baseline_summary": "reports/experiments/h_l1_macro_event_proxy_baseline_summary.json",
+    "h_l1_macro_event_proxy_baseline_report": "reports/experiments/h_l1_macro_event_proxy_baseline_report.md",
+    "baseline_summary": "reports/baselines/subsystem_a_orb_baseline_summary.json",
+    "macro_events": "data/normalized/spy_0dte/macro_event.jsonl",
+    "vix_vxv": "data/normalized/spy_0dte/vix_vxv.jsonl",
+    "spy_bars": "data/normalized/spy_0dte/spy_bar.jsonl",
+    "research_readiness_audit": "reports/research_readiness_audit.json",
+    "hypothesis_registry": "experiments/hypothesis_registry.json",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
+    "wiki_regime_filtering": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md"
+  },
+  "analysis_scope": {
+    "allowed_input_scope": "Use only existing local artifacts already produced by H-A2.19, L.7, baseline trade outcomes, macro calendar, VIX/VXV, and local SPY bars.",
+    "target_groups": [
+      "non_risk_losing_trade_days",
+      "non_risk_winning_trade_days",
+      "macro_only_losing_trade_days",
+      "macro_only_winning_trade_days",
+      "oos_losing_trade_days",
+      "in_sample_losing_trade_days"
+    ],
+    "comparison_dimensions": [
+      "macro_event_presence_and_type_if_available",
+      "vix_vxv_regime",
+      "5_minute_opening_proxy",
+      "15_minute_opening_proxy",
+      "existing_implementable_trade_pnl",
+      "mid_vs_implementable_pnl_and_cost_drag",
+      "chronological_split",
+      "day_of_week",
+      "big_day_dependency_context"
+    ],
+    "forbidden_inputs": [
+      "new network fetch",
+      "new paid data",
+      "new data provider",
+      "IBKR historical-data request",
+      "GDELT live retry",
+      "live LLM call",
+      "paper trading result",
+      "real-money result"
+    ]
+  },
+  "planned_tests": [
+    {
+      "test_id": "residual_loss_bucket_profile",
+      "question": "Are non-risk losing trade days concentrated in a smaller bucket by split, macro type, VIX/VXV state, day-of-week, or proxy direction?",
+      "minimum_output": [
+        "count_by_bucket",
+        "avg_implementable_pnl_by_bucket",
+        "win_rate_by_bucket",
+        "cost_drag_by_bucket",
+        "largest_loss_days_with_labels"
+      ]
+    },
+    {
+      "test_id": "macro_only_loss_profile",
+      "question": "Are macro-only losing days explained by a specific macro-event subtype, weak opening proxy, or OOS regime?",
+      "minimum_output": [
+        "macro_only_trade_count",
+        "macro_only_loss_count",
+        "macro_event_type_summary_if_available",
+        "proxy_5m_15m_context",
+        "oos_vs_in_sample_context"
+      ]
+    },
+    {
+      "test_id": "non_risk_failure_mode_check",
+      "question": "Does the clean/no-risk bucket still contain a repeated failure mode that should narrow or revise H-A2?",
+      "minimum_output": [
+        "non_risk_trade_count",
+        "non_risk_loss_count",
+        "shared_features_among_losses",
+        "features_not_available_locally",
+        "revision_candidate_if_any"
+      ]
+    },
+    {
+      "test_id": "decision_rule_application",
+      "question": "Do the observed residual patterns justify revising H-A2, parking H-A2, or prioritizing exact replay?",
+      "minimum_output": [
+        "revise_h_a2_rule_result",
+        "park_h_a2_rule_result",
+        "prioritize_exact_replay_rule_result",
+        "evidence_tier_and_blockers",
+        "next_safe_action"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "train_or_design_period": "2023-03-28 to 2023-12-31",
+    "oos_period": "2024-01-01 to 2024-12-31",
+    "result_must_report_split_counts": true
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_bucket": true,
+    "mintrl_psr_required_if_return_or_trade_series_exists": true,
+    "under_sampled_label_required_below_mintrl": true,
+    "underpowered_label_required_when_power_is_insufficient": true,
+    "dsr_or_search_log_required_if_any_selection_or_best_bucket_is_reported": true,
+    "big_day_dependency_context_required": true,
+    "mid_vs_implementable_required_if_option_pnl_exists": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "revise_h_a2_if": [
+      "Residual adverse days cluster around a clear local feature that can be stated as a narrower falsifiable condition.",
+      "The current macro/VIX risk label is too coarse and a more precise condition is needed before exact replay."
+    ],
+    "park_h_a2_if": [
+      "Residual adverse days are broad, unstable across chronological split, or dominated by unexplainable OOS losses.",
+      "The analysis finds no local feature that improves the mechanism without OOS tuning."
+    ],
+    "prioritize_exact_replay_if": [
+      "Residual losses are explainable enough that exact 2022-10 entry/exit replay remains the main remaining blocker.",
+      "The analysis preserves the existing directionally coherent H-A2 evidence without adding new fitted filters."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/diagnostics/h_a2_residual_adverse_day_analysis.json",
+    "summary_md": "reports/diagnostics/h_a2_residual_adverse_day_analysis.md",
+    "search_log": "reports/diagnostics/search_logs/h_a2_residual_adverse_day_analysis_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/026-higanbana-h-a2-residual-adverse-day-analysis.md"
+  },
+  "allowed_claims": [
+    "H-A2 should be revised before further exact-data work.",
+    "H-A2 should be parked at E1 until new evidence exists.",
+    "H-A2 remains active at E1 and exact replay is still worth prioritizing.",
+    "Future H-L1 news or LLM scores must explain adverse days beyond this deterministic baseline."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim exact 2022-10 ORB entries or exits were tested.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not claim deterministic macro/VIX evidence is LLM or real-news evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not buy new data from this preregistration.",
+    "Do not introduce a new provider from this preregistration.",
+    "Do not run live LLM calls from this preregistration.",
+    "Do not run live GDELT retries from this preregistration."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "strategy_pnl_allowed_in_future_run": true,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "All planned tests are run or marked unavailable with source evidence.",
+    "Every analyzed bucket reports sample count and split count.",
+    "No new fitted filter is selected using OOS outcomes.",
+    "MinTRL/PSR, under-sampled, underpowered, DSR/search-log, and big-day context are reported where applicable.",
+    "Conclusion uses one project label: \u0e1c\u0e48\u0e32\u0e19, \u0e44\u0e21\u0e48\u0e1c\u0e48\u0e32\u0e19, or \u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49.",
+    "The next action explicitly chooses revise H-A2, park H-A2, or prioritize exact replay."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Future run can be E1 diagnostic only unless exact validation data and acceptance gates are added later",
+    "No exact 2022-10 ORB replay",
+    "No real timestamp-clean news cases",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

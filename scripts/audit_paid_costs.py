@@ -15,10 +15,20 @@ DEFAULT_USER_REPORTED_USAGE_PATH = PROJECT_ROOT / "reports" / "data_cost" / "use
 DEFAULT_STOP_THRESHOLD_USD = 125.0
 BUDGET_POLICY = {
     "cap_extension_method": "real_payment_on_existing_databento_account_only",
+    "approved_databento_key_envs": ["DATABENTO_API_KEY", "DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI"],
+    "per_key_caps_usd": {
+        "DATABENTO_API_MO": 100.0,
+        "DATABENTO_API_AI": 100.0,
+    },
+    "combined_pool_caps_usd": {
+        "DATABENTO_API_MO+DATABENTO_API_AI": 200.0,
+    },
     "prohibited": ["multi_account_signup_credit_harvesting"],
     "notes": (
-        "The user may extend the active cap only by real payment on the existing Databento account. "
-        "Opening extra accounts or using other identities to harvest duplicate signup credits is prohibited."
+        "The user added Databento env keys DATABENTO_API_MO and DATABENTO_API_AI as one approved $200 research pool, "
+        "while each individual key remains capped at $100. Never store key values. "
+        "A paid action must estimate/log cost first and must not exceed the selected key cap or combined pool cap. "
+        "Opening extra accounts or using other identities to harvest duplicate signup credits remains prohibited."
     ),
 }
 
@@ -107,6 +117,8 @@ def write_reports(result: dict[str, Any], json_output: Path = DEFAULT_JSON_OUTPU
         "## Budget Policy",
         "",
         f"- Cap extension method: `{result['budget_policy']['cap_extension_method']}`",
+        f"- Approved Databento key envs: `{', '.join(result['budget_policy']['approved_databento_key_envs'])}`",
+        f"- Per-key caps: `{json.dumps(result['budget_policy']['per_key_caps_usd'], sort_keys=True)}`",
         f"- Prohibited: `{', '.join(result['budget_policy']['prohibited'])}`",
         f"- Notes: {result['budget_policy']['notes']}",
         "",
@@ -217,13 +229,14 @@ def _load_committed_databento_costs(root: Path) -> tuple[list[dict[str, Any]], s
         cost = _cost_from_payload(payload)
         if cost is None:
             continue
+        scenario = payload.get("scenario") or path.stem
         items.append(
             {
-                "item_id": "h_g1_gamma_oi_12_date",
+                "item_id": str(scenario),
                 "provider": "Databento",
                 "estimated_cost_usd": cost,
                 "mode": payload.get("mode"),
-                "scenario": payload.get("scenario"),
+                "scenario": scenario,
                 "source_path": _relative(path),
             }
         )
@@ -278,6 +291,33 @@ def _load_live_estimates_without_download(
                 "mode": payload.get("mode"),
                 "scenario": payload.get("scenario"),
                 "source_path": _relative(path),
+            }
+        )
+    for path in sorted(root.glob("h_a2_independent_validation_paid_cost_estimate*.json")):
+        relative_path = _relative(path)
+        if _normalized_relative(relative_path) in committed_source_reports:
+            continue
+        payload = _load_json(path)
+        if payload.get("mode") != "live_metadata_cost_no_download":
+            continue
+        cost = _cost_from_payload(payload)
+        if cost is None:
+            cost_result = payload.get("cost_result")
+            cost = _cost_from_payload(cost_result) if isinstance(cost_result, dict) else None
+        if cost is None:
+            continue
+        batch_id = payload.get("batch_id") or path.stem
+        item_id = f"h_a2_independent_validation:{batch_id}"
+        if item_id in committed_ids:
+            continue
+        estimates.append(
+            {
+                "item_id": item_id,
+                "provider": "Databento",
+                "estimated_cost_usd": cost,
+                "mode": payload.get("mode"),
+                "scenario": payload.get("experiment_id"),
+                "source_path": relative_path,
             }
         )
     return sorted(estimates, key=lambda item: item["item_id"])

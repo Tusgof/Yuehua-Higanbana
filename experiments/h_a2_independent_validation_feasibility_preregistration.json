@@ -1,0 +1,247 @@
+{
+  "schema_version": "h_a2_independent_validation_feasibility_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_independent_validation_feasibility",
+  "title": "H-A2 independent validation-data feasibility preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register a no-paid feasibility plan for independent H-A2 validation data before any paid data, IBKR request, exact replay, paper trading, or E2 claim.",
+  "source_decision": "reports/experiments/h_a2_original_entry_robustness_prioritization_summary.json",
+  "source_decision_summary": "H-A2.34 preserved the timestamp-clean 09:35-only rule and threshold 0.001. Leave-one-out and skip-cost checks remain directionally useful, but retained OOS has only 14 trade days and no high-VIX retained bucket. The next safe step is independent validation-data planning or no-paid validation feasibility.",
+  "research_question": "What independent validation dataset would be needed to test H-A2 without relying on the current 14 retained OOS days, and can that dataset be planned or partially sourced without paid data first?",
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false,
+    "delayed_entry_component_allowed": false
+  },
+  "allowed_inputs": [
+    {
+      "input": "h_a2_original_entry_robustness_prioritization_summary",
+      "path": "reports/experiments/h_a2_original_entry_robustness_prioritization_summary.json",
+      "use": "control the latest H-A2 decision, sample gaps, high-VIX missing bucket, and forbidden next claims"
+    },
+    {
+      "input": "strategy_data_readiness_audit",
+      "path": "reports/strategy_data_readiness_audit.json",
+      "use": "measure current closed-trade count, candidate-day count, and sample adequacy blocker"
+    },
+    {
+      "input": "paid_cost_audit",
+      "path": "reports/data_cost/paid_cost_audit.json",
+      "use": "record current cost headroom and prove this plan does not approve spending"
+    },
+    {
+      "input": "macro_calendar_coverage_audit",
+      "path": "reports/macro_calendar_coverage_audit.json",
+      "use": "identify macro-calendar coverage already available for validation planning"
+    },
+    {
+      "input": "vix_vxv_coverage_audit",
+      "path": "reports/vix_vxv_coverage_audit.json",
+      "use": "identify volatility-regime coverage already available for validation planning"
+    },
+    {
+      "input": "existing_data_cost_estimates",
+      "path": "reports/data_cost",
+      "use": "inspect already-written Databento estimates or manifests only; do not call a provider"
+    }
+  ],
+  "forbidden_inputs": [
+    {
+      "input": "new_paid_data",
+      "reason": "This is a feasibility preregistration, not a purchase authorization."
+    },
+    {
+      "input": "live_databento_estimate",
+      "reason": "Provider calls are not needed to define the validation data plan."
+    },
+    {
+      "input": "ibkr_historical_bars",
+      "reason": "IBKR exact replay remains blocked until local TWS/Gateway is available and separately authorized by plan."
+    },
+    {
+      "input": "live_llm_outputs",
+      "reason": "H-L1 remains blocked until real timestamp-clean news cases exist."
+    },
+    {
+      "input": "gdelt_live_retry",
+      "reason": "News collection is a separate blocked branch and should not be mixed into H-A2 validation planning."
+    },
+    {
+      "input": "new_oos_selected_filter",
+      "reason": "Validation planning must not become another OOS tuning pass."
+    }
+  ],
+  "planned_future_checks": [
+    {
+      "check_id": "current_gap_inventory",
+      "question": "Which exact gaps prevent H-A2 from moving beyond E1 after H-A2.34?",
+      "minimum_output": [
+        "retained_oos_trade_days",
+        "current_total_closed_trades",
+        "missing_regime_buckets",
+        "mintrl_psr_status",
+        "claim_upgrade_blockers"
+      ]
+    },
+    {
+      "check_id": "validation_target_definition",
+      "question": "What independent validation target would fairly test the locked 09:35 H-A2 signal?",
+      "minimum_output": [
+        "validation_period_candidates",
+        "required_trade_count_or_mintrl_method",
+        "required_regime_buckets",
+        "high_vix_requirement",
+        "chronological_embargo_rule"
+      ]
+    },
+    {
+      "check_id": "no_paid_source_inventory",
+      "question": "Can any already-local or no-paid source provide useful validation coverage before spending money?",
+      "minimum_output": [
+        "local_source_inventory",
+        "free_source_inventory",
+        "usable_no_paid_dates",
+        "unusable_no_paid_dates",
+        "no_paid_feasibility_status"
+      ]
+    },
+    {
+      "check_id": "paid_data_decision_tree",
+      "question": "If no-paid validation is insufficient, what paid data decision tree would be required later?",
+      "minimum_output": [
+        "named_hypothesis_gap",
+        "minimum_required_fields",
+        "candidate_provider_scope",
+        "cost_guard_preconditions",
+        "purchase_forbidden_until"
+      ]
+    },
+    {
+      "check_id": "next_action_selection",
+      "question": "Should H-A2 proceed to a no-paid validation scan, a paid-cost estimate plan, exact-replay planning, or parking?",
+      "minimum_output": [
+        "decision",
+        "allowed_next_action",
+        "forbidden_next_actions",
+        "evidence_tier_cap",
+        "research_log_requirement"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "current_oos_must_not_define_new_filter": true,
+    "independent_validation_must_be_separate_from_training_source": true
+  },
+  "statistical_policy": {
+    "mintrl_method_required_before_acceptance_claim": true,
+    "psr_required_before_acceptance_claim": true,
+    "sample_count_required_for_every_reported_group": true,
+    "under_sampled_label_required": true,
+    "underpowered_label_required": true,
+    "regime_coverage_required": true,
+    "big_day_dependency_required_for_future_validation": true,
+    "dsr_required_if_any_search_occurs": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "proceed_to_no_paid_validation_scan_if": [
+      "At least one already-local or free source can add independent dates without provider calls.",
+      "The scan can be pre-registered without changing threshold 0.001 or adding OOS-selected filters.",
+      "The scan answers a named sample or regime gap from H-A2.34."
+    ],
+    "proceed_to_paid_cost_estimate_plan_if": [
+      "No-paid sources cannot cover the required validation gap.",
+      "The missing fields and date/regime windows are narrow enough to estimate before purchase.",
+      "The cost guard can be checked before any provider call or download."
+    ],
+    "proceed_to_exact_replay_plan_if": [
+      "Validation feasibility shows exact entry/exit replay is the binding gap rather than regime/sample coverage.",
+      "Required underlying bars and option quotes are identified by date and field.",
+      "The plan preserves the locked 09:35 signal and does not reuse delayed-entry PnL."
+    ],
+    "park_h_a2_if": [
+      "Feasible validation coverage cannot reach a meaningful MinTRL/PSR path under current constraints.",
+      "Required high-VIX or regime buckets are unavailable without disproportionate cost.",
+      "The locked signal cannot be tested independently without OOS tuning."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/diagnostics/h_a2_independent_validation_feasibility.json",
+    "summary_md": "reports/diagnostics/h_a2_independent_validation_feasibility.md",
+    "search_log": "reports/diagnostics/search_logs/h_a2_independent_validation_feasibility_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/033-higanbana-h-a2-independent-validation-feasibility.md"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered independent validation-data feasibility plan.",
+    "The plan may identify no-paid or later paid validation paths.",
+    "The plan may only produce E0 planning evidence until a future diagnostic run completes.",
+    "The plan preserves the locked 09:35-only H-A2 signal and threshold 0.001."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not run exact replay from this preregistration.",
+    "Do not buy paid data from this preregistration.",
+    "Do not call live Databento estimates from this preregistration.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration.",
+    "Do not change threshold 0.001.",
+    "Do not add a new OOS-selected filter."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "live_cost_estimate_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_allowed": false,
+    "threshold_search_allowed_in_future_run": false,
+    "new_filter_allowed_in_future_run": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "The future run inventories current H-A2 validation gaps from H-A2.34.",
+    "The future run defines independent validation target periods, required fields, and required regimes.",
+    "The future run reports no-paid source feasibility before any paid or provider action.",
+    "The future run preserves the 09:35-only signal and threshold 0.001.",
+    "The future run selects one next action and caps claims at E1 or lower.",
+    "If the future run completes as a real diagnostic experiment, write research log 033."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "No independent validation run yet",
+    "No new validation data acquired",
+    "No MinTRL/PSR acceptance path proven",
+    "No high-VIX retained validation coverage yet",
+    "No paid data",
+    "No IBKR request",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

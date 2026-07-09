@@ -66,7 +66,6 @@ def plan_capture_commands(
         for trade_date in candidate_dates
     ]
 
-    status = "ready_to_retry" if commands else "blocked"
     blockers: list[str] = []
     if not commands:
         blockers.append("no_candidate_ready_days_found")
@@ -75,9 +74,12 @@ def plan_capture_commands(
 
     retry_queue_summary = _summarize_retry_queue(commands)
     retry_pressure = _summarize_retry_pressure(retry_queue_summary)
+    live_retry_allowed = bool(commands) and retry_pressure.get("status") == "normal_retry"
+    status = "ready_to_retry" if live_retry_allowed else "blocked_cooldown" if commands else "blocked"
     return {
         "mode": "dry_run_no_network",
         "status": status,
+        "live_retry_allowed": live_retry_allowed,
         "blockers": sorted(set(blockers)),
         "adapter_summary_paths": [str(path) for path in paths],
         "latest_capture_status_path": str(status_input_path),
@@ -108,6 +110,7 @@ def write_reports(
         "",
         f"- Mode: `{result['mode']}`",
         f"- Status: `{result['status']}`",
+        f"- Live retry allowed now: `{result.get('live_retry_allowed', False)}`",
         f"- Candidate days: `{result['candidate_day_count']}`",
         f"- Command count: `{result['command_count']}`",
         f"- Max records per topic: `{result['max_records']}`",

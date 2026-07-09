@@ -1,0 +1,226 @@
+{
+  "schema_version": "h_a2_original_entry_robustness_prioritization_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_original_entry_robustness_prioritization",
+  "title": "H-A2 stricter original-entry robustness and prioritization preregistration",
+  "created_date": "2026-07-06",
+  "purpose": "Pre-register a stricter local no-paid review of the H-A2.32 timestamp-clean original-entry signal before any E2, exact replay, paid data, IBKR request, LLM call, paper trading, or operational claim.",
+  "source_decision": "reports/experiments/h_a2_original_entry_revision_summary.json",
+  "source_decision_summary": "H-A2.32 produced E1 diagnostic evidence: the 09:35-only rule is timestamp-clean, excludes the 15-minute conflict component, keeps threshold 0.001 locked, and retains 14 OOS trade days. The result remains under-sampled and underpowered, so the next safe step is robustness/prioritization review or independent validation-data planning.",
+  "research_question": "Is the H-A2.32 original-entry signal robust enough to prioritize independent validation planning, or is it too sample-fragile, regime-concentrated, or skip-cost-dependent to pursue further before new data?",
+  "locked_rule_under_review": {
+    "candidate_decision_time_et": "09:35:00",
+    "entry_time_et": "09:35:00",
+    "clean_macro_vix_condition_required": true,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_source": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json",
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false,
+    "oos_tuning_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "fifteen_minute_conflict_component_allowed": false,
+    "delayed_entry_component_allowed": false
+  },
+  "allowed_inputs": [
+    {
+      "input": "h_a2_original_entry_revision_summary",
+      "path": "reports/experiments/h_a2_original_entry_revision_summary.json",
+      "use": "source retained/skipped train and OOS groups from the pre-registered 09:35-only rule"
+    },
+    {
+      "input": "h_a2_original_entry_revision_search_log",
+      "path": "reports/experiments/search_logs/h_a2_original_entry_revision_search_log.jsonl",
+      "use": "verify no new threshold or OOS-selected filter was introduced"
+    },
+    {
+      "input": "macro_calendar_and_vix_labels",
+      "path": "data/normalized/spy_0dte",
+      "use": "classify existing days into already-available deterministic regime buckets only"
+    },
+    {
+      "input": "existing_trade_outcomes",
+      "path": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+      "use": "compare original-entry retained/skipped groups to existing implementable trade outcomes and proxy context"
+    }
+  ],
+  "forbidden_inputs": [
+    {
+      "input": "new_paid_data",
+      "reason": "This review decides whether validation data is worth planning; it does not buy data."
+    },
+    {
+      "input": "ibkr_historical_bars",
+      "reason": "Exact 2022 replay remains a separate blocked branch."
+    },
+    {
+      "input": "live_llm_outputs",
+      "reason": "H-L1 remains blocked until real timestamp-clean news cases exist."
+    },
+    {
+      "input": "gdelt_live_retry",
+      "reason": "News-Unblock remains under cooldown and is unrelated to this local H-A2 review."
+    },
+    {
+      "input": "new_oos_selected_filter",
+      "reason": "Would convert robustness review into leakage-prone OOS tuning."
+    }
+  ],
+  "planned_future_tests": [
+    {
+      "test_id": "source_rule_integrity",
+      "question": "Does the review preserve the exact H-A2.32 rule without threshold changes, OOS tuning, delayed-entry logic, or the 15-minute conflict component?",
+      "minimum_output": [
+        "candidate_decision_time_et",
+        "locked_threshold",
+        "used_features",
+        "forbidden_feature_absence",
+        "rule_integrity_status"
+      ]
+    },
+    {
+      "test_id": "leave_one_and_big_day_dependency",
+      "question": "Does retained OOS performance survive removing the most influential retained day and the most extreme 5% of retained/skipped days where sample size allows?",
+      "minimum_output": [
+        "retained_oos_count",
+        "largest_day_share",
+        "leave_one_out_min_avg_pnl",
+        "extreme_day_removal_status",
+        "big_day_dependency_status"
+      ]
+    },
+    {
+      "test_id": "regime_and_calendar_concentration",
+      "question": "Is the retained signal concentrated in one calendar month, weekday, volatility bucket, or macro/VIX regime?",
+      "minimum_output": [
+        "regime_bucket_counts",
+        "calendar_bucket_counts",
+        "largest_bucket_share",
+        "empty_critical_buckets",
+        "concentration_status"
+      ]
+    },
+    {
+      "test_id": "skip_cost_tradeoff",
+      "question": "Does the retained group improvement justify the number and PnL of skipped trades without hiding losses through sample collapse?",
+      "minimum_output": [
+        "baseline_oos_count",
+        "retained_oos_count",
+        "skipped_oos_count",
+        "retained_minus_skipped_avg_pnl",
+        "skip_cost_status"
+      ]
+    },
+    {
+      "test_id": "validation_priority_decision",
+      "question": "Should H-A2 prioritize independent validation-data planning, run another local diagnostic, return to delayed-entry quote acquisition, or park the current original-entry branch?",
+      "minimum_output": [
+        "decision",
+        "allowed_next_action",
+        "forbidden_claims",
+        "sample_adequacy_labels",
+        "evidence_tier_cap"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "threshold_locked_before_future_run": true,
+    "result_must_report_train_oos_counts": true
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_reported_group": true,
+    "mintrl_psr_labels_must_be_preserved": true,
+    "under_sampled_label_required": true,
+    "underpowered_label_required": true,
+    "search_log_required": true,
+    "dsr_required_if_any_parameter_search_occurs": true,
+    "acceptance_grade_claim_forbidden": true
+  },
+  "decision_rules": {
+    "prioritize_independent_validation_plan_if": [
+      "The exact H-A2.32 rule is preserved with no threshold change or OOS-selected filter.",
+      "Retained OOS performance does not collapse under leave-one-out or big-day checks.",
+      "The retained sample is not dominated by a single calendar/regime bucket beyond the disclosed diagnostic limits.",
+      "Skip-cost tradeoff remains directionally useful while still labeled under-sampled/underpowered."
+    ],
+    "run_another_local_diagnostic_if": [
+      "A specific robustness failure appears explainable using existing local fields only.",
+      "The follow-up can be pre-registered without changing threshold 0.001 through OOS review.",
+      "The follow-up would clarify mechanism rather than optimize a new filter."
+    ],
+    "return_to_delayed_quote_acquisition_if": [
+      "The original-entry rule is too weak without the 15-minute conflict component.",
+      "The economic logic requires waiting beyond 09:35 ET.",
+      "A delayed-entry quote/fill acquisition plan can be scoped without breaching cost or provider guardrails."
+    ],
+    "park_h_a2_original_entry_branch_if": [
+      "Retained OOS performance is dominated by one or two days.",
+      "Regime/calendar concentration makes the signal non-generalizable under current evidence.",
+      "Skip-cost analysis shows the rule mainly hides losses through sample collapse."
+    ]
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_a2_original_entry_robustness_prioritization_summary.json",
+    "summary_md": "reports/experiments/h_a2_original_entry_robustness_prioritization_report.md",
+    "search_log": "reports/experiments/search_logs/h_a2_original_entry_robustness_prioritization_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/032-higanbana-h-a2-original-entry-robustness-prioritization.md"
+  },
+  "allowed_claims": [
+    "H-A2 has a pre-registered stricter original-entry robustness/prioritization review.",
+    "The review may use only existing local artifacts and the H-A2.32 09:35-only rule.",
+    "The future run may produce E1 diagnostic/prioritization evidence only.",
+    "The review may recommend whether independent validation-data planning is worth pursuing."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not run exact replay from this preregistration.",
+    "Do not buy paid data from this preregistration.",
+    "Do not request IBKR bars from this preregistration.",
+    "Do not call LLMs from this preregistration.",
+    "Do not retry GDELT from this preregistration.",
+    "Do not change threshold 0.001 through OOS review.",
+    "Do not add a new OOS-selected filter."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "exact_replay_allowed": false,
+    "threshold_search_allowed_in_future_run": false,
+    "new_filter_allowed_in_future_run": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "The future run preserves the H-A2.32 09:35-only rule and threshold 0.001.",
+    "The future run reports leave-one-out or big-day dependency status.",
+    "The future run reports regime/calendar concentration status.",
+    "The future run reports skip-cost tradeoff and sample-adequacy labels.",
+    "The future run caps claims at E1 and writes research log 032 if it completes as a real experiment."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "Future run can be E1 diagnostic/prioritization evidence only",
+    "No independent validation data yet",
+    "No exact 2022-10 ORB replay",
+    "No paid data",
+    "No IBKR request",
+    "No live LLM call",
+    "No E2 acceptance claim"
+  ]
+}

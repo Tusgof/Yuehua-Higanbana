@@ -1,0 +1,30 @@
+{
+  "record_type": "data_availability_blocker",
+  "schema_version": "databento_spy_bars_availability_blocker_v1",
+  "created_date": "2026-07-04",
+  "hypothesis_id": "H-A2",
+  "provider": "Databento",
+  "dataset": "EQUS.MINI",
+  "schema": "ohlcv-1m",
+  "symbol": "SPY",
+  "requested_start": "2022-10-03T13:30:00+00:00",
+  "requested_end": "2022-10-31T20:00:00+00:00",
+  "mode": "live_metadata_cost_only",
+  "download_attempted": false,
+  "status": "blocked",
+  "error_type": "BentoClientError",
+  "error_code": 422,
+  "error": "data_start_before_available_start",
+  "available_start": "2023-03-28T00:00:00+00:00",
+  "decision": "databento_cannot_supply_2022_10_spy_underlying_bars",
+  "impact": [
+    "H-A2 2022-10 option quotes are downloaded and normalized.",
+    "H-A2 2022-10 ORB/backtest rerun remains blocked because the strategy needs SPY underlying 1-minute bars.",
+    "Do not attempt another Databento EQUS.MINI download for 2022-10 unless Databento availability changes."
+  ],
+  "next_safe_action": [
+    "Create or choose a no/low-cost 2022 SPY 1-minute bar source decision before any new provider purchase.",
+    "Do not buy 2022-09 option data while the remaining H-A2 blocker is 2022 underlying bars.",
+    "Keep H-A2 evidence at E1 or below until the 2022 stress month can be rerun with timestamp-clean underlying bars."
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "allowed_claims": [
+    "The locked threshold 0.001 remains unchanged.",
+    "The full locked condition is not a deployable original-entry filter because the 15-minute conflict component is known after 09:35 ET.",
+    "The condition may be studied as a delayed-entry candidate or diagnostic proxy only."
+  ],
+  "broker_request_used": false,
+  "conclusion": "ยังสรุปไม่ได้",
+  "conclusion_reason": "The locked threshold remains cleanly fixed, but the full condition is not known at the original 09:35 ET entry decision because it includes a 15-minute conflict check. Treat it as delayed-entry candidate and diagnostic proxy only.",
+  "decision_timestamp_availability_audit": {
+    "baseline_entry_time_et": "09:35:00",
+    "classification": "full_condition_not_known_at_original_entry",
+    "feature_measurement_windows": [
+      {
+        "feature": "proxy_5m_followthrough",
+        "known_by_decision_time": true,
+        "timestamp_gap_minutes": 0,
+        "window_et": "09:30:00-09:35:00"
+      },
+      {
+        "feature": "no_adverse_measured_15m_conflict",
+        "known_by_decision_time": false,
+        "timestamp_gap_minutes": 10,
+        "window_et": "09:30:00-09:45:00"
+      }
+    ],
+    "intended_decision_time_et": "09:35:00",
+    "reason": "The locked full condition includes the 15-minute conflict check, which is not known at the 09:35 ET baseline entry decision."
+  },
+  "entry_rule_classification": {
+    "baseline_entry_time_et": "09:35:00",
+    "classification": "delayed_entry_candidate_and_diagnostic_proxy_only",
+    "delayed_entry_candidate_allowed": true,
+    "deployable_entry_filter_allowed": false,
+    "diagnostic_proxy_only": true,
+    "earliest_feature_completion_time_et": "09:45:00",
+    "reason": "The 5-minute component may be known at 09:35 ET, but the full locked condition cannot be known until the 15-minute conflict window completes. A delayed-entry strategy would need a separate preregistered backtest with fills and costs."
+  },
+  "evidence_tier": "E1",
+  "exact_2022_orb_tested": false,
+  "experiment_id": "h_a2_locked_condition_signal_attribution",
+  "fixed_threshold_no_search_reconciliation": {
+    "locked_threshold": 0.001,
+    "new_filter_count": 0,
+    "new_threshold_count": 0,
+    "oos_used_for_selection": false,
+    "search_log_statement": "This audit performs no threshold or filter search; it classifies the already locked condition.",
+    "threshold_lock_status": "locked",
+    "threshold_source": "reports/experiments/h_a2_revised_opening_followthrough_condition_summary.json"
+  },
+  "forbidden_claims": [
+    "Do not claim H-A2 edge validation.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not claim original 09:35 ET entry deployability.",
+    "Do not approve paper trading, operational validation, or real-money trading."
+  ],
+  "gdelt_live_retry_used": false,
+  "generated_at_utc": "2026-07-09T05:42:55Z",
+  "hypothesis_id": "H-A2",
+  "hypothesis_implication_review": {
+    "allowed_future_claim": "H-A2.27 may only claim that the locked condition is a delayed-entry candidate and diagnostic proxy, not a validated entry filter.",
+    "exact_replay_priority": "deprioritize_original_entry_exact_replay_until_timestamp_clean_rule_exists",
+    "forbidden_future_claim": "Do not claim H-A2 edge validation, E2 evidence, paper trading approval, or original 09:35 entry deployability.",
+    "recommended_next_hypothesis_form": "If pursued, pre-register a delayed-entry H-A2 variant where the decision time is after the 15-minute conflict window and fills/costs are modeled explicitly.",
+    "research_log_requirement": "research_log/029-higanbana-h-a2-locked-condition-signal-attribution.md"
+  },
+  "ibkr_request_used": false,
+  "llm_call_used": false,
+  "locked_threshold": 0.001,
+  "network_used": false,
+  "new_provider_used": false,
+  "next_safe_action": "Either run a separately pre-registered delayed-entry H-A2 test using local artifacts only, or revise H-A2 toward a timestamp-clean original-entry rule. Do not run exact replay, paid data, IBKR request, LLM call, paper trading, or E2 claim from H-A2.27.",
+  "operational_validation_allowed": false,
+  "outcome_proxy_leakage_audit": {
+    "interpretation": "The result is useful as mechanism evidence, but it must not be treated as a deployable original-entry filter until a timestamp-clean rule is tested.",
+    "leakage_risk_label": "high_for_original_entry_filter_claim",
+    "pnl_field": "existing_implementable_pnl",
+    "proxy_return_field": "proxy_5m.directional_followthrough plus 15-minute conflict check",
+    "retained_minus_skipped_avg_implementable_pnl": null,
+    "retained_oos_avg_implementable_pnl": 72.901538,
+    "same_session_overlap_statement": "The proxy uses same-session opening movement and is directionally close to the mechanism that drives same-day option PnL.",
+    "skipped_oos_avg_implementable_pnl": -33.655238
+  },
+  "paid_data_used": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-locked-condition-signal-attribution",
+  "sample_counts": {
+    "baseline_oos_non_risk_trade_days": 34,
+    "retained_oos_trade_days": 13,
+    "skipped_oos_trade_days": 21
+  },
+  "sample_policy": {
+    "mintrl_psr_status": "blocked_underpowered_e1_diagnostic",
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "schema_version": "h_a2_locked_condition_signal_attribution_v1",
+  "source_preregistration": "experiments\\h_a2_locked_condition_signal_attribution_preregistration.json",
+  "source_robustness_summary": "reports\\experiments\\h_a2_revised_condition_robustness_summary.json",
+  "source_summary": "reports\\experiments\\h_a2_revised_opening_followthrough_condition_summary.json",
+  "status": "complete",
+  "strategy_use_allowed": false,
+  "tier_blockers": [
+    "under_sampled",
+    "underpowered",
+    "post_original_entry_feature_component",
+    "no_exact_2022_orb_replay",
+    "no_e2_acceptance_claim"
+  ],
+  "trial_policy": {
+    "new_filter_search_used": false,
+    "oos_tuning_used": false,
+    "search_log": "reports\\experiments\\search_logs\\h_a2_locked_condition_signal_attribution_search_log.jsonl",
+    "threshold_search_used": false
+  }
+}

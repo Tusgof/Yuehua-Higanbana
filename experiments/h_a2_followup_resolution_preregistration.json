@@ -1,0 +1,92 @@
+{
+  "schema_version": "h_a2_followup_resolution_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "decision": "lower_resolution_proxy_first",
+  "purpose": "Choose the next H-A2 research path after the 2022-10 coarse stress review without treating SPY 1-minute bars as the hypothesis.",
+  "research_question": "Before seeking another exact 2022 SPY bar source, can a lower-resolution proxy test weaken, falsify, or prioritize the H-A2 macro-conditioned ORB mechanism using already-available local data?",
+  "rationale": {
+    "h_a2_10_result": "October 2022 has useful stress/regime context but no exact ORB entry/exit evidence.",
+    "wiki_basis": [
+      "SPY 0DTE ORB source uses the 9:30-9:35 ET opening range and should be treated as a hypothesis generator until real option-chain validation exists.",
+      "Backtest validation protocol requires decision-timestamp observability, chronological splits, costs, big-day dependency checks, MinTRL/PSR/DSR where applicable, and clear evidence labels."
+    ],
+    "resolution_principle": "Use the coarsest data resolution that can answer the current evidence-tier question. Exact SPY 1-minute bars are required for exact ORB evidence, not for every H-A2 mechanism check."
+  },
+  "source_artifacts": {
+    "data_resolution_audit": "docs/HYPOTHESIS_DATA_RESOLUTION_AUDIT.md",
+    "h_a2_10_summary": "reports/diagnostics/h_a2_2022_10_coarse_stress_review.json",
+    "h_a2_10_log": "research_log/021-higanbana-h-a2-2022-10-coarse-stress-review.md",
+    "spy_bar_unavailable_report": "reports/data_cost/databento_spy_bars_plan_h_a2_2022_10_unavailable.json",
+    "wiki_orb_concept": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/spy-zero-dte-opening-range-breakout.md",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
+    "wiki_orb_source": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/sources/regime-conditional-alpha-spy-0dte-orb.md"
+  },
+  "candidate_paths": {
+    "lower_resolution_proxy_first": {
+      "selected": true,
+      "evidence_target": "E1",
+      "allowed_next_artifact": "A separate H-A2 lower-resolution proxy-test preregistration.",
+      "allowed_inputs": [
+        "existing local SPY intraday bars from 2023-2024, possibly downsampled to 5-minute or 15-minute bars",
+        "existing option quote summaries and implementable PnL artifacts where already available",
+        "macro calendar labels",
+        "VIX/VXV labels",
+        "existing H-A2.10 2022-10 stress/regime overlap results"
+      ],
+      "allowed_claim": "The H-A2 mechanism is weakened, falsified at proxy level, or prioritized for exact-data work.",
+      "forbidden_claims": [
+        "Do not claim exact 2022-10 ORB entries/exits were tested.",
+        "Do not claim deployable strategy edge.",
+        "Do not approve paper trading or operational validation.",
+        "Do not treat proxy PnL as implementable exact ORB PnL unless exact quote/fill logic is used."
+      ]
+    },
+    "exact_spy_bar_source_plan": {
+      "selected": false,
+      "blocked_until": [
+        "lower-resolution proxy work cannot weaken or prioritize H-A2",
+        "the next pre-registration proves exact 2022-10 ORB timing is the minimum resolution required",
+        "local TWS/Gateway is listening if IBKR remains the chosen no-paid source",
+        "user approves any new paid provider or paid source"
+      ],
+      "forbidden_now": [
+        "Do not request IBKR historical bars from H-A2.10 alone.",
+        "Do not buy more 2022 option data before the underlying-bar question is re-justified.",
+        "Do not introduce a new paid provider without explicit user approval."
+      ]
+    }
+  },
+  "next_preregistration_requirements": {
+    "must_state_hypothesis_first": true,
+    "must_state_minimum_data_resolution": true,
+    "must_explain_why_1_minute_bars_are_or_are_not_required": true,
+    "must_use_chronological_split": true,
+    "must_forbid_random_split": true,
+    "must_track_all_trials_for_dsr": true,
+    "must_report_mintrl_psr_or_explicit_not_applicable_reason": true,
+    "must_report_big_day_dependency_if_strategy_returns_exist": true,
+    "must_separate_mid_and_implementable_pnl_if_option_pnl_exists": true,
+    "must_preserve_no_paper_trading": true
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "ibkr_request_allowed": false,
+    "llm_call_allowed": false,
+    "strategy_pnl_allowed_in_this_artifact": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "planned_outputs": {
+    "preregistration_json": "experiments/h_a2_followup_resolution_preregistration.json",
+    "preregistration_md": "docs/H_A2_FOLLOWUP_RESOLUTION_PREREGISTRATION.md",
+    "validator": "scripts/validate_h_a2_followup_resolution_preregistration.py",
+    "next_experiment_log_if_future_proxy_runs": "022-higanbana-<clear-topic-slug>.md"
+  }
+}

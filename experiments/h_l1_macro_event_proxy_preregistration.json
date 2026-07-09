@@ -1,0 +1,151 @@
+{
+  "schema_version": "h_l1_macro_event_proxy_preregistration_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-L1",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "experiment_id": "h_l1_macro_event_proxy_baseline",
+  "title": "H-L1 macro-event proxy baseline",
+  "created_date": "2026-07-05",
+  "purpose": "Pre-register a deterministic macro-event and volatility-regime proxy baseline before waiting on GDELT or running live LLM calls.",
+  "hypothesis_context": "H-L1 asks whether LLM measurements of real pre-entry news add information beyond deterministic VIX and macro-calendar baselines. Since real timestamp-clean news cases are still blocked, this proxy baseline tests the deterministic part first and decides whether better news collection remains justified.",
+  "research_question": "Do already-available timestamp-clean macro-calendar labels and VIX/VXV regimes explain adverse ORB/trade conditions enough to form a baseline that future LLM/news scores must beat?",
+  "not_llm_news_evidence": true,
+  "source_artifacts": {
+    "h_l1_design": "docs/LLM_MEASUREMENT_EXPERIMENT_DESIGN.md",
+    "data_resolution_audit": "docs/HYPOTHESIS_DATA_RESOLUTION_AUDIT.md",
+    "macro_events": "data/normalized/spy_0dte/macro_event.jsonl",
+    "vix_vxv": "data/normalized/spy_0dte/vix_vxv.jsonl",
+    "existing_trade_baseline": "reports/baselines/subsystem_a_orb_baseline_summary.json",
+    "h_a2_lower_resolution_proxy_summary": "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "wiki_regime_filtering": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
+    "wiki_backtest_validation_protocol": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/backtest-validation-protocol.md",
+    "wiki_llm_training_data_contamination": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/llm-training-data-contamination.md"
+  },
+  "baseline_definition": {
+    "macro_event_labels": [
+      "scheduled high-importance macro event day",
+      "scheduled FOMC event day",
+      "scheduled CPI event day",
+      "scheduled NFP event day",
+      "scheduled Fed Chair speech day",
+      "no scheduled high-importance macro event day"
+    ],
+    "volatility_labels": [
+      "prior-close VIX low",
+      "prior-close VIX normal",
+      "prior-close VIX high_or_stress",
+      "VIX/VIX3M term-structure risk label where available"
+    ],
+    "combined_labels": [
+      "macro_event_only",
+      "vix_risk_only",
+      "macro_plus_vix_risk",
+      "no_macro_no_vix_risk"
+    ],
+    "decision_timestamp_policy": "Use only labels known before the strategy decision timestamp. Scheduled macro labels may use known calendar entries; VIX/VXV labels must use prior-close or otherwise pre-entry observable values."
+  },
+  "planned_tests": [
+    {
+      "test_id": "event_vs_no_event_outcome_split",
+      "question": "Do scheduled macro-event days show different adverse-day or trade-outcome behavior from no-event days?",
+      "minimum_output": [
+        "sample_count_by_event_label",
+        "existing_trade_count_by_event_label",
+        "adverse_day_or_loss_proxy_by_event_label",
+        "train_oos_split_counts"
+      ]
+    },
+    {
+      "test_id": "vix_regime_outcome_split",
+      "question": "Do prior-close VIX/VXV regimes explain adverse ORB/trade conditions better than macro-event labels alone?",
+      "minimum_output": [
+        "sample_count_by_vix_regime",
+        "existing_trade_count_by_vix_regime",
+        "adverse_day_or_loss_proxy_by_vix_regime",
+        "train_oos_split_counts"
+      ]
+    },
+    {
+      "test_id": "combined_macro_vix_baseline",
+      "question": "Does the combined deterministic baseline create a stronger comparison target for future LLM/news scores?",
+      "minimum_output": [
+        "sample_count_by_combined_label",
+        "trade_count_by_combined_label",
+        "effect_direction_by_combined_label",
+        "future_llm_incremental_information_target"
+      ]
+    },
+    {
+      "test_id": "future_news_collection_value_check",
+      "question": "Is there enough deterministic signal or unresolved residual risk to justify continued timestamp-clean news collection?",
+      "minimum_output": [
+        "baseline_strength_note",
+        "residual_risk_note",
+        "news_collection_priority_decision",
+        "forbidden_claim_check"
+      ]
+    }
+  ],
+  "split_policy": {
+    "chronological_split_required": true,
+    "random_split_forbidden": true,
+    "oos_tuning_forbidden": true,
+    "reference_pre_break_period": "2019-01-01 to 2022-05-10 if local aligned data exists",
+    "train_or_design_period": "2022-05-11 to 2023-12-31 where local aligned data exists",
+    "oos_period": "2024-01-01 to current available data where local aligned data exists"
+  },
+  "statistical_policy": {
+    "sample_count_required_for_every_bucket": true,
+    "mintrl_psr_required_if_return_or_trade_series_exists": true,
+    "under_sampled_label_required_below_mintrl": true,
+    "underpowered_label_required_when_power_is_insufficient": true,
+    "big_day_dependency_required_if_strategy_returns_exist": true,
+    "dsr_or_search_log_required_if_best_trial_is_reported": true,
+    "mid_vs_implementable_required_if_option_pnl_exists": true
+  },
+  "allowed_outputs_for_future_run": {
+    "summary_json": "reports/experiments/h_l1_macro_event_proxy_baseline_summary.json",
+    "summary_md": "reports/experiments/h_l1_macro_event_proxy_baseline_report.md",
+    "search_log": "reports/experiments/search_logs/h_l1_macro_event_proxy_baseline_search_log.jsonl",
+    "research_log_if_real_experiment_completes": "research_log/024-higanbana-h-l1-macro-event-proxy-baseline.md"
+  },
+  "allowed_claims": [
+    "The deterministic macro/VIX baseline is useful or weak as a comparison target for future LLM/news measurement.",
+    "Future LLM/news scores must add information beyond this baseline.",
+    "Better timestamp-clean news collection is or is not justified at E1 proxy level.",
+    "This is E1 proxy evidence only after the future run, not LLM/news evidence."
+  ],
+  "forbidden_claims": [
+    "Do not claim an LLM gate was tested.",
+    "Do not claim real news sentiment was tested.",
+    "Do not claim timestamp-clean news cases exist.",
+    "Do not run OpenRouter or any live LLM call from this preregistration.",
+    "Do not run a GDELT live retry from this preregistration.",
+    "Do not use paid news providers from this preregistration.",
+    "Do not approve paper trading.",
+    "Do not approve operational validation.",
+    "Do not approve real-money trading.",
+    "Do not claim E2 acceptance-grade evidence."
+  ],
+  "guardrails": {
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "gdelt_retry_allowed": false,
+    "llm_call_allowed": false,
+    "broker_request_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "future_run_completion_criteria": [
+    "All planned deterministic baseline tests are run or explicitly marked unavailable with source evidence.",
+    "Every event, VIX, and combined bucket reports sample count.",
+    "Chronological split and no-OOS-tuning discipline are stated.",
+    "MinTRL/PSR/DSR, under-sampled, underpowered, and big-day dependency handling is reported where applicable.",
+    "The report clearly states that this is not LLM/news evidence.",
+    "The next action states whether timestamp-clean news collection remains justified before live LLM prompt research."
+  ]
+}

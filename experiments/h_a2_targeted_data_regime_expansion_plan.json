@@ -1,0 +1,344 @@
+{
+  "schema_version": "h_a2_targeted_data_regime_expansion_plan_v1",
+  "artifact_type": "preregistration",
+  "hypothesis_id": "H-A2",
+  "experiment_id": "h_a2_targeted_data_regime_expansion_plan",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "created_date": "2026-07-08",
+  "title": "H-A2 targeted data/regime expansion plan for breakeven-aware ORB evidence",
+  "purpose": "Convert the H-A2.62 blocker from a vague sample-size problem into a targeted data plan: collect only the minimum option-chain, underlying-bar, liquidity, forced-close, and regime fields needed to test whether a breakeven-aware SPY 0DTE ORB debit vertical rule can be evaluated without lookahead.",
+  "source_artifacts": [
+    "reports/diagnostics/h_a2_breakeven_aware_rule_train_diagnostic.json",
+    "experiments/h_a2_breakeven_aware_rule_preregistration.json",
+    "reports/diagnostics/h_a2_mechanism_revision_audit.json",
+    "reports/experiments/h_a2_lower_resolution_proxy_summary.json",
+    "reports/diagnostics/h_a2_normal_control_import_diagnostic.json",
+    "reports/diagnostics/h_a2_post_stress_normalization_control_import_diagnostic.json",
+    "reports/data_cost/paid_cost_audit.json"
+  ],
+  "wiki_basis": [
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/implementable-option-pnl.md",
+      "use": "Implementable PnL, bid/ask friction, fees, cost drag, and breakeven math must govern option-strategy evidence."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/minimum-track-record-length.md",
+      "use": "Sample adequacy must be measured with MinTRL rather than a fixed N target."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/probabilistic-sharpe-ratio.md",
+      "use": "PSR must be reported with sample length, skewness, kurtosis, and serial correlation before acceptance claims."
+    },
+    {
+      "path": "D:/Fogust/Workspace/LLM Wiki/LLM Wiki/wiki/concepts/regime-filtering-for-zero-dte.md",
+      "use": "Regime filters can be useful but are overfitting risks; expansion must track volatility, macro, calendar, trend, and liquidity regimes."
+    }
+  ],
+  "research_question": "What is the minimum targeted data expansion needed to evaluate whether H-A2's breakeven-aware ORB debit vertical candidates have enough decision-time payoff feasibility, regime coverage, and sample adequacy to justify a later locked-rule OOS test?",
+  "hypothesis_status_after_h_a2_62": {
+    "conclusion": "ยังสรุปไม่ได้",
+    "h_a2_62_decision": "write_targeted_data_regime_expansion_plan",
+    "true_breakeven_rule_locked": false,
+    "reason": "Current local train artifacts can run surrogate followthrough trials but cannot compute per-candidate option payoff geometry across the train distribution.",
+    "missing_fields_from_h_a2_62": [
+      "train_distribution_nearest_discrete_long_strike",
+      "train_distribution_short_strike_width",
+      "train_distribution_entry_mid_debit",
+      "train_distribution_entry_implementable_debit",
+      "train_distribution_entry_bid_ask_width",
+      "train_distribution_entry_quote_size_or_liquidity",
+      "train_distribution_forced_close_spread_value",
+      "train_distribution_cost_adjusted_strike_reachability_target"
+    ]
+  },
+  "data_expansion_principles": {
+    "hypothesis_first": true,
+    "broad_calendar_buying_allowed": false,
+    "field_first_before_date_first": true,
+    "batch_grouped_requests_preferred": true,
+    "reuse_cache_before_download": true,
+    "paid_download_allowed_by_this_artifact": false,
+    "cost_estimate_allowed_next": true,
+    "oos_rule_evaluation_allowed_by_this_artifact": false,
+    "no_single_day_drip_downloads_without_reason": true
+  },
+  "minimum_required_fields": {
+    "underlying_bars": {
+      "dataset_candidates": [
+        "existing_local_spy_bars",
+        "Databento EQUS.MINI when available for date range",
+        "IBKR data-only path only after readiness gate"
+      ],
+      "minimum_fields": [
+        "symbol",
+        "timestamp_utc",
+        "timestamp_et",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume"
+      ],
+      "required_windows_et": [
+        "09:30-09:35 opening range",
+        "09:35 decision timestamp",
+        "15:45 forced close timestamp",
+        "full regular session if stop/target path is later introduced"
+      ],
+      "why_required": "Compute the ORB signal, entry underlying price, direction, post-entry path context, and forced-close underlying reference without treating SPY 1-minute bars as the hypothesis itself."
+    },
+    "option_chain_entry": {
+      "dataset_candidates": [
+        "existing_local_OPRA_cbbo_1m",
+        "Databento OPRA.PILLAR cbbo-1m"
+      ],
+      "minimum_fields": [
+        "raw_symbol",
+        "underlying",
+        "expiration",
+        "right",
+        "strike",
+        "timestamp_utc",
+        "timestamp_et",
+        "bid_px",
+        "ask_px",
+        "bid_sz",
+        "ask_sz"
+      ],
+      "required_windows_et": [
+        "09:34-09:36 entry chain snapshot"
+      ],
+      "strike_scope": "all same-day SPY option strikes from 0.97x to 1.03x of entry underlying price, or wider if the nearest-discrete selection audit shows missed candidates",
+      "why_required": "Map the continuous ORB/moneyness idea to tradable discrete strikes and compute entry mid debit, implementable debit, bid/ask width, and liquidity."
+    },
+    "option_chain_forced_close": {
+      "dataset_candidates": [
+        "existing_local_OPRA_cbbo_1m",
+        "Databento OPRA.PILLAR cbbo-1m"
+      ],
+      "minimum_fields": [
+        "raw_symbol",
+        "timestamp_utc",
+        "timestamp_et",
+        "bid_px",
+        "ask_px",
+        "bid_sz",
+        "ask_sz"
+      ],
+      "required_windows_et": [
+        "15:44-15:46 forced-close quote window"
+      ],
+      "why_required": "Compute mid PnL and implementable PnL for the selected vertical legs at forced close, including cost drag."
+    },
+    "regime_labels": {
+      "minimum_fields": [
+        "vix_close_or_preopen_proxy",
+        "vix_bucket",
+        "macro_event_flag",
+        "macro_event_type",
+        "day_of_week",
+        "trend_proxy_bucket",
+        "stress_subperiod_label",
+        "liquidity_bucket_from_entry_quotes"
+      ],
+      "required_windows": [
+        "available before 09:35 ET decision, except liquidity bucket derived from entry quotes"
+      ],
+      "why_required": "Prevent sample expansion from overfitting one market state and expose whether H-A2 only works in a specific volatility, macro, calendar, trend, or liquidity regime."
+    }
+  },
+  "planned_target_sets": [
+    {
+      "target_set_id": "train_candidate_geometry_backfill",
+      "priority": 1,
+      "purpose": "Backfill option payoff geometry for existing train candidate/non-risk days before selecting any revised rule.",
+      "split": "train_only",
+      "date_source": "reports/experiments/h_a2_lower_resolution_proxy_summary.json plus existing H-A2 candidate labels",
+      "target_day_rule": "all train non-risk trade days and adjacent control candidates needed to compute loss-rate and payoff-feasibility distribution",
+      "expected_current_count_from_h_a2_62": 30,
+      "minimum_windows": [
+        "SPY 09:30-09:35 ET bars",
+        "SPY 15:45 ET reference",
+        "OPRA entry chain 09:34-09:36 ET",
+        "OPRA forced-close selected-leg quotes 15:44-15:46 ET"
+      ],
+      "regime_coverage_required": [
+        "normal VIX",
+        "macro-only",
+        "no-macro/no-VIX-risk",
+        "weekday mix present in train"
+      ],
+      "allowed_next_step": "metadata_or_cache_inventory_then_cost_estimate",
+      "paid_download_allowed_now": false
+    },
+    {
+      "target_set_id": "normal_control_geometry_pack",
+      "priority": 2,
+      "purpose": "Use already downloaded 2025 normal/control packs to validate parser, strike mapping, and breakeven target logic on clean control regimes before larger spend.",
+      "split": "post_train_control_diagnostic",
+      "date_source": "reports/diagnostics/h_a2_normal_control_import_diagnostic.json and reports/diagnostics/h_a2_post_stress_normalization_control_import_diagnostic.json",
+      "target_day_rule": "all candidate-ready dates from the two downloaded control packs, plus no-trade inventory counts only",
+      "minimum_windows": [
+        "already downloaded OPRA/SPY windows only"
+      ],
+      "regime_coverage_required": [
+        "low/normal VIX",
+        "post-stress normalization",
+        "clean macro/VIX days"
+      ],
+      "allowed_next_step": "local_inventory_or_parser_work_only",
+      "paid_download_allowed_now": false
+    },
+    {
+      "target_set_id": "stress_regime_geometry_pack",
+      "priority": 3,
+      "purpose": "Add stress/high-VIX geometry only after train geometry proves the revised target can be computed and a cost estimate shows enough budget.",
+      "split": "stress_diagnostic_not_rule_selection",
+      "date_source": "2022-10 already downloaded OPRA quotes plus unresolved SPY bar source; later high-VIX months only if a source/cost gate passes",
+      "target_day_rule": "quote-available high/stress VIX days with matching underlying bars",
+      "minimum_windows": [
+        "SPY 09:30-15:45 ET underlying bars",
+        "OPRA entry chain 09:34-09:36 ET",
+        "OPRA forced-close selected-leg quotes 15:44-15:46 ET"
+      ],
+      "regime_coverage_required": [
+        "high VIX",
+        "macro-event overlap",
+        "stress subperiod"
+      ],
+      "allowed_next_step": "blocked_until_underlying_source_or_cache_inventory_passes",
+      "paid_download_allowed_now": false
+    },
+    {
+      "target_set_id": "oos_locked_rule_evaluation_pack",
+      "priority": 4,
+      "purpose": "Reserve OOS data use for a single pre-registered locked rule after train geometry and rule selection are complete.",
+      "split": "oos_only_after_future_preregistration",
+      "date_source": "2024-01-01 onward, only after no-OOS-tuning preregistration",
+      "target_day_rule": "chronological OOS candidate days matching the locked train rule; no threshold selection from OOS",
+      "minimum_windows": [
+        "same as train geometry backfill"
+      ],
+      "regime_coverage_required": [
+        "at least one normal/control regime",
+        "at least one stress or elevated-volatility regime if available without broad buying"
+      ],
+      "allowed_next_step": "future_preregistration_only",
+      "paid_download_allowed_now": false
+    }
+  ],
+  "statistical_requirements_before_acceptance": {
+    "mintrl_required": true,
+    "psr_required": true,
+    "dsr_required_if_any_trial_selection": true,
+    "big_day_dependency_required": true,
+    "active_trade_count_after_each_filter_required": true,
+    "under_sampled_label_required_if_n_below_mintrl": true,
+    "underpowered_label_required_if_power_too_low": true,
+    "mintrl_inputs": [
+      "sample_length",
+      "observed_sharpe",
+      "null_sharpe_threshold",
+      "return_skewness",
+      "return_kurtosis",
+      "first_order_autocorrelation"
+    ],
+    "acceptance_forbidden_until": [
+      "true breakeven-aware rule is locked on train only",
+      "OOS evaluation is separately pre-registered",
+      "OOS sample passes or honestly labels MinTRL/PSR blockers",
+      "big-day dependency does not overturn the conclusion",
+      "implementable PnL remains positive after cost drag"
+    ]
+  },
+  "cost_and_execution_policy": {
+    "selected_provider_for_next_estimate": "Databento only if cache inventory shows missing fields and the selected key remains inside cap",
+    "approved_key_pool": [
+      "DATABENTO_API_MO",
+      "DATABENTO_API_AI"
+    ],
+    "selected_key_must_be_logged_before_paid_action": true,
+    "per_key_cap_usd": 100,
+    "combined_mo_ai_pool_cap_usd": 200,
+    "metadata_cost_estimate_allowed_next": true,
+    "paid_download_allowed_by_this_plan": false,
+    "new_provider_allowed_by_this_plan": false,
+    "batch_grouping_required_where_possible": true,
+    "stop_conditions": [
+      "estimated selected-key usage would exceed per-key cap",
+      "estimated combined MO/AI usage would exceed pool cap",
+      "requested data is not tied to one of the target_set_id values",
+      "new provider is required",
+      "scope expands beyond SPY",
+      "broker/order transmission would be involved"
+    ]
+  },
+  "planned_next_artifact": {
+    "step_id": "H-A2.64",
+    "name": "h_a2_targeted_geometry_cache_inventory_and_cost_estimate",
+    "purpose": "Inventory existing local/cache coverage for the target sets, then estimate grouped Databento cost only for missing fields/windows. Do not download data in this step.",
+    "required_outputs": [
+      "cache coverage by target_set_id",
+      "missing field/window table",
+      "candidate date count by split and regime",
+      "grouped request plan",
+      "selected key env for estimate if a live estimate is run",
+      "estimated cost and cap headroom",
+      "explicit no-download status"
+    ],
+    "forbidden_outputs": [
+      "no paid download",
+      "no OOS rule evaluation",
+      "no threshold selection",
+      "no paper trading approval"
+    ]
+  },
+  "guardrails": {
+    "network_used_by_this_artifact": false,
+    "paid_data_used_by_this_artifact": false,
+    "paid_download_allowed": false,
+    "new_provider_allowed": false,
+    "broker_request_allowed": false,
+    "ibkr_request_allowed": false,
+    "gdelt_live_retry_allowed": false,
+    "llm_call_allowed": false,
+    "oos_rule_evaluation_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "research_log_required_for_this_preregistration": false
+  },
+  "allowed_claims": [
+    "H-A2.63 pre-registers the minimum targeted data/regime expansion plan needed after H-A2.62.",
+    "The next step is cache inventory and cost estimate, not paid download.",
+    "The plan forbids broad calendar buying and OOS rule evaluation."
+  ],
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim a breakeven-aware rule is selected for trading.",
+    "Do not approve paid download from this artifact alone.",
+    "Do not approve OOS evaluation from this artifact alone.",
+    "Do not approve paper trading, operational validation, or real-money trading.",
+    "Do not claim E2 acceptance-grade evidence."
+  ],
+  "completion_criteria": [
+    "The plan cites H-A2.62 as the controlling blocker.",
+    "The minimum missing option-chain, underlying-bar, liquidity, forced-close, and regime fields are explicit.",
+    "Target sets are prioritized and tied to hypothesis/regime gaps.",
+    "MinTRL, PSR, DSR, big-day dependency, active trade count, and under-sampled/underpowered labels are required before acceptance.",
+    "The next artifact is cache inventory and cost estimate only.",
+    "Paid download, OOS rule evaluation, broad calendar buying, paper trading, and E2 claims are forbidden.",
+    "The validator passes."
+  ],
+  "tier_blockers": [
+    "E0 preregistration only",
+    "No cache inventory or cost estimate run yet",
+    "No paid data downloaded",
+    "No true breakeven-aware train rule locked",
+    "No OOS evaluation of a locked revised rule",
+    "No MinTRL/PSR acceptance evidence",
+    "No E2 acceptance claim"
+  ],
+  "next_safe_action": "Run H-A2.64 cache inventory and metadata/cost-estimate planning for the H-A2.63 target sets. Do not download data yet."
+}

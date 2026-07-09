@@ -1,0 +1,38 @@
+{
+  "artifact_type": "import_summary",
+  "coverage_status": "fixture_pass_real_data_not_imported",
+  "evidence_tier": "E0",
+  "guardrails": {
+    "broker_execution_enabled": false,
+    "external_network_used": false,
+    "fixture_data_imported": true,
+    "ibkr_historical_request_used": false,
+    "llm_call_used": false,
+    "new_provider_used": false,
+    "orders_transmitted": false,
+    "paid_data_used": false,
+    "real_source_data_imported": false,
+    "strategy_pnl_used": false
+  },
+  "hypothesis_id": "H-A2",
+  "manifest_status": "fixture_tool_pass",
+  "mode": "fixture",
+  "next_safe_action": "Rerun the IBKR readiness probe. Execute a live historical-bars request only after readiness is ready_for_manual_data_probe; then import real bars through this bounded shape and rerun coverage validation.",
+  "operational_validation_allowed": false,
+  "output_path": "build\\h_a2_2022_spy_bars_fixture\\spy_bar.jsonl",
+  "output_rows": 8211,
+  "paper_trading_allowed": false,
+  "provider": "synthetic_fixture",
+  "ready_for_exact_rerun": false,
+  "ready_for_manual_data_probe": true,
+  "real_money_allowed": false,
+  "research_log_required": false,
+  "schema_version": "h_a2_2022_spy_bars_import_summary_v1",
+  "status": "fixture_import_pass",
+  "strategy_pnl_used": false,
+  "tier_blockers": [
+    "E0 import-shape validation only",
+    "No real source data imported",
+    "Exact H-A2 stress diagnostics remain blocked until real SPY bars pass the same gates"
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "batch": {
+    "batch_id": "sample_cost_probe_high_vix_one_day",
+    "dates": [
+      "2025-04-08"
+    ],
+    "download_allowed": false,
+    "estimate_only": true,
+    "priority": 1,
+    "role": "one-day metadata sanity check before estimating larger packs",
+    "vix_context": {
+      "bucket": "vix_above_25",
+      "source": "data/normalized/spy_0dte/vix_vxv/vix_vxv.jsonl",
+      "vix_close": 52.33
+    }
+  },
+  "batch_id": "sample_cost_probe_high_vix_one_day",
+  "batch_role": "one-day metadata sanity check before estimating larger packs",
+  "cost_guard": {
+    "basis": "user_reported_actual_usage",
+    "remaining_before_stop_usd": 5.010294,
+    "status": "pass",
+    "stop_threshold_usd": 125.0,
+    "used_usd": 119.989706
+  },
+  "cost_result": null,
+  "decision": {
+    "blockers": [
+      "requires_live_metadata_cost"
+    ],
+    "download_allowed_under_current_guard": false,
+    "reason": "Dry-run only; run with --live before any H-A2 independent-validation download decision.",
+    "separate_download_decision_required": true,
+    "status": "blocked"
+  },
+  "download_performed": false,
+  "evidence_tier": "E0",
+  "experiment_id": "h_a2_independent_validation_paid_cost_plan",
+  "forbidden_next_actions": [
+    "paid_download_without_separate_decision_artifact",
+    "broad_2025_calendar_estimate",
+    "new_paid_provider",
+    "threshold_search",
+    "new_oos_selected_filter",
+    "exact_replay",
+    "paper_trading_or_e2_claim"
+  ],
+  "hypothesis_id": "H-A2",
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "delayed_entry_component_allowed": false,
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "fifteen_minute_conflict_component_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "oos_tuning_allowed": false,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false
+  },
+  "mode": "dry_run_no_download",
+  "planned_request_count": 15,
+  "planned_requests": [
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T13:40:00+00:00",
+      "field_group": "option_entry_quote",
+      "note": "10-minute window around 09:35 ET entry",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T13:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_entry_0935"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T14:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T13:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_entry_check_1000"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T14:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 10:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T14:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1030"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T15:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T14:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1100"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T15:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 11:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T15:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1130"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T16:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T15:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1200"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T16:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 12:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T16:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1230"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T17:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T16:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1300"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T17:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 13:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T17:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1330"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T18:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T17:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1400"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T18:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 14:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1430"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T19:05:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:00 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1500"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T19:35:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:30 ET check",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T19:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_exit_check_1530"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-04-08",
+      "end": "2025-04-08T19:50:00+00:00",
+      "field_group": "option_exit_quotes",
+      "note": "10-minute window around 15:45 ET forced close",
+      "schema": "cbbo-1m",
+      "start": "2025-04-08T19:40:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-04-08_forced_close_1545"
+    },
+    {
+      "batch_id": "sample_cost_probe_high_vix_one_day",
+      "dataset": "EQUS.MINI",
+      "date": "2025-04-08",
+      "end": "2025-04-08T20:00:00+00:00",
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "schema": "ohlcv-1m",
+      "start": "2025-04-08T13:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-04-08_spy_underlying_full_session"
+    }
+  ],
+  "preregistration_validation": {
+    "blockers": [],
+    "candidate_batch_count": 4,
+    "current_remaining_before_stop_usd": 5.010294,
+    "evidence_tier": "E0",
+    "experiment_id": "h_a2_independent_validation_paid_cost_plan",
+    "first_batch_id": "sample_cost_probe_high_vix_one_day",
+    "hypothesis_id": "H-A2",
+    "ibkr_request_allowed": false,
+    "live_cost_estimate_allowed": false,
+    "llm_call_allowed": false,
+    "network_allowed": false,
+    "paid_data_allowed": false,
+    "paper_trading_allowed": false,
+    "prereg_path": "experiments\\h_a2_independent_validation_paid_cost_plan_preregistration.json",
+    "status": "pass"
+  },
+  "projected_usage_if_downloaded_usd": null,
+  "schema_version": "h_a2_independent_validation_cost_estimate_v1"
+}

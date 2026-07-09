@@ -15,7 +15,7 @@ DEFAULT_SCHEMA = "cbbo-1m"
 DEFAULT_SYMBOL = "SPY.OPT"
 DEFAULT_STYPE_IN = "parent"
 DEFAULT_API_KEY_ENV = "DATABENTO_API_KEY"
-DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API",)
+DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
 DEFAULT_REVIEW_COST_USD = 5.0
 DEFAULT_BLOCK_COST_USD = 25.0
 SCENARIOS = ["one_day_sample", "one_month_pilot", "oos_2024_2025", "full_research"]
@@ -201,7 +201,7 @@ def render_plan(requests: list[CostRequest]) -> dict[str, Any]:
     return {
         "mode": "dry_run",
         "warning": (
-            "This is a request plan only. Use --live with DATABENTO_API_KEY to call "
+            "This is a request plan only. Use --live with a configured Databento API key env to call "
             "Databento metadata.get_cost. Parent symbol SPY.OPT is an upper-bound request."
         ),
         "requests": [asdict(request) for request in requests],

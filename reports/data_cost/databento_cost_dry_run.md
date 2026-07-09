@@ -3,7 +3,7 @@
 - **Mode**: `dry_run`
 - **Total request count**: 3
 - **Total estimated cost**: not available in dry-run mode
-- **Warning**: This is a request plan only. Use --live with DATABENTO_API_KEY to call Databento metadata.get_cost. Parent symbol SPY.OPT is an upper-bound request.
+- **Warning**: This is a request plan only. Use --live with a configured Databento API key env to call Databento metadata.get_cost. Parent symbol SPY.OPT is an upper-bound request.
 - **Decision**: `review`
 - **Decision reason**: Dry-run has no dollar estimate. Run one_day_sample --live before any download.
 

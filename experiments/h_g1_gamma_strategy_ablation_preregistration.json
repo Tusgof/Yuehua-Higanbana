@@ -1,0 +1,195 @@
+{
+  "schema_version": "h_g1_gamma_strategy_ablation_preregistration_v1",
+  "artifact_type": "h_g1_gamma_strategy_ablation_preregistration",
+  "hypothesis_id": "H-G1",
+  "created_date": "2026-07-04",
+  "status": "preregistered_strategy_ablation",
+  "evidence_tier": "E0",
+  "conclusion": "ยังสรุปไม่ได้",
+  "source_blocker_review": "reports/diagnostics/h_g1_acceptance_blocker_review.json",
+  "source_data_validity_diagnostic": "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3_side_aware.json",
+  "controlling_policy": "experiments/h_g1_side_aware_bucket_policy_adoption.json",
+  "network_used": false,
+  "paid_data_used": false,
+  "new_data_requested": false,
+  "strategy_pnl_used": false,
+  "research_log_required": false,
+  "strategy_use_allowed_before_results": false,
+  "paper_trading_allowed_before_results": false,
+  "objective": "Lock the next H-G1 strategy-ablation design before any NOVI/net-gamma filter test, so later PnL evidence cannot be shaped after seeing results.",
+  "design_principles": [
+    "Risk-first: the study tries to falsify whether the signed-OI gamma proxy improves a strategy, not to find a nice-looking filter.",
+    "Chronological discipline: train, threshold fitting, and any selection occur before OOS evaluation.",
+    "Ablation discipline: every gamma-filtered variant is compared against the unfiltered quantitative baseline.",
+    "Implementation realism: mid PnL and implementable PnL must be reported separately.",
+    "Search honesty: every attempted variant is logged before any best-Sharpe claim."
+  ],
+  "allowed_input_artifacts": [
+    "reports/diagnostics/h_g1_acceptance_blocker_review.json",
+    "reports/diagnostics/h_g1_gamma_regime_diagnostic_summary_v3_side_aware.json",
+    "experiments/h_g1_side_aware_bucket_policy_adoption.json",
+    "experiments/h_g1_gamma_regime_date_set_preregistration_v3.json",
+    "existing cached SPY bars, option quotes, OI statistics, and computed gamma proxy rows",
+    "existing Sub-System A ORB baseline rules and fills, if timestamp-aligned to the decision time"
+  ],
+  "forbidden_before_results": [
+    "strategy use",
+    "paper trading approval",
+    "new paid data justified solely by this preregistration",
+    "new gamma dates or OI files for this preregistered run",
+    "OOS threshold tuning after viewing validation results",
+    "changing variants after seeing PnL",
+    "claiming true market-maker net gamma"
+  ],
+  "chronological_split": {
+    "method": "fixed_chronological_split",
+    "train_start": "2022-05-11",
+    "train_end": "2023-12-31",
+    "oos_start": "2024-01-01",
+    "random_split_allowed": false,
+    "oos_tuning_allowed": false,
+    "thresholds_fit_on": "train_only",
+    "thresholds_frozen_before_oos": true
+  },
+  "baseline_variant": {
+    "variant_id": "baseline_quant_only",
+    "variant_type": "baseline",
+    "description": "Existing timestamp-clean Sub-System A ORB quantitative rule with no gamma proxy filter.",
+    "gamma_filter": "none"
+  },
+  "gamma_variants": [
+    {
+      "variant_id": "skip_negative_gamma_proxy_days",
+      "variant_type": "gamma_filter",
+      "description": "Skip otherwise valid baseline trades when the decision-time signed-OI gamma proxy is negative.",
+      "gamma_filter": "signed_oi_gamma_proxy < 0"
+    },
+    {
+      "variant_id": "skip_extreme_negative_gamma_proxy_days",
+      "variant_type": "gamma_filter",
+      "description": "Skip otherwise valid baseline trades in the most negative train-fitted signed-OI gamma proxy tercile.",
+      "gamma_filter": "signed_oi_gamma_proxy <= train_only_bottom_tercile_cutoff"
+    },
+    {
+      "variant_id": "positive_gamma_proxy_only",
+      "variant_type": "gamma_filter",
+      "description": "Allow otherwise valid baseline trades only when the decision-time signed-OI gamma proxy is positive.",
+      "gamma_filter": "signed_oi_gamma_proxy > 0"
+    }
+  ],
+  "variant_count_policy": {
+    "baseline_count": 1,
+    "gamma_variant_count": 3,
+    "total_trial_count": 4,
+    "additional_variants_allowed_without_new_preregistration": false
+  },
+  "selection_rule": {
+    "primary_decision_basis": "OOS implementable PnL and tail-risk improvement versus baseline, not best observed Sharpe alone.",
+    "best_sharpe_selection_allowed": false,
+    "candidate_can_advance_to_e2_only_if": [
+      "OOS implementable PnL or tail metrics improve versus baseline without unacceptable trade-count collapse.",
+      "MinTRL/PSR labels do not mark the accepted claim under-sampled or underpowered, or the result is explicitly capped at E1 diagnostic.",
+      "DSR accounts for the complete trial count if a selected-best metric is reported.",
+      "Big-day dependency check survives after removing the most extreme 5% winning/losing trades or close days.",
+      "Cost drag is reported and does not erase the claimed edge.",
+      "Regime coverage is reported across volatility, macro/no-macro, train/OOS, and stress buckets where data exists."
+    ]
+  },
+  "search_log_policy": {
+    "required": true,
+    "path": "reports/experiments/search_logs/h_g1_gamma_strategy_ablation_search_log.jsonl",
+    "effective_trial_count_floor": 4,
+    "must_log_every_attempted_variant": true,
+    "dsr_required_if_selecting_best": true,
+    "dsr_blocker_required_if_uncomputable": true
+  },
+  "metrics_required": [
+    "trade_count",
+    "active_trade_count_by_filter",
+    "skipped_trade_count_by_filter",
+    "mid_pnl",
+    "implementable_pnl",
+    "cost_drag",
+    "daily_pnl",
+    "equity_curve",
+    "drawdown_curve",
+    "sharpe",
+    "sortino",
+    "max_drawdown",
+    "es95",
+    "es99",
+    "worst_day_loss",
+    "win_rate",
+    "payoff_ratio",
+    "benchmark_comparison",
+    "sample_length",
+    "mintrl",
+    "psr",
+    "under_sampled_label",
+    "underpowered_label",
+    "dsr_or_dsr_blocker",
+    "big_day_dependency_result",
+    "regime_trade_counts"
+  ],
+  "statistical_power_policy": {
+    "mintrl_required": true,
+    "psr_required": true,
+    "null_sharpe_thresholds": [
+      0.0,
+      0.5
+    ],
+    "distribution_inputs_required": [
+      "sample_length",
+      "observed_sharpe",
+      "skewness",
+      "kurtosis",
+      "first_order_autocorrelation"
+    ],
+    "under_sampled_label_required_when_sample_below_mintrl": true,
+    "underpowered_label_required_when_power_is_insufficient": true
+  },
+  "big_day_dependency_policy": {
+    "required": true,
+    "extreme_fraction_each_side": 0.05,
+    "remove_extreme_winners_and_losers": true,
+    "metrics_to_recompute": [
+      "sharpe",
+      "implementable_pnl",
+      "max_drawdown",
+      "es95",
+      "es99",
+      "conclusion"
+    ]
+  },
+  "implementable_pnl_policy": {
+    "mid_pnl_required": true,
+    "implementable_pnl_required": true,
+    "cost_drag_required": true,
+    "bid_ask_spread_treatment_required": true,
+    "per_leg_fee_usd": 0.64,
+    "forced_close_time_et": "15:45",
+    "entry_market_orders_allowed": false
+  },
+  "proxy_wording_policy": {
+    "required_term": "signed-OI gamma proxy",
+    "forbidden_terms_without_inventory_source": [
+      "true market-maker net gamma",
+      "dealer net gamma",
+      "market-maker inventory"
+    ],
+    "inventory_source_required_for_true_net_gamma_claim": true
+  },
+  "expected_outputs": {
+    "summary_json": "reports/experiments/h_g1_gamma_strategy_ablation_summary.json",
+    "summary_md": "reports/experiments/h_g1_gamma_strategy_ablation_summary.md",
+    "search_log": "reports/experiments/search_logs/h_g1_gamma_strategy_ablation_search_log.jsonl"
+  },
+  "next_allowed_action": "implement_h_g1_gamma_strategy_ablation_using_this_preregistration",
+  "tier_blockers": [
+    "Pre-registration only",
+    "No strategy-return series yet",
+    "No MinTRL/PSR/DSR result yet",
+    "No implementable PnL or big-day dependency result yet",
+    "No true dealer/customer inventory source"
+  ]
+}

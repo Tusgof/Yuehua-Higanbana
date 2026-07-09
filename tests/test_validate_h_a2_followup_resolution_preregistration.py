@@ -1,0 +1,63 @@
+from __future__ import annotations
+
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from scripts.validate_h_a2_followup_resolution_preregistration import (
+    validate_h_a2_followup_resolution_preregistration,
+)
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PREREG_PATH = PROJECT_ROOT / "experiments" / "h_a2_followup_resolution_preregistration.json"
+
+
+class ValidateHA2FollowupResolutionPreregistrationTests(unittest.TestCase):
+    def test_current_preregistration_passes(self) -> None:
+        result = validate_h_a2_followup_resolution_preregistration()
+
+        self.assertEqual("pass", result["status"], result["blockers"])
+        self.assertEqual("H-A2", result["hypothesis_id"])
+        self.assertEqual("E0", result["evidence_tier"])
+        self.assertEqual("lower_resolution_proxy_first", result["decision"])
+        self.assertIs(True, result["proxy_selected"])
+        self.assertIs(False, result["exact_source_selected"])
+        self.assertIs(False, result["paper_trading_allowed"])
+
+    def test_rejects_exact_source_selection(self) -> None:
+        data = json.loads(PREREG_PATH.read_text(encoding="utf-8"))
+        data["decision"] = "exact_spy_bar_source_plan"
+        data["candidate_paths"]["lower_resolution_proxy_first"]["selected"] = False
+        data["candidate_paths"]["exact_spy_bar_source_plan"]["selected"] = True
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "prereg.json"
+            path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+
+            result = validate_h_a2_followup_resolution_preregistration(path)
+
+        self.assertEqual("blocked", result["status"])
+        self.assertIn("decision_must_be_lower_resolution_proxy_first", result["blockers"])
+        self.assertIn("proxy_path_must_be_selected", result["blockers"])
+        self.assertIn("exact_source_path_must_not_be_selected", result["blockers"])
+
+    def test_rejects_paid_ibkr_or_paper_permission(self) -> None:
+        data = json.loads(PREREG_PATH.read_text(encoding="utf-8"))
+        data["guardrails"]["paid_data_allowed"] = True
+        data["guardrails"]["ibkr_request_allowed"] = True
+        data["guardrails"]["paper_trading_allowed"] = True
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "prereg.json"
+            path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+
+            result = validate_h_a2_followup_resolution_preregistration(path)
+
+        self.assertEqual("blocked", result["status"])
+        self.assertIn("paid_data_allowed_must_be_false", result["blockers"])
+        self.assertIn("ibkr_request_allowed_must_be_false", result["blockers"])
+        self.assertIn("paper_trading_allowed_must_be_false", result["blockers"])
+
+
+if __name__ == "__main__":
+    unittest.main()

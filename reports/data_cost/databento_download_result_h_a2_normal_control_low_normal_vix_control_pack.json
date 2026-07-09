@@ -1,0 +1,876 @@
+{
+  "allowed_claims": [
+    "H-A2 normal/control raw data was downloaded or cache-confirmed for the approved dates only.",
+    "The download preserves the locked 09:35-only H-A2 signal and threshold 0.001.",
+    "The download is data acquisition only and does not validate H-A2 edge."
+  ],
+  "approved_download_scope": {
+    "datasets": [
+      "OPRA.PILLAR",
+      "EQUS.MINI"
+    ],
+    "dates": [
+      "2025-02-03",
+      "2025-02-04",
+      "2025-02-05",
+      "2025-02-06",
+      "2025-02-07",
+      "2025-02-10",
+      "2025-02-11",
+      "2025-02-12",
+      "2025-02-13",
+      "2025-02-14"
+    ],
+    "download_result_path": "reports/data_cost/databento_download_result_h_a2_normal_control_low_normal_vix_control_pack.json",
+    "metadata_grouped_request_count": 20,
+    "option_symbol": "SPY.OPT",
+    "planned_required_request_count": 150,
+    "provider": "Databento",
+    "raw_output_root": "data/raw/spy_0dte/databento/h_a2_normal_control_low_normal_vix_control_pack",
+    "schemas": [
+      "cbbo-1m",
+      "ohlcv-1m"
+    ],
+    "selected_key_env": "DATABENTO_API_MO",
+    "symbol_scope": "SPY only",
+    "underlying_symbol": "SPY"
+  },
+  "blockers": [],
+  "cost_guard": {
+    "basis": "selected_key_mo_ai_pool",
+    "decision": "pass_under_selected_key_and_mo_ai_pool_caps",
+    "estimated_download_cost_usd": 5.398913,
+    "legacy_cost_guard_used_usd": 120.494368,
+    "legacy_guard_would_be_exceeded": true,
+    "legacy_projected_used_if_downloaded_usd": 125.893281,
+    "legacy_stop_threshold_usd": 125.0,
+    "mo_ai_combined_pool_cap_usd": 200.0,
+    "projected_mo_ai_pool_usage_if_downloaded_usd": 5.398913,
+    "projected_selected_key_usage_if_downloaded_usd": 5.398913,
+    "selected_key_cap_usd": 100.0,
+    "selected_key_env": "DATABENTO_API_MO"
+  },
+  "download_decision": "approve_low_normal_vix_control_pack_download_after_paid_cost_audit_pass",
+  "download_performed": true,
+  "execution": {
+    "cache_count": 0,
+    "downloaded_count": 20,
+    "downloads": [
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 80387271,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-03",
+        "end": "2025-02-03T20:50:00+00:00",
+        "estimated_cost_usd": 0.546383,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-03_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "e13163c45a2f4e133f289cc5a4ee6b15e321bff00279fd245937e89d56a023c2",
+        "source": "downloaded",
+        "start": "2025-02-03T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-03_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 9560,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-03",
+        "end": "2025-02-03T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-03_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "d77f4e61d9d702a90a5b820a3af24a428e42118763813271e09b63529f194b8c",
+        "source": "downloaded",
+        "start": "2025-02-03T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-03_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 75593078,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-04",
+        "end": "2025-02-04T20:50:00+00:00",
+        "estimated_cost_usd": 0.551716,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-04_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "731ffdb4c0f875e0f5877a6242c8cea36e4cec0d6b1ddec789aa784551bd9fd5",
+        "source": "downloaded",
+        "start": "2025-02-04T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-04_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 8524,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-04",
+        "end": "2025-02-04T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-04_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "60e0e6510efca96df09f8c6f85500dfa054bd435babfe5e98ee4faff3b6a46ec",
+        "source": "downloaded",
+        "start": "2025-02-04T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-04_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 72958916,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-05",
+        "end": "2025-02-05T20:50:00+00:00",
+        "estimated_cost_usd": 0.540702,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-05_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "7f9dbc53774a0928b56de077f27811a8dd3bfcc13eeee3bdaaee136220699b93",
+        "source": "downloaded",
+        "start": "2025-02-05T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-05_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 8729,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-05",
+        "end": "2025-02-05T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-05_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "dd3ce71a676f84e5b933733876535b23543bd45eedb15c6b550b4d29062ea140",
+        "source": "downloaded",
+        "start": "2025-02-05T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-05_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 72628069,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-06",
+        "end": "2025-02-06T20:50:00+00:00",
+        "estimated_cost_usd": 0.540818,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-06_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "9c8fb4012cc1a8b1cf2c6189fd76a36d5df08bf6b8f9da62aa8130c7b655586a",
+        "source": "downloaded",
+        "start": "2025-02-06T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-06_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 8477,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-06",
+        "end": "2025-02-06T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-06_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "6e0276c204bf83c975b5f82a5304fa32c4889f6f3e2d692b1fb6a8a25dd7e42d",
+        "source": "downloaded",
+        "start": "2025-02-06T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-06_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 75400663,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-07",
+        "end": "2025-02-07T20:50:00+00:00",
+        "estimated_cost_usd": 0.539775,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-07_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "c8ae6b66ab2658c0defd63530d8c297fd55e87e95bc6ed59bb7a0f71ba43e4a0",
+        "source": "downloaded",
+        "start": "2025-02-07T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-07_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 9440,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-07",
+        "end": "2025-02-07T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-07_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "ca8488ebc66810c6bcc66c9e5164efc043d83dcdcfce00e5c412c6e25d1a0884",
+        "source": "downloaded",
+        "start": "2025-02-07T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-07_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 72487323,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-10",
+        "end": "2025-02-10T20:50:00+00:00",
+        "estimated_cost_usd": 0.537108,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-10_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "8949afdd86bb246ddc44dd0661b3e139cd4406493f7dc6e84069adee199f7834",
+        "source": "downloaded",
+        "start": "2025-02-10T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-10_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 8210,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-10",
+        "end": "2025-02-10T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-10_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "ba7bb7cce62dce28a510a49ee4562dff58e3c98c00b58b5059bab2dbf805467f",
+        "source": "downloaded",
+        "start": "2025-02-10T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-10_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 69992594,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-11",
+        "end": "2025-02-11T20:50:00+00:00",
+        "estimated_cost_usd": 0.530269,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-11_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "6ca3a5724d9b800929696d531a2515d308f96c3b661bf982b1eeadf5a3b03045",
+        "source": "downloaded",
+        "start": "2025-02-11T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-11_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 8232,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-11",
+        "end": "2025-02-11T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-11_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "d7efa7909ea28dc791e82ac120da3998c32088f7cbfe210274809b8a8e55ee1e",
+        "source": "downloaded",
+        "start": "2025-02-11T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-11_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 72584945,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-12",
+        "end": "2025-02-12T20:50:00+00:00",
+        "estimated_cost_usd": 0.525399,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-12_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "102b6447ab8c4565909c1ca8ca5cc190a64614c45da880b84d151cc5beed7813",
+        "source": "downloaded",
+        "start": "2025-02-12T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-12_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 8972,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-12",
+        "end": "2025-02-12T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-12_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "62af05ec9aae36c55989b7ecf4551f7e180ac04661ef2e0c61738486a2dc2e2e",
+        "source": "downloaded",
+        "start": "2025-02-12T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-12_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 74739222,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-13",
+        "end": "2025-02-13T20:50:00+00:00",
+        "estimated_cost_usd": 0.541862,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-13_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "51851e8b623c3f96fd6771b278ea5b64a9fedaa6130e1cc10c4c3a98f5207bfa",
+        "source": "downloaded",
+        "start": "2025-02-13T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-13_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 8951,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-13",
+        "end": "2025-02-13T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-13_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "fb296c0d45a8401452f5a3af63c60e2a0c7491e4e9ab637a76de2d8492ed19f8",
+        "source": "downloaded",
+        "start": "2025-02-13T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-13_spy_underlying_full_session"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 74298914,
+        "dataset": "OPRA.PILLAR",
+        "date": "2025-02-14",
+        "end": "2025-02-14T20:50:00+00:00",
+        "estimated_cost_usd": 0.542441,
+        "field_group": "option_quotes_grouped_conservative",
+        "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-14_opra_grouped_0930_1550.dbn.zst",
+        "schema": "cbbo-1m",
+        "sha256": "e18003a6507be49f4d52985ad95bc611f81e621556e5952879e454ff2e5a969e",
+        "source": "downloaded",
+        "start": "2025-02-14T14:30:00+00:00",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ],
+        "window": "2025-02-14_opra_grouped_0930_1550"
+      },
+      {
+        "batch_id": "low_normal_vix_control_pack",
+        "bytes": 7906,
+        "dataset": "EQUS.MINI",
+        "date": "2025-02-14",
+        "end": "2025-02-14T21:00:00+00:00",
+        "estimated_cost_usd": 0.000244,
+        "field_group": "spy_underlying_bars",
+        "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+        "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-14_spy_underlying_full_session.dbn.zst",
+        "schema": "ohlcv-1m",
+        "sha256": "0d966c3097da9add4faabf21cddeaeb7adb24f6c10f66279ffa19c3b7f559f55",
+        "source": "downloaded",
+        "start": "2025-02-14T14:30:00+00:00",
+        "stype_in": "raw_symbol",
+        "symbols": [
+          "SPY"
+        ],
+        "window": "2025-02-14_spy_underlying_full_session"
+      }
+    ],
+    "errors": [],
+    "total_bytes": 741157996
+  },
+  "forbidden_claims": [
+    "Do not claim H-A2 edge is validated.",
+    "Do not claim E2 acceptance-grade evidence.",
+    "Do not approve paper trading.",
+    "Do not run exact replay directly from this download result.",
+    "Do not change threshold 0.001 or add an OOS-selected filter."
+  ],
+  "hypothesis_id": "H-A2",
+  "locked_signal_under_validation": {
+    "candidate_decision_time_et": "09:35:00",
+    "delayed_entry_component_allowed": false,
+    "entry_time_et": "09:35:00",
+    "features": [
+      "clean_macro_vix_condition",
+      "proxy_5m_followthrough"
+    ],
+    "fifteen_minute_conflict_component_allowed": false,
+    "new_oos_selected_filter_allowed": false,
+    "oos_tuning_allowed": false,
+    "opening_followthrough_threshold": 0.001,
+    "threshold_must_remain_locked": true,
+    "threshold_search_allowed": false
+  },
+  "metadata_grouped_request_count": 20,
+  "mode": "download_complete",
+  "paid_cost_audit_before_download": {
+    "cost_guard_basis": "user_reported_actual_usage",
+    "cost_guard_used_usd": 120.494368,
+    "remaining_before_stop_usd": 4.505632,
+    "status": "pass"
+  },
+  "planned_required_request_count": 150,
+  "request_count": 20,
+  "requests": [
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-03",
+      "end": "2025-02-03T20:50:00+00:00",
+      "estimated_cost_usd": 0.546383,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-03_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-03T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-03_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-03",
+      "end": "2025-02-03T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-03_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-03T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-03_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-04",
+      "end": "2025-02-04T20:50:00+00:00",
+      "estimated_cost_usd": 0.551716,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-04_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-04T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-04_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-04",
+      "end": "2025-02-04T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-04_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-04T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-04_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-05",
+      "end": "2025-02-05T20:50:00+00:00",
+      "estimated_cost_usd": 0.540702,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-05_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-05T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-05_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-05",
+      "end": "2025-02-05T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-05_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-05T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-05_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-06",
+      "end": "2025-02-06T20:50:00+00:00",
+      "estimated_cost_usd": 0.540818,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-06_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-06T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-06_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-06",
+      "end": "2025-02-06T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-06_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-06T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-06_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-07",
+      "end": "2025-02-07T20:50:00+00:00",
+      "estimated_cost_usd": 0.539775,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-07_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-07T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-07_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-07",
+      "end": "2025-02-07T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-07_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-07T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-07_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-10",
+      "end": "2025-02-10T20:50:00+00:00",
+      "estimated_cost_usd": 0.537108,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-10_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-10T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-10_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-10",
+      "end": "2025-02-10T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-10_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-10T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-10_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-11",
+      "end": "2025-02-11T20:50:00+00:00",
+      "estimated_cost_usd": 0.530269,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-11_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-11T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-11_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-11",
+      "end": "2025-02-11T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-11_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-11T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-11_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-12",
+      "end": "2025-02-12T20:50:00+00:00",
+      "estimated_cost_usd": 0.525399,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-12_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-12T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-12_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-12",
+      "end": "2025-02-12T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-12_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-12T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-12_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-13",
+      "end": "2025-02-13T20:50:00+00:00",
+      "estimated_cost_usd": 0.541862,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-13_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-13T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-13_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-13",
+      "end": "2025-02-13T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-13_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-13T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-13_spy_underlying_full_session"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "OPRA.PILLAR",
+      "date": "2025-02-14",
+      "end": "2025-02-14T20:50:00+00:00",
+      "estimated_cost_usd": 0.542441,
+      "field_group": "option_quotes_grouped_conservative",
+      "note": "Conservative metadata-cost estimate covering all required OPRA windows for the day. No download is performed.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-14_opra_grouped_0930_1550.dbn.zst",
+      "schema": "cbbo-1m",
+      "start": "2025-02-14T14:30:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2025-02-14_opra_grouped_0930_1550"
+    },
+    {
+      "batch_id": "low_normal_vix_control_pack",
+      "dataset": "EQUS.MINI",
+      "date": "2025-02-14",
+      "end": "2025-02-14T21:00:00+00:00",
+      "estimated_cost_usd": 0.000244,
+      "field_group": "spy_underlying_bars",
+      "note": "Full regular-session 1-minute SPY bars for signal reconstruction and context.",
+      "raw_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\h_a2_normal_control_low_normal_vix_control_pack\\2025-02-14_spy_underlying_full_session.dbn.zst",
+      "schema": "ohlcv-1m",
+      "start": "2025-02-14T14:30:00+00:00",
+      "stype_in": "raw_symbol",
+      "symbols": [
+        "SPY"
+      ],
+      "window": "2025-02-14_spy_underlying_full_session"
+    }
+  ],
+  "scenario": "h_a2_normal_control_low_normal_vix_control_pack",
+  "schema_version": "h_a2_normal_control_download_result_v1",
+  "selected_batch": {
+    "batch_id": "low_normal_vix_control_pack",
+    "dates": [
+      "2025-02-03",
+      "2025-02-04",
+      "2025-02-05",
+      "2025-02-06",
+      "2025-02-07",
+      "2025-02-10",
+      "2025-02-11",
+      "2025-02-12",
+      "2025-02-13",
+      "2025-02-14"
+    ],
+    "macro_context": {
+      "high_importance_macro_days_from_local_calendar": 0
+    },
+    "period_end": "2025-02-14",
+    "period_start": "2025-02-03",
+    "role": "first normal/control independent-validation metadata estimate",
+    "vix_context": {
+      "bucket": "vix_below_25",
+      "observed_vix_close_range": [
+        14.77,
+        18.62
+      ],
+      "observed_vxv_close_range": [
+        17.81,
+        19.55
+      ]
+    }
+  },
+  "source_cost_report": "reports\\data_cost\\h_a2_normal_control_low_normal_vix_control_pack_cost_estimate.json",
+  "source_decision": "experiments\\h_a2_normal_control_paid_download_decision.json",
+  "status": "pass",
+  "total_estimated_cost_usd": 5.398913
+}
