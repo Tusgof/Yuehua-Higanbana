@@ -27,8 +27,12 @@ While this external blocker is parked, Codex may continue `$0` local remediation
 | Helper drift audit | Implemented; findings reported | `scripts\audit_helper_drift.py`, `reports\diagnostics\helper_drift_audit.json` |
 | Locked gate manifest | Seeded | `experiments\locked_gates.jsonl`, `scripts\validate_locked_gates.py` |
 | Golden statistics anchors | Implemented | `lib\statistics.py`, `tests\test_statistics_golden.py` |
+| New-script `lib/` usage audit | Implemented | `config\new_code_scripts.json`, `scripts\audit_new_script_lib_usage.py`, `reports\diagnostics\new_script_lib_usage_audit.json` |
+| E2 adversarial-review gate | Implemented | `scripts\evaluate_research_acceptance.py`, `tests\test_evaluate_research_acceptance.py` |
+| OPRA statistics boundary schema | Implemented | `schemas\opra_statistics_boundary.schema.json`, `lib\opra_statistics_schema.py`, `tests\test_opra_statistics_schema.py` |
 | Report retention policy | Proposed only | `docs\REPORT_RETENTION_POLICY_PROPOSAL.md` |
 | Wiki citation hash audit | Implemented; missing hashes measured | `scripts\audit_wiki_citation_hashes.py`, `reports\diagnostics\wiki_citation_hash_audit.json` |
+| Governance epoch tagging | Implemented | `config\governance_epochs.json`, `docs\GOVERNANCE_EPOCH_TAGGING.md`, `scripts\validate_governance_epochs.py` |
 
 ## Current Findings For Fable 5
 
@@ -37,16 +41,19 @@ While this external blocker is parked, Codex may continue `$0` local remediation
 - `AGENTS.md` now requires user or Fable 5 review before changing a locked preregistration artifact or locked validator.
 - `tests\test_statistics_golden.py` anchors the current convention: population Sharpe/skewness, raw population kurtosis, left-tail expected shortfall, and Black-Scholes call/put price/delta/gamma.
 - `scripts\audit_wiki_citation_hashes.py` reports `5` existing wiki citations with missing embedded hashes and no missing source file under the current local wiki root.
+- `scripts\audit_new_script_lib_usage.py` reports `pass` with `0` new scripts bypassing shared `lib/` helpers.
+- `scripts\evaluate_research_acceptance.py` now requires an adversarial/refutation review artifact before any E2 candidate can pass the acceptance gate.
+- `scripts\validate_governance_epochs.py` reports `pass` for 4 governance epochs. The Technical DD epoch remains `active_with_external_blocker` until the flash-drive restore/checksum closure is done.
 
 ## Do Not Claim Yet
 
 - Do not claim Technical DD Workstream 1 complete.
 - Do not lift the paid-data and hypothesis-expansion freeze.
 - Do not call Databento metadata, download paid data, call live LLM research APIs, run GDELT retries, request broker data/orders, approve paper trading, or claim E2 evidence from the current remediation work.
+- Latest broad verification caveat: `python scripts\run_fixture_pipeline.py` and `python -m unittest discover -s tests` both exceeded the 5-minute command timeout in this session. Targeted tests/audits and the hermetic tier passed; full pipeline/discover completion is not claimed from this run.
 
 ## Next Local Remediation Candidates
 
 1. Expand `locked_gates.jsonl` to additional active locked gates after Fable/user review confirms the seed format.
 2. Backfill `wiki_citation_hashes` for active preregistrations where Fable/user agrees the audit format is correct.
-3. Add ingest-time OPRA statistics schema validation at the Databento boundary.
-4. Decide whether to implement the report-retention proposal; first implementation must be dry-run only.
+3. Decide whether to implement the report-retention proposal; first implementation must be dry-run only.

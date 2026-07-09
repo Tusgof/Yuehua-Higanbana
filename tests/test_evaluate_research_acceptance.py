@@ -39,6 +39,7 @@ def complete_e2_report() -> dict:
             "benchmark_variant": "same_trade_calendar_spy",
             "max_drawdown_delta": 0.02,
         },
+        "adversarial_review": {"status": "completed", "reviewer": "other-model-or-user"},
     }
 
 
@@ -142,6 +143,7 @@ class ResearchAcceptanceEvaluationTests(unittest.TestCase):
         self.assertFalse(result["operational_validation_allowed"])
         self.assertIn("candidate:H-X:mintrl_psr_dsr_handling", result["blockers"])
         self.assertIn("candidate:H-X:big_day_dependency_survival", result["blockers"])
+        self.assertIn("candidate:H-X:adversarial_review_completed", result["blockers"])
         self.assertEqual("H-X", result["candidate_gate_results"][0]["hypothesis_id"])
 
     def test_e2_candidate_with_nonhard_readiness_blocker_is_scope_restricted(self) -> None:

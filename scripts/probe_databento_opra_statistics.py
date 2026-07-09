@@ -4,12 +4,18 @@ import argparse
 import hashlib
 import json
 import os
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from lib.opra_statistics_schema import validate_opra_statistics_summary
+
 DEFAULT_API_KEY_ENV = "DATABENTO_API_KEY"
 DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
 DEFAULT_METADATA_REPORT = PROJECT_ROOT / "reports" / "data_cost" / "databento_opra_statistics_oi_probe_2024_01_03_schema.json"
@@ -151,11 +157,14 @@ def summarize_statistics_frame(frame: Any, raw_path: Path, metadata: dict[str, A
 
 def build_result(plan: dict[str, Any], download: dict[str, Any] | None, inspection: dict[str, Any] | None) -> dict[str, Any]:
     blockers: list[str] = []
+    schema_errors: list[str] = []
     status = "planned"
     if download is None or inspection is None:
         blockers.append("requires_download_and_inspection")
     else:
         status = "pass"
+        schema_errors = validate_opra_statistics_summary(inspection)
+        blockers.extend(f"opra_statistics_schema:{error}" for error in schema_errors)
         if inspection["row_count"] <= 0:
             blockers.append("requires_statistics_records")
         if not inspection["has_stat_type"]:
@@ -172,6 +181,7 @@ def build_result(plan: dict[str, Any], download: dict[str, Any] | None, inspecti
         "plan": plan,
         "download": download,
         "inspection": inspection,
+        "opra_statistics_schema_errors": schema_errors,
         "research_use_decision": _research_use_decision(status, blockers, inspection),
     }
 

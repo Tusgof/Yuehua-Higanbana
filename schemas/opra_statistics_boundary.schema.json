@@ -1,0 +1,22 @@
+{
+  "schema_name": "opra_statistics_boundary",
+  "schema_version": "opra-statistics-boundary-v1",
+  "purpose": "Validate Databento OPRA statistics summaries before they are used as open-interest inputs.",
+  "required_summary_fields": [
+    "metadata",
+    "row_count",
+    "columns",
+    "ts_index_start",
+    "ts_index_end",
+    "has_stat_type",
+    "has_quantity",
+    "stat_type_counts",
+    "open_interest_record_count",
+    "unique_symbol_count"
+  ],
+  "metadata_requirements": {
+    "dataset": "OPRA.PILLAR",
+    "schema": "statistics"
+  },
+  "required_stat_types": ["OPEN_INTEREST"]
+}

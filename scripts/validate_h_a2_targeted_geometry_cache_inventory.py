@@ -8,13 +8,14 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from lib.io import load_json
+
 DEFAULT_REPORT_PATH = (
     PROJECT_ROOT / "reports" / "data_cost" / "h_a2_targeted_geometry_cache_inventory_and_cost_plan.json"
 )
-
-
-def load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def validate_h_a2_targeted_geometry_cache_inventory(report_path: Path = DEFAULT_REPORT_PATH) -> dict[str, Any]:
@@ -120,4 +121,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

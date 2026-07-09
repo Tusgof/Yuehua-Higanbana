@@ -1,0 +1,50 @@
+{
+  "schema_version": "governance_epochs_v1",
+  "policy": "Record policy, plan, and governance epochs without rewriting historical artifacts. Git tags may be added later, but this manifest is the project control source.",
+  "epochs": [
+    {
+      "epoch_id": "implement-plan-v2",
+      "date": "2026-07-03",
+      "status": "active",
+      "kind": "planning",
+      "description": "Hypothesis-led IMPLEMENT_PLAN.md v2 replaced the legacy experiment-number execution order.",
+      "evidence_paths": [
+        "IMPLEMENT_PLAN.md",
+        "Backup_IMPLEMENT_PLAN"
+      ]
+    },
+    {
+      "epoch_id": "gamma-policy-v2",
+      "date": "2026-07-04",
+      "status": "active",
+      "kind": "policy",
+      "description": "Gamma aggregation validation switched to diagnostic-only policy gates before any strategy use.",
+      "evidence_paths": [
+        "docs/GAMMA_AGGREGATION_VALIDATION_POLICY.md"
+      ]
+    },
+    {
+      "epoch_id": "technical-dd-remediation-2026-07-09",
+      "date": "2026-07-09",
+      "status": "active_with_external_blocker",
+      "kind": "technical_due_diligence",
+      "description": "Fable 5 Technical DD remediation epoch. Paid data and hypothesis expansion remain frozen until Workstream 1 restore/checksum closure is complete.",
+      "evidence_paths": [
+        "docs/HIGANBANA_TECHNICAL_DUE_DILIGENCE.md",
+        "docs/TECHNICAL_DD_REMEDIATION_STATUS.md",
+        "docs/BACKUP_AND_RESTORE.md"
+      ]
+    },
+    {
+      "epoch_id": "h-a2-targeted-data-plan-v1",
+      "date": "2026-07-09",
+      "status": "active_blocked_by_dd_freeze",
+      "kind": "research_data_plan",
+      "description": "H-A2 targeted geometry data/regime expansion plan exists, but metadata and paid follow-up are blocked by the Technical DD freeze.",
+      "evidence_paths": [
+        "docs/H_A2_TARGETED_DATA_REGIME_EXPANSION_PLAN.md",
+        "reports/data_cost/h_a2_targeted_geometry_cache_inventory_and_cost_plan.json"
+      ]
+    }
+  ]
+}

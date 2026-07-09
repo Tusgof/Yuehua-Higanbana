@@ -23,6 +23,7 @@ REQUIRED_GATE_IDS = (
     "big_day_dependency_survival",
     "regime_coverage_or_explicit_scope_restriction",
     "benchmark_and_drawdown_comparison",
+    "adversarial_review_completed",
 )
 HARD_READINESS_BLOCKER_PREFIXES = (
     "requires_mintrl",
@@ -259,6 +260,8 @@ def _payload_passes_gate(payload: dict[str, Any], gate_id: str) -> bool:
         return _has_any_key(payload, {"benchmark_comparison", "benchmark_and_drawdown_comparison"}) and _has_any_key(
             payload, {"max_drawdown", "drawdown_curve", "benchmark_drawdown_delta", "max_drawdown_delta"}
         )
+    if gate_id == "adversarial_review_completed":
+        return _has_status(payload, {"adversarial_review", "refutation_review"}, {"pass", "passed", "complete", "completed"})
     raise ValueError(f"Unknown gate id: {gate_id}")
 
 

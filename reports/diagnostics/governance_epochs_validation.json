@@ -1,0 +1,50 @@
+{
+  "blockers": [],
+  "epoch_count": 4,
+  "rows": [
+    {
+      "blockers": [],
+      "epoch_id": "implement-plan-v2",
+      "existing_evidence_paths": [
+        "IMPLEMENT_PLAN.md",
+        "Backup_IMPLEMENT_PLAN"
+      ],
+      "kind": "planning",
+      "status": "active"
+    },
+    {
+      "blockers": [],
+      "epoch_id": "gamma-policy-v2",
+      "existing_evidence_paths": [
+        "docs\\GAMMA_AGGREGATION_VALIDATION_POLICY.md"
+      ],
+      "kind": "policy",
+      "status": "active"
+    },
+    {
+      "blockers": [],
+      "epoch_id": "technical-dd-remediation-2026-07-09",
+      "existing_evidence_paths": [
+        "docs\\HIGANBANA_TECHNICAL_DUE_DILIGENCE.md",
+        "docs\\TECHNICAL_DD_REMEDIATION_STATUS.md",
+        "docs\\BACKUP_AND_RESTORE.md"
+      ],
+      "kind": "technical_due_diligence",
+      "status": "active_with_external_blocker"
+    },
+    {
+      "blockers": [],
+      "epoch_id": "h-a2-targeted-data-plan-v1",
+      "existing_evidence_paths": [
+        "docs\\H_A2_TARGETED_DATA_REGIME_EXPANSION_PLAN.md",
+        "reports\\data_cost\\h_a2_targeted_geometry_cache_inventory_and_cost_plan.json"
+      ],
+      "kind": "research_data_plan",
+      "status": "active_blocked_by_dd_freeze"
+    }
+  ],
+  "schema_version": "governance_epochs_validation_v1",
+  "source_path": "config\\governance_epochs.json",
+  "status": "pass",
+  "warnings": []
+}

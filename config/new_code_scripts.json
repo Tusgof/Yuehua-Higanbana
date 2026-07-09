@@ -1,0 +1,13 @@
+{
+  "schema_version": "new_code_scripts_v1",
+  "policy": "Scripts listed here are new post-DD-remediation code and must import hypothesis-independent helpers from lib/ when they perform IO, integrity, environment, report, or statistics work.",
+  "scripts": [
+    "scripts/audit_helper_drift.py",
+    "scripts/audit_new_script_lib_usage.py",
+    "scripts/audit_wiki_citation_hashes.py",
+    "scripts/run_h_a2_targeted_geometry_cache_inventory.py",
+    "scripts/validate_h_a2_targeted_geometry_cache_inventory.py",
+    "scripts/validate_governance_epochs.py",
+    "scripts/validate_locked_gates.py"
+  ]
+}

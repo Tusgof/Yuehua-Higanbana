@@ -1,0 +1,49 @@
+{
+  "audit_id": "new_script_lib_usage_audit",
+  "blockers": [],
+  "bypassing_lib_count": 0,
+  "interpreter": {
+    "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.14.3"
+  },
+  "rows": [
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\audit_helper_drift.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\audit_new_script_lib_usage.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\audit_wiki_citation_hashes.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\run_h_a2_targeted_geometry_cache_inventory.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\validate_h_a2_targeted_geometry_cache_inventory.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\validate_governance_epochs.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\validate_locked_gates.py",
+      "status": "pass"
+    }
+  ],
+  "script_count": 7,
+  "status": "pass"
+}
