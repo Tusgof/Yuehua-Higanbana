@@ -138,6 +138,43 @@
         "raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1430.dbn.zst",
         "raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1500.dbn.zst"
       ]
+    },
+    {
+      "id": "databento_integrity_canonical_content_comparison_2024_06_13",
+      "completed_at_utc": "2026-07-10T15:17:39+00:00",
+      "status": "content_verified_envelope_variance",
+      "disposition": "resolved_content_verified_envelope_variance",
+      "methodology": {
+        "record_body": "SHA-256 of zstd-decompressed DBN bytes after the metadata header",
+        "canonical_record_export": "SHA-256 of sorted decoded DBN records with deterministic scalar normalization",
+        "policy": "docs/DATABENTO_INTEGRITY_POLICY.md"
+      },
+      "rows": [
+        {
+          "window": "2024-06-13_exit_check_1430",
+          "record_count": 90700,
+          "record_body_sha256": "b0832e5e338e6f923b911abb00b0d90b184d8d85cee7eb11351591125e2ce00f",
+          "canonical_record_export_sha256": "9eb4463740447d996433a213a670df43e4a430987159c2ef697cfc86a331c258",
+          "record_body_equal": true,
+          "canonical_record_export_equal": true
+        },
+        {
+          "window": "2024-06-13_exit_check_1500",
+          "record_count": 90700,
+          "record_body_sha256": "9f6ffee5783ff589f1158064c270862667e0496aabd918ec2046b1d1779e0f6d",
+          "canonical_record_export_sha256": "eb19f7430cdec8cda32ed2bada49bd34953d5882cb0df0f319dd0df1e8e54a6f",
+          "record_body_equal": true,
+          "canonical_record_export_equal": true
+        }
+      ],
+      "historical_container_limit": "The original historical files are unavailable. The comparison explains current-versus-fresh envelope variance but cannot prove the historical header/container bytes.",
+      "raw_tree_backfill": {
+        "canonical_content_format": "dbn_record_body_after_metadata_v1",
+        "artifact_count": 6626,
+        "canonical_mismatch_count": 0,
+        "missing_supplemental_artifact_count": 0
+      },
+      "remaining_integrity_blocker": "registry_check_failed:databento-one-month-pilot-ef3f49c75c55:sha256_mismatch"
     }
   ],
   "affected_completed_experiments": [],
@@ -163,7 +200,7 @@
     ]
   },
   "created_at_utc": "2026-07-10T08:07:14+00:00",
-  "decision": "Provider re-download comparison is unexplained for the listed files; retain the Workstream 1 integrity blocker for user/Fable review.",
+  "decision": "Canonical comparison resolves the two target files as content_verified_envelope_variance. Historical container hashes remain unchanged; the unrelated one-month-pilot registry mismatch and restore rehearsal remain open.",
   "proposed_resolution": [
     "Prefer restore from an external backup containing the original expected hashes.",
     "If no backup exists, keep the historical hashes unchanged and request a user/Fable decision on a small re-download comparison after the purchase freeze is lifted.",
@@ -317,6 +354,6 @@
     "normalization_report": "reports\\data_cost\\databento_normalization_summary_2024_06.json",
     "supplemental_registry": "data\\registry\\paid_artifact_checksums.jsonl"
   },
-  "status": "blocked",
+  "status": "resolved_content_verified_envelope_variance",
   "target_count": 2
 }

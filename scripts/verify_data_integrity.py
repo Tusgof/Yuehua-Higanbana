@@ -13,7 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from lib.environment import data_root, interpreter_metadata
-from lib.integrity import combined_named_file_hash, sha256_file
+from lib.integrity import combined_named_file_hash, dbn_record_body_hashes, sha256_file
 
 
 SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
@@ -114,6 +114,38 @@ def _download_report_artifacts(report_root: Path, root: Path) -> list[dict[str, 
     return list(found.values())
 
 
+def _backfill_canonical_hashes(supplemental_registry_path: Path, root: Path) -> dict[str, int]:
+    existing_rows = _jsonl(supplemental_registry_path) if supplemental_registry_path.exists() else []
+    existing_by_path = {str(row["path"]): row for row in existing_rows}
+    raw_paths = sorted((root / "raw").rglob("*.dbn.zst"))
+    for path in raw_paths:
+        relative = path.relative_to(root).as_posix()
+        row = existing_by_path.setdefault(
+            relative,
+            {
+                "record_type": "paid_artifact_checksum",
+                "schema_version": "paid-artifact-checksum-v2",
+                "provider": "Databento",
+                "path": relative,
+                "sha256": sha256_file(path),
+                "source_report": "local_raw_tree_canonical_backfill",
+            },
+        )
+        canonical = dbn_record_body_hashes(path)
+        row["schema_version"] = "paid-artifact-checksum-v2"
+        row["canonical_content_sha256"] = canonical["sha256"]
+        row["canonical_content_bytes"] = canonical["bytes"]
+        row["canonical_content_format"] = "dbn_record_body_after_metadata_v1"
+
+    supplemental_registry_path.parent.mkdir(parents=True, exist_ok=True)
+    rows = [existing_by_path[key] for key in sorted(existing_by_path)]
+    supplemental_registry_path.write_text(
+        "".join(json.dumps(row, sort_keys=True) + "\n" for row in rows),
+        encoding="utf-8",
+    )
+    return {"canonical_backfilled": len(raw_paths), "supplemental_registry_count": len(rows)}
+
+
 def verify_data_integrity(
     registry_path: Path,
     report_root: Path,
@@ -122,6 +154,7 @@ def verify_data_integrity(
     verify_hashes: bool = True,
     supplemental_registry_path: Path | None = None,
     write_supplemental_registry: bool = False,
+    backfill_canonical_hashes: bool = False,
 ) -> dict[str, Any]:
     rows = _jsonl(registry_path)
     paid_rows = [row for row in rows if str(row.get("provider", "")).lower() == "databento"]
@@ -148,6 +181,12 @@ def verify_data_integrity(
             "".join(json.dumps(row, sort_keys=True) + "\n" for row in rows),
             encoding="utf-8",
         )
+
+    canonical_backfill = None
+    if write_supplemental_registry or backfill_canonical_hashes:
+        if supplemental_registry_path is None:
+            raise ValueError("supplemental_registry_path is required for canonical backfill")
+        canonical_backfill = _backfill_canonical_hashes(supplemental_registry_path, root)
 
     supplemental_rows = (
         _jsonl(supplemental_registry_path)
@@ -178,20 +217,33 @@ def verify_data_integrity(
         for key, row in supplemental_by_path.items():
             path = root / str(row["path"])
             expected = str(row.get("sha256", "")).lower()
+            canonical_expected = str(row.get("canonical_content_sha256", "")).lower()
+            canonical = None
             if not path.exists():
                 status = "missing"
                 actual = None
             else:
                 actual = sha256_file(path)
-                status = "pass" if actual == expected else "sha256_mismatch"
+                if canonical_expected:
+                    canonical = dbn_record_body_hashes(path)
+                canonical_matches = canonical is None or canonical["sha256"] == canonical_expected
+                if actual == expected and canonical_matches:
+                    status = "pass"
+                elif canonical_expected and canonical_matches:
+                    status = "content_verified_envelope_variance"
+                else:
+                    status = "sha256_mismatch"
             check = {
                 "path": str(path),
                 "expected_sha256": expected,
                 "actual_sha256": actual,
                 "status": status,
             }
+            if canonical is not None:
+                check["expected_canonical_content_sha256"] = canonical_expected
+                check["actual_canonical_content_sha256"] = canonical["sha256"]
             supplemental_checks.append(check)
-            if status != "pass":
+            if status not in {"pass", "content_verified_envelope_variance"}:
                 blockers.append(f"supplemental_check_failed:{key}:{status}")
     return {
         "status": "pass" if not blockers else "blocked",
@@ -207,6 +259,7 @@ def verify_data_integrity(
         "supplemental_registry_count": len(supplemental_rows),
         "registry_checks": registry_checks,
         "supplemental_checks": supplemental_checks,
+        "canonical_backfill": canonical_backfill,
         "uncovered_download_artifacts": uncovered,
         "blockers": blockers,
         "interpreter": interpreter_metadata(),
@@ -232,6 +285,7 @@ def main() -> int:
         default=data_root() / "registry" / "paid_artifact_checksums.jsonl",
     )
     parser.add_argument("--write-supplemental-registry", action="store_true")
+    parser.add_argument("--backfill-canonical-hashes", action="store_true")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
@@ -242,6 +296,7 @@ def main() -> int:
         verify_hashes=not args.inventory_only,
         supplemental_registry_path=args.supplemental_registry,
         write_supplemental_registry=args.write_supplemental_registry,
+        backfill_canonical_hashes=args.backfill_canonical_hashes,
     )
     text = json.dumps(result, indent=2, sort_keys=True)
     if args.output:

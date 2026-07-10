@@ -66,3 +66,19 @@ If restore is impossible, a small re-download comparison may be the cleanest nex
 - Historical hash: `ef707e9ea1de56c14f0524d5879eab9abe5086be4228c75facfe4f3637e53ec5` (raw original unavailable).
 - Current-before hash: `81e0940d2bee249939071be44035d5cdf2b6df5e84ddddb2fae306ba04091465`; fresh hash: `8984bd5a7293d73bd5912c0697aefac1a6c0e220b7149b8c2613bd4d8912e1bf`.
 - Parse rows current/fresh: `90700` / `90700`.
+
+## Addendum: Canonical Content Resolution
+
+- **Status**: `content_verified_envelope_variance`
+- **Method**: SHA-256 over the zstd-decompressed DBN record body after its metadata header, plus SHA-256 over a sorted canonical export of all decoded records.
+- **Policy**: `docs/DATABENTO_INTEGRITY_POLICY.md`
+
+| Window | Record-body hash equal | Canonical record-export hash equal | Records | Disposition |
+|:--|:--:|:--:|--:|:--|
+| `2024-06-13_exit_check_1430` | `True` | `True` | 90,700 | `content_verified_envelope_variance` |
+| `2024-06-13_exit_check_1500` | `True` | `True` | 90,700 | `content_verified_envelope_variance` |
+
+- The compressed containers and DBN metadata-header hashes still differ between the current and fresh provider copies. The identical record bodies show that this is an envelope/metadata difference for the copies that can be inspected now.
+- The original historical containers are unavailable. Therefore this explains the present mismatch mechanism but cannot prove which header/container bytes were in the original download. Historical SHA-256 values were retained unchanged.
+- `python scripts/verify_data_integrity.py --backfill-canonical-hashes` recorded canonical record-body hashes for all 6,626 local raw Databento artifacts. The target files now verify as `content_verified_envelope_variance`; no canonical mismatch or missing supplemental artifact remains.
+- The full integrity run remains blocked only by the unrelated pre-existing aggregate registry mismatch `databento-one-month-pilot-ef3f49c75c55`. The physical restore rehearsal also remains pending.

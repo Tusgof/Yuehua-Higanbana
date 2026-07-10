@@ -1,0 +1,171 @@
+{
+  "created_at_utc": "2026-07-10T16:02:16+00:00",
+  "interpreter": {
+    "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.14.3"
+  },
+  "methodology": {
+    "canonical_record_export": "SHA-256 of sorted JSONL records from DBNStore.to_df(), with sorted columns, ts_recv included, deterministic scalar normalization, and an ASCII JSON encoding.",
+    "decompressed_dbn_body": "SHA-256 of zstd-decompressed DBN record bytes after the metadata header. Metadata header SHA-256 is recorded separately as envelope evidence.",
+    "resolution_rule": "Both hashes must match for every target before classifying a mismatch as envelope variance."
+  },
+  "rows": [
+    {
+      "canonical_record_export_equal": true,
+      "content_verified": true,
+      "current": {
+        "canonical_record_export": {
+          "columns": [
+            "ask_pb_00",
+            "ask_px_00",
+            "ask_sz_00",
+            "bid_pb_00",
+            "bid_px_00",
+            "bid_sz_00",
+            "flags",
+            "instrument_id",
+            "price",
+            "publisher_id",
+            "rtype",
+            "side",
+            "size",
+            "symbol",
+            "ts_event"
+          ],
+          "record_count": 90700,
+          "record_type_counts": {
+            "193": 90700
+          },
+          "sha256": "9eb4463740447d996433a213a670df43e4a430987159c2ef697cfc86a331c258"
+        },
+        "container_sha256": "32618eb467825a9e828e909af3947e86d56bfd2e519f45fe307e76053ad66c57",
+        "decompressed_dbn_body": {
+          "bytes": 7256000,
+          "metadata_header_bytes": 521398,
+          "metadata_header_sha256": "1dcde7a11823f171cbc007c860cec8dcb0c18feabf8ffb0cb55692918fcf6e1e",
+          "sha256": "b0832e5e338e6f923b911abb00b0d90b184d8d85cee7eb11351591125e2ce00f",
+          "total_decompressed_bytes": 7777398
+        },
+        "path": "data/raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1430.dbn.zst"
+      },
+      "decompressed_body_equal": true,
+      "disposition": "content_verified_envelope_variance",
+      "fresh_quarantine": {
+        "canonical_record_export": {
+          "columns": [
+            "ask_pb_00",
+            "ask_px_00",
+            "ask_sz_00",
+            "bid_pb_00",
+            "bid_px_00",
+            "bid_sz_00",
+            "flags",
+            "instrument_id",
+            "price",
+            "publisher_id",
+            "rtype",
+            "side",
+            "size",
+            "symbol",
+            "ts_event"
+          ],
+          "record_count": 90700,
+          "record_type_counts": {
+            "193": 90700
+          },
+          "sha256": "9eb4463740447d996433a213a670df43e4a430987159c2ef697cfc86a331c258"
+        },
+        "container_sha256": "0b704de04c863efedc0289d836ba1fc0e3e366014f08a3af6497644f80d80764",
+        "decompressed_dbn_body": {
+          "bytes": 7256000,
+          "metadata_header_bytes": 521398,
+          "metadata_header_sha256": "912198234e29f50e51fa94fcd55ebac8b40b9d8029e7c01edd018ad5e16e8001",
+          "sha256": "b0832e5e338e6f923b911abb00b0d90b184d8d85cee7eb11351591125e2ce00f",
+          "total_decompressed_bytes": 7777398
+        },
+        "path": "data/raw/spy_0dte/databento/_integrity_requarantine_2024_06_13/2024-06-13_exit_check_1430.dbn.zst"
+      },
+      "window": "2024-06-13_exit_check_1430"
+    },
+    {
+      "canonical_record_export_equal": true,
+      "content_verified": true,
+      "current": {
+        "canonical_record_export": {
+          "columns": [
+            "ask_pb_00",
+            "ask_px_00",
+            "ask_sz_00",
+            "bid_pb_00",
+            "bid_px_00",
+            "bid_sz_00",
+            "flags",
+            "instrument_id",
+            "price",
+            "publisher_id",
+            "rtype",
+            "side",
+            "size",
+            "symbol",
+            "ts_event"
+          ],
+          "record_count": 90700,
+          "record_type_counts": {
+            "193": 90700
+          },
+          "sha256": "eb19f7430cdec8cda32ed2bada49bd34953d5882cb0df0f319dd0df1e8e54a6f"
+        },
+        "container_sha256": "81e0940d2bee249939071be44035d5cdf2b6df5e84ddddb2fae306ba04091465",
+        "decompressed_dbn_body": {
+          "bytes": 7256000,
+          "metadata_header_bytes": 521398,
+          "metadata_header_sha256": "e2bd4e3df7d16293ec72b69261383f0381e941a26652c32be2e76489bcda599e",
+          "sha256": "9f6ffee5783ff589f1158064c270862667e0496aabd918ec2046b1d1779e0f6d",
+          "total_decompressed_bytes": 7777398
+        },
+        "path": "data/raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1500.dbn.zst"
+      },
+      "decompressed_body_equal": true,
+      "disposition": "content_verified_envelope_variance",
+      "fresh_quarantine": {
+        "canonical_record_export": {
+          "columns": [
+            "ask_pb_00",
+            "ask_px_00",
+            "ask_sz_00",
+            "bid_pb_00",
+            "bid_px_00",
+            "bid_sz_00",
+            "flags",
+            "instrument_id",
+            "price",
+            "publisher_id",
+            "rtype",
+            "side",
+            "size",
+            "symbol",
+            "ts_event"
+          ],
+          "record_count": 90700,
+          "record_type_counts": {
+            "193": 90700
+          },
+          "sha256": "eb19f7430cdec8cda32ed2bada49bd34953d5882cb0df0f319dd0df1e8e54a6f"
+        },
+        "container_sha256": "8984bd5a7293d73bd5912c0697aefac1a6c0e220b7149b8c2613bd4d8912e1bf",
+        "decompressed_dbn_body": {
+          "bytes": 7256000,
+          "metadata_header_bytes": 521398,
+          "metadata_header_sha256": "be931ad54f85b1b7d58f6175409dd999b765f3583e8a3a8955e415b888d7c85a",
+          "sha256": "9f6ffee5783ff589f1158064c270862667e0496aabd918ec2046b1d1779e0f6d",
+          "total_decompressed_bytes": 7777398
+        },
+        "path": "data/raw/spy_0dte/databento/_integrity_requarantine_2024_06_13/2024-06-13_exit_check_1500.dbn.zst"
+      },
+      "window": "2024-06-13_exit_check_1500"
+    }
+  ],
+  "schema_version": "databento-canonical-content-comparison-v1",
+  "status": "content_verified_envelope_variance"
+}
