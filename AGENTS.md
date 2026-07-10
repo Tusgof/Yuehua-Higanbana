@@ -99,3 +99,8 @@ The active project is now **SPY 0DTE - Higanbana**.
 - Do not edit a locked preregistration artifact or its `scripts/validate_*_preregistration.py` validator silently. A change requires a new manifest entry with a human approval note and review by the user or Fable 5 before merge.
 - Every engineering commit must identify the agent model/version in a commit trailer such as `Agent: Codex (GPT-5)`.
 - New scripts should import hypothesis-independent helpers from `lib/` instead of copy-pasting `_load_json`, `_relative`, guardrail validation, search-log, report-writing, or statistics helpers. Existing frozen scripts are not migrated in place unless a separate remediation task explicitly allows it.
+
+## 9. Session Closure
+
+- Every session that modifies files must end by committing and pushing to `origin/main`.
+- The session report must include the resulting `origin/main` commit hash as completion evidence. Do not claim work is complete unless it is visible at that hash.

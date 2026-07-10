@@ -58,6 +58,15 @@ class ValidateDdRemediationTrackerTests(unittest.TestCase):
         self.assertEqual("fail", result["status"])
         self.assertIn("WS2:missing_artifact:tests/definitely_missing_statistics_golden.py", result["blockers"])
 
+    def test_done_hermetic_test_file_runs_without_tier_recursion(self) -> None:
+        blockers = self.validator._validate_done_artifact(
+            "WS2",
+            "tests/test_statistics_golden.py",
+            "pass_in_hermetic_tier",
+            run_expensive=False,
+        )
+        self.assertEqual([], blockers)
+
 
 def _entry(ws_id: str) -> dict[str, object]:
     return {

@@ -50,3 +50,19 @@
 
 Workstream 1 remains open until the original expected files are restored from external backup or the user/Fable approves a documented revalidation/rebaseline decision.
 If restore is impossible, a small re-download comparison may be the cleanest next evidence step, but it is a user decision because the purchase freeze is active.
+## Addendum: User-Approved Re-download Comparison
+
+- Status: `blocked`
+- Cost: `$0.054061412812`
+
+### `2024-06-13_exit_check_1430`
+- Case/disposition: `case_3` / `escalated_unexplained`
+- Historical hash: `fca9775548d422cc7fc2ebb92c18fcf35fda2e9185aceb12e3a60ba208d84302` (raw original unavailable).
+- Current-before hash: `32618eb467825a9e828e909af3947e86d56bfd2e519f45fe307e76053ad66c57`; fresh hash: `0b704de04c863efedc0289d836ba1fc0e3e366014f08a3af6497644f80d80764`.
+- Parse rows current/fresh: `90700` / `90700`.
+
+### `2024-06-13_exit_check_1500`
+- Case/disposition: `case_3` / `escalated_unexplained`
+- Historical hash: `ef707e9ea1de56c14f0524d5879eab9abe5086be4228c75facfe4f3637e53ec5` (raw original unavailable).
+- Current-before hash: `81e0940d2bee249939071be44035d5cdf2b6df5e84ddddb2fae306ba04091465`; fresh hash: `8984bd5a7293d73bd5912c0697aefac1a6c0e220b7149b8c2613bd4d8912e1bf`.
+- Parse rows current/fresh: `90700` / `90700`.

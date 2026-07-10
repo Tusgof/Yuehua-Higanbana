@@ -88,6 +88,16 @@ def _validate_done_artifact(ws_id: str, artifact_path: str, must: str, *, run_ex
     elif must in {"pass_in_hermetic_tier", "pass_hermetic_tier"}:
         if not target.exists():
             blockers.append(f"{ws_id}:missing_artifact:{artifact_path}")
+        elif test_module := _test_module_from_path(artifact_path):
+            completed = subprocess.run(
+                [sys.executable, "-m", "unittest", test_module],
+                cwd=PROJECT_ROOT,
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+            if completed.returncode != 0:
+                blockers.append(f"{ws_id}:hermetic_test_failed:{artifact_path}")
         elif run_expensive:
             completed = subprocess.run(
                 [sys.executable, "scripts/run_test_tier.py", "hermetic", "--verbosity", "0"],
@@ -130,6 +140,13 @@ def _validate_done_artifact(ws_id: str, artifact_path: str, must: str, *, run_ex
     else:
         blockers.append(f"{ws_id}:unknown_artifact_rule:{must}")
     return blockers
+
+
+def _test_module_from_path(artifact_path: str) -> str | None:
+    path = Path(artifact_path)
+    if path.parts[:1] != ("tests",) or path.suffix != ".py" or not path.name.startswith("test_"):
+        return None
+    return ".".join(path.with_suffix("").parts)
 
 
 def _grep_no_forbidden_absolute_paths(ws_id: str) -> list[str]:

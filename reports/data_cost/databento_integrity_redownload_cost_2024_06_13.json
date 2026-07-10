@@ -1,0 +1,68 @@
+{
+  "authorization": {
+    "hard_cap_usd": 2.0,
+    "scope": "One-time, user-approved Technical DD freeze exception for exactly two 2024-06-13 OPRA exit-check windows.",
+    "user_approval": "Databento Integrity Re-download Comparison (2026-07-10)"
+  },
+  "decision": {
+    "reason": "Live Databento metadata estimate $0.054061412812 is below the user-authorized hard cap $2.00.",
+    "status": "pass"
+  },
+  "download_execution": {
+    "actual_charge_basis": "Databento metadata.get_cost quote immediately before both completed downloads; account-usage receipt API is unavailable for independent reconciliation.",
+    "actual_charge_usd": 0.054061412812,
+    "completed_at_utc": "2026-07-10T11:06:09+00:00",
+    "download_result": "reports/data_cost/databento_integrity_redownload_download_result_2024_06_13.json",
+    "status": "blocked"
+  },
+  "errors": [],
+  "mode": "live_metadata_cost",
+  "requests": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-06-13T18:35:00+00:00",
+      "estimated_cost_usd": 0.027030706406,
+      "note": "Exact original 14:30 ET exit-check request; integrity comparison only.",
+      "scenario": "_integrity_requarantine_2024_06_13",
+      "schema": "cbbo-1m",
+      "start": "2024-06-13T18:25:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-06-13_exit_check_1430"
+    },
+    {
+      "dataset": "OPRA.PILLAR",
+      "end": "2024-06-13T19:05:00+00:00",
+      "estimated_cost_usd": 0.027030706406,
+      "note": "Exact original 15:00 ET exit-check request; integrity comparison only.",
+      "scenario": "_integrity_requarantine_2024_06_13",
+      "schema": "cbbo-1m",
+      "start": "2024-06-13T18:55:00+00:00",
+      "stype_in": "parent",
+      "symbols": [
+        "SPY.OPT"
+      ],
+      "window": "2024-06-13_exit_check_1500"
+    }
+  ],
+  "selected_api_key_env": "DATABENTO_API_AI",
+  "summary": {
+    "scenarios": {
+      "_integrity_requarantine_2024_06_13": {
+        "dataset": "OPRA.PILLAR",
+        "first_start": "2024-06-13T18:25:00+00:00",
+        "last_end": "2024-06-13T19:05:00+00:00",
+        "request_count": 2,
+        "schema": "cbbo-1m",
+        "stype_in": "parent",
+        "symbols": [
+          "SPY.OPT"
+        ]
+      }
+    },
+    "total_request_count": 2
+  },
+  "total_estimated_cost_usd": 0.054061412812
+}

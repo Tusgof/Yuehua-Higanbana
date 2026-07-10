@@ -1,0 +1,69 @@
+{
+  "schema_version": "statistics-golden-v1",
+  "provenance": {
+    "methodology_sources": [
+      "wiki/sources/how-to-use-the-sharpe-ratio.md",
+      "wiki/concepts/probabilistic-sharpe-ratio.md",
+      "wiki/concepts/minimum-track-record-length.md",
+      "wiki/concepts/deflated-sharpe-ratio.md"
+    ],
+    "cross_check": "The PSR and MinTRL approximation follows the Bailey and Lopez de Prado finite-sample Sharpe framework summarized in the local wiki. Black-Scholes call/put values are standard closed-form reference values. DSR is cited as a required search-aware report metric, but is not a runtime anchor because the shared kernel does not yet expose a DSR calculation."
+  },
+  "conventions": {
+    "sharpe": "mean divided by population standard deviation; no annualization factor",
+    "skewness": "population standardized third central moment",
+    "kurtosis": "raw Pearson population kurtosis, not excess kurtosis; the generalized Sharpe variance formula subtracts 1 internally",
+    "expected_shortfall": "arithmetic mean of the worst ceil(N * (1 - confidence)) observations"
+  },
+  "psr_mintrl": {
+    "inputs": {
+      "observed_sharpe": 0.092203,
+      "sample_length": 90,
+      "skewness": 1.221374,
+      "raw_kurtosis": 3.09085,
+      "null_sharpe": 0.0
+    },
+    "expected": {
+      "generalized_variance_term": 0.891829437576,
+      "probabilistic_sharpe_ratio": 0.821497,
+      "minimum_track_record_length": 285
+    },
+    "wrong_excess_kurtosis_variance_term": 0.885453392669
+  },
+  "autocorrelation": {
+    "input": 0.25,
+    "sample_length": 90,
+    "expected_inflation": 1.666666666667,
+    "expected_effective_sample_length": 54.0
+  },
+  "distribution": {
+    "returns": [-0.03, -0.01, 0.0, 0.02, 0.08],
+    "expected_sharpe": 0.318896,
+    "expected_skewness": 0.857597,
+    "expected_raw_kurtosis": 2.468974
+  },
+  "expected_shortfall": {
+    "values": [-10.0, -4.0, -1.0, 2.0, 8.0, 15.0],
+    "confidence_95": -10.0,
+    "confidence_80": -7.0
+  },
+  "black_scholes": {
+    "inputs": {
+      "spot": 100.0,
+      "strike": 100.0,
+      "years_to_expiry": 1.0,
+      "rate": 0.05,
+      "dividend_yield": 0.0,
+      "volatility": 0.2
+    },
+    "call": {
+      "price": 10.450584,
+      "delta": 0.636831,
+      "gamma": 0.018762
+    },
+    "put": {
+      "price": 5.573526,
+      "delta": -0.363169
+    }
+  }
+}

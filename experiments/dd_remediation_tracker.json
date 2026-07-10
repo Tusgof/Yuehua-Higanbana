@@ -33,19 +33,20 @@
         }
       ],
       "user_actions_pending": [
-        "Resolve the Databento checksum mismatch for 2024-06-13 exit-check files without silent rebaseline.",
+        "Escalated: the user-approved 2026-07-10 provider re-download produced a third distinct SHA-256 for each 2024-06-13 exit-check file. No rebaseline or overwrite was performed; user/Fable review must decide the disposition from reports/diagnostics/databento_integrity_mismatch_2024_06_13.json.",
         "Run the physical restore rehearsal after external restore media is available."
       ],
       "evidence": [
         "Fable 5 independently verified WS1 hermetic clean clone: 535/535 on 2026-07-10.",
-        "WS1 remains blocked until checksum disposition and restore rehearsal are closed."
+        "WS1 remains blocked until checksum disposition and restore rehearsal are closed.",
+        "User-approved $0.054061412812 Databento comparison on 2026-07-10 classified both target files as Case 3 / escalated_unexplained; all current and fresh files parse as valid 90,700-record DBN windows."
       ],
       "updated": "2026-07-10"
     },
     {
       "id": "WS2",
       "title": "Golden-number statistics anchors",
-      "status": "not_started",
+      "status": "done",
       "required_artifacts": [
         {
           "path": "tests/test_statistics_golden.py",
@@ -61,7 +62,10 @@
         }
       ],
       "user_actions_pending": [],
-      "evidence": [],
+      "evidence": [
+        "tests/test_statistics_golden.py loads committed tests/fixtures/statistics_golden.json and passes in the hermetic tier.",
+        "Fixture documents population skewness, raw Pearson population kurtosis, expected-shortfall tail convention, and local wiki methodology sources."
+      ],
       "updated": "2026-07-10"
     },
     {
