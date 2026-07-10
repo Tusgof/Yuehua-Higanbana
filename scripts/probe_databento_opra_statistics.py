@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import logging
 import os
 import sys
 from datetime import datetime, timezone
@@ -16,6 +17,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from lib.opra_statistics_schema import validate_opra_statistics_summary
 
+LOGGER = logging.getLogger(__name__)
 DEFAULT_API_KEY_ENV = "DATABENTO_API_KEY"
 DATABENTO_API_KEY_ENV_ALIASES = ("DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
 DEFAULT_METADATA_REPORT = PROJECT_ROOT / "reports" / "data_cost" / "databento_opra_statistics_oi_probe_2024_01_03_schema.json"
@@ -43,8 +45,9 @@ STAT_TYPE_NAMES = {
     11: "CLOSE_PRICE",
 }
 STAT_UPDATE_ACTION_NAMES = {
-    1: "ADD",
+    1: "NEW",
 }
+_ENUM_DRIFT_WARNED: set[tuple[str, int]] = set()
 
 
 def build_probe_plan(metadata_report_path: Path = DEFAULT_METADATA_REPORT) -> dict[str, Any]:
@@ -304,8 +307,29 @@ def _enum_like_name(value: Any, enum_name: str, hermetic_names: dict[int, str] |
         integer_value = int(value)
     except (TypeError, ValueError):
         integer_value = None
+    vendor_name = _vendor_enum_name(value, enum_name)
+    try:
+        drift_key = (enum_name, int(value))
+    except (TypeError, ValueError):
+        drift_key = (enum_name, -1)
     if integer_value is not None and hermetic_names and integer_value in hermetic_names:
-        return hermetic_names[integer_value]
+        embedded_name = hermetic_names[integer_value]
+        if vendor_name is not None and vendor_name != embedded_name and drift_key not in _ENUM_DRIFT_WARNED:
+            LOGGER.error(
+                "Databento enum drift detected for %s(%s): embedded=%s vendored=%s",
+                enum_name,
+                integer_value,
+                embedded_name,
+                vendor_name,
+            )
+            _ENUM_DRIFT_WARNED.add(drift_key)
+        return embedded_name
+    if vendor_name is not None:
+        return vendor_name
+    return str(value)
+
+
+def _vendor_enum_name(value: Any, enum_name: str) -> str | None:
     try:
         import databento as db  # type: ignore
 
@@ -315,8 +339,8 @@ def _enum_like_name(value: Any, enum_name: str, hermetic_names: dict[int, str] |
         if isinstance(enum_value_name, str):
             return enum_value_name
     except Exception:
-        pass
-    return str(value)
+        return None
+    return None
 
 
 def _databento_api_key_from_env(api_key_env: str = DEFAULT_API_KEY_ENV) -> str | None:

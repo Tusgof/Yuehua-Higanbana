@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import sys
 import tempfile
+import types
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -41,6 +42,19 @@ class DatabentoOpraStatisticsEnumTests(unittest.TestCase):
         with patch.dict(sys.modules, {"databento": None}):
             self.assertEqual("OPEN_INTEREST", self.probe._stat_type_name(9))
             self.assertEqual("CLOSE_PRICE", self.probe._stat_type_name(11))
+
+    def test_stat_type_name_logs_vendor_enum_drift(self) -> None:
+        class FakeStatType:
+            def __init__(self, value):
+                self.value = value
+                self.name = "DRIFTED_OPEN_INTEREST"
+
+        fake_databento = types.SimpleNamespace(StatType=FakeStatType)
+        self.probe._ENUM_DRIFT_WARNED.clear()
+        with patch.dict(sys.modules, {"databento": fake_databento}):
+            with self.assertLogs("probe_databento_opra_statistics", level="ERROR") as captured:
+                self.assertEqual("OPEN_INTEREST", self.probe._stat_type_name(9))
+        self.assertIn("Databento enum drift detected", "\n".join(captured.output))
 
 
 @state_audit_capability("pandas", pd is not None)

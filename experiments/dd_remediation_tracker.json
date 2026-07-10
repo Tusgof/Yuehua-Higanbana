@@ -1,0 +1,174 @@
+{
+  "schema_version": "dd_remediation_tracker_v1",
+  "updated": "2026-07-10",
+  "workstreams": [
+    {
+      "id": "WS1",
+      "title": "Make the repo self-verifying off this machine",
+      "status": "blocked",
+      "required_artifacts": [
+        {
+          "path": "scripts/run_test_tier.py",
+          "must": "pass_hermetic_tier"
+        },
+        {
+          "path": "lib/environment.py",
+          "must": "exist"
+        },
+        {
+          "path": "requirements-optional.txt",
+          "must": "exist"
+        },
+        {
+          "path": "docs/BACKUP_AND_RESTORE.md",
+          "must": "exist"
+        },
+        {
+          "path": "scripts/verify_data_integrity.py",
+          "must": "exist"
+        },
+        {
+          "path": ".",
+          "must": "grep_no_forbidden_absolute_paths"
+        }
+      ],
+      "user_actions_pending": [
+        "Resolve the Databento checksum mismatch for 2024-06-13 exit-check files without silent rebaseline.",
+        "Run the physical restore rehearsal after external restore media is available."
+      ],
+      "evidence": [
+        "Fable 5 independently verified WS1 hermetic clean clone: 535/535 on 2026-07-10.",
+        "WS1 remains blocked until checksum disposition and restore rehearsal are closed."
+      ],
+      "updated": "2026-07-10"
+    },
+    {
+      "id": "WS2",
+      "title": "Golden-number statistics anchors",
+      "status": "not_started",
+      "required_artifacts": [
+        {
+          "path": "tests/test_statistics_golden.py",
+          "must": "exist"
+        },
+        {
+          "path": "tests/test_statistics_golden.py",
+          "must": "pass_in_hermetic_tier"
+        },
+        {
+          "path": "tests/test_statistics_golden.py",
+          "must": "document_kurtosis_convention"
+        }
+      ],
+      "user_actions_pending": [],
+      "evidence": [],
+      "updated": "2026-07-10"
+    },
+    {
+      "id": "WS3",
+      "title": "Two-zone code rule for all new code",
+      "status": "not_started",
+      "required_artifacts": [
+        {
+          "path": "lib/io.py",
+          "must": "exist"
+        },
+        {
+          "path": "lib/timestamps.py",
+          "must": "exist"
+        },
+        {
+          "path": "lib/guardrails.py",
+          "must": "exist"
+        },
+        {
+          "path": "lib/search_log.py",
+          "must": "exist"
+        },
+        {
+          "path": "lib/report.py",
+          "must": "exist"
+        },
+        {
+          "path": "lib/statistics.py",
+          "must": "exist"
+        },
+        {
+          "path": "tests",
+          "must": "hermetic_lib_unit_tests_exist"
+        },
+        {
+          "path": "scripts/audit_helper_drift.py",
+          "must": "exist"
+        },
+        {
+          "path": "scripts/audit_research_readiness.py",
+          "must": "contains:lib_bypass"
+        }
+      ],
+      "user_actions_pending": [],
+      "evidence": [],
+      "updated": "2026-07-10"
+    },
+    {
+      "id": "WS4",
+      "title": "Gate integrity",
+      "status": "not_started",
+      "required_artifacts": [
+        {
+          "path": "experiments/locked_gates.jsonl",
+          "must": "exist"
+        },
+        {
+          "path": "tests",
+          "must": "locked_gate_hash_meta_test_exists"
+        },
+        {
+          "path": "AGENTS.md",
+          "must": "contains:locked preregistration"
+        },
+        {
+          "path": "AGENTS.md",
+          "must": "contains:agent model/version"
+        },
+        {
+          "path": "docs",
+          "must": "contains:adversarial-review"
+        }
+      ],
+      "user_actions_pending": [],
+      "evidence": [],
+      "updated": "2026-07-10"
+    },
+    {
+      "id": "WS5",
+      "title": "Evolution hygiene",
+      "status": "not_started",
+      "required_artifacts": [
+        {
+          "path": "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
+          "must": "exist"
+        },
+        {
+          "path": "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
+          "must": "contains:user-approved"
+        },
+        {
+          "path": "scripts",
+          "must": "contains:wiki_sha256"
+        },
+        {
+          "path": "schemas",
+          "must": "contains:opra_statistics"
+        },
+        {
+          "path": ".git/refs/tags",
+          "must": "governance_tag_exists"
+        }
+      ],
+      "user_actions_pending": [],
+      "evidence": [],
+      "updated": "2026-07-10"
+    }
+  ]
+}
