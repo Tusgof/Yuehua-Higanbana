@@ -38,6 +38,13 @@ STYPE_IN = "parent"
 START = "2024-01-03T00:00:00+00:00"
 END = "2024-01-04T00:00:00+00:00"
 WINDOW = "2024-01-03_full_utc_day_statistics"
+STAT_TYPE_NAMES = {
+    9: "OPEN_INTEREST",
+    11: "CLOSE_PRICE",
+}
+STAT_UPDATE_ACTION_NAMES = {
+    1: "ADD",
+}
 
 
 def build_probe_plan(metadata_report_path: Path = DEFAULT_METADATA_REPORT) -> dict[str, Any]:
@@ -282,17 +289,23 @@ def _unique_strings(frame: Any, column: str) -> list[str]:
 
 
 def _stat_type_name(value: Any) -> str:
-    return _enum_like_name(value, "StatType")
+    return _enum_like_name(value, "StatType", STAT_TYPE_NAMES)
 
 
 def _update_action_name(value: Any) -> str:
-    return _enum_like_name(value, "StatUpdateAction")
+    return _enum_like_name(value, "StatUpdateAction", STAT_UPDATE_ACTION_NAMES)
 
 
-def _enum_like_name(value: Any, enum_name: str) -> str:
+def _enum_like_name(value: Any, enum_name: str, hermetic_names: dict[int, str] | None = None) -> str:
     name = getattr(value, "name", None)
     if isinstance(name, str):
         return name
+    try:
+        integer_value = int(value)
+    except (TypeError, ValueError):
+        integer_value = None
+    if integer_value is not None and hermetic_names and integer_value in hermetic_names:
+        return hermetic_names[integer_value]
     try:
         import databento as db  # type: ignore
 

@@ -1,18 +1,18 @@
 # Technical DD Remediation Status
 
-**Updated**: 2026-07-09  
+**Updated**: 2026-07-10
 **Audience**: Fable 5 review and future Codex sessions
 
 ## Current Summary
 
-Technical DD Workstream 1 is locally implemented but not fully closed. The remaining closure item depends on external restore media:
+Fable 5 verified Workstream 1 hermetic clean clone (`535/535`) on 2026-07-10. Workstream 1 is still not fully closed. The remaining closure items are external restore media and checksum disposition:
 
 - The user will order a flash drive.
 - After the drive is available, run the physical restore rehearsal described in `docs\BACKUP_AND_RESTORE.md`.
 - The two Databento checksum mismatches remain unresolved until restore/revalidation/rebaseline is explicitly completed.
 - Do not silently overwrite historical hashes or claim Workstream 1 complete before that external step.
 
-While this external blocker is parked, Codex may continue `$0` local remediation that does not require paid data, provider metadata calls, live LLM calls, broker access, or new hypothesis expansion.
+While this external blocker is parked, Codex may continue only the WS1 follow-up items requested by Fable. WS2-WS5 are treated as not started / not Fable-accepted until WS1 exits.
 
 ## Completed Or In Progress
 
@@ -22,6 +22,8 @@ While this external blocker is parked, Codex may continue `$0` local remediation
 | Backup/restore docs | Written | `docs\BACKUP_AND_RESTORE.md` |
 | Paid-data integrity checker | Implemented; blocker found | `scripts\verify_data_integrity.py`, `reports\diagnostics\data_integrity_mismatch_review_2026_07_09.md` |
 | Restore rehearsal | External blocker | Waiting for user flash drive |
+| Databento checksum mismatch diagnosis | Complete; blocker remains | `reports\diagnostics\databento_checksum_mismatch_diagnosis_2026_07_10.md` |
+| OPRA stat-type hermetic mapping | Complete | `scripts\probe_databento_opra_statistics.py`, `tests\test_probe_databento_opra_statistics.py` |
 | H-A2.64 cache inventory | Complete E0 | `reports\data_cost\h_a2_targeted_geometry_cache_inventory_and_cost_plan.json` |
 | Two-zone `lib/` foundation | Started | `lib\environment.py`, `lib\integrity.py`, `lib\io.py` |
 | Helper drift audit | Implemented; findings reported | `scripts\audit_helper_drift.py`, `reports\diagnostics\helper_drift_audit.json` |
@@ -44,6 +46,8 @@ While this external blocker is parked, Codex may continue `$0` local remediation
 - `scripts\audit_new_script_lib_usage.py` reports `pass` with `0` new scripts bypassing shared `lib/` helpers.
 - `scripts\evaluate_research_acceptance.py` now requires an adversarial/refutation review artifact before any E2 candidate can pass the acceptance gate.
 - `scripts\validate_governance_epochs.py` reports `pass` for 4 governance epochs. The Technical DD epoch remains `active_with_external_blocker` until the flash-drive restore/checksum closure is done.
+- Fable 5 review overrides the local Codex status for WS2-WS5: those workstreams are not started / not Fable-accepted and must be resumed only after WS1 exit.
+- `reports\diagnostics\databento_checksum_mismatch_diagnosis_2026_07_10.md` confirms the two Databento files remain bit-level mismatches. The local duplicate copies match the current mismatched files, not the expected originals.
 
 ## Do Not Claim Yet
 

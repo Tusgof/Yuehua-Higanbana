@@ -1,0 +1,112 @@
+{
+  "blockers": [
+    "raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1430.dbn.zst:sha256_mismatch",
+    "raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1500.dbn.zst:sha256_mismatch"
+  ],
+  "created_at_utc": "2026-07-10T07:41:38+00:00",
+  "decision": "No rebaseline performed. The blocker remains open until original files are restored or user/Fable accepts a documented revalidation/rebaseline decision.",
+  "rows": [
+    {
+      "actual_sha256": "32618eb467825a9e828e909af3947e86d56bfd2e519f45fe307e76053ad66c57",
+      "byte_delta_vs_download_report": 54,
+      "bytes": 1985057,
+      "download_report_rows": [
+        {
+          "bytes": 1985003,
+          "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_06_intraday_exit_30m_chunk2\\2024-06-13_exit_check_1430.dbn.zst",
+          "sha256": "fca9775548d422cc7fc2ebb92c18fcf35fda2e9185aceb12e3a60ba208d84302",
+          "source": "downloaded",
+          "window": "2024-06-13_exit_check_1430"
+        },
+        {
+          "dataset": "OPRA.PILLAR",
+          "end": "2024-06-13T18:35:00+00:00",
+          "estimated_cost_usd": 0.027030706406,
+          "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_06_intraday_exit_30m_chunk2\\2024-06-13_exit_check_1430.dbn.zst",
+          "schema": "cbbo-1m",
+          "start": "2024-06-13T18:25:00+00:00",
+          "stype_in": "parent",
+          "symbols": [
+            "SPY.OPT"
+          ],
+          "window": "2024-06-13_exit_check_1430"
+        }
+      ],
+      "exists": true,
+      "expected_sha256": "fca9775548d422cc7fc2ebb92c18fcf35fda2e9185aceb12e3a60ba208d84302",
+      "expected_source_report": "reports/data_cost/databento_download_result_oos_2024_06_intraday_exit_30m_chunk2.json",
+      "last_write_time_local": "2026-06-30T20:49:12+00:00",
+      "normalization_rows": [
+        {
+          "file": "data\\raw\\spy_0dte\\databento\\oos_2024_06\\2024-06-13_exit_check_1430.dbn.zst",
+          "input_rows": 90700,
+          "output_rows": 2380,
+          "skipped_invalid_quote": 0,
+          "skipped_non_0dte": 88320,
+          "trade_date": "2024-06-13"
+        }
+      ],
+      "normalized_duplicate_exists": true,
+      "normalized_duplicate_path": "data\\raw\\spy_0dte\\databento\\oos_2024_06\\2024-06-13_exit_check_1430.dbn.zst",
+      "normalized_duplicate_same_as_current": true,
+      "normalized_duplicate_sha256": "32618eb467825a9e828e909af3947e86d56bfd2e519f45fe307e76053ad66c57",
+      "relative_path": "raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1430.dbn.zst",
+      "status": "sha256_mismatch"
+    },
+    {
+      "actual_sha256": "81e0940d2bee249939071be44035d5cdf2b6df5e84ddddb2fae306ba04091465",
+      "byte_delta_vs_download_report": 112,
+      "bytes": 2002219,
+      "download_report_rows": [
+        {
+          "bytes": 2002107,
+          "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_06_intraday_exit_30m_chunk2\\2024-06-13_exit_check_1500.dbn.zst",
+          "sha256": "ef707e9ea1de56c14f0524d5879eab9abe5086be4228c75facfe4f3637e53ec5",
+          "source": "downloaded",
+          "window": "2024-06-13_exit_check_1500"
+        },
+        {
+          "dataset": "OPRA.PILLAR",
+          "end": "2024-06-13T19:05:00+00:00",
+          "estimated_cost_usd": 0.027030706406,
+          "output_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\raw\\spy_0dte\\databento\\oos_2024_06_intraday_exit_30m_chunk2\\2024-06-13_exit_check_1500.dbn.zst",
+          "schema": "cbbo-1m",
+          "start": "2024-06-13T18:55:00+00:00",
+          "stype_in": "parent",
+          "symbols": [
+            "SPY.OPT"
+          ],
+          "window": "2024-06-13_exit_check_1500"
+        }
+      ],
+      "exists": true,
+      "expected_sha256": "ef707e9ea1de56c14f0524d5879eab9abe5086be4228c75facfe4f3637e53ec5",
+      "expected_source_report": "reports/data_cost/databento_download_result_oos_2024_06_intraday_exit_30m_chunk2.json",
+      "last_write_time_local": "2026-06-30T20:49:30+00:00",
+      "normalization_rows": [
+        {
+          "file": "data\\raw\\spy_0dte\\databento\\oos_2024_06\\2024-06-13_exit_check_1500.dbn.zst",
+          "input_rows": 90700,
+          "output_rows": 2380,
+          "skipped_invalid_quote": 0,
+          "skipped_non_0dte": 88320,
+          "trade_date": "2024-06-13"
+        }
+      ],
+      "normalized_duplicate_exists": true,
+      "normalized_duplicate_path": "data\\raw\\spy_0dte\\databento\\oos_2024_06\\2024-06-13_exit_check_1500.dbn.zst",
+      "normalized_duplicate_same_as_current": true,
+      "normalized_duplicate_sha256": "81e0940d2bee249939071be44035d5cdf2b6df5e84ddddb2fae306ba04091465",
+      "relative_path": "raw/spy_0dte/databento/oos_2024_06_intraday_exit_30m_chunk2/2024-06-13_exit_check_1500.dbn.zst",
+      "status": "sha256_mismatch"
+    }
+  ],
+  "schema_version": "databento_checksum_mismatch_diagnosis_v1",
+  "source_paths": {
+    "download_report": "reports\\data_cost\\databento_download_result_oos_2024_06_intraday_exit_30m_chunk2.json",
+    "normalization_report": "reports\\data_cost\\databento_normalization_summary_2024_06.json",
+    "supplemental_registry": "data\\registry\\paid_artifact_checksums.jsonl"
+  },
+  "status": "blocked",
+  "target_count": 2
+}

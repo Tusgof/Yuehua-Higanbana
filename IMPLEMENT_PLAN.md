@@ -10,6 +10,7 @@
 
 ## Current Locked Decisions
 - Technical DD freeze is active: no new paid data purchases and no new hypothesis expansion until Workstream 1 below is complete. Existing preregistered `$0` research remains allowed but is not the active priority.
+- Fable 5 verification update on 2026-07-10: WS1 hermetic clean-clone tier passed independently (`535/535`), but WS1 has not exited because restore rehearsal and the two Databento checksum mismatches remain open. WS2-WS5 must be treated as not started / not Fable-accepted and resumed only after WS1 exit, following the DD handoff order.
 - Normal in-plan SPY-only Higanbana work uses a proceed-by-default rule. Agents state intent, affected files, and verification path, then continue without asking for approval.
 - Do not ask for approval as a routine workflow step. Ask a question only when required information is missing and cannot be inferred safely. Hard-stop boundaries are out-of-plan safety stops, not approval prompts for ordinary work.
 - Edge validation comes before paper trading.
@@ -40,6 +41,8 @@
 
 **Current exit blockers**: restore the two changed Databento artifacts from an external backup or explicitly accept a documented revalidation/rebaseline decision; physical second-machine restore rehearsal is deferred by the user for now. The paid-data and hypothesis-expansion freeze remains active until these are closed.
 
+**2026-07-10 Fable/Codex follow-up**: Fable independently verified WS1 hermetic clean clone (`535/535`). Codex then added `reports\diagnostics\databento_checksum_mismatch_diagnosis_2026_07_10.md` and `.json` without rebaselining; both files remain `sha256_mismatch`. OPRA statistics stat-type mapping is now hermetic for known fixture values (`OPEN_INTEREST=9`, `CLOSE_PRICE=11`) instead of relying on the Databento package.
+
 ---
 
 ## Workstream 2: Golden Statistics Anchors
@@ -49,8 +52,8 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| DD2.1 | [DONE] Add a shared statistics kernel for new code without migrating frozen scripts | M | RISK | `lib\statistics.py` includes PSR/MinTRL, population skewness, raw population kurtosis, ES, and Black-Scholes helpers |
-| DD2.2 | [DONE] Add hermetic golden-number tests for statistics conventions | M | RISK | `python -m unittest tests.test_statistics_golden` passes and anchors MinTRL `285`, PSR, ES left-tail behavior, and Black-Scholes price/delta/gamma |
+| DD2.1 | [NOT STARTED - FABLE ORDER] Add a shared statistics kernel for new code without migrating frozen scripts | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD2.2 | [NOT STARTED - FABLE ORDER] Add hermetic golden-number tests for statistics conventions | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
 
 **Track complete when**: New statistics code has fixed golden anchors. Existing frozen reports are not rewritten by this track.
 
@@ -63,9 +66,9 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| DD3.1 | [DONE] Start shared `lib/` helpers for new code | S | RISK | `lib\environment.py`, `lib\integrity.py`, `lib\io.py`, and `lib\statistics.py` exist and are imported by new DD scripts |
-| DD3.2 | [DONE] Add helper drift audit without auto-fixing frozen scripts | M | RISK | `python scripts\audit_helper_drift.py` writes `reports\diagnostics\helper_drift_audit.json` and reports `pass_with_findings` with 92 divergent helper copies |
-| DD3.3 | [DONE] Add readiness metric for new scripts bypassing `lib/` | S | RISK | `python scripts\audit_new_script_lib_usage.py` reports `pass: 0 new scripts bypass lib` using `config\new_code_scripts.json` |
+| DD3.1 | [NOT STARTED - FABLE ORDER] Start shared `lib/` helpers for new code | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD3.2 | [NOT STARTED - FABLE ORDER] Add helper drift audit without auto-fixing frozen scripts | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD3.3 | [NOT STARTED - FABLE ORDER] Add readiness metric for new scripts bypassing `lib/` | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
 
 **Track complete when**: New code uses `lib/`, drift is measured, and readiness reports helper-bypass count.
 
@@ -78,10 +81,10 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| DD4.1 | [DONE] Seed append-only locked-gate manifest | M | RISK | `experiments\locked_gates.jsonl` has three active locked gates and `python scripts\validate_locked_gates.py` passes |
-| DD4.2 | [DONE] Add hermetic locked-gate hash validation test | S | RISK | `python -m unittest tests.test_validate_locked_gates` passes and rejects hash mismatches |
-| DD4.3 | [DONE] Add locked validator review and agent-version rule to `AGENTS.md` | S | RISK | `AGENTS.md` requires Fable/user review before changing locked validators and commit trailer `Agent: ...` |
-| DD4.4 | [DONE] Add adversarial-review step to E2 promotion checklist | S | RISK | `python -m unittest tests.test_evaluate_research_acceptance` passes and E2 candidates now require `adversarial_review_completed` |
+| DD4.1 | [NOT STARTED - FABLE ORDER] Seed append-only locked-gate manifest | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD4.2 | [NOT STARTED - FABLE ORDER] Add hermetic locked-gate hash validation test | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD4.3 | [NOT STARTED - FABLE ORDER] Add locked validator review and agent-version rule to `AGENTS.md` | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD4.4 | [NOT STARTED - FABLE ORDER] Add adversarial-review step to E2 promotion checklist | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
 
 **Track complete when**: Locked gates are hash-verified and E2 promotion requires adversarial review.
 
@@ -94,10 +97,10 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| DD5.1 | [DONE - PROPOSAL ONLY] Draft report retention policy | S | RISK | `docs\REPORT_RETENTION_POLICY_PROPOSAL.md` exists and explicitly forbids moving/deleting reports before user approval |
-| DD5.2 | [DONE - AUDIT ONLY] Add wiki citation hash audit | M | RISK | `python scripts\audit_wiki_citation_hashes.py` reports 5 citations with missing embedded hashes and no missing files |
-| DD5.3 | [DONE] Add OPRA statistics ingest schema validation | M | RISK | `schemas\opra_statistics_boundary.schema.json`, `lib\opra_statistics_schema.py`, and `tests\test_opra_statistics_schema.py` validate OPRA statistics summaries before analysis use |
-| DD5.4 | [DONE] Start governance epoch tagging | S | RISK | `config\governance_epochs.json`, `docs\GOVERNANCE_EPOCH_TAGGING.md`, and `python scripts\validate_governance_epochs.py` record and validate 4 governance epochs including `gamma-policy-v2` |
+| DD5.1 | [NOT STARTED - FABLE ORDER] Draft report retention policy | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD5.2 | [NOT STARTED - FABLE ORDER] Add wiki citation hash audit | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD5.3 | [NOT STARTED - FABLE ORDER] Add OPRA statistics ingest schema validation | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD5.4 | [NOT STARTED - FABLE ORDER] Start governance epoch tagging | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
 
 **Track complete when**: Retention, wiki-hash, provider-schema, and epoch-tag policies have enforceable checks or approved documented blockers.
 

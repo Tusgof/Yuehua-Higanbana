@@ -5,6 +5,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 try:
     import pandas as pd
@@ -28,14 +29,25 @@ def load_probe():
     return module
 
 
-@state_audit_capability("pandas", pd is not None)
-class DatabentoOpraStatisticsProbeTests(unittest.TestCase):
+class DatabentoOpraStatisticsEnumTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.probe = load_probe()
 
     def test_stat_type_name_maps_open_interest_integer(self) -> None:
         self.assertEqual("OPEN_INTEREST", self.probe._stat_type_name(9))
+
+    def test_stat_type_name_maps_open_interest_without_databento_package(self) -> None:
+        with patch.dict(sys.modules, {"databento": None}):
+            self.assertEqual("OPEN_INTEREST", self.probe._stat_type_name(9))
+            self.assertEqual("CLOSE_PRICE", self.probe._stat_type_name(11))
+
+
+@state_audit_capability("pandas", pd is not None)
+class DatabentoOpraStatisticsProbeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.probe = load_probe()
 
     def test_summarize_statistics_frame_counts_open_interest(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
