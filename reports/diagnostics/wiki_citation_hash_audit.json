@@ -1,51 +1,100 @@
 {
+  "active_preregistration_count": 2,
+  "active_registry_path": "experiments\\active_wiki_citation_hashes.json",
   "audit_id": "wiki_citation_hash_audit",
   "blockers": [],
-  "citation_count": 5,
+  "citation_count": 9,
   "citations": [
     {
-      "actual_sha256": "90663b67e49dcec90bd641e801f9464e593ff8fe9091b2d70e9f4645381af556",
-      "embedded_sha256": null,
-      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
-      "status": "hash_missing",
-      "wiki_relative_path": "concepts/deflated-sharpe-ratio.md"
+      "artifact_actual_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "artifact_expected_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "experiment_path": "experiments/h_a2_targeted_data_regime_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/implementable-option-pnl.md",
+      "wiki_sha256_actual": "a16b27240c798fba627786ee9cdc00d589f28656fff9e5a893ca97f810709e48",
+      "wiki_sha256_expected": "a16b27240c798fba627786ee9cdc00d589f28656fff9e5a893ca97f810709e48"
     },
     {
-      "actual_sha256": "185fe1a16c4e66b3630cb303dbd75acb354e179631de8a9fc1b985451756c94b",
-      "embedded_sha256": null,
-      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
-      "status": "hash_missing",
-      "wiki_relative_path": "concepts/market-maker-net-gamma.md"
+      "artifact_actual_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "artifact_expected_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "experiment_path": "experiments/h_a2_targeted_data_regime_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/minimum-track-record-length.md",
+      "wiki_sha256_actual": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81",
+      "wiki_sha256_expected": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81"
     },
     {
-      "actual_sha256": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81",
-      "embedded_sha256": null,
-      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
-      "status": "hash_missing",
-      "wiki_relative_path": "concepts/minimum-track-record-length.md"
+      "artifact_actual_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "artifact_expected_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "experiment_path": "experiments/h_a2_targeted_data_regime_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/probabilistic-sharpe-ratio.md",
+      "wiki_sha256_actual": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5",
+      "wiki_sha256_expected": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5"
     },
     {
-      "actual_sha256": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5",
-      "embedded_sha256": null,
-      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
-      "status": "hash_missing",
-      "wiki_relative_path": "concepts/probabilistic-sharpe-ratio.md"
+      "artifact_actual_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "artifact_expected_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "experiment_path": "experiments/h_a2_targeted_data_regime_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/regime-filtering-for-zero-dte.md",
+      "wiki_sha256_actual": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae",
+      "wiki_sha256_expected": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae"
     },
     {
-      "actual_sha256": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae",
-      "embedded_sha256": null,
-      "experiment_path": "experiments\\h_g1_sample_expansion_plan.json",
-      "status": "hash_missing",
-      "wiki_relative_path": "concepts/regime-filtering-for-zero-dte.md"
+      "artifact_actual_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "artifact_expected_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "experiment_path": "experiments/h_g1_sample_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/deflated-sharpe-ratio.md",
+      "wiki_sha256_actual": "90663b67e49dcec90bd641e801f9464e593ff8fe9091b2d70e9f4645381af556",
+      "wiki_sha256_expected": "90663b67e49dcec90bd641e801f9464e593ff8fe9091b2d70e9f4645381af556"
+    },
+    {
+      "artifact_actual_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "artifact_expected_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "experiment_path": "experiments/h_g1_sample_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/market-maker-net-gamma.md",
+      "wiki_sha256_actual": "185fe1a16c4e66b3630cb303dbd75acb354e179631de8a9fc1b985451756c94b",
+      "wiki_sha256_expected": "185fe1a16c4e66b3630cb303dbd75acb354e179631de8a9fc1b985451756c94b"
+    },
+    {
+      "artifact_actual_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "artifact_expected_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "experiment_path": "experiments/h_g1_sample_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/minimum-track-record-length.md",
+      "wiki_sha256_actual": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81",
+      "wiki_sha256_expected": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81"
+    },
+    {
+      "artifact_actual_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "artifact_expected_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "experiment_path": "experiments/h_g1_sample_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/probabilistic-sharpe-ratio.md",
+      "wiki_sha256_actual": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5",
+      "wiki_sha256_expected": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5"
+    },
+    {
+      "artifact_actual_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "artifact_expected_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "experiment_path": "experiments/h_g1_sample_expansion_plan.json",
+      "status": "pass",
+      "wiki_relative_path": "concepts/regime-filtering-for-zero-dte.md",
+      "wiki_sha256_actual": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae",
+      "wiki_sha256_expected": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae"
     }
   ],
-  "hash_missing_count": 5,
-  "hash_recorded_count": 0,
+  "hash_missing_count": 0,
+  "hash_recorded_count": 9,
   "interpreter": {
     "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
     "python_implementation": "cpython",
     "python_version": "3.14.3"
   },
-  "status": "pass_with_missing_hashes",
+  "schema_version": "active_wiki_citation_hash_audit_v1",
+  "status": "pass",
   "wiki_root": "D:\\Fogust\\Workspace\\LLM Wiki\\LLM Wiki\\wiki"
 }

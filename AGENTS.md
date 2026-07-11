@@ -101,7 +101,13 @@ The active project is now **SPY 0DTE - Higanbana**.
 - GitHub Actions rejects a `main` push when its HEAD commit message lacks that trailer.
 - New scripts should import hypothesis-independent helpers from `lib/` instead of copy-pasting `_load_json`, `_relative`, guardrail validation, search-log, report-writing, or statistics helpers. Existing frozen scripts are not migrated in place unless a separate remediation task explicitly allows it.
 
-## 9. Session Closure
+## 9. Evolution Hygiene
+
+- New preregistrations that cite the local LLM Wiki must record wiki-relative paths and SHA-256 values, and their validators must reject missing or changed sources. Active legacy exceptions are bound in `experiments/active_wiki_citation_hashes.json`.
+- Do not move, delete, rewrite, or archive reports until `docs/REPORT_RETENTION_POLICY_PROPOSAL.md` records `User-approved: true` in a reviewed commit. The first approved archival implementation must be dry-run only.
+- Governance tags are immutable. Never move or retarget an existing tag; corrections require a new epoch and tag.
+
+## 10. Session Closure
 
 - Every session that modifies files must end by committing and pushing to `origin/main`.
 - The session report must include the resulting `origin/main` commit hash as completion evidence. Do not claim work is complete unless it is visible at that hash.

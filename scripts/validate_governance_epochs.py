@@ -18,6 +18,7 @@ DEFAULT_MANIFEST = PROJECT_ROOT / "config" / "governance_epochs.json"
 DEFAULT_OUTPUT = PROJECT_ROOT / "reports" / "diagnostics" / "governance_epochs_validation.json"
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REQUIRED_FIELDS = {"epoch_id", "date", "status", "kind", "description", "evidence_paths"}
+TAG_RE = re.compile(r"^[a-z0-9][a-z0-9._-]*$")
 
 
 def validate_governance_epochs(manifest_path: Path = DEFAULT_MANIFEST, output_path: Path = DEFAULT_OUTPUT, write_report: bool = True) -> dict[str, Any]:
@@ -51,6 +52,10 @@ def validate_governance_epochs(manifest_path: Path = DEFAULT_MANIFEST, output_pa
         if not isinstance(date, str) or not DATE_RE.match(date):
             row_blockers.append("date must use YYYY-MM-DD")
 
+        git_tag = epoch.get("git_tag")
+        if git_tag is not None and (not isinstance(git_tag, str) or not TAG_RE.match(git_tag)):
+            row_blockers.append("git_tag must be a valid lowercase tag name")
+
         evidence_paths = epoch.get("evidence_paths")
         existing_paths: list[str] = []
         if not isinstance(evidence_paths, list) or not evidence_paths:
@@ -71,6 +76,7 @@ def validate_governance_epochs(manifest_path: Path = DEFAULT_MANIFEST, output_pa
                 "epoch_id": epoch_id,
                 "status": epoch.get("status"),
                 "kind": epoch.get("kind"),
+                "git_tag": git_tag,
                 "blockers": row_blockers,
                 "existing_evidence_paths": existing_paths,
             }
@@ -81,6 +87,9 @@ def validate_governance_epochs(manifest_path: Path = DEFAULT_MANIFEST, output_pa
         blockers.append("missing_required_epoch:technical-dd-remediation-2026-07-09")
     if "gamma-policy-v2" not in seen_ids:
         warnings.append("missing_recommended_epoch:gamma-policy-v2")
+    technical_dd = next((item for item in epochs if item.get("epoch_id") == "technical-dd-remediation-2026-07-09"), {})
+    if not technical_dd.get("git_tag"):
+        blockers.append("technical_dd_epoch_missing_git_tag")
 
     report: dict[str, Any] = {
         "schema_version": "governance_epochs_validation_v1",

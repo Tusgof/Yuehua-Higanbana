@@ -149,6 +149,8 @@ def main() -> int:
         ("validate_locked_gates", ["scripts/validate_locked_gates.py"]),
         ("audit_helper_drift", ["scripts/audit_helper_drift.py"]),
         ("audit_new_script_lib_usage", ["scripts/audit_new_script_lib_usage.py"]),
+        ("audit_wiki_citation_hashes", ["scripts/audit_wiki_citation_hashes.py"]),
+        ("validate_governance_epochs", ["scripts/validate_governance_epochs.py"]),
         ("run_h_b2_falsification_review", ["scripts/run_h_b2_falsification_review.py"]),
         ("validate_h_b2_falsification_review", ["scripts/validate_h_b2_falsification_review.py"]),
         ("validate_h_g1_regime_date_set", ["scripts/validate_h_g1_regime_date_set.py"]),

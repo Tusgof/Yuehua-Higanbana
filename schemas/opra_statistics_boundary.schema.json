@@ -18,5 +18,14 @@
     "dataset": "OPRA.PILLAR",
     "schema": "statistics"
   },
+  "required_record_columns": [
+    "stat_type",
+    "quantity",
+    "symbol"
+  ],
+  "required_stat_type_mapping": {
+    "9": "OPEN_INTEREST",
+    "11": "CLOSE_PRICE"
+  },
   "required_stat_types": ["OPEN_INTEREST"]
 }

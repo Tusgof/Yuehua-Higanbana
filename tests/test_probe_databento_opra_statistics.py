@@ -104,6 +104,28 @@ class DatabentoOpraStatisticsProbeTests(unittest.TestCase):
         self.assertEqual("blocked", result["status"])
         self.assertIn("requires_open_interest_records", result["blockers"])
 
+    def test_build_result_blocks_boundary_schema_drift(self) -> None:
+        result = self.probe.build_result(
+            {"estimated_cost_usd": 0.1},
+            {"source": "cache"},
+            {
+                "metadata": {"dataset": "OPRA.PILLAR", "schema": "statistics"},
+                "row_count": 1,
+                "columns": ["stat_type", "symbol"],
+                "ts_index_start": "2024-01-03T11:30:00Z",
+                "ts_index_end": "2024-01-03T11:31:00Z",
+                "has_stat_type": True,
+                "has_quantity": False,
+                "stat_type_counts": {"OPEN_INTEREST": 1},
+                "open_interest_record_count": 1,
+                "unique_symbol_count": 1,
+            },
+        )
+
+        self.assertEqual("blocked", result["status"])
+        self.assertIn("opra_statistics_schema:summary.has_quantity must be true", result["blockers"])
+        self.assertIn("opra_statistics_schema:summary.columns must include quantity", result["blockers"])
+
 
 if __name__ == "__main__":
     unittest.main()

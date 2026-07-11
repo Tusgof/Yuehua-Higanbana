@@ -1,0 +1,30 @@
+{
+  "schema_version": "active_wiki_citation_hashes_v1",
+  "policy_effective_date": "2026-07-11",
+  "policy": "Active legacy preregistrations use this companion registry to avoid mutating locked or frozen artifacts. New preregistrations must embed wiki_citation_hashes directly.",
+  "preregistrations": [
+    {
+      "artifact_path": "experiments/h_a2_targeted_data_regime_expansion_plan.json",
+      "artifact_sha256": "ea4e338aa356564e32a21ffed751191e184259ceb6878d8c3ecf8f745eba93b9",
+      "hash_storage": "companion_registry_locked_artifact",
+      "wiki_citation_hashes": {
+        "concepts/implementable-option-pnl.md": "a16b27240c798fba627786ee9cdc00d589f28656fff9e5a893ca97f810709e48",
+        "concepts/minimum-track-record-length.md": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81",
+        "concepts/probabilistic-sharpe-ratio.md": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5",
+        "concepts/regime-filtering-for-zero-dte.md": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae"
+      }
+    },
+    {
+      "artifact_path": "experiments/h_g1_sample_expansion_plan.json",
+      "artifact_sha256": "b54a1574e49fd67343a72ef35062f8d192b2cc460e5e3c8af0190573c29629a1",
+      "hash_storage": "companion_registry_frozen_artifact",
+      "wiki_citation_hashes": {
+        "concepts/deflated-sharpe-ratio.md": "90663b67e49dcec90bd641e801f9464e593ff8fe9091b2d70e9f4645381af556",
+        "concepts/market-maker-net-gamma.md": "185fe1a16c4e66b3630cb303dbd75acb354e179631de8a9fc1b985451756c94b",
+        "concepts/minimum-track-record-length.md": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81",
+        "concepts/probabilistic-sharpe-ratio.md": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5",
+        "concepts/regime-filtering-for-zero-dte.md": "e693ddbaebf4f43e00fd35c1fdb2a590cac83c67669b56b34ac760927f4ef6ae"
+      }
+    }
+  ]
+}

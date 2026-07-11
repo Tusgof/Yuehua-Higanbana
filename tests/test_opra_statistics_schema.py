@@ -28,11 +28,13 @@ class OpraStatisticsSchemaTests(unittest.TestCase):
         summary = valid_summary()
         summary["metadata"]["schema"] = "definition"
         summary["stat_type_counts"] = {"CLOSE_PRICE": 1}
+        summary["columns"].remove("quantity")
 
         errors = validate_opra_statistics_summary(summary)
 
         self.assertIn("summary.metadata.schema must be statistics", errors)
         self.assertIn("summary.stat_type_counts.OPEN_INTEREST must be positive", errors)
+        self.assertIn("summary.columns must include quantity", errors)
 
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@
 
 ## Current Locked Decisions
 - Technical DD freeze is active: no new paid data purchases and no new hypothesis expansion until Workstream 1 below is complete. Existing preregistered `$0` research remains allowed but is not the active priority.
-- Fable 5 verification update on 2026-07-10: WS1 hermetic clean-clone tier passed independently (`535/535`), but WS1 has not exited because restore rehearsal and the aggregate pilot checksum mismatch remain open. On 2026-07-11, the user explicitly directed completion of WS4 and WS3 as no-paid remediation work; WS5 remains not started.
+- Fable 5 verification update on 2026-07-10: WS1 hermetic clean-clone tier passed independently (`535/535`), but WS1 has not exited because restore rehearsal and the aggregate pilot checksum mismatch remain open. On 2026-07-11, the user explicitly directed completion of WS4, WS3, and WS5 no-paid remediation. WS5 technical controls are implemented, but report retention remains blocked on explicit user approval and no archival has occurred.
 - Normal in-plan SPY-only Higanbana work uses a proceed-by-default rule. Agents state intent, affected files, and verification path, then continue without asking for approval.
 - Do not ask for approval as a routine workflow step. Ask a question only when required information is missing and cannot be inferred safely. Hard-stop boundaries are out-of-plan safety stops, not approval prompts for ordinary work.
 - Edge validation comes before paper trading.
@@ -97,12 +97,12 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| DD5.1 | [NOT STARTED - FABLE ORDER] Draft report retention policy | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
-| DD5.2 | [NOT STARTED - FABLE ORDER] Add wiki citation hash audit | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
-| DD5.3 | [NOT STARTED - FABLE ORDER] Add OPRA statistics ingest schema validation | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
-| DD5.4 | [NOT STARTED - FABLE ORDER] Start governance epoch tagging | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD5.1 | [BLOCKED: USER APPROVAL] Propose report retention policy without archival | S | RISK | `docs\REPORT_RETENTION_POLICY_PROPOSAL.md` records `User-approved=false`, destination choices, permanent exclusions, dry-run-first rule, and no archival permission |
+| DD5.2 | [DONE] Enforce wiki citation hashes for active preregistrations | M | RISK | Companion registry binds 2 active preregistrations and 9 citations; state-audit fails on artifact/wiki drift without mutating locked or frozen artifacts |
+| DD5.3 | [DONE] Add OPRA statistics ingest schema validation | M | RISK | Boundary schema pins dataset/schema, required columns, stat-type mapping, and OPEN_INTEREST; the Databento probe blocks research use on drift |
+| DD5.4 | [DONE] Start governance epoch tagging | S | RISK | Manifest records `technical-dd-remediation-ws5-2026-07-11`; annotated tag is pushed with the WS5 evidence commit |
 
-**Track complete when**: Retention, wiki-hash, provider-schema, and epoch-tag policies have enforceable checks or approved documented blockers.
+**Track complete when**: Blocked only on explicit user approval of the retention proposal. No archival may be implemented until approval; the first approved implementation must be dry-run only.
 
 ---
 

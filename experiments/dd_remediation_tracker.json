@@ -164,7 +164,7 @@
     {
       "id": "WS5",
       "title": "Evolution hygiene",
-      "status": "not_started",
+      "status": "blocked",
       "required_artifacts": [
         {
           "path": "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
@@ -172,7 +172,7 @@
         },
         {
           "path": "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
-          "must": "contains:user-approved"
+          "must": "retention_policy_user_approved"
         },
         {
           "path": "scripts",
@@ -187,9 +187,16 @@
           "must": "governance_tag_exists"
         }
       ],
-      "user_actions_pending": [],
-      "evidence": [],
-      "updated": "2026-07-10"
+      "user_actions_pending": [
+        "Review docs/REPORT_RETENTION_POLICY_PROPOSAL.md and explicitly approve or revise the destination, first archive scope, and restore-test rule. No archival action is allowed while User-approved remains false."
+      ],
+      "evidence": [
+        "The retention proposal now has a machine-checkable User-approved=false gate and explicitly forbids moves, deletion, archival branches, and history rewriting before approval.",
+        "experiments/active_wiki_citation_hashes.json binds the two controlling H-A2/H-G1 preregistrations and nine local wiki citations by SHA-256 without mutating the locked/frozen artifacts; the state-audit validator fails on artifact or wiki drift.",
+        "The OPRA statistics boundary schema pins dataset/schema, required record columns, OPEN_INTEREST presence, and the vendored stat-type mapping; the Databento probe applies it before research use.",
+        "config/governance_epochs.json records the first immutable tag technical-dd-remediation-ws5-2026-07-11; tag creation and push are session-exit evidence."
+      ],
+      "updated": "2026-07-11"
     }
   ]
 }

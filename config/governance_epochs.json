@@ -1,6 +1,6 @@
 {
   "schema_version": "governance_epochs_v1",
-  "policy": "Record policy, plan, and governance epochs without rewriting historical artifacts. Git tags may be added later, but this manifest is the project control source.",
+  "policy": "Record policy, plan, and governance epochs without rewriting historical artifacts. The manifest is the audit source; selected epochs also receive immutable annotated Git tags.",
   "epochs": [
     {
       "epoch_id": "implement-plan-v2",
@@ -29,6 +29,7 @@
       "status": "active_with_external_blocker",
       "kind": "technical_due_diligence",
       "description": "Fable 5 Technical DD remediation epoch. Paid data and hypothesis expansion remain frozen until Workstream 1 restore/checksum closure is complete.",
+      "git_tag": "technical-dd-remediation-ws5-2026-07-11",
       "evidence_paths": [
         "docs/HIGANBANA_TECHNICAL_DUE_DILIGENCE.md",
         "docs/TECHNICAL_DD_REMEDIATION_STATUS.md",

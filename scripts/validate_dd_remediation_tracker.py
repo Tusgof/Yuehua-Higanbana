@@ -131,6 +131,11 @@ def _validate_done_artifact(ws_id: str, artifact_path: str, must: str, *, run_ex
             blockers.append(f"{ws_id}:missing_artifact:{artifact_path}")
         elif "kurtosis" not in target.read_text(encoding="utf-8", errors="ignore").lower():
             blockers.append(f"{ws_id}:missing_kurtosis_convention:{artifact_path}")
+    elif must == "retention_policy_user_approved":
+        if not target.exists():
+            blockers.append(f"{ws_id}:missing_artifact:{artifact_path}")
+        elif not re.search(r"(?im)^- \*\*User-approved\*\*:\s*`true`\s*$", target.read_text(encoding="utf-8")):
+            blockers.append(f"{ws_id}:retention_policy_not_user_approved:{artifact_path}")
     elif must == "hermetic_lib_unit_tests_exist":
         if not _any_test_contains("lib."):
             blockers.append(f"{ws_id}:missing_hermetic_lib_unit_tests")

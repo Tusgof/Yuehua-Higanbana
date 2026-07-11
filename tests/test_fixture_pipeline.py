@@ -64,6 +64,8 @@ class FixturePipelineTests(unittest.TestCase):
             "validate_locked_gates",
             "audit_helper_drift",
             "audit_new_script_lib_usage",
+            "audit_wiki_citation_hashes",
+            "validate_governance_epochs",
             "validate_h_g1_regime_date_set",
             "validate_h_g1_manifest_v3_plan",
             "select_h_g1_manifest_v3_replacement",

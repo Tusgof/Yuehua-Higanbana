@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -66,6 +67,25 @@ class ValidateDdRemediationTrackerTests(unittest.TestCase):
             run_expensive=False,
         )
         self.assertEqual([], blockers)
+
+    def test_retention_policy_false_cannot_support_done_claim(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            policy = root / "docs" / "REPORT_RETENTION_POLICY_PROPOSAL.md"
+            policy.parent.mkdir()
+            policy.write_text("- **User-approved**: `false`\n", encoding="utf-8")
+            with patch.object(self.validator, "PROJECT_ROOT", root):
+                blockers = self.validator._validate_done_artifact(
+                    "WS5",
+                    "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
+                    "retention_policy_user_approved",
+                    run_expensive=False,
+                )
+
+        self.assertEqual(
+            ["WS5:retention_policy_not_user_approved:docs/REPORT_RETENTION_POLICY_PROPOSAL.md"],
+            blockers,
+        )
 
 
 def _entry(ws_id: str) -> dict[str, object]:

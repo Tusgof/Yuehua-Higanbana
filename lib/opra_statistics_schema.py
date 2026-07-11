@@ -43,6 +43,14 @@ def validate_opra_statistics_summary(summary: dict[str, Any], schema: dict[str, 
     if not isinstance(summary.get("unique_symbol_count"), int) or summary.get("unique_symbol_count", 0) <= 0:
         errors.append("summary.unique_symbol_count must be positive integer")
 
+    columns = summary.get("columns")
+    if not isinstance(columns, list):
+        errors.append("summary.columns must be array")
+        columns = []
+    for column in schema.get("required_record_columns", []):
+        if column not in columns:
+            errors.append(f"summary.columns must include {column}")
+
     stat_type_counts = summary.get("stat_type_counts")
     if not isinstance(stat_type_counts, dict):
         errors.append("summary.stat_type_counts must be object")
