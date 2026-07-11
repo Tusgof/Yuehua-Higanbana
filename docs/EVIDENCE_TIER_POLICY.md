@@ -28,5 +28,16 @@ The validator must block:
 - Any summary that claims `ผ่าน`, `accepted`, `approved_for_operational_validation`, or equivalent strategy acceptance while `evidence_tier` is missing, `E0`, or `E1`.
 - Any `E0` or `E1` summary with empty `tier_blockers`.
 
+## E2 Promotion Checklist
+
+An E2 promotion requires an adversarial-review session after the candidate result is assembled and before operational validation is considered. Its sole purpose is attempted refutation, not confirmation.
+
+- The reviewer must be the user or a model other than the authoring agent.
+- The review must check data leakage, timestamp/lookahead discipline, alternative null hypotheses, implementation errors, selection bias, and regime concentration.
+- The candidate evidence JSON must include `adversarial_review` or `refutation_review` with status `completed` or `passed`, reviewer identity, and the refutation result.
+- A review that finds an unresolved critical issue blocks E2 promotion. A clean review documents what was attempted and what evidence could still overturn the result.
+
+`scripts/evaluate_research_acceptance.py` enforces this as `adversarial_review_completed`; it is not a discretionary report-writing step.
+
 ## Transitional Rule
 Old summaries without the three metadata fields are warnings unless they make an acceptance claim. New experiment runners should write the fields at creation time. After migration, the project can switch the validator to strict mode and fail missing metadata on all top-level summaries.

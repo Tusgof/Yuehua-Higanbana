@@ -61,6 +61,7 @@ class FixturePipelineTests(unittest.TestCase):
             "audit_paid_costs",
             "validate_hypothesis_registry",
             "validate_evidence_tiers",
+            "validate_locked_gates",
             "validate_h_g1_regime_date_set",
             "validate_h_g1_manifest_v3_plan",
             "select_h_g1_manifest_v3_replacement",

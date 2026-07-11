@@ -1,6 +1,6 @@
 {
   "schema_version": "dd_remediation_tracker_v1",
-  "updated": "2026-07-10",
+  "updated": "2026-07-11",
   "workstreams": [
     {
       "id": "WS1",
@@ -117,15 +117,23 @@
     {
       "id": "WS4",
       "title": "Gate integrity",
-      "status": "not_started",
+      "status": "done",
       "required_artifacts": [
         {
           "path": "experiments/locked_gates.jsonl",
           "must": "exist"
         },
         {
-          "path": "tests",
-          "must": "locked_gate_hash_meta_test_exists"
+          "path": "scripts/validate_locked_gates.py",
+          "must": "exist"
+        },
+        {
+          "path": "tests/test_validate_locked_gates.py",
+          "must": "pass_in_hermetic_tier"
+        },
+        {
+          "path": "docs/LOCKED_GATE_POLICY.md",
+          "must": "contains:supersedes_gate_id"
         },
         {
           "path": "AGENTS.md",
@@ -136,13 +144,17 @@
           "must": "contains:agent model/version"
         },
         {
-          "path": "docs",
+          "path": "docs/EVIDENCE_TIER_POLICY.md",
           "must": "contains:adversarial-review"
         }
       ],
       "user_actions_pending": [],
-      "evidence": [],
-      "updated": "2026-07-10"
+      "evidence": [
+        "The append-only manifest retains three seed gate records and validates active decision/validator SHA-256 pairs.",
+        "A new gate revision must append a distinct gate_id with supersedes_gate_id, human_approval, reviewed_by, unchanged paths, and replacement hashes; tests reject an unapproved revision.",
+        "scripts/evaluate_research_acceptance.py requires adversarial_review_completed for E2 candidates, and docs/EVIDENCE_TIER_POLICY.md specifies the independent refutation review."
+      ],
+      "updated": "2026-07-11"
     },
     {
       "id": "WS5",

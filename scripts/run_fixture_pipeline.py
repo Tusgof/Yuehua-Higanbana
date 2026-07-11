@@ -146,6 +146,7 @@ def main() -> int:
         ("validate_hypothesis_registry", ["scripts/validate_hypothesis_registry.py"]),
         ("validate_evidence_tiers", ["scripts/validate_evidence_tiers.py"]),
         ("validate_dd_remediation_tracker", ["scripts/validate_dd_remediation_tracker.py"]),
+        ("validate_locked_gates", ["scripts/validate_locked_gates.py"]),
         ("run_h_b2_falsification_review", ["scripts/run_h_b2_falsification_review.py"]),
         ("validate_h_b2_falsification_review", ["scripts/validate_h_b2_falsification_review.py"]),
         ("validate_h_g1_regime_date_set", ["scripts/validate_h_g1_regime_date_set.py"]),
