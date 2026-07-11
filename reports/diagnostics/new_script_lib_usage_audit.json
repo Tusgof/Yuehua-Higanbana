@@ -35,6 +35,11 @@
     },
     {
       "imports_lib": true,
+      "script_path": "scripts\\validate_dd_remediation_tracker.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
       "script_path": "scripts\\validate_governance_epochs.py",
       "status": "pass"
     },
@@ -44,6 +49,6 @@
       "status": "pass"
     }
   ],
-  "script_count": 7,
+  "script_count": 8,
   "status": "pass"
 }

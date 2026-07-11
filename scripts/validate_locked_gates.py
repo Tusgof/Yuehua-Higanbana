@@ -18,13 +18,14 @@ from lib.io import load_jsonl, relative_to_root
 
 
 DEFAULT_MANIFEST_PATH = PROJECT_ROOT / "experiments" / "locked_gates.jsonl"
+MINIMUM_LOCKED_GATE_ENTRIES = 3
 
 
 def _resolve(relative_path: str) -> Path:
     return PROJECT_ROOT / relative_path
 
 
-def validate_locked_gates(manifest_path: Path = DEFAULT_MANIFEST_PATH) -> dict[str, Any]:
+def validate_locked_gates(manifest_path: Path = DEFAULT_MANIFEST_PATH, *, minimum_entries: int | None = None) -> dict[str, Any]:
     blockers: list[str] = []
     entries = load_jsonl(manifest_path) if manifest_path.exists() else []
     seen_gate_ids: set[str] = set()
@@ -108,6 +109,14 @@ def validate_locked_gates(manifest_path: Path = DEFAULT_MANIFEST_PATH) -> dict[s
 
     if not entries:
         blockers.append("locked_gate_manifest_empty")
+    else:
+        required_minimum = (
+            MINIMUM_LOCKED_GATE_ENTRIES
+            if minimum_entries is None and manifest_path.resolve() == DEFAULT_MANIFEST_PATH.resolve()
+            else minimum_entries or 0
+        )
+        if len(entries) < required_minimum:
+            blockers.append(f"locked_gate_manifest_below_minimum:{len(entries)}<{required_minimum}")
 
     return {
         "status": "pass" if not blockers else "blocked",

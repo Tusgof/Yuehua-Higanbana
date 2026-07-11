@@ -71,7 +71,7 @@
     {
       "id": "WS3",
       "title": "Two-zone code rule for all new code",
-      "status": "not_started",
+      "status": "done",
       "required_artifacts": [
         {
           "path": "lib/io.py",
@@ -111,8 +111,13 @@
         }
       ],
       "user_actions_pending": [],
-      "evidence": [],
-      "updated": "2026-07-10"
+      "evidence": [
+        "lib/ now contains IO, Eastern-time timestamp discipline, guardrail validation, search-log writing, report rendering, regime-input loading, and the existing statistics kernel; dedicated hermetic unit tests cover the new modules.",
+        "scripts/audit_helper_drift.py runs in the state-audit tier and fixture pipeline, reports drift without auto-fixing frozen scripts, and currently records pass_with_findings.",
+        "scripts/audit_new_script_lib_usage.py runs before readiness in the fixture pipeline; the readiness report exposes new_script_lib_usage.bypassing_lib_count, currently 0.",
+        "Existing H-A2 callers remain frozen with their run_m5_regime_filter_sensitivity.py dependency. lib/regime_inputs.py is the required replacement for new callers; reproduction of frozen reports remains git checkout of the recorded commit."
+      ],
+      "updated": "2026-07-11"
     },
     {
       "id": "WS4",

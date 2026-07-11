@@ -25,6 +25,7 @@
 | paid_cost | `pass` | known cost `$196.358053`<br>guard used `$120.494368`<br>basis `user_reported_actual_usage`<br>remaining `$4.505632` | - |
 | research_logs | `pass` | - | - |
 | strategy_data | `blocked` | closed trades `90`<br>candidate days `93` | `requires_mintrl_psr_sample_adequacy` |
+| new_script_lib_usage | `pass` | new scripts bypassing lib `0` | - |
 | exp07_prompt_redesign | `blocked` | - | `requires_real_timestamp_clean_news_cases_for_exp07_prompt_research` |
 | exp07_real_news_case_plan | `blocked` | candidate days `71` | `requires_real_news_archive`, `requires_real_timestamp_clean_news_cases` |
 | exp07_acceptance | `blocked` | - | `requires_real_strategy_backtest_ablation`, `requires_real_news_archive`, `requires_wider_spy_0dte_data` |

@@ -10,7 +10,7 @@
 
 ## Current Locked Decisions
 - Technical DD freeze is active: no new paid data purchases and no new hypothesis expansion until Workstream 1 below is complete. Existing preregistered `$0` research remains allowed but is not the active priority.
-- Fable 5 verification update on 2026-07-10: WS1 hermetic clean-clone tier passed independently (`535/535`), but WS1 has not exited because restore rehearsal and the aggregate pilot checksum mismatch remain open. On 2026-07-11, the user explicitly directed completion of WS4 as a no-paid governance exception; WS3 and WS5 remain not started.
+- Fable 5 verification update on 2026-07-10: WS1 hermetic clean-clone tier passed independently (`535/535`), but WS1 has not exited because restore rehearsal and the aggregate pilot checksum mismatch remain open. On 2026-07-11, the user explicitly directed completion of WS4 and WS3 as no-paid remediation work; WS5 remains not started.
 - Normal in-plan SPY-only Higanbana work uses a proceed-by-default rule. Agents state intent, affected files, and verification path, then continue without asking for approval.
 - Do not ask for approval as a routine workflow step. Ask a question only when required information is missing and cannot be inferred safely. Hard-stop boundaries are out-of-plan safety stops, not approval prompts for ordinary work.
 - Edge validation comes before paper trading.
@@ -66,9 +66,9 @@
 
 | # | Task | Effort | Risk | Verification |
 |:--|:-----|:------:|:----:|:-------------|
-| DD3.1 | [NOT STARTED - FABLE ORDER] Start shared `lib/` helpers for new code | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
-| DD3.2 | [NOT STARTED - FABLE ORDER] Add helper drift audit without auto-fixing frozen scripts | M | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
-| DD3.3 | [NOT STARTED - FABLE ORDER] Add readiness metric for new scripts bypassing `lib/` | S | RISK | Start only after WS1 exit; prior Codex local scaffolds are not Fable-accepted |
+| DD3.1 | [DONE] Complete shared `lib/` helpers for new code | S | RISK | `lib/io.py`, `timestamps.py`, `guardrails.py`, `search_log.py`, `report.py`, `regime_inputs.py`, and `statistics.py` have hermetic unit coverage; existing experiment scripts were not migrated |
+| DD3.2 | [DONE] Add helper drift audit without auto-fixing frozen scripts | M | RISK | `scripts/audit_helper_drift.py` runs in state-audit and fixture pipeline, writes `reports\diagnostics\helper_drift_audit.json`, and reports only findings |
+| DD3.3 | [DONE] Add readiness metric for new scripts bypassing `lib/` | S | RISK | `scripts/audit_new_script_lib_usage.py` runs before readiness; `new_script_lib_usage.bypassing_lib_count=0` is surfaced in `research_readiness_audit` |
 
 **Track complete when**: New code uses `lib/`, drift is measured, and readiness reports helper-bypass count.
 
@@ -83,10 +83,10 @@
 |:--|:-----|:------:|:----:|:-------------|
 | DD4.1 | [DONE] Seed append-only locked-gate manifest | M | RISK | `experiments\locked_gates.jsonl` records decision/validator SHA-256 pairs for the three designated active governance locks |
 | DD4.2 | [DONE] Add hermetic locked-gate hash validation test | S | RISK | `tests\test_validate_locked_gates.py` validates current hashes, rejects hash drift, accepts only human-reviewed supersession, and rejects missing human approval |
-| DD4.3 | [DONE] Add locked validator review and agent-version rule to `AGENTS.md` | S | RISK | `AGENTS.md` requires user/Fable review for locked gate changes and an `Agent: model/version` commit trailer |
+| DD4.3 | [DONE] Add locked validator review and agent-version rule to `AGENTS.md` | S | RISK | `AGENTS.md` requires user/Fable review for locked gate changes and an `Agent: model/version` commit trailer; CI rejects a `main` push whose HEAD lacks it |
 | DD4.4 | [DONE] Add adversarial-review step to E2 promotion checklist | S | RISK | `docs\EVIDENCE_TIER_POLICY.md` requires independent adversarial/refutation review and `scripts\evaluate_research_acceptance.py` enforces `adversarial_review_completed` |
 
-**Track complete when**: Complete. Locked gates are hash-verified in the hermetic tier and fixture pipeline. Revisions require an append-only, human-reviewed supersession entry; E2 promotion requires adversarial review.
+**Track complete when**: Complete. Locked gates are hash-verified in the hermetic tier and fixture pipeline. Revisions require an append-only, human-reviewed supersession entry; the three-entry manifest floor prevents silent seed deletion; E2 promotion requires adversarial review.
 
 ---
 

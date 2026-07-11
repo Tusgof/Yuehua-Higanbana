@@ -6,6 +6,7 @@ from pathlib import Path
 
 from lib.io import load_json
 from scripts.audit_helper_drift import audit_helper_drift
+from tests.tiers import state_audit
 
 
 class AuditHelperDriftTests(unittest.TestCase):
@@ -51,6 +52,14 @@ class AuditHelperDriftTests(unittest.TestCase):
         self.assertEqual("pass", report["status"])
         self.assertFalse(saved["auto_fix_applied"])
         self.assertEqual("helper_drift_audit", saved["audit_id"])
+
+    @state_audit()
+    def test_current_scripts_are_measured_without_autofix(self) -> None:
+        report = audit_helper_drift(write_report=False)
+
+        self.assertIn(report["status"], {"pass", "pass_with_findings"})
+        self.assertFalse(report["auto_fix_applied"])
+        self.assertGreater(sum(item["occurrence_count"] for item in report["helper_reports"]), 0)
 
 
 if __name__ == "__main__":

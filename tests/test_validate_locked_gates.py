@@ -7,7 +7,11 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from scripts.validate_locked_gates import validate_locked_gates
+from scripts.validate_locked_gates import MINIMUM_LOCKED_GATE_ENTRIES, validate_locked_gates
+
+
+# Raise this floor only when a reviewed gate is appended; never lower it to permit deletion.
+LOCKED_GATE_MANIFEST_FLOOR = 3
 
 
 def _sha256(text: str) -> str:
@@ -18,7 +22,18 @@ class ValidateLockedGatesTests(unittest.TestCase):
     def test_current_manifest_passes(self) -> None:
         result = validate_locked_gates()
         self.assertEqual("pass", result["status"], result["blockers"])
-        self.assertGreaterEqual(result["entry_count"], 1)
+        self.assertEqual(LOCKED_GATE_MANIFEST_FLOOR, MINIMUM_LOCKED_GATE_ENTRIES)
+        self.assertGreaterEqual(result["entry_count"], LOCKED_GATE_MANIFEST_FLOOR)
+
+    def test_rejects_manifest_below_pinned_entry_floor(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root, manifest, artifact, validator = _gate_paths(Path(tmp))
+            manifest.write_text(json.dumps(_entry("gate-v1", artifact, validator)) + "\n", encoding="utf-8")
+            with patch("scripts.validate_locked_gates.PROJECT_ROOT", root):
+                result = validate_locked_gates(manifest, minimum_entries=LOCKED_GATE_MANIFEST_FLOOR)
+
+        self.assertEqual("blocked", result["status"])
+        self.assertIn("locked_gate_manifest_below_minimum:1<3", result["blockers"])
 
     def test_rejects_hash_mismatch(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

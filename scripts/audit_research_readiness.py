@@ -10,6 +10,7 @@ from typing import Any, Callable
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_JSON_OUTPUT = PROJECT_ROOT / "reports" / "research_readiness_audit.json"
 DEFAULT_REPORT_OUTPUT = PROJECT_ROOT / "reports" / "research_readiness_audit.md"
+NEW_SCRIPT_LIB_USAGE_AUDIT = PROJECT_ROOT / "reports" / "diagnostics" / "new_script_lib_usage_audit.json"
 GREEKS_OI_ENRICHMENT_REPORT = PROJECT_ROOT / "reports" / "greeks_oi_enrichment_probe_summary.json"
 GAMMA_AGGREGATION_POLICY_DOC = PROJECT_ROOT / "docs" / "GAMMA_AGGREGATION_VALIDATION_POLICY.md"
 GAMMA_AGGREGATION_DIAGNOSTIC_SUMMARY = PROJECT_ROOT / "reports" / "diagnostics" / "gamma_aggregation_diagnostic_summary.json"
@@ -205,6 +206,7 @@ REPORT_PATHS = {
     "exp07_prompt_redesign": PROJECT_ROOT / "docs" / "EXP07_PROMPT_REDESIGN.md",
     "exp07_real_news_case_plan": PROJECT_ROOT / "reports" / "experiments" / "exp07_real_news_case_plan.json",
     "exp07_acceptance": PROJECT_ROOT / "reports" / "experiments" / "exp07_acceptance_evaluation.json",
+    "new_script_lib_usage": NEW_SCRIPT_LIB_USAGE_AUDIT,
     "exp07_strategy_ablation": PROJECT_ROOT / "reports" / "experiments" / "exp07_strategy_ablation_status.json",
     "aug_2023_databento_dry_run": PROJECT_ROOT
     / "reports"
@@ -297,6 +299,8 @@ def _check_details(check: dict[str, Any]) -> str:
         details.append(f"closed trades `{check['closed_trades']}`")
     if "candidate_days" in check:
         details.append(f"candidate days `{check['candidate_days']}`")
+    if "bypassing_lib_count" in check:
+        details.append(f"new scripts bypassing lib `{check['bypassing_lib_count']}`")
     if "request_count" in check:
         details.append(f"requests `{check['request_count']}`")
     if "full_day_record_count" in check:
@@ -348,6 +352,14 @@ def _build_checks(reports: dict[str, dict[str, Any] | None], environment: dict[s
         ),
         _openrouter_check(environment),
     ]
+    if "new_script_lib_usage" in paths:
+        checks.insert(
+            8,
+            _new_script_lib_usage_check(
+                reports.get("new_script_lib_usage"),
+                paths["new_script_lib_usage"],
+            ),
+        )
     return checks
 
 
@@ -446,6 +458,28 @@ def _strategy_data_check(report: dict[str, Any] | None, path: Path) -> dict[str,
         "closed_trades": report.get("totals", {}).get("closed_trades"),
         "candidate_days": report.get("totals", {}).get("candidate_days"),
         "blockers": blockers,
+    }
+
+
+def _new_script_lib_usage_check(report: dict[str, Any] | None, path: Path) -> dict[str, Any]:
+    if report is None:
+        return {
+            "name": "new_script_lib_usage",
+            "status": "blocked",
+            "source": str(path),
+            "bypassing_lib_count": None,
+            "blockers": ["requires_new_script_lib_usage_audit"],
+        }
+    bypassing = int(report.get("bypassing_lib_count", 0))
+    blockers = list(report.get("blockers", []))
+    if bypassing:
+        blockers.append(f"new_script_lib_bypass_count:{bypassing}")
+    return {
+        "name": "new_script_lib_usage",
+        "status": "pass" if report.get("status") == "pass" and not blockers else "blocked",
+        "source": str(path),
+        "bypassing_lib_count": bypassing,
+        "blockers": sorted(set(blockers)),
     }
 
 

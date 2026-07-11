@@ -178,8 +178,8 @@
     {
       "divergent_files": [
         {
-          "path": "scripts\\audit_risk_first_data.py",
-          "sha256": "5c8c2e2016b647c3a43fc3e696042817b093377e207912f26949fc3b2ec1665f"
+          "path": "scripts\\plan_h_a2_2022_h2_stress_purchase.py",
+          "sha256": "c67fd261ecb3759dbca0cb49aa057075af902a47312223129b3e577077566843"
         },
         {
           "path": "scripts\\run_gamma_aggregation_diagnostic.py",
@@ -188,15 +188,27 @@
         {
           "path": "scripts\\run_h_a2_2022_10_coarse_stress_review.py",
           "sha256": "392eba1cdfbc41a06a76bd6ce76d1b15d4552b8c3def0f0a1aa433b01b70d88c"
+        },
+        {
+          "path": "scripts\\run_h_a2_macro_conditioned_reanalysis.py",
+          "sha256": "c67fd261ecb3759dbca0cb49aa057075af902a47312223129b3e577077566843"
         }
       ],
       "helper_name": "_load_jsonl",
-      "majority_sha256": "c67fd261ecb3759dbca0cb49aa057075af902a47312223129b3e577077566843",
-      "occurrence_count": 5,
+      "majority_sha256": "5c8c2e2016b647c3a43fc3e696042817b093377e207912f26949fc3b2ec1665f",
+      "occurrence_count": 6,
       "variant_count": 4
     },
     {
       "divergent_files": [
+        {
+          "path": "scripts\\compare_databento_canonical_content.py",
+          "sha256": "cb2210348c636cfaedfd915a26b97ce2b545a4a5609dd8fae4b2b99f06dc89c4"
+        },
+        {
+          "path": "scripts\\resolve_databento_integrity_redownload.py",
+          "sha256": "cb2210348c636cfaedfd915a26b97ce2b545a4a5609dd8fae4b2b99f06dc89c4"
+        },
         {
           "path": "scripts\\run_h_a2_breakeven_aware_rule_train_diagnostic.py",
           "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
@@ -240,8 +252,8 @@
       ],
       "helper_name": "_relative",
       "majority_sha256": "1e91fda8544bd6ee7d407c83815c16374749babc4865d7df4fcda572b80ac10d",
-      "occurrence_count": 94,
-      "variant_count": 4
+      "occurrence_count": 96,
+      "variant_count": 5
     },
     {
       "divergent_files": [
@@ -443,5 +455,5 @@
   "purpose": "Measure duplicated helper drift without editing frozen experiment scripts.",
   "script_root": "scripts",
   "status": "pass_with_findings",
-  "total_divergent_files": 92
+  "total_divergent_files": 95
 }

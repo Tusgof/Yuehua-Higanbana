@@ -98,6 +98,7 @@ The active project is now **SPY 0DTE - Higanbana**.
 - Locked gate hashes are recorded in `experiments/locked_gates.jsonl` and verified by `scripts/validate_locked_gates.py`.
 - Do not edit a locked preregistration artifact or its `scripts/validate_*_preregistration.py` validator silently. A change requires a new manifest entry with a human approval note and review by the user or Fable 5 before merge.
 - Every engineering commit must identify the agent model/version in a commit trailer such as `Agent: Codex (GPT-5)`.
+- GitHub Actions rejects a `main` push when its HEAD commit message lacks that trailer.
 - New scripts should import hypothesis-independent helpers from `lib/` instead of copy-pasting `_load_json`, `_relative`, guardrail validation, search-log, report-writing, or statistics helpers. Existing frozen scripts are not migrated in place unless a separate remediation task explicitly allows it.
 
 ## 9. Session Closure

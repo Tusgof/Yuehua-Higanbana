@@ -18,6 +18,8 @@ Do not edit a locked decision artifact or validator in place. A permitted revisi
 
 The predecessor remains in the manifest as historical evidence. The validator marks it `superseded` and verifies the hashes of only the active successor. A missing approval, reviewer, predecessor, or path match blocks the manifest.
 
+The manifest has a pinned minimum of three entries. Appending reviewed gates may raise that floor; it must never be lowered to make deletion appear valid.
+
 ## Engineering Rule
 
 The commit that performs a permitted revision must follow `AGENTS.md`: review by the user or Fable 5 before merge and an `Agent: model/version` trailer. A green test suite alone is never authorization to weaken a locked gate.

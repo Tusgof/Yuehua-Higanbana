@@ -11,6 +11,10 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from lib.io import load_json
 DEFAULT_TRACKER = PROJECT_ROOT / "experiments" / "dd_remediation_tracker.json"
 VALID_STATUSES = {"not_started", "in_progress", "done", "blocked"}
 VALID_WORKSTREAMS = {"WS1", "WS2", "WS3", "WS4", "WS5"}
@@ -19,7 +23,17 @@ FORBIDDEN_ABSOLUTE_PATH = re.compile(r"(?i)\b[A-Z]:[/\\]Fogust\b")
 
 def validate_tracker(path: Path = DEFAULT_TRACKER, *, run_expensive: bool = False) -> dict[str, Any]:
     blockers: list[str] = []
-    payload = _load_json(path, blockers)
+    try:
+        payload = load_json(path)
+    except FileNotFoundError:
+        blockers.append(f"tracker_missing:{path}")
+        payload = None
+    except json.JSONDecodeError as exc:
+        blockers.append(f"tracker_invalid_json:{exc}")
+        payload = None
+    if payload is not None and not isinstance(payload, dict):
+        blockers.append(f"tracker_must_be_json_object:{path}")
+        payload = None
     if payload is None:
         return _result("fail", path, blockers, [])
 
@@ -181,16 +195,6 @@ def _path_contains(path: Path, needle: str) -> bool:
                 if needle in child.read_text(encoding="utf-8", errors="ignore").lower():
                     return True
     return False
-
-
-def _load_json(path: Path, blockers: list[str]) -> dict[str, Any] | None:
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        blockers.append(f"tracker_missing:{path}")
-    except json.JSONDecodeError as exc:
-        blockers.append(f"tracker_invalid_json:{exc}")
-    return None
 
 
 def _result(status: str, path: Path, blockers: list[str], done_artifacts_checked: list[dict[str, str]]) -> dict[str, Any]:

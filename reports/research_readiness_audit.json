@@ -117,6 +117,13 @@
       "status": "blocked"
     },
     {
+      "blockers": [],
+      "bypassing_lib_count": 0,
+      "name": "new_script_lib_usage",
+      "source": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports\\diagnostics\\new_script_lib_usage_audit.json",
+      "status": "pass"
+    },
+    {
       "blockers": [
         "requires_real_timestamp_clean_news_cases_for_exp07_prompt_research"
       ],
