@@ -1,18 +1,19 @@
 # Technical DD Remediation Status
 
-**Updated**: 2026-07-11
+**Updated**: 2026-07-12
 **Audience**: Fable 5 review and future Codex sessions
 
 ## Current Summary
 
-Fable 5 verified Workstream 1 hermetic clean clone (`535/535`) on 2026-07-10. Workstream 1 is still not fully closed. The remaining closure items are external restore media and the unrelated aggregate pilot checksum mismatch:
+Fable 5 verified Workstream 1 hermetic clean clone (`535/535`) on 2026-07-10. Workstream 1 is complete as of 2026-07-12:
 
-- The user will order a flash drive.
-- After the drive is available, run the physical restore rehearsal described in `docs\BACKUP_AND_RESTORE.md`.
+- The interim Google Drive backup restored 6,785 files / 31,794,213,413 bytes into an isolated temporary directory with zero path/size differences.
+- Restored-copy `verify_data_integrity.py` passed 43 dataset checks and 6,626 supplemental dual-hash checks with zero blockers.
+- The historical aggregate pilot snapshot is retained and superseded by the later same-day snapshot that matches the restored directory.
 - The two 2024-06-13 exit-check files are resolved as `content_verified_envelope_variance`; their historical container hashes remain immutable.
-- Do not silently overwrite historical hashes or claim Workstream 1 complete before that external step.
+- A physical off-site copy remains planned when media arrives, but is no longer a WS1 blocker.
 
-On 2026-07-11, the user explicitly directed WS4 gate-integrity, WS3 two-zone, and WS5 evolution-hygiene remediation. WS5 is blocked only on approval of the report-retention proposal; no archival has occurred. The WS1 freeze remains active.
+On 2026-07-12, the user lifted the DD purchase freeze because paid data is re-purchasable, canonical hashes are preserved, and the interim backup was restored and verified. Purchases remain bounded by `docs\FABLE5_UPGRADE_PROPOSAL.md` section 5. WS5 remains blocked only on approval of the report-retention proposal; no archival has occurred.
 
 ## Completed Or In Progress
 
@@ -21,8 +22,8 @@ On 2026-07-11, the user explicitly directed WS4 gate-integrity, WS3 two-zone, an
 | Clean-clone hermetic tier | Locally and remotely green | GitHub Actions run `29002864982` attempt 2; latest local WS5 hermetic run: 587 tests |
 | Backup/restore docs | Written | `docs\BACKUP_AND_RESTORE.md` |
 | Paid-data integrity checker | Implemented; blocker found | `scripts\verify_data_integrity.py`, `reports\diagnostics\data_integrity_mismatch_review_2026_07_09.md` |
-| Restore rehearsal | External blocker | Waiting for user flash drive |
-| Databento checksum mismatch diagnosis | Complete; blocker remains | `reports\diagnostics\databento_checksum_mismatch_diagnosis_2026_07_10.md` |
+| Restore rehearsal | Complete; physical copy is follow-up | `reports\diagnostics\interim_restore_rehearsal_2026_07_12.md` |
+| Databento checksum mismatch diagnosis | Complete; aggregate blocker resolved by supersession | `reports\diagnostics\interim_restore_integrity_2026_07_12.json` |
 | OPRA stat-type hermetic mapping | Complete | `scripts\probe_databento_opra_statistics.py`, `tests\test_probe_databento_opra_statistics.py` |
 | H-A2.64 cache inventory | Complete E0 | `reports\data_cost\h_a2_targeted_geometry_cache_inventory_and_cost_plan.json` |
 | Two-zone `lib/` foundation | Complete | `lib\io.py`, `timestamps.py`, `guardrails.py`, `search_log.py`, `report.py`, `regime_inputs.py`, `statistics.py` and hermetic unit tests |
@@ -45,21 +46,20 @@ On 2026-07-11, the user explicitly directed WS4 gate-integrity, WS3 two-zone, an
 - `scripts\audit_wiki_citation_hashes.py` reports `pass` for 2 active preregistrations and 9 wiki citations. Locked/frozen artifacts were not rewritten; companion hashes bind their current artifact SHA-256 and cited wiki SHA-256 values.
 - `scripts\audit_new_script_lib_usage.py` reports `pass` with `0` new scripts bypassing shared `lib/` helpers.
 - `scripts\evaluate_research_acceptance.py` now requires an adversarial/refutation review artifact before any E2 candidate can pass the acceptance gate.
-- `scripts\validate_governance_epochs.py` reports `pass` for 4 governance epochs. The Technical DD epoch remains `active_with_external_blocker` until the flash-drive restore/checksum closure is done.
+- `scripts\validate_governance_epochs.py` reports `pass` for 4 governance epochs. WS1 is complete; the physical off-site copy is a non-blocking follow-up.
 - WS3 is complete: future code must use `lib/`; existing H-A2 callers remain frozen, and new callers use `lib\regime_inputs.py` instead of importing `run_m5_regime_filter_sensitivity.py`.
 - WS4 now also has a three-entry manifest floor and CI enforces the `Agent: model/version` trailer on every `main` push.
 - WS5 technical controls are complete, but the workstream remains `blocked` until the user approves or revises `docs\REPORT_RETENTION_POLICY_PROPOSAL.md`. No archival is authorized while `User-approved=false`.
 - `reports\diagnostics\databento_checksum_mismatch_diagnosis_2026_07_10.md` preserves the historical bit-level mismatch evidence. The later canonical comparison resolves the two files as content-equivalent despite metadata/container variance; the local duplicates still match the current containers, not the unavailable originals.
 
-## Do Not Claim Yet
+## Remaining Boundaries
 
-- Do not claim Technical DD Workstream 1 complete.
-- Do not lift the paid-data and hypothesis-expansion freeze.
-- Do not call Databento metadata, download paid data, call live LLM research APIs, run GDELT retries, request broker data/orders, approve paper trading, or claim E2 evidence from the current remediation work.
-- Latest broad verification: hermetic 587 tests passed, state-audit 157 tests passed, full discovery 744 tests passed, fixture pipeline passed, and the DD tracker validator passed with WS5 correctly `blocked` on retention approval.
+- Do not treat the freeze lift as approval for broad calendar buying or a bypass of the section 5 decision tree.
+- Databento metadata/download actions are allowed only when the section 5 decision tree, named hypothesis gap, live cost estimate, selected-key cap, and experiment-specific preregistration pass. The freeze lift does not approve live LLM research, unrestricted GDELT retries, broker orders, paper trading, or E2 claims.
+- Latest broad verification: hermetic 588 tests passed, state-audit 157 tests passed, full discovery 745 tests passed, fixture pipeline passed, restored/source integrity passed, and the DD tracker validator passed with WS1 `done` and WS5 correctly `blocked` on retention approval.
 
 ## Next Local Remediation Candidates
 
 1. User reviews the report-retention proposal and selects destination, first scope, and restore-test rule.
 2. If approved, update `User-approved=true` in a reviewed commit; the next implementation is a dry-run manifest only.
-3. Do not lift the WS1 paid-data/hypothesis-expansion freeze until its independent blockers close.
+3. When external media arrives, create the non-blocking physical off-site copy and record a second restore rehearsal.

@@ -26,22 +26,23 @@
     {
       "epoch_id": "technical-dd-remediation-2026-07-09",
       "date": "2026-07-09",
-      "status": "active_with_external_blocker",
+      "status": "active_with_ws5_user_decision",
       "kind": "technical_due_diligence",
-      "description": "Fable 5 Technical DD remediation epoch. Paid data and hypothesis expansion remain frozen until Workstream 1 restore/checksum closure is complete.",
+      "description": "Fable 5 Technical DD remediation epoch. Workstream 1 is complete and the purchase freeze is lifted; Workstream 5 remains open only for the user retention-policy decision.",
       "git_tag": "technical-dd-remediation-ws5-2026-07-11",
       "evidence_paths": [
         "docs/HIGANBANA_TECHNICAL_DUE_DILIGENCE.md",
         "docs/TECHNICAL_DD_REMEDIATION_STATUS.md",
-        "docs/BACKUP_AND_RESTORE.md"
+        "docs/BACKUP_AND_RESTORE.md",
+        "reports/diagnostics/interim_restore_rehearsal_2026_07_12.md"
       ]
     },
     {
       "epoch_id": "h-a2-targeted-data-plan-v1",
       "date": "2026-07-09",
-      "status": "active_blocked_by_dd_freeze",
+      "status": "active_decision_tree_gated",
       "kind": "research_data_plan",
-      "description": "H-A2 targeted geometry data/regime expansion plan exists, but metadata and paid follow-up are blocked by the Technical DD freeze.",
+      "description": "H-A2 targeted geometry data/regime expansion plan remains active. Paid follow-up is allowed only after the section 5 decision tree, experiment-specific preregistration, and current cost guard pass.",
       "evidence_paths": [
         "docs/H_A2_TARGETED_DATA_REGIME_EXPANSION_PLAN.md",
         "reports/data_cost/h_a2_targeted_geometry_cache_inventory_and_cost_plan.json"

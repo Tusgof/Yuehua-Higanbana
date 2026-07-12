@@ -14,14 +14,14 @@ The controlling machine-readable record is `config\governance_epochs.json`. Sele
 - Evidence paths must exist in the repository unless the path is an allowed directory placeholder such as `Backup_IMPLEMENT_PLAN`.
 - A tagged epoch records `git_tag` in the manifest. Tags are created only after the evidence commit exists and are pushed explicitly.
 - Never move or retarget an existing governance tag. A correction requires a new epoch and a new tag.
-- The Technical DD epoch remains `active_with_external_blocker` until restore rehearsal and paid-data checksum closure are complete.
+- The Technical DD epoch is `active_with_ws5_user_decision`: WS1 restore/checksum closure is complete, while WS5 still awaits the user's retention-policy decision.
 
 ## Active Epochs
 
 - `implement-plan-v2`: hypothesis-led planning replaced legacy experiment-number sequencing.
 - `gamma-policy-v2`: gamma proxy work is diagnostic-only until policy gates and strategy-ablation gates pass.
-- `technical-dd-remediation-2026-07-09`: paid data and hypothesis expansion are frozen while Technical DD Workstream 1 remains open.
-- `h-a2-targeted-data-plan-v1`: H-A2 targeted geometry expansion exists but is blocked from paid/metadata follow-up by the DD freeze.
+- `technical-dd-remediation-2026-07-09`: WS1 is complete and the freeze is lifted; the epoch remains open only for the WS5 retention-policy decision.
+- `h-a2-targeted-data-plan-v1`: H-A2 targeted geometry expansion is active under the section 5 decision tree and experiment-specific cost/preregistration gates.
 
 ## First Tag
 

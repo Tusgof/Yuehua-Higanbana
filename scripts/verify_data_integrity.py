@@ -158,7 +158,32 @@ def verify_data_integrity(
 ) -> dict[str, Any]:
     rows = _jsonl(registry_path)
     paid_rows = [row for row in rows if str(row.get("provider", "")).lower() == "databento"]
-    registry_checks = [_registry_check(row, root, verify_hashes) for row in paid_rows]
+    latest_index_by_source: dict[str, int] = {}
+    for index, row in enumerate(paid_rows):
+        source = _data_path(str(row.get("source_url", "")), root)
+        latest_index_by_source[str(source.resolve()).lower()] = index
+
+    registry_checks = []
+    for index, row in enumerate(paid_rows):
+        source = _data_path(str(row.get("source_url", "")), root)
+        source_key = str(source.resolve()).lower()
+        latest_index = latest_index_by_source[source_key]
+        if index != latest_index:
+            registry_checks.append(
+                {
+                    "dataset_id": row.get("dataset_id"),
+                    "source_path": str(source),
+                    "expected_sha256": str(row.get("raw_sha256", "")).lower(),
+                    "exists": source.exists(),
+                    "hash_valid": bool(
+                        SHA256_PATTERN.fullmatch(str(row.get("raw_sha256", "")).lower())
+                    ),
+                    "status": "superseded",
+                    "superseded_by": paid_rows[latest_index].get("dataset_id"),
+                }
+            )
+            continue
+        registry_checks.append(_registry_check(row, root, verify_hashes))
     registry_sources = [Path(item["source_path"]) for item in registry_checks]
 
     artifacts = _download_report_artifacts(report_root, root)
@@ -209,7 +234,7 @@ def verify_data_integrity(
     blockers = [
         f"registry_check_failed:{item['dataset_id']}:{item['status']}"
         for item in registry_checks
-        if item["status"] not in {"pass", "inventory_only"}
+        if item["status"] not in {"pass", "inventory_only", "superseded"}
     ]
     blockers.extend(f"download_artifact_not_in_dataset_registry:{item['path']}" for item in uncovered)
     supplemental_checks: list[dict[str, Any]] = []

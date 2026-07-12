@@ -31,9 +31,15 @@ Higanbana is complete only when all four stores below can be restored together.
 
 See `docs/DATABENTO_INTEGRITY_POLICY.md` for the dual-hash rule and the restricted `content_verified_envelope_variance` disposition.
 
-## Required Physical Rehearsal
+## Interim Rehearsal Record
 
-The user must schedule one restore rehearsal on a second machine or isolated VM after Workstream 1 code verification. Completion requires recording:
+The user-approved interim Google Drive rehearsal passed on 2026-07-12. The full `data/` tree was restored from the cloud mount into an isolated temporary directory: 6,785 files and 31,794,213,413 bytes matched with zero path/size differences, and `verify_data_integrity.py` passed 6,626 supplemental dual-hash checks with zero blockers. See `reports/diagnostics/interim_restore_rehearsal_2026_07_12.md` and `reports/diagnostics/interim_restore_integrity_2026_07_12.json`.
+
+This closes the WS1 restore exit condition as `interim_rehearsal_completed`.
+
+## Physical Off-Site Follow-Up
+
+The user still plans a physical off-site copy when external media arrives. That follow-up should record:
 
 - date and machine/VM identifier,
 - restored Git commit hashes,
@@ -42,4 +48,4 @@ The user must schedule one restore rehearsal on a second machine or isolated VM 
 - missing files or manual corrections,
 - final pass/fail decision.
 
-Until that rehearsal is scheduled, backups are prepared but disaster recovery is not empirically proven.
+The physical copy is a non-blocking resilience improvement after the verified cloud restore. It does not reopen WS1 unless a later integrity check fails.

@@ -146,3 +146,47 @@ class VerifyDataIntegrityTests(unittest.TestCase):
 
         self.assertEqual("pass", result["status"])
         self.assertEqual("content_verified_envelope_variance", result["supplemental_checks"][0]["status"])
+
+    def test_later_registry_snapshot_supersedes_same_directory_without_rewriting_history(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            data_root = root / "data"
+            raw_dir = data_root / "raw" / "spy_0dte" / "databento" / "sample"
+            raw_dir.mkdir(parents=True)
+            raw_dir.joinpath("one.dbn.zst").write_bytes(b"one")
+            old_digest = hashlib.sha256(b"one.dbn.zstone").hexdigest()
+            raw_dir.joinpath("two.dbn.zst").write_bytes(b"two")
+            current_digest = hashlib.sha256(b"one.dbn.zstonetwo.dbn.zsttwo").hexdigest()
+            registry = data_root / "registry" / "datasets.jsonl"
+            registry.parent.mkdir(parents=True)
+            source_url = "data/raw/spy_0dte/databento/sample"
+            registry.write_text(
+                json.dumps(
+                    {
+                        "provider": "Databento",
+                        "dataset_id": "sample-old",
+                        "source_url": source_url,
+                        "raw_sha256": old_digest,
+                    }
+                )
+                + "\n"
+                + json.dumps(
+                    {
+                        "provider": "Databento",
+                        "dataset_id": "sample-current",
+                        "source_url": source_url,
+                        "raw_sha256": current_digest,
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            report_root = root / "reports"
+            report_root.mkdir()
+
+            result = verify_data_integrity(registry, report_root, data_root)
+
+        self.assertEqual("pass", result["status"])
+        self.assertEqual("superseded", result["registry_checks"][0]["status"])
+        self.assertEqual("sample-current", result["registry_checks"][0]["superseded_by"])
+        self.assertEqual("pass", result["registry_checks"][1]["status"])

@@ -29,11 +29,12 @@
       "existing_evidence_paths": [
         "docs\\HIGANBANA_TECHNICAL_DUE_DILIGENCE.md",
         "docs\\TECHNICAL_DD_REMEDIATION_STATUS.md",
-        "docs\\BACKUP_AND_RESTORE.md"
+        "docs\\BACKUP_AND_RESTORE.md",
+        "reports\\diagnostics\\interim_restore_rehearsal_2026_07_12.md"
       ],
       "git_tag": "technical-dd-remediation-ws5-2026-07-11",
       "kind": "technical_due_diligence",
-      "status": "active_with_external_blocker"
+      "status": "active_with_ws5_user_decision"
     },
     {
       "blockers": [],
@@ -44,7 +45,7 @@
       ],
       "git_tag": null,
       "kind": "research_data_plan",
-      "status": "active_blocked_by_dd_freeze"
+      "status": "active_decision_tree_gated"
     }
   ],
   "schema_version": "governance_epochs_validation_v1",

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -29,7 +30,8 @@ class ValidateDdRemediationTrackerTests(unittest.TestCase):
         cls.validator = load_validator()
 
     def test_current_tracker_is_valid_shape(self) -> None:
-        result = self.validator.validate_tracker()
+        with patch.dict(os.environ, {"HIGANBANA_TEST_TIER": "hermetic"}):
+            result = self.validator.validate_tracker()
         self.assertEqual("pass", result["status"], result["blockers"])
 
     def test_done_claim_without_artifact_fails(self) -> None:

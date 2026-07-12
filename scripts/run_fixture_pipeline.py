@@ -145,7 +145,10 @@ def main() -> int:
         ("audit_strategy_data_readiness", ["scripts/audit_strategy_data_readiness.py"]),
         ("validate_hypothesis_registry", ["scripts/validate_hypothesis_registry.py"]),
         ("validate_evidence_tiers", ["scripts/validate_evidence_tiers.py"]),
-        ("validate_dd_remediation_tracker", ["scripts/validate_dd_remediation_tracker.py"]),
+        (
+            "validate_dd_remediation_tracker",
+            ["scripts/validate_dd_remediation_tracker.py", "--run-expensive"],
+        ),
         ("validate_locked_gates", ["scripts/validate_locked_gates.py"]),
         ("audit_helper_drift", ["scripts/audit_helper_drift.py"]),
         ("audit_new_script_lib_usage", ["scripts/audit_new_script_lib_usage.py"]),

@@ -1,11 +1,11 @@
 {
   "schema_version": "dd_remediation_tracker_v1",
-  "updated": "2026-07-11",
+  "updated": "2026-07-12",
   "workstreams": [
     {
       "id": "WS1",
       "title": "Make the repo self-verifying off this machine",
-      "status": "blocked",
+      "status": "done",
       "required_artifacts": [
         {
           "path": "scripts/run_test_tier.py",
@@ -32,16 +32,18 @@
           "must": "grep_no_forbidden_absolute_paths"
         }
       ],
-      "user_actions_pending": [
-        "Run the physical restore rehearsal after external restore media is available."
+      "user_actions_pending": [],
+      "non_blocking_follow_ups": [
+        "Create and rehearse a physical off-site copy when external media arrives; the verified interim Google Drive restore already closes WS1."
       ],
       "evidence": [
         "Fable 5 independently verified WS1 hermetic clean clone: 535/535 on 2026-07-10.",
         "The 2024-06-13 exit-check escalation is resolved as content_verified_envelope_variance: current and fresh copies match at DBN record-body and canonical record-export levels; historical container hashes remain immutable.",
         "Canonical DBN record-body hashes were backfilled for all 6,626 local raw Databento artifacts. The full integrity run has zero canonical mismatches and zero missing supplemental artifacts.",
-        "WS1 remains blocked by the physical restore rehearsal and the unrelated pre-existing registry mismatch databento-one-month-pilot-ef3f49c75c55."
+        "interim_rehearsal_completed: Google Drive restored 6,785 files / 31,794,213,413 bytes into an isolated temporary directory with zero path/size differences; restored-copy integrity passed 6,626 supplemental checks with zero blockers.",
+        "The historical aggregate snapshot databento-one-month-pilot-ef3f49c75c55 is retained and marked superseded by the later same-day snapshot databento-one-month-pilot-bc0f2b1dac6a, whose aggregate hash matches the restored directory."
       ],
-      "updated": "2026-07-10"
+      "updated": "2026-07-12"
     },
     {
       "id": "WS2",
