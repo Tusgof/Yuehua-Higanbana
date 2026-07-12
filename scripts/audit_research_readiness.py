@@ -188,6 +188,9 @@ H_A2_TARGETED_DATA_REGIME_EXPANSION_PLAN = (
 H_A2_TARGETED_GEOMETRY_CACHE_INVENTORY = (
     PROJECT_ROOT / "reports" / "data_cost" / "h_a2_targeted_geometry_cache_inventory_and_cost_plan.json"
 )
+H_A2_2022_10_STRESS_EXACT_REPLAY_SUMMARY = (
+    PROJECT_ROOT / "reports" / "experiments" / "h_a2_2022_10_stress_exact_replay_summary.json"
+)
 GDELT_BULK_SOURCE_DECISION_NOTE = PROJECT_ROOT / "docs" / "GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md"
 GDELT_BULK_MANIFEST_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_bulk_raw_manifest.json"
 GDELT_GKG_ONE_FILE_PROBE_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_gkg_one_file_parser_probe.json"
@@ -739,9 +742,25 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
     h_a2_targeted_geometry_cache_inventory = _load_report_artifact(
         H_A2_TARGETED_GEOMETRY_CACHE_INVENTORY
     )
+    h_a2_2022_10_stress_exact_replay = _load_report_artifact(
+        H_A2_2022_10_STRESS_EXACT_REPLAY_SUMMARY
+    )
     h_a2_proxy_robustness = _load_report_artifact(H_A2_PROXY_FIRST_ROBUSTNESS_SUMMARY)
     h_l1_macro_proxy = _load_report_artifact(H_L1_MACRO_EVENT_PROXY_BASELINE_SUMMARY)
     if (
+        h_a2_2022_10_stress_exact_replay
+        and h_a2_2022_10_stress_exact_replay.get("status")
+        == "complete_no_candidate_trades"
+    ):
+        checkpoint = h_a2_2022_10_stress_exact_replay.get("trade_density_checkpoint") or {}
+        actions.append(
+            "H-A2.66 October 2022 exact stress replay is complete as E1 diagnostic evidence: "
+            f"13/13 dates pass SPY bar coverage, but all dates fail the ex-ante clean macro/VIX gate, leaving {h_a2_2022_10_stress_exact_replay.get('candidate_trade_count')} candidate trades. "
+            f"The minimum-{checkpoint.get('minimum_required')} trade-density checkpoint failed, so stop without the contingent September purchase. "
+            "This stress block cannot identify the locked clean-regime rule; next revisit hypothesis/regime alignment before any new data decision. "
+            "Do not approve paper trading, operational validation, real-money trading, or claim E2 from this zero-trade result."
+        )
+    elif (
         h_a2_targeted_geometry_cache_inventory
         and h_a2_targeted_geometry_cache_inventory.get("status")
         == "complete_no_download_cost_estimate_deferred"
@@ -1057,7 +1076,15 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
         actions.append("OPRA statistics/OI metadata probe passed with timing caveat; next run a controlled one-day full-day statistics download/import probe, inspect `stat_type` values and timestamp semantics, then decide whether Databento OI can support gamma-family research.")
     if "requires_mintrl_psr_sample_adequacy" in blockers or "requires_wider_spy_0dte_data" in blockers:
         h_a2_spy_bar_blocker = _load_report_artifact(H_A2_2022_10_SPY_BARS_UNAVAILABLE)
-        if h_a2_spy_bar_blocker and h_a2_spy_bar_blocker.get("status") == "blocked":
+        if (
+            not (
+                h_a2_2022_10_stress_exact_replay
+                and h_a2_2022_10_stress_exact_replay.get("status")
+                == "complete_no_candidate_trades"
+            )
+            and h_a2_spy_bar_blocker
+            and h_a2_spy_bar_blocker.get("status") == "blocked"
+        ):
             h_a2_exact_underlying_plan = _load_report_artifact(H_A2_EXACT_2022_UNDERLYING_BAR_PLAN)
             h_a2_exact_underlying_plan_done = False
             if (

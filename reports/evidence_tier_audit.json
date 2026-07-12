@@ -210,6 +210,14 @@
       "blockers": [],
       "evidence_tier": "E1",
       "hypothesis_id": "H-A2",
+      "path": "reports\\experiments\\h_a2_2022_10_stress_exact_replay_summary.json",
+      "warnings": []
+    },
+    {
+      "acceptance_claim": false,
+      "blockers": [],
+      "evidence_tier": "E1",
+      "hypothesis_id": "H-A2",
       "path": "reports\\experiments\\h_a2_delayed_entry_condition_summary.json",
       "warnings": []
     },
@@ -422,9 +430,39 @@
       "warnings": [
         "missing_evidence_metadata:reports\\diagnostics\\h_g1_gamma_regime_enrichment_summary.json:evidence_tier,tier_blockers"
       ]
+    },
+    {
+      "acceptance_claim": false,
+      "blockers": [],
+      "evidence_tier": null,
+      "hypothesis_id": null,
+      "path": "reports\\diagnostics\\helper_drift_audit.json",
+      "warnings": [
+        "missing_evidence_metadata:reports\\diagnostics\\helper_drift_audit.json:hypothesis_id,evidence_tier,tier_blockers"
+      ]
+    },
+    {
+      "acceptance_claim": false,
+      "blockers": [],
+      "evidence_tier": null,
+      "hypothesis_id": null,
+      "path": "reports\\diagnostics\\new_script_lib_usage_audit.json",
+      "warnings": [
+        "missing_evidence_metadata:reports\\diagnostics\\new_script_lib_usage_audit.json:hypothesis_id,evidence_tier,tier_blockers"
+      ]
+    },
+    {
+      "acceptance_claim": false,
+      "blockers": [],
+      "evidence_tier": null,
+      "hypothesis_id": null,
+      "path": "reports\\diagnostics\\wiki_citation_hash_audit.json",
+      "warnings": [
+        "missing_evidence_metadata:reports\\diagnostics\\wiki_citation_hash_audit.json:hypothesis_id,evidence_tier,tier_blockers"
+      ]
     }
   ],
-  "summary_count": 45,
+  "summary_count": 49,
   "warnings": [
     "missing_evidence_metadata:reports\\baselines\\m4_execution_rule_compliance_audit.json:hypothesis_id,evidence_tier,tier_blockers",
     "missing_evidence_metadata:reports\\baselines\\m4_exit_behavior_diagnostic_summary.json:hypothesis_id,evidence_tier,tier_blockers",
@@ -454,6 +492,9 @@
     "missing_evidence_metadata:reports\\experiments\\m5_structural_break_assessment_summary.json:hypothesis_id,evidence_tier,tier_blockers",
     "missing_evidence_metadata:reports\\experiments\\m5_transaction_cost_latency_sensitivity_summary.json:hypothesis_id,evidence_tier,tier_blockers",
     "missing_evidence_metadata:reports\\diagnostics\\gamma_aggregation_diagnostic_summary.json:hypothesis_id,evidence_tier,tier_blockers",
-    "missing_evidence_metadata:reports\\diagnostics\\h_g1_gamma_regime_enrichment_summary.json:evidence_tier,tier_blockers"
+    "missing_evidence_metadata:reports\\diagnostics\\h_g1_gamma_regime_enrichment_summary.json:evidence_tier,tier_blockers",
+    "missing_evidence_metadata:reports\\diagnostics\\helper_drift_audit.json:hypothesis_id,evidence_tier,tier_blockers",
+    "missing_evidence_metadata:reports\\diagnostics\\new_script_lib_usage_audit.json:hypothesis_id,evidence_tier,tier_blockers",
+    "missing_evidence_metadata:reports\\diagnostics\\wiki_citation_hash_audit.json:hypothesis_id,evidence_tier,tier_blockers"
   ]
 }

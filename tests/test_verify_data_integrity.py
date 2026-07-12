@@ -11,6 +11,54 @@ from scripts.verify_data_integrity import verify_data_integrity
 
 
 class VerifyDataIntegrityTests(unittest.TestCase):
+    def test_ibkr_jsonl_dual_hashes_pass(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            data_root = Path(tmp) / "data"
+            raw = data_root / "raw" / "spy.jsonl"
+            canonical = data_root / "normalized" / "spy.jsonl"
+            raw.parent.mkdir(parents=True)
+            canonical.parent.mkdir(parents=True)
+            raw.write_bytes(b"raw\n")
+            canonical.write_bytes(b"canonical\n")
+            registry = data_root / "registry" / "datasets.jsonl"
+            registry.parent.mkdir(parents=True)
+            registry.write_text(
+                json.dumps(
+                    {
+                        "provider": "Interactive Brokers",
+                        "dataset_id": "ibkr-spy",
+                        "source_url": "data/raw/spy.jsonl",
+                        "raw_sha256": hashlib.sha256(b"raw\n").hexdigest(),
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            supplemental = registry.parent / "paid_artifact_checksums.jsonl"
+            supplemental.write_text(
+                json.dumps(
+                    {
+                        "path": "raw/spy.jsonl",
+                        "sha256": hashlib.sha256(b"raw\n").hexdigest(),
+                        "canonical_path": "normalized/spy.jsonl",
+                        "canonical_content_sha256": hashlib.sha256(b"canonical\n").hexdigest(),
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            reports = Path(tmp) / "reports"
+            reports.mkdir()
+            result = verify_data_integrity(
+                registry,
+                reports,
+                data_root,
+                supplemental_registry_path=supplemental,
+            )
+
+        self.assertEqual("pass", result["status"], result["blockers"])
+        self.assertEqual("pass", result["supplemental_checks"][0]["status"])
+
     def test_registered_paid_file_passes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -5,8 +5,8 @@
     "blockers": [],
     "clean": true,
     "is_repo": true,
-    "local_head": "29e4737a678844d6a58cf84958c8cd0751c77482",
-    "remote_head": "29e4737a678844d6a58cf84958c8cd0751c77482",
+    "local_head": "bfd4be8d7d0f7c3aad3485b7735d4397c7eb8a29",
+    "remote_head": "bfd4be8d7d0f7c3aad3485b7735d4397c7eb8a29",
     "remote_matches_expected": true
   },
   "invalid_log_filenames": [],
@@ -194,6 +194,15 @@
       "summary_path": "reports\\diagnostics\\h_g1_manifest_v3_bucket_failure_diagnostic.json"
     },
     {
+      "expected_pattern": "???-higanbana-h-a2-october-2022-stress-exact-replay*.md",
+      "matched_logs": [
+        "research_log\\041-higanbana-h-a2-october-2022-stress-exact-replay.md"
+      ],
+      "present": true,
+      "summary_id": "h_a2_2022_10_stress_exact_replay_summary",
+      "summary_path": "reports\\experiments\\h_a2_2022_10_stress_exact_replay_summary.json"
+    },
+    {
       "expected_pattern": "???-higanbana-h-a2-delayed-entry-condition*.md",
       "matched_logs": [
         "research_log\\030-higanbana-h-a2-delayed-entry-condition.md"
@@ -378,9 +387,9 @@
   "sequence": {
     "blockers": [],
     "contiguous_from_001": true,
-    "existing_log_count": 40,
-    "next_filename_prefix": "041-higanbana-",
-    "next_log_number": "041",
+    "existing_log_count": 41,
+    "next_filename_prefix": "042-higanbana-",
+    "next_log_number": "042",
     "sequence_issues": [],
     "valid_log_numbers": [
       "001",
@@ -422,7 +431,8 @@
       "037",
       "038",
       "039",
-      "040"
+      "040",
+      "041"
     ]
   },
   "status": "pass"

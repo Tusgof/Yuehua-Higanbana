@@ -1,0 +1,146 @@
+{
+  "actual_per_request_charge_usd": 0.0,
+  "actual_subscription_charge_observable_via_api": false,
+  "canonical_content_format": "sorted_canonical_jsonl_v1",
+  "canonical_content_sha256": "7f79e86a87dc100104d2e9f59ab766ebd0c0965a614c601a7c86ecce4521c771",
+  "canonical_path": "data/normalized/spy_0dte/ibkr/h_a2_2022_10_stress/spy_bar.jsonl",
+  "day_results": [
+    {
+      "coverage_pass": true,
+      "date": "2022-10-03",
+      "first_timestamp_et": "2022-10-03T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-03T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-05",
+      "first_timestamp_et": "2022-10-05T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-05T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-07",
+      "first_timestamp_et": "2022-10-07T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-07T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-10",
+      "first_timestamp_et": "2022-10-10T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-10T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-12",
+      "first_timestamp_et": "2022-10-12T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-12T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-14",
+      "first_timestamp_et": "2022-10-14T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-14T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-17",
+      "first_timestamp_et": "2022-10-17T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-17T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-19",
+      "first_timestamp_et": "2022-10-19T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-19T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-21",
+      "first_timestamp_et": "2022-10-21T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-21T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-24",
+      "first_timestamp_et": "2022-10-24T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-24T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-26",
+      "first_timestamp_et": "2022-10-26T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-26T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-28",
+      "first_timestamp_et": "2022-10-28T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-28T15:59:00-04:00",
+      "row_count": 390
+    },
+    {
+      "coverage_pass": true,
+      "date": "2022-10-31",
+      "first_timestamp_et": "2022-10-31T09:30:00-04:00",
+      "has_0935": true,
+      "has_1545": true,
+      "last_timestamp_et": "2022-10-31T15:59:00-04:00",
+      "row_count": 390
+    }
+  ],
+  "generated_at_utc": "2026-07-12T21:22:36+00:00",
+  "historical_request_count": 13,
+  "hypothesis_id": "H-A2",
+  "interpreter": {
+    "python_executable": "D:\\Fogust\\Workspace\\Investment\\Project\\Yuehua Investment Lab\\.venv\\Scripts\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.12.13"
+  },
+  "orders_transmitted": false,
+  "port": 7496,
+  "projected_subscription_cost_usd": 1.5,
+  "provider": "Interactive Brokers",
+  "raw_path": "data/raw/spy_0dte/ibkr/h_a2_2022_10_stress/spy_1m_raw.jsonl",
+  "readonly": true,
+  "schema_version": "h_a2_2022_ibkr_spy_bars_download_v1",
+  "sha256": "d95cac46b22204642e53d6693d5cf550c5bd4c79a612c0aa0068657611589de8",
+  "status": "pass",
+  "symbol": "SPY",
+  "target_date_count": 13,
+  "total_row_count": 5070
+}

@@ -29,6 +29,7 @@
 | `h_g1_gamma_regime_diagnostic_summary_v3` | `???-higanbana-gamma-oi-manifest-v3-diagnostic*.md` | True |
 | `h_g1_gamma_regime_diagnostic_summary_v3_side_aware` | `???-higanbana-gamma-side-aware-diagnostic*.md` | True |
 | `h_g1_manifest_v3_bucket_failure_diagnostic` | `???-higanbana-gamma-oi-v3-bucket-policy-diagnostic*.md` | True |
+| `h_a2_2022_10_stress_exact_replay_summary` | `???-higanbana-h-a2-october-2022-stress-exact-replay*.md` | True |
 | `h_a2_delayed_entry_condition_summary` | `???-higanbana-h-a2-delayed-entry-condition*.md` | True |
 | `h_a2_locked_condition_signal_attribution_summary` | `???-higanbana-h-a2-locked-condition-signal-attribution*.md` | True |
 | `h_a2_lower_resolution_proxy_summary` | `???-higanbana-h-a2-lower-resolution-proxy*.md` | True |
@@ -60,9 +61,9 @@
 
 ## Sequence
 
-- Existing log count: 40
-- Next log number: `041`
-- Next filename prefix: `041-higanbana-`
+- Existing log count: 41
+- Next log number: `042`
+- Next filename prefix: `042-higanbana-`
 - Contiguous from 001: `True`
 - Sequence issues: None
 
@@ -71,5 +72,5 @@
 - Is git repo: `True`
 - Clean worktree: `True`
 - Remote matches expected: `True`
-- Local HEAD: `29e4737a678844d6a58cf84958c8cd0751c77482`
-- Remote HEAD: `29e4737a678844d6a58cf84958c8cd0751c77482`
+- Local HEAD: `bfd4be8d7d0f7c3aad3485b7735d4397c7eb8a29`
+- Remote HEAD: `bfd4be8d7d0f7c3aad3485b7735d4397c7eb8a29`

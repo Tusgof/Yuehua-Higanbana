@@ -3,9 +3,7 @@
     "ib_insync",
     "ibapi"
   ],
-  "blockers": [
-    "no_local_ibkr_api_port_listening"
-  ],
+  "blockers": [],
   "decision_path": "experiments\\h_a2_2022_spy_bar_source_decision.json",
   "evidence_tier": "E0",
   "forbidden_actions_preserved": [
@@ -14,7 +12,7 @@
     "Do not buy 2022-09 option data while 2022 underlying bars are unresolved.",
     "Do not rerun H-A2 stress diagnostics until SPY 2022-10 bars pass coverage and timestamp validation."
   ],
-  "generated_at_utc": "2026-07-09T05:38:42.335995+00:00",
+  "generated_at_utc": "2026-07-12T22:23:34.475210+00:00",
   "guardrails": {
     "broker_execution_enabled": false,
     "external_network_used": false,
@@ -26,8 +24,10 @@
   "host": "127.0.0.1",
   "hypothesis_id": "H-A2",
   "live_trading_allowed": false,
-  "next_safe_action": "Start local TWS/Gateway with API enabled and confirm market-data permission, then rerun this readiness probe. If local IBKR cannot be made available, stop for clear user direction before Alpaca or any new paid provider.",
-  "open_ports": [],
+  "next_safe_action": "Run a separate explicit IBKR historical-bars data probe for SPY 2022-10 using data-only settings; do not transmit orders and do not rerun H-A2 until coverage/timestamp validation passes.",
+  "open_ports": [
+    7496
+  ],
   "package_checks": [
     {
       "available": true,
@@ -44,35 +44,16 @@
   "paper_trading_allowed": false,
   "port_checks": [
     {
-      "error": "TimeoutError",
-      "port": 7497,
-      "status": "closed"
-    },
-    {
-      "error": "TimeoutError",
       "port": 7496,
-      "status": "closed"
-    },
-    {
-      "error": "TimeoutError",
-      "port": 4002,
-      "status": "closed"
-    },
-    {
-      "error": "TimeoutError",
-      "port": 4001,
-      "status": "closed"
+      "status": "open"
     }
   ],
   "ports_checked": [
-    7497,
-    7496,
-    4002,
-    4001
+    7496
   ],
   "purpose": "Check whether the local machine is ready for a no-paid IBKR data-only SPY 2022-10 historical-bars probe.",
   "research_log_required": false,
   "runtime_python": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
   "schema_version": "ibkr_spy_bars_readiness_probe_v1",
-  "status": "blocked_local_ibkr_unavailable"
+  "status": "ready_for_manual_data_probe"
 }

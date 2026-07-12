@@ -1,0 +1,304 @@
+{
+  "bar_coverage_pass_count": 13,
+  "big_day_dependency": {
+    "status": "not_applicable_zero_trades"
+  },
+  "candidate_trade_count": 0,
+  "conclusion": "\u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49",
+  "conclusion_reason": "All 13 stress dates failed the ex-ante clean macro/VIX gate, so the locked H-A2 rule produced no trades.",
+  "date_count": 13,
+  "date_results": [
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-03",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 360.13,
+        "decision_timestamp_et": "2022-10-03T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 361.46,
+        "opening_low": 360.13,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 31.62
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-05",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 374.94,
+        "decision_timestamp_et": "2022-10-05T09:35:00-04:00",
+        "direction": "call",
+        "opening_high": 374.8,
+        "opening_low": 373.3,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 29.07
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-07",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [
+        "NFP"
+      ],
+      "opening_breakout": {
+        "decision_close": 368.5,
+        "decision_timestamp_et": "2022-10-07T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 369.37,
+        "opening_low": 367.77,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 30.52
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-10",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 363.22,
+        "decision_timestamp_et": "2022-10-10T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 364.21,
+        "opening_low": 362.8,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 31.36
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-12",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [
+        "FOMC_MINUTES"
+      ],
+      "opening_breakout": {
+        "decision_close": 357.97,
+        "decision_timestamp_et": "2022-10-12T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 358.36,
+        "opening_low": 356.3,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 33.63
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-14",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 367.93,
+        "decision_timestamp_et": "2022-10-14T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 369.25,
+        "opening_low": 367.44,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 31.94
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-17",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 365.82,
+        "decision_timestamp_et": "2022-10-17T09:35:00-04:00",
+        "direction": "call",
+        "opening_high": 365.62,
+        "opening_low": 363.97,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 32.02
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-19",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 370.58,
+        "decision_timestamp_et": "2022-10-19T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 370.61,
+        "opening_low": 368.3,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 30.5
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-21",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 364.28,
+        "decision_timestamp_et": "2022-10-21T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 365.78,
+        "opening_low": 363.54,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 29.98
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-24",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 377.03,
+        "decision_timestamp_et": "2022-10-24T09:35:00-04:00",
+        "direction": "call",
+        "opening_high": 376.13,
+        "opening_low": 375.09,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 29.69
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-26",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 382.54,
+        "decision_timestamp_et": "2022-10-26T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 382.93,
+        "opening_low": 381.35,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 28.46
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-28",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [
+        "PCE"
+      ],
+      "opening_breakout": {
+        "decision_close": 381.57,
+        "decision_timestamp_et": "2022-10-28T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 382.24,
+        "opening_low": 379.68,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 27.39
+    },
+    {
+      "bar_count": 390,
+      "candidate_trade": false,
+      "date": "2022-10-31",
+      "ex_ante_regime_pass": false,
+      "high_importance_macro_types": [],
+      "opening_breakout": {
+        "decision_close": 386.79,
+        "decision_timestamp_et": "2022-10-31T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 387.0,
+        "opening_low": 386.14,
+        "status": "measured"
+      },
+      "pnl": null,
+      "pnl_reason": "No strategy trade passed the ex-ante regime gate",
+      "prior_vix_close": 25.75
+    }
+  ],
+  "evidence_tier": "E1",
+  "ex_ante_regime_pass_count": 0,
+  "experiment_id": "h_a2_2022_10_stress_exact_replay",
+  "generated_at_utc": "2026-07-12T21:40:31+00:00",
+  "hypothesis_id": "H-A2",
+  "implementable_pnl": null,
+  "interpreter": {
+    "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.14.3"
+  },
+  "lookahead_controls": {
+    "decision_inputs_cutoff_et": "09:35:00",
+    "future_1545_followthrough_used_as_decision_feature": false,
+    "same_day_vix_close_used_as_decision_feature": false
+  },
+  "mid_pnl": null,
+  "operational_validation_allowed": false,
+  "paper_trading_allowed": false,
+  "pnl_not_computed_reason": "No candidate trade survived the ex-ante regime gate.",
+  "raw_opening_breakout_count": 3,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_path": "research_log/041-higanbana-h-a2-october-2022-stress-exact-replay.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-october-2022-stress-exact-replay",
+  "sample_policy": {
+    "mintrl_psr_status": "blocked_zero_trades",
+    "sample_count": 0,
+    "under_sampled": true,
+    "underpowered": true
+  },
+  "schema_version": "h_a2_2022_10_stress_exact_replay_v1",
+  "source_preregistration": "experiments/h_a2_2022_10_stress_exact_replay_preregistration.json",
+  "status": "complete_no_candidate_trades",
+  "tier_blockers": [
+    "zero_candidate_trades",
+    "MinTRL/PSR unavailable",
+    "E1 stress diagnostic only"
+  ],
+  "trade_density_checkpoint": {
+    "decision": "stop_without_september_purchase",
+    "minimum_required": 2,
+    "observed": 0,
+    "pass": false,
+    "september_purchase_allowed": false
+  },
+  "trial_policy": {
+    "dsr_status": "not_applicable_no_search",
+    "threshold_search_used": false,
+    "trial_count": 1
+  }
+}

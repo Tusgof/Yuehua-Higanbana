@@ -168,6 +168,10 @@ def main() -> int:
         ("validate_h_a2_2022_10_single_month_decision", ["scripts/validate_h_a2_2022_10_single_month_decision.py"]),
         ("validate_h_a2_2022_spy_bar_source_decision", ["scripts/validate_h_a2_2022_spy_bar_source_decision.py"]),
         (
+            "validate_h_a2_2022_10_stress_exact_replay_preregistration",
+            ["scripts/validate_h_a2_2022_10_stress_exact_replay_preregistration.py"],
+        ),
+        (
             "validate_h_a2_2022_10_coarse_stress_preregistration",
             ["scripts/validate_h_a2_2022_10_coarse_stress_preregistration.py"],
         ),

@@ -32,7 +32,7 @@ class AuditResearchLogsTests(unittest.TestCase):
         result = self.auditor.audit_research_logs()
 
         self.assertEqual("pass", result["status"])
-        self.assertEqual(40, len(result["required_logs"]))
+        self.assertEqual(41, len(result["required_logs"]))
         summary_ids = {item["summary_id"] for item in result["required_logs"]}
         self.assertIn("subsystem_a_orb_baseline_summary", summary_ids)
         self.assertIn("subsystem_b_put_ratio_feasibility_summary", summary_ids)
@@ -61,6 +61,7 @@ class AuditResearchLogsTests(unittest.TestCase):
         self.assertIn("h_a2_post_stress_normalization_control_exact_replay", summary_ids)
         self.assertIn("h_a2_mechanism_revision_audit", summary_ids)
         self.assertIn("h_a2_breakeven_aware_rule_train_diagnostic", summary_ids)
+        self.assertIn("h_a2_2022_10_stress_exact_replay_summary", summary_ids)
         self.assertIn("h_b2_falsification_review", summary_ids)
         self.assertIn("m5_transaction_cost_latency_sensitivity_summary", summary_ids)
         self.assertIn("m5_strike_selection_sensitivity_summary", summary_ids)
@@ -70,8 +71,8 @@ class AuditResearchLogsTests(unittest.TestCase):
         self.assertIn("m5_portfolio_construction_diagnostic_summary", summary_ids)
         self.assertIn("m5_structural_break_assessment_summary", summary_ids)
         self.assertTrue(all(item["present"] for item in result["required_logs"]))
-        self.assertEqual("041", result["sequence"]["next_log_number"])
-        self.assertEqual("041-higanbana-", result["sequence"]["next_filename_prefix"])
+        self.assertEqual("042", result["sequence"]["next_log_number"])
+        self.assertEqual("042-higanbana-", result["sequence"]["next_filename_prefix"])
         self.assertTrue(result["sequence"]["contiguous_from_001"])
         self.assertEqual([], result["git"]["blockers"])
         self.assertTrue(result["git"]["clean"])

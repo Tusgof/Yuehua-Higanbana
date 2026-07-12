@@ -157,7 +157,11 @@ def verify_data_integrity(
     backfill_canonical_hashes: bool = False,
 ) -> dict[str, Any]:
     rows = _jsonl(registry_path)
-    paid_rows = [row for row in rows if str(row.get("provider", "")).lower() == "databento"]
+    paid_rows = [
+        row
+        for row in rows
+        if str(row.get("provider", "")).lower() in {"databento", "interactive brokers"}
+    ]
     latest_index_by_source: dict[str, int] = {}
     for index, row in enumerate(paid_rows):
         source = _data_path(str(row.get("source_url", "")), root)
@@ -243,6 +247,7 @@ def verify_data_integrity(
             path = root / str(row["path"])
             expected = str(row.get("sha256", "")).lower()
             canonical_expected = str(row.get("canonical_content_sha256", "")).lower()
+            canonical_path_raw = row.get("canonical_path")
             canonical = None
             if not path.exists():
                 status = "missing"
@@ -250,7 +255,14 @@ def verify_data_integrity(
             else:
                 actual = sha256_file(path)
                 if canonical_expected:
-                    canonical = dbn_record_body_hashes(path)
+                    if canonical_path_raw:
+                        canonical_path = root / str(canonical_path_raw)
+                        canonical = {
+                            "sha256": sha256_file(canonical_path) if canonical_path.exists() else None,
+                            "path": str(canonical_path),
+                        }
+                    else:
+                        canonical = dbn_record_body_hashes(path)
                 canonical_matches = canonical is None or canonical["sha256"] == canonical_expected
                 if actual == expected and canonical_matches:
                     status = "pass"

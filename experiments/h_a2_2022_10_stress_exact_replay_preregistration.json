@@ -1,0 +1,42 @@
+{
+  "schema_version": "h_a2_2022_10_stress_exact_replay_preregistration_v1",
+  "artifact_type": "preregistration",
+  "experiment_id": "h_a2_2022_10_stress_exact_replay",
+  "hypothesis_id": "H-A2",
+  "status": "preregistered",
+  "evidence_tier": "E0",
+  "created_date": "2026-07-13",
+  "candidate_dates_source": "reports/data_cost/h_a2_2022_h2_stress_decision_tree_cost_plan.json",
+  "underlying_source": "data/normalized/spy_0dte/ibkr/h_a2_2022_10_stress/spy_bar.jsonl",
+  "option_source": "data/normalized/spy_0dte/databento/h_a2_2022_10_stress/option_quote.jsonl",
+  "decision_rule": {
+    "decision_time_et": "09:35:00",
+    "forced_close_time_et": "15:45:00",
+    "clean_macro_vix_required": true,
+    "prior_vix_threshold": 25.0,
+    "high_importance_macro_excluded": true,
+    "opening_breakout_uses_only_0930_through_0935": true,
+    "future_1545_followthrough_as_decision_feature_allowed": false
+  },
+  "outcomes": [
+    "date_count",
+    "ex_ante_regime_pass_count",
+    "raw_opening_breakout_count",
+    "candidate_trade_count",
+    "trade_density_checkpoint",
+    "mid_pnl_and_implementable_pnl_if_candidate_exists",
+    "sample_adequacy"
+  ],
+  "trade_density_checkpoint": {
+    "minimum_candidate_trades_for_september_stage": 2,
+    "otherwise": "stop_without_september_purchase"
+  },
+  "guardrails": {
+    "threshold_search_allowed": false,
+    "new_filter_allowed": false,
+    "oos_tuning_allowed": false,
+    "lookahead_allowed": false,
+    "paper_trading_allowed": false,
+    "real_money_allowed": false
+  }
+}
