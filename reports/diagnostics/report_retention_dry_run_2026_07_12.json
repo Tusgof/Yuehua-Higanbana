@@ -1,0 +1,40 @@
+{
+  "schema_version": "report_retention_dry_run_v1",
+  "created_date": "2026-07-12",
+  "status": "pass_no_eligible_files",
+  "mode": "dry_run_no_changes",
+  "policy_path": "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
+  "approval": {
+    "user_approved": true,
+    "approval_date": "2026-07-12",
+    "destination_option": 1,
+    "destination_branch": "archive/reports-2026",
+    "immutable_index_retained_on": "main",
+    "retention_class": "Bulk diagnostic",
+    "superseded_cutoff_inclusive": "2026-06-30",
+    "restore_test_criterion": "Every archived file must be restorable from the archive branch with SHA-256 matching this index on main."
+  },
+  "required_entry_fields": [
+    "source_path",
+    "destination_path",
+    "sha256",
+    "retention_class",
+    "reason",
+    "inbound_reference_check"
+  ],
+  "scan_evidence": {
+    "tracked_reports_earliest_commit_date": "2026-07-03",
+    "cutoff_predates_all_tracked_report_history": true,
+    "eligible_file_count": 0,
+    "reason": "No tracked report existed by the 2026-06-30 cutoff, so no report can qualify as superseded on or before that date."
+  },
+  "entries": [],
+  "operations": {
+    "archive_branch_created": false,
+    "files_moved": 0,
+    "files_deleted": 0,
+    "files_rewritten": 0,
+    "git_history_rewritten": false
+  },
+  "next_review": "A separate reviewed step may revise the cutoff or approve an exact non-empty manifest. This session does not authorize archival."
+}

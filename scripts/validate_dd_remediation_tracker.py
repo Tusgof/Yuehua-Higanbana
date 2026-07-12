@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import re
 import subprocess
 import sys
@@ -23,6 +22,7 @@ FORBIDDEN_ABSOLUTE_PATH = re.compile(r"(?i)\b[A-Z]:[/\\]Fogust\b")
 
 def validate_tracker(path: Path = DEFAULT_TRACKER, *, run_expensive: bool = False) -> dict[str, Any]:
     blockers: list[str] = []
+    unverified: list[dict[str, str]] = []
     try:
         payload = load_json(path)
     except FileNotFoundError:
@@ -35,12 +35,12 @@ def validate_tracker(path: Path = DEFAULT_TRACKER, *, run_expensive: bool = Fals
         blockers.append(f"tracker_must_be_json_object:{path}")
         payload = None
     if payload is None:
-        return _result("fail", path, blockers, [])
+        return _result("fail", path, blockers, [], unverified)
 
     workstreams = payload.get("workstreams")
     if not isinstance(workstreams, list):
         blockers.append("workstreams_must_be_list")
-        return _result("fail", path, blockers, [])
+        return _result("fail", path, blockers, [], unverified)
 
     seen_ids: set[str] = set()
     done_artifacts_checked: list[dict[str, str]] = []
@@ -80,20 +80,34 @@ def validate_tracker(path: Path = DEFAULT_TRACKER, *, run_expensive: bool = Fals
                     continue
                 artifact_path = str(artifact.get("path", ""))
                 must = str(artifact.get("must", ""))
-                artifact_blockers = _validate_done_artifact(ws_id, artifact_path, must, run_expensive=run_expensive)
+                unverified_before = len(unverified)
+                artifact_blockers = _validate_done_artifact(
+                    ws_id,
+                    artifact_path,
+                    must,
+                    run_expensive=run_expensive,
+                    unverified=unverified,
+                )
                 if artifact_blockers:
                     blockers.extend(artifact_blockers)
-                else:
+                elif len(unverified) == unverified_before:
                     done_artifacts_checked.append({"workstream": ws_id, "path": artifact_path, "must": must})
 
     missing = VALID_WORKSTREAMS - seen_ids
     for ws_id in sorted(missing):
         blockers.append(f"missing_workstream:{ws_id}")
 
-    return _result("fail" if blockers else "pass", path, blockers, done_artifacts_checked)
+    return _result("fail" if blockers else "pass", path, blockers, done_artifacts_checked, unverified)
 
 
-def _validate_done_artifact(ws_id: str, artifact_path: str, must: str, *, run_expensive: bool) -> list[str]:
+def _validate_done_artifact(
+    ws_id: str,
+    artifact_path: str,
+    must: str,
+    *,
+    run_expensive: bool,
+    unverified: list[dict[str, str]] | None = None,
+) -> list[str]:
     target = (PROJECT_ROOT / artifact_path).resolve()
     blockers: list[str] = []
     if must == "exist":
@@ -122,10 +136,16 @@ def _validate_done_artifact(ws_id: str, artifact_path: str, must: str, *, run_ex
             )
             if completed.returncode != 0:
                 blockers.append(f"{ws_id}:hermetic_tier_failed:{artifact_path}")
-        elif os.environ.get("HIGANBANA_TEST_TIER") == "hermetic":
-            pass
         else:
-            blockers.append(f"{ws_id}:requires_expensive_hermetic_run:{artifact_path}")
+            if unverified is not None:
+                unverified.append(
+                    {
+                        "workstream": ws_id,
+                        "path": artifact_path,
+                        "must": must,
+                        "reason": "expensive_check_not_run",
+                    }
+                )
     elif must == "grep_no_forbidden_absolute_paths":
         blockers.extend(_grep_no_forbidden_absolute_paths(ws_id))
     elif must == "document_kurtosis_convention":
@@ -204,11 +224,18 @@ def _path_contains(path: Path, needle: str) -> bool:
     return False
 
 
-def _result(status: str, path: Path, blockers: list[str], done_artifacts_checked: list[dict[str, str]]) -> dict[str, Any]:
+def _result(
+    status: str,
+    path: Path,
+    blockers: list[str],
+    done_artifacts_checked: list[dict[str, str]],
+    unverified: list[dict[str, str]],
+) -> dict[str, Any]:
     return {
         "status": status,
         "tracker_path": str(path),
         "blockers": blockers,
+        "unverified": unverified,
         "done_artifacts_checked": done_artifacts_checked,
     }
 

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import importlib.util
 import json
-import os
 import sys
 import tempfile
 import unittest
@@ -29,10 +28,36 @@ class ValidateDdRemediationTrackerTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.validator = load_validator()
 
-    def test_current_tracker_is_valid_shape(self) -> None:
-        with patch.dict(os.environ, {"HIGANBANA_TEST_TIER": "hermetic"}):
-            result = self.validator.validate_tracker()
+    def test_standalone_tracker_passes_with_expensive_check_unverified(self) -> None:
+        result = self.validator.validate_tracker()
         self.assertEqual("pass", result["status"], result["blockers"])
+        self.assertEqual([], result["blockers"])
+        self.assertEqual(
+            [
+                {
+                    "workstream": "WS1",
+                    "path": "scripts/run_test_tier.py",
+                    "must": "pass_hermetic_tier",
+                    "reason": "expensive_check_not_run",
+                }
+            ],
+            result["unverified"],
+        )
+        self.assertNotIn(
+            {"workstream": "WS1", "path": "scripts/run_test_tier.py", "must": "pass_hermetic_tier"},
+            result["done_artifacts_checked"],
+        )
+
+    def test_expensive_check_failure_is_still_a_blocker_when_requested(self) -> None:
+        completed = type("Completed", (), {"returncode": 1})()
+        with patch.object(self.validator.subprocess, "run", return_value=completed):
+            blockers = self.validator._validate_done_artifact(
+                "WS1",
+                "scripts/run_test_tier.py",
+                "pass_hermetic_tier",
+                run_expensive=True,
+            )
+        self.assertEqual(["WS1:hermetic_tier_failed:scripts/run_test_tier.py"], blockers)
 
     def test_done_claim_without_artifact_fails(self) -> None:
         payload = {

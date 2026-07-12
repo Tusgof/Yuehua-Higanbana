@@ -41,7 +41,8 @@
         "The 2024-06-13 exit-check escalation is resolved as content_verified_envelope_variance: current and fresh copies match at DBN record-body and canonical record-export levels; historical container hashes remain immutable.",
         "Canonical DBN record-body hashes were backfilled for all 6,626 local raw Databento artifacts. The full integrity run has zero canonical mismatches and zero missing supplemental artifacts.",
         "interim_rehearsal_completed: Google Drive restored 6,785 files / 31,794,213,413 bytes into an isolated temporary directory with zero path/size differences; restored-copy integrity passed 6,626 supplemental checks with zero blockers.",
-        "The historical aggregate snapshot databento-one-month-pilot-ef3f49c75c55 is retained and marked superseded by the later same-day snapshot databento-one-month-pilot-bc0f2b1dac6a, whose aggregate hash matches the restored directory."
+        "The historical aggregate snapshot databento-one-month-pilot-ef3f49c75c55 is retained and marked superseded by the later same-day snapshot databento-one-month-pilot-bc0f2b1dac6a, whose aggregate hash matches the restored directory.",
+        "Standalone tracker validation now returns pass with expensive checks listed as unverified; --run-expensive remains the strict fixture-pipeline path. Missing artifacts and false done claims still fail."
       ],
       "updated": "2026-07-12"
     },
@@ -159,14 +160,15 @@
       "evidence": [
         "The append-only manifest retains three seed gate records and validates active decision/validator SHA-256 pairs.",
         "A new gate revision must append a distinct gate_id with supersedes_gate_id, human_approval, reviewed_by, unchanged paths, and replacement hashes; tests reject an unapproved revision.",
-        "scripts/evaluate_research_acceptance.py requires adversarial_review_completed for E2 candidates, and docs/EVIDENCE_TIER_POLICY.md specifies the independent refutation review."
+        "scripts/evaluate_research_acceptance.py requires adversarial_review_completed for E2 candidates, and docs/EVIDENCE_TIER_POLICY.md specifies the independent refutation review.",
+        ".gitattributes pins hash-bound JSON/JSONL/Python/Markdown files to LF so locked-gate SHA-256 validation is stable in Windows and Linux clean clones."
       ],
       "updated": "2026-07-11"
     },
     {
       "id": "WS5",
       "title": "Evolution hygiene",
-      "status": "blocked",
+      "status": "done",
       "required_artifacts": [
         {
           "path": "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
@@ -175,6 +177,10 @@
         {
           "path": "docs/REPORT_RETENTION_POLICY_PROPOSAL.md",
           "must": "retention_policy_user_approved"
+        },
+        {
+          "path": "reports/diagnostics/report_retention_dry_run_2026_07_12.json",
+          "must": "exist"
         },
         {
           "path": "scripts",
@@ -189,16 +195,18 @@
           "must": "governance_tag_exists"
         }
       ],
-      "user_actions_pending": [
-        "Review docs/REPORT_RETENTION_POLICY_PROPOSAL.md and explicitly approve or revise the destination, first archive scope, and restore-test rule. No archival action is allowed while User-approved remains false."
+      "user_actions_pending": [],
+      "non_blocking_follow_ups": [
+        "Review the dry-run manifest before any separate archive execution step. The approved cutoff produced zero eligible files, so no archive branch or file move is currently needed."
       ],
       "evidence": [
-        "The retention proposal now has a machine-checkable User-approved=false gate and explicitly forbids moves, deletion, archival branches, and history rewriting before approval.",
+        "The user approved retention option 1 on 2026-07-12: archive/reports-YYYY plus an immutable JSON index on main, first scope Bulk diagnostic reports superseded on or before 2026-06-30, with SHA-256 restore verification.",
+        "reports/diagnostics/report_retention_dry_run_2026_07_12.json contains zero eligible entries because tracked report history begins on 2026-07-03. No branch, move, deletion, rewrite, or archive action occurred.",
         "experiments/active_wiki_citation_hashes.json binds the two controlling H-A2/H-G1 preregistrations and nine local wiki citations by SHA-256 without mutating the locked/frozen artifacts; the state-audit validator fails on artifact or wiki drift.",
         "The OPRA statistics boundary schema pins dataset/schema, required record columns, OPEN_INTEREST presence, and the vendored stat-type mapping; the Databento probe applies it before research use.",
         "config/governance_epochs.json records the first immutable tag technical-dd-remediation-ws5-2026-07-11; tag creation and push are session-exit evidence."
       ],
-      "updated": "2026-07-11"
+      "updated": "2026-07-12"
     }
   ]
 }

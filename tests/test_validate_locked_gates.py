@@ -10,6 +10,9 @@ from unittest.mock import patch
 from scripts.validate_locked_gates import MINIMUM_LOCKED_GATE_ENTRIES, validate_locked_gates
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+
 # Raise this floor only when a reviewed gate is appended; never lower it to permit deletion.
 LOCKED_GATE_MANIFEST_FLOOR = 3
 
@@ -19,6 +22,12 @@ def _sha256(text: str) -> str:
 
 
 class ValidateLockedGatesTests(unittest.TestCase):
+    def test_hash_bound_text_files_are_pinned_to_lf(self) -> None:
+        attributes = (PROJECT_ROOT / ".gitattributes").read_text(encoding="utf-8").splitlines()
+        self.assertIn("*.json text eol=lf", attributes)
+        self.assertIn("*.jsonl text eol=lf", attributes)
+        self.assertIn("*.py text eol=lf", attributes)
+
     def test_current_manifest_passes(self) -> None:
         result = validate_locked_gates()
         self.assertEqual("pass", result["status"], result["blockers"])

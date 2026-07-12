@@ -1,11 +1,17 @@
 # Report Retention Policy Proposal
 
-- **Policy status**: `proposed`
-- **User-approved**: `false`
-- **Approval date**: `null`
+- **Policy status**: `approved_dry_run_only`
+- **User-approved**: `true`
+- **Approval date**: `2026-07-12`
+- **Selected destination**: `option_1_dated_archive_branch`
+- **Archive branch pattern**: `archive/reports-YYYY`
+- **Immutable index location**: `main`
+- **First retention class**: `Bulk diagnostic`
+- **First cutoff**: reports superseded on or before `2026-06-30`
+- **Restore-test criterion**: every archived file must be restorable from the archive branch with SHA-256 matching the immutable JSON index on `main`
 - **Archival implementation allowed**: `false`
 
-No report may be moved, deleted, rewritten, or archived under this proposal until the user changes `User-approved` to `true` in a reviewed commit and selects the first archive destination and scope.
+The user approved the policy and first dry-run scope on 2026-07-12. This approval authorizes only the dry-run manifest. No report may be moved, deleted, rewritten, or archived until a separate reviewed step approves the exact manifest.
 
 ## Goal
 
@@ -26,7 +32,7 @@ Keep decision-grade evidence durable and easy to audit while reducing main-branc
 
 Recommended first destination: a dated `archive/reports-YYYY` branch plus an immutable JSON index retained on `main`. This removes eligible files from the current tree without rewriting history. Git LFS or an external repository may be considered later, but neither is required for the first controlled archive.
 
-The user must choose one destination before implementation:
+The selected destination is option 1. The other options remain alternatives for future policy revisions:
 
 1. Dated archive branch (recommended).
 2. External drive with checksum manifest.
@@ -60,4 +66,4 @@ Approval of this document does not authorize automatic deletion. The first imple
 
 ## Current Decision
 
-Await user approval. No archival script, dry-run manifest, branch, move, deletion, or history rewrite is authorized by this proposal.
+Approved for dry-run only on 2026-07-12. The first scan covers only `Bulk diagnostic` reports superseded on or before 2026-06-30. The dry-run manifest is `reports/diagnostics/report_retention_dry_run_2026_07_12.json`. Creating an archive branch, moving files, deleting files, or rewriting history still requires a separate reviewed step after the user sees that manifest.

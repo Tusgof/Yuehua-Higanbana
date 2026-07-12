@@ -1,0 +1,139 @@
+{
+  "schema_version": "h_a2_2022_h2_stress_decision_tree_cost_plan_v1",
+  "created_date": "2026-07-12",
+  "status": "awaiting_user_approval_no_purchase",
+  "hypothesis_id": "H-A2",
+  "purpose": "Resolve the exact 2022 stress replay blocker with the smallest recoverable top-VIX-month block before considering broader calendar data.",
+  "approved_candidate_block": {
+    "months": [
+      "2022-10",
+      "2022-09"
+    ],
+    "execution_order": [
+      "Acquire and validate real SPY 1-minute bars for the 13 cached October stress dates.",
+      "Run the October exact replay and trade-density checkpoint.",
+      "Only if the checkpoint passes, refresh the September option-quote estimate and acquire the bounded September block."
+    ],
+    "broad_2022_h2_purchase_allowed": false
+  },
+  "october_stress_dates": [
+    "2022-10-03",
+    "2022-10-05",
+    "2022-10-07",
+    "2022-10-10",
+    "2022-10-12",
+    "2022-10-14",
+    "2022-10-17",
+    "2022-10-19",
+    "2022-10-21",
+    "2022-10-24",
+    "2022-10-26",
+    "2022-10-28",
+    "2022-10-31"
+  ],
+  "decision_tree": {
+    "Q0_named_gap": {
+      "result": "pass",
+      "gap": "H-A2 exact stress-regime replay is blocked because 13 October 2022 option-quote dates lack real SPY underlying bars."
+    },
+    "Q1_cache_first": {
+      "result": "pass_after_cache_reuse",
+      "cached": [
+        "October 2022 SPY 0DTE OPRA cbbo-1m option quotes",
+        "VIX and macro regime labels"
+      ],
+      "missing": "Real SPY 1-minute OHLCV bars for the 13 October stress dates"
+    },
+    "Q2_falsification_cost_guard": {
+      "result": "pass_projected",
+      "guard_formula": "min(15 USD, 25% of remaining active guard room)",
+      "effective_plan_guard_usd": 15.0,
+      "projected_new_cash_cost_usd": 11.726392,
+      "must_refresh_before_purchase": true
+    },
+    "Q3_validation_smallest_missing_regime_block": {
+      "result": "pass_staged_only",
+      "reason": "October is already cached and supplies the missing stress regime. September remains contingent on the October trade-density checkpoint."
+    },
+    "Q4_field_unlock": {
+      "result": "not_applicable",
+      "reason": "Open interest is not a minimum required H-A2 field. This plan does not buy OI or claim a gamma result."
+    }
+  },
+  "components": [
+    {
+      "component": "October 2022 option quotes",
+      "provider": "Databento OPRA.PILLAR",
+      "state": "cached_and_normalized",
+      "historical_sunk_cost_usd": 10.52248,
+      "projected_new_cash_cost_usd": 0.0,
+      "source_record": "reports/data_cost/databento_download_result_h_a2_2022_10_stress.json"
+    },
+    {
+      "component": "Open interest",
+      "provider": null,
+      "state": "not_required_for_h_a2_exact_replay",
+      "historical_sunk_cost_usd": 0.0,
+      "projected_new_cash_cost_usd": 0.0,
+      "reason": "The preregistered H-A2 geometry fields require underlying OHLCV, option bid/ask/size, forced-close quotes, and regime labels; OI is not required."
+    },
+    {
+      "component": "SPY 1-minute underlying bars",
+      "provider": "Interactive Brokers",
+      "state": "planned_not_requested",
+      "scope": "13 October 2022 stress dates, regular session OHLCV",
+      "subscription": "NYSE American, BATS, ARCA, IEX and Regional Exchanges (Network B) L1, non-professional rate",
+      "projected_new_cash_cost_usd": 1.5,
+      "hard_stop_before_action": "Confirm the account is non-professional, the subscription is not already active, TWS/IB Gateway API is reachable, and historical bars are available. If the account quote exceeds 1.50 USD, stop and revise this plan.",
+      "official_sources": [
+        "https://www.interactivebrokers.com/en/pricing/market-data-pricing.php",
+        "https://www.interactivebrokers.com/campus/ibkr-api-page/market-data-subscriptions/"
+      ]
+    },
+    {
+      "component": "September 2022 option quotes",
+      "provider": "Databento OPRA.PILLAR",
+      "state": "contingent_not_purchased",
+      "projected_new_cash_cost_usd": 10.226392,
+      "source_record": "reports/data_cost/databento_cost_h_a2_2022_09_stress.json",
+      "hard_stop_before_action": "Do not buy until the October exact replay passes the trade-density checkpoint; rerun live metadata cost, select and log one approved key env, and recheck per-key plus combined-pool headroom."
+    }
+  ],
+  "cost_summary": {
+    "historical_sunk_cost_usd": 10.52248,
+    "stage_1_underlying_bars_usd": 1.5,
+    "stage_2_contingent_september_quotes_usd": 10.226392,
+    "total_projected_new_cash_cost_usd": 11.726392,
+    "total_economic_cost_including_cached_october_usd": 22.248872,
+    "user_approval_amount_usd": 11.726392,
+    "purchase_executed": false
+  },
+  "trade_density_checkpoint": {
+    "stage_1_input_dates": 13,
+    "minimum_candidate_ready_trades_to_consider_stage_2": 2,
+    "stop_if": [
+      "Fewer than 2 dates produce an exact candidate-ready trade.",
+      "Underlying timestamp, coverage, or ORB reconstruction gates fail.",
+      "Implementable PnL cannot be computed separately from mid PnL.",
+      "Observed trade density makes the revised MinTRL projection worse enough that the September block cannot materially close the gap."
+    ],
+    "required_report": [
+      "candidate-ready dates and active trades",
+      "added stress-regime buckets",
+      "cost per incremental trade",
+      "revised MinTRL and PSR feasibility",
+      "mid PnL versus implementable PnL",
+      "big-day dependency"
+    ],
+    "post_stage_2_rule": "After the two-month block, pause and apply the section 5 checkpoint. No remaining 2022 month may be purchased unless it adds a missing regime bucket and improves the MinTRL path."
+  },
+  "guardrails": {
+    "paid_download_executed": false,
+    "api_request_executed": false,
+    "new_provider_introduced": false,
+    "symbol_scope": "SPY only",
+    "user_approval_required_before_purchase": true,
+    "selected_databento_key_env": null,
+    "no_credential_values_stored": true
+  }
+}
