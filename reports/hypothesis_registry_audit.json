@@ -10,19 +10,21 @@
       ],
       "family": "subsystem_a",
       "id": "H-A1",
+      "scope_restriction_count": 0,
       "status": "falsified-as-stated",
       "warnings": []
     },
     {
       "blockers": [],
       "dependency_count": 1,
-      "evidence_count": 29,
+      "evidence_count": 31,
       "evidence_tiers": [
         "E0",
         "E1"
       ],
       "family": "subsystem_a",
       "id": "H-A2",
+      "scope_restriction_count": 1,
       "status": "active",
       "warnings": []
     },
@@ -35,6 +37,7 @@
       ],
       "family": "subsystem_b",
       "id": "H-B1",
+      "scope_restriction_count": 0,
       "status": "falsified",
       "warnings": []
     },
@@ -47,6 +50,7 @@
       ],
       "family": "subsystem_b",
       "id": "H-B2",
+      "scope_restriction_count": 0,
       "status": "parked",
       "warnings": []
     },
@@ -60,6 +64,7 @@
       ],
       "family": "gamma",
       "id": "H-G1",
+      "scope_restriction_count": 0,
       "status": "parked",
       "warnings": []
     },
@@ -73,6 +78,7 @@
       ],
       "family": "llm_news",
       "id": "H-L1",
+      "scope_restriction_count": 0,
       "status": "active_blocked",
       "warnings": []
     },
@@ -85,6 +91,7 @@
       ],
       "family": "llm_price",
       "id": "H-L2",
+      "scope_restriction_count": 0,
       "status": "proposed",
       "warnings": []
     },
@@ -97,6 +104,7 @@
       ],
       "family": "llm_news",
       "id": "H-L3",
+      "scope_restriction_count": 0,
       "status": "active_blocked",
       "warnings": []
     }
@@ -105,6 +113,6 @@
   "registry_path": "experiments\\hypothesis_registry.json",
   "reports_root": "reports",
   "status": "pass",
-  "summary_hypothesis_reference_count": 59,
+  "summary_hypothesis_reference_count": 64,
   "warnings": []
 }

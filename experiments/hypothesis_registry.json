@@ -74,12 +74,26 @@
         "Fresh retained no-macro trades have implementable PnL <= 0 after reaching MinTRL_falsify.",
         "Macro-day/no-macro mechanism reverses in fresh data."
       ],
+      "scope_restrictions": [
+        {
+          "dimension": "previous_close_vix",
+          "included_scope": "prior_close_vix < 25",
+          "excluded_scope": "prior_close_vix >= 25",
+          "status": "active",
+          "effective_date": "2026-07-13",
+          "rationale": "Two independent stress windows produced no H-A2 candidates after complete or validated market-data coverage. High-VIX silence is treated as a survival guardrail and an identification boundary, not profitability evidence.",
+          "operational_guardrail": "No H-A2 trade may be opened when prior-close VIX is 25 or higher. High-importance macro days remain excluded independently.",
+          "evidence_paths": [
+            "reports/diagnostics/h_a2_high_vix_silence_diagnostic_summary.json",
+            "reports/experiments/h_a2_2022_10_stress_exact_replay_summary.json"
+          ]
+        }
+      ],
       "required_data": [
         "Pre-registered H-A2 re-analysis from existing M5.5 evidence.",
-        "Free Aug 2024 high-VIX labeling/silence investigation.",
-        "If justified, top 2-3 high-VIX months from 2022 H2 after cost guard check.",
-        "H-A2.4 projection selected 2022-10 and 2022-09 for top2 live cost check; top3 requires top-up or a lower live quote.",
-        "H-A2.5 live metadata cost gate blocks top2 download under the current $125 guard because combined estimate is $20.748872 versus $20.0 headroom."
+        "Completed Aug 2024 and Oct 2022 stress-silence diagnostics supporting the formal prior-close VIX < 25 scope restriction.",
+        "Fresh untouched 2025-2026 OOS dates in both in-scope VIX buckets for search decontamination.",
+        "No additional high-VIX purchase for the current H-A2 rule unless a new hypothesis explicitly changes the scope."
       ],
       "mintrl_falsify": {
         "status": "pending",
@@ -102,7 +116,19 @@
           "path": "reports/diagnostics/h_a2_high_vix_silence_diagnostic_summary.json",
           "evidence_tier": "E1",
           "conclusion": "เธขเธฑเธเธชเธฃเธธเธเนเธกเนเนเธ”เน",
-          "notes": "Aug 2024 high-VIX diagnostic found complete VIX/market-data coverage but zero ORB candidate trades during high-VIX dates; this is ORB silence, not a VIX labeling gap."
+          "notes": "Stress-silence window 1: Aug 2024 had complete VIX/market-data coverage but zero ORB candidate trades during high-VIX dates; this is ORB silence, not a VIX labeling gap."
+        },
+        {
+          "path": "reports/experiments/h_a2_2022_10_stress_exact_replay_summary.json",
+          "evidence_tier": "E1",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Stress-silence window 2: all 13 Oct 2022 dates passed SPY bar coverage and 3 had raw 09:35 breakouts, but every date failed the ex-ante clean macro/VIX gate, leaving zero candidate trades and no PnL. The minimum-2 density checkpoint stopped the September purchase."
+        },
+        {
+          "path": "reports/data_cost/h_a2_fresh_oos_2025_2026_decision_tree_cost_plan.json",
+          "evidence_tier": "E0",
+          "conclusion": "ยังสรุปไม่ได้",
+          "notes": "Plan-only Section 5 decision-tree artifact for 20 untouched 2025-2026 dates across prior-VIX <15 and 15-25 buckets. Proposed ceiling is $12.601188; no metadata call or purchase occurred and user approval is required."
         },
         {
           "path": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
@@ -409,6 +435,16 @@
           "date": "2026-07-06",
           "decision": "normal_control_metadata_estimate_completed",
           "notes": "H-A2.44 completed as E0 cost-control evidence. Databento metadata estimate for low_normal_vix_control_pack is $5.398913 using selected key env DATABENTO_API_MO, no download was performed, and the next safe work is a separate normal/control download decision artifact before any data pull."
+        },
+        {
+          "date": "2026-07-13",
+          "decision": "scope_restricted_to_prior_vix_below_25_after_two_stress_silence_windows",
+          "notes": "Aug 2024 and Oct 2022 independently produced zero H-A2 candidates in stress/high-VIX conditions. H-A2 is now formally restricted to prior-close VIX <25 with high-importance macro days excluded. VIX >=25 is blocked/out-of-scope; silence there may be described as survival behavior but never as profitability or E2 evidence."
+        },
+        {
+          "date": "2026-07-13",
+          "decision": "fresh_oos_2025_2026_cost_plan_awaiting_user_approval",
+          "notes": "The Section 5 plan proposes 20 untouched dates across the two in-scope VIX buckets with a $12.601188 approval ceiling. No live metadata call or purchase occurred. User approval, live cost refresh, and selected-key guard refresh are required before purchase."
         }
       ]
     },

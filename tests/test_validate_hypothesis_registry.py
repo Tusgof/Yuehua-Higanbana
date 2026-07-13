@@ -31,6 +31,28 @@ class ValidateHypothesisRegistryTests(unittest.TestCase):
         self.assertEqual("pass", result["status"])
         self.assertEqual([], result["blockers"])
         self.assertEqual(8, result["hypothesis_count"])
+        registry = json.loads(self.validator.DEFAULT_REGISTRY_PATH.read_text(encoding="utf-8"))
+        h_a2 = next(item for item in registry["hypotheses"] if item["id"] == "H-A2")
+        restriction = h_a2["scope_restrictions"][0]
+        self.assertEqual("prior_close_vix < 25", restriction["included_scope"])
+        self.assertEqual(2, len(restriction["evidence_paths"]))
+        h_a2_audit = next(item for item in result["hypotheses"] if item["id"] == "H-A2")
+        self.assertEqual(1, h_a2_audit["scope_restriction_count"])
+
+    def test_rejects_incomplete_scope_restriction(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            registry_path = Path(tmp) / "hypothesis_registry.json"
+            registry = valid_registry()
+            registry["hypotheses"][0]["scope_restrictions"] = [{"status": "active"}]
+            registry_path.write_text(json.dumps(registry), encoding="utf-8")
+
+            result = self.validator.validate_hypothesis_registry(
+                registry_path,
+                reports_root=Path(tmp) / "reports",
+            )
+
+        self.assertEqual("blocked", result["status"])
+        self.assertIn("H-X1:scope_restriction_requires_two_evidence_paths", result["blockers"])
 
     def test_rejects_missing_falsification_criteria(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

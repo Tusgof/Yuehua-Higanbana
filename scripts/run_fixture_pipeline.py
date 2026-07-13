@@ -172,6 +172,10 @@ def main() -> int:
             ["scripts/validate_h_a2_2022_10_stress_exact_replay_preregistration.py"],
         ),
         (
+            "validate_h_a2_fresh_oos_cost_plan",
+            ["scripts/validate_h_a2_fresh_oos_cost_plan.py"],
+        ),
+        (
             "validate_h_a2_2022_10_coarse_stress_preregistration",
             ["scripts/validate_h_a2_2022_10_coarse_stress_preregistration.py"],
         ),

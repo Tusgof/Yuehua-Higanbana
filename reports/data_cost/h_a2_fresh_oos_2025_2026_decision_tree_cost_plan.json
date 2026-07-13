@@ -1,0 +1,145 @@
+{
+  "schema_version": "h_a2_fresh_oos_2025_2026_cost_plan_v1",
+  "artifact_type": "data_acquisition_cost_plan",
+  "status": "awaiting_user_approval",
+  "mode": "plan_only_no_network_no_purchase",
+  "generated_date": "2026-07-13",
+  "hypothesis_id": "H-A2",
+  "named_gap": "Fresh untouched OOS evidence for search decontamination inside the formal VIX<25 scope",
+  "scope_restriction": {
+    "decision_time": "09:35:00 ET",
+    "included_prior_vix": "prior_close_vix < 25",
+    "excluded_prior_vix": "prior_close_vix >= 25",
+    "high_importance_macro_days_allowed": false,
+    "operational_guardrail": "No H-A2 trade may be opened outside this scope.",
+    "stress_evidence_role": "Aug 2024 and Oct 2022 stress silence supports the guardrail but does not validate profitability."
+  },
+  "decision_tree": {
+    "q0_named_hypothesis_gap": "pass",
+    "q1_cached_data_can_fill_gap": "no_target_raw_cache_found",
+    "q2_falsification_funding": {
+      "status": "conditional_bounded_pilot",
+      "reason": "The block is capped below $15 and measures fresh candidate density before any larger falsification or validation purchase.",
+      "hard_cap_usd": 15.0
+    },
+    "q3_validation": {
+      "status": "not_approved_for_E2",
+      "reason": "MinTRL_validate and benchmark-null feasibility are not resolved; this block cannot by itself support E2."
+    },
+    "q4_field_unlock": "not_applicable",
+    "result": "present_plan_for_user_approval_before_purchase"
+  },
+  "target_windows": [
+    {
+      "window_id": "fresh_oos_2025_low_vix",
+      "role": "untouched low-VIX OOS bucket",
+      "vix_bucket": "prior_vix_below_15",
+      "dates": [
+        "2025-08-13",
+        "2025-08-14",
+        "2025-08-15",
+        "2025-08-19",
+        "2025-08-25",
+        "2025-08-26",
+        "2025-08-27",
+        "2025-08-28",
+        "2025-09-12",
+        "2025-09-15"
+      ],
+      "date_count": 10,
+      "prior_vix_range": [14.22, 14.99],
+      "high_importance_macro_date_count": 0,
+      "raw_cache_match_count": 0
+    },
+    {
+      "window_id": "fresh_oos_2026_normal_vix",
+      "role": "untouched normal-VIX OOS bucket",
+      "vix_bucket": "prior_vix_15_to_25",
+      "dates": [
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24"
+      ],
+      "date_count": 10,
+      "prior_vix_range": [17.48, 19.5],
+      "high_importance_macro_date_count": 0,
+      "raw_cache_match_count": 0
+    }
+  ],
+  "required_components": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "schema": "cbbo-1m",
+      "symbol": "SPY.OPT",
+      "window": "09:30-15:50 ET grouped conservative daily window",
+      "purpose": "entry geometry, implementable debit, liquidity, and forced-close value"
+    },
+    {
+      "dataset": "EQUS.MINI",
+      "schema": "ohlcv-1m",
+      "symbol": "SPY",
+      "window": "regular session",
+      "purpose": "timestamp-clean 09:35 ORB reconstruction and context"
+    }
+  ],
+  "cost_basis": {
+    "method": "historical_analogue_projection_no_live_metadata_call",
+    "source_reports": [
+      "reports/data_cost/h_a2_normal_control_low_normal_vix_control_pack_cost_estimate.json",
+      "reports/data_cost/h_a2_post_stress_normalization_control_pack_cost_estimate.json"
+    ],
+    "source_date_count": 20,
+    "source_total_estimated_cost_usd": 10.957555,
+    "observed_estimated_cost_per_date_usd": 0.54787775,
+    "target_date_count": 20,
+    "base_projected_cost_usd": 10.957555,
+    "contingency_rate": 0.15,
+    "contingency_usd": 1.643633,
+    "user_approval_ceiling_usd": 12.601188,
+    "live_metadata_refresh_required_after_approval": true
+  },
+  "budget_guard": {
+    "selected_key_env": "DATABENTO_API_MO",
+    "selected_key_cap_usd": 100.0,
+    "mo_ai_combined_pool_cap_usd": 200.0,
+    "known_mo_usage_usd": 5.398913,
+    "known_ai_usage_usd": 5.558642,
+    "known_combined_usage_usd": 10.957555,
+    "projected_selected_key_usage_at_ceiling_usd": 18.000101,
+    "projected_combined_usage_at_ceiling_usd": 23.558743,
+    "status": "pass_projection_only"
+  },
+  "post_purchase_checkpoint": {
+    "run_after_target_date_count": 20,
+    "report": [
+      "candidate_trade_count_by_VIX_bucket",
+      "cost_per_candidate_trade",
+      "implementable_PnL_if_candidates_exist",
+      "MinTRL_falsify_and_MinTRL_validate_projection",
+      "PSR_and_under_sampled_underpowered_labels",
+      "big_day_dependency_if_applicable"
+    ],
+    "stop_rule": "No automatic expansion. If candidate trades are fewer than 2, or the MinTRL cost projection worsens, stop and return to hypothesis revision."
+  },
+  "authorization": {
+    "user_approval_required_before_purchase": true,
+    "user_approval_recorded": false,
+    "metadata_call_performed": false,
+    "download_performed": false,
+    "purchase_allowed_by_this_artifact": false,
+    "next_action": "User reviews the $12.601188 ceiling. After approval, refresh live metadata cost and the selected-key guard; stop if the live estimate exceeds the approved ceiling."
+  },
+  "forbidden_claims": [
+    "This plan is not evidence that H-A2 has an edge.",
+    "This plan does not approve E2, paper trading, operational validation, or real-money trading.",
+    "No purchase may occur before explicit user approval.",
+    "No result may be extrapolated to prior-close VIX >= 25."
+  ]
+}

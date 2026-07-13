@@ -80,6 +80,11 @@ def validate_hypothesis_registry(
                 ),
                 "dependency_count": len(hypothesis.get("dependencies", [])) if isinstance(hypothesis.get("dependencies"), list) else None,
                 "evidence_count": len(hypothesis.get("evidence", [])) if isinstance(hypothesis.get("evidence"), list) else None,
+                "scope_restriction_count": (
+                    len(hypothesis.get("scope_restrictions", []))
+                    if isinstance(hypothesis.get("scope_restrictions"), list)
+                    else 0
+                ),
                 "blockers": item_blockers,
                 "warnings": item_warnings,
             }
@@ -117,14 +122,14 @@ def write_reports(
         "",
         "## Hypotheses",
         "",
-        "| Hypothesis | Family | Status | Evidence tiers | Blockers |",
-        "|:--|:--|:--|:--|:--|",
+        "| Hypothesis | Family | Status | Evidence tiers | Scope restrictions | Blockers |",
+        "|:--|:--|:--|:--|--:|:--|",
     ]
     for hypothesis in result["hypotheses"]:
         blockers = ", ".join(hypothesis["blockers"]) if hypothesis["blockers"] else "None"
         tiers = ", ".join(hypothesis["evidence_tiers"]) if hypothesis["evidence_tiers"] else "None"
         lines.append(
-            f"| `{hypothesis['id']}` | `{hypothesis['family']}` | `{hypothesis['status']}` | {tiers} | {blockers} |"
+            f"| `{hypothesis['id']}` | `{hypothesis['family']}` | `{hypothesis['status']}` | {tiers} | {hypothesis['scope_restriction_count']} | {blockers} |"
         )
 
     lines.extend(["", "## Blockers", ""])
@@ -184,6 +189,31 @@ def _validate_hypothesis(hypothesis: dict[str, Any], known_ids: set[str]) -> tup
         blockers.append("validated_status_requires_E2_or_E3_evidence")
     if hypothesis.get("status") in {"active", "active_blocked"} and not evidence_items:
         warnings.append("active_hypothesis_has_no_evidence_links")
+
+    scope_restrictions = hypothesis.get("scope_restrictions")
+    if scope_restrictions is not None:
+        if not isinstance(scope_restrictions, list) or not scope_restrictions:
+            blockers.append("scope_restrictions_must_be_non_empty_list")
+        else:
+            required_scope_fields = {
+                "dimension",
+                "included_scope",
+                "excluded_scope",
+                "status",
+                "operational_guardrail",
+                "evidence_paths",
+            }
+            for restriction in scope_restrictions:
+                if not isinstance(restriction, dict):
+                    blockers.append("scope_restriction_must_be_object")
+                    continue
+                missing_scope = sorted(required_scope_fields - set(restriction))
+                blockers.extend(f"scope_restriction_missing:{field}" for field in missing_scope)
+                if restriction.get("status") != "active":
+                    blockers.append("scope_restriction_status_must_be_active")
+                evidence_paths = restriction.get("evidence_paths")
+                if not isinstance(evidence_paths, list) or len(evidence_paths) < 2:
+                    blockers.append("scope_restriction_requires_two_evidence_paths")
 
     return blockers, warnings
 

@@ -191,6 +191,9 @@ H_A2_TARGETED_GEOMETRY_CACHE_INVENTORY = (
 H_A2_2022_10_STRESS_EXACT_REPLAY_SUMMARY = (
     PROJECT_ROOT / "reports" / "experiments" / "h_a2_2022_10_stress_exact_replay_summary.json"
 )
+H_A2_FRESH_OOS_2025_2026_COST_PLAN = (
+    PROJECT_ROOT / "reports" / "data_cost" / "h_a2_fresh_oos_2025_2026_decision_tree_cost_plan.json"
+)
 GDELT_BULK_SOURCE_DECISION_NOTE = PROJECT_ROOT / "docs" / "GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md"
 GDELT_BULK_MANIFEST_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_bulk_raw_manifest.json"
 GDELT_GKG_ONE_FILE_PROBE_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_gkg_one_file_parser_probe.json"
@@ -745,9 +748,21 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
     h_a2_2022_10_stress_exact_replay = _load_report_artifact(
         H_A2_2022_10_STRESS_EXACT_REPLAY_SUMMARY
     )
+    h_a2_fresh_oos_cost_plan = _load_report_artifact(H_A2_FRESH_OOS_2025_2026_COST_PLAN)
     h_a2_proxy_robustness = _load_report_artifact(H_A2_PROXY_FIRST_ROBUSTNESS_SUMMARY)
     h_l1_macro_proxy = _load_report_artifact(H_L1_MACRO_EVENT_PROXY_BASELINE_SUMMARY)
     if (
+        h_a2_fresh_oos_cost_plan
+        and h_a2_fresh_oos_cost_plan.get("status") == "awaiting_user_approval"
+        and h_a2_fresh_oos_cost_plan.get("mode") == "plan_only_no_network_no_purchase"
+    ):
+        cost = h_a2_fresh_oos_cost_plan.get("cost_basis") or {}
+        actions.append(
+            "H-A2 is formally restricted to prior-close VIX <25 after two independent stress-silence windows (Aug 2024 and Oct 2022); VIX >=25 is blocked/out-of-scope and must not be treated as profitability evidence. "
+            f"The Section 5 fresh OOS 2025-2026 cost plan is ready for user review: {cost.get('target_date_count')} untouched dates across prior-VIX <15 and 15-25 buckets, base projection ${cost.get('base_projected_cost_usd')}, and user-approval ceiling ${cost.get('user_approval_ceiling_usd')}. "
+            "No metadata call or purchase occurred. Next action is user approval or rejection of that ceiling. After approval, refresh live metadata cost and the selected-key guard; stop if the live estimate exceeds the approved ceiling. Do not approve E2, paper trading, operational validation, or real-money trading from this plan."
+        )
+    elif (
         h_a2_2022_10_stress_exact_replay
         and h_a2_2022_10_stress_exact_replay.get("status")
         == "complete_no_candidate_trades"
