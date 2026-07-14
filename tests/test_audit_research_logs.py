@@ -359,9 +359,107 @@ class AuditResearchLogsTests(unittest.TestCase):
             result["blockers"],
         )
 
+    def test_log_042_requires_new_research_structure(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            experiment_root = root / "experiments"
+            log_root = root / "research_log"
+            experiment_root.mkdir()
+            log_root.mkdir()
+            (log_root / "042-higanbana-new-question.md").write_text(self.valid_log_text(), encoding="utf-8")
+
+            result = self.auditor.audit_research_logs(
+                log_root,
+                experiment_root,
+                git_runner=self.clean_git_runner(),
+            )
+
+        self.assertIn(
+            "research_log_readability_issue:042-higanbana-new-question.md:research_format_v2_section_mismatch",
+            result["blockers"],
+        )
+
+    def test_log_042_accepts_six_sections_and_research_labels(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            experiment_root = root / "experiments"
+            log_root = root / "research_log"
+            experiment_root.mkdir()
+            log_root.mkdir()
+            (log_root / "042-higanbana-bounded-question.md").write_text(
+                self.valid_v2_log_text(),
+                encoding="utf-8",
+            )
+
+            result = self.auditor.audit_research_logs(
+                log_root,
+                experiment_root,
+                git_runner=self.clean_git_runner(),
+            )
+
+        issues = [item["issue"] for item in result["readability_issues"]]
+        self.assertNotIn("research_format_v2_section_mismatch", issues)
+        self.assertFalse(any(issue.startswith("research_format_v2_missing_label:") for issue in issues))
+
+    def test_log_042_rejects_empty_scope_and_overlong_question(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            experiment_root = root / "experiments"
+            log_root = root / "research_log"
+            experiment_root.mkdir()
+            log_root.mkdir()
+            text = self.valid_v2_log_text().replace(
+                "คำถามวิจัย: กฎที่กำหนดให้ผลตามเกณฑ์หรือไม่",
+                f"คำถามวิจัย: {'ก' * 301}",
+            ).replace("ขอบเขต: SPY ในข้อมูล OOS ที่ล็อกไว้", "ขอบเขต:")
+            (log_root / "042-higanbana-unbounded-question.md").write_text(text, encoding="utf-8")
+
+            result = self.auditor.audit_research_logs(
+                log_root,
+                experiment_root,
+                git_runner=self.clean_git_runner(),
+            )
+
+        issues = [item["issue"] for item in result["readability_issues"]]
+        self.assertIn("research_format_v2_empty_label:ขอบเขต:", issues)
+        self.assertIn("research_format_v2_question_too_long", issues)
+
     @staticmethod
     def valid_log_text() -> str:
         return "# บันทึกการวิจัย: Test\n\n## 2. วัตถุประสงค์\n\n### อ่านแบบเร็ว\n\nอ่านง่าย\n"
+
+    @staticmethod
+    def valid_v2_log_text() -> str:
+        return """# บันทึกการวิจัย: Test
+
+## 1. ข้อมูลพื้นฐาน
+
+### อ่านแบบเร็ว
+
+สรุปแบบสั้น
+
+## 2. ปัญหา (คำถาม) และสมมติฐาน
+
+คำถามวิจัย: กฎที่กำหนดให้ผลตามเกณฑ์หรือไม่
+ขอบเขต: SPY ในข้อมูล OOS ที่ล็อกไว้
+สมมติฐาน: ผลหลังต้นทุนเป็นบวก
+
+## 3. ขั้นตอนการทดลอง
+
+1. ทดสอบตามกฎ
+
+## 4. ผลลัพธ์
+
+รายงานผล
+
+## 5. อภิปรายผล ปัญหา และข้อจำกัด
+
+อภิปรายข้อจำกัด
+
+## 6. สรุปผลการทดลองและแนวทางพัฒนาต่อ
+
+ข้อสรุป: ยังสรุปไม่ได้
+"""
 
     @staticmethod
     def clean_git_runner():

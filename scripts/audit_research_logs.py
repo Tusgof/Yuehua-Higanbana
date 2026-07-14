@@ -17,6 +17,17 @@ EXPECTED_REMOTE = "https://github.com/Tusgof/Yuehua-Higanbana.git"
 QUICK_READ_HEADINGS = ("### อ่านแบบเร็ว", "### เธญเนเธฒเธเนเธเธเน€เธฃเนเธง")
 LOG_FILENAME_RE = re.compile(r"^\d{3}-higanbana-[a-z0-9]+(?:-[a-z0-9]+)*\.md$")
 MOJIBAKE_MARKERS = ("เธ", "เน€", "เน", "เน", "โ€", "�")
+RESEARCH_FORMAT_V2_START = 42
+RESEARCH_FORMAT_V2_HEADINGS = (
+    "## 1. ข้อมูลพื้นฐาน",
+    "## 2. ปัญหา (คำถาม) และสมมติฐาน",
+    "## 3. ขั้นตอนการทดลอง",
+    "## 4. ผลลัพธ์",
+    "## 5. อภิปรายผล ปัญหา และข้อจำกัด",
+    "## 6. สรุปผลการทดลองและแนวทางพัฒนาต่อ",
+)
+RESEARCH_FORMAT_V2_REQUIRED_LABELS = ("คำถามวิจัย:", "ขอบเขต:", "สมมติฐาน:")
+RESEARCH_QUESTION_MAX_LENGTH = 300
 
 
 GitRunner = Callable[[Path, list[str]], str]
@@ -176,6 +187,26 @@ def _research_log_readability_issues(research_log_root: Path) -> list[dict[str, 
             if marker in text:
                 issues.append({"name": path.name, "issue": f"mojibake_marker:{marker}"})
                 break
+        try:
+            log_number = int(path.name.split("-", 1)[0])
+        except ValueError:
+            continue
+        if log_number >= RESEARCH_FORMAT_V2_START:
+            stripped_lines = tuple(line.strip() for line in text.splitlines())
+            headings = tuple(line.strip() for line in text.splitlines() if line.startswith("## "))
+            if headings != RESEARCH_FORMAT_V2_HEADINGS:
+                issues.append({"name": path.name, "issue": "research_format_v2_section_mismatch"})
+            for label in RESEARCH_FORMAT_V2_REQUIRED_LABELS:
+                matching_lines = [line for line in stripped_lines if line.startswith(label)]
+                if not matching_lines:
+                    issues.append({"name": path.name, "issue": f"research_format_v2_missing_label:{label}"})
+                elif not matching_lines[0][len(label):].strip():
+                    issues.append({"name": path.name, "issue": f"research_format_v2_empty_label:{label}"})
+            question_lines = [line for line in stripped_lines if line.startswith("คำถามวิจัย:")]
+            if question_lines:
+                question = question_lines[0].removeprefix("คำถามวิจัย:").strip()
+                if len(question) > RESEARCH_QUESTION_MAX_LENGTH:
+                    issues.append({"name": path.name, "issue": "research_format_v2_question_too_long"})
     return issues
 
 

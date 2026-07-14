@@ -168,6 +168,7 @@
 - Each experiment report should include charts and metrics.
 - Reports should be per-experiment, with a later final research review.
 - After each completed experiment, write an easy-to-read Thai research log using `RESEARCH_LOG_FORMAT.md`, save it under `research_log`, name it with the running-number convention `NNN-higanbana-clear-topic-slug.md` such as `001-higanbana-orb-baseline-real-data.md`, and commit/push it with the main `https://github.com/Tusgof/Yuehua-Higanbana` repository.
+- From research log `042` onward, use the six-section structure: basic information; problem (research question) and hypothesis; experimental procedure; results; discussion/problems/limitations; and conclusion with the next research direction. Each new log must state one short, bounded, answerable `คำถามวิจัย`, its `ขอบเขต`, and a falsifiable `สมมติฐาน`. Logs `001-041` remain unchanged as historical evidence.
 - Required metrics include at least:
   - cashflow / daily PnL,
   - equity curve,
