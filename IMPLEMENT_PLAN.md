@@ -21,7 +21,7 @@
 - No live LLM research calls until real timestamp-clean news cases exist.
 - No current result may be treated above E1 diagnostic evidence.
 - Every hypothesis/report conclusion must use the project labels `ผ่าน`, `ไม่ผ่าน`, or `ยังสรุปไม่ได้`, with evidence tier and blockers stated beside the conclusion.
-- Latest experiment research log is `041-higanbana-h-a2-october-2022-stress-exact-replay.md`; logs through `041` are pushed to the Yuehua Research Log repo. Recent logs were rewritten as easier Thai research notes after user feedback, preserving the original evidence, metrics, artifact paths, and conclusions. `RESEARCH_LOG_FORMAT.md` now explicitly requires human-readable Thai, English only for necessary technical terms, and no machine-log style writing.
+- Latest experiment research log is `041-higanbana-h-a2-october-2022-stress-exact-replay.md`; logs `001` through `041` are tracked and published with `Tusgof/Yuehua-Higanbana` under `research_log/`. The former separate-repository HEAD was `bfd4be8d7d0f7c3aad3485b7735d4397c7eb8a29`. Recent logs were rewritten as easier Thai research notes after user feedback, preserving the original evidence, metrics, artifact paths, and conclusions. `RESEARCH_LOG_FORMAT.md` explicitly requires human-readable Thai, English only for necessary technical terms, and no machine-log style writing.
 
 ---
 

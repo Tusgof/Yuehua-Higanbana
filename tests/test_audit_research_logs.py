@@ -75,8 +75,10 @@ class AuditResearchLogsTests(unittest.TestCase):
         self.assertEqual("042-higanbana-", result["sequence"]["next_filename_prefix"])
         self.assertTrue(result["sequence"]["contiguous_from_001"])
         self.assertEqual([], result["git"]["blockers"])
-        self.assertTrue(result["git"]["clean"])
         self.assertTrue(result["git"]["remote_matches_expected"])
+        self.assertFalse(result["git"]["nested_repo_present"])
+        self.assertEqual(41, result["git"]["tracked_log_count"])
+        self.assertEqual([], result["git"]["untracked_logs"])
 
     def test_missing_log_blocks(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -238,7 +240,7 @@ class AuditResearchLogsTests(unittest.TestCase):
         self.assertEqual("blocked", result["status"])
         self.assertIn("missing_research_log_number:002", result["blockers"])
 
-    def test_unpushed_log_blocks(self) -> None:
+    def test_log_not_tracked_by_main_repo_blocks(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             experiment_root = root / "experiments"
@@ -257,11 +259,32 @@ class AuditResearchLogsTests(unittest.TestCase):
             result = self.auditor.audit_research_logs(
                 log_root,
                 experiment_root,
-                git_runner=self.unpushed_git_runner(),
+                git_runner=self.untracked_git_runner(),
             )
 
         self.assertEqual("blocked", result["status"])
-        self.assertIn("research_log_not_pushed", result["blockers"])
+        self.assertIn(
+            "research_log_not_tracked_by_main_repo:001-higanbana-exp01-real-baseline.md",
+            result["blockers"],
+        )
+
+    def test_nested_research_log_repo_blocks(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            experiment_root = root / "experiments"
+            log_root = root / "research_log"
+            experiment_root.mkdir()
+            log_root.mkdir()
+            (log_root / ".git").mkdir()
+
+            result = self.auditor.audit_research_logs(
+                log_root,
+                experiment_root,
+                git_runner=self.clean_git_runner(),
+            )
+
+        self.assertEqual("blocked", result["status"])
+        self.assertIn("research_log_nested_git_repo_present", result["blockers"])
 
     def test_legacy_filename_blocks_even_when_log_matches_slug(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -344,31 +367,22 @@ class AuditResearchLogsTests(unittest.TestCase):
     def clean_git_runner():
         def run_git(cwd: Path, args: list[str]) -> str:
             command = " ".join(args)
-            if command == "status --porcelain":
-                return ""
             if command == "remote -v":
-                return "origin\thttps://github.com/Tusgof/Yuehua_Research_log (fetch)\n"
-            if command == "rev-parse HEAD":
-                return "abc123\n"
-            if command == "ls-remote origin HEAD":
-                return "abc123\tHEAD\n"
+                return "origin\thttps://github.com/Tusgof/Yuehua-Higanbana.git (fetch)\n"
+            if command == "ls-files -- research_log":
+                log_root = cwd / "research_log"
+                return "\n".join(f"research_log/{path.name}" for path in sorted(log_root.glob("*.md")))
             raise AssertionError(args)
 
         return run_git
 
     @staticmethod
-    def unpushed_git_runner():
+    def untracked_git_runner():
         def run_git(cwd: Path, args: list[str]) -> str:
             command = " ".join(args)
-            if command == "status --porcelain":
+            if command == "ls-files -- research_log":
                 return ""
-            if command == "remote -v":
-                return "origin\thttps://github.com/Tusgof/Yuehua_Research_log (fetch)\n"
-            if command == "rev-parse HEAD":
-                return "local\n"
-            if command == "ls-remote origin HEAD":
-                return "remote\tHEAD\n"
-            raise AssertionError(args)
+            return AuditResearchLogsTests.clean_git_runner()(cwd, args)
 
         return run_git
 

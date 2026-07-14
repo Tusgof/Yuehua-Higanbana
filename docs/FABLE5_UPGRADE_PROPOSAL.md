@@ -336,7 +336,7 @@ Gate outputs: `approved_for_operational_validation` | `blocked(reasons[])` | `sc
 - `scripts\run_fixture_pipeline.py` — add new validators
 - `RESEARCH_LOG_FORMAT.md` — require `evidence_tier` and `hypothesis_id` in log headers (next log remains `011-higanbana-…`)
 
-**Explicitly unchanged**: raw/normalized `data\` exclusions, research_log nested-repo arrangement, cost-guard policy, hard boundaries, Thai report language, `RESEARCH_LOG_FORMAT.md` numbering.
+**Explicitly unchanged at proposal time**: raw/normalized `data\` exclusions, cost-guard policy, hard boundaries, Thai report language, and `RESEARCH_LOG_FORMAT.md` numbering. The nested `research_log` arrangement was superseded by the user's 2026-07-15 decision to publish the logs inside `Tusgof/Yuehua-Higanbana`.
 
 ---
 

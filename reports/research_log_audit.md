@@ -70,7 +70,7 @@
 ## Git
 
 - Is git repo: `True`
-- Clean worktree: `True`
 - Remote matches expected: `True`
-- Local HEAD: `bfd4be8d7d0f7c3aad3485b7735d4397c7eb8a29`
-- Remote HEAD: `bfd4be8d7d0f7c3aad3485b7735d4397c7eb8a29`
+- Nested research-log repo present: `False`
+- Tracked log count: `41`
+- Untracked logs: `[]`

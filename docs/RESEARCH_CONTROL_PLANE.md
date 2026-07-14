@@ -147,7 +147,7 @@ This control-plane document is not an experiment result. No research log is requ
 After each completed experiment round:
 
 1. Write a Thai research log under `research_log/` using `RESEARCH_LOG_FORMAT.md`.
-2. Commit and push the log to `https://github.com/Tusgof/Yuehua_Research_log`.
+2. Commit and push the log with the main project to `https://github.com/Tusgof/Yuehua-Higanbana`.
 3. Run `python scripts\audit_research_logs.py`.
 
 ## Milestone 1 Completion Evidence

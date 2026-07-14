@@ -146,13 +146,13 @@ python scripts\audit_research_logs.py
 6. Commit และ push ไปที่ repo:
 
 ```powershell
-cd "D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana\research_log"
-git add <log_filename>.md
+cd "D:\Fogust\Workspace\Investment\Project\SPY 0DTE - Higanbana"
+git add research_log/<log_filename>.md
 git commit -m "research-log: <short English description>"
 git push origin main
 ```
 
-Remote repository: `https://github.com/Tusgof/Yuehua_Research_log`
+Remote repository: `https://github.com/Tusgof/Yuehua-Higanbana`
 
 ## 8. หลักสำคัญ
 

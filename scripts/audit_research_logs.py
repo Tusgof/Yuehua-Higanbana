@@ -13,7 +13,7 @@ DEFAULT_RESEARCH_LOG_ROOT = PROJECT_ROOT / "research_log"
 DEFAULT_EXPERIMENT_ROOT = PROJECT_ROOT / "reports"
 DEFAULT_JSON_OUTPUT = PROJECT_ROOT / "reports" / "research_log_audit.json"
 DEFAULT_REPORT_OUTPUT = PROJECT_ROOT / "reports" / "research_log_audit.md"
-EXPECTED_REMOTE = "https://github.com/Tusgof/Yuehua_Research_log"
+EXPECTED_REMOTE = "https://github.com/Tusgof/Yuehua-Higanbana.git"
 QUICK_READ_HEADINGS = ("### อ่านแบบเร็ว", "### เธญเนเธฒเธเนเธเธเน€เธฃเนเธง")
 LOG_FILENAME_RE = re.compile(r"^\d{3}-higanbana-[a-z0-9]+(?:-[a-z0-9]+)*\.md$")
 MOJIBAKE_MARKERS = ("เธ", "เน€", "เน", "เน", "โ€", "�")
@@ -122,10 +122,10 @@ def write_reports(result: dict[str, Any], json_output: Path = DEFAULT_JSON_OUTPU
             "## Git",
             "",
             f"- Is git repo: `{git_status['is_repo']}`",
-            f"- Clean worktree: `{git_status['clean']}`",
             f"- Remote matches expected: `{git_status['remote_matches_expected']}`",
-            f"- Local HEAD: `{git_status.get('local_head')}`",
-            f"- Remote HEAD: `{git_status.get('remote_head')}`",
+            f"- Nested research-log repo present: `{git_status['nested_repo_present']}`",
+            f"- Tracked log count: `{git_status['tracked_log_count']}`",
+            f"- Untracked logs: `{git_status['untracked_logs']}`",
         ]
     )
     report_output.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -205,37 +205,39 @@ def _research_log_sequence_status(research_log_root: Path) -> dict[str, Any]:
 
 
 def _git_status(root: Path, expected_remote: str, run_git: GitRunner) -> dict[str, Any]:
+    repo_root = root.parent
     try:
-        status_output = run_git(root, ["status", "--porcelain"])
-        remote_output = run_git(root, ["remote", "-v"])
-        local_head = run_git(root, ["rev-parse", "HEAD"]).strip()
-        remote_head_output = run_git(root, ["ls-remote", "origin", "HEAD"]).strip()
+        remote_output = run_git(repo_root, ["remote", "-v"])
+        tracked_output = run_git(repo_root, ["ls-files", "--", "research_log"])
     except (subprocess.CalledProcessError, FileNotFoundError) as exc:
         return {
             "is_repo": False,
-            "clean": False,
             "remote_matches_expected": False,
-            "local_head": None,
-            "remote_head": None,
+            "nested_repo_present": (root / ".git").exists(),
+            "tracked_log_count": 0,
+            "untracked_logs": [],
             "blockers": [f"research_log_git_unavailable:{type(exc).__name__}"],
         }
 
-    remote_head = remote_head_output.split()[0] if remote_head_output else None
-    clean = not status_output.strip()
+    log_paths = sorted(path for path in root.glob("*.md")) if root.exists() else []
+    tracked_paths = {line.strip().replace("\\", "/") for line in tracked_output.splitlines() if line.strip()}
+    untracked_logs = [
+        path.name for path in log_paths if f"research_log/{path.name}" not in tracked_paths
+    ]
+    nested_repo_present = (root / ".git").exists()
     remote_matches = expected_remote in remote_output
     blockers = []
-    if not clean:
-        blockers.append("research_log_worktree_not_clean")
+    if nested_repo_present:
+        blockers.append("research_log_nested_git_repo_present")
+    blockers.extend(f"research_log_not_tracked_by_main_repo:{name}" for name in untracked_logs)
     if not remote_matches:
         blockers.append("research_log_remote_mismatch")
-    if local_head != remote_head:
-        blockers.append("research_log_not_pushed")
     return {
         "is_repo": True,
-        "clean": clean,
         "remote_matches_expected": remote_matches,
-        "local_head": local_head,
-        "remote_head": remote_head,
+        "nested_repo_present": nested_repo_present,
+        "tracked_log_count": len([path for path in tracked_paths if path.endswith(".md")]),
+        "untracked_logs": untracked_logs,
         "blockers": blockers,
     }
 
@@ -253,7 +255,7 @@ def _relative(path: Path) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Audit completed experiment research logs and Yuehua Research Log push state.")
+    parser = argparse.ArgumentParser(description="Audit completed experiment research logs in the main Higanbana repository.")
     parser.add_argument("--research-log-root", type=Path, default=DEFAULT_RESEARCH_LOG_ROOT)
     parser.add_argument("--experiment-root", type=Path, default=DEFAULT_EXPERIMENT_ROOT)
     parser.add_argument("--expected-remote", default=EXPECTED_REMOTE)
