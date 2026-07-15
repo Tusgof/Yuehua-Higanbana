@@ -347,6 +347,29 @@ def _load_live_estimates_without_download(
                 "source_path": relative_path,
             }
         )
+    for path in sorted(root.glob("h_a2_orb_0936_live_cost_estimate*.json")):
+        relative_path = _relative(path)
+        if _normalized_relative(relative_path) in committed_source_reports:
+            continue
+        payload = _load_json(path)
+        if payload.get("mode") != "live_metadata_cost":
+            continue
+        cost = _cost_from_payload(payload)
+        if cost is None:
+            continue
+        item_id = "h_a2_orb_0936_fresh_oos"
+        if item_id in committed_ids:
+            continue
+        estimates.append(
+            {
+                "item_id": item_id,
+                "provider": "Databento",
+                "estimated_cost_usd": cost,
+                "mode": payload.get("mode"),
+                "scenario": payload.get("scenario"),
+                "source_path": relative_path,
+            }
+        )
     return sorted(estimates, key=lambda item: item["item_id"])
 
 

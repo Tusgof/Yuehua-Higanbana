@@ -1032,9 +1032,15 @@
       "used_usd": 120.494368
     },
     "estimated_only_risk": {
-      "estimated_only_total_usd": 17.376585,
-      "single_item_threshold_breach_count": 14,
+      "estimated_only_total_usd": 32.901176,
+      "single_item_threshold_breach_count": 15,
       "single_item_threshold_breaches": [
+        {
+          "estimated_cost_usd": 15.524591,
+          "item_id": "h_a2_orb_0936_fresh_oos",
+          "projected_known_estimated_cost_usd": 224.244627,
+          "source_path": "reports\\data_cost\\h_a2_orb_0936_live_cost_estimate.json"
+        },
         {
           "estimated_cost_usd": 10.226392,
           "item_id": "databento_cost_h_a2_2022_09_stress",
@@ -1226,6 +1232,14 @@
       "provider": "Databento",
       "scenario": null,
       "source_path": "reports\\data_cost\\databento_cost_insample_2023_12_intraday_exit_30m_sample.json"
+    },
+    {
+      "estimated_cost_usd": 15.524591,
+      "item_id": "h_a2_orb_0936_fresh_oos",
+      "mode": "live_metadata_cost",
+      "provider": "Databento",
+      "scenario": "h_a2_orb_0936_fresh_oos",
+      "source_path": "reports\\data_cost\\h_a2_orb_0936_live_cost_estimate.json"
     },
     {
       "estimated_cost_usd": 0.001556,

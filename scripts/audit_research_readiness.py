@@ -206,6 +206,9 @@ H_A2_ORB_0936_UNTOUCHED_INVENTORY = (
 H_A2_ORB_0936_COST_PLAN = (
     PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_cost_plan.json"
 )
+H_A2_ORB_0936_LIVE_COST = (
+    PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_live_cost_estimate.json"
+)
 GDELT_BULK_SOURCE_DECISION_NOTE = PROJECT_ROOT / "docs" / "GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md"
 GDELT_BULK_MANIFEST_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_bulk_raw_manifest.json"
 GDELT_GKG_ONE_FILE_PROBE_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_gkg_one_file_parser_probe.json"
@@ -773,9 +776,22 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
     h_a2_orb_0936_preregistration = _load_report_artifact(H_A2_ORB_0936_PREREGISTRATION)
     h_a2_orb_0936_untouched_inventory = _load_report_artifact(H_A2_ORB_0936_UNTOUCHED_INVENTORY)
     h_a2_orb_0936_cost_plan = _load_report_artifact(H_A2_ORB_0936_COST_PLAN)
+    h_a2_orb_0936_live_cost = _load_report_artifact(H_A2_ORB_0936_LIVE_COST)
     h_a2_proxy_robustness = _load_report_artifact(H_A2_PROXY_FIRST_ROBUSTNESS_SUMMARY)
     h_l1_macro_proxy = _load_report_artifact(H_L1_MACRO_EVENT_PROXY_BASELINE_SUMMARY)
     if (
+        h_a2_orb_0936_preregistration
+        and h_a2_orb_0936_live_cost
+        and h_a2_orb_0936_live_cost.get("status") == "blocked"
+    ):
+        decision = h_a2_orb_0936_live_cost.get("decision") or {}
+        actions.append(
+            "H-A2 09:36 ORB live metadata cost gate is blocked with no download: "
+            f"41/41 requests were priced at ${h_a2_orb_0936_live_cost.get('total_estimated_cost_usd')}, above the approved ${h_a2_orb_0936_live_cost.get('approved_purchase_ceiling_usd')} ceiling. "
+            f"Projected DATABENTO_API_01 cumulative usage is ${decision.get('projected_selected_key_usage_usd')} against its $50 cap, so the only blocker is the experiment-specific ceiling. "
+            "Do not download, silently reduce the 20-date cohort, or raise the ceiling without a new user decision. No target PnL was parsed. Do not approve E2, paper trading, operational validation, or real-money trading."
+        )
+    elif (
         h_a2_orb_0936_preregistration
         and h_a2_orb_0936_preregistration.get("status") == "preregistered_design_only"
         and h_a2_orb_0936_untouched_inventory

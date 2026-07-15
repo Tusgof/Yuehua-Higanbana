@@ -170,6 +170,18 @@
         "conclusion": "ยังสรุปไม่ได้",
         "notes": "Plan-only Section 5 artifact for 20 chronological normal-VIX control dates after 2026-04-24. Base projection is $12.361983 and the 15% ceiling is $14.216280. No approval, metadata call, or purchase is recorded."
       },
+      {
+        "path": "experiments/h_a2_orb_0936_paid_download_decision.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Records the user's approval of the exact 20-date, 41-request acquisition only after the live estimate passes the $14.216280 ceiling and cumulative DATABENTO_API_01 usage remains below $50. It forbids outcome parsing and experiment execution."
+      },
+      {
+        "path": "reports/data_cost/h_a2_orb_0936_live_cost_estimate.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Live metadata priced all 41 requests at $15.524591, which exceeds the approved $14.216280 ceiling by $1.308311. The gate blocked before download; target PnL was not parsed."
+      },
         {
           "path": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
           "evidence_tier": "E1",
@@ -500,6 +512,11 @@
         "date": "2026-07-15",
         "decision": "orb_0936_preregistered_no_local_untouched_data",
         "notes": "The replacement question is locked before new outcomes: the 09:35 interval closes at 09:36, decision occurs at 09:36, and the earliest eligible option quote is 09:37 after 60-second latency. Inventory found 0 untouched dates among 525 local dates, so no validation ran. A separate 20-date cost plan awaits user approval; no purchase, E2, paper trading, operational validation, or real-money work is authorized."
+      },
+      {
+        "date": "2026-07-15",
+        "decision": "orb_0936_live_cost_gate_blocked_above_approved_ceiling",
+        "notes": "User approved the exact 20-date cost plan, but the 41-request live estimate was $15.524591 versus the $14.216280 ceiling. No download occurred. A new user decision is required to raise the ceiling or separately revise the cohort; the project may not silently do either."
       }
       ]
     },

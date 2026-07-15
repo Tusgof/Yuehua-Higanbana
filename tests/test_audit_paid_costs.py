@@ -208,6 +208,36 @@ class AuditPaidCostsTests(unittest.TestCase):
             result["estimated_only_items"],
         )
 
+    def test_h_a2_orb_0936_blocked_live_estimate_is_estimated_only(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "h_a2_orb_0936_live_cost_estimate.json").write_text(
+                json.dumps(
+                    {
+                        "mode": "live_metadata_cost",
+                        "status": "blocked",
+                        "scenario": "h_a2_orb_0936_fresh_oos",
+                        "total_estimated_cost_usd": 15.524591,
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = self.auditor.audit_paid_costs(root, stop_threshold_usd=100.0, experiment_root=root / "experiments")
+
+        self.assertEqual(0.0, result["known_committed_estimated_cost_usd"])
+        self.assertEqual(
+            {
+                "estimated_cost_usd": 15.524591,
+                "item_id": "h_a2_orb_0936_fresh_oos",
+                "mode": "live_metadata_cost",
+                "provider": "Databento",
+                "scenario": "h_a2_orb_0936_fresh_oos",
+                "source_path": str(root / "h_a2_orb_0936_live_cost_estimate.json"),
+            },
+            result["estimated_only_items"][0],
+        )
+
     def test_h_a2_metadata_estimate_is_not_estimated_only_after_download_result_exists(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

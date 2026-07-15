@@ -149,6 +149,10 @@ def main() -> int:
             ["scripts/validate_h_a2_orb_0936_preregistration.py"],
         ),
         (
+            "validate_h_a2_orb_0936_paid_download_decision",
+            ["scripts/validate_h_a2_orb_0936_paid_download_decision.py"],
+        ),
+        (
             "run_h_a2_orb_0936_untouched_inventory",
             ["scripts/run_h_a2_orb_0936_untouched_inventory.py"],
         ),

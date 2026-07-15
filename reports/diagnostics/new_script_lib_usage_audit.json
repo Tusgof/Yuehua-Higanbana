@@ -30,12 +30,22 @@
     },
     {
       "imports_lib": true,
+      "script_path": "scripts\\run_h_a2_orb_0936_download.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
       "script_path": "scripts\\run_h_a2_targeted_geometry_cache_inventory.py",
       "status": "pass"
     },
     {
       "imports_lib": true,
       "script_path": "scripts\\validate_h_a2_orb_0936_preregistration.py",
+      "status": "pass"
+    },
+    {
+      "imports_lib": true,
+      "script_path": "scripts\\validate_h_a2_orb_0936_paid_download_decision.py",
       "status": "pass"
     },
     {
@@ -59,6 +69,6 @@
       "status": "pass"
     }
   ],
-  "script_count": 10,
+  "script_count": 12,
   "status": "pass"
 }
