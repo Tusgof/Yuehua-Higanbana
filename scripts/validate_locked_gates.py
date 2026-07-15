@@ -18,7 +18,7 @@ from lib.io import load_jsonl, relative_to_root
 
 
 DEFAULT_MANIFEST_PATH = PROJECT_ROOT / "experiments" / "locked_gates.jsonl"
-MINIMUM_LOCKED_GATE_ENTRIES = 3
+MINIMUM_LOCKED_GATE_ENTRIES = 4
 
 
 def _resolve(relative_path: str) -> Path:

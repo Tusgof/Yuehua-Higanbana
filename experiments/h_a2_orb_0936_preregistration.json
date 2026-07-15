@@ -1,0 +1,162 @@
+{
+  "schema_version": "h_a2_orb_0936_preregistration_v1",
+  "artifact_type": "preregistration",
+  "status": "preregistered_design_only",
+  "created_date": "2026-07-15",
+  "hypothesis_id": "H-A2",
+  "experiment_id": "h_a2_orb_0936_validation",
+  "evidence_tier": "E0",
+  "research_question": "ภายใต้ prior-close VIX <25 และไม่มีข่าวมหภาคสำคัญ กลยุทธ์ SPY 0DTE ORB ที่ยืนยันสัญญาณเมื่อแท่งเวลา 09:35 ปิด และเข้าออปชันตั้งแต่ 09:36 สามารถสร้างผลตอบแทนเฉลี่ยหลังต้นทุนเป็นบวกบนข้อมูล OOS ที่ไม่เคยเปิดดูได้หรือไม่",
+  "scope": "SPY 0DTE directional debit vertical spread เฉพาะวันที่ prior-close VIX <25 และไม่มี high-importance macro event ใช้ข้อมูลตามลำดับเวลาเท่านั้น และห้ามนำ 20 วันที่เปิดดูใน checkpoint ก่อนหน้ากลับมาเป็น fresh validation",
+  "hypothesis": "หาก macro-conditioned ORB มี edge ที่นำไปปฏิบัติได้ การยืนยัน breakout หลังแท่ง 09:35 สิ้นสุดและการเข้าแบบ marketable limit หลัง latency ที่ล็อกไว้ควรให้ mean implementable PnL และ Sharpe เป็นบวกโดยไม่พึ่งวันใหญ่เพียงวันเดียว",
+  "source_artifacts": [
+    "reports/experiments/h_a2_fresh_oos_timestamp_clean_checkpoint.json",
+    "reports/experiments/m5_transaction_cost_latency_sensitivity_summary.json",
+    "reports/data_cost/paid_cost_audit.json",
+    "experiments/hypothesis_registry.json"
+  ],
+  "wiki_citations": [
+    {"path": "concepts/lookahead-leakage.md", "sha256": "b08046e58a62e321e93e53ea008758e5be34fcd23847a11f0d8834a922f08063"},
+    {"path": "concepts/backtest-validation-protocol.md", "sha256": "c7f843310706d902120651e677429e66cbde9ce96ee526544de5419ee99aefa0"},
+    {"path": "concepts/spy-zero-dte-opening-range-breakout.md", "sha256": "8c4a10e92812a9f75477f785dfb2f2159923145a2845f16ace2b5d37affb512a"},
+    {"path": "concepts/implementable-option-pnl.md", "sha256": "a16b27240c798fba627786ee9cdc00d589f28656fff9e5a893ca97f810709e48"},
+    {"path": "concepts/minimum-track-record-length.md", "sha256": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81"},
+    {"path": "concepts/probabilistic-sharpe-ratio.md", "sha256": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5"},
+    {"path": "concepts/deflated-sharpe-ratio.md", "sha256": "90663b67e49dcec90bd641e801f9464e593ff8fe9091b2d70e9f4645381af556"}
+  ],
+  "chronological_policy": {
+    "development_outcomes_cutoff": "2026-04-24",
+    "validation_dates_must_be_after": "2026-04-24",
+    "random_split_allowed": false,
+    "rolling_or_expanding_split_only": true,
+    "oos_tuning_allowed": false,
+    "viewed_checkpoint_dates_allowed_as_fresh_oos": false,
+    "viewed_checkpoint_dates_role": "diagnostic fixtures only"
+  },
+  "signal_rule": {
+    "bar_timestamp_semantics": "interval_start",
+    "opening_range_bar_timestamps_et": ["09:30:00", "09:31:00", "09:32:00", "09:33:00", "09:34:00"],
+    "confirmation_bar_timestamp_et": "09:35:00",
+    "confirmation_interval_et": "09:35:00-09:36:00",
+    "signal_available_time_et": "09:36:00",
+    "order_decision_time_et": "09:36:00",
+    "call": "09:35 interval close > maximum high of the five opening-range bars",
+    "put": "09:35 interval close < minimum low of the five opening-range bars",
+    "no_trade": "09:35 interval close remains inside or on the opening range",
+    "numeric_breakout_threshold": null,
+    "post_signal_feature_allowed": false
+  },
+  "execution_rule": {
+    "entry_order_type": "marketable_debit_limit",
+    "entry_market_order_allowed": false,
+    "execution_latency_seconds": 60,
+    "earliest_entry_quote_time_et": "09:37:00",
+    "entry_quote_rule": "first complete two-leg quote snapshot at or after 09:37:00 ET",
+    "missing_or_incomplete_entry_quote": "skip trade",
+    "entry_limit_cap": "long ask minus short bid at the eligible snapshot",
+    "entry_mid_control": "long mid minus short mid",
+    "entry_implementable": "long ask minus short bid",
+    "forced_close_time_et": "15:45:00",
+    "forced_close_mid_control": "long mid minus short mid",
+    "forced_close_implementable": "long bid minus short ask",
+    "additional_slippage_beyond_displayed_bid_ask": 0.0,
+    "slippage_rationale": "Primary implementable PnL already crosses the full displayed spread; no hidden fill improvement is allowed.",
+    "fee_per_leg_usd": 0.64,
+    "fee_leg_count": 4,
+    "contract_multiplier": 100
+  },
+  "structure_rule": {
+    "strategy": "directional SPY 0DTE debit vertical spread",
+    "target_long_strike_gap_points": 1.48,
+    "target_width_points": 2.0,
+    "strike_mapping": "nearest_discrete_strike_rounding",
+    "interpolation_allowed": false,
+    "tie_breaker": "nearest target then tighter displayed spread then directional strike"
+  },
+  "regime_policy": {
+    "included_prior_vix": "prior_close_vix < 25",
+    "vix_buckets": {"low": "prior_close_vix < 15", "normal": "15 <= prior_close_vix < 25"},
+    "high_importance_macro_days_allowed": false,
+    "macro_label_available_by_entry": true,
+    "trend_label": {
+      "method": "prior trading-day SPY close versus trailing 20-session SMA through that prior day",
+      "uptrend": "prior_close >= prior_sma20",
+      "downtrend": "prior_close < prior_sma20",
+      "target_day_price_allowed": false
+    }
+  },
+  "timestamp_guardrail": {
+    "required_order": [
+      "signal_available_timestamp <= order_decision_timestamp",
+      "order_decision_timestamp <= entry_quote_timestamp"
+    ],
+    "interval_start_close_policy": "A one-minute bar close is available one minute after its timestamp.",
+    "failure_action": "Stop before strike selection or PnL calculation and mark the date invalid for inference."
+  },
+  "required_metrics": [
+    "candidate and closed trade counts by VIX, trend, and macro/control regime",
+    "mean and total implementable PnL",
+    "mid PnL and cost drag",
+    "Sharpe and Probabilistic Sharpe Ratio against null Sharpe 0 and 0.5",
+    "Minimum Track Record Length against null Sharpe 0 and 0.5",
+    "Deflated Sharpe Ratio using the recorded project trial history",
+    "Expected Shortfall 95% and 99%",
+    "worst-day loss",
+    "big-day dependency by removing the largest absolute PnL observation",
+    "under-sampled and underpowered labels"
+  ],
+  "sample_adequacy_policy": {
+    "exact_mintrl_known_before_valid_returns": false,
+    "reason": "Exact MinTRL requires the valid observed Sharpe, skewness, raw kurtosis, and autocorrelation of the timestamp-correct return series.",
+    "acceptance_requires_observations_at_least_mintrl": true,
+    "automatic_expansion_allowed": false,
+    "new_expansion_requires_separate_cost_decision": true
+  },
+  "multiple_testing_policy": {
+    "new_rule_trial_count": 1,
+    "known_inherited_m5_5_trial_count": 9,
+    "minimum_trials_recorded_for_dsr": 10,
+    "parameter_search_allowed": false,
+    "threshold_search_allowed": false,
+    "selecting_the_best_latency_allowed": false
+  },
+  "conclusion_policy": {
+    "support_requires": [
+      "valid timestamp ordering on every included trade",
+      "mean implementable PnL > 0",
+      "observed Sharpe > 0",
+      "actual observations >= MinTRL against null Sharpe 0",
+      "PSR against null Sharpe 0 >= 0.95",
+      "DSR is reported and not bypassed",
+      "the sign of total implementable PnL survives removal of the largest absolute PnL observation"
+    ],
+    "inconclusive_if": [
+      "actual observations < MinTRL",
+      "DSR cannot be computed from the recorded trial history",
+      "required regime coverage is absent",
+      "timestamp or quote coverage removes material candidate dates"
+    ],
+    "labels": ["ผ่าน", "ไม่ผ่าน", "ยังสรุปไม่ได้"]
+  },
+  "guardrails": {
+    "network_allowed_in_design_session": false,
+    "paid_data_allowed_in_design_session": false,
+    "experiment_run_allowed_in_design_session": false,
+    "target_outcome_parse_allowed_in_design_session": false,
+    "llm_call_allowed": false,
+    "broker_order_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "e2_claim_allowed": false,
+    "research_log_required_for_preregistration": false
+  },
+  "planned_outputs": {
+    "untouched_inventory_json": "reports/diagnostics/h_a2_orb_0936_untouched_inventory.json",
+    "untouched_inventory_md": "reports/diagnostics/h_a2_orb_0936_untouched_inventory.md",
+    "cost_plan_json_if_needed": "reports/data_cost/h_a2_orb_0936_cost_plan.json",
+    "cost_plan_md_if_needed": "reports/data_cost/h_a2_orb_0936_cost_plan.md",
+    "future_validation_summary": "reports/experiments/h_a2_orb_0936_validation.json",
+    "future_research_log": "research_log/002-higanbana-h-a2-orb-0936-validation.md"
+  }
+}

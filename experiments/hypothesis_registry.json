@@ -58,7 +58,7 @@
       "id": "H-A2",
       "family": "subsystem_a",
       "status": "active",
-      "statement": "The ORB edge, if it exists, is macro-conditioned: excluding high-importance scheduled macro days should improve implementable risk-adjusted OOS returns because non-macro breakout days reflect cleaner order-flow imbalance.",
+    "statement": "Under prior-close VIX <25 with high-importance macro days excluded, a SPY 0DTE ORB confirmed when the 09:35 interval closes and entered no earlier than a timestamp-valid post-signal quote may produce positive mean implementable OOS returns.",
       "economic_rationale": "On scheduled macro days, the opening range can be dominated by anticipatory positioning and post-release repricing rather than persistent intraday imbalance.",
       "testable_predictions": [
         "Macro-day trades remain weak or negative in fresh data.",
@@ -92,7 +92,7 @@
       "required_data": [
         "Pre-registered H-A2 re-analysis from existing M5.5 evidence.",
         "Completed Aug 2024 and Oct 2022 stress-silence diagnostics supporting the formal prior-close VIX < 25 scope restriction.",
-        "Fresh untouched 2025-2026 OOS dates in both in-scope VIX buckets for search decontamination.",
+      "Fresh untouched dates after 2026-04-24 for the locked 09:36 decision and earliest 09:37 quote rule.",
         "No additional high-VIX purchase for the current H-A2 rule unless a new hypothesis explicitly changes the scope."
       ],
     "mintrl_falsify": {
@@ -151,6 +151,24 @@
         "evidence_tier": "E1",
         "conclusion": "ยังสรุปไม่ได้",
         "notes": "Methodology-failure evidence: 20 clean-scope dates produced 6 retrospective ORB candidates, but the signal uses the close of the bar stamped 09:35 and is available around 09:36 while replay entry quotes are stamped 09:35. Mechanical PnL $249.64, PSR, and MinTRL calculations are retained for audit but invalid for inference. The exact 09:35 hypothesis remains unanswered."
+      },
+      {
+        "path": "experiments/h_a2_orb_0936_preregistration.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Locks the timestamp-correct replacement before new outcomes are viewed: 09:30-09:34 opening range, 09:35-09:36 confirmation interval, signal and decision at 09:36, 60-second latency, first eligible complete two-leg quote at 09:37, discrete strikes, implementable costs, chronological validation, and at least 10 DSR trials."
+      },
+      {
+        "path": "reports/diagnostics/h_a2_orb_0936_untouched_inventory.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Metadata-only inventory found 0 untouched dates among 525 local dates. It parsed no target PnL and made no network call or purchase; exact MinTRL remains unknown until valid timestamp-correct returns exist."
+      },
+      {
+        "path": "reports/data_cost/h_a2_orb_0936_cost_plan.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Plan-only Section 5 artifact for 20 chronological normal-VIX control dates after 2026-04-24. Base projection is $12.361983 and the 15% ceiling is $14.216280. No approval, metadata call, or purchase is recorded."
       },
         {
           "path": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
@@ -477,6 +495,11 @@
         "date": "2026-07-15",
         "decision": "fresh_oos_checkpoint_failed_timestamp_alignment",
         "notes": "The run found 6 retrospective candidates, but Databento OHLCV-1m timestamps the interval start: the 09:35 bar close is available around 09:36 while replay used 09:35 option quotes. Mechanical PnL and derived PSR/MinTRL are invalid for inference. H-A2 remains active but the exact 09:35 question is unanswered; stop expansion until a truly observable 09:35 rule or explicit 09:36 rule is preregistered on untouched data."
+      },
+      {
+        "date": "2026-07-15",
+        "decision": "orb_0936_preregistered_no_local_untouched_data",
+        "notes": "The replacement question is locked before new outcomes: the 09:35 interval closes at 09:36, decision occurs at 09:36, and the earliest eligible option quote is 09:37 after 60-second latency. Inventory found 0 untouched dates among 525 local dates, so no validation ran. A separate 20-date cost plan awaits user approval; no purchase, E2, paper trading, operational validation, or real-money work is authorized."
       }
       ]
     },

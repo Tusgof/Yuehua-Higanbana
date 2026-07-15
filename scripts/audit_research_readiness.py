@@ -197,6 +197,15 @@ H_A2_FRESH_OOS_2025_2026_COST_PLAN = (
 H_A2_FRESH_OOS_TIMESTAMP_CLEAN_CHECKPOINT = (
     PROJECT_ROOT / "reports" / "experiments" / "h_a2_fresh_oos_timestamp_clean_checkpoint.json"
 )
+H_A2_ORB_0936_PREREGISTRATION = (
+    PROJECT_ROOT / "experiments" / "h_a2_orb_0936_preregistration.json"
+)
+H_A2_ORB_0936_UNTOUCHED_INVENTORY = (
+    PROJECT_ROOT / "reports" / "diagnostics" / "h_a2_orb_0936_untouched_inventory.json"
+)
+H_A2_ORB_0936_COST_PLAN = (
+    PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_cost_plan.json"
+)
 GDELT_BULK_SOURCE_DECISION_NOTE = PROJECT_ROOT / "docs" / "GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md"
 GDELT_BULK_MANIFEST_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_bulk_raw_manifest.json"
 GDELT_GKG_ONE_FILE_PROBE_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_gkg_one_file_parser_probe.json"
@@ -761,9 +770,27 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
     h_a2_fresh_oos_timestamp_clean_checkpoint = _load_report_artifact(
         H_A2_FRESH_OOS_TIMESTAMP_CLEAN_CHECKPOINT
     )
+    h_a2_orb_0936_preregistration = _load_report_artifact(H_A2_ORB_0936_PREREGISTRATION)
+    h_a2_orb_0936_untouched_inventory = _load_report_artifact(H_A2_ORB_0936_UNTOUCHED_INVENTORY)
+    h_a2_orb_0936_cost_plan = _load_report_artifact(H_A2_ORB_0936_COST_PLAN)
     h_a2_proxy_robustness = _load_report_artifact(H_A2_PROXY_FIRST_ROBUSTNESS_SUMMARY)
     h_l1_macro_proxy = _load_report_artifact(H_L1_MACRO_EVENT_PROXY_BASELINE_SUMMARY)
     if (
+        h_a2_orb_0936_preregistration
+        and h_a2_orb_0936_preregistration.get("status") == "preregistered_design_only"
+        and h_a2_orb_0936_untouched_inventory
+        and h_a2_orb_0936_cost_plan
+    ):
+        inventory = h_a2_orb_0936_untouched_inventory
+        cost = h_a2_orb_0936_cost_plan.get("cost_basis") or {}
+        actions.append(
+            "H-A2 09:36 ORB is pre-registered as E0 design evidence with interval-start timestamp discipline: "
+            "the 09:35 confirmation bar closes at 09:36, the decision is at 09:36, and the first eligible complete two-leg option quote is at 09:37 after 60 seconds of locked latency. "
+            f"The untouched inventory found {inventory.get('untouched_local_date_count')} fresh local dates because all {inventory.get('local_date_count')} local dates are contaminated by prior development or outcome review. "
+            f"The Section 5 plan therefore proposes {h_a2_orb_0936_cost_plan.get('target_date_count')} chronological control dates with a ${cost.get('user_approval_ceiling_usd')} ceiling and remains awaiting user approval. "
+            "No target PnL was parsed, no experiment or purchase occurred, and exact MinTRL remains unknown until valid timestamp-correct returns exist. Do not approve E2, paper trading, operational validation, or real-money trading."
+        )
+    elif (
         h_a2_fresh_oos_timestamp_clean_checkpoint
         and str(h_a2_fresh_oos_timestamp_clean_checkpoint.get("status", "")).startswith("complete")
     ):

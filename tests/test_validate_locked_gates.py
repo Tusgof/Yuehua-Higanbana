@@ -14,7 +14,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 # Raise this floor only when a reviewed gate is appended; never lower it to permit deletion.
-LOCKED_GATE_MANIFEST_FLOOR = 3
+LOCKED_GATE_MANIFEST_FLOOR = 4
 
 
 def _sha256(text: str) -> str:
@@ -42,7 +42,7 @@ class ValidateLockedGatesTests(unittest.TestCase):
                 result = validate_locked_gates(manifest, minimum_entries=LOCKED_GATE_MANIFEST_FLOOR)
 
         self.assertEqual("blocked", result["status"])
-        self.assertIn("locked_gate_manifest_below_minimum:1<3", result["blockers"])
+        self.assertIn("locked_gate_manifest_below_minimum:1<4", result["blockers"])
 
     def test_rejects_hash_mismatch(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

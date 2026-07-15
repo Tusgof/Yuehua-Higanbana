@@ -1,0 +1,267 @@
+{
+  "artifact_type": "data_acquisition_cost_plan",
+  "authorization": {
+    "download_performed": false,
+    "live_metadata_call_performed": false,
+    "next_action": "User reviews this plan. A separate approved session must refresh live metadata cost and stop if total exceeds the ceiling.",
+    "purchase_allowed_by_this_artifact": false,
+    "user_approval_recorded": false
+  },
+  "budget_guard": {
+    "account_provenance": "primary_existing_databento_account",
+    "authorization_limit_usd": 50.0,
+    "known_committed_usage_usd": 12.361983,
+    "projected_usage_at_ceiling_usd": 26.578263,
+    "selected_key_env": "DATABENTO_API_01",
+    "status": "pass_projection_only"
+  },
+  "cost_basis": {
+    "base_projected_cost_usd": 12.361983,
+    "contingency_rate": 0.15,
+    "daily_history_cost_status": "must_be_included_in_live_metadata_refresh_and_fit_inside_ceiling",
+    "method": "latest completed 20-date H-A2 actual estimate basis plus 15 percent contingency",
+    "source": "reports/data_cost/databento_download_result_h_a2_fresh_oos_2025_2026.json",
+    "source_date_count": 20,
+    "source_estimated_cost_usd": 12.361983,
+    "user_approval_ceiling_usd": 14.21628
+  },
+  "decision_tree": {
+    "q0_named_hypothesis_gap": "pass",
+    "q1_cached_data_can_fill_gap": "no_zero_untouched_local_dates",
+    "q2_initial_information_cohort": "20 chronological dates after the last viewed outcome date",
+    "q3_acceptance": "not_approved_exact_MinTRL_and_candidate_density_unknown",
+    "result": "present_cost_plan_for_user_approval_before_live_metadata_or_purchase"
+  },
+  "generated_date": "2026-07-15",
+  "guardrails": {
+    "e2_claim_allowed": false,
+    "experiment_run": false,
+    "network_calls": 0,
+    "paid_cost_usd": 0.0,
+    "paper_trading_allowed": false,
+    "target_outcomes_parsed": false
+  },
+  "hypothesis_id": "H-A2",
+  "interpreter": {
+    "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.14.3"
+  },
+  "mode": "plan_only_no_network_no_purchase",
+  "named_gap": "No local untouched dates remain for timestamp-correct 09:36 ORB validation.",
+  "required_components": [
+    {
+      "dataset": "OPRA.PILLAR",
+      "schema": "cbbo-1m",
+      "symbol": "SPY.OPT",
+      "window": "09:30-15:50 ET per target date"
+    },
+    {
+      "dataset": "EQUS.MINI",
+      "schema": "ohlcv-1m",
+      "symbol": "SPY",
+      "window": "regular session per target date"
+    },
+    {
+      "dataset": "EQUS.MINI",
+      "schema": "ohlcv-1d",
+      "symbol": "SPY",
+      "window": "2026-03-01 through final target date for prior-only SMA20 trend labels"
+    }
+  ],
+  "sample_adequacy": {
+    "cohort_role": "initial fixed-rule information cohort; not automatically E2 or sufficient",
+    "exact_mintrl_status": "unknown_until_valid_returns_exist",
+    "expansion_rule": "No automatic expansion. Recompute MinTRL from valid returns and require a separate decision-tree cost artifact before more data.",
+    "idealized_planning_scenarios": [
+      {
+        "idealized_mintrl": 46,
+        "null_sharpe": 0.0,
+        "observed_sharpe": 0.25
+      },
+      {
+        "idealized_mintrl": 14,
+        "null_sharpe": 0.0,
+        "observed_sharpe": 0.5
+      },
+      {
+        "idealized_mintrl": 8,
+        "null_sharpe": 0.0,
+        "observed_sharpe": 0.75
+      },
+      {
+        "idealized_mintrl": 6,
+        "null_sharpe": 0.0,
+        "observed_sharpe": 1.0
+      },
+      {
+        "idealized_mintrl": 57,
+        "null_sharpe": 0.5,
+        "observed_sharpe": 0.75
+      },
+      {
+        "idealized_mintrl": 18,
+        "null_sharpe": 0.5,
+        "observed_sharpe": 1.0
+      }
+    ]
+  },
+  "schema_version": "h_a2_orb_0936_cost_plan_v1",
+  "status": "awaiting_user_approval",
+  "target_date_count": 20,
+  "target_dates": [
+    {
+      "date": "2026-04-27",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 18.71,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-04-28",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 18.02,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-01",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 16.89,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-04",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 16.99,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-06",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.38,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-07",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.39,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-11",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.19,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-13",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.99,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-14",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.87,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-15",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.26,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-18",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 18.43,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-19",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.82,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-21",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.44,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-22",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 16.76,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-26",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 16.7,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-27",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 17.01,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-05-29",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 15.74,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-06-01",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 15.32,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-06-03",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 15.77,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    },
+    {
+      "date": "2026-06-04",
+      "macro_regime": "control_no_high_importance_event",
+      "prior_close_vix": 16.06,
+      "trend_regime": "pending_prior_only_spy_daily_history",
+      "vix_bucket": "normal"
+    }
+  ],
+  "target_regime_counts": {
+    "macro": {
+      "control": 20,
+      "high_importance": 0
+    },
+    "trend": {
+      "pending_prior_only_spy_daily_history": 20
+    },
+    "vix": {
+      "low": 0,
+      "normal": 20
+    }
+  }
+}

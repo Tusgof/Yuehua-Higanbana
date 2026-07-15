@@ -144,6 +144,14 @@ def main() -> int:
         ("audit_paid_costs", ["scripts/audit_paid_costs.py"]),
         ("audit_strategy_data_readiness", ["scripts/audit_strategy_data_readiness.py"]),
         ("validate_hypothesis_registry", ["scripts/validate_hypothesis_registry.py"]),
+        (
+            "validate_h_a2_orb_0936_preregistration",
+            ["scripts/validate_h_a2_orb_0936_preregistration.py"],
+        ),
+        (
+            "run_h_a2_orb_0936_untouched_inventory",
+            ["scripts/run_h_a2_orb_0936_untouched_inventory.py"],
+        ),
         ("validate_evidence_tiers", ["scripts/validate_evidence_tiers.py"]),
         (
             "validate_dd_remediation_tracker",
