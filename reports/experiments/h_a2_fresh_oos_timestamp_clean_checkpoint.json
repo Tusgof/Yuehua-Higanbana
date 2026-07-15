@@ -1,0 +1,1725 @@
+{
+  "additional_paid_data_used": false,
+  "aggregate": {
+    "bar_coverage_pass_count": 20,
+    "big_day_dependency": {
+      "mean_sign_survives": true,
+      "removed_largest_absolute_pnl": 146.44,
+      "status": "measured",
+      "trimmed_count": 5,
+      "trimmed_mean_implementable_pnl": 20.64
+    },
+    "blocked_candidate_count": 0,
+    "candidate_count": 6,
+    "candidate_count_by_vix_bucket": {
+      "low_vix_2025": 1,
+      "normal_vix_2026": 5
+    },
+    "checkpoint_decision": {
+      "next_action": "Stop expansion. Treat this as a 09:36 proxy only; pre-register an actually observable 09:35 rule or an explicit 09:36 rule on data whose outcomes have not been viewed.",
+      "stop_expansion": true,
+      "stop_reasons": [
+        "exact_0935_timestamp_semantics_not_satisfied"
+      ]
+    },
+    "clean_scope_date_count": 20,
+    "completed_trade_count": 6,
+    "cost_per_candidate_usd": 2.060331,
+    "mintrl_cost_projection": {
+      "null_sharpe_0_mintrl": 12,
+      "projected_cost_to_mintrl_usd": 24.723966,
+      "selected_key_authorization_headroom_usd": 37.638017
+    },
+    "pnl": {
+      "cost_drag_total": 43.86,
+      "invalid_reason": "Entry option quotes are timestamped 09:35, before the 09:35 underlying bar close makes the signal available around 09:36.",
+      "losing_trade_count": 2,
+      "mean_implementable_pnl": 41.606667,
+      "total_implementable_pnl": 249.64,
+      "total_mid_pnl": 293.5,
+      "valid_for_inference": false,
+      "winning_trade_count": 4
+    },
+    "provider_warning_sensitivity": {
+      "mean_all": 41.606667,
+      "mean_excluding_warning_dates": 41.606667,
+      "non_warning_candidate_count": 6,
+      "pnl_sign_depends_on_warning_dates": false,
+      "warning_candidate_count": 0
+    },
+    "purchase_cost_usd": 12.361983,
+    "statistics": {
+      "first_order_autocorrelation": 0.049733273166460215,
+      "invalid_reason": "Statistics are mechanically computed from a return series with entry-before-signal timestamp mismatch.",
+      "null_0": {
+        "mintrl": 12,
+        "null_sharpe": 0.0,
+        "psr": 0.8670741996726107
+      },
+      "null_0_5": {
+        "mintrl": 5081,
+        "null_sharpe": 0.5,
+        "psr": 0.5203626622202012
+      },
+      "observed_sharpe": 0.5240503336807575,
+      "raw_kurtosis": 1.3511949332609994,
+      "sample_count": 6,
+      "skewness": 0.07840464847962161,
+      "under_sampled": true,
+      "underpowered": true,
+      "valid_for_inference": false
+    },
+    "target_date_count": 20
+  },
+  "conclusion": "\u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49",
+  "conclusion_reason": "\u0e01\u0e32\u0e23\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e23\u0e32\u0e04\u0e32\u0e1b\u0e34\u0e14\u0e02\u0e2d\u0e07\u0e41\u0e17\u0e48\u0e07\u0e17\u0e35\u0e48\u0e1b\u0e23\u0e30\u0e17\u0e31\u0e1a\u0e40\u0e27\u0e25\u0e32 09:35 \u0e0b\u0e36\u0e48\u0e07\u0e23\u0e39\u0e49\u0e44\u0e14\u0e49\u0e1b\u0e23\u0e30\u0e21\u0e32\u0e13 09:36 \u0e41\u0e15\u0e48\u0e43\u0e0a\u0e49\u0e23\u0e32\u0e04\u0e32\u0e2d\u0e2d\u0e1b\u0e0a\u0e31\u0e19\u0e40\u0e27\u0e25\u0e32 09:35 \u0e40\u0e1b\u0e47\u0e19\u0e23\u0e32\u0e04\u0e32\u0e40\u0e02\u0e49\u0e32 \u0e08\u0e36\u0e07\u0e40\u0e01\u0e34\u0e14 entry-before-signal mismatch \u0e41\u0e25\u0e30 PnL \u0e43\u0e0a\u0e49\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07\u0e2a\u0e21\u0e21\u0e15\u0e34\u0e10\u0e32\u0e19\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49",
+  "date_results": [
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-13T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-13T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-08-13",
+      "provider_quality_warning": true,
+      "quote_coverage": {
+        "invalid_quote_count": 203,
+        "max_timestamp_et": "2025-08-13T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-13T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 16272,
+        "raw_row_count": 3213012,
+        "snapshot_row_count": 16768,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 293,
+        "valid_count_by_time": {
+          "09:35:00": 155,
+          "15:45:00": 138
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.73,
+        "prior_vix_date": "2025-08-12"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 645.07,
+        "decision_timestamp_et": "2025-08-13T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 645.305,
+        "opening_low": 644.5,
+        "signal_available_timestamp_et": "2025-08-13T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-14T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-14T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": true,
+      "date": "2025-08-14",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 190,
+        "max_timestamp_et": "2025-08-14T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-14T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 16710,
+        "raw_row_count": 3233239,
+        "snapshot_row_count": 17205,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 305,
+        "valid_count_by_time": {
+          "09:35:00": 164,
+          "15:45:00": 141
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.49,
+        "prior_vix_date": "2025-08-13"
+      },
+      "replay": {
+        "legs": [
+          {
+            "entry": {
+              "ask": 0.46,
+              "ask_size": 416,
+              "bid": 0.45,
+              "bid_size": 334,
+              "expiration_date": "2025-08-14",
+              "mid": 0.455,
+              "quote_timestamp_et": "2025-08-14T09:35:00-04:00",
+              "right": "call",
+              "strike": 645.0,
+              "symbol": "SPY   250814C00645000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2025-08-14",
+            "forced_close": {
+              "ask": 0.45,
+              "ask_size": 181,
+              "bid": 0.44,
+              "bid_size": 218,
+              "expiration_date": "2025-08-14",
+              "mid": 0.445,
+              "quote_timestamp_et": "2025-08-14T15:45:00-04:00",
+              "right": "call",
+              "strike": 645.0,
+              "symbol": "SPY   250814C00645000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "call",
+            "side": "buy",
+            "strike": 645.0,
+            "underlying": "SPY"
+          },
+          {
+            "entry": {
+              "ask": 0.1,
+              "ask_size": 1404,
+              "bid": 0.09,
+              "bid_size": 4283,
+              "expiration_date": "2025-08-14",
+              "mid": 0.095,
+              "quote_timestamp_et": "2025-08-14T09:35:00-04:00",
+              "right": "call",
+              "strike": 647.0,
+              "symbol": "SPY   250814C00647000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2025-08-14",
+            "forced_close": {
+              "ask": 0.02,
+              "ask_size": 3780,
+              "bid": 0.01,
+              "bid_size": 15226,
+              "expiration_date": "2025-08-14",
+              "mid": 0.015,
+              "quote_timestamp_et": "2025-08-14T15:45:00-04:00",
+              "right": "call",
+              "strike": 647.0,
+              "symbol": "SPY   250814C00647000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "call",
+            "side": "sell",
+            "strike": 647.0,
+            "underlying": "SPY"
+          }
+        ],
+        "mapping": {
+          "desired_long_strike": 644.83,
+          "direction": "call",
+          "interpolation_used": false,
+          "long_moneyness": 1.002565,
+          "long_strike": 645.0,
+          "mapping_method": "nearest_discrete_strike_rounding",
+          "realized_long_gap": 1.65,
+          "realized_width": 2.0,
+          "short_strike": 647.0,
+          "spread_entry_implementable_debit": 0.37,
+          "spread_entry_mid_debit": 0.36,
+          "target_gap": 1.48,
+          "target_width": 2.0,
+          "tie_breaker": "nearest_target_then_lower_spread_then_directional_strike",
+          "underlying_price": 643.35
+        },
+        "pnl": {
+          "cost_drag_vs_mid": 4.56,
+          "entry_implementable_debit": 0.37,
+          "entry_mid_debit": 0.36,
+          "fee_leg_count": 4,
+          "fee_per_leg_usd": 0.64,
+          "forced_close_implementable_credit": 0.42,
+          "forced_close_mid_value": 0.43,
+          "gross_implementable_pnl_before_fees": 5.0,
+          "implementable_pnl": 2.44,
+          "mid_pnl": 7.0,
+          "total_fees": 2.56
+        }
+      },
+      "replay_status": "complete",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 643.35,
+        "decision_timestamp_et": "2025-08-14T09:35:00-04:00",
+        "direction": "call",
+        "opening_high": 643.03,
+        "opening_low": 642.355,
+        "signal_available_timestamp_et": "2025-08-14T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-15T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-15T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-08-15",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 534,
+        "max_timestamp_et": "2025-08-15T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-15T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 16640,
+        "raw_row_count": 3329662,
+        "snapshot_row_count": 17859,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 685,
+        "valid_count_by_time": {
+          "09:35:00": 352,
+          "15:45:00": 333
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.83,
+        "prior_vix_date": "2025-08-14"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 645.31,
+        "decision_timestamp_et": "2025-08-15T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 646.06,
+        "opening_low": 645.19,
+        "signal_available_timestamp_et": "2025-08-15T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-19T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-19T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-08-19",
+      "provider_quality_warning": true,
+      "quote_coverage": {
+        "invalid_quote_count": 189,
+        "max_timestamp_et": "2025-08-19T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-19T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 15882,
+        "raw_row_count": 3094090,
+        "snapshot_row_count": 16346,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 275,
+        "valid_count_by_time": {
+          "09:35:00": 145,
+          "15:45:00": 130
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.99,
+        "prior_vix_date": "2025-08-18"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 642.16,
+        "decision_timestamp_et": "2025-08-19T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 643.24,
+        "opening_low": 642.0,
+        "signal_available_timestamp_et": "2025-08-19T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-25T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-25T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-08-25",
+      "provider_quality_warning": true,
+      "quote_coverage": {
+        "invalid_quote_count": 232,
+        "max_timestamp_et": "2025-08-25T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-25T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 16437,
+        "raw_row_count": 3125067,
+        "snapshot_row_count": 16981,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 312,
+        "valid_count_by_time": {
+          "09:35:00": 166,
+          "15:45:00": 146
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.22,
+        "prior_vix_date": "2025-08-22"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 643.99,
+        "decision_timestamp_et": "2025-08-25T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 644.27,
+        "opening_low": 643.41,
+        "signal_available_timestamp_et": "2025-08-25T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-26T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-26T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-08-26",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 228,
+        "max_timestamp_et": "2025-08-26T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-26T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 16793,
+        "raw_row_count": 3100712,
+        "snapshot_row_count": 17331,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 310,
+        "valid_count_by_time": {
+          "09:35:00": 163,
+          "15:45:00": 147
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.79,
+        "prior_vix_date": "2025-08-25"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 642.56,
+        "decision_timestamp_et": "2025-08-26T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 642.79,
+        "opening_low": 641.98,
+        "signal_available_timestamp_et": "2025-08-26T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-27T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-27T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-08-27",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 215,
+        "max_timestamp_et": "2025-08-27T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-27T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 16245,
+        "raw_row_count": 3094857,
+        "snapshot_row_count": 16809,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 349,
+        "valid_count_by_time": {
+          "09:35:00": 182,
+          "15:45:00": 167
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.62,
+        "prior_vix_date": "2025-08-26"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 644.94,
+        "decision_timestamp_et": "2025-08-27T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 645.13,
+        "opening_low": 644.46,
+        "signal_available_timestamp_et": "2025-08-27T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-08-28T15:59:00-04:00",
+        "min_timestamp_et": "2025-08-28T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-08-28",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 241,
+        "max_timestamp_et": "2025-08-28T15:49:00-04:00",
+        "min_timestamp_et": "2025-08-28T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 16025,
+        "raw_row_count": 3070191,
+        "snapshot_row_count": 16592,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 326,
+        "valid_count_by_time": {
+          "09:35:00": 170,
+          "15:45:00": 156
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.85,
+        "prior_vix_date": "2025-08-27"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 647.29,
+        "decision_timestamp_et": "2025-08-28T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 648.09,
+        "opening_low": 646.875,
+        "signal_available_timestamp_et": "2025-08-28T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-09-12T15:59:00-04:00",
+        "min_timestamp_et": "2025-09-12T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-09-12",
+      "provider_quality_warning": true,
+      "quote_coverage": {
+        "invalid_quote_count": 192,
+        "max_timestamp_et": "2025-09-12T15:49:00-04:00",
+        "min_timestamp_et": "2025-09-12T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 19369,
+        "raw_row_count": 3806790,
+        "snapshot_row_count": 19952,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 391,
+        "valid_count_by_time": {
+          "09:35:00": 207,
+          "15:45:00": 184
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.71,
+        "prior_vix_date": "2025-09-11"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 657.57,
+        "decision_timestamp_et": "2025-09-12T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 657.76,
+        "opening_low": 657.445,
+        "signal_available_timestamp_et": "2025-09-12T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2025-09-15T15:59:00-04:00",
+        "min_timestamp_et": "2025-09-15T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2025-09-15",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 269,
+        "max_timestamp_et": "2025-09-15T15:49:00-04:00",
+        "min_timestamp_et": "2025-09-15T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 19691,
+        "raw_row_count": 3732361,
+        "snapshot_row_count": 20436,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 476,
+        "valid_count_by_time": {
+          "09:35:00": 250,
+          "15:45:00": 226
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 14.76,
+        "prior_vix_date": "2025-09-12"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 659.91,
+        "decision_timestamp_et": "2025-09-15T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 660.075,
+        "opening_low": 659.475,
+        "signal_available_timestamp_et": "2025-09-15T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "low_vix_2025"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-13T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-13T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2026-04-13",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 292,
+        "max_timestamp_et": "2026-04-13T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-13T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 25443,
+        "raw_row_count": 4921532,
+        "snapshot_row_count": 26181,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 446,
+        "valid_count_by_time": {
+          "09:35:00": 237,
+          "15:45:00": 209
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 19.23,
+        "prior_vix_date": "2026-04-10"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 677.14,
+        "decision_timestamp_et": "2026-04-13T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 677.86,
+        "opening_low": 677.0,
+        "signal_available_timestamp_et": "2026-04-13T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-14T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-14T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": true,
+      "date": "2026-04-14",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 171,
+        "max_timestamp_et": "2026-04-14T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-14T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 25971,
+        "raw_row_count": 4960744,
+        "snapshot_row_count": 26574,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 432,
+        "valid_count_by_time": {
+          "09:35:00": 224,
+          "15:45:00": 208
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 19.12,
+        "prior_vix_date": "2026-04-13"
+      },
+      "replay": {
+        "legs": [
+          {
+            "entry": {
+              "ask": 0.59,
+              "ask_size": 425,
+              "bid": 0.58,
+              "bid_size": 191,
+              "expiration_date": "2026-04-14",
+              "mid": 0.585,
+              "quote_timestamp_et": "2026-04-14T09:35:00-04:00",
+              "right": "call",
+              "strike": 690.0,
+              "symbol": "SPY   260414C00690000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-14",
+            "forced_close": {
+              "ask": 4.11,
+              "ask_size": 48,
+              "bid": 4.05,
+              "bid_size": 1,
+              "expiration_date": "2026-04-14",
+              "mid": 4.08,
+              "quote_timestamp_et": "2026-04-14T15:45:00-04:00",
+              "right": "call",
+              "strike": 690.0,
+              "symbol": "SPY   260414C00690000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "call",
+            "side": "buy",
+            "strike": 690.0,
+            "underlying": "SPY"
+          },
+          {
+            "entry": {
+              "ask": 0.21,
+              "ask_size": 1577,
+              "bid": 0.2,
+              "bid_size": 426,
+              "expiration_date": "2026-04-14",
+              "mid": 0.205,
+              "quote_timestamp_et": "2026-04-14T09:35:00-04:00",
+              "right": "call",
+              "strike": 692.0,
+              "symbol": "SPY   260414C00692000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-14",
+            "forced_close": {
+              "ask": 2.17,
+              "ask_size": 52,
+              "bid": 2.05,
+              "bid_size": 12,
+              "expiration_date": "2026-04-14",
+              "mid": 2.11,
+              "quote_timestamp_et": "2026-04-14T15:45:00-04:00",
+              "right": "call",
+              "strike": 692.0,
+              "symbol": "SPY   260414C00692000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "call",
+            "side": "sell",
+            "strike": 692.0,
+            "underlying": "SPY"
+          }
+        ],
+        "mapping": {
+          "desired_long_strike": 690.36,
+          "direction": "call",
+          "interpolation_used": false,
+          "long_moneyness": 1.001626,
+          "long_strike": 690.0,
+          "mapping_method": "nearest_discrete_strike_rounding",
+          "realized_long_gap": 1.12,
+          "realized_width": 2.0,
+          "short_strike": 692.0,
+          "spread_entry_implementable_debit": 0.39,
+          "spread_entry_mid_debit": 0.38,
+          "target_gap": 1.48,
+          "target_width": 2.0,
+          "tie_breaker": "nearest_target_then_lower_spread_then_directional_strike",
+          "underlying_price": 688.88
+        },
+        "pnl": {
+          "cost_drag_vs_mid": 12.56,
+          "entry_implementable_debit": 0.39,
+          "entry_mid_debit": 0.38,
+          "fee_leg_count": 4,
+          "fee_per_leg_usd": 0.64,
+          "forced_close_implementable_credit": 1.88,
+          "forced_close_mid_value": 1.97,
+          "gross_implementable_pnl_before_fees": 149.0,
+          "implementable_pnl": 146.44,
+          "mid_pnl": 159.0,
+          "total_fees": 2.56
+        }
+      },
+      "replay_status": "complete",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 688.88,
+        "decision_timestamp_et": "2026-04-14T09:35:00-04:00",
+        "direction": "call",
+        "opening_high": 688.62,
+        "opening_low": 687.69,
+        "signal_available_timestamp_et": "2026-04-14T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-15T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-15T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2026-04-15",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 247,
+        "max_timestamp_et": "2026-04-15T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-15T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 25133,
+        "raw_row_count": 4933109,
+        "snapshot_row_count": 25835,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 455,
+        "valid_count_by_time": {
+          "09:35:00": 239,
+          "15:45:00": 216
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 18.36,
+        "prior_vix_date": "2026-04-14"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 695.645,
+        "decision_timestamp_et": "2026-04-15T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 695.83,
+        "opening_low": 695.11,
+        "signal_available_timestamp_et": "2026-04-15T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-16T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-16T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2026-04-16",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 167,
+        "max_timestamp_et": "2026-04-16T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-16T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 22733,
+        "raw_row_count": 4890277,
+        "snapshot_row_count": 23309,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 409,
+        "valid_count_by_time": {
+          "09:35:00": 235,
+          "15:45:00": 174
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 18.17,
+        "prior_vix_date": "2026-04-15"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 700.96,
+        "decision_timestamp_et": "2026-04-16T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 701.27,
+        "opening_low": 700.55,
+        "signal_available_timestamp_et": "2026-04-16T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-17T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-17T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": true,
+      "date": "2026-04-17",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 421,
+        "max_timestamp_et": "2026-04-17T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-17T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 24991,
+        "raw_row_count": 4910325,
+        "snapshot_row_count": 26046,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 634,
+        "valid_count_by_time": {
+          "09:35:00": 329,
+          "15:45:00": 305
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 17.94,
+        "prior_vix_date": "2026-04-16"
+      },
+      "replay": {
+        "legs": [
+          {
+            "entry": {
+              "ask": 0.75,
+              "ask_size": 136,
+              "bid": 0.74,
+              "bid_size": 154,
+              "expiration_date": "2026-04-17",
+              "mid": 0.745,
+              "quote_timestamp_et": "2026-04-17T09:35:00-04:00",
+              "right": "call",
+              "strike": 709.0,
+              "symbol": "SPY   260417C00709000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-17",
+            "forced_close": {
+              "ask": 1.36,
+              "ask_size": 16,
+              "bid": 1.33,
+              "bid_size": 38,
+              "expiration_date": "2026-04-17",
+              "mid": 1.345,
+              "quote_timestamp_et": "2026-04-17T15:45:00-04:00",
+              "right": "call",
+              "strike": 709.0,
+              "symbol": "SPY   260417C00709000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "call",
+            "side": "buy",
+            "strike": 709.0,
+            "underlying": "SPY"
+          },
+          {
+            "entry": {
+              "ask": 0.34,
+              "ask_size": 415,
+              "bid": 0.33,
+              "bid_size": 113,
+              "expiration_date": "2026-04-17",
+              "mid": 0.335,
+              "quote_timestamp_et": "2026-04-17T09:35:00-04:00",
+              "right": "call",
+              "strike": 711.0,
+              "symbol": "SPY   260417C00711000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-17",
+            "forced_close": {
+              "ask": 0.16,
+              "ask_size": 334,
+              "bid": 0.15,
+              "bid_size": 531,
+              "expiration_date": "2026-04-17",
+              "mid": 0.155,
+              "quote_timestamp_et": "2026-04-17T15:45:00-04:00",
+              "right": "call",
+              "strike": 711.0,
+              "symbol": "SPY   260417C00711000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "call",
+            "side": "sell",
+            "strike": 711.0,
+            "underlying": "SPY"
+          }
+        ],
+        "mapping": {
+          "desired_long_strike": 708.73,
+          "direction": "call",
+          "interpolation_used": false,
+          "long_moneyness": 1.002474,
+          "long_strike": 709.0,
+          "mapping_method": "nearest_discrete_strike_rounding",
+          "realized_long_gap": 1.75,
+          "realized_width": 2.0,
+          "short_strike": 711.0,
+          "spread_entry_implementable_debit": 0.42,
+          "spread_entry_mid_debit": 0.41,
+          "target_gap": 1.48,
+          "target_width": 2.0,
+          "tie_breaker": "nearest_target_then_lower_spread_then_directional_strike",
+          "underlying_price": 707.25
+        },
+        "pnl": {
+          "cost_drag_vs_mid": 5.56,
+          "entry_implementable_debit": 0.42,
+          "entry_mid_debit": 0.41,
+          "fee_leg_count": 4,
+          "fee_per_leg_usd": 0.64,
+          "forced_close_implementable_credit": 1.17,
+          "forced_close_mid_value": 1.19,
+          "gross_implementable_pnl_before_fees": 75.0,
+          "implementable_pnl": 72.44,
+          "mid_pnl": 78.0,
+          "total_fees": 2.56
+        }
+      },
+      "replay_status": "complete",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 707.25,
+        "decision_timestamp_et": "2026-04-17T09:35:00-04:00",
+        "direction": "call",
+        "opening_high": 707.13,
+        "opening_low": 705.98,
+        "signal_available_timestamp_et": "2026-04-17T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-20T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-20T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2026-04-20",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 325,
+        "max_timestamp_et": "2026-04-20T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-20T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 24933,
+        "raw_row_count": 4771682,
+        "snapshot_row_count": 25743,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 485,
+        "valid_count_by_time": {
+          "09:35:00": 256,
+          "15:45:00": 229
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 17.48,
+        "prior_vix_date": "2026-04-17"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 709.04,
+        "decision_timestamp_et": "2026-04-20T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 709.29,
+        "opening_low": 708.38,
+        "signal_available_timestamp_et": "2026-04-20T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-21T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-21T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": true,
+      "date": "2026-04-21",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 314,
+        "max_timestamp_et": "2026-04-21T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-21T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 24916,
+        "raw_row_count": 4814314,
+        "snapshot_row_count": 25728,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 498,
+        "valid_count_by_time": {
+          "09:35:00": 252,
+          "15:45:00": 246
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 18.87,
+        "prior_vix_date": "2026-04-20"
+      },
+      "replay": {
+        "legs": [
+          {
+            "entry": {
+              "ask": 1.01,
+              "ask_size": 85,
+              "bid": 1.0,
+              "bid_size": 112,
+              "expiration_date": "2026-04-21",
+              "mid": 1.005,
+              "quote_timestamp_et": "2026-04-21T09:35:00-04:00",
+              "right": "put",
+              "strike": 708.0,
+              "symbol": "SPY   260421P00708000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-21",
+            "forced_close": {
+              "ask": 4.91,
+              "ask_size": 4,
+              "bid": 4.78,
+              "bid_size": 6,
+              "expiration_date": "2026-04-21",
+              "mid": 4.845,
+              "quote_timestamp_et": "2026-04-21T15:45:00-04:00",
+              "right": "put",
+              "strike": 708.0,
+              "symbol": "SPY   260421P00708000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "put",
+            "side": "buy",
+            "strike": 708.0,
+            "underlying": "SPY"
+          },
+          {
+            "entry": {
+              "ask": 0.53,
+              "ask_size": 275,
+              "bid": 0.52,
+              "bid_size": 230,
+              "expiration_date": "2026-04-21",
+              "mid": 0.525,
+              "quote_timestamp_et": "2026-04-21T09:35:00-04:00",
+              "right": "put",
+              "strike": 706.0,
+              "symbol": "SPY   260421P00706000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-21",
+            "forced_close": {
+              "ask": 2.98,
+              "ask_size": 32,
+              "bid": 2.94,
+              "bid_size": 18,
+              "expiration_date": "2026-04-21",
+              "mid": 2.96,
+              "quote_timestamp_et": "2026-04-21T15:45:00-04:00",
+              "right": "put",
+              "strike": 706.0,
+              "symbol": "SPY   260421P00706000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "put",
+            "side": "sell",
+            "strike": 706.0,
+            "underlying": "SPY"
+          }
+        ],
+        "mapping": {
+          "desired_long_strike": 707.575,
+          "direction": "put",
+          "interpolation_used": false,
+          "long_moneyness": 0.998512,
+          "long_strike": 708.0,
+          "mapping_method": "nearest_discrete_strike_rounding",
+          "realized_long_gap": 1.055,
+          "realized_width": 2.0,
+          "short_strike": 706.0,
+          "spread_entry_implementable_debit": 0.49,
+          "spread_entry_mid_debit": 0.48,
+          "target_gap": 1.48,
+          "target_width": 2.0,
+          "tie_breaker": "nearest_target_then_lower_spread_then_directional_strike",
+          "underlying_price": 709.055
+        },
+        "pnl": {
+          "cost_drag_vs_mid": 12.06,
+          "entry_implementable_debit": 0.49,
+          "entry_mid_debit": 0.48,
+          "fee_leg_count": 4,
+          "fee_per_leg_usd": 0.64,
+          "forced_close_implementable_credit": 1.8,
+          "forced_close_mid_value": 1.885,
+          "gross_implementable_pnl_before_fees": 131.0,
+          "implementable_pnl": 128.44,
+          "mid_pnl": 140.5,
+          "total_fees": 2.56
+        }
+      },
+      "replay_status": "complete",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 709.055,
+        "decision_timestamp_et": "2026-04-21T09:35:00-04:00",
+        "direction": "put",
+        "opening_high": 710.38,
+        "opening_low": 709.1,
+        "signal_available_timestamp_et": "2026-04-21T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-22T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-22T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": true,
+      "date": "2026-04-22",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 292,
+        "max_timestamp_et": "2026-04-22T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-22T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 23321,
+        "raw_row_count": 4620048,
+        "snapshot_row_count": 24053,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 440,
+        "valid_count_by_time": {
+          "09:35:00": 231,
+          "15:45:00": 209
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 19.5,
+        "prior_vix_date": "2026-04-21"
+      },
+      "replay": {
+        "legs": [
+          {
+            "entry": {
+              "ask": 1.06,
+              "ask_size": 375,
+              "bid": 1.05,
+              "bid_size": 69,
+              "expiration_date": "2026-04-22",
+              "mid": 1.055,
+              "quote_timestamp_et": "2026-04-22T09:35:00-04:00",
+              "right": "put",
+              "strike": 707.0,
+              "symbol": "SPY   260422P00707000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-22",
+            "forced_close": {
+              "ask": 0.03,
+              "ask_size": 1604,
+              "bid": 0.02,
+              "bid_size": 5092,
+              "expiration_date": "2026-04-22",
+              "mid": 0.025,
+              "quote_timestamp_et": "2026-04-22T15:45:00-04:00",
+              "right": "put",
+              "strike": 707.0,
+              "symbol": "SPY   260422P00707000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "put",
+            "side": "buy",
+            "strike": 707.0,
+            "underlying": "SPY"
+          },
+          {
+            "entry": {
+              "ask": 0.61,
+              "ask_size": 356,
+              "bid": 0.6,
+              "bid_size": 322,
+              "expiration_date": "2026-04-22",
+              "mid": 0.605,
+              "quote_timestamp_et": "2026-04-22T09:35:00-04:00",
+              "right": "put",
+              "strike": 705.0,
+              "symbol": "SPY   260422P00705000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-22",
+            "forced_close": {
+              "ask": 0.03,
+              "ask_size": 6551,
+              "bid": 0.02,
+              "bid_size": 3540,
+              "expiration_date": "2026-04-22",
+              "mid": 0.025,
+              "quote_timestamp_et": "2026-04-22T15:45:00-04:00",
+              "right": "put",
+              "strike": 705.0,
+              "symbol": "SPY   260422P00705000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "put",
+            "side": "sell",
+            "strike": 705.0,
+            "underlying": "SPY"
+          }
+        ],
+        "mapping": {
+          "desired_long_strike": 706.825,
+          "direction": "put",
+          "interpolation_used": false,
+          "long_moneyness": 0.998158,
+          "long_strike": 707.0,
+          "mapping_method": "nearest_discrete_strike_rounding",
+          "realized_long_gap": 1.305,
+          "realized_width": 2.0,
+          "short_strike": 705.0,
+          "spread_entry_implementable_debit": 0.46,
+          "spread_entry_mid_debit": 0.45,
+          "target_gap": 1.48,
+          "target_width": 2.0,
+          "tie_breaker": "nearest_target_then_lower_spread_then_directional_strike",
+          "underlying_price": 708.305
+        },
+        "pnl": {
+          "cost_drag_vs_mid": 4.56,
+          "entry_implementable_debit": 0.46,
+          "entry_mid_debit": 0.45,
+          "fee_leg_count": 4,
+          "fee_per_leg_usd": 0.64,
+          "forced_close_implementable_credit": -0.01,
+          "forced_close_mid_value": 0.0,
+          "gross_implementable_pnl_before_fees": -47.0,
+          "implementable_pnl": -49.56,
+          "mid_pnl": -45.0,
+          "total_fees": 2.56
+        }
+      },
+      "replay_status": "complete",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 708.305,
+        "decision_timestamp_et": "2026-04-22T09:35:00-04:00",
+        "direction": "put",
+        "opening_high": 709.32,
+        "opening_low": 708.47,
+        "signal_available_timestamp_et": "2026-04-22T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-23T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-23T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": false,
+      "date": "2026-04-23",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 299,
+        "max_timestamp_et": "2026-04-23T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-23T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 23635,
+        "raw_row_count": 4533521,
+        "snapshot_row_count": 24383,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 449,
+        "valid_count_by_time": {
+          "09:35:00": 233,
+          "15:45:00": 216
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 18.92,
+        "prior_vix_date": "2026-04-22"
+      },
+      "replay": null,
+      "replay_status": "not_candidate",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 709.78,
+        "decision_timestamp_et": "2026-04-23T09:35:00-04:00",
+        "direction": null,
+        "opening_high": 709.97,
+        "opening_low": 709.3,
+        "signal_available_timestamp_et": "2026-04-23T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    },
+    {
+      "bar_coverage": {
+        "has_0935_bar": true,
+        "has_1545_bar": true,
+        "max_timestamp_et": "2026-04-24T15:59:00-04:00",
+        "min_timestamp_et": "2026-04-24T09:30:00-04:00",
+        "row_count": 390
+      },
+      "blockers": [],
+      "candidate": true,
+      "date": "2026-04-24",
+      "provider_quality_warning": false,
+      "quote_coverage": {
+        "invalid_quote_count": 333,
+        "max_timestamp_et": "2026-04-24T15:49:00-04:00",
+        "min_timestamp_et": "2026-04-24T09:31:00-04:00",
+        "non_zero_dte_snapshot_count": 23343,
+        "raw_row_count": 4583180,
+        "snapshot_row_count": 24202,
+        "symbol_parse_error_count": 0,
+        "valid_0dte_snapshot_count": 526,
+        "valid_count_by_time": {
+          "09:35:00": 271,
+          "15:45:00": 255
+        }
+      },
+      "regime": {
+        "clean_scope": true,
+        "high_importance_macro": false,
+        "high_importance_macro_event_types": [],
+        "prior_vix_close": 19.31,
+        "prior_vix_date": "2026-04-23"
+      },
+      "replay": {
+        "legs": [
+          {
+            "entry": {
+              "ask": 1.1,
+              "ask_size": 33,
+              "bid": 1.09,
+              "bid_size": 267,
+              "expiration_date": "2026-04-24",
+              "mid": 1.095,
+              "quote_timestamp_et": "2026-04-24T09:35:00-04:00",
+              "right": "put",
+              "strike": 708.0,
+              "symbol": "SPY   260424P00708000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-24",
+            "forced_close": {
+              "ask": 0.03,
+              "ask_size": 1895,
+              "bid": 0.02,
+              "bid_size": 5178,
+              "expiration_date": "2026-04-24",
+              "mid": 0.025,
+              "quote_timestamp_et": "2026-04-24T15:45:00-04:00",
+              "right": "put",
+              "strike": 708.0,
+              "symbol": "SPY   260424P00708000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "put",
+            "side": "buy",
+            "strike": 708.0,
+            "underlying": "SPY"
+          },
+          {
+            "entry": {
+              "ask": 0.64,
+              "ask_size": 127,
+              "bid": 0.63,
+              "bid_size": 239,
+              "expiration_date": "2026-04-24",
+              "mid": 0.635,
+              "quote_timestamp_et": "2026-04-24T09:35:00-04:00",
+              "right": "put",
+              "strike": 706.0,
+              "symbol": "SPY   260424P00706000",
+              "underlying": "SPY"
+            },
+            "expiration_date": "2026-04-24",
+            "forced_close": {
+              "ask": 0.03,
+              "ask_size": 2013,
+              "bid": 0.02,
+              "bid_size": 10362,
+              "expiration_date": "2026-04-24",
+              "mid": 0.025,
+              "quote_timestamp_et": "2026-04-24T15:45:00-04:00",
+              "right": "put",
+              "strike": 706.0,
+              "symbol": "SPY   260424P00706000",
+              "underlying": "SPY"
+            },
+            "quantity": 1,
+            "right": "put",
+            "side": "sell",
+            "strike": 706.0,
+            "underlying": "SPY"
+          }
+        ],
+        "mapping": {
+          "desired_long_strike": 708.11,
+          "direction": "put",
+          "interpolation_used": false,
+          "long_moneyness": 0.997759,
+          "long_strike": 708.0,
+          "mapping_method": "nearest_discrete_strike_rounding",
+          "realized_long_gap": 1.59,
+          "realized_width": 2.0,
+          "short_strike": 706.0,
+          "spread_entry_implementable_debit": 0.47,
+          "spread_entry_mid_debit": 0.46,
+          "target_gap": 1.48,
+          "target_width": 2.0,
+          "tie_breaker": "nearest_target_then_lower_spread_then_directional_strike",
+          "underlying_price": 709.59
+        },
+        "pnl": {
+          "cost_drag_vs_mid": 4.56,
+          "entry_implementable_debit": 0.47,
+          "entry_mid_debit": 0.46,
+          "fee_leg_count": 4,
+          "fee_per_leg_usd": 0.64,
+          "forced_close_implementable_credit": -0.01,
+          "forced_close_mid_value": 0.0,
+          "gross_implementable_pnl_before_fees": -48.0,
+          "implementable_pnl": -50.56,
+          "mid_pnl": -46.0,
+          "total_fees": 2.56
+        }
+      },
+      "replay_status": "complete",
+      "timestamp_clean_signal": {
+        "bar_timestamp_semantics": "interval_start",
+        "decision_close": 709.59,
+        "decision_timestamp_et": "2026-04-24T09:35:00-04:00",
+        "direction": "put",
+        "opening_high": 711.16,
+        "opening_low": 709.765,
+        "signal_available_timestamp_et": "2026-04-24T09:36:00-04:00",
+        "status": "measured"
+      },
+      "vix_bucket": "normal_vix_2026"
+    }
+  ],
+  "evidence_tier": "E1",
+  "experiment_id": "h_a2_fresh_oos_timestamp_clean_checkpoint",
+  "forbidden_claims": [
+    "Do not describe the invalidated 0.001 close-followthrough feature as known at 09:35.",
+    "Do not tune a new breakout threshold on these 20 dates.",
+    "Do not extrapolate results to prior-close VIX >= 25 or high-importance macro days.",
+    "Do not claim E2, paper-trading readiness, operational validation, or real-money readiness.",
+    "Do not buy additional data from this checkpoint without a new decision-tree artifact."
+  ],
+  "generated_at_utc": "2026-07-14T23:27:40Z",
+  "hypothesis": "\u0e2b\u0e32\u0e01 macro-conditioned ORB \u0e21\u0e35 edge \u0e08\u0e23\u0e34\u0e07 \u0e01\u0e32\u0e23\u0e17\u0e30\u0e25\u0e38\u0e01\u0e23\u0e2d\u0e1a\u0e40\u0e1b\u0e34\u0e14\u0e17\u0e35\u0e48\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e44\u0e14\u0e49\u0e40\u0e27\u0e25\u0e32 09:35 \u0e04\u0e27\u0e23\u0e2a\u0e23\u0e49\u0e32\u0e07 candidate \u0e2d\u0e22\u0e48\u0e32\u0e07\u0e19\u0e49\u0e2d\u0e22 2 \u0e23\u0e32\u0e22\u0e01\u0e32\u0e23 \u0e41\u0e25\u0e30\u0e04\u0e48\u0e32\u0e40\u0e09\u0e25\u0e35\u0e48\u0e22 implementable PnL \u0e2b\u0e25\u0e31\u0e07 bid-ask \u0e01\u0e31\u0e1a\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21\u0e04\u0e27\u0e23\u0e40\u0e1b\u0e47\u0e19\u0e1a\u0e27\u0e01 \u0e42\u0e14\u0e22\u0e44\u0e21\u0e48\u0e43\u0e0a\u0e49\u0e1c\u0e25\u0e25\u0e31\u0e1e\u0e18\u0e4c\u0e2b\u0e25\u0e31\u0e07\u0e40\u0e27\u0e25\u0e32\u0e40\u0e02\u0e49\u0e32\u0e40\u0e1b\u0e47\u0e19\u0e15\u0e31\u0e27\u0e04\u0e31\u0e14\u0e40\u0e25\u0e37\u0e2d\u0e01",
+  "hypothesis_id": "H-A2",
+  "ibkr_request_used": false,
+  "interpreter": {
+    "python_executable": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python_implementation": "cpython",
+    "python_version": "3.14.3"
+  },
+  "llm_call_used": false,
+  "lookahead_correction": {
+    "affected_feature": "proxy_5m.directional_followthrough_to_close_pct",
+    "corrective_rule": "Do not use threshold 0.001 or any post-09:35 value to select candidates in this checkpoint.",
+    "fresh_outcomes_viewed_before_correction": false,
+    "future_information_used": "15:45 ET underlying close",
+    "historical_evidence_effect": "Earlier H-A2 results that selected trades with this feature cannot support an edge claim and must be treated as lookahead-contaminated diagnostics.",
+    "incorrect_prior_claim": "Feature was described as available at 09:35 ET.",
+    "status": "prior_rule_invalidated_before_fresh_oos_parse"
+  },
+  "methodology": {
+    "actual_signal_availability_et": "approximately 09:36:00 after the 09:35 minute bar closes",
+    "bar_timestamp_semantics": "Databento OHLCV-1m ts_event identifies the minute interval start.",
+    "candidate_rule": {
+      "call": "09:35 close > maximum high of the opening-range bars",
+      "decision_bar_et": "09:35:00",
+      "decision_time_et": "09:35:00",
+      "macro_rule": "no high-importance macro event on the trade date",
+      "no_trade": "09:35 close remains inside or on the opening range",
+      "numeric_breakout_threshold": null,
+      "opening_range_et": "09:30:00 <= bar timestamp < 09:35:00",
+      "post_decision_feature_allowed": false,
+      "prior_vix_rule": "prior_close_vix < 25",
+      "put": "09:35 close < minimum low of the opening-range bars"
+    },
+    "configured_decision_bar_timestamp_et": "09:35:00",
+    "entry_quote_timestamp_et": "09:35:00",
+    "exact_0935_question_answered": false,
+    "execution_timestamp_alignment_pass": false,
+    "fresh_outcomes_viewed_before_preregistration": false,
+    "option_replay_rule": {
+      "contract_multiplier": 100,
+      "entry_implementable": "long ask minus short bid",
+      "entry_mid_control": "long mid minus short mid",
+      "entry_time_et": "09:35:00",
+      "fee_leg_count": 4,
+      "fee_per_leg_usd": 0.64,
+      "forced_close_implementable": "long bid minus short ask",
+      "forced_close_mid_control": "long mid minus short mid",
+      "forced_close_time_et": "15:45:00",
+      "interpolation_allowed": false,
+      "strategy": "directional SPY 0DTE debit vertical spread",
+      "strike_mapping": "nearest_discrete_strike_rounding",
+      "target_gap_points": 1.48,
+      "width_points": 2.0
+    },
+    "post_0935_feature_used_for_candidate_selection": true,
+    "preregistration_deviation": "The preregistration treated the 09:35 bar close as observable at 09:35. That assumption failed after the run and the result is downgraded to a 09:36 proxy.",
+    "trial_policy": {
+      "dsr_status": "not_applicable_single_fixed_rule_no_parameter_search",
+      "oos_tuning_used": false,
+      "parameter_search_used": false,
+      "threshold_search_used": false,
+      "trial_count": 1
+    }
+  },
+  "network_used": false,
+  "next_safe_action": "Stop expansion. Treat this as a 09:36 proxy only; pre-register an actually observable 09:35 rule or an explicit 09:36 rule on data whose outcomes have not been viewed.",
+  "operational_validation_allowed": false,
+  "paper_trading_allowed": false,
+  "real_money_allowed": false,
+  "record_type": "experiment_summary",
+  "research_log_path": "research_log/001-higanbana-h-a2-fresh-oos-timestamp-clean-checkpoint.md",
+  "research_log_required": true,
+  "research_log_slug": "higanbana-h-a2-fresh-oos-timestamp-clean-checkpoint",
+  "research_question": "\u0e20\u0e32\u0e22\u0e43\u0e15\u0e49 prior-close VIX \u0e15\u0e48\u0e33\u0e01\u0e27\u0e48\u0e32 25 \u0e41\u0e25\u0e30\u0e44\u0e21\u0e48\u0e21\u0e35\u0e02\u0e48\u0e32\u0e27\u0e21\u0e2b\u0e20\u0e32\u0e04\u0e2a\u0e33\u0e04\u0e31\u0e0d \u0e2a\u0e31\u0e0d\u0e0d\u0e32\u0e13 ORB \u0e17\u0e35\u0e48\u0e23\u0e39\u0e49\u0e44\u0e14\u0e49\u0e08\u0e23\u0e34\u0e07\u0e40\u0e27\u0e25\u0e32 09:35 \u0e17\u0e33\u0e43\u0e2b\u0e49 SPY 0DTE debit vertical spread \u0e2b\u0e25\u0e31\u0e07\u0e15\u0e49\u0e19\u0e17\u0e38\u0e19\u0e21\u0e35\u0e1c\u0e25\u0e15\u0e2d\u0e1a\u0e41\u0e17\u0e19\u0e40\u0e09\u0e25\u0e35\u0e48\u0e22\u0e40\u0e1b\u0e47\u0e19\u0e1a\u0e27\u0e01\u0e43\u0e19\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25 OOS \u0e43\u0e2b\u0e21\u0e48 20 \u0e27\u0e31\u0e19\u0e2b\u0e23\u0e37\u0e2d\u0e44\u0e21\u0e48",
+  "schema_version": "h_a2_fresh_oos_timestamp_clean_checkpoint_v1",
+  "scope": "\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25 OOS \u0e43\u0e2b\u0e21\u0e48 20 \u0e27\u0e31\u0e19\u0e17\u0e35\u0e48\u0e0b\u0e37\u0e49\u0e2d\u0e44\u0e27\u0e49\u0e41\u0e25\u0e49\u0e27 \u0e41\u0e1a\u0e48\u0e07\u0e40\u0e1b\u0e47\u0e19 low-VIX \u0e1b\u0e35 2025 \u0e08\u0e33\u0e19\u0e27\u0e19 10 \u0e27\u0e31\u0e19\u0e41\u0e25\u0e30 normal-VIX \u0e1b\u0e35 2026 \u0e08\u0e33\u0e19\u0e27\u0e19 10 \u0e27\u0e31\u0e19 \u0e43\u0e0a\u0e49\u0e40\u0e09\u0e1e\u0e32\u0e30\u0e2a\u0e31\u0e0d\u0e0d\u0e32\u0e13\u0e17\u0e35\u0e48\u0e23\u0e39\u0e49\u0e44\u0e14\u0e49\u0e44\u0e21\u0e48\u0e40\u0e01\u0e34\u0e19 09:35 ET \u0e41\u0e25\u0e30\u0e1b\u0e34\u0e14\u0e17\u0e35\u0e48 15:45 ET \u0e44\u0e21\u0e48\u0e23\u0e27\u0e21 prior-close VIX \u0e15\u0e31\u0e49\u0e07\u0e41\u0e15\u0e48 25 \u0e02\u0e36\u0e49\u0e19\u0e44\u0e1b\u0e2b\u0e23\u0e37\u0e2d\u0e27\u0e31\u0e19\u0e02\u0e48\u0e32\u0e27\u0e21\u0e2b\u0e20\u0e32\u0e04\u0e2a\u0e33\u0e04\u0e31\u0e0d",
+  "search_log": "reports/experiments/search_logs/h_a2_fresh_oos_timestamp_clean_checkpoint.jsonl",
+  "source_download_report": "reports/data_cost/databento_download_result_h_a2_fresh_oos_2025_2026.json",
+  "source_preregistration": "experiments/h_a2_fresh_oos_timestamp_clean_checkpoint_preregistration.json",
+  "status": "complete_methodology_failure",
+  "tier_blockers": [
+    "E1 fresh OOS checkpoint only",
+    "Prior H-A2 threshold branch is lookahead-contaminated",
+    "09:35 bar close is only available around 09:36",
+    "Entry quote precedes signal availability",
+    "PnL, PSR, and MinTRL invalid for inference",
+    "Exact 09:35 research question not answered",
+    "No E2 claim",
+    "under-sampled",
+    "underpowered"
+  ]
+}

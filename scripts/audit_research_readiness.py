@@ -194,11 +194,20 @@ H_A2_2022_10_STRESS_EXACT_REPLAY_SUMMARY = (
 H_A2_FRESH_OOS_2025_2026_COST_PLAN = (
     PROJECT_ROOT / "reports" / "data_cost" / "h_a2_fresh_oos_2025_2026_decision_tree_cost_plan.json"
 )
+H_A2_FRESH_OOS_TIMESTAMP_CLEAN_CHECKPOINT = (
+    PROJECT_ROOT / "reports" / "experiments" / "h_a2_fresh_oos_timestamp_clean_checkpoint.json"
+)
 GDELT_BULK_SOURCE_DECISION_NOTE = PROJECT_ROOT / "docs" / "GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md"
 GDELT_BULK_MANIFEST_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_bulk_raw_manifest.json"
 GDELT_GKG_ONE_FILE_PROBE_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_gkg_one_file_parser_probe.json"
 GDELT_DOC_API_ENRICHMENT_SCAFFOLD_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_doc_api_enrichment_scaffold.json"
-DATABENTO_API_KEY_ENVS = ("DATABENTO_API_KEY", "DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI")
+DATABENTO_API_KEY_ENVS = (
+    "DATABENTO_API_KEY",
+    "DATABENTO_SPY0DTE_API",
+    "DATABENTO_API_MO",
+    "DATABENTO_API_AI",
+    "DATABENTO_API_01",
+)
 
 REPORT_PATHS = {
     "macro_calendar": PROJECT_ROOT / "reports" / "macro_calendar_coverage_audit.json",
@@ -749,9 +758,24 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
         H_A2_2022_10_STRESS_EXACT_REPLAY_SUMMARY
     )
     h_a2_fresh_oos_cost_plan = _load_report_artifact(H_A2_FRESH_OOS_2025_2026_COST_PLAN)
+    h_a2_fresh_oos_timestamp_clean_checkpoint = _load_report_artifact(
+        H_A2_FRESH_OOS_TIMESTAMP_CLEAN_CHECKPOINT
+    )
     h_a2_proxy_robustness = _load_report_artifact(H_A2_PROXY_FIRST_ROBUSTNESS_SUMMARY)
     h_l1_macro_proxy = _load_report_artifact(H_L1_MACRO_EVENT_PROXY_BASELINE_SUMMARY)
     if (
+        h_a2_fresh_oos_timestamp_clean_checkpoint
+        and str(h_a2_fresh_oos_timestamp_clean_checkpoint.get("status", "")).startswith("complete")
+    ):
+        aggregate = h_a2_fresh_oos_timestamp_clean_checkpoint.get("aggregate") or {}
+        stats = aggregate.get("statistics") or {}
+        actions.append(
+            "H-A2 fresh OOS checkpoint is complete as E1 methodology-failure evidence. "
+            "The prior threshold-0.001 branch is lookahead-contaminated because its selection feature used the 15:45 close while being described as 09:35-known; do not reuse that branch for edge or deployment claims. "
+            f"The replacement run found {aggregate.get('candidate_count')} retrospective candidates from {aggregate.get('target_date_count')} dates, but the 09:35 bar close is available around 09:36 while entry option quotes are stamped 09:35. Mechanical PnL, PSR, and MinTRL are invalid for inference. "
+            "H-A2 remains active but the exact 09:35 question is unanswered. Stop expansion and pre-register an observable 09:35 rule or explicit 09:36 rule on untouched outcomes; do not approve E2, paper trading, operational validation, or real-money trading."
+        )
+    elif (
         h_a2_fresh_oos_cost_plan
         and h_a2_fresh_oos_cost_plan.get("status") == "awaiting_user_approval"
         and h_a2_fresh_oos_cost_plan.get("mode") == "plan_only_no_network_no_purchase"

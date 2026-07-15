@@ -1,0 +1,61 @@
+{
+  "schema_version": "h_a2_fresh_oos_paid_download_decision_v1",
+  "status": "approved",
+  "decision_date": "2026-07-15",
+  "hypothesis_id": "H-A2",
+  "source_cost_plan": "reports/data_cost/h_a2_fresh_oos_2025_2026_decision_tree_cost_plan.json",
+  "decision": "approve_exact_20_date_fresh_oos_download_after_live_cost_pass",
+  "approved_scope": {
+    "date_count": 20,
+    "dates": [
+      "2025-08-13",
+      "2025-08-14",
+      "2025-08-15",
+      "2025-08-19",
+      "2025-08-25",
+      "2025-08-26",
+      "2025-08-27",
+      "2025-08-28",
+      "2025-09-12",
+      "2025-09-15",
+      "2026-04-13",
+      "2026-04-14",
+      "2026-04-15",
+      "2026-04-16",
+      "2026-04-17",
+      "2026-04-20",
+      "2026-04-21",
+      "2026-04-22",
+      "2026-04-23",
+      "2026-04-24"
+    ],
+    "datasets": ["OPRA.PILLAR", "EQUS.MINI"],
+    "schemas": ["cbbo-1m", "ohlcv-1m"],
+    "symbols": ["SPY.OPT", "SPY"],
+    "request_count": 40
+  },
+  "cost_guard": {
+    "selected_key_env": "DATABENTO_API_01",
+    "account_provenance": "primary_existing_databento_account",
+    "selected_key_authorization_limit_usd": 50.0,
+    "approved_purchase_ceiling_usd": 12.601188,
+    "live_metadata_estimate_required": true,
+    "stop_if_estimate_exceeds_ceiling": true,
+    "key_value_stored": false
+  },
+  "authorization": {
+    "user_approval_recorded": true,
+    "download_allowed_after_cost_gate_pass": true,
+    "broad_calendar_expansion_allowed": false,
+    "high_vix_expansion_allowed": false
+  },
+  "required_post_download_work": [
+    "verify_container_and_canonical_hashes",
+    "register_paid_artifact_checksums",
+    "run_candidate_density_checkpoint_before_any_expansion"
+  ],
+  "forbidden_claims": [
+    "The data purchase does not prove H-A2 has an edge.",
+    "The purchase does not approve E2, paper trading, operational validation, or real-money trading."
+  ]
+}

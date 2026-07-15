@@ -73,7 +73,7 @@ The active project is now **SPY 0DTE - Higanbana**.
 - Use the local LLM Wiki at `D:\Fogust\Workspace\LLM Wiki\LLM Wiki\wiki` as the primary knowledge source for 0DTE research rationale and report citations.
 - IBKR options permission is pending, so paper trading may be used as an operational bridge. It is not evidence of edge and must not replace backtest validation.
 - DeepSeek is the planned LLM provider for this project. Do not assume Claude unless the user explicitly changes this.
-- Supported Databento credential envs are `DATABENTO_API_KEY`, `DATABENTO_SPY0DTE_API`, `DATABENTO_API_MO`, and `DATABENTO_API_AI`. Do not store key values. `DATABENTO_API_MO` and `DATABENTO_API_AI` form one approved $200 research pool, each individual key remains capped at $100, and the selected key env must be logged before paid Databento actions.
+- Supported Databento credential envs are `DATABENTO_API_KEY`, `DATABENTO_SPY0DTE_API`, `DATABENTO_API_MO`, `DATABENTO_API_AI`, and `DATABENTO_API_01`. Do not store key values. `DATABENTO_API_MO` and `DATABENTO_API_AI` retain their historical separate controls. `DATABENTO_API_01` belongs to the primary existing Databento account and has a `$50` authorization cap. The selected key env and true account provenance must be logged before paid Databento actions.
 - Entry market orders are prohibited. Unfilled entry limits should skip according to the tested protocol.
 - When unsure whether a change belongs to the active SPY 0DTE scope, do not guess; surface the blocker and evidence before editing code.
 

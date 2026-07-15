@@ -95,10 +95,26 @@
         "Fresh untouched 2025-2026 OOS dates in both in-scope VIX buckets for search decontamination.",
         "No additional high-VIX purchase for the current H-A2 rule unless a new hypothesis explicitly changes the scope."
       ],
-      "mintrl_falsify": {
-        "status": "pending",
-        "method": "compute from retained no-macro return distribution before paid validation data"
-      },
+    "mintrl_falsify": {
+      "status": "blocked_timestamp_alignment_failure",
+      "method": "A mechanically computed proxy suggested 12 observations against null Sharpe 0, but the return series is invalid because entry quotes precede signal availability.",
+      "observed_candidate_count": 6,
+      "minimum_track_record_length": null,
+      "probabilistic_sharpe_ratio": null,
+      "source": "reports/experiments/h_a2_fresh_oos_timestamp_clean_checkpoint.json"
+    },
+    "methodology_corrections": [
+      {
+        "date": "2026-07-15",
+        "status": "lookahead_contamination_confirmed",
+        "affected_feature": "proxy_5m.directional_followthrough_to_close_pct",
+        "future_information_used": "15:45 ET underlying close",
+        "effect": "All H-A2 evidence that selected trades with threshold 0.001 on this feature is diagnostic-only and cannot support an edge, timestamp-clean, E2, paper-trading, or deployment claim.",
+        "attempted_replacement_rule": "Use only the 09:30-09:34 opening range and the 09:35 bar close to determine the ORB direction; no numeric breakout threshold is selected from fresh OOS. The run later showed this rule also fails timestamp alignment because that close is available around 09:36.",
+        "source_preregistration": "experiments/h_a2_fresh_oos_timestamp_clean_checkpoint_preregistration.json",
+        "source_result": "reports/experiments/h_a2_fresh_oos_timestamp_clean_checkpoint.json"
+      }
+    ],
       "evidence": [
         {
           "path": "reports/experiments/m5_regime_filter_sensitivity_summary.json",
@@ -124,12 +140,18 @@
           "conclusion": "ยังสรุปไม่ได้",
           "notes": "Stress-silence window 2: all 13 Oct 2022 dates passed SPY bar coverage and 3 had raw 09:35 breakouts, but every date failed the ex-ante clean macro/VIX gate, leaving zero candidate trades and no PnL. The minimum-2 density checkpoint stopped the September purchase."
         },
-        {
-          "path": "reports/data_cost/h_a2_fresh_oos_2025_2026_decision_tree_cost_plan.json",
-          "evidence_tier": "E0",
-          "conclusion": "ยังสรุปไม่ได้",
-          "notes": "Plan-only Section 5 decision-tree artifact for 20 untouched 2025-2026 dates across prior-VIX <15 and 15-25 buckets. Proposed ceiling is $12.601188; no metadata call or purchase occurred and user approval is required."
-        },
+      {
+        "path": "reports/data_cost/h_a2_fresh_oos_2025_2026_decision_tree_cost_plan.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Plan-only Section 5 decision-tree artifact for 20 untouched 2025-2026 dates across prior-VIX <15 and 15-25 buckets. Proposed ceiling is $12.601188; no metadata call or purchase occurred and user approval is required."
+      },
+      {
+        "path": "reports/experiments/h_a2_fresh_oos_timestamp_clean_checkpoint.json",
+        "evidence_tier": "E1",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Methodology-failure evidence: 20 clean-scope dates produced 6 retrospective ORB candidates, but the signal uses the close of the bar stamped 09:35 and is available around 09:36 while replay entry quotes are stamped 09:35. Mechanical PnL $249.64, PSR, and MinTRL calculations are retained for audit but invalid for inference. The exact 09:35 hypothesis remains unanswered."
+      },
         {
           "path": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
           "evidence_tier": "E1",
@@ -441,11 +463,21 @@
           "decision": "scope_restricted_to_prior_vix_below_25_after_two_stress_silence_windows",
           "notes": "Aug 2024 and Oct 2022 independently produced zero H-A2 candidates in stress/high-VIX conditions. H-A2 is now formally restricted to prior-close VIX <25 with high-importance macro days excluded. VIX >=25 is blocked/out-of-scope; silence there may be described as survival behavior but never as profitability or E2 evidence."
         },
-        {
-          "date": "2026-07-13",
-          "decision": "fresh_oos_2025_2026_cost_plan_awaiting_user_approval",
-          "notes": "The Section 5 plan proposes 20 untouched dates across the two in-scope VIX buckets with a $12.601188 approval ceiling. No live metadata call or purchase occurred. User approval, live cost refresh, and selected-key guard refresh are required before purchase."
-        }
+      {
+        "date": "2026-07-13",
+        "decision": "fresh_oos_2025_2026_cost_plan_awaiting_user_approval",
+        "notes": "The Section 5 plan proposes 20 untouched dates across the two in-scope VIX buckets with a $12.601188 approval ceiling. No live metadata call or purchase occurred. User approval, live cost refresh, and selected-key guard refresh are required before purchase."
+      },
+      {
+        "date": "2026-07-15",
+        "decision": "prior_threshold_branch_invalidated_by_lookahead",
+        "notes": "Code inspection before parsing fresh OOS showed that proxy_5m.directional_followthrough_to_close_pct uses the 15:45 close although prior artifacts described it as 09:35-known. Threshold-0.001 selection evidence is lookahead-contaminated and cannot support an edge or deployment claim."
+      },
+      {
+        "date": "2026-07-15",
+        "decision": "fresh_oos_checkpoint_failed_timestamp_alignment",
+        "notes": "The run found 6 retrospective candidates, but Databento OHLCV-1m timestamps the interval start: the 09:35 bar close is available around 09:36 while replay used 09:35 option quotes. Mechanical PnL and derived PSR/MinTRL are invalid for inference. H-A2 remains active but the exact 09:35 question is unanswered; stop expansion until a truly observable 09:35 rule or explicit 09:36 rule is preregistered on untouched data."
+      }
       ]
     },
     {

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import datetime, timedelta
 from typing import Any
 
 
@@ -19,4 +20,8 @@ def opening_breakout(bars: list[dict[str, Any]], decision_time: str = "09:35:00"
         "opening_low": opening_low,
         "decision_close": decision_close,
         "decision_timestamp_et": decision["timestamp_et"],
+        "signal_available_timestamp_et": (
+            datetime.fromisoformat(decision["timestamp_et"]) + timedelta(minutes=1)
+        ).isoformat(),
+        "bar_timestamp_semantics": "interval_start",
     }

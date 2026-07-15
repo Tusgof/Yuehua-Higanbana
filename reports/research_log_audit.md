@@ -31,6 +31,7 @@
 | `h_g1_manifest_v3_bucket_failure_diagnostic` | `???-higanbana-gamma-oi-v3-bucket-policy-diagnostic*.md` | True |
 | `h_a2_2022_10_stress_exact_replay_summary` | `???-higanbana-h-a2-october-2022-stress-exact-replay*.md` | True |
 | `h_a2_delayed_entry_condition_summary` | `???-higanbana-h-a2-delayed-entry-condition*.md` | True |
+| `h_a2_fresh_oos_timestamp_clean_checkpoint` | `???-higanbana-h-a2-fresh-oos-timestamp-clean-checkpoint*.md` | True |
 | `h_a2_locked_condition_signal_attribution_summary` | `???-higanbana-h-a2-locked-condition-signal-attribution*.md` | True |
 | `h_a2_lower_resolution_proxy_summary` | `???-higanbana-h-a2-lower-resolution-proxy*.md` | True |
 | `h_a2_macro_conditioned_reanalysis_summary` | `???-higanbana-macro-conditioned-orb-reanalysis*.md` | True |
@@ -61,9 +62,9 @@
 
 ## Sequence
 
-- Existing log count: 41
-- Next log number: `042`
-- Next filename prefix: `042-higanbana-`
+- Existing log count: 1
+- Next log number: `002`
+- Next filename prefix: `002-higanbana-`
 - Contiguous from 001: `True`
 - Sequence issues: None
 
@@ -72,5 +73,7 @@
 - Is git repo: `True`
 - Remote matches expected: `True`
 - Nested research-log repo present: `False`
-- Tracked log count: `41`
+- Tracked log count: `42`
+- Current-format log count: `1`
+- Legacy-format log count: `41`
 - Untracked logs: `[]`

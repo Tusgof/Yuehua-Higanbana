@@ -33,8 +33,14 @@ class AuditPaidCostsTests(unittest.TestCase):
         self.assertEqual("user_reported_actual_usage", result["cost_guard_basis"])
         self.assertIn("DATABENTO_API_MO", result["budget_policy"]["approved_databento_key_envs"])
         self.assertIn("DATABENTO_API_AI", result["budget_policy"]["approved_databento_key_envs"])
+        self.assertIn("DATABENTO_API_01", result["budget_policy"]["approved_databento_key_envs"])
         self.assertEqual(100.0, result["budget_policy"]["per_key_caps_usd"]["DATABENTO_API_MO"])
         self.assertEqual(100.0, result["budget_policy"]["per_key_caps_usd"]["DATABENTO_API_AI"])
+        self.assertEqual(50.0, result["budget_policy"]["per_key_caps_usd"]["DATABENTO_API_01"])
+        self.assertEqual(
+            "primary_existing_databento_account",
+            result["budget_policy"]["per_key_ledger"]["DATABENTO_API_01"]["account_provenance"],
+        )
         self.assertEqual(200.0, result["budget_policy"]["combined_pool_caps_usd"]["DATABENTO_API_MO+DATABENTO_API_AI"])
         self.assertLess(result["cost_guard_used_usd"], result["stop_threshold_usd"])
         self.assertGreater(result["remaining_before_stop_usd"], 0)
@@ -44,8 +50,8 @@ class AuditPaidCostsTests(unittest.TestCase):
         self.assertEqual(120.494368, reconciliation["actual_usage_basis"]["used_usd"])
         self.assertEqual(4.505632, reconciliation["actual_usage_basis"]["remaining_usd"])
         self.assertEqual("blocked", reconciliation["known_committed_estimate_basis"]["status"])
-        self.assertEqual(196.358053, reconciliation["known_committed_estimate_basis"]["used_usd"])
-        self.assertEqual(-71.358053, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
+        self.assertEqual(208.720036, reconciliation["known_committed_estimate_basis"]["used_usd"])
+        self.assertEqual(-83.720036, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
         self.assertFalse(any(item["item_id"] == "spy_bars:2024_08_chunk5" for item in result["estimated_only_items"]))
 
     def test_temp_cost_root_sums_completed_downloads_without_dry_run(self) -> None:

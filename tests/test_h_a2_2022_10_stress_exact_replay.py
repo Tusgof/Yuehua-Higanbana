@@ -22,6 +22,8 @@ class H_A2StressExactReplayTests(unittest.TestCase):
         result = opening_breakout(bars)
         self.assertEqual("call", result["direction"])
         self.assertNotIn("15:45", result["decision_timestamp_et"])
+        self.assertEqual("2022-10-03T09:36:00-04:00", result["signal_available_timestamp_et"])
+        self.assertEqual("interval_start", result["bar_timestamp_semantics"])
 
     @patch("scripts.run_h_a2_2022_10_stress_exact_replay.write_jsonl")
     @patch("scripts.run_h_a2_2022_10_stress_exact_replay.REPORT")

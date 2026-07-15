@@ -15,19 +15,34 @@ DEFAULT_USER_REPORTED_USAGE_PATH = PROJECT_ROOT / "reports" / "data_cost" / "use
 DEFAULT_STOP_THRESHOLD_USD = 125.0
 BUDGET_POLICY = {
     "cap_extension_method": "real_payment_on_existing_databento_account_only",
-    "approved_databento_key_envs": ["DATABENTO_API_KEY", "DATABENTO_SPY0DTE_API", "DATABENTO_API_MO", "DATABENTO_API_AI"],
+    "approved_databento_key_envs": [
+        "DATABENTO_API_KEY",
+        "DATABENTO_SPY0DTE_API",
+        "DATABENTO_API_MO",
+        "DATABENTO_API_AI",
+        "DATABENTO_API_01",
+    ],
     "per_key_caps_usd": {
         "DATABENTO_API_MO": 100.0,
         "DATABENTO_API_AI": 100.0,
+        "DATABENTO_API_01": 50.0,
     },
     "combined_pool_caps_usd": {
         "DATABENTO_API_MO+DATABENTO_API_AI": 200.0,
     },
     "prohibited": ["multi_account_signup_credit_harvesting"],
+    "per_key_ledger": {
+        "DATABENTO_API_01": {
+            "account_provenance": "primary_existing_databento_account",
+            "authorization_limit_usd": 50.0,
+            "known_committed_estimated_usage_usd": 0.0,
+        }
+    },
     "notes": (
         "The user added Databento env keys DATABENTO_API_MO and DATABENTO_API_AI as one approved $200 research pool, "
         "while each individual key remains capped at $100. Never store key values. "
         "A paid action must estimate/log cost first and must not exceed the selected key cap or combined pool cap. "
+        "DATABENTO_API_01 is a user-authorized $50 key on the primary existing Databento account. "
         "Opening extra accounts or using other identities to harvest duplicate signup credits remains prohibited."
     ),
 }
@@ -57,6 +72,16 @@ def audit_paid_costs(
         user_reported_usage=user_reported_usage,
         estimated_only=estimated_only,
     )
+    budget_policy = json.loads(json.dumps(BUDGET_POLICY))
+    for key_env, ledger in budget_policy.get("per_key_ledger", {}).items():
+        ledger["known_committed_estimated_usage_usd"] = round(
+            sum(
+                float(item["estimated_cost_usd"])
+                for item in committed
+                if item.get("provider") == "Databento" and item.get("selected_key_env") == key_env
+            ),
+            6,
+        )
 
     return {
         "status": status,
@@ -69,7 +94,7 @@ def audit_paid_costs(
         "committed_items": committed,
         "estimated_only_items": estimated_only,
         "cost_guard_reconciliation": reconciliation,
-        "budget_policy": BUDGET_POLICY,
+        "budget_policy": budget_policy,
         "unpriced_items": openrouter_unpriced,
         "blockers": [] if status == "pass" else ["paid_cost_stop_threshold_reached"],
     }
@@ -119,6 +144,7 @@ def write_reports(result: dict[str, Any], json_output: Path = DEFAULT_JSON_OUTPU
         f"- Cap extension method: `{result['budget_policy']['cap_extension_method']}`",
         f"- Approved Databento key envs: `{', '.join(result['budget_policy']['approved_databento_key_envs'])}`",
         f"- Per-key caps: `{json.dumps(result['budget_policy']['per_key_caps_usd'], sort_keys=True)}`",
+        f"- Per-key ledger: `{json.dumps(result['budget_policy']['per_key_ledger'], sort_keys=True)}`",
         f"- Prohibited: `{', '.join(result['budget_policy']['prohibited'])}`",
         f"- Notes: {result['budget_policy']['notes']}",
         "",
@@ -182,6 +208,7 @@ def _load_committed_databento_costs(root: Path) -> tuple[list[dict[str, Any]], s
                 "estimated_cost_usd": cost,
                 "mode": payload.get("mode"),
                 "scenario": payload.get("scenario"),
+                "selected_key_env": _selected_key_env(payload),
                 "source_path": _relative(path),
             }
         )
@@ -445,6 +472,19 @@ def _spy_bars_suffix(stem: str) -> str:
     if stem in {"databento_spy_bars_download_result", "databento_spy_bars_plan"}:
         return "default"
     return stem
+
+
+def _selected_key_env(payload: dict[str, Any]) -> str | None:
+    direct = payload.get("selected_key_env")
+    if isinstance(direct, str) and direct:
+        return direct
+    for container_name in ("cost_guard", "approved_download_scope", "selected_key_policy"):
+        container = payload.get(container_name)
+        if isinstance(container, dict):
+            value = container.get("selected_key_env")
+            if isinstance(value, str) and value:
+                return value
+    return None
 
 
 def _cost_from_payload(payload: dict[str, Any]) -> float | None:

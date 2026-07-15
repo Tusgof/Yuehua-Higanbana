@@ -17,7 +17,7 @@ EXPECTED_REMOTE = "https://github.com/Tusgof/Yuehua-Higanbana.git"
 QUICK_READ_HEADINGS = ("### อ่านแบบเร็ว", "### เธญเนเธฒเธเนเธเธเน€เธฃเนเธง")
 LOG_FILENAME_RE = re.compile(r"^\d{3}-higanbana-[a-z0-9]+(?:-[a-z0-9]+)*\.md$")
 MOJIBAKE_MARKERS = ("เธ", "เน€", "เน", "เน", "โ€", "�")
-RESEARCH_FORMAT_V2_START = 42
+LEGACY_DIRECTORY_NAME = "legacy_format"
 RESEARCH_FORMAT_V2_HEADINGS = (
     "## 1. ข้อมูลพื้นฐาน",
     "## 2. ปัญหา (คำถาม) และสมมติฐาน",
@@ -136,6 +136,8 @@ def write_reports(result: dict[str, Any], json_output: Path = DEFAULT_JSON_OUTPU
             f"- Remote matches expected: `{git_status['remote_matches_expected']}`",
             f"- Nested research-log repo present: `{git_status['nested_repo_present']}`",
             f"- Tracked log count: `{git_status['tracked_log_count']}`",
+            f"- Current-format log count: `{git_status['current_log_count']}`",
+            f"- Legacy-format log count: `{git_status['legacy_log_count']}`",
             f"- Untracked logs: `{git_status['untracked_logs']}`",
         ]
     )
@@ -157,6 +159,9 @@ def _required_completed_experiment_logs(experiment_root: Path, research_log_root
             raise ValueError(f"{path} sets research_log_required=true but lacks research_log_slug")
         pattern = f"???-{str(slug).replace('_', '-')}*.md"
         matches = sorted(research_log_root.glob(pattern)) if research_log_root.exists() else []
+        legacy_root = research_log_root / LEGACY_DIRECTORY_NAME
+        if legacy_root.exists():
+            matches.extend(sorted(legacy_root.glob(pattern)))
         items.append(
             {
                 "summary_id": path.stem,
@@ -187,26 +192,21 @@ def _research_log_readability_issues(research_log_root: Path) -> list[dict[str, 
             if marker in text:
                 issues.append({"name": path.name, "issue": f"mojibake_marker:{marker}"})
                 break
-        try:
-            log_number = int(path.name.split("-", 1)[0])
-        except ValueError:
-            continue
-        if log_number >= RESEARCH_FORMAT_V2_START:
-            stripped_lines = tuple(line.strip() for line in text.splitlines())
-            headings = tuple(line.strip() for line in text.splitlines() if line.startswith("## "))
-            if headings != RESEARCH_FORMAT_V2_HEADINGS:
-                issues.append({"name": path.name, "issue": "research_format_v2_section_mismatch"})
-            for label in RESEARCH_FORMAT_V2_REQUIRED_LABELS:
-                matching_lines = [line for line in stripped_lines if line.startswith(label)]
-                if not matching_lines:
-                    issues.append({"name": path.name, "issue": f"research_format_v2_missing_label:{label}"})
-                elif not matching_lines[0][len(label):].strip():
-                    issues.append({"name": path.name, "issue": f"research_format_v2_empty_label:{label}"})
-            question_lines = [line for line in stripped_lines if line.startswith("คำถามวิจัย:")]
-            if question_lines:
-                question = question_lines[0].removeprefix("คำถามวิจัย:").strip()
-                if len(question) > RESEARCH_QUESTION_MAX_LENGTH:
-                    issues.append({"name": path.name, "issue": "research_format_v2_question_too_long"})
+        stripped_lines = tuple(line.strip() for line in text.splitlines())
+        headings = tuple(line.strip() for line in text.splitlines() if line.startswith("## "))
+        if headings != RESEARCH_FORMAT_V2_HEADINGS:
+            issues.append({"name": path.name, "issue": "research_format_v2_section_mismatch"})
+        for label in RESEARCH_FORMAT_V2_REQUIRED_LABELS:
+            matching_lines = [line for line in stripped_lines if line.startswith(label)]
+            if not matching_lines:
+                issues.append({"name": path.name, "issue": f"research_format_v2_missing_label:{label}"})
+            elif not matching_lines[0][len(label):].strip():
+                issues.append({"name": path.name, "issue": f"research_format_v2_empty_label:{label}"})
+        question_lines = [line for line in stripped_lines if line.startswith("คำถามวิจัย:")]
+        if question_lines:
+            question = question_lines[0].removeprefix("คำถามวิจัย:").strip()
+            if len(question) > RESEARCH_QUESTION_MAX_LENGTH:
+                issues.append({"name": path.name, "issue": "research_format_v2_question_too_long"})
     return issues
 
 
@@ -246,11 +246,14 @@ def _git_status(root: Path, expected_remote: str, run_git: GitRunner) -> dict[st
             "remote_matches_expected": False,
             "nested_repo_present": (root / ".git").exists(),
             "tracked_log_count": 0,
+            "current_log_count": 0,
+            "legacy_log_count": 0,
             "untracked_logs": [],
             "blockers": [f"research_log_git_unavailable:{type(exc).__name__}"],
         }
 
     log_paths = sorted(path for path in root.glob("*.md")) if root.exists() else []
+    legacy_paths = sorted(path for path in (root / LEGACY_DIRECTORY_NAME).glob("*.md")) if root.exists() else []
     tracked_paths = {line.strip().replace("\\", "/") for line in tracked_output.splitlines() if line.strip()}
     untracked_logs = [
         path.name for path in log_paths if f"research_log/{path.name}" not in tracked_paths
@@ -268,6 +271,8 @@ def _git_status(root: Path, expected_remote: str, run_git: GitRunner) -> dict[st
         "remote_matches_expected": remote_matches,
         "nested_repo_present": nested_repo_present,
         "tracked_log_count": len([path for path in tracked_paths if path.endswith(".md")]),
+        "current_log_count": len(log_paths),
+        "legacy_log_count": len(legacy_paths),
         "untracked_logs": untracked_logs,
         "blockers": blockers,
     }

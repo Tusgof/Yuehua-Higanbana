@@ -43,9 +43,7 @@ def validate_h_a2_followup_resolution_preregistration(prereg_path: Path = DEFAUL
         value = source_artifacts.get(key)
         if not value:
             blockers.append(f"missing_source_artifact:{key}")
-        elif not Path(value).is_absolute() and not (PROJECT_ROOT / value).exists():
-            blockers.append(f"source_artifact_does_not_exist:{key}")
-        elif Path(value).is_absolute() and not Path(value).exists():
+        elif not _source_artifact_exists(value):
             blockers.append(f"source_artifact_does_not_exist:{key}")
 
     candidate_paths = prereg.get("candidate_paths", {})
@@ -127,6 +125,18 @@ def validate_h_a2_followup_resolution_preregistration(prereg_path: Path = DEFAUL
 
 def _load_json(path: Path) -> Any:
     return json.loads(expand_configured_tokens(path.read_text(encoding="utf-8")))
+
+
+def _source_artifact_exists(value: str) -> bool:
+    path = Path(value)
+    if path.is_absolute():
+        return path.exists()
+    if (PROJECT_ROOT / path).exists():
+        return True
+    parts = path.parts
+    if len(parts) == 2 and parts[0] == "research_log":
+        return (PROJECT_ROOT / "research_log" / "legacy_format" / parts[1]).exists()
+    return False
 
 
 def _relative(path: Path) -> str:

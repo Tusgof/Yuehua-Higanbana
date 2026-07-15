@@ -5,16 +5,25 @@
       "DATABENTO_API_KEY",
       "DATABENTO_SPY0DTE_API",
       "DATABENTO_API_MO",
-      "DATABENTO_API_AI"
+      "DATABENTO_API_AI",
+      "DATABENTO_API_01"
     ],
     "cap_extension_method": "real_payment_on_existing_databento_account_only",
     "combined_pool_caps_usd": {
       "DATABENTO_API_MO+DATABENTO_API_AI": 200.0
     },
-    "notes": "The user added Databento env keys DATABENTO_API_MO and DATABENTO_API_AI as one approved $200 research pool, while each individual key remains capped at $100. Never store key values. A paid action must estimate/log cost first and must not exceed the selected key cap or combined pool cap. Opening extra accounts or using other identities to harvest duplicate signup credits remains prohibited.",
+    "notes": "The user added Databento env keys DATABENTO_API_MO and DATABENTO_API_AI as one approved $200 research pool, while each individual key remains capped at $100. Never store key values. A paid action must estimate/log cost first and must not exceed the selected key cap or combined pool cap. DATABENTO_API_01 is a user-authorized $50 key on the primary existing Databento account. Opening extra accounts or using other identities to harvest duplicate signup credits remains prohibited.",
     "per_key_caps_usd": {
+      "DATABENTO_API_01": 50.0,
       "DATABENTO_API_AI": 100.0,
       "DATABENTO_API_MO": 100.0
+    },
+    "per_key_ledger": {
+      "DATABENTO_API_01": {
+        "account_provenance": "primary_existing_databento_account",
+        "authorization_limit_usd": 50.0,
+        "known_committed_estimated_usage_usd": 12.361983
+      }
     },
     "prohibited": [
       "multi_account_signup_credit_harvesting"
@@ -27,7 +36,17 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "h_a2_2022_10_stress",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_h_a2_2022_10_stress.json"
+    },
+    {
+      "estimated_cost_usd": 12.361983,
+      "item_id": "h_a2_fresh_oos_2025_2026:h_a2_fresh_oos_2025_2026",
+      "mode": "download_complete",
+      "provider": "Databento",
+      "scenario": "h_a2_fresh_oos_2025_2026",
+      "selected_key_env": "DATABENTO_API_01",
+      "source_path": "reports\\data_cost\\databento_download_result_h_a2_fresh_oos_2025_2026.json"
     },
     {
       "estimated_cost_usd": 0.504662,
@@ -35,6 +54,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "h_a2_independent_validation_2025_04_08",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_h_a2_independent_validation_2025_04_08.json"
     },
     {
@@ -43,6 +63,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "h_a2_normal_control_low_normal_vix_control_pack",
+      "selected_key_env": "DATABENTO_API_MO",
       "source_path": "reports\\data_cost\\databento_download_result_h_a2_normal_control_low_normal_vix_control_pack.json"
     },
     {
@@ -51,6 +72,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "h_a2_post_stress_normalization_control_pack",
+      "selected_key_env": "DATABENTO_API_AI",
       "source_path": "reports\\data_cost\\databento_download_result_h_a2_post_stress_normalization_control_pack.json"
     },
     {
@@ -75,6 +97,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_03",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_03_intraday_exit_30m_chunk1.json"
     },
     {
@@ -83,6 +106,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_03",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_03_intraday_exit_30m_chunk2.json"
     },
     {
@@ -91,6 +115,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_03",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_03_intraday_exit_30m_chunk3.json"
     },
     {
@@ -99,6 +124,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_03",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_03_intraday_exit_30m_chunk4.json"
     },
     {
@@ -107,6 +133,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_03",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_03_intraday_exit_30m_chunk5.json"
     },
     {
@@ -115,6 +142,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_04",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_04_intraday_exit_30m_chunk1.json"
     },
     {
@@ -123,6 +151,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_04",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_04_intraday_exit_30m_chunk2.json"
     },
     {
@@ -131,6 +160,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_04",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_04_intraday_exit_30m_chunk3.json"
     },
     {
@@ -139,6 +169,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_04",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_04_intraday_exit_30m_chunk4.json"
     },
     {
@@ -147,6 +178,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_05",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_05_intraday_exit_30m_chunk1.json"
     },
     {
@@ -155,6 +187,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_05",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_05_intraday_exit_30m_chunk2.json"
     },
     {
@@ -163,6 +196,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_05",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_05_intraday_exit_30m_chunk3.json"
     },
     {
@@ -171,6 +205,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_05",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_05_intraday_exit_30m_chunk4.json"
     },
     {
@@ -179,6 +214,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_05",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_05_intraday_exit_30m_chunk5.json"
     },
     {
@@ -187,6 +223,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_06",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_06_intraday_exit_30m_chunk1.json"
     },
     {
@@ -195,6 +232,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_06",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_06_intraday_exit_30m_chunk2.json"
     },
     {
@@ -203,6 +241,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_06",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_06_intraday_exit_30m_chunk3.json"
     },
     {
@@ -211,6 +250,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_06",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_06_intraday_exit_30m_chunk4.json"
     },
     {
@@ -219,6 +259,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_06",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_06_intraday_exit_30m_chunk5.json"
     },
     {
@@ -227,6 +268,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_07",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_07_intraday_exit_30m_chunk1.json"
     },
     {
@@ -235,6 +277,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_07",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_07_intraday_exit_30m_chunk2.json"
     },
     {
@@ -243,6 +286,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_07",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_07_intraday_exit_30m_chunk3.json"
     },
     {
@@ -251,6 +295,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_07",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_07_intraday_exit_30m_chunk4.json"
     },
     {
@@ -259,6 +304,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_07",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_07_intraday_exit_30m_chunk5.json"
     },
     {
@@ -267,6 +313,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_08",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_08_intraday_exit_30m_chunk1.json"
     },
     {
@@ -275,6 +322,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_08",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_08_intraday_exit_30m_chunk2.json"
     },
     {
@@ -283,6 +331,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_08",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_08_intraday_exit_30m_chunk3.json"
     },
     {
@@ -291,6 +340,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_08",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_08_intraday_exit_30m_chunk4.json"
     },
     {
@@ -299,6 +349,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_08",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_08_intraday_exit_30m_chunk5.json"
     },
     {
@@ -307,6 +358,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_09",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_09_intraday_exit_30m.json"
     },
     {
@@ -315,6 +367,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_10",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_10_intraday_exit_30m.json"
     },
     {
@@ -323,6 +376,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_11",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_11_intraday_exit_30m.json"
     },
     {
@@ -331,6 +385,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "insample_2023_12",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_insample_2023_12_intraday_exit_30m.json"
     },
     {
@@ -339,6 +394,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "one_month_pilot",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result.json"
     },
     {
@@ -347,6 +403,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_03_intraday_exit_30m_chunk1",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_03_intraday_exit_30m_chunk1.json"
     },
     {
@@ -355,6 +412,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_03_intraday_exit_30m_chunk2",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_03_intraday_exit_30m_chunk2.json"
     },
     {
@@ -363,6 +421,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_03_intraday_exit_30m_chunk3",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_03_intraday_exit_30m_chunk3.json"
     },
     {
@@ -371,6 +430,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_03_intraday_exit_30m_chunk4",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_03_intraday_exit_30m_chunk4.json"
     },
     {
@@ -379,6 +439,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_03_intraday_exit_30m_chunk5",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_03_intraday_exit_30m_chunk5.json"
     },
     {
@@ -387,6 +448,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_04_intraday_exit_30m_chunk1",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_04_intraday_exit_30m_chunk1.json"
     },
     {
@@ -395,6 +457,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_04_intraday_exit_30m_chunk2",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_04_intraday_exit_30m_chunk2.json"
     },
     {
@@ -403,6 +466,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_04_intraday_exit_30m_chunk3",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_04_intraday_exit_30m_chunk3.json"
     },
     {
@@ -411,6 +475,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_04_intraday_exit_30m_chunk4",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_04_intraday_exit_30m_chunk4.json"
     },
     {
@@ -419,6 +484,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_04_intraday_exit_30m_chunk5",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_04_intraday_exit_30m_chunk5.json"
     },
     {
@@ -427,6 +493,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_05_intraday_exit_30m_chunk1",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_05_intraday_exit_30m_chunk1.json"
     },
     {
@@ -435,6 +502,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_05_intraday_exit_30m_chunk2",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_05_intraday_exit_30m_chunk2.json"
     },
     {
@@ -443,6 +511,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_05_intraday_exit_30m_chunk3",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_05_intraday_exit_30m_chunk3.json"
     },
     {
@@ -451,6 +520,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_05_intraday_exit_30m_chunk4",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_05_intraday_exit_30m_chunk4.json"
     },
     {
@@ -459,6 +529,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_05_intraday_exit_30m_chunk5",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_05_intraday_exit_30m_chunk5.json"
     },
     {
@@ -467,6 +538,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_06_intraday_exit_30m_chunk1",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_06_intraday_exit_30m_chunk1.json"
     },
     {
@@ -475,6 +547,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_06_intraday_exit_30m_chunk2",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_06_intraday_exit_30m_chunk2.json"
     },
     {
@@ -483,6 +556,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_06_intraday_exit_30m_chunk3",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_06_intraday_exit_30m_chunk3.json"
     },
     {
@@ -491,6 +565,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_06_intraday_exit_30m_chunk4",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_06_intraday_exit_30m_chunk4.json"
     },
     {
@@ -499,6 +574,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_07_intraday_exit_30m_chunk1",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_07_intraday_exit_30m_chunk1.json"
     },
     {
@@ -507,6 +583,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_07_intraday_exit_30m_chunk2",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_07_intraday_exit_30m_chunk2.json"
     },
     {
@@ -515,6 +592,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_07_intraday_exit_30m_chunk3",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_07_intraday_exit_30m_chunk3.json"
     },
     {
@@ -523,6 +601,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_07_intraday_exit_30m_chunk4",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_07_intraday_exit_30m_chunk4.json"
     },
     {
@@ -531,6 +610,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_07_intraday_exit_30m_chunk5",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_07_intraday_exit_30m_chunk5.json"
     },
     {
@@ -539,6 +619,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_08_intraday_exit_30m_chunk1",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_08_intraday_exit_30m_chunk1.json"
     },
     {
@@ -547,6 +628,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_08_intraday_exit_30m_chunk2",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_08_intraday_exit_30m_chunk2.json"
     },
     {
@@ -555,6 +637,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_08_intraday_exit_30m_chunk3",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_08_intraday_exit_30m_chunk3.json"
     },
     {
@@ -563,6 +646,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_08_intraday_exit_30m_chunk4",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_08_intraday_exit_30m_chunk4.json"
     },
     {
@@ -571,6 +655,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_08_intraday_exit_30m_chunk5",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_08_intraday_exit_30m_chunk5.json"
     },
     {
@@ -579,6 +664,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_09_intraday_exit_30m_chunk1",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_09_intraday_exit_30m_chunk1.json"
     },
     {
@@ -587,6 +673,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_09_intraday_exit_30m_chunk2",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_09_intraday_exit_30m_chunk2.json"
     },
     {
@@ -595,6 +682,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_09_intraday_exit_30m_chunk3",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_09_intraday_exit_30m_chunk3.json"
     },
     {
@@ -603,6 +691,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_10_intraday_exit_30m_daily_union",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_10_daily_union.json"
     },
     {
@@ -611,6 +700,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_11_intraday_exit_30m_daily_union",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_11_daily_union.json"
     },
     {
@@ -619,6 +709,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_12_intraday_exit_30m_daily_union",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_12_daily_union.json"
     },
     {
@@ -627,6 +718,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_2025",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_02.json"
     },
     {
@@ -635,6 +727,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_2025",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_02_intraday_exit_30m.json"
     },
     {
@@ -643,6 +736,7 @@
       "mode": "download_complete",
       "provider": "Databento",
       "scenario": "oos_2024_sep_remainder_intraday_exit_30m_daily_union",
+      "selected_key_env": null,
       "source_path": "reports\\data_cost\\databento_download_result_oos_2024_09_remainder_daily_union.json"
     },
     {
@@ -944,94 +1038,94 @@
         {
           "estimated_cost_usd": 10.226392,
           "item_id": "databento_cost_h_a2_2022_09_stress",
-          "projected_known_estimated_cost_usd": 206.584445,
+          "projected_known_estimated_cost_usd": 218.946428,
           "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_09_stress.json"
         },
         {
           "estimated_cost_usd": 1.543901,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk2",
-          "projected_known_estimated_cost_usd": 197.901954,
+          "projected_known_estimated_cost_usd": 210.263937,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json"
         },
         {
           "estimated_cost_usd": 1.526606,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk3",
-          "projected_known_estimated_cost_usd": 197.884659,
+          "projected_known_estimated_cost_usd": 210.246642,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json"
         },
         {
           "estimated_cost_usd": 1.460004,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk1",
-          "projected_known_estimated_cost_usd": 197.818057,
+          "projected_known_estimated_cost_usd": 210.18004,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json"
         },
         {
           "estimated_cost_usd": 0.358536,
           "item_id": "databento_cost_2024_02_13_intraday_exit_30m",
-          "projected_known_estimated_cost_usd": 196.716589,
+          "projected_known_estimated_cost_usd": 209.078572,
           "source_path": "reports\\data_cost\\databento_cost_2024_02_13_intraday_exit_30m.json"
         },
         {
           "estimated_cost_usd": 0.338082,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29",
-          "projected_known_estimated_cost_usd": 196.696135,
+          "projected_known_estimated_cost_usd": 209.058118,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29.json"
         },
         {
           "estimated_cost_usd": 0.337333,
           "item_id": "databento_cost_insample_2023_12_intraday_exit_30m_sample",
-          "projected_known_estimated_cost_usd": 196.695386,
+          "projected_known_estimated_cost_usd": 209.057369,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_12_intraday_exit_30m_sample.json"
         },
         {
           "estimated_cost_usd": 0.32245,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28",
-          "projected_known_estimated_cost_usd": 196.680503,
+          "projected_known_estimated_cost_usd": 209.042486,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28.json"
         },
         {
           "estimated_cost_usd": 0.316463,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27",
-          "projected_known_estimated_cost_usd": 196.674516,
+          "projected_known_estimated_cost_usd": 209.036499,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json"
         },
         {
           "estimated_cost_usd": 0.312721,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25",
-          "projected_known_estimated_cost_usd": 196.670774,
+          "projected_known_estimated_cost_usd": 209.032757,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json"
         },
         {
           "estimated_cost_usd": 0.307899,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26",
-          "projected_known_estimated_cost_usd": 196.665952,
+          "projected_known_estimated_cost_usd": 209.027935,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json"
         },
         {
           "estimated_cost_usd": 0.301829,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_sample",
-          "projected_known_estimated_cost_usd": 196.659882,
+          "projected_known_estimated_cost_usd": 209.021865,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_sample.json"
         },
         {
           "estimated_cost_usd": 0.022813,
           "item_id": "spy_bars:oos_2024_q4_completion",
-          "projected_known_estimated_cost_usd": 196.380866,
+          "projected_known_estimated_cost_usd": 208.742849,
           "source_path": "reports\\data_cost\\databento_spy_bars_plan_oos_2024_q4_completion.json"
         },
         {
           "estimated_cost_usd": 0.001556,
           "item_id": "spy_bars:2024_09_chunk4",
-          "projected_known_estimated_cost_usd": 196.359609,
+          "projected_known_estimated_cost_usd": 208.721592,
           "source_path": "reports\\data_cost\\databento_spy_bars_plan_2024_09_chunk4.json"
         }
       ],
       "would_exceed_stop_threshold_if_all_estimates_committed": true
     },
     "known_committed_estimate_basis": {
-      "remaining_usd": -71.358053,
+      "remaining_usd": -83.720036,
       "status": "blocked",
-      "used_usd": 196.358053
+      "used_usd": 208.720036
     },
     "stop_threshold_usd": 125.0
   },
@@ -1150,7 +1244,7 @@
       "source_path": "reports\\data_cost\\databento_spy_bars_plan_oos_2024_q4_completion.json"
     }
   ],
-  "known_committed_estimated_cost_usd": 196.358053,
+  "known_committed_estimated_cost_usd": 208.720036,
   "remaining_before_stop_usd": 4.505632,
   "status": "pass",
   "stop_threshold_usd": 125.0,

@@ -3,10 +3,12 @@
   "experiment_root": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\reports",
   "git": {
     "blockers": [],
+    "current_log_count": 1,
     "is_repo": true,
+    "legacy_log_count": 41,
     "nested_repo_present": false,
     "remote_matches_expected": true,
-    "tracked_log_count": 41,
+    "tracked_log_count": 42,
     "untracked_logs": []
   },
   "invalid_log_filenames": [],
@@ -16,7 +18,7 @@
     {
       "expected_pattern": "???-higanbana-exit-behavior-diagnostic-real-data*.md",
       "matched_logs": [
-        "research_log\\003-higanbana-exit-behavior-diagnostic-real-data.md"
+        "research_log\\legacy_format\\003-higanbana-exit-behavior-diagnostic-real-data.md"
       ],
       "present": true,
       "summary_id": "m4_exit_behavior_diagnostic_summary",
@@ -25,7 +27,7 @@
     {
       "expected_pattern": "???-higanbana-orb-baseline-real-data*.md",
       "matched_logs": [
-        "research_log\\001-higanbana-orb-baseline-real-data.md"
+        "research_log\\legacy_format\\001-higanbana-orb-baseline-real-data.md"
       ],
       "present": true,
       "summary_id": "subsystem_a_orb_baseline_summary",
@@ -34,7 +36,7 @@
     {
       "expected_pattern": "???-higanbana-put-ratio-feasibility-real-data*.md",
       "matched_logs": [
-        "research_log\\002-higanbana-put-ratio-feasibility-real-data.md"
+        "research_log\\legacy_format\\002-higanbana-put-ratio-feasibility-real-data.md"
       ],
       "present": true,
       "summary_id": "subsystem_b_put_ratio_feasibility_summary",
@@ -43,7 +45,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-2022-10-coarse-stress-review*.md",
       "matched_logs": [
-        "research_log\\021-higanbana-h-a2-2022-10-coarse-stress-review.md"
+        "research_log\\legacy_format\\021-higanbana-h-a2-2022-10-coarse-stress-review.md"
       ],
       "present": true,
       "summary_id": "h_a2_2022_10_coarse_stress_review",
@@ -52,7 +54,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-breakeven-aware-train-diagnostic*.md",
       "matched_logs": [
-        "research_log\\040-higanbana-h-a2-breakeven-aware-train-diagnostic.md"
+        "research_log\\legacy_format\\040-higanbana-h-a2-breakeven-aware-train-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_a2_breakeven_aware_rule_train_diagnostic",
@@ -61,7 +63,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-independent-validation-feasibility*.md",
       "matched_logs": [
-        "research_log\\033-higanbana-h-a2-independent-validation-feasibility.md"
+        "research_log\\legacy_format\\033-higanbana-h-a2-independent-validation-feasibility.md"
       ],
       "present": true,
       "summary_id": "h_a2_independent_validation_feasibility",
@@ -70,7 +72,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-independent-validation-import-diagnostic*.md",
       "matched_logs": [
-        "research_log\\034-higanbana-h-a2-independent-validation-import-diagnostic.md"
+        "research_log\\legacy_format\\034-higanbana-h-a2-independent-validation-import-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_a2_independent_validation_import_diagnostic",
@@ -79,7 +81,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-mechanism-revision-audit*.md",
       "matched_logs": [
-        "research_log\\039-higanbana-h-a2-mechanism-revision-audit.md"
+        "research_log\\legacy_format\\039-higanbana-h-a2-mechanism-revision-audit.md"
       ],
       "present": true,
       "summary_id": "h_a2_mechanism_revision_audit",
@@ -88,7 +90,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-normal-control-exact-replay*.md",
       "matched_logs": [
-        "research_log\\036-higanbana-h-a2-normal-control-exact-replay.md"
+        "research_log\\legacy_format\\036-higanbana-h-a2-normal-control-exact-replay.md"
       ],
       "present": true,
       "summary_id": "h_a2_normal_control_exact_replay",
@@ -97,7 +99,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-normal-control-import-diagnostic*.md",
       "matched_logs": [
-        "research_log\\035-higanbana-h-a2-normal-control-import-diagnostic.md"
+        "research_log\\legacy_format\\035-higanbana-h-a2-normal-control-import-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_a2_normal_control_import_diagnostic",
@@ -106,7 +108,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-post-stress-normalization-control-exact-replay*.md",
       "matched_logs": [
-        "research_log\\038-higanbana-h-a2-post-stress-normalization-control-exact-replay.md"
+        "research_log\\legacy_format\\038-higanbana-h-a2-post-stress-normalization-control-exact-replay.md"
       ],
       "present": true,
       "summary_id": "h_a2_post_stress_normalization_control_exact_replay",
@@ -115,7 +117,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-post-stress-normalization-control-import-diagnostic*.md",
       "matched_logs": [
-        "research_log\\037-higanbana-h-a2-post-stress-normalization-control-import-diagnostic.md"
+        "research_log\\legacy_format\\037-higanbana-h-a2-post-stress-normalization-control-import-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_a2_post_stress_normalization_control_import_diagnostic",
@@ -124,7 +126,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-residual-adverse-day-analysis*.md",
       "matched_logs": [
-        "research_log\\026-higanbana-h-a2-residual-adverse-day-analysis.md"
+        "research_log\\legacy_format\\026-higanbana-h-a2-residual-adverse-day-analysis.md"
       ],
       "present": true,
       "summary_id": "h_a2_residual_adverse_day_analysis",
@@ -133,7 +135,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-acceptance-blocker-review*.md",
       "matched_logs": [
-        "research_log\\019-higanbana-gamma-acceptance-blocker-review.md"
+        "research_log\\legacy_format\\019-higanbana-gamma-acceptance-blocker-review.md"
       ],
       "present": true,
       "summary_id": "h_g1_acceptance_blocker_review",
@@ -142,7 +144,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-bucket-policy-comparison*.md",
       "matched_logs": [
-        "research_log\\017-higanbana-gamma-bucket-policy-comparison.md"
+        "research_log\\legacy_format\\017-higanbana-gamma-bucket-policy-comparison.md"
       ],
       "present": true,
       "summary_id": "h_g1_bucket_policy_comparison",
@@ -151,7 +153,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-oi-regime-diagnostic*.md",
       "matched_logs": [
-        "research_log\\013-higanbana-gamma-oi-regime-diagnostic.md"
+        "research_log\\legacy_format\\013-higanbana-gamma-oi-regime-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_g1_gamma_regime_diagnostic_summary",
@@ -160,7 +162,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-oi-regime-diagnostic*.md",
       "matched_logs": [
-        "research_log\\013-higanbana-gamma-oi-regime-diagnostic.md"
+        "research_log\\legacy_format\\013-higanbana-gamma-oi-regime-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_g1_gamma_regime_diagnostic_summary_v2_10date",
@@ -169,7 +171,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-oi-manifest-v3-diagnostic*.md",
       "matched_logs": [
-        "research_log\\015-higanbana-gamma-oi-manifest-v3-diagnostic.md"
+        "research_log\\legacy_format\\015-higanbana-gamma-oi-manifest-v3-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_g1_gamma_regime_diagnostic_summary_v3",
@@ -178,7 +180,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-side-aware-diagnostic*.md",
       "matched_logs": [
-        "research_log\\018-higanbana-gamma-side-aware-diagnostic.md"
+        "research_log\\legacy_format\\018-higanbana-gamma-side-aware-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_g1_gamma_regime_diagnostic_summary_v3_side_aware",
@@ -187,7 +189,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-oi-v3-bucket-policy-diagnostic*.md",
       "matched_logs": [
-        "research_log\\016-higanbana-gamma-oi-v3-bucket-policy-diagnostic.md"
+        "research_log\\legacy_format\\016-higanbana-gamma-oi-v3-bucket-policy-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_g1_manifest_v3_bucket_failure_diagnostic",
@@ -196,7 +198,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-october-2022-stress-exact-replay*.md",
       "matched_logs": [
-        "research_log\\041-higanbana-h-a2-october-2022-stress-exact-replay.md"
+        "research_log\\legacy_format\\041-higanbana-h-a2-october-2022-stress-exact-replay.md"
       ],
       "present": true,
       "summary_id": "h_a2_2022_10_stress_exact_replay_summary",
@@ -205,16 +207,25 @@
     {
       "expected_pattern": "???-higanbana-h-a2-delayed-entry-condition*.md",
       "matched_logs": [
-        "research_log\\030-higanbana-h-a2-delayed-entry-condition.md"
+        "research_log\\legacy_format\\030-higanbana-h-a2-delayed-entry-condition.md"
       ],
       "present": true,
       "summary_id": "h_a2_delayed_entry_condition_summary",
       "summary_path": "reports\\experiments\\h_a2_delayed_entry_condition_summary.json"
     },
     {
+      "expected_pattern": "???-higanbana-h-a2-fresh-oos-timestamp-clean-checkpoint*.md",
+      "matched_logs": [
+        "research_log\\001-higanbana-h-a2-fresh-oos-timestamp-clean-checkpoint.md"
+      ],
+      "present": true,
+      "summary_id": "h_a2_fresh_oos_timestamp_clean_checkpoint",
+      "summary_path": "reports\\experiments\\h_a2_fresh_oos_timestamp_clean_checkpoint.json"
+    },
+    {
       "expected_pattern": "???-higanbana-h-a2-locked-condition-signal-attribution*.md",
       "matched_logs": [
-        "research_log\\029-higanbana-h-a2-locked-condition-signal-attribution.md"
+        "research_log\\legacy_format\\029-higanbana-h-a2-locked-condition-signal-attribution.md"
       ],
       "present": true,
       "summary_id": "h_a2_locked_condition_signal_attribution_summary",
@@ -223,7 +234,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-lower-resolution-proxy*.md",
       "matched_logs": [
-        "research_log\\022-higanbana-h-a2-lower-resolution-proxy.md"
+        "research_log\\legacy_format\\022-higanbana-h-a2-lower-resolution-proxy.md"
       ],
       "present": true,
       "summary_id": "h_a2_lower_resolution_proxy_summary",
@@ -232,7 +243,7 @@
     {
       "expected_pattern": "???-higanbana-macro-conditioned-orb-reanalysis*.md",
       "matched_logs": [
-        "research_log\\011-higanbana-macro-conditioned-orb-reanalysis.md"
+        "research_log\\legacy_format\\011-higanbana-macro-conditioned-orb-reanalysis.md"
       ],
       "present": true,
       "summary_id": "h_a2_macro_conditioned_reanalysis_summary",
@@ -241,7 +252,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-original-entry-revision*.md",
       "matched_logs": [
-        "research_log\\031-higanbana-h-a2-original-entry-revision.md"
+        "research_log\\legacy_format\\031-higanbana-h-a2-original-entry-revision.md"
       ],
       "present": true,
       "summary_id": "h_a2_original_entry_revision_summary",
@@ -250,7 +261,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-original-entry-robustness-prioritization*.md",
       "matched_logs": [
-        "research_log\\032-higanbana-h-a2-original-entry-robustness-prioritization.md"
+        "research_log\\legacy_format\\032-higanbana-h-a2-original-entry-robustness-prioritization.md"
       ],
       "present": true,
       "summary_id": "h_a2_original_entry_robustness_prioritization_summary",
@@ -259,7 +270,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-proxy-first-robustness*.md",
       "matched_logs": [
-        "research_log\\024-higanbana-h-a2-proxy-first-robustness.md"
+        "research_log\\legacy_format\\024-higanbana-h-a2-proxy-first-robustness.md"
       ],
       "present": true,
       "summary_id": "h_a2_proxy_first_robustness_summary",
@@ -268,7 +279,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-revised-condition-robustness*.md",
       "matched_logs": [
-        "research_log\\028-higanbana-h-a2-revised-condition-robustness.md"
+        "research_log\\legacy_format\\028-higanbana-h-a2-revised-condition-robustness.md"
       ],
       "present": true,
       "summary_id": "h_a2_revised_condition_robustness_summary",
@@ -277,7 +288,7 @@
     {
       "expected_pattern": "???-higanbana-h-a2-revised-opening-followthrough-condition*.md",
       "matched_logs": [
-        "research_log\\027-higanbana-h-a2-revised-opening-followthrough-condition.md"
+        "research_log\\legacy_format\\027-higanbana-h-a2-revised-opening-followthrough-condition.md"
       ],
       "present": true,
       "summary_id": "h_a2_revised_opening_followthrough_condition_summary",
@@ -286,7 +297,7 @@
     {
       "expected_pattern": "???-higanbana-h-b2-falsification-review*.md",
       "matched_logs": [
-        "research_log\\023-higanbana-h-b2-falsification-review.md"
+        "research_log\\legacy_format\\023-higanbana-h-b2-falsification-review.md"
       ],
       "present": true,
       "summary_id": "h_b2_falsification_review",
@@ -295,7 +306,7 @@
     {
       "expected_pattern": "???-higanbana-subsystem-b-scale-diagnostic*.md",
       "matched_logs": [
-        "research_log\\012-higanbana-subsystem-b-scale-diagnostic.md"
+        "research_log\\legacy_format\\012-higanbana-subsystem-b-scale-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_b2_subsystem_b_scale_summary",
@@ -304,7 +315,7 @@
     {
       "expected_pattern": "???-higanbana-gamma-strategy-ablation-diagnostic*.md",
       "matched_logs": [
-        "research_log\\020-higanbana-gamma-strategy-ablation-diagnostic.md"
+        "research_log\\legacy_format\\020-higanbana-gamma-strategy-ablation-diagnostic.md"
       ],
       "present": true,
       "summary_id": "h_g1_gamma_strategy_ablation_summary",
@@ -313,7 +324,7 @@
     {
       "expected_pattern": "???-higanbana-h-l1-macro-event-proxy-baseline*.md",
       "matched_logs": [
-        "research_log\\025-higanbana-h-l1-macro-event-proxy-baseline.md"
+        "research_log\\legacy_format\\025-higanbana-h-l1-macro-event-proxy-baseline.md"
       ],
       "present": true,
       "summary_id": "h_l1_macro_event_proxy_baseline_summary",
@@ -322,7 +333,7 @@
     {
       "expected_pattern": "???-higanbana-entry-timing-sensitivity-real-data*.md",
       "matched_logs": [
-        "research_log\\006-higanbana-entry-timing-sensitivity-real-data.md"
+        "research_log\\legacy_format\\006-higanbana-entry-timing-sensitivity-real-data.md"
       ],
       "present": true,
       "summary_id": "m5_entry_timing_sensitivity_summary",
@@ -331,7 +342,7 @@
     {
       "expected_pattern": "???-higanbana-exit-target-stop-sensitivity-real-data*.md",
       "matched_logs": [
-        "research_log\\007-higanbana-exit-target-stop-sensitivity-real-data.md"
+        "research_log\\legacy_format\\007-higanbana-exit-target-stop-sensitivity-real-data.md"
       ],
       "present": true,
       "summary_id": "m5_exit_target_stop_sensitivity_summary",
@@ -340,7 +351,7 @@
     {
       "expected_pattern": "???-higanbana-portfolio-construction-diagnostic-real-data*.md",
       "matched_logs": [
-        "research_log\\009-higanbana-portfolio-construction-diagnostic-real-data.md"
+        "research_log\\legacy_format\\009-higanbana-portfolio-construction-diagnostic-real-data.md"
       ],
       "present": true,
       "summary_id": "m5_portfolio_construction_diagnostic_summary",
@@ -349,7 +360,7 @@
     {
       "expected_pattern": "???-higanbana-regime-filter-sensitivity-real-data*.md",
       "matched_logs": [
-        "research_log\\008-higanbana-regime-filter-sensitivity-real-data.md"
+        "research_log\\legacy_format\\008-higanbana-regime-filter-sensitivity-real-data.md"
       ],
       "present": true,
       "summary_id": "m5_regime_filter_sensitivity_summary",
@@ -358,7 +369,7 @@
     {
       "expected_pattern": "???-higanbana-strike-selection-sensitivity-real-data*.md",
       "matched_logs": [
-        "research_log\\005-higanbana-strike-selection-sensitivity-real-data.md"
+        "research_log\\legacy_format\\005-higanbana-strike-selection-sensitivity-real-data.md"
       ],
       "present": true,
       "summary_id": "m5_strike_selection_sensitivity_summary",
@@ -367,7 +378,7 @@
     {
       "expected_pattern": "???-higanbana-structural-break-deferred-real-data*.md",
       "matched_logs": [
-        "research_log\\010-higanbana-structural-break-deferred-real-data.md"
+        "research_log\\legacy_format\\010-higanbana-structural-break-deferred-real-data.md"
       ],
       "present": true,
       "summary_id": "m5_structural_break_assessment_summary",
@@ -376,7 +387,7 @@
     {
       "expected_pattern": "???-higanbana-transaction-cost-latency-sensitivity-real-data*.md",
       "matched_logs": [
-        "research_log\\004-higanbana-transaction-cost-latency-sensitivity-real-data.md"
+        "research_log\\legacy_format\\004-higanbana-transaction-cost-latency-sensitivity-real-data.md"
       ],
       "present": true,
       "summary_id": "m5_transaction_cost_latency_sensitivity_summary",
@@ -387,52 +398,12 @@
   "sequence": {
     "blockers": [],
     "contiguous_from_001": true,
-    "existing_log_count": 41,
-    "next_filename_prefix": "042-higanbana-",
-    "next_log_number": "042",
+    "existing_log_count": 1,
+    "next_filename_prefix": "002-higanbana-",
+    "next_log_number": "002",
     "sequence_issues": [],
     "valid_log_numbers": [
-      "001",
-      "002",
-      "003",
-      "004",
-      "005",
-      "006",
-      "007",
-      "008",
-      "009",
-      "010",
-      "011",
-      "012",
-      "013",
-      "014",
-      "015",
-      "016",
-      "017",
-      "018",
-      "019",
-      "020",
-      "021",
-      "022",
-      "023",
-      "024",
-      "025",
-      "026",
-      "027",
-      "028",
-      "029",
-      "030",
-      "031",
-      "032",
-      "033",
-      "034",
-      "035",
-      "036",
-      "037",
-      "038",
-      "039",
-      "040",
-      "041"
+      "001"
     ]
   },
   "status": "pass"

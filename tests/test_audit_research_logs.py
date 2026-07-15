@@ -32,7 +32,7 @@ class AuditResearchLogsTests(unittest.TestCase):
         result = self.auditor.audit_research_logs()
 
         self.assertEqual("pass", result["status"])
-        self.assertEqual(41, len(result["required_logs"]))
+        self.assertEqual(42, len(result["required_logs"]))
         summary_ids = {item["summary_id"] for item in result["required_logs"]}
         self.assertIn("subsystem_a_orb_baseline_summary", summary_ids)
         self.assertIn("subsystem_b_put_ratio_feasibility_summary", summary_ids)
@@ -71,14 +71,43 @@ class AuditResearchLogsTests(unittest.TestCase):
         self.assertIn("m5_portfolio_construction_diagnostic_summary", summary_ids)
         self.assertIn("m5_structural_break_assessment_summary", summary_ids)
         self.assertTrue(all(item["present"] for item in result["required_logs"]))
-        self.assertEqual("042", result["sequence"]["next_log_number"])
-        self.assertEqual("042-higanbana-", result["sequence"]["next_filename_prefix"])
+        self.assertEqual("002", result["sequence"]["next_log_number"])
+        self.assertEqual("002-higanbana-", result["sequence"]["next_filename_prefix"])
         self.assertTrue(result["sequence"]["contiguous_from_001"])
         self.assertEqual([], result["git"]["blockers"])
         self.assertTrue(result["git"]["remote_matches_expected"])
         self.assertFalse(result["git"]["nested_repo_present"])
-        self.assertEqual(41, result["git"]["tracked_log_count"])
+        self.assertEqual(42, result["git"]["tracked_log_count"])
+        self.assertEqual(1, result["git"]["current_log_count"])
+        self.assertEqual(41, result["git"]["legacy_log_count"])
         self.assertEqual([], result["git"]["untracked_logs"])
+
+    def test_completed_experiment_log_can_be_found_in_legacy_archive(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            experiment_root = root / "experiments"
+            log_root = root / "research_log"
+            legacy_root = log_root / "legacy_format"
+            experiment_root.mkdir()
+            legacy_root.mkdir(parents=True)
+            (experiment_root / "exp01_real_summary.json").write_text(
+                json.dumps({"research_log_required": True, "research_log_slug": "higanbana_exp01_real"}),
+                encoding="utf-8",
+            )
+            (legacy_root / "001-higanbana-exp01-real-baseline.md").write_text(
+                self.legacy_log_text(),
+                encoding="utf-8",
+            )
+
+            result = self.auditor.audit_research_logs(
+                log_root,
+                experiment_root,
+                git_runner=self.clean_git_runner(),
+            )
+
+        self.assertEqual("pass", result["status"])
+        self.assertTrue(result["required_logs"][0]["present"])
+        self.assertEqual("001", result["sequence"]["next_log_number"])
 
     def test_missing_log_blocks(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -359,14 +388,14 @@ class AuditResearchLogsTests(unittest.TestCase):
             result["blockers"],
         )
 
-    def test_log_042_requires_new_research_structure(self) -> None:
+    def test_current_log_001_requires_new_research_structure(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             experiment_root = root / "experiments"
             log_root = root / "research_log"
             experiment_root.mkdir()
             log_root.mkdir()
-            (log_root / "042-higanbana-new-question.md").write_text(self.valid_log_text(), encoding="utf-8")
+            (log_root / "001-higanbana-new-question.md").write_text(self.legacy_log_text(), encoding="utf-8")
 
             result = self.auditor.audit_research_logs(
                 log_root,
@@ -375,18 +404,18 @@ class AuditResearchLogsTests(unittest.TestCase):
             )
 
         self.assertIn(
-            "research_log_readability_issue:042-higanbana-new-question.md:research_format_v2_section_mismatch",
+            "research_log_readability_issue:001-higanbana-new-question.md:research_format_v2_section_mismatch",
             result["blockers"],
         )
 
-    def test_log_042_accepts_six_sections_and_research_labels(self) -> None:
+    def test_current_log_001_accepts_six_sections_and_research_labels(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             experiment_root = root / "experiments"
             log_root = root / "research_log"
             experiment_root.mkdir()
             log_root.mkdir()
-            (log_root / "042-higanbana-bounded-question.md").write_text(
+            (log_root / "001-higanbana-bounded-question.md").write_text(
                 self.valid_v2_log_text(),
                 encoding="utf-8",
             )
@@ -401,7 +430,7 @@ class AuditResearchLogsTests(unittest.TestCase):
         self.assertNotIn("research_format_v2_section_mismatch", issues)
         self.assertFalse(any(issue.startswith("research_format_v2_missing_label:") for issue in issues))
 
-    def test_log_042_rejects_empty_scope_and_overlong_question(self) -> None:
+    def test_current_log_001_rejects_empty_scope_and_overlong_question(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             experiment_root = root / "experiments"
@@ -412,7 +441,7 @@ class AuditResearchLogsTests(unittest.TestCase):
                 "คำถามวิจัย: กฎที่กำหนดให้ผลตามเกณฑ์หรือไม่",
                 f"คำถามวิจัย: {'ก' * 301}",
             ).replace("ขอบเขต: SPY ในข้อมูล OOS ที่ล็อกไว้", "ขอบเขต:")
-            (log_root / "042-higanbana-unbounded-question.md").write_text(text, encoding="utf-8")
+            (log_root / "001-higanbana-unbounded-question.md").write_text(text, encoding="utf-8")
 
             result = self.auditor.audit_research_logs(
                 log_root,
@@ -426,6 +455,10 @@ class AuditResearchLogsTests(unittest.TestCase):
 
     @staticmethod
     def valid_log_text() -> str:
+        return AuditResearchLogsTests.valid_v2_log_text()
+
+    @staticmethod
+    def legacy_log_text() -> str:
         return "# บันทึกการวิจัย: Test\n\n## 2. วัตถุประสงค์\n\n### อ่านแบบเร็ว\n\nอ่านง่าย\n"
 
     @staticmethod

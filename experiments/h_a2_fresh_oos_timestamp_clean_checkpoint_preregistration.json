@@ -1,0 +1,128 @@
+{
+  "schema_version": "h_a2_fresh_oos_timestamp_clean_checkpoint_preregistration_v1",
+  "artifact_type": "preregistration",
+  "status": "preregistered",
+  "created_date": "2026-07-15",
+  "hypothesis_id": "H-A2",
+  "experiment_id": "h_a2_fresh_oos_timestamp_clean_checkpoint",
+  "evidence_tier": "E0",
+  "research_question": "ภายใต้ prior-close VIX ต่ำกว่า 25 และไม่มีข่าวมหภาคสำคัญ สัญญาณ ORB ที่รู้ได้จริงเวลา 09:35 ทำให้ SPY 0DTE debit vertical spread หลังต้นทุนมีผลตอบแทนเฉลี่ยเป็นบวกในข้อมูล OOS ใหม่ 20 วันหรือไม่",
+  "scope": "ข้อมูล OOS ใหม่ 20 วันที่ซื้อไว้แล้ว แบ่งเป็น low-VIX ปี 2025 จำนวน 10 วันและ normal-VIX ปี 2026 จำนวน 10 วัน ใช้เฉพาะสัญญาณที่รู้ได้ไม่เกิน 09:35 ET และปิดที่ 15:45 ET ไม่รวม prior-close VIX ตั้งแต่ 25 ขึ้นไปหรือวันข่าวมหภาคสำคัญ",
+  "hypothesis": "หาก macro-conditioned ORB มี edge จริง การทะลุกรอบเปิดที่ยืนยันได้เวลา 09:35 ควรสร้าง candidate อย่างน้อย 2 รายการ และค่าเฉลี่ย implementable PnL หลัง bid-ask กับค่าธรรมเนียมควรเป็นบวก โดยไม่ใช้ผลลัพธ์หลังเวลาเข้าเป็นตัวคัดเลือก",
+  "source_artifacts": [
+    "reports/data_cost/h_a2_fresh_oos_2025_2026_decision_tree_cost_plan.json",
+    "experiments/h_a2_fresh_oos_paid_download_decision.json",
+    "reports/data_cost/h_a2_fresh_oos_2025_2026_live_cost_estimate.json",
+    "reports/data_cost/databento_download_result_h_a2_fresh_oos_2025_2026.json"
+  ],
+  "lookahead_correction": {
+    "status": "prior_rule_invalidated_before_fresh_oos_parse",
+    "affected_feature": "proxy_5m.directional_followthrough_to_close_pct",
+    "future_information_used": "15:45 ET underlying close",
+    "incorrect_prior_claim": "Feature was described as available at 09:35 ET.",
+    "corrective_rule": "Do not use threshold 0.001 or any post-09:35 value to select candidates in this checkpoint.",
+    "fresh_outcomes_viewed_before_correction": false,
+    "historical_evidence_effect": "Earlier H-A2 results that selected trades with this feature cannot support an edge claim and must be treated as lookahead-contaminated diagnostics."
+  },
+  "wiki_citations": [
+    {"path": "concepts/lookahead-leakage.md", "sha256": "b08046e58a62e321e93e53ea008758e5be34fcd23847a11f0d8834a922f08063"},
+    {"path": "concepts/backtest-validation-protocol.md", "sha256": "c7f843310706d902120651e677429e66cbde9ce96ee526544de5419ee99aefa0"},
+    {"path": "concepts/spy-zero-dte-opening-range-breakout.md", "sha256": "8c4a10e92812a9f75477f785dfb2f2159923145a2845f16ace2b5d37affb512a"},
+    {"path": "concepts/implementable-option-pnl.md", "sha256": "a16b27240c798fba627786ee9cdc00d589f28656fff9e5a893ca97f810709e48"},
+    {"path": "concepts/minimum-track-record-length.md", "sha256": "ca65225740673bd363be7461b8022281da08ae32e6ff42f8887f1072eb51ad81"},
+    {"path": "concepts/probabilistic-sharpe-ratio.md", "sha256": "a644495d207403711a55d815abb0722018bba23d428d3d904dd6c4b5a8cef6a5"}
+  ],
+  "target_dates": {
+    "low_vix_2025": ["2025-08-13", "2025-08-14", "2025-08-15", "2025-08-19", "2025-08-25", "2025-08-26", "2025-08-27", "2025-08-28", "2025-09-12", "2025-09-15"],
+    "normal_vix_2026": ["2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24"]
+  },
+  "provider_quality_warning_dates": ["2025-08-13", "2025-08-19", "2025-08-25", "2025-09-12"],
+  "candidate_rule": {
+    "decision_time_et": "09:35:00",
+    "opening_range_et": "09:30:00 <= bar timestamp < 09:35:00",
+    "decision_bar_et": "09:35:00",
+    "call": "09:35 close > maximum high of the opening-range bars",
+    "put": "09:35 close < minimum low of the opening-range bars",
+    "no_trade": "09:35 close remains inside or on the opening range",
+    "numeric_breakout_threshold": null,
+    "prior_vix_rule": "prior_close_vix < 25",
+    "macro_rule": "no high-importance macro event on the trade date",
+    "post_decision_feature_allowed": false
+  },
+  "option_replay_rule": {
+    "strategy": "directional SPY 0DTE debit vertical spread",
+    "entry_time_et": "09:35:00",
+    "forced_close_time_et": "15:45:00",
+    "target_gap_points": 1.48,
+    "width_points": 2.0,
+    "strike_mapping": "nearest_discrete_strike_rounding",
+    "interpolation_allowed": false,
+    "entry_mid_control": "long mid minus short mid",
+    "entry_implementable": "long ask minus short bid",
+    "forced_close_mid_control": "long mid minus short mid",
+    "forced_close_implementable": "long bid minus short ask",
+    "fee_per_leg_usd": 0.64,
+    "fee_leg_count": 4,
+    "contract_multiplier": 100
+  },
+  "required_outputs": [
+    "raw and timestamp coverage by date",
+    "candidate count by VIX bucket",
+    "cost per candidate",
+    "mid PnL and implementable PnL for every candidate",
+    "results including and excluding provider-warning dates",
+    "PSR and MinTRL against null Sharpe 0 and 0.5 where mathematically defined",
+    "under-sampled and underpowered labels",
+    "big-day dependency by removing the largest absolute candidate PnL",
+    "explicit stop or continue decision"
+  ],
+  "success_and_stop_rules": {
+    "hypothesis_support_requires": [
+      "candidate_count >= 2",
+      "mean_implementable_pnl > 0",
+      "result is not reversed after removing the largest absolute candidate PnL when at least 3 candidates exist"
+    ],
+    "automatic_expansion_forbidden": true,
+    "stop_if": [
+      "candidate_count < 2",
+      "observed candidate Sharpe <= 0 so MinTRL_falsify is undefined",
+      "projected additional cost to MinTRL exceeds the remaining DATABENTO_API_01 authorization headroom",
+      "provider-warning dates determine the sign of mean implementable PnL"
+    ],
+    "conclusion_labels": ["ผ่าน", "ไม่ผ่าน", "ยังสรุปไม่ได้"]
+  },
+  "trial_policy": {
+    "trial_count": 1,
+    "parameter_search_used": false,
+    "threshold_search_used": false,
+    "oos_tuning_used": false,
+    "dsr_status": "not_applicable_single_fixed_rule_no_parameter_search"
+  },
+  "guardrails": {
+    "network_allowed": false,
+    "additional_paid_data_allowed": false,
+    "new_provider_allowed": false,
+    "ibkr_request_allowed": false,
+    "llm_call_allowed": false,
+    "gdelt_retry_allowed": false,
+    "paper_trading_allowed": false,
+    "operational_validation_allowed": false,
+    "real_money_allowed": false,
+    "e2_claim_allowed": false,
+    "research_log_required_for_run": true,
+    "research_log_required_for_preregistration": false
+  },
+  "planned_outputs": {
+    "summary_json": "reports/experiments/h_a2_fresh_oos_timestamp_clean_checkpoint.json",
+    "summary_md": "reports/experiments/h_a2_fresh_oos_timestamp_clean_checkpoint.md",
+    "search_log": "reports/experiments/search_logs/h_a2_fresh_oos_timestamp_clean_checkpoint.jsonl",
+    "research_log": "research_log/001-higanbana-h-a2-fresh-oos-timestamp-clean-checkpoint.md"
+  },
+  "forbidden_claims": [
+    "Do not describe the invalidated 0.001 close-followthrough feature as known at 09:35.",
+    "Do not tune a new breakout threshold on these 20 dates.",
+    "Do not extrapolate results to prior-close VIX >= 25 or high-importance macro days.",
+    "Do not claim E2, paper-trading readiness, operational validation, or real-money readiness.",
+    "Do not buy additional data from this checkpoint without a new decision-tree artifact."
+  ]
+}
