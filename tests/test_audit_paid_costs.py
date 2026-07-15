@@ -41,6 +41,10 @@ class AuditPaidCostsTests(unittest.TestCase):
             "primary_existing_databento_account",
             result["budget_policy"]["per_key_ledger"]["DATABENTO_API_01"]["account_provenance"],
         )
+        self.assertEqual(
+            27.886574,
+            result["budget_policy"]["per_key_ledger"]["DATABENTO_API_01"]["known_committed_estimated_usage_usd"],
+        )
         self.assertEqual(200.0, result["budget_policy"]["combined_pool_caps_usd"]["DATABENTO_API_MO+DATABENTO_API_AI"])
         self.assertLess(result["cost_guard_used_usd"], result["stop_threshold_usd"])
         self.assertGreater(result["remaining_before_stop_usd"], 0)
@@ -50,8 +54,8 @@ class AuditPaidCostsTests(unittest.TestCase):
         self.assertEqual(120.494368, reconciliation["actual_usage_basis"]["used_usd"])
         self.assertEqual(4.505632, reconciliation["actual_usage_basis"]["remaining_usd"])
         self.assertEqual("blocked", reconciliation["known_committed_estimate_basis"]["status"])
-        self.assertEqual(208.720036, reconciliation["known_committed_estimate_basis"]["used_usd"])
-        self.assertEqual(-83.720036, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
+        self.assertEqual(224.244627, reconciliation["known_committed_estimate_basis"]["used_usd"])
+        self.assertEqual(-99.244627, reconciliation["known_committed_estimate_basis"]["remaining_usd"])
         self.assertFalse(any(item["item_id"] == "spy_bars:2024_08_chunk5" for item in result["estimated_only_items"]))
 
     def test_temp_cost_root_sums_completed_downloads_without_dry_run(self) -> None:
@@ -237,6 +241,43 @@ class AuditPaidCostsTests(unittest.TestCase):
             },
             result["estimated_only_items"][0],
         )
+
+    def test_h_a2_orb_0936_download_supersedes_both_live_estimates(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for suffix, status in (("", "blocked"), ("_v2", "pass")):
+                (root / f"h_a2_orb_0936_live_cost_estimate{suffix}.json").write_text(
+                    json.dumps(
+                        {
+                            "mode": "live_metadata_cost",
+                            "status": status,
+                            "scenario": "h_a2_orb_0936_fresh_oos",
+                            "total_estimated_cost_usd": 15.524591,
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+            (root / "databento_download_result_h_a2_orb_0936.json").write_text(
+                json.dumps(
+                    {
+                        "mode": "download_complete",
+                        "scenario": "h_a2_orb_0936_fresh_oos",
+                        "hypothesis_id": "H-A2",
+                        "total_estimated_cost_usd": 15.524591,
+                        "selected_key_env": "DATABENTO_API_01",
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = self.auditor.audit_paid_costs(
+                root,
+                stop_threshold_usd=100.0,
+                experiment_root=root / "experiments",
+            )
+
+        self.assertEqual(15.524591, result["known_committed_estimated_cost_usd"])
+        self.assertEqual([], result["estimated_only_items"])
 
     def test_h_a2_metadata_estimate_is_not_estimated_only_after_download_result_exists(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

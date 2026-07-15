@@ -39,6 +39,8 @@ def discover_date_named_raw_files(raw_root: Path) -> dict[str, list[Path]]:
     for path in raw_root.rglob("*.dbn.zst"):
         if any(part.startswith("_integrity_") for part in path.parts):
             continue
+        if "daily_history" in path.name:
+            continue
         match = DATE_PATTERN.search(path.name)
         if match:
             files_by_date.setdefault(match.group(0), []).append(path)
@@ -159,6 +161,22 @@ def build_reports(root: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     classification = classify_local_dates(local_dates, viewed_dates)
     untouched = classification["untouched_dates"]
     integrity = checksum_metadata_summary(files_by_date, root)
+    vix_rows = load_jsonl(root / "normalized" / "spy_0dte" / "vix_vxv" / "vix_vxv.jsonl")
+    macro_rows = load_jsonl(root / "normalized" / "spy_0dte" / "macro_calendar" / "macro_event.jsonl")
+    high_macro_dates = {
+        str(row["event_timestamp_et"])[:10]
+        for row in macro_rows
+        if row.get("importance") == "high"
+    }
+    vix_by_date = {str(row["date"]): float(row["vix_close"]) for row in vix_rows}
+    ordered_vix_dates = sorted(vix_by_date)
+    prior_vix_by_date = {
+        ordered_vix_dates[index]: vix_by_date[ordered_vix_dates[index - 1]]
+        for index in range(1, len(ordered_vix_dates))
+    }
+    untouched_prior_vix = [prior_vix_by_date.get(trade_date) for trade_date in untouched]
+    available_prior_vix = [value for value in untouched_prior_vix if value is not None]
+    untouched_high_macro = sum(trade_date in high_macro_dates for trade_date in untouched)
 
     inventory = {
         "schema_version": "h_a2_orb_0936_untouched_inventory_v1",
@@ -174,15 +192,28 @@ def build_reports(root: Path) -> tuple[dict[str, Any], dict[str, Any]]:
         "untouched_local_date_count": len(untouched),
         "untouched_dates": untouched,
         "untouched_regime_counts": {
-            "vix": {"low": 0, "normal": 0, "out_of_scope": 0, "unavailable": 0},
-            "trend": {"uptrend": 0, "downtrend": 0, "unclassified": 0},
-            "macro": {"high_importance": 0, "control": 0, "unavailable": 0},
+            "vix": {
+                "low": sum(value < 15 for value in available_prior_vix),
+                "normal": sum(15 <= value < 25 for value in available_prior_vix),
+                "out_of_scope": sum(value >= 25 for value in available_prior_vix),
+                "unavailable": len(untouched) - len(available_prior_vix),
+            },
+            "trend": {"uptrend": 0, "downtrend": 0, "unclassified": len(untouched)},
+            "macro": {
+                "high_importance": untouched_high_macro,
+                "control": len(untouched) - untouched_high_macro,
+                "unavailable": 0,
+            },
         },
         "coverage_policy": {
             "availability": "A date must have SPY bars, complete two-leg 0DTE quotes at or after 09:37, and 15:45 close quotes.",
             "timestamp": "Signal 09:36 <= decision 09:36 <= first eligible entry quote 09:37.",
             "integrity": "Every paid raw artifact must have container and canonical-content SHA-256 metadata and pass full verification before a future run.",
-            "current_coverage_result": "not_evaluated_because_no_date_survives_untouched_gate",
+            "current_coverage_result": (
+                "raw_files_present_but_quote_and_bar_coverage_requires_separate_preregistration"
+                if untouched
+                else "not_evaluated_because_no_date_survives_untouched_gate"
+            ),
         },
         "integrity_metadata": integrity,
         "contamination_sources": {
@@ -193,8 +224,13 @@ def build_reports(root: Path) -> tuple[dict[str, Any], dict[str, Any]]:
         "sample_adequacy": {
             "exact_mintrl_status": "unknown_until_valid_timestamp_correct_returns_exist",
             "idealized_planning_scenarios": mintrl_planning_scenarios(),
-            "local_data_sufficient": False,
-            "reason": "There are zero local untouched dates before signal, quote, and integrity qualification.",
+            "raw_inventory_sufficient_for_import_preregistration": len(untouched) >= 20,
+            "validation_ready": False,
+            "reason": (
+                "Untouched raw dates are available, but coverage and target outcomes remain unread until a separate import/validation preregistration passes."
+                if untouched
+                else "There are zero local untouched dates before signal, quote, and integrity qualification."
+            ),
         },
         "guardrails": {
             "target_outcomes_parsed": False,
@@ -204,16 +240,20 @@ def build_reports(root: Path) -> tuple[dict[str, Any], dict[str, Any]]:
             "paid_cost_usd": 0.0,
             "research_log_required": False,
         },
-        "decision": "create_cost_plan_only_no_purchase",
+        "decision": (
+            "preregister_import_coverage_validation_before_outcomes"
+            if untouched
+            else "create_cost_plan_only_no_purchase"
+        ),
     }
 
-    vix_rows = load_jsonl(root / "normalized" / "spy_0dte" / "vix_vxv" / "vix_vxv.jsonl")
-    macro_rows = load_jsonl(root / "normalized" / "spy_0dte" / "macro_calendar" / "macro_event.jsonl")
-    high_macro_dates = {
-        str(row["event_timestamp_et"])[:10]
-        for row in macro_rows
-        if row.get("importance") == "high"
-    }
+    if untouched:
+        return inventory, {
+            "status": "not_required_after_approved_acquisition",
+            "target_dates": [],
+            "target_date_count": 0,
+        }
+
     target_dates = select_chronological_cost_dates(
         vix_rows,
         high_macro_dates,
@@ -315,19 +355,20 @@ def write_outputs(
             ("ข้อห้าม", "รายงานนี้อ่านเฉพาะ metadata/provenance และไม่ parse target-day PnL หรือ option outcomes จึงไม่ใช่ผลทดลองและไม่ต้องเขียน research log"),
         ],
     )
-    cost_markdown = render_markdown_report(
-        "H-A2 ORB 09:36 Cost Plan",
-        [
-            ("สถานะ", f"- `{cost_plan['status']}`\n- Mode: `{cost_plan['mode']}`\n- ยังไม่อนุญาตให้ซื้อข้อมูล"),
-            ("ขอบเขต", f"- วันที่เป้าหมาย: `{cost_plan['target_date_count']}`\n- หลัง cutoff: `{DEVELOPMENT_OUTCOMES_CUTOFF}`\n- Regime: `{json.dumps(cost_plan['target_regime_counts'], ensure_ascii=False)}`"),
-            ("วันที่เป้าหมาย", "\n".join(f"- `{row['date']}`: prior VIX `{row['prior_close_vix']}`, `{row['vix_bucket']}`, `{row['macro_regime']}`" for row in cost_plan["target_dates"])),
-            ("ประมาณการต้นทุน", _json_block(cost_plan["cost_basis"])),
-            ("MinTRL", "ค่า MinTRL ที่แม่นยำยังไม่ทราบเพราะยังไม่มี valid timestamp-correct returns ตารางใน JSON เป็นเพียง idealized scenarios สำหรับวางแผน ห้ามใช้อนุมัติ E2"),
-            ("ขั้นต่อไป", cost_plan["authorization"]["next_action"]),
-        ],
-    )
     write_report_pair(inventory, inventory_json, inventory_md, inventory_markdown)
-    write_report_pair(cost_plan, cost_json, cost_md, cost_markdown)
+    if inventory["decision"] == "create_cost_plan_only_no_purchase":
+        cost_markdown = render_markdown_report(
+            "H-A2 ORB 09:36 Cost Plan",
+            [
+                ("สถานะ", f"- `{cost_plan['status']}`\n- Mode: `{cost_plan['mode']}`\n- ยังไม่อนุญาตให้ซื้อข้อมูล"),
+                ("ขอบเขต", f"- วันที่เป้าหมาย: `{cost_plan['target_date_count']}`\n- หลัง cutoff: `{DEVELOPMENT_OUTCOMES_CUTOFF}`\n- Regime: `{json.dumps(cost_plan['target_regime_counts'], ensure_ascii=False)}`"),
+                ("วันที่เป้าหมาย", "\n".join(f"- `{row['date']}`: prior VIX `{row['prior_close_vix']}`, `{row['vix_bucket']}`, `{row['macro_regime']}`" for row in cost_plan["target_dates"])),
+                ("ประมาณการต้นทุน", _json_block(cost_plan["cost_basis"])),
+                ("MinTRL", "ค่า MinTRL ที่แม่นยำยังไม่ทราบเพราะยังไม่มี valid timestamp-correct returns ตารางใน JSON เป็นเพียง idealized scenarios สำหรับวางแผน ห้ามใช้อนุมัติ E2"),
+                ("ขั้นต่อไป", cost_plan["authorization"]["next_action"]),
+            ],
+        )
+        write_report_pair(cost_plan, cost_json, cost_md, cost_markdown)
 
 
 def _valid_sha256(value: Any) -> bool:
@@ -349,7 +390,8 @@ def main(argv: list[str] | None = None) -> int:
     inventory, cost_plan = build_reports(args.data_root)
     write_outputs(inventory, cost_plan, args.inventory_json, args.inventory_md, args.cost_json, args.cost_md)
     print(json.dumps({"inventory": inventory, "cost_plan": cost_plan}, ensure_ascii=False, indent=2, sort_keys=True))
-    return 0 if inventory["integrity_metadata"]["status"] == "pass" and len(cost_plan["target_dates"]) == 20 else 1
+    cost_requirement_met = inventory["untouched_local_date_count"] >= 20 or len(cost_plan["target_dates"]) == 20
+    return 0 if inventory["integrity_metadata"]["status"] == "pass" and cost_requirement_met else 1
 
 
 if __name__ == "__main__":

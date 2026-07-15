@@ -22,7 +22,7 @@
       "DATABENTO_API_01": {
         "account_provenance": "primary_existing_databento_account",
         "authorization_limit_usd": 50.0,
-        "known_committed_estimated_usage_usd": 12.361983
+        "known_committed_estimated_usage_usd": 27.886574
       }
     },
     "prohibited": [
@@ -65,6 +65,15 @@
       "scenario": "h_a2_normal_control_low_normal_vix_control_pack",
       "selected_key_env": "DATABENTO_API_MO",
       "source_path": "reports\\data_cost\\databento_download_result_h_a2_normal_control_low_normal_vix_control_pack.json"
+    },
+    {
+      "estimated_cost_usd": 15.524591,
+      "item_id": "h_a2_orb_0936_fresh_oos:h_a2_orb_0936",
+      "mode": "download_complete",
+      "provider": "Databento",
+      "scenario": "h_a2_orb_0936_fresh_oos",
+      "selected_key_env": "DATABENTO_API_01",
+      "source_path": "reports\\data_cost\\databento_download_result_h_a2_orb_0936.json"
     },
     {
       "estimated_cost_usd": 5.558642,
@@ -1032,106 +1041,100 @@
       "used_usd": 120.494368
     },
     "estimated_only_risk": {
-      "estimated_only_total_usd": 32.901176,
-      "single_item_threshold_breach_count": 15,
+      "estimated_only_total_usd": 17.376585,
+      "single_item_threshold_breach_count": 14,
       "single_item_threshold_breaches": [
-        {
-          "estimated_cost_usd": 15.524591,
-          "item_id": "h_a2_orb_0936_fresh_oos",
-          "projected_known_estimated_cost_usd": 224.244627,
-          "source_path": "reports\\data_cost\\h_a2_orb_0936_live_cost_estimate.json"
-        },
         {
           "estimated_cost_usd": 10.226392,
           "item_id": "databento_cost_h_a2_2022_09_stress",
-          "projected_known_estimated_cost_usd": 218.946428,
+          "projected_known_estimated_cost_usd": 234.471019,
           "source_path": "reports\\data_cost\\databento_cost_h_a2_2022_09_stress.json"
         },
         {
           "estimated_cost_usd": 1.543901,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk2",
-          "projected_known_estimated_cost_usd": 210.263937,
+          "projected_known_estimated_cost_usd": 225.788528,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json"
         },
         {
           "estimated_cost_usd": 1.526606,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk3",
-          "projected_known_estimated_cost_usd": 210.246642,
+          "projected_known_estimated_cost_usd": 225.771233,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json"
         },
         {
           "estimated_cost_usd": 1.460004,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_chunk1",
-          "projected_known_estimated_cost_usd": 210.18004,
+          "projected_known_estimated_cost_usd": 225.704631,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json"
         },
         {
           "estimated_cost_usd": 0.358536,
           "item_id": "databento_cost_2024_02_13_intraday_exit_30m",
-          "projected_known_estimated_cost_usd": 209.078572,
+          "projected_known_estimated_cost_usd": 224.603163,
           "source_path": "reports\\data_cost\\databento_cost_2024_02_13_intraday_exit_30m.json"
         },
         {
           "estimated_cost_usd": 0.338082,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29",
-          "projected_known_estimated_cost_usd": 209.058118,
+          "projected_known_estimated_cost_usd": 224.582709,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29.json"
         },
         {
           "estimated_cost_usd": 0.337333,
           "item_id": "databento_cost_insample_2023_12_intraday_exit_30m_sample",
-          "projected_known_estimated_cost_usd": 209.057369,
+          "projected_known_estimated_cost_usd": 224.58196,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_12_intraday_exit_30m_sample.json"
         },
         {
           "estimated_cost_usd": 0.32245,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28",
-          "projected_known_estimated_cost_usd": 209.042486,
+          "projected_known_estimated_cost_usd": 224.567077,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28.json"
         },
         {
           "estimated_cost_usd": 0.316463,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27",
-          "projected_known_estimated_cost_usd": 209.036499,
+          "projected_known_estimated_cost_usd": 224.56109,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json"
         },
         {
           "estimated_cost_usd": 0.312721,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25",
-          "projected_known_estimated_cost_usd": 209.032757,
+          "projected_known_estimated_cost_usd": 224.557348,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json"
         },
         {
           "estimated_cost_usd": 0.307899,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26",
-          "projected_known_estimated_cost_usd": 209.027935,
+          "projected_known_estimated_cost_usd": 224.552526,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json"
         },
         {
           "estimated_cost_usd": 0.301829,
           "item_id": "databento_cost_insample_2023_09_intraday_exit_30m_sample",
-          "projected_known_estimated_cost_usd": 209.021865,
+          "projected_known_estimated_cost_usd": 224.546456,
           "source_path": "reports\\data_cost\\databento_cost_insample_2023_09_intraday_exit_30m_sample.json"
         },
         {
           "estimated_cost_usd": 0.022813,
           "item_id": "spy_bars:oos_2024_q4_completion",
-          "projected_known_estimated_cost_usd": 208.742849,
+          "projected_known_estimated_cost_usd": 224.26744,
           "source_path": "reports\\data_cost\\databento_spy_bars_plan_oos_2024_q4_completion.json"
         },
         {
           "estimated_cost_usd": 0.001556,
           "item_id": "spy_bars:2024_09_chunk4",
-          "projected_known_estimated_cost_usd": 208.721592,
+          "projected_known_estimated_cost_usd": 224.246183,
           "source_path": "reports\\data_cost\\databento_spy_bars_plan_2024_09_chunk4.json"
         }
       ],
       "would_exceed_stop_threshold_if_all_estimates_committed": true
     },
     "known_committed_estimate_basis": {
-      "remaining_usd": -83.720036,
+      "remaining_usd": -99.244627,
       "status": "blocked",
-      "used_usd": 208.720036
+      "used_usd": 224.244627
     },
     "stop_threshold_usd": 125.0
   },
@@ -1234,14 +1237,6 @@
       "source_path": "reports\\data_cost\\databento_cost_insample_2023_12_intraday_exit_30m_sample.json"
     },
     {
-      "estimated_cost_usd": 15.524591,
-      "item_id": "h_a2_orb_0936_fresh_oos",
-      "mode": "live_metadata_cost",
-      "provider": "Databento",
-      "scenario": "h_a2_orb_0936_fresh_oos",
-      "source_path": "reports\\data_cost\\h_a2_orb_0936_live_cost_estimate.json"
-    },
-    {
       "estimated_cost_usd": 0.001556,
       "item_id": "spy_bars:2024_09_chunk4",
       "mode": "plan",
@@ -1258,7 +1253,7 @@
       "source_path": "reports\\data_cost\\databento_spy_bars_plan_oos_2024_q4_completion.json"
     }
   ],
-  "known_committed_estimated_cost_usd": 208.720036,
+  "known_committed_estimated_cost_usd": 224.244627,
   "remaining_before_stop_usd": 4.505632,
   "status": "pass",
   "stop_threshold_usd": 125.0,

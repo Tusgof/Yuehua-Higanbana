@@ -44,9 +44,10 @@ class HA2ORB0936PaidDownloadTests(unittest.TestCase):
         decision = json.loads(DEFAULT_PATH.read_text(encoding="utf-8"))
 
         self.assertEqual("pass", evaluate_cost_gate(decision, 10.0, 41, [])["status"])
+        self.assertEqual("pass", evaluate_cost_gate(decision, 15.0, 41, [])["status"])
         self.assertIn(
             "estimated_cost_exceeds_approved_ceiling",
-            evaluate_cost_gate(decision, 15.0, 41, [])["blockers"],
+            evaluate_cost_gate(decision, 15.6, 41, [])["blockers"],
         )
         decision["cost_guard"]["known_committed_selected_key_usage_usd"] = 45.0
         self.assertIn(

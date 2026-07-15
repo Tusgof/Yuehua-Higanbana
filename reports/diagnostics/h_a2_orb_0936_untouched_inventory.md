@@ -2,28 +2,28 @@
 
 ## ผลสรุป
 
-- สถานะ: `blocked_no_local_untouched_dates`
-- วันที่ local ทั้งหมด: `525`
-- วันที่ untouched: `0`
-- คำตัดสิน: `create_cost_plan_only_no_purchase`
+- สถานะ: `local_untouched_dates_available`
+- วันที่ local ทั้งหมด: `545`
+- วันที่ untouched: `20`
+- คำตัดสิน: `preregister_import_coverage_validation_before_outcomes`
 
 ## Regime ของข้อมูล Untouched
 
 ```json
 {
   "macro": {
-    "control": 0,
+    "control": 20,
     "high_importance": 0,
     "unavailable": 0
   },
   "trend": {
     "downtrend": 0,
-    "unclassified": 0,
+    "unclassified": 20,
     "uptrend": 0
   },
   "vix": {
     "low": 0,
-    "normal": 0,
+    "normal": 20,
     "out_of_scope": 0,
     "unavailable": 0
   }
@@ -67,8 +67,9 @@
       "observed_sharpe": 1.0
     }
   ],
-  "local_data_sufficient": false,
-  "reason": "There are zero local untouched dates before signal, quote, and integrity qualification."
+  "raw_inventory_sufficient_for_import_preregistration": true,
+  "reason": "Untouched raw dates are available, but coverage and target outcomes remain unread until a separate import/validation preregistration passes.",
+  "validation_ready": false
 }
 ```
 
@@ -78,16 +79,16 @@
 {
   "coverage_policy": {
     "availability": "A date must have SPY bars, complete two-leg 0DTE quotes at or after 09:37, and 15:45 close quotes.",
-    "current_coverage_result": "not_evaluated_because_no_date_survives_untouched_gate",
+    "current_coverage_result": "raw_files_present_but_quote_and_bar_coverage_requires_separate_preregistration",
     "integrity": "Every paid raw artifact must have container and canonical-content SHA-256 metadata and pass full verification before a future run.",
     "timestamp": "Signal 09:36 <= decision 09:36 <= first eligible entry quote 09:37."
   },
   "integrity_metadata": {
-    "date_named_raw_file_count": 6632,
-    "dual_hash_metadata_count": 6632,
+    "date_named_raw_file_count": 6672,
+    "dual_hash_metadata_count": 6672,
     "missing_registry_paths": [],
     "note": "This inventory checks committed checksum metadata only. The fixture/full integrity verification re-hashes file content.",
-    "registered_file_count": 6632,
+    "registered_file_count": 6672,
     "registry_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\registry\\paid_artifact_checksums.jsonl",
     "status": "pass"
   }

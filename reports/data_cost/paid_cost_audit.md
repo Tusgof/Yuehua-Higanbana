@@ -2,7 +2,7 @@
 
 - Status: `pass`
 - Stop threshold: `$125.0`
-- Known committed estimated cost: `$208.720036`
+- Known committed estimated cost: `$224.244627`
 - Cost guard basis: `user_reported_actual_usage`
 - Cost guard used: `$120.494368`
 - Remaining before stop: `$4.505632`
@@ -10,34 +10,33 @@
 ## Cost Guard Reconciliation
 
 - Actual-usage basis status: `pass`; used `$120.494368`; remaining `$4.505632`
-- Conservative known-estimate basis status: `blocked`; used `$208.720036`; remaining `$-83.720036`
-- Estimated-only total not yet committed: `$32.901176`
-- Single estimated-only items that would reach stop if committed: `15`
+- Conservative known-estimate basis status: `blocked`; used `$224.244627`; remaining `$-99.244627`
+- Estimated-only total not yet committed: `$17.376585`
+- Single estimated-only items that would reach stop if committed: `14`
 
 | Item | Cost | Projected Conservative Total | Source |
 |:--|--:|--:|:--|
-| `h_a2_orb_0936_fresh_oos` | `$15.524591` | `$224.244627` | `reports\data_cost\h_a2_orb_0936_live_cost_estimate.json` |
-| `databento_cost_h_a2_2022_09_stress` | `$10.226392` | `$218.946428` | `reports\data_cost\databento_cost_h_a2_2022_09_stress.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_chunk2` | `$1.543901` | `$210.263937` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_chunk3` | `$1.526606` | `$210.246642` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_chunk1` | `$1.460004` | `$210.18004` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json` |
-| `databento_cost_2024_02_13_intraday_exit_30m` | `$0.358536` | `$209.078572` | `reports\data_cost\databento_cost_2024_02_13_intraday_exit_30m.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29` | `$0.338082` | `$209.058118` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29.json` |
-| `databento_cost_insample_2023_12_intraday_exit_30m_sample` | `$0.337333` | `$209.057369` | `reports\data_cost\databento_cost_insample_2023_12_intraday_exit_30m_sample.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28` | `$0.32245` | `$209.042486` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27` | `$0.316463` | `$209.036499` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25` | `$0.312721` | `$209.032757` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26` | `$0.307899` | `$209.027935` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json` |
-| `databento_cost_insample_2023_09_intraday_exit_30m_sample` | `$0.301829` | `$209.021865` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_sample.json` |
-| `spy_bars:oos_2024_q4_completion` | `$0.022813` | `$208.742849` | `reports\data_cost\databento_spy_bars_plan_oos_2024_q4_completion.json` |
-| `spy_bars:2024_09_chunk4` | `$0.001556` | `$208.721592` | `reports\data_cost\databento_spy_bars_plan_2024_09_chunk4.json` |
+| `databento_cost_h_a2_2022_09_stress` | `$10.226392` | `$234.471019` | `reports\data_cost\databento_cost_h_a2_2022_09_stress.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_chunk2` | `$1.543901` | `$225.788528` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk2.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_chunk3` | `$1.526606` | `$225.771233` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_chunk1` | `$1.460004` | `$225.704631` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk1.json` |
+| `databento_cost_2024_02_13_intraday_exit_30m` | `$0.358536` | `$224.603163` | `reports\data_cost\databento_cost_2024_02_13_intraday_exit_30m.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29` | `$0.338082` | `$224.582709` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_29.json` |
+| `databento_cost_insample_2023_12_intraday_exit_30m_sample` | `$0.337333` | `$224.58196` | `reports\data_cost\databento_cost_insample_2023_12_intraday_exit_30m_sample.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28` | `$0.32245` | `$224.567077` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_28.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27` | `$0.316463` | `$224.56109` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_27.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25` | `$0.312721` | `$224.557348` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_25.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26` | `$0.307899` | `$224.552526` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_2023_09_26.json` |
+| `databento_cost_insample_2023_09_intraday_exit_30m_sample` | `$0.301829` | `$224.546456` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_sample.json` |
+| `spy_bars:oos_2024_q4_completion` | `$0.022813` | `$224.26744` | `reports\data_cost\databento_spy_bars_plan_oos_2024_q4_completion.json` |
+| `spy_bars:2024_09_chunk4` | `$0.001556` | `$224.246183` | `reports\data_cost\databento_spy_bars_plan_2024_09_chunk4.json` |
 
 ## Budget Policy
 
 - Cap extension method: `real_payment_on_existing_databento_account_only`
 - Approved Databento key envs: `DATABENTO_API_KEY, DATABENTO_SPY0DTE_API, DATABENTO_API_MO, DATABENTO_API_AI, DATABENTO_API_01`
 - Per-key caps: `{"DATABENTO_API_01": 50.0, "DATABENTO_API_AI": 100.0, "DATABENTO_API_MO": 100.0}`
-- Per-key ledger: `{"DATABENTO_API_01": {"account_provenance": "primary_existing_databento_account", "authorization_limit_usd": 50.0, "known_committed_estimated_usage_usd": 12.361983}}`
+- Per-key ledger: `{"DATABENTO_API_01": {"account_provenance": "primary_existing_databento_account", "authorization_limit_usd": 50.0, "known_committed_estimated_usage_usd": 27.886574}}`
 - Prohibited: `multi_account_signup_credit_harvesting`
 - Notes: The user added Databento env keys DATABENTO_API_MO and DATABENTO_API_AI as one approved $200 research pool, while each individual key remains capped at $100. Never store key values. A paid action must estimate/log cost first and must not exceed the selected key cap or combined pool cap. DATABENTO_API_01 is a user-authorized $50 key on the primary existing Databento account. Opening extra accounts or using other identities to harvest duplicate signup credits remains prohibited.
 
@@ -56,6 +55,7 @@
 | `h_a2_fresh_oos_2025_2026:h_a2_fresh_oos_2025_2026` | `$12.361983` | `reports\data_cost\databento_download_result_h_a2_fresh_oos_2025_2026.json` |
 | `h_a2_independent_validation_2025_04_08:h_a2_independent_validation_2025_04_08` | `$0.504662` | `reports\data_cost\databento_download_result_h_a2_independent_validation_2025_04_08.json` |
 | `h_a2_normal_control_low_normal_vix_control_pack:h_a2_normal_control_low_normal_vix_control_pack` | `$5.398913` | `reports\data_cost\databento_download_result_h_a2_normal_control_low_normal_vix_control_pack.json` |
+| `h_a2_orb_0936_fresh_oos:h_a2_orb_0936` | `$15.524591` | `reports\data_cost\databento_download_result_h_a2_orb_0936.json` |
 | `h_a2_post_stress_normalization_control_pack:h_a2_post_stress_normalization_control_pack` | `$5.558642` | `reports\data_cost\databento_download_result_h_a2_post_stress_normalization_control_pack.json` |
 | `h_g1_gamma_oi_12_date` | `$4.082227` | `reports\data_cost\h_g1_gamma_oi_download_result.json` |
 | `h_g1_gamma_oi_v3_replacement` | `$0.384999` | `reports\data_cost\h_g1_gamma_oi_download_result_v3_replacement.json` |
@@ -183,7 +183,6 @@
 | `databento_cost_insample_2023_09_intraday_exit_30m_chunk3` | `$1.526606` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_chunk3.json` |
 | `databento_cost_insample_2023_09_intraday_exit_30m_sample` | `$0.301829` | `reports\data_cost\databento_cost_insample_2023_09_intraday_exit_30m_sample.json` |
 | `databento_cost_insample_2023_12_intraday_exit_30m_sample` | `$0.337333` | `reports\data_cost\databento_cost_insample_2023_12_intraday_exit_30m_sample.json` |
-| `h_a2_orb_0936_fresh_oos` | `$15.524591` | `reports\data_cost\h_a2_orb_0936_live_cost_estimate.json` |
 | `spy_bars:2024_09_chunk4` | `$0.001556` | `reports\data_cost\databento_spy_bars_plan_2024_09_chunk4.json` |
 | `spy_bars:oos_2024_q4_completion` | `$0.022813` | `reports\data_cost\databento_spy_bars_plan_oos_2024_q4_completion.json` |
 

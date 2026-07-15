@@ -26,8 +26,8 @@ from lib.report import render_markdown_report
 from scripts.validate_h_a2_orb_0936_paid_download_decision import DEFAULT_PATH as DEFAULT_DECISION, validate
 
 
-DEFAULT_COST_JSON = PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_live_cost_estimate.json"
-DEFAULT_COST_MD = PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_live_cost_estimate.md"
+DEFAULT_COST_JSON = PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_live_cost_estimate_v2.json"
+DEFAULT_COST_MD = PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_live_cost_estimate_v2.md"
 DEFAULT_DOWNLOAD_JSON = PROJECT_ROOT / "reports" / "data_cost" / "databento_download_result_h_a2_orb_0936.json"
 DEFAULT_DOWNLOAD_MD = PROJECT_ROOT / "reports" / "data_cost" / "databento_download_result_h_a2_orb_0936.md"
 DEFAULT_RAW_ROOT = data_root() / "raw" / "spy_0dte" / "databento" / "h_a2_orb_0936_fresh_oos"
@@ -157,7 +157,7 @@ def build_download_report(
         "status": "pass" if not blockers else "blocked",
         "hypothesis_id": "H-A2",
         "scenario": "h_a2_orb_0936_fresh_oos",
-        "source_cost_report": "reports/data_cost/h_a2_orb_0936_live_cost_estimate.json",
+        "source_cost_report": "reports/data_cost/h_a2_orb_0936_live_cost_estimate_v2.json",
         "selected_key_env": decision["cost_guard"]["selected_key_env"],
         "account_provenance": decision["cost_guard"]["account_provenance"],
         "selected_key_authorization_limit_usd": decision["cost_guard"]["selected_key_authorization_limit_usd"],

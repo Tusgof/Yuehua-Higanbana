@@ -276,6 +276,7 @@ def _load_live_estimates_without_download(
     committed_source_reports: set[str],
 ) -> list[dict[str, Any]]:
     committed_ids = {item["item_id"] for item in committed}
+    committed_scenarios = {item.get("scenario") for item in committed}
     estimates: list[dict[str, Any]] = []
     for path in sorted(root.glob("databento_cost*.json")):
         relative_path = _relative(path)
@@ -354,12 +355,15 @@ def _load_live_estimates_without_download(
         payload = _load_json(path)
         if payload.get("mode") != "live_metadata_cost":
             continue
+        if payload.get("scenario") in committed_scenarios:
+            continue
         cost = _cost_from_payload(payload)
         if cost is None:
             continue
         item_id = "h_a2_orb_0936_fresh_oos"
         if item_id in committed_ids:
             continue
+        estimates = [item for item in estimates if item.get("item_id") != item_id]
         estimates.append(
             {
                 "item_id": item_id,

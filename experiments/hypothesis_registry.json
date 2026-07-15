@@ -162,7 +162,7 @@
         "path": "reports/diagnostics/h_a2_orb_0936_untouched_inventory.json",
         "evidence_tier": "E0",
         "conclusion": "ยังสรุปไม่ได้",
-        "notes": "Metadata-only inventory found 0 untouched dates among 525 local dates. It parsed no target PnL and made no network call or purchase; exact MinTRL remains unknown until valid timestamp-correct returns exist."
+        "notes": "The pre-acquisition inventory found 0 untouched dates among 525 local dates. After the approved acquisition, the same metadata-only inventory now identifies the exact 20 downloaded dates as untouched local candidates: all are prior-close VIX 15-25 control days, while trend remains unclassified pending a separate import preregistration. It parsed no target PnL."
       },
       {
         "path": "reports/data_cost/h_a2_orb_0936_cost_plan.json",
@@ -174,13 +174,31 @@
         "path": "experiments/h_a2_orb_0936_paid_download_decision.json",
         "evidence_tier": "E0",
         "conclusion": "ยังสรุปไม่ได้",
-        "notes": "Records the user's approval of the exact 20-date, 41-request acquisition only after the live estimate passes the $14.216280 ceiling and cumulative DATABENTO_API_01 usage remains below $50. It forbids outcome parsing and experiment execution."
+        "notes": "Records the user's revised approval of the unchanged exact 20-date, 41-request acquisition under a $15.524591 ceiling after the first live gate exceeded the prior $14.216280 ceiling. It forbids outcome parsing and experiment execution."
       },
       {
         "path": "reports/data_cost/h_a2_orb_0936_live_cost_estimate.json",
         "evidence_tier": "E0",
         "conclusion": "ยังสรุปไม่ได้",
-        "notes": "Live metadata priced all 41 requests at $15.524591, which exceeds the approved $14.216280 ceiling by $1.308311. The gate blocked before download; target PnL was not parsed."
+        "notes": "Historical v1 live metadata report: all 41 requests priced at $15.524591, exceeding the then-approved $14.216280 ceiling by $1.308311. The gate correctly blocked before download and remains preserved."
+      },
+      {
+        "path": "reports/data_cost/h_a2_orb_0936_live_cost_estimate_v2.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "The unchanged 41-request cohort passed the revised user-approved $15.524591 ceiling exactly. Projected cumulative DATABENTO_API_01 usage was $27.886574 against its $50 authorization limit."
+      },
+      {
+        "path": "reports/data_cost/databento_download_result_h_a2_orb_0936.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Bounded acquisition completed for all 41 requests across the 20 untouched dates, totaling 2,798,604,257 bytes and committed estimate $15.524591. The report explicitly records target_outcomes_parsed=false and experiment_run=false."
+      },
+      {
+        "path": "reports/diagnostics/h_a2_orb_0936_post_download_integrity.json",
+        "evidence_tier": "E0",
+        "conclusion": "ยังสรุปไม่ได้",
+        "notes": "Post-download integrity verification passed with no blockers; all 41 new cohort artifacts passed their registered container and canonical-content checks. This verifies acquisition integrity only, not strategy outcomes."
       },
         {
           "path": "reports/experiments/h_a2_proxy_first_robustness_summary.json",
@@ -517,6 +535,11 @@
         "date": "2026-07-15",
         "decision": "orb_0936_live_cost_gate_blocked_above_approved_ceiling",
         "notes": "User approved the exact 20-date cost plan, but the 41-request live estimate was $15.524591 versus the $14.216280 ceiling. No download occurred. A new user decision is required to raise the ceiling or separately revise the cohort; the project may not silently do either."
+      },
+      {
+        "date": "2026-07-15",
+        "decision": "orb_0936_revised_ceiling_approved_and_bounded_acquisition_completed",
+        "notes": "The user approved raising the ceiling to exactly $15.524591 without changing the 20-date cohort or research rules. The v2 cost gate passed, all 41 requests downloaded or cache-confirmed, dual-hash integrity passed for every new artifact, and DATABENTO_API_01 committed usage is $27.886574/$50. No outcomes, PnL, or experiment were parsed or run; the next step requires a separate import/coverage/validation preregistration."
       }
       ]
     },

@@ -28,6 +28,8 @@ def validate(path: Path = DEFAULT_PATH, plan_path: Path = DEFAULT_PLAN) -> dict[
 
     if payload.get("status") != "approved":
         blockers.append("status_must_be_approved")
+    if payload.get("schema_version") != "h_a2_orb_0936_paid_download_decision_v2":
+        blockers.append("schema_version_must_be_v2")
     if payload.get("decision") != "approve_exact_20_date_orb_0936_download_after_live_cost_pass":
         blockers.append("decision_must_match_bounded_download")
     if payload.get("hypothesis_id") != "H-A2":
@@ -48,8 +50,12 @@ def validate(path: Path = DEFAULT_PATH, plan_path: Path = DEFAULT_PLAN) -> dict[
         blockers.append("selected_key_limit_must_be_50")
     if float(guard.get("known_committed_selected_key_usage_usd", -1)) != 12.361983:
         blockers.append("known_selected_key_usage_must_match_ledger")
-    if float(guard.get("approved_purchase_ceiling_usd", -1)) != 14.21628:
+    if float(guard.get("previous_approved_purchase_ceiling_usd", -1)) != 14.21628:
+        blockers.append("previous_purchase_ceiling_must_be_preserved")
+    if float(guard.get("approved_purchase_ceiling_usd", -1)) != 15.524591:
         blockers.append("purchase_ceiling_must_match_approved_plan")
+    if float(guard.get("projected_selected_key_usage_at_ceiling_usd", -1)) != 27.886574:
+        blockers.append("projected_key_usage_must_match_revised_ceiling")
     if guard.get("key_value_stored") is not False:
         blockers.append("key_value_must_not_be_stored")
     if guard.get("stop_if_live_estimate_exceeds_ceiling") is not True:

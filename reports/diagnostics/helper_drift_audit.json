@@ -214,6 +214,10 @@
           "sha256": "fe4f4bfd069f1c9388a18f2bd0d3c4e29f3f4806dd4cb4d54eab5bd1153f9ddd"
         },
         {
+          "path": "scripts\\run_h_a2_fresh_oos_timestamp_clean_checkpoint.py",
+          "sha256": "780f320bffbb48ccec5e792d10650626d678507c132607e32d44f7ebf708ca2b"
+        },
+        {
           "path": "scripts\\run_h_a2_locked_condition_signal_attribution.py",
           "sha256": "bce532bfc976eefe34ba02010103124e32a2ced077f144928f1a33f1c5e88898"
         },
@@ -252,8 +256,8 @@
       ],
       "helper_name": "_relative",
       "majority_sha256": "1e91fda8544bd6ee7d407c83815c16374749babc4865d7df4fcda572b80ac10d",
-      "occurrence_count": 96,
-      "variant_count": 5
+      "occurrence_count": 97,
+      "variant_count": 6
     },
     {
       "divergent_files": [
@@ -382,7 +386,7 @@
         },
         {
           "path": "scripts\\audit_paid_costs.py",
-          "sha256": "1925a74d80b35baeea4d191e60b388e7fda5e819c1c5f5f8f179888ddd486252"
+          "sha256": "e748616494bece8aa5d1ef66390fc6f3d2638ca4d25e1a593b964aa5ab53eae5"
         },
         {
           "path": "scripts\\audit_real_money_launch_gate.py",
@@ -390,7 +394,7 @@
         },
         {
           "path": "scripts\\audit_research_logs.py",
-          "sha256": "ce6dea23b23352863f7ee84c2e61a8e2d595590221249ba8f0573b3571ac6a01"
+          "sha256": "6216fe055018b6a48b113ebee32f234afe0f85f42d8d71ae993f98dea0ca7fe0"
         },
         {
           "path": "scripts\\audit_research_readiness.py",
@@ -434,7 +438,7 @@
         },
         {
           "path": "scripts\\validate_hypothesis_registry.py",
-          "sha256": "d7c1ea0a1e090a0cc040994a6769c1b734f24bcaac7568fb6e3c969c9be2337a"
+          "sha256": "ade0e0f9fcf1dde3d8bba8baefa147b763f2fff68a29bc7fd21ee0d3e18c0b52"
         },
         {
           "path": "scripts\\validate_m3_experiment_guardrails.py",
@@ -455,5 +459,5 @@
   "purpose": "Measure duplicated helper drift without editing frozen experiment scripts.",
   "script_root": "scripts",
   "status": "pass_with_findings",
-  "total_divergent_files": 95
+  "total_divergent_files": 96
 }

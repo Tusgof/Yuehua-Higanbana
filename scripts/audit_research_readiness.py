@@ -209,6 +209,15 @@ H_A2_ORB_0936_COST_PLAN = (
 H_A2_ORB_0936_LIVE_COST = (
     PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_live_cost_estimate.json"
 )
+H_A2_ORB_0936_LIVE_COST_V2 = (
+    PROJECT_ROOT / "reports" / "data_cost" / "h_a2_orb_0936_live_cost_estimate_v2.json"
+)
+H_A2_ORB_0936_DOWNLOAD_RESULT = (
+    PROJECT_ROOT / "reports" / "data_cost" / "databento_download_result_h_a2_orb_0936.json"
+)
+H_A2_ORB_0936_INTEGRITY = (
+    PROJECT_ROOT / "reports" / "diagnostics" / "h_a2_orb_0936_post_download_integrity.json"
+)
 GDELT_BULK_SOURCE_DECISION_NOTE = PROJECT_ROOT / "docs" / "GDELT_BULK_RAW_SOURCE_DECISION_NOTE.md"
 GDELT_BULK_MANIFEST_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_bulk_raw_manifest.json"
 GDELT_GKG_ONE_FILE_PROBE_REPORT = PROJECT_ROOT / "reports" / "news_gdelt_gkg_one_file_parser_probe.json"
@@ -777,9 +786,33 @@ def _next_safe_actions(blockers: list[str]) -> list[str]:
     h_a2_orb_0936_untouched_inventory = _load_report_artifact(H_A2_ORB_0936_UNTOUCHED_INVENTORY)
     h_a2_orb_0936_cost_plan = _load_report_artifact(H_A2_ORB_0936_COST_PLAN)
     h_a2_orb_0936_live_cost = _load_report_artifact(H_A2_ORB_0936_LIVE_COST)
+    h_a2_orb_0936_live_cost_v2 = _load_report_artifact(H_A2_ORB_0936_LIVE_COST_V2)
+    h_a2_orb_0936_download = _load_report_artifact(H_A2_ORB_0936_DOWNLOAD_RESULT)
+    h_a2_orb_0936_integrity = _load_report_artifact(H_A2_ORB_0936_INTEGRITY)
     h_a2_proxy_robustness = _load_report_artifact(H_A2_PROXY_FIRST_ROBUSTNESS_SUMMARY)
     h_l1_macro_proxy = _load_report_artifact(H_L1_MACRO_EVENT_PROXY_BASELINE_SUMMARY)
     if (
+        h_a2_orb_0936_preregistration
+        and h_a2_orb_0936_live_cost_v2
+        and h_a2_orb_0936_live_cost_v2.get("status") == "pass"
+        and h_a2_orb_0936_download
+        and h_a2_orb_0936_download.get("status") == "pass"
+        and h_a2_orb_0936_download.get("download_performed") is True
+    ):
+        integrity_status = (
+            h_a2_orb_0936_integrity.get("status") if h_a2_orb_0936_integrity else "not_checked"
+        )
+        actions.append(
+            "H-A2 09:36 ORB bounded fresh-data acquisition is complete as E0 evidence: "
+            f"{h_a2_orb_0936_download.get('request_count')}/41 requests for the unchanged 20-date cohort are present, "
+            f"the committed estimate is ${h_a2_orb_0936_download.get('total_estimated_cost_usd')}, "
+            f"and post-download integrity status is {integrity_status}. "
+            f"The refreshed metadata-only inventory identifies {h_a2_orb_0936_untouched_inventory.get('untouched_local_date_count')} untouched local dates without reading outcomes. "
+            "The preserved v1 cost report remains the historical blocked gate; the user-approved v2 ceiling passed before download. "
+            "No target outcomes or PnL were parsed and no experiment ran. Next action is to create and validate a separate preregistration for local import, coverage checks, and the timestamp-correct OOS validation before reading outcomes. "
+            "Do not approve E2, paper trading, operational validation, or real-money trading from data acquisition alone."
+        )
+    elif (
         h_a2_orb_0936_preregistration
         and h_a2_orb_0936_live_cost
         and h_a2_orb_0936_live_cost.get("status") == "blocked"

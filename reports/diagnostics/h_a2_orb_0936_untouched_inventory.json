@@ -2627,6 +2627,106 @@
         "date": "2026-04-24",
         "exclusion_reason": "date_present_in_completed_h_a2_outcome_or_import_diagnostic",
         "status": "contaminated_not_fresh"
+      },
+      {
+        "date": "2026-04-27",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-04-28",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-01",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-04",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-06",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-07",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-11",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-13",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-14",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-15",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-18",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-19",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-21",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-22",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-26",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-27",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-05-29",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-06-01",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-06-03",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
+      },
+      {
+        "date": "2026-06-04",
+        "exclusion_reason": "none",
+        "status": "untouched_local_candidate"
       }
     ],
     "explicit_completed_artifacts": [
@@ -2639,11 +2739,11 @@
   },
   "coverage_policy": {
     "availability": "A date must have SPY bars, complete two-leg 0DTE quotes at or after 09:37, and 15:45 close quotes.",
-    "current_coverage_result": "not_evaluated_because_no_date_survives_untouched_gate",
+    "current_coverage_result": "raw_files_present_but_quote_and_bar_coverage_requires_separate_preregistration",
     "integrity": "Every paid raw artifact must have container and canonical-content SHA-256 metadata and pass full verification before a future run.",
     "timestamp": "Signal 09:36 <= decision 09:36 <= first eligible entry quote 09:37."
   },
-  "decision": "create_cost_plan_only_no_purchase",
+  "decision": "preregister_import_coverage_validation_before_outcomes",
   "development_outcomes_cutoff": "2026-04-24",
   "experiment_id": "h_a2_orb_0936_validation",
   "generated_date": "2026-07-15",
@@ -2657,11 +2757,11 @@
   },
   "hypothesis_id": "H-A2",
   "integrity_metadata": {
-    "date_named_raw_file_count": 6632,
-    "dual_hash_metadata_count": 6632,
+    "date_named_raw_file_count": 6672,
+    "dual_hash_metadata_count": 6672,
     "missing_registry_paths": [],
     "note": "This inventory checks committed checksum metadata only. The fixture/full integrity verification re-hashes file content.",
-    "registered_file_count": 6632,
+    "registered_file_count": 6672,
     "registry_path": "D:\\Fogust\\Workspace\\Investment\\Project\\SPY 0DTE - Higanbana\\data\\registry\\paid_artifact_checksums.jsonl",
     "status": "pass"
   },
@@ -2670,7 +2770,7 @@
     "python_implementation": "cpython",
     "python_version": "3.14.3"
   },
-  "local_date_count": 525,
+  "local_date_count": 545,
   "mode": "local_metadata_only_no_target_outcome_parse",
   "sample_adequacy": {
     "exact_mintrl_status": "unknown_until_valid_timestamp_correct_returns_exist",
@@ -2706,27 +2806,49 @@
         "observed_sharpe": 1.0
       }
     ],
-    "local_data_sufficient": false,
-    "reason": "There are zero local untouched dates before signal, quote, and integrity qualification."
+    "raw_inventory_sufficient_for_import_preregistration": true,
+    "reason": "Untouched raw dates are available, but coverage and target outcomes remain unread until a separate import/validation preregistration passes.",
+    "validation_ready": false
   },
   "schema_version": "h_a2_orb_0936_untouched_inventory_v1",
-  "status": "blocked_no_local_untouched_dates",
-  "untouched_dates": [],
-  "untouched_local_date_count": 0,
+  "status": "local_untouched_dates_available",
+  "untouched_dates": [
+    "2026-04-27",
+    "2026-04-28",
+    "2026-05-01",
+    "2026-05-04",
+    "2026-05-06",
+    "2026-05-07",
+    "2026-05-11",
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-15",
+    "2026-05-18",
+    "2026-05-19",
+    "2026-05-21",
+    "2026-05-22",
+    "2026-05-26",
+    "2026-05-27",
+    "2026-05-29",
+    "2026-06-01",
+    "2026-06-03",
+    "2026-06-04"
+  ],
+  "untouched_local_date_count": 20,
   "untouched_regime_counts": {
     "macro": {
-      "control": 0,
+      "control": 20,
       "high_importance": 0,
       "unavailable": 0
     },
     "trend": {
       "downtrend": 0,
-      "unclassified": 0,
+      "unclassified": 20,
       "uptrend": 0
     },
     "vix": {
       "low": 0,
-      "normal": 0,
+      "normal": 20,
       "out_of_scope": 0,
       "unavailable": 0
     }
